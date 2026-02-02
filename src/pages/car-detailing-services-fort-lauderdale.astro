@@ -1,16 +1,17 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
 
+const base = import.meta.env.BASE_URL;
 const title = "Car Detailing Services Fort Lauderdale | Mobile | Route95";
 const description = "Professional mobile car detailing services in Fort Lauderdale. Full detail, express detail, luxury cars, paint protection & more. Same-day service. Call 754-215-2272";
 
 const services = [
-  { href: "/full-detail-fort-lauderdale/", title: "Full Detail", description: "Complete interior and exterior transformation." },
-  { href: "/express-detail-fort-lauderdale/", title: "Express Detail", description: "Quick refresh in about an hour." },
-  { href: "/luxury-car-detailing-fort-lauderdale/", title: "Luxury Car Detailing", description: "Specialized care for high-end vehicles." },
-  { href: "/engine-bay-cleaning-fort-lauderdale/", title: "Engine Bay Cleaning", description: "Degrease and detail your engine compartment." },
-  { href: "/paint-protection-film-fort-lauderdale/", title: "Paint Protection Film", description: "Clear film that protects against rock chips." },
-  { href: "/mobile-detailing-fort-lauderdale/", title: "Mobile Detailing", description: "Professional detailing at your location." },
+  { href: `${base}full-detail-fort-lauderdale/`, title: "Full Detail", description: "Complete interior and exterior transformation." },
+  { href: `${base}express-detail-fort-lauderdale/`, title: "Express Detail", description: "Quick refresh in about an hour." },
+  { href: `${base}luxury-car-detailing-fort-lauderdale/`, title: "Luxury Car Detailing", description: "Specialized care for high-end vehicles." },
+  { href: `${base}engine-bay-cleaning-fort-lauderdale/`, title: "Engine Bay Cleaning", description: "Degrease and detail your engine compartment." },
+  { href: `${base}paint-protection-film-fort-lauderdale/`, title: "Paint Protection Film", description: "Clear film that protects against rock chips." },
+  { href: `${base}mobile-detailing-fort-lauderdale/`, title: "Mobile Detailing", description: "Professional detailing at your location." },
 ];
 ---
 
@@ -174,7 +175,7 @@ const services = [
           <p class="text-sm mb-4">
             Protect your luxury vehicle from rock chips and debris with our professional PPF installation.
           </p>
-          <a href="/paint-protection-film-fort-lauderdale/" class="font-semibold hover:underline">Learn More →</a>
+          <a href={`${base}paint-protection-film-fort-lauderdale/`} class="font-semibold hover:underline">Learn More →</a>
         </div>
       </div>
     </aside>

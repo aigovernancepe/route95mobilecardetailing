@@ -1,11 +1,12 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
 
+const base = import.meta.env.BASE_URL;
 const title = "Hand Wash Fort Lauderdale | Mobile Service | Route95";
 const description = "Professional mobile hand wash in Fort Lauderdale. We come to you! Two-bucket method, pH-balanced soap, no scratches. Same-day service. Call 754-215-2272";
 
 const parentCategory = {
-  href: "/car-wash-fort-lauderdale/",
+  href: `${base}car-wash-fort-lauderdale/`,
   title: "Car Wash Services"
 };
 ---
@@ -166,10 +167,10 @@ const parentCategory = {
         <div class="bg-gray-50 rounded-xl p-6">
           <h3 class="font-bold text-[#1e3a5f] mb-4">Related Services</h3>
           <ul class="space-y-2">
-            <li><a href="/car-waxing-fort-lauderdale/" class="text-gray-600 hover:text-[#c9a227]">Car Waxing</a></li>
-            <li><a href="/clay-bar-treatment-fort-lauderdale/" class="text-gray-600 hover:text-[#c9a227]">Clay Bar Treatment</a></li>
-            <li><a href="/wheel-cleaning-fort-lauderdale/" class="text-gray-600 hover:text-[#c9a227]">Wheel Cleaning</a></li>
-            <li><a href="/full-detail-fort-lauderdale/" class="text-gray-600 hover:text-[#c9a227]">Full Detail</a></li>
+            <li><a href={`${base}car-waxing-fort-lauderdale/`} class="text-gray-600 hover:text-[#c9a227]">Car Waxing</a></li>
+            <li><a href={`${base}clay-bar-treatment-fort-lauderdale/`} class="text-gray-600 hover:text-[#c9a227]">Clay Bar Treatment</a></li>
+            <li><a href={`${base}wheel-cleaning-fort-lauderdale/`} class="text-gray-600 hover:text-[#c9a227]">Wheel Cleaning</a></li>
+            <li><a href={`${base}full-detail-fort-lauderdale/`} class="text-gray-600 hover:text-[#c9a227]">Full Detail</a></li>
           </ul>
         </div>
       </div>

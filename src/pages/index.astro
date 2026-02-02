@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+const base = import.meta.env.BASE_URL;
 const title = "Mobile Car Detailing Fort Lauderdale | Route95";
 const description = "Professional mobile car detailing in Fort Lauderdale. We come to you! Same-day service available. Luxury car specialists serving Las Olas, Nurmi Isles & Broward County. Call 754-215-2272";
 
@@ -8,19 +9,19 @@ const categories = [
   {
     title: "Car Wash",
     description: "Hand wash, clay bar treatment, waxing, wheel cleaning, chrome polishing, headlight restoration and more.",
-    href: "/car-wash-fort-lauderdale/",
+    href: `${base}car-wash-fort-lauderdale/`,
     icon: "car"
   },
   {
     title: "Upholstery Cleaning",
     description: "Seat shampooing, leather cleaning & conditioning, carpet cleaning, steam cleaning, odor removal, pet hair removal.",
-    href: "/upholstery-cleaning-fort-lauderdale/",
+    href: `${base}upholstery-cleaning-fort-lauderdale/`,
     icon: "interior"
   },
   {
     title: "Car Detailing Services",
     description: "Full detail packages, luxury car detailing, express detail, engine bay cleaning, paint protection film.",
-    href: "/car-detailing-services-fort-lauderdale/",
+    href: `${base}car-detailing-services-fort-lauderdale/`,
     icon: "detail"
   }
 ];
@@ -62,7 +63,7 @@ const serviceAreas = [
             </svg>
             Call 754-215-2272
           </a>
-          <a href="/contact/" class="bg-white text-[#1e3a5f] px-6 py-3 rounded-md font-semibold text-center hover:bg-gray-100 transition-colors">
+          <a href={`${base}contact/`} class="bg-white text-[#1e3a5f] px-6 py-3 rounded-md font-semibold text-center hover:bg-gray-100 transition-colors">
             Get a Free Quote
           </a>
         </div>
@@ -235,7 +236,7 @@ const serviceAreas = [
           </svg>
           Call 754-215-2272
         </a>
-        <a href="/contact/" class="bg-white text-[#1e3a5f] px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+        <a href={`${base}contact/`} class="bg-white text-[#1e3a5f] px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
           Request a Quote Online
         </a>
       </div>

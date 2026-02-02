@@ -1,19 +1,20 @@
 ---
 const currentYear = new Date().getFullYear();
+const base = import.meta.env.BASE_URL;
 
 const serviceLinks = [
-  { href: '/hand-wash-fort-lauderdale/', label: 'Hand Wash' },
-  { href: '/leather-cleaning-fort-lauderdale/', label: 'Leather Cleaning' },
-  { href: '/full-detail-fort-lauderdale/', label: 'Full Detail' },
-  { href: '/interior-vacuuming-fort-lauderdale/', label: 'Interior Vacuuming' },
-  { href: '/odor-removal-fort-lauderdale/', label: 'Odor Removal' },
-  { href: '/headlight-restoration-fort-lauderdale/', label: 'Headlight Restoration' },
+  { href: `${base}hand-wash-fort-lauderdale/`, label: 'Hand Wash' },
+  { href: `${base}leather-cleaning-fort-lauderdale/`, label: 'Leather Cleaning' },
+  { href: `${base}full-detail-fort-lauderdale/`, label: 'Full Detail' },
+  { href: `${base}interior-vacuuming-fort-lauderdale/`, label: 'Interior Vacuuming' },
+  { href: `${base}odor-removal-fort-lauderdale/`, label: 'Odor Removal' },
+  { href: `${base}headlight-restoration-fort-lauderdale/`, label: 'Headlight Restoration' },
 ];
 
 const categoryLinks = [
-  { href: '/car-wash-fort-lauderdale/', label: 'Car Wash Services' },
-  { href: '/upholstery-cleaning-fort-lauderdale/', label: 'Upholstery Cleaning' },
-  { href: '/car-detailing-services-fort-lauderdale/', label: 'Detailing Services' },
+  { href: `${base}car-wash-fort-lauderdale/`, label: 'Car Wash Services' },
+  { href: `${base}upholstery-cleaning-fort-lauderdale/`, label: 'Upholstery Cleaning' },
+  { href: `${base}car-detailing-services-fort-lauderdale/`, label: 'Detailing Services' },
 ];
 ---
 
@@ -107,8 +108,8 @@ const categoryLinks = [
           &copy; {currentYear} Route95 Mobile Car Detailing LLC. All rights reserved.
         </p>
         <div class="flex gap-6 text-sm">
-          <a href="/about/" class="text-gray-400 hover:text-[#c9a227] transition-colors">About</a>
-          <a href="/contact/" class="text-gray-400 hover:text-[#c9a227] transition-colors">Contact</a>
+          <a href={`${base}about/`} class="text-gray-400 hover:text-[#c9a227] transition-colors">About</a>
+          <a href={`${base}contact/`} class="text-gray-400 hover:text-[#c9a227] transition-colors">Contact</a>
         </div>
       </div>
     </div>

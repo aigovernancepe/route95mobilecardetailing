@@ -1,22 +1,23 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
 
+const base = import.meta.env.BASE_URL;
 const title = "Upholstery Cleaning Fort Lauderdale | Mobile Service | Route95";
 const description = "Professional mobile upholstery cleaning in Fort Lauderdale. Seats, carpets, leather, odor removal & more. We come to you! Same-day service. Call 754-215-2272";
 
 const services = [
-  { href: "/seat-shampooing-fort-lauderdale/", title: "Seat Shampooing", description: "Deep clean fabric seats with hot water extraction." },
-  { href: "/carpet-shampooing-fort-lauderdale/", title: "Carpet Shampooing", description: "Extract deep-seated dirt and stains from carpets." },
-  { href: "/leather-cleaning-fort-lauderdale/", title: "Leather Cleaning", description: "pH-balanced cleaning for leather seats and surfaces." },
-  { href: "/leather-conditioning-fort-lauderdale/", title: "Leather Conditioning", description: "Replenish moisture and protect against UV damage." },
-  { href: "/dashboard-cleaning-fort-lauderdale/", title: "Dashboard Cleaning", description: "Clean and protect dashboard, vents, and screens." },
-  { href: "/interior-vacuuming-fort-lauderdale/", title: "Interior Vacuuming", description: "Thorough vacuuming of every surface and crevice." },
-  { href: "/steam-cleaning-fort-lauderdale/", title: "Steam Cleaning", description: "High-temperature sanitization without chemicals." },
-  { href: "/odor-removal-fort-lauderdale/", title: "Odor Removal", description: "Eliminate odors at the source with ozone treatment." },
-  { href: "/smoke-odor-removal-fort-lauderdale/", title: "Smoke Odor Removal", description: "Complete removal of cigarette and cigar smoke." },
-  { href: "/pet-hair-removal-fort-lauderdale/", title: "Pet Hair Removal", description: "Extract embedded pet hair from fabrics." },
-  { href: "/interior-protection-fort-lauderdale/", title: "Interior Protection", description: "UV and stain protection for all interior surfaces." },
-  { href: "/fabric-protection-fort-lauderdale/", title: "Fabric Protection", description: "Invisible barrier that repels spills and stains." },
+  { href: `${base}seat-shampooing-fort-lauderdale/`, title: "Seat Shampooing", description: "Deep clean fabric seats with hot water extraction." },
+  { href: `${base}carpet-shampooing-fort-lauderdale/`, title: "Carpet Shampooing", description: "Extract deep-seated dirt and stains from carpets." },
+  { href: `${base}leather-cleaning-fort-lauderdale/`, title: "Leather Cleaning", description: "pH-balanced cleaning for leather seats and surfaces." },
+  { href: `${base}leather-conditioning-fort-lauderdale/`, title: "Leather Conditioning", description: "Replenish moisture and protect against UV damage." },
+  { href: `${base}dashboard-cleaning-fort-lauderdale/`, title: "Dashboard Cleaning", description: "Clean and protect dashboard, vents, and screens." },
+  { href: `${base}interior-vacuuming-fort-lauderdale/`, title: "Interior Vacuuming", description: "Thorough vacuuming of every surface and crevice." },
+  { href: `${base}steam-cleaning-fort-lauderdale/`, title: "Steam Cleaning", description: "High-temperature sanitization without chemicals." },
+  { href: `${base}odor-removal-fort-lauderdale/`, title: "Odor Removal", description: "Eliminate odors at the source with ozone treatment." },
+  { href: `${base}smoke-odor-removal-fort-lauderdale/`, title: "Smoke Odor Removal", description: "Complete removal of cigarette and cigar smoke." },
+  { href: `${base}pet-hair-removal-fort-lauderdale/`, title: "Pet Hair Removal", description: "Extract embedded pet hair from fabrics." },
+  { href: `${base}interior-protection-fort-lauderdale/`, title: "Interior Protection", description: "UV and stain protection for all interior surfaces." },
+  { href: `${base}fabric-protection-fort-lauderdale/`, title: "Fabric Protection", description: "Invisible barrier that repels spills and stains." },
 ];
 ---
 

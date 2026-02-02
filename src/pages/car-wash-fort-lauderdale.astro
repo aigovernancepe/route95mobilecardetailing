@@ -1,20 +1,21 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
 
+const base = import.meta.env.BASE_URL;
 const title = "Car Wash Fort Lauderdale | Mobile Service | Route95";
 const description = "Professional mobile car wash in Fort Lauderdale. Hand wash, waxing, clay bar, headlight restoration & more. We come to you! Same-day service. Call 754-215-2272";
 
 const services = [
-  { href: "/hand-wash-fort-lauderdale/", title: "Hand Wash", description: "Two-bucket method hand wash with pH-balanced soap for a scratch-free finish." },
-  { href: "/car-waxing-fort-lauderdale/", title: "Car Waxing", description: "Carnauba wax protection against Florida's intense UV rays." },
-  { href: "/clay-bar-treatment-fort-lauderdale/", title: "Clay Bar Treatment", description: "Remove bonded contaminants for glass-smooth paint." },
-  { href: "/wheel-cleaning-fort-lauderdale/", title: "Wheel Cleaning", description: "Remove corrosive brake dust and road grime from all wheel types." },
-  { href: "/tire-dressing-fort-lauderdale/", title: "Tire Dressing", description: "Restore deep black appearance and protect against UV damage." },
-  { href: "/chrome-polishing-fort-lauderdale/", title: "Chrome Polishing", description: "Remove oxidation and restore mirror-like shine to chrome trim." },
-  { href: "/trim-restoration-fort-lauderdale/", title: "Trim Restoration", description: "Restore faded black plastic trim to like-new condition." },
-  { href: "/bug-tar-removal-fort-lauderdale/", title: "Bug and Tar Removal", description: "Safely remove love bugs, road tar, and stubborn contaminants." },
-  { href: "/water-spot-removal-fort-lauderdale/", title: "Water Spot Removal", description: "Dissolve mineral deposits from sprinklers and hard water." },
-  { href: "/headlight-restoration-fort-lauderdale/", title: "Headlight Restoration", description: "Restore clarity to foggy, yellowed headlights." },
+  { href: `${base}hand-wash-fort-lauderdale/`, title: "Hand Wash", description: "Two-bucket method hand wash with pH-balanced soap for a scratch-free finish." },
+  { href: `${base}car-waxing-fort-lauderdale/`, title: "Car Waxing", description: "Carnauba wax protection against Florida's intense UV rays." },
+  { href: `${base}clay-bar-treatment-fort-lauderdale/`, title: "Clay Bar Treatment", description: "Remove bonded contaminants for glass-smooth paint." },
+  { href: `${base}wheel-cleaning-fort-lauderdale/`, title: "Wheel Cleaning", description: "Remove corrosive brake dust and road grime from all wheel types." },
+  { href: `${base}tire-dressing-fort-lauderdale/`, title: "Tire Dressing", description: "Restore deep black appearance and protect against UV damage." },
+  { href: `${base}chrome-polishing-fort-lauderdale/`, title: "Chrome Polishing", description: "Remove oxidation and restore mirror-like shine to chrome trim." },
+  { href: `${base}trim-restoration-fort-lauderdale/`, title: "Trim Restoration", description: "Restore faded black plastic trim to like-new condition." },
+  { href: `${base}bug-tar-removal-fort-lauderdale/`, title: "Bug and Tar Removal", description: "Safely remove love bugs, road tar, and stubborn contaminants." },
+  { href: `${base}water-spot-removal-fort-lauderdale/`, title: "Water Spot Removal", description: "Dissolve mineral deposits from sprinklers and hard water." },
+  { href: `${base}headlight-restoration-fort-lauderdale/`, title: "Headlight Restoration", description: "Restore clarity to foggy, yellowed headlights." },
 ];
 ---
 
