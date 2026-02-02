@@ -25,12 +25,12 @@ const upholsteryServices = [
 ];
 
 const detailingServices = [
+  { href: `${base}packages-fort-lauderdale/`, label: '📦 View All Packages', highlight: true },
   { href: `${base}full-detail-fort-lauderdale/`, label: 'Full Detail' },
   { href: `${base}express-detail-fort-lauderdale/`, label: 'Express Detail' },
   { href: `${base}luxury-car-detailing-fort-lauderdale/`, label: 'Luxury Car Detailing' },
   { href: `${base}headlight-restoration-fort-lauderdale/`, label: 'Headlight Restoration' },
   { href: `${base}trim-restoration-fort-lauderdale/`, label: 'Trim Restoration' },
-  { href: `${base}paint-protection-film-fort-lauderdale/`, label: 'Paint Protection Film' },
 ];
 
 const mobileNavLinks = [
@@ -147,7 +147,7 @@ const mobileNavLinks = [
                 All Detailing Services
               </a>
               {detailingServices.map(service => (
-                <a href={service.href} class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1e3a5f]">
+                <a href={service.href} class={`block px-4 py-2 text-sm hover:bg-gray-50 hover:text-[#1e3a5f] ${service.highlight ? 'text-[#c9a227] font-semibold bg-amber-50' : 'text-gray-700'}`}>
                   {service.label}
                 </a>
               ))}
