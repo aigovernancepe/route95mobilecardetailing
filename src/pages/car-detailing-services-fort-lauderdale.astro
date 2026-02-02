@@ -1,0 +1,182 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+
+const title = "Car Detailing Services Fort Lauderdale | Mobile | Route95";
+const description = "Professional mobile car detailing services in Fort Lauderdale. Full detail, express detail, luxury cars, paint protection & more. Same-day service. Call 754-215-2272";
+
+const services = [
+  { href: "/full-detail-fort-lauderdale/", title: "Full Detail", description: "Complete interior and exterior transformation." },
+  { href: "/express-detail-fort-lauderdale/", title: "Express Detail", description: "Quick refresh in about an hour." },
+  { href: "/luxury-car-detailing-fort-lauderdale/", title: "Luxury Car Detailing", description: "Specialized care for high-end vehicles." },
+  { href: "/engine-bay-cleaning-fort-lauderdale/", title: "Engine Bay Cleaning", description: "Degrease and detail your engine compartment." },
+  { href: "/paint-protection-film-fort-lauderdale/", title: "Paint Protection Film", description: "Clear film that protects against rock chips." },
+  { href: "/mobile-detailing-fort-lauderdale/", title: "Mobile Detailing", description: "Professional detailing at your location." },
+];
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Car Detailing Services Fort Lauderdale"
+  intro="When your vehicle needs more than a wash, Route95's professional car detailing services deliver complete transformation. From quick refreshes to comprehensive details, we bring expert care directly to your Fort Lauderdale location. Our specialty services protect your investment and keep luxury vehicles looking showroom-perfect."
+  currentPage="/car-detailing-services-fort-lauderdale/"
+  services={services}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Professional Detailing for Discerning Owners</h2>
+        <p class="text-gray-600 mb-4">
+          Fort Lauderdale is home to some of the finest vehicles on the road. From the exotic cars parked along Las Olas Boulevard to the luxury SUVs in Nurmi Isles driveways, these vehicles deserve care that matches their quality.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Route95 specializes in premium and high-end vehicles. We understand that a Porsche requires different care than a daily driver. The materials, finishes, and owner expectations demand expertise and attention that generic car washes cannot provide.
+        </p>
+        <p class="text-gray-600">
+          Owner Gustavo Moya built Route95 around one principle: every vehicle gets the care it deserves. We use Chemical Guys professional products, proper techniques, and take the time needed to achieve perfect results.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Detailing Packages</h2>
+
+        <div class="space-y-6">
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-[#1e3a5f] mb-3">Full Detail Package</h3>
+            <p class="text-gray-600 mb-4">Complete interior and exterior transformation that takes several hours but delivers showroom results.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <h4 class="font-semibold text-[#1e3a5f] mb-2">Exterior:</h4>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>- Hand wash and dry</li>
+                  <li>- Clay bar treatment</li>
+                  <li>- Paint polish (if needed)</li>
+                  <li>- Carnauba wax protection</li>
+                  <li>- Wheel and tire detailing</li>
+                  <li>- Trim and chrome restoration</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-[#1e3a5f] mb-2">Interior:</h4>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>- Complete vacuuming</li>
+                  <li>- Carpet and seat shampooing</li>
+                  <li>- Leather cleaning & conditioning</li>
+                  <li>- Dashboard and console detailing</li>
+                  <li>- Door panel and trim cleaning</li>
+                  <li>- Air vent sanitization</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-[#1e3a5f] mb-3">Express Detail</h3>
+            <p class="text-gray-600 mb-4">Quick refresh in about an hour - perfect for maintenance between full details.</p>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>- Exterior hand wash</li>
+              <li>- Quick interior vacuum</li>
+              <li>- Dashboard and console wipe-down</li>
+              <li>- Glass cleaning</li>
+              <li>- Tire dressing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Luxury Vehicle Specialists</h2>
+        <p class="text-gray-600 mb-4">
+          High-end vehicles require specialized knowledge and products. Exotic paint finishes, alcantara headliners, fine leather, and carbon fiber trim all need specific care techniques.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <span class="text-gray-600 font-medium">Mercedes</span>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <span class="text-gray-600 font-medium">BMW</span>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <span class="text-gray-600 font-medium">Porsche</span>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <span class="text-gray-600 font-medium">Range Rover</span>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <span class="text-gray-600 font-medium">Ferrari</span>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <span class="text-gray-600 font-medium">Lamborghini</span>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <span class="text-gray-600 font-medium">McLaren</span>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <span class="text-gray-600 font-medium">& More</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#1e3a5f] mb-4">Why Choose Route95?</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Premium Chemical Guys products</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Luxury vehicle specialists</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Mobile convenience</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Same-day service available</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Satisfaction guaranteed</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#1e3a5f] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Book Your Detail</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Same-day appointments available throughout Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-[#c9a227] rounded-xl p-6 text-[#1e3a5f]">
+          <h3 class="font-bold mb-2">Paint Protection Film</h3>
+          <p class="text-sm mb-4">
+            Protect your luxury vehicle from rock chips and debris with our professional PPF installation.
+          </p>
+          <a href="/paint-protection-film-fort-lauderdale/" class="font-semibold hover:underline">Learn More →</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

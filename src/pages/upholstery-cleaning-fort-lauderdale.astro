@@ -1,0 +1,162 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+
+const title = "Upholstery Cleaning Fort Lauderdale | Mobile Service | Route95";
+const description = "Professional mobile upholstery cleaning in Fort Lauderdale. Seats, carpets, leather, odor removal & more. We come to you! Same-day service. Call 754-215-2272";
+
+const services = [
+  { href: "/seat-shampooing-fort-lauderdale/", title: "Seat Shampooing", description: "Deep clean fabric seats with hot water extraction." },
+  { href: "/carpet-shampooing-fort-lauderdale/", title: "Carpet Shampooing", description: "Extract deep-seated dirt and stains from carpets." },
+  { href: "/leather-cleaning-fort-lauderdale/", title: "Leather Cleaning", description: "pH-balanced cleaning for leather seats and surfaces." },
+  { href: "/leather-conditioning-fort-lauderdale/", title: "Leather Conditioning", description: "Replenish moisture and protect against UV damage." },
+  { href: "/dashboard-cleaning-fort-lauderdale/", title: "Dashboard Cleaning", description: "Clean and protect dashboard, vents, and screens." },
+  { href: "/interior-vacuuming-fort-lauderdale/", title: "Interior Vacuuming", description: "Thorough vacuuming of every surface and crevice." },
+  { href: "/steam-cleaning-fort-lauderdale/", title: "Steam Cleaning", description: "High-temperature sanitization without chemicals." },
+  { href: "/odor-removal-fort-lauderdale/", title: "Odor Removal", description: "Eliminate odors at the source with ozone treatment." },
+  { href: "/smoke-odor-removal-fort-lauderdale/", title: "Smoke Odor Removal", description: "Complete removal of cigarette and cigar smoke." },
+  { href: "/pet-hair-removal-fort-lauderdale/", title: "Pet Hair Removal", description: "Extract embedded pet hair from fabrics." },
+  { href: "/interior-protection-fort-lauderdale/", title: "Interior Protection", description: "UV and stain protection for all interior surfaces." },
+  { href: "/fabric-protection-fort-lauderdale/", title: "Fabric Protection", description: "Invisible barrier that repels spills and stains." },
+];
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Upholstery Cleaning Fort Lauderdale"
+  intro="Fort Lauderdale's heat and humidity create the perfect environment for bacteria, mold, and odors inside your vehicle. Route95's mobile upholstery cleaning service eliminates these problems and restores your interior to like-new condition. We bring professional equipment and Chemical Guys products directly to your location."
+  currentPage="/upholstery-cleaning-fort-lauderdale/"
+  services={services}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Why Interior Cleaning Matters in South Florida</h2>
+        <p class="text-gray-600 mb-4">
+          You spend hours inside your car every week. The air you breathe circulates through carpets, seats, and air vents that trap dust, allergens, and bacteria. Florida humidity accelerates the growth of mold and mildew in these hidden areas.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Sunscreen, sweat, and body oils transfer to your seats every time you drive. Food crumbs fall between seats where they decompose. Sand from Fort Lauderdale Beach works its way into carpet fibers. Over time, your interior becomes a collection of everything that's touched it.
+        </p>
+        <p class="text-gray-600">
+          Our upholstery cleaning service removes what you can see and what you can't. We extract embedded dirt from carpets and seats. We sanitize surfaces that harbor bacteria. We eliminate odors at their source instead of covering them up.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Interior Cleaning Process</h2>
+        <div class="space-y-4">
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
+            <div>
+              <h3 class="font-semibold text-[#1e3a5f]">Thorough Vacuuming</h3>
+              <p class="text-gray-600">We remove all loose dirt, debris, and pet hair from every surface and crevice.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
+            <div>
+              <h3 class="font-semibold text-[#1e3a5f]">Deep Cleaning</h3>
+              <p class="text-gray-600">Carpets and seats get shampooed with hot water extraction. Leather is cleaned with pH-balanced products.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
+            <div>
+              <h3 class="font-semibold text-[#1e3a5f]">Sanitization</h3>
+              <p class="text-gray-600">Steam cleaning kills bacteria, dust mites, and mold throughout your interior.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
+            <div>
+              <h3 class="font-semibold text-[#1e3a5f]">Protection</h3>
+              <p class="text-gray-600">We apply protectants that repel stains and UV damage to extend your results.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Specialized Interior Services</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#1e3a5f] mb-2">Leather Care</h3>
+            <p class="text-gray-600 text-sm">Cleaning and conditioning to prevent cracking and fading from Florida sun.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#1e3a5f] mb-2">Odor Elimination</h3>
+            <p class="text-gray-600 text-sm">Ozone treatment removes smoke, mold, and food odors permanently.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#1e3a5f] mb-2">Pet Hair Removal</h3>
+            <p class="text-gray-600 text-sm">Specialized tools extract embedded fur from carpets and upholstery.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#1e3a5f] mb-2">Stain Protection</h3>
+            <p class="text-gray-600 text-sm">Fabric protector causes spills to bead up instead of soaking in.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#1e3a5f] mb-4">Common Interior Problems We Solve</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Musty mildew smell</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Coffee & food stains</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Cracked leather</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Embedded pet hair</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Cigarette smoke odor</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Sand from the beach</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#1e3a5f] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Book Interior Cleaning</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Same-day appointments available throughout Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

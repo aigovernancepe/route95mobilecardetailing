@@ -1,0 +1,247 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Mobile Car Detailing Fort Lauderdale | Route95";
+const description = "Professional mobile car detailing in Fort Lauderdale. We come to you! Same-day service available. Luxury car specialists serving Las Olas, Nurmi Isles & Broward County. Call 754-215-2272";
+
+const categories = [
+  {
+    title: "Car Wash",
+    description: "Hand wash, clay bar treatment, waxing, wheel cleaning, chrome polishing, headlight restoration and more.",
+    href: "/car-wash-fort-lauderdale/",
+    icon: "car"
+  },
+  {
+    title: "Upholstery Cleaning",
+    description: "Seat shampooing, leather cleaning & conditioning, carpet cleaning, steam cleaning, odor removal, pet hair removal.",
+    href: "/upholstery-cleaning-fort-lauderdale/",
+    icon: "interior"
+  },
+  {
+    title: "Car Detailing Services",
+    description: "Full detail packages, luxury car detailing, express detail, engine bay cleaning, paint protection film.",
+    href: "/car-detailing-services-fort-lauderdale/",
+    icon: "detail"
+  }
+];
+
+const usps = [
+  { title: "Mobile Convenience", description: "We come to your home, office, or any location", icon: "truck" },
+  { title: "Premium Products", description: "We use Chemical Guys professional-grade products", icon: "star" },
+  { title: "Luxury Specialists", description: "Trained and experienced with high-end vehicles", icon: "diamond" },
+  { title: "Same-Day Service", description: "Appointments often available today", icon: "clock" },
+  { title: "Satisfaction Guarantee", description: "You'll love the results or we make it right", icon: "check" }
+];
+
+const serviceAreas = [
+  "Fort Lauderdale",
+  "Las Olas & Las Olas Isles",
+  "Nurmi Isles",
+  "Seven Isles",
+  "Hollywood",
+  "Pompano Beach",
+  "All of Broward County"
+];
+---
+
+<BaseLayout title={title} description={description} currentPage="/">
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-[#1e3a5f] to-[#152a45] text-white py-20 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
+          Mobile Car Detailing Fort Lauderdale
+        </h1>
+        <p class="text-xl lg:text-2xl text-gray-300 mb-8">
+          Fort Lauderdale's sun, salt air, and humidity can be tough on your car. That's why Route95 Mobile Car Detailing brings professional car care right to your driveway, office, or wherever you are in Broward County.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="tel:+17542152272" class="btn-accent text-center text-lg flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Call 754-215-2272
+          </a>
+          <a href="/contact/" class="bg-white text-[#1e3a5f] px-6 py-3 rounded-md font-semibold text-center hover:bg-gray-100 transition-colors">
+            Get a Free Quote
+          </a>
+        </div>
+        <p class="mt-6 text-[#c9a227] font-semibold">
+          Same-day service available for Fort Lauderdale area
+        </p>
+      </div>
+    </div>
+    <!-- Decorative element -->
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-[#1e3a5f] mb-4">
+          Why Fort Lauderdale Car Owners Choose Route95
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Living in South Florida means your car faces daily challenges. The intense sun fades paint and cracks dashboards. Salt air from the Atlantic corrodes chrome and trim. We understand these local conditions because we detail cars here every day.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {usps.map(usp => (
+          <div class="bg-gray-50 rounded-lg p-6 text-center">
+            <div class="w-16 h-16 bg-[#1e3a5f] rounded-full flex items-center justify-center mx-auto mb-4">
+              {usp.icon === 'truck' && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#c9a227]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+              )}
+              {usp.icon === 'star' && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#c9a227]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+              )}
+              {usp.icon === 'diamond' && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#c9a227]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
+              )}
+              {usp.icon === 'clock' && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#c9a227]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              )}
+              {usp.icon === 'check' && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#c9a227]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              )}
+            </div>
+            <h3 class="text-xl font-bold text-[#1e3a5f] mb-2">{usp.title}</h3>
+            <p class="text-gray-600">{usp.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16 lg:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-[#1e3a5f] mb-4">
+          Our Mobile Detailing Services
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          From quick washes to complete details, we bring professional car care to your location. We specialize in luxury and high-end vehicles, using Chemical Guys products to deliver showroom results every time.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {categories.map(category => (
+          <a href={category.href} class="service-card bg-white rounded-xl shadow-lg overflow-hidden group">
+            <div class="h-48 bg-gradient-to-br from-[#1e3a5f] to-[#2d4a6f] flex items-center justify-center">
+              {category.icon === 'car' && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-[#c9a227]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              )}
+              {category.icon === 'interior' && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-[#c9a227]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                </svg>
+              )}
+              {category.icon === 'detail' && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-[#c9a227]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              )}
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-[#1e3a5f] mb-3 group-hover:text-[#c9a227] transition-colors">
+                {category.title}
+              </h3>
+              <p class="text-gray-600 mb-4">{category.description}</p>
+              <span class="inline-flex items-center text-[#1e3a5f] font-semibold group-hover:text-[#c9a227] transition-colors">
+                Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold text-[#1e3a5f] mb-6">
+            What Makes Our Mobile Service Different
+          </h2>
+          <p class="text-gray-600 mb-4">
+            Most car washes rush through dozens of vehicles per hour. They use harsh chemicals and recycled water. The result? Swirl marks, missed spots, and a "clean" that lasts maybe two days.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Route95 takes a different approach. We treat every vehicle like it's our own. Each mobile car detailing appointment gets our full attention. We bring all our own water, power, and premium Chemical Guys products.
+          </p>
+          <p class="text-gray-600 mb-6">
+            Owner Gustavo Moya started Route95 with a simple idea: bring professional detailing to where you are. No more waiting at a shop. No more rearranging your schedule.
+          </p>
+          <div class="bg-[#f8f9fa] border-l-4 border-[#c9a227] p-4">
+            <p class="text-[#1e3a5f] font-semibold">
+              Our satisfaction guarantee means you'll love the results or we make it right.
+            </p>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-[#1e3a5f] to-[#2d4a6f] rounded-xl p-8 text-white">
+          <h3 class="text-2xl font-bold mb-6">Service Areas</h3>
+          <p class="text-gray-300 mb-6">
+            We serve all of Fort Lauderdale and surrounding areas. Same-day appointments available - call us in the morning, and we can often be at your location that afternoon.
+          </p>
+          <ul class="space-y-3">
+            {serviceAreas.map(area => (
+              <li class="flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>{area}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-[#1e3a5f] to-[#152a45] text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+        Schedule Your Mobile Car Detailing Today
+      </h2>
+      <p class="text-xl text-gray-300 mb-8">
+        Your car deserves better than a drive-through car wash. It deserves the attention and care that only professional mobile detailing provides. We work around your schedule, use premium Chemical Guys products, and guarantee your satisfaction.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+17542152272" class="btn-accent text-lg flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call 754-215-2272
+        </a>
+        <a href="/contact/" class="bg-white text-[#1e3a5f] px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+          Request a Quote Online
+        </a>
+      </div>
+      <p class="mt-6 text-[#c9a227]">
+        Same-day appointments available throughout Fort Lauderdale
+      </p>
+    </div>
+  </section>
+</BaseLayout>
