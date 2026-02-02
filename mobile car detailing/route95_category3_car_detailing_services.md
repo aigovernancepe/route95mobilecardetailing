@@ -3,9 +3,9 @@
 **Page:** Category Page (Packages & Specialty Services)  
 **URL:** /car-detailing-services-fort-lauderdale/  
 **Title Tag:** Car Detailing Services Fort Lauderdale | Mobile | Route95  
-**Meta Description:** Professional mobile car detailing services in Fort Lauderdale. Full detail, express detail, luxury cars, paint protection & more. Same-day service. Call 754-215-2272  
+**Meta Description:** Professional mobile car detailing in Fort Lauderdale. Full detail, express detail, luxury cars, headlight restoration, trim restoration & more. Call 754-215-2272  
 **Target Keyword:** Car Detailing Services Fort Lauderdale  
-**Word Count:** ~1,000 words
+**Word Count:** ~1,200 words
 
 ---
 
@@ -129,6 +129,30 @@ We serve all of Fort Lauderdale including Las Olas, Las Olas Isles, Nurmi Isles,
 Schedule detailing at your home, office, or any location that works for your schedule.
 
 **[Learn more about Mobile Detailing service →]**
+
+---
+
+## H2: Headlight Restoration
+
+Foggy, yellowed headlights reduce your visibility at night and make your car look older than it is. Florida sun degrades the plastic lens coating faster than anywhere else in the country, causing this hazy appearance within just a few years.
+
+Headlight restoration removes the oxidized layer and restores crystal clarity. We wet-sand the damaged surface with progressively finer grits, polish it smooth, and apply UV protection to prevent future yellowing. Your headlights look new and function safely again.
+
+This service costs a fraction of headlight replacement and delivers the same clear result. Most restorations complete in about 45 minutes for both headlights.
+
+**[Learn more about Headlight Restoration service →]**
+
+---
+
+## H2: Trim Restoration
+
+Black plastic trim fades to gray under Florida sun. Door handles, mirror caps, window surrounds, and bumper trim all suffer from UV exposure. This aged appearance makes even a clean car look neglected.
+
+Trim restoration brings back the original deep black color and provides UV protection to slow future fading. We treat all exterior plastic trim so the restored color contrasts beautifully against your paint, making your whole vehicle look newer instantly.
+
+For luxury vehicles where appearance matters most, trim restoration is one of the highest-impact services we offer. The difference is immediately visible.
+
+**[Learn more about Trim Restoration service →]**
 
 ---
 

@@ -3,7 +3,7 @@
 **Page:** Category Page (Exterior Services)  
 **URL:** /car-wash-fort-lauderdale/  
 **Title Tag:** Car Wash Fort Lauderdale | Mobile Service | Route95  
-**Meta Description:** Professional mobile car wash in Fort Lauderdale. Hand wash, waxing, clay bar, headlight restoration & more. We come to you! Same-day service. Call 754-215-2272
+**Meta Description:** Professional mobile car wash in Fort Lauderdale. Hand wash, waxing, clay bar, chrome polishing & more. We come to you! Same-day service. Call 754-215-2272
 **Target Keyword:** Car Wash Fort Lauderdale  
 **Word Count:** ~1,200 words
 
@@ -93,16 +93,6 @@ We use specialized chrome polish and soft cloths to bring back the brilliant fin
 
 ---
 
-## H2: Trim Restoration
-
-Black plastic trim fades to gray under Florida sun. This aged appearance makes even a clean car look neglected. Trim restoration brings back the original dark color and provides UV protection to slow future fading.
-
-We treat door handles, mirror caps, window surrounds, and all exterior plastic trim. The restored black color contrasts beautifully against your paint, making your whole vehicle look newer.
-
-**[Learn more about Trim Restoration service →]**
-
----
-
 ## H2: Bug and Tar Removal
 
 Love bug season in South Florida covers your front end with acidic insect remains. Road tar from fresh pavement sticks to lower panels and wheel wells. Both contaminants damage paint if left untreated.
@@ -120,18 +110,6 @@ Hard water from sprinklers and mineral-heavy rain leaves white spots etched into
 Water spot removal requires specialized compounds that dissolve mineral deposits without scratching. We carefully treat affected areas to restore clarity to your paint and windows. For homes with sprinkler systems in Las Olas or Seven Isles, this service keeps your car looking perfect despite daily water exposure.
 
 **[Learn more about Water Spot Removal service →]**
-
----
-
-## H2: Headlight Restoration
-
-Foggy, yellowed headlights reduce your visibility at night and make your car look older than it is. Florida sun degrades the plastic lens coating, causing this hazy appearance.
-
-Headlight restoration removes the oxidized layer and restores clarity. We wet-sand the damaged surface, polish it smooth, and apply UV protection to prevent future yellowing. Your headlights look new and function safely again.
-
-This service often costs a fraction of headlight replacement and delivers the same clear result.
-
-**[Learn more about Headlight Restoration service →]**
 
 ---
 

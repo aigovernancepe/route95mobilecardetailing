@@ -204,10 +204,8 @@ CATEGORY 1: /car-wash-fort-lauderdale/
 ├── H2: Wheel Cleaning → links to service page
 ├── H2: Tire Dressing → links to service page
 ├── H2: Chrome Polishing → links to service page
-├── H2: Trim Restoration → links to service page
 ├── H2: Bug and Tar Removal → links to service page
-├── H2: Water Spot Removal → links to service page
-└── H2: Headlight Restoration → links to service page
+└── H2: Water Spot Removal → links to service page
 
 CATEGORY 2: /upholstery-cleaning-fort-lauderdale/
 ├── Title: Upholstery Cleaning Fort Lauderdale | Mobile Service | Route95
@@ -233,7 +231,9 @@ CATEGORY 3: /car-detailing-services-fort-lauderdale/
 ├── H2: Luxury Car Detailing → links to service page
 ├── H2: Engine Bay Cleaning → links to service page
 ├── H2: Paint Protection Film → links to service page
-└── H2: Mobile Detailing → links to service page
+├── H2: Mobile Detailing → links to service page
+├── H2: Headlight Restoration → links to service page
+└── H2: Trim Restoration → links to service page
 
 ADDITIONAL PAGES:
 ├── /about/ - About Us (training, products, story)
@@ -391,7 +391,7 @@ For every service page, ensure:
 
 ## 7. SERVICE PAGE BRIEFS
 
-### CATEGORY 1: Car Wash (10 Service Pages)
+### CATEGORY 1: Car Wash (8 Service Pages)
 
 #### 7.1 Hand Wash Fort Lauderdale
 - **URL:** /hand-wash-fort-lauderdale/
@@ -447,16 +447,7 @@ For every service page, ensure:
 - **Florida Angle:** Salt air near Intracoastal/ocean damages chrome quickly
 - **Voice Query Match:** "polish chrome on my car", "chrome trim oxidation"
 
-#### 7.7 Trim Restoration Fort Lauderdale
-- **URL:** /trim-restoration-fort-lauderdale/
-- **Parent:** /car-wash-fort-lauderdale/
-- **Key Points:** Restores faded black plastic, UV protection, makes car look newer
-- **Price Range:** $40-75
-- **Time:** 30 minutes
-- **Florida Angle:** Florida sun fades plastic trim to gray rapidly
-- **Voice Query Match:** "fix faded plastic trim", "black trim restoration"
-
-#### 7.8 Bug and Tar Removal Fort Lauderdale
+#### 7.7 Bug and Tar Removal Fort Lauderdale
 - **URL:** /bug-tar-removal-fort-lauderdale/
 - **Parent:** /car-wash-fort-lauderdale/
 - **Key Points:** Safe dissolution, prevents paint damage, love bug season essential
@@ -465,7 +456,7 @@ For every service page, ensure:
 - **Florida Angle:** Love bug season, highway driving, road tar from fresh asphalt
 - **Voice Query Match:** "remove love bugs from car", "bug splatter removal"
 
-#### 7.9 Water Spot Removal Fort Lauderdale
+#### 7.8 Water Spot Removal Fort Lauderdale
 - **URL:** /water-spot-removal-fort-lauderdale/
 - **Parent:** /car-wash-fort-lauderdale/
 - **Key Points:** Mineral deposit removal, safe for paint and glass, prevents etching
@@ -474,20 +465,11 @@ For every service page, ensure:
 - **Florida Angle:** Sprinkler systems, hard water, afternoon rain common in South Florida
 - **Voice Query Match:** "remove water spots from car", "hard water stains on paint"
 
-#### 7.10 Headlight Restoration Fort Lauderdale
-- **URL:** /headlight-restoration-fort-lauderdale/
-- **Parent:** /car-wash-fort-lauderdale/
-- **Key Points:** Wet-sand, polish, UV seal, improves visibility, cheaper than replacement
-- **Price Range:** $75-150 (both lights)
-- **Time:** 45 minutes
-- **Florida Angle:** UV damage yellows headlights faster in Florida
-- **Voice Query Match:** "fix foggy headlights", "headlight restoration near me"
-
 ---
 
 ### CATEGORY 2: Upholstery Cleaning (12 Service Pages)
 
-#### 7.11 Seat Shampooing Fort Lauderdale
+#### 7.9 Seat Shampooing Fort Lauderdale
 - **URL:** /seat-shampooing-fort-lauderdale/
 - **Parent:** /upholstery-cleaning-fort-lauderdale/
 - **Key Points:** Hot water extraction, stain removal, freshens fabric
@@ -496,7 +478,7 @@ For every service page, ensure:
 - **Florida Angle:** Sweat, sunscreen, humidity create odors and stains
 - **Voice Query Match:** "shampoo car seats", "clean fabric seats"
 
-#### 7.12 Carpet Shampooing Fort Lauderdale
+#### 7.10 Carpet Shampooing Fort Lauderdale
 - **URL:** /carpet-shampooing-fort-lauderdale/
 - **Parent:** /upholstery-cleaning-fort-lauderdale/
 - **Key Points:** Deep extraction, sand/dirt removal, mold prevention
@@ -505,7 +487,7 @@ For every service page, ensure:
 - **Florida Angle:** Beach sand, rain moisture, mold from humidity
 - **Voice Query Match:** "clean car carpets", "remove stains from car floor"
 
-#### 7.13 Leather Cleaning Fort Lauderdale
+#### 7.11 Leather Cleaning Fort Lauderdale
 - **URL:** /leather-cleaning-fort-lauderdale/
 - **Parent:** /upholstery-cleaning-fort-lauderdale/
 - **Key Points:** Removes oils/grime, pH-balanced, prepares for conditioning
@@ -514,7 +496,7 @@ For every service page, ensure:
 - **Florida Angle:** Sunscreen, body oils accelerate leather wear in Florida
 - **Voice Query Match:** "clean leather car seats", "leather interior cleaning"
 
-#### 7.14 Leather Conditioning Fort Lauderdale
+#### 7.12 Leather Conditioning Fort Lauderdale
 - **URL:** /leather-conditioning-fort-lauderdale/
 - **Parent:** /upholstery-cleaning-fort-lauderdale/
 - **Key Points:** Restores moisture, prevents cracking, UV protection
@@ -523,7 +505,7 @@ For every service page, ensure:
 - **Florida Angle:** Sun dries out leather, causes cracking without conditioning
 - **Voice Query Match:** "condition leather seats", "protect leather from sun"
 
-#### 7.15 Dashboard Cleaning Fort Lauderdale
+#### 7.13 Dashboard Cleaning Fort Lauderdale
 - **URL:** /dashboard-cleaning-fort-lauderdale/
 - **Parent:** /upholstery-cleaning-fort-lauderdale/
 - **Key Points:** Dust removal, UV protection, includes screens and vents
@@ -532,7 +514,7 @@ For every service page, ensure:
 - **Florida Angle:** Dashboards crack from sun exposure without protection
 - **Voice Query Match:** "clean car dashboard", "protect dashboard from sun"
 
-#### 7.16 Interior Vacuuming Fort Lauderdale
+#### 7.14 Interior Vacuuming Fort Lauderdale
 - **URL:** /interior-vacuuming-fort-lauderdale/
 - **Parent:** /upholstery-cleaning-fort-lauderdale/
 - **Key Points:** Professional equipment, all crevices, moves seats
@@ -541,7 +523,7 @@ For every service page, ensure:
 - **Florida Angle:** Beach sand gets everywhere, professional extraction needed
 - **Voice Query Match:** "vacuum car interior", "deep clean car inside"
 
-#### 7.17 Steam Cleaning Fort Lauderdale
+#### 7.15 Steam Cleaning Fort Lauderdale
 - **URL:** /steam-cleaning-fort-lauderdale/
 - **Parent:** /upholstery-cleaning-fort-lauderdale/
 - **Key Points:** High-temp sanitization, chemical-free, kills bacteria/mold
@@ -550,7 +532,7 @@ For every service page, ensure:
 - **Florida Angle:** Kills mold/mildew that thrive in Florida humidity
 - **Voice Query Match:** "steam clean car interior", "sanitize car seats"
 
-#### 7.18 Odor Removal Fort Lauderdale
+#### 7.16 Odor Removal Fort Lauderdale
 - **URL:** /odor-removal-fort-lauderdale/
 - **Parent:** /upholstery-cleaning-fort-lauderdale/
 - **Key Points:** Source treatment, ozone option, permanent results
@@ -559,7 +541,7 @@ For every service page, ensure:
 - **Florida Angle:** Humidity causes mildew smells, food spoils faster
 - **Voice Query Match:** "remove smell from car", "car odor elimination"
 
-#### 7.19 Smoke Odor Removal Fort Lauderdale
+#### 7.17 Smoke Odor Removal Fort Lauderdale
 - **URL:** /smoke-odor-removal-fort-lauderdale/
 - **Parent:** /upholstery-cleaning-fort-lauderdale/
 - **Key Points:** Deep cleaning + ozone, treats air system, headliner
@@ -568,7 +550,7 @@ For every service page, ensure:
 - **Florida Angle:** Important for resale in Florida's large used car market
 - **Voice Query Match:** "remove cigarette smell from car", "smoke odor car"
 
-#### 7.20 Pet Hair Removal Fort Lauderdale
+#### 7.18 Pet Hair Removal Fort Lauderdale
 - **URL:** /pet-hair-removal-fort-lauderdale/
 - **Parent:** /upholstery-cleaning-fort-lauderdale/
 - **Key Points:** Specialized tools, rubber brushes, complete extraction
@@ -577,7 +559,7 @@ For every service page, ensure:
 - **Florida Angle:** Dog-friendly state, many pets ride to beaches/parks
 - **Voice Query Match:** "remove dog hair from car", "pet hair car cleaning"
 
-#### 7.21 Interior Protection Fort Lauderdale
+#### 7.19 Interior Protection Fort Lauderdale
 - **URL:** /interior-protection-fort-lauderdale/
 - **Parent:** /upholstery-cleaning-fort-lauderdale/
 - **Key Points:** Fabric repellent, leather UV block, vinyl protectant
@@ -586,7 +568,7 @@ For every service page, ensure:
 - **Florida Angle:** Protects against Florida sun, makes cleaning easier
 - **Voice Query Match:** "protect car interior", "interior coating"
 
-#### 7.22 Fabric Protection Fort Lauderdale
+#### 7.20 Fabric Protection Fort Lauderdale
 - **URL:** /fabric-protection-fort-lauderdale/
 - **Parent:** /upholstery-cleaning-fort-lauderdale/
 - **Key Points:** Stain repellent, spills bead up, lasts 6-12 months
@@ -597,9 +579,9 @@ For every service page, ensure:
 
 ---
 
-### CATEGORY 3: Car Detailing Services (6 Service Pages)
+### CATEGORY 3: Car Detailing Services (8 Service Pages)
 
-#### 7.23 Full Detail Fort Lauderdale
+#### 7.21 Full Detail Fort Lauderdale
 - **URL:** /full-detail-fort-lauderdale/
 - **Parent:** /car-detailing-services-fort-lauderdale/
 - **Key Points:** Complete interior + exterior, showroom results
@@ -608,7 +590,7 @@ For every service page, ensure:
 - **Florida Angle:** Comprehensive protection against all Florida elements
 - **Voice Query Match:** "full car detail near me", "complete auto detailing"
 
-#### 7.24 Express Detail Fort Lauderdale
+#### 7.22 Express Detail Fort Lauderdale
 - **URL:** /express-detail-fort-lauderdale/
 - **Parent:** /car-detailing-services-fort-lauderdale/
 - **Key Points:** Quick refresh, wash + vacuum + wipe, 1 hour
@@ -617,7 +599,7 @@ For every service page, ensure:
 - **Florida Angle:** Quick refresh before events, maintains between full details
 - **Voice Query Match:** "quick car detail", "fast car cleaning"
 
-#### 7.25 Luxury Car Detailing Fort Lauderdale
+#### 7.23 Luxury Car Detailing Fort Lauderdale
 - **URL:** /luxury-car-detailing-fort-lauderdale/
 - **Parent:** /car-detailing-services-fort-lauderdale/
 - **Key Points:** Premium materials expertise, exotic cars, special finishes
@@ -626,7 +608,7 @@ For every service page, ensure:
 - **Florida Angle:** Fort Lauderdale has high concentration of luxury/exotic vehicles
 - **Voice Query Match:** "exotic car detailing", "Mercedes detailing Fort Lauderdale"
 
-#### 7.26 Engine Bay Cleaning Fort Lauderdale
+#### 7.24 Engine Bay Cleaning Fort Lauderdale
 - **URL:** /engine-bay-cleaning-fort-lauderdale/
 - **Parent:** /car-detailing-services-fort-lauderdale/
 - **Key Points:** Degreasing, protects electronics, spot leaks, resale value
@@ -635,7 +617,7 @@ For every service page, ensure:
 - **Florida Angle:** Shows care when selling car, easier maintenance
 - **Voice Query Match:** "clean engine bay", "engine detailing"
 
-#### 7.27 Paint Protection Film Fort Lauderdale
+#### 7.25 Paint Protection Film Fort Lauderdale
 - **URL:** /paint-protection-film-fort-lauderdale/
 - **Parent:** /car-detailing-services-fort-lauderdale/
 - **Key Points:** Clear film, rock chip protection, self-healing
@@ -644,7 +626,7 @@ For every service page, ensure:
 - **Florida Angle:** Highway debris, preserves paint for resale
 - **Voice Query Match:** "PPF installation", "paint protection film near me"
 
-#### 7.28 Mobile Detailing Fort Lauderdale
+#### 7.26 Mobile Detailing Fort Lauderdale
 - **URL:** /mobile-detailing-fort-lauderdale/
 - **Parent:** /car-detailing-services-fort-lauderdale/
 - **Key Points:** We come to you, bring everything, same-day available
@@ -652,6 +634,24 @@ For every service page, ensure:
 - **Time:** Varies by service
 - **Florida Angle:** Convenient in Fort Lauderdale's spread-out layout
 - **Voice Query Match:** "mobile car detailing near me", "detailer that comes to you"
+
+#### 7.27 Headlight Restoration Fort Lauderdale
+- **URL:** /headlight-restoration-fort-lauderdale/
+- **Parent:** /car-detailing-services-fort-lauderdale/
+- **Key Points:** Wet-sand, polish, UV seal, improves visibility, cheaper than replacement
+- **Price Range:** $75-150 (both lights)
+- **Time:** 45 minutes
+- **Florida Angle:** UV damage yellows headlights faster in Florida
+- **Voice Query Match:** "fix foggy headlights", "headlight restoration near me"
+
+#### 7.28 Trim Restoration Fort Lauderdale
+- **URL:** /trim-restoration-fort-lauderdale/
+- **Parent:** /car-detailing-services-fort-lauderdale/
+- **Key Points:** Restores faded black plastic, UV protection, makes car look newer
+- **Price Range:** $40-75
+- **Time:** 30 minutes
+- **Florida Angle:** Florida sun fades plastic trim to gray rapidly
+- **Voice Query Match:** "fix faded plastic trim", "black trim restoration"
 
 ---
 
@@ -1004,7 +1004,7 @@ Based on Chemical Guys product categories and Fort Lauderdale market:
 
 ---
 
-*Document Version: 1.2*
+*Document Version: 1.3*
 *Created: February 2025*
 *Last Updated: February 2025*
-*Updates: v1.1 - Added email, Phase 2 FAQ reminder, Chemical Guys product reference. v1.2 - Added carpet/upholstery products, stain-specific treatments, interior protection products, glass products, expanded content examples, expanded original data opportunities, future service expansion notes*
+*Updates: v1.1 - Added email, Phase 2 FAQ reminder, Chemical Guys product reference. v1.2 - Added carpet/upholstery products, stain-specific treatments, interior protection products, glass products, expanded content examples, expanded original data opportunities, future service expansion notes. v1.3 - Restructured service distribution: moved Headlight Restoration and Trim Restoration from Car Wash to Car Detailing Services category (8/12/8 split), fixed H-tag structure guidance*

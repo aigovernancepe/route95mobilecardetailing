@@ -50,13 +50,11 @@ For vehicles that need extra care, we offer clay bar treatment. This process rem
 - Bug and tar removal
 - Water spot removal
 - Chrome polishing
-- Trim restoration
-- Headlight restoration for foggy or yellowed lenses
 - Car waxing for lasting protection
 
 Living near the water in Las Olas Isles or Nurmi Isles means constant exposure to salt spray. Our hand wash service removes these corrosive deposits before they cause permanent damage. We pay special attention to wheels, trim, and chrome where salt damage shows first.
 
-After washing, we apply tire dressing to keep your rubber looking new. We polish chrome accents to a mirror shine. And we restore faded trim to its original black finish. These details make the difference between a car that looks washed and one that looks professionally detailed.
+After washing, we apply tire dressing to keep your rubber looking new. We polish chrome accents to a mirror shine. These details make the difference between a car that looks washed and one that looks professionally detailed.
 
 **[Learn more about our Car Wash services →]**
 
@@ -106,6 +104,12 @@ Our luxury car detailing service caters to high-end vehicle owners throughout Fo
 - Engine bay cleaning
 - Paint protection film installation
 - Mobile detailing at your location
+- Headlight restoration for foggy or yellowed lenses
+- Trim restoration for faded plastic
+
+Headlight restoration is one of our most requested services. Florida's intense UV rays turn clear headlight lenses yellow and hazy over time. This reduces your visibility at night and makes your car look older than it is. We wet-sand, polish, and seal your headlights to restore crystal clarity—for a fraction of the cost of replacement.
+
+Trim restoration brings faded gray plastic back to deep black. The Florida sun bleaches exterior trim within a few years. We restore and protect these surfaces so your car looks newer instantly.
 
 Engine bay cleaning is a service most car owners overlook. But a clean engine bay makes maintenance easier, helps you spot leaks early, and adds value when selling your vehicle. We degrease and detail your engine compartment so it looks as good as the rest of your car.
 
