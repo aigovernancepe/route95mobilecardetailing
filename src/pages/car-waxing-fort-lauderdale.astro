@@ -1,0 +1,178 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+const title = "Car Waxing Fort Lauderdale | Mobile Service | Route95";
+const description = "Professional mobile car waxing in Fort Lauderdale. Carnauba wax protection against Florida sun. We come to you! Same-day service. Call 754-215-2272";
+
+const parentCategory = {
+  href: `${base}car-wash-fort-lauderdale/`,
+  title: "Car Wash Services"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Car Waxing Fort Lauderdale"
+  intro="Professional car waxing applies a protective layer of carnauba wax that shields your paint from Florida's intense UV rays and adds deep, lasting shine."
+  currentPage="/car-waxing-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Your car's paint faces constant assault in South Florida. UV radiation fades color. Salt air accelerates oxidation. Road grime and bird droppings etch into unprotected surfaces. Quality wax creates a sacrificial barrier that takes this punishment instead of your paint.
+        </p>
+        <p class="text-gray-600 mb-4">
+          We bring our waxing service directly to your Fort Lauderdale location. Whether you're at home in Wilton Manors or at work downtown, we come to you with professional-grade Chemical Guys carnauba wax.
+        </p>
+        <p class="text-gray-600">
+          In our experience, cars in Fort Lauderdale need waxing more frequently than northern vehicles. We recommend every 2-3 months to maintain protection against our extreme sun exposure.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">How Much Does Car Waxing Cost in Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Professional car waxing in Fort Lauderdale costs $75 to $150 depending on vehicle size and paint condition.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Sedans and coupes fall at the lower end. SUVs, trucks, and larger vehicles cost more due to additional surface area. Severely oxidized paint may need clay bar treatment first, which adds to the price.
+        </p>
+        <p class="text-gray-600">
+          We apply wax by hand for the best results—no orbital buffers that can damage paint in inexperienced hands.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">How Long Does Car Waxing Take?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Car waxing takes 1 to 2 hours depending on vehicle size and whether we're doing paint prep first.</strong>
+        </p>
+        <p class="text-gray-600">
+          We wash the car first if needed—wax won't bond properly to dirty paint. Then we apply wax in sections, let it haze, and buff to a brilliant shine. Each panel gets attention to ensure complete, even coverage.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Why Does Your Car Need Waxing?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Wax creates a protective barrier between your paint and the environment. Without it, UV rays, salt air, and contaminants attack your clear coat directly.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Benefits of regular waxing:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>UV protection prevents fading and oxidation</li>
+          <li>Hydrophobic surface makes water bead and sheet off</li>
+          <li>Easier cleaning—dirt doesn't stick as easily</li>
+          <li>Protection against bird droppings and tree sap</li>
+          <li>Enhanced shine and depth of color</li>
+          <li>Higher resale value from well-maintained paint</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Car Waxing Process</h2>
+        <div class="space-y-4">
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
+            <div>
+              <h3 class="font-semibold text-[#1e3a5f]">Surface Preparation</h3>
+              <p class="text-gray-600">We wash and dry your vehicle completely. Wax needs a clean surface to bond properly.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
+            <div>
+              <h3 class="font-semibold text-[#1e3a5f]">Clay Bar (if needed)</h3>
+              <p class="text-gray-600">If your paint feels rough, we remove embedded contaminants with clay bar treatment first.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
+            <div>
+              <h3 class="font-semibold text-[#1e3a5f]">Wax Application</h3>
+              <p class="text-gray-600">We apply Chemical Guys carnauba wax by hand, working one section at a time for even coverage.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
+            <div>
+              <h3 class="font-semibold text-[#1e3a5f]">Haze and Buff</h3>
+              <p class="text-gray-600">We let the wax haze slightly, then buff to a deep shine using clean microfiber towels.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
+            <div>
+              <h3 class="font-semibold text-[#1e3a5f]">Final Inspection</h3>
+              <p class="text-gray-600">We check every panel for even coverage and touch up any areas that need extra attention.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#1e3a5f] mb-4">Car Waxing Quick Facts</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c9a227] font-bold">$</span>
+              <span class="text-gray-600">$75-$150 depending on size</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">1-2 hours</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Carnauba wax protection</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">UV protection</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Lasts 2-3 months</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#1e3a5f] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Book Car Waxing</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Same-day appointments available throughout Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#1e3a5f] mb-4">Related Services</h3>
+          <ul class="space-y-2">
+            <li><a href={`${base}clay-bar-treatment-fort-lauderdale/`} class="text-gray-600 hover:text-[#c9a227]">Clay Bar Treatment</a></li>
+            <li><a href={`${base}hand-wash-fort-lauderdale/`} class="text-gray-600 hover:text-[#c9a227]">Hand Wash</a></li>
+            <li><a href={`${base}paint-protection-film-fort-lauderdale/`} class="text-gray-600 hover:text-[#c9a227]">Paint Protection Film</a></li>
+            <li><a href={`${base}full-detail-fort-lauderdale/`} class="text-gray-600 hover:text-[#c9a227]">Full Detail</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>
