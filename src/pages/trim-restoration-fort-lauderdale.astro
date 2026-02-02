@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Trim Restoration Fort Lauderdale | Mobile Service | Route95";
@@ -72,44 +73,14 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Trim Restoration Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Deep Cleaning</h3>
-              <p class="text-gray-600">We clean all trim pieces with an all-purpose cleaner to remove dirt, old dressings, and contaminants that prevent product absorption.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Surface Preparation</h3>
-              <p class="text-gray-600">Heavily oxidized trim gets light abrasion to open the plastic pores and allow restoration product to penetrate deeply.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Restoration Application</h3>
-              <p class="text-gray-600">We apply Chemical Guys VRP or dedicated trim restorer, working it into the plastic with an applicator pad.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Absorption Time</h3>
-              <p class="text-gray-600">We allow the product to soak into the plastic. This is what separates restoration from temporary dressings—the color comes from within.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Buff and Protect</h3>
-              <p class="text-gray-600">We buff away excess product and apply a UV-protective coating to extend the restoration and prevent future fading.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Trim Restoration Process</h2>
+        <ProcessSteps steps={[
+          { title: "Deep Cleaning", description: "We clean all trim pieces with an all-purpose cleaner to remove dirt, old dressings, and contaminants that prevent product absorption." },
+          { title: "Surface Preparation", description: "Heavily oxidized trim gets light abrasion to open the plastic pores and allow restoration product to penetrate deeply." },
+          { title: "Restoration Application", description: "We apply Chemical Guys VRP or dedicated trim restorer, working it into the plastic with an applicator pad." },
+          { title: "Absorption Time", description: "We allow the product to soak into the plastic. This is what separates restoration from temporary dressings—the color comes from within." },
+          { title: "Buff and Protect", description: "We buff away excess product and apply a UV-protective coating to extend the restoration and prevent future fading." }
+        ]} />
       </section>
     </div>
 

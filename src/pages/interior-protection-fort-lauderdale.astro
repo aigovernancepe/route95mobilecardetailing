@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Interior Protection Fort Lauderdale | Mobile Service | Route95";
@@ -97,51 +98,15 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Interior Protection Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Surface Cleaning</h3>
-              <p class="text-gray-600">Protection products work best on clean surfaces. We make sure everything is free of dirt and residue.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Leather Protection</h3>
-              <p class="text-gray-600">We apply Chemical Guys Leather Conditioner with UV blockers to all leather surfaces. This restores moisture while creating a protective barrier.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Fabric Protection</h3>
-              <p class="text-gray-600">Seats, carpets, and headliner get treated with Hydro Thread ceramic fabric coating. This creates a hydrophobic barrier that makes liquids bead up instead of soaking in.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Dashboard and Trim</h3>
-              <p class="text-gray-600">We apply Silk Shine protectant for a natural, non-greasy satin finish. This formula blocks UV rays without that artificial shiny look.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Plastic Restoration</h3>
-              <p class="text-gray-600">Faded trim pieces get treated with VRP (Vinyl, Rubber, Plastic) to restore color and add UV protection.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">6</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Final Inspection</h3>
-              <p class="text-gray-600">We check all surfaces for even coverage and address any missed spots.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Interior Protection Process</h2>
+        <ProcessSteps steps={[
+          { title: "Surface Cleaning", description: "Protection products work best on clean surfaces. We make sure everything is free of dirt and residue." },
+          { title: "Leather Protection", description: "We apply Chemical Guys Leather Conditioner with UV blockers to all leather surfaces. This restores moisture while creating a protective barrier." },
+          { title: "Fabric Protection", description: "Seats, carpets, and headliner get treated with Hydro Thread ceramic fabric coating. This creates a hydrophobic barrier that makes liquids bead up instead of soaking in." },
+          { title: "Dashboard and Trim", description: "We apply Silk Shine protectant for a natural, non-greasy satin finish. This formula blocks UV rays without that artificial shiny look." },
+          { title: "Plastic Restoration", description: "Faded trim pieces get treated with VRP (Vinyl, Rubber, Plastic) to restore color and add UV protection." },
+          { title: "Final Inspection", description: "We check all surfaces for even coverage and address any missed spots." }
+        ]} />
       </section>
 
       <section class="bg-gray-50 rounded-xl p-6">

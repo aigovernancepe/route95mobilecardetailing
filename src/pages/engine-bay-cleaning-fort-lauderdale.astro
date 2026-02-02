@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Engine Bay Cleaning Fort Lauderdale | Mobile Service | Route95";
@@ -73,51 +74,15 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Engine Bay Cleaning Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Cool Down</h3>
-              <p class="text-gray-600">We make sure the engine is cool. Spraying water on a hot engine can cause cracking and damage.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Protect Electronics</h3>
-              <p class="text-gray-600">We cover sensitive electrical components like the alternator, fuse box, and air intake to prevent water intrusion.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Degreaser Application</h3>
-              <p class="text-gray-600">We apply professional-grade degreaser to all surfaces and let it dwell to break down oil and grime.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Agitation</h3>
-              <p class="text-gray-600">We use brushes to work degreaser into caked-on areas, lifting dirt that's been accumulating for years.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Rinse</h3>
-              <p class="text-gray-600">Careful low-pressure rinse removes degreaser and loosened grime without forcing water into sensitive areas.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">6</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Dry and Protect</h3>
-              <p class="text-gray-600">We dry all surfaces and apply protectant to plastic and rubber components to prevent cracking and fading.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Engine Bay Cleaning Process</h2>
+        <ProcessSteps steps={[
+          { title: "Cool Down", description: "We make sure the engine is cool. Spraying water on a hot engine can cause cracking and damage." },
+          { title: "Protect Electronics", description: "We cover sensitive electrical components like the alternator, fuse box, and air intake to prevent water intrusion." },
+          { title: "Degreaser Application", description: "We apply professional-grade degreaser to all surfaces and let it dwell to break down oil and grime." },
+          { title: "Agitation", description: "We use brushes to work degreaser into caked-on areas, lifting dirt that's been accumulating for years." },
+          { title: "Rinse", description: "Careful low-pressure rinse removes degreaser and loosened grime without forcing water into sensitive areas." },
+          { title: "Dry and Protect", description: "We dry all surfaces and apply protectant to plastic and rubber components to prevent cracking and fading." }
+        ]} />
       </section>
     </div>
 

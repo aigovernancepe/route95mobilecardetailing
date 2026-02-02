@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Leather Cleaning Fort Lauderdale | Mobile Service | Route95";
@@ -73,44 +74,14 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Leather Cleaning Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Inspection</h3>
-              <p class="text-gray-600">We examine all leather surfaces to identify heavy soil areas, existing damage, and material type.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Vacuuming</h3>
-              <p class="text-gray-600">Loose dirt and debris gets removed first to prevent grinding it into the leather during cleaning.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Cleaning Solution</h3>
-              <p class="text-gray-600">We apply Chemical Guys leather cleaner using soft brushes that agitate dirt without scratching.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Wiping</h3>
-              <p class="text-gray-600">Clean microfiber towels lift away the cleaner along with dissolved oils and grime.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Drying</h3>
-              <p class="text-gray-600">Leather air dries briefly before any conditioning treatment is applied.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Leather Cleaning Process</h2>
+        <ProcessSteps steps={[
+          { title: "Inspection", description: "We examine all leather surfaces to identify heavy soil areas, existing damage, and material type." },
+          { title: "Vacuuming", description: "Loose dirt and debris gets removed first to prevent grinding it into the leather during cleaning." },
+          { title: "Cleaning Solution", description: "We apply Chemical Guys leather cleaner using soft brushes that agitate dirt without scratching." },
+          { title: "Wiping", description: "Clean microfiber towels lift away the cleaner along with dissolved oils and grime." },
+          { title: "Drying", description: "Leather air dries briefly before any conditioning treatment is applied." }
+        ]} />
       </section>
 
       <section>

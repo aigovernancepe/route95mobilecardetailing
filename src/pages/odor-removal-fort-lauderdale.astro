@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Odor Removal Fort Lauderdale | Mobile Service | Route95";
@@ -102,51 +103,15 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Odor Removal Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Source Identification</h3>
-              <p class="text-gray-600">We find where the smell is coming from. This determines the right treatment approach.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Deep Cleaning</h3>
-              <p class="text-gray-600">We clean the affected area thoroughly. You can't eliminate odors without removing what's causing them.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Enzymatic Treatment</h3>
-              <p class="text-gray-600">For organic odors like food, pet accidents, or body fluids, we apply enzyme-based products that break down odor-causing molecules.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Ozone Treatment</h3>
-              <p class="text-gray-600">For stubborn odors, we run an ozone generator inside your sealed car. Ozone molecules attach to odor particles and neutralize them permanently.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">AC Treatment</h3>
-              <p class="text-gray-600">If the smell comes from your air system, we treat the evaporator and vents to kill mold and bacteria.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">6</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Final Check</h3>
-              <p class="text-gray-600">We verify the odor is gone before finishing.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Odor Removal Process</h2>
+        <ProcessSteps steps={[
+          { title: "Source Identification", description: "We find where the smell is coming from. This determines the right treatment approach." },
+          { title: "Deep Cleaning", description: "We clean the affected area thoroughly. You can't eliminate odors without removing what's causing them." },
+          { title: "Enzymatic Treatment", description: "For organic odors like food, pet accidents, or body fluids, we apply enzyme-based products that break down odor-causing molecules." },
+          { title: "Ozone Treatment", description: "For stubborn odors, we run an ozone generator inside your sealed car. Ozone molecules attach to odor particles and neutralize them permanently." },
+          { title: "AC Treatment", description: "If the smell comes from your air system, we treat the evaporator and vents to kill mold and bacteria." },
+          { title: "Final Check", description: "We verify the odor is gone before finishing." }
+        ]} />
       </section>
 
       <section class="bg-gray-50 rounded-xl p-6">

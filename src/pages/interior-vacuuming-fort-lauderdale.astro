@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Interior Vacuuming Fort Lauderdale | Mobile Service | Route95";
@@ -90,51 +91,15 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Interior Vacuuming Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Floor Mat Removal</h3>
-              <p class="text-gray-600">We take out all mats and clean them separately so we can reach the carpet underneath.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Seat Adjustment</h3>
-              <p class="text-gray-600">We move seats forward and back to access carpet areas that are normally hidden.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Crevice Work</h3>
-              <p class="text-gray-600">Specialized attachments reach into seat tracks, between cushions, and into tight spaces around the center console.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Surface Vacuuming</h3>
-              <p class="text-gray-600">High-powered extraction removes loose debris from all carpet and upholstery surfaces.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Detail Areas</h3>
-              <p class="text-gray-600">We hit door pockets, cup holders, storage compartments, and other spots where debris collects.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">6</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Mat Cleaning</h3>
-              <p class="text-gray-600">Floor mats get vacuumed on both sides and beaten to release trapped sand before going back in.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Interior Vacuuming Process</h2>
+        <ProcessSteps steps={[
+          { title: "Floor Mat Removal", description: "We take out all mats and clean them separately so we can reach the carpet underneath." },
+          { title: "Seat Adjustment", description: "We move seats forward and back to access carpet areas that are normally hidden." },
+          { title: "Crevice Work", description: "Specialized attachments reach into seat tracks, between cushions, and into tight spaces around the center console." },
+          { title: "Surface Vacuuming", description: "High-powered extraction removes loose debris from all carpet and upholstery surfaces." },
+          { title: "Detail Areas", description: "We hit door pockets, cup holders, storage compartments, and other spots where debris collects." },
+          { title: "Mat Cleaning", description: "Floor mats get vacuumed on both sides and beaten to release trapped sand before going back in." }
+        ]} />
       </section>
     </div>
 

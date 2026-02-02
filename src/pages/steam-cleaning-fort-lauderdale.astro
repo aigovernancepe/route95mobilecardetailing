@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Steam Cleaning Fort Lauderdale | Mobile Service | Route95";
@@ -101,51 +102,15 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Steam Cleaning Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Initial Vacuuming</h3>
-              <p class="text-gray-600">We remove loose debris first so steam can penetrate surfaces effectively.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Upholstery Steaming</h3>
-              <p class="text-gray-600">High-temperature vapor penetrates seat fabric and carpet fibers, killing bacteria and loosening embedded dirt.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Leather Surfaces</h3>
-              <p class="text-gray-600">Lower pressure steam safely cleans and sanitizes leather without damage.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Hard Surfaces</h3>
-              <p class="text-gray-600">Dashboard, door panels, console, and trim get steamed to remove grime and kill germs.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Detail Areas</h3>
-              <p class="text-gray-600">Vents, cup holders, buttons, and crevices get targeted steam cleaning.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">6</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Final Wipe</h3>
-              <p class="text-gray-600">We wipe down all surfaces to remove any loosened grime and moisture.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Steam Cleaning Process</h2>
+        <ProcessSteps steps={[
+          { title: "Initial Vacuuming", description: "We remove loose debris first so steam can penetrate surfaces effectively." },
+          { title: "Upholstery Steaming", description: "High-temperature vapor penetrates seat fabric and carpet fibers, killing bacteria and loosening embedded dirt." },
+          { title: "Leather Surfaces", description: "Lower pressure steam safely cleans and sanitizes leather without damage." },
+          { title: "Hard Surfaces", description: "Dashboard, door panels, console, and trim get steamed to remove grime and kill germs." },
+          { title: "Detail Areas", description: "Vents, cup holders, buttons, and crevices get targeted steam cleaning." },
+          { title: "Final Wipe", description: "We wipe down all surfaces to remove any loosened grime and moisture." }
+        ]} />
       </section>
 
       <section class="bg-gray-50 rounded-xl p-6">

@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Tire Dressing Fort Lauderdale | Mobile Service | Route95";
@@ -72,44 +73,14 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Tire Dressing Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Tire Cleaning</h3>
-              <p class="text-gray-600">We scrub sidewalls with degreaser to remove old dressing, road grime, and browning. Clean rubber bonds with dressing properly.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Rinse and Dry</h3>
-              <p class="text-gray-600">Thorough rinse removes all degreaser. We dry the sidewall surface so dressing adheres properly without dilution.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Dressing Application</h3>
-              <p class="text-gray-600">We apply Chemical Guys tire dressing with an applicator pad, working it into the rubber for even coverage.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Excess Removal</h3>
-              <p class="text-gray-600">We wipe away excess product to prevent sling. The dressing should absorb into rubber, not sit on top waiting to fling onto your paint.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Cure Time</h3>
-              <p class="text-gray-600">We allow the dressing to cure before you drive. This ensures maximum durability and prevents transfer to your fenders.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Tire Dressing Process</h2>
+        <ProcessSteps steps={[
+          { title: "Tire Cleaning", description: "We scrub sidewalls with degreaser to remove old dressing, road grime, and browning. Clean rubber bonds with dressing properly." },
+          { title: "Rinse and Dry", description: "Thorough rinse removes all degreaser. We dry the sidewall surface so dressing adheres properly without dilution." },
+          { title: "Dressing Application", description: "We apply Chemical Guys tire dressing with an applicator pad, working it into the rubber for even coverage." },
+          { title: "Excess Removal", description: "We wipe away excess product to prevent sling. The dressing should absorb into rubber, not sit on top waiting to fling onto your paint." },
+          { title: "Cure Time", description: "We allow the dressing to cure before you drive. This ensures maximum durability and prevents transfer to your fenders." }
+        ]} />
       </section>
     </div>
 

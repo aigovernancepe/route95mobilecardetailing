@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Bug and Tar Removal Fort Lauderdale | Mobile Service | Route95";
@@ -72,44 +73,14 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Bug and Tar Removal Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Pre-Rinse</h3>
-              <p class="text-gray-600">We rinse the vehicle to remove loose debris and soften dried bug residue before applying any chemicals.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Bug Remover Application</h3>
-              <p class="text-gray-600">We spray Chemical Guys bug remover on affected areas and allow it to dwell, dissolving the protein bonds that hold bug remains to paint.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Tar Spot Treatment</h3>
-              <p class="text-gray-600">Tar spots get targeted treatment with tar remover that breaks down petroleum bonds without damaging paint or clear coat.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Safe Agitation</h3>
-              <p class="text-gray-600">Using soft microfiber mitts, we gently work remaining residue loose without scratching. No harsh scrubbing or abrasive pads.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Final Wash and Inspection</h3>
-              <p class="text-gray-600">We wash the entire vehicle to remove all chemical residue, then inspect for any remaining contamination that needs retreatment.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Bug and Tar Removal Process</h2>
+        <ProcessSteps steps={[
+          { title: "Pre-Rinse", description: "We rinse the vehicle to remove loose debris and soften dried bug residue before applying any chemicals." },
+          { title: "Bug Remover Application", description: "We spray Chemical Guys bug remover on affected areas and allow it to dwell, dissolving the protein bonds that hold bug remains to paint." },
+          { title: "Tar Spot Treatment", description: "Tar spots get targeted treatment with tar remover that breaks down petroleum bonds without damaging paint or clear coat." },
+          { title: "Safe Agitation", description: "Using soft microfiber mitts, we gently work remaining residue loose without scratching. No harsh scrubbing or abrasive pads." },
+          { title: "Final Wash and Inspection", description: "We wash the entire vehicle to remove all chemical residue, then inspect for any remaining contamination that needs retreatment." }
+        ]} />
       </section>
     </div>
 

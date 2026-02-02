@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Headlight Restoration Fort Lauderdale | Mobile Service | Route95";
@@ -72,44 +73,14 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Headlight Restoration Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Masking</h3>
-              <p class="text-gray-600">We tape off the paint surrounding the headlights to protect your vehicle's finish during the sanding process.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Wet Sanding</h3>
-              <p class="text-gray-600">Starting with coarse grit and progressing to fine, we wet sand the lens to remove the oxidized layer and any pitting or scratches.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Compound Polishing</h3>
-              <p class="text-gray-600">We use cutting compound to remove sanding marks and begin restoring optical clarity to the lens surface.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Fine Polish</h3>
-              <p class="text-gray-600">A finishing polish brings the lens to crystal clarity, removing all haze and restoring the smooth, optically clear surface.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">UV Clear Coat</h3>
-              <p class="text-gray-600">We apply a UV-protective clear coat that shields the bare plastic from sun damage, extending the restoration for 2-3 years.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Headlight Restoration Process</h2>
+        <ProcessSteps steps={[
+          { title: "Masking", description: "We tape off the paint surrounding the headlights to protect your vehicle's finish during the sanding process." },
+          { title: "Wet Sanding", description: "Starting with coarse grit and progressing to fine, we wet sand the lens to remove the oxidized layer and any pitting or scratches." },
+          { title: "Compound Polishing", description: "We use cutting compound to remove sanding marks and begin restoring optical clarity to the lens surface." },
+          { title: "Fine Polish", description: "A finishing polish brings the lens to crystal clarity, removing all haze and restoring the smooth, optically clear surface." },
+          { title: "UV Clear Coat", description: "We apply a UV-protective clear coat that shields the bare plastic from sun damage, extending the restoration for 2-3 years." }
+        ]} />
       </section>
     </div>
 

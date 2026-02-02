@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Carpet Shampooing Fort Lauderdale | Mobile Service | Route95";
@@ -81,51 +82,15 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Carpet Shampooing Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Floor Mat Removal</h3>
-              <p class="text-gray-600">We take out all mats and clean them separately so we can reach the carpet underneath.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Deep Vacuuming</h3>
-              <p class="text-gray-600">Heavy-duty vacuum extraction removes loose sand and debris before we add any liquid.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Pre-Treatment</h3>
-              <p class="text-gray-600">Stains get treated with Chemical Guys Lightning Fast Stain Extractor. This enzyme formula breaks down coffee, food, and pet accidents.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Shampooing</h3>
-              <p class="text-gray-600">We apply Chemical Guys Foaming Citrus Fabric Clean and agitate with stiff brushes to lift embedded dirt from carpet fibers.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Hot Water Extraction</h3>
-              <p class="text-gray-600">Our extractor injects hot water and immediately vacuums it out, pulling dissolved dirt from deep in the carpet pile.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">6</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Maximum Extraction</h3>
-              <p class="text-gray-600">We make multiple passes to remove as much moisture as possible. This prevents mildew and speeds up drying.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Carpet Shampooing Process</h2>
+        <ProcessSteps steps={[
+          { title: "Floor Mat Removal", description: "We take out all mats and clean them separately so we can reach the carpet underneath." },
+          { title: "Deep Vacuuming", description: "Heavy-duty vacuum extraction removes loose sand and debris before we add any liquid." },
+          { title: "Pre-Treatment", description: "Stains get treated with Chemical Guys Lightning Fast Stain Extractor. This enzyme formula breaks down coffee, food, and pet accidents." },
+          { title: "Shampooing", description: "We apply Chemical Guys Foaming Citrus Fabric Clean and agitate with stiff brushes to lift embedded dirt from carpet fibers." },
+          { title: "Hot Water Extraction", description: "Our extractor injects hot water and immediately vacuums it out, pulling dissolved dirt from deep in the carpet pile." },
+          { title: "Maximum Extraction", description: "We make multiple passes to remove as much moisture as possible. This prevents mildew and speeds up drying." }
+        ]} />
       </section>
 
       <section class="bg-[#c9a227] rounded-xl p-6 text-[#1e3a5f]">

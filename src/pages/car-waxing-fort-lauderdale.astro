@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Car Waxing Fort Lauderdale | Mobile Service | Route95";
@@ -73,44 +74,14 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Car Waxing Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Surface Preparation</h3>
-              <p class="text-gray-600">We wash and dry your vehicle completely. Wax needs a clean surface to bond properly.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Clay Bar (if needed)</h3>
-              <p class="text-gray-600">If your paint feels rough, we remove embedded contaminants with clay bar treatment first.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Wax Application</h3>
-              <p class="text-gray-600">We apply Chemical Guys carnauba wax by hand, working one section at a time for even coverage.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Haze and Buff</h3>
-              <p class="text-gray-600">We let the wax haze slightly, then buff to a deep shine using clean microfiber towels.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Final Inspection</h3>
-              <p class="text-gray-600">We check every panel for even coverage and touch up any areas that need extra attention.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Car Waxing Process</h2>
+        <ProcessSteps steps={[
+          { title: "Surface Preparation", description: "We wash and dry your vehicle completely. Wax needs a clean surface to bond properly." },
+          { title: "Clay Bar (if needed)", description: "If your paint feels rough, we remove embedded contaminants with clay bar treatment first." },
+          { title: "Wax Application", description: "We apply Chemical Guys carnauba wax by hand, working one section at a time for even coverage." },
+          { title: "Haze and Buff", description: "We let the wax haze slightly, then buff to a deep shine using clean microfiber towels." },
+          { title: "Final Inspection", description: "We check every panel for even coverage and touch up any areas that need extra attention." }
+        ]} />
       </section>
     </div>
 

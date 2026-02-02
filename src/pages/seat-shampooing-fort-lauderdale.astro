@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Seat Shampooing Fort Lauderdale | Mobile Service | Route95";
@@ -81,44 +82,14 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Seat Shampooing Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Inspection</h3>
-              <p class="text-gray-600">We check your seats for stains, wear, and fabric type to choose the right approach.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Pre-Treatment</h3>
-              <p class="text-gray-600">Tough stains get treated with Chemical Guys Lightning Fast Stain Extractor. This enzyme-based cleaner breaks down coffee, food, and organic stains before we shampoo.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Shampooing</h3>
-              <p class="text-gray-600">We apply Chemical Guys Foaming Citrus Fabric Clean, an oxygen-infused shampoo that penetrates deep into fibers. We agitate with soft brushes to lift dirt from the fabric.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Hot Water Extraction</h3>
-              <p class="text-gray-600">Our extractor injects hot water and immediately vacuums it out, pulling dissolved dirt and shampoo from deep within the seat cushions.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Final Extraction</h3>
-              <p class="text-gray-600">We make multiple passes to remove as much moisture as possible. This prevents mildew growth and helps seats dry faster in Florida's humidity.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Seat Shampooing Process</h2>
+        <ProcessSteps steps={[
+          { title: "Inspection", description: "We check your seats for stains, wear, and fabric type to choose the right approach." },
+          { title: "Pre-Treatment", description: "Tough stains get treated with Chemical Guys Lightning Fast Stain Extractor. This enzyme-based cleaner breaks down coffee, food, and organic stains before we shampoo." },
+          { title: "Shampooing", description: "We apply Chemical Guys Foaming Citrus Fabric Clean, an oxygen-infused shampoo that penetrates deep into fibers. We agitate with soft brushes to lift dirt from the fabric." },
+          { title: "Hot Water Extraction", description: "Our extractor injects hot water and immediately vacuums it out, pulling dissolved dirt and shampoo from deep within the seat cushions." },
+          { title: "Final Extraction", description: "We make multiple passes to remove as much moisture as possible. This prevents mildew growth and helps seats dry faster in Florida's humidity." }
+        ]} />
       </section>
 
       <section class="bg-[#c9a227] rounded-xl p-6 text-[#1e3a5f]">

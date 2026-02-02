@@ -1,5 +1,6 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Chrome Polishing Fort Lauderdale | Mobile Service | Route95";
@@ -72,44 +73,14 @@ const parentCategory = {
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Our Chrome Polishing Process</h2>
-        <div class="space-y-4">
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Surface Cleaning</h3>
-              <p class="text-gray-600">We wash and degrease chrome surfaces to remove dirt, grime, and contaminants that could scratch during polishing.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Condition Assessment</h3>
-              <p class="text-gray-600">We evaluate the oxidation level to determine if we need cutting compound, standard polish, or both.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Polish Application</h3>
-              <p class="text-gray-600">We apply Chemical Guys Heavy Metal Polish by hand or with a polishing tool, working the compound into the chrome surface.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Buffing</h3>
-              <p class="text-gray-600">Using microfiber towels, we buff the polish to bring out the mirror shine that makes chrome look brand new.</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-10 h-10 bg-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">5</div>
-            <div>
-              <h3 class="font-semibold text-[#1e3a5f]">Sealant Protection</h3>
-              <p class="text-gray-600">We apply a protective sealant to guard against salt air and oxidation, extending the time between polishing sessions.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Chrome Polishing Process</h2>
+        <ProcessSteps steps={[
+          { title: "Surface Cleaning", description: "We wash and degrease chrome surfaces to remove dirt, grime, and contaminants that could scratch during polishing." },
+          { title: "Condition Assessment", description: "We evaluate the oxidation level to determine if we need cutting compound, standard polish, or both." },
+          { title: "Polish Application", description: "We apply Chemical Guys Heavy Metal Polish by hand or with a polishing tool, working the compound into the chrome surface." },
+          { title: "Buffing", description: "Using microfiber towels, we buff the polish to bring out the mirror shine that makes chrome look brand new." },
+          { title: "Sealant Protection", description: "We apply a protective sealant to guard against salt air and oxidation, extending the time between polishing sessions." }
+        ]} />
       </section>
     </div>
 
