@@ -1,0 +1,62 @@
+---
+// Google Analytics - Only loads after cookie consent is granted
+// Replace GA_MEASUREMENT_ID with your actual Google Analytics ID
+interface Props {
+  measurementId?: string;
+}
+
+const { measurementId = 'G-XXXXXXXXXX' } = Astro.props;
+---
+
+<script define:vars={{ measurementId }}>
+  // Check if analytics consent was already given
+  function hasAnalyticsConsent() {
+    const cookie = document.cookie
+      .split('; ')
+      .find(row => row.startsWith('route95_cookie_consent='));
+
+    if (cookie) {
+      try {
+        const prefs = JSON.parse(decodeURIComponent(cookie.split('=')[1]));
+        return prefs.analytics === true;
+      } catch {
+        return false;
+      }
+    }
+    return false;
+  }
+
+  function loadGoogleAnalytics() {
+    // Prevent loading twice
+    if (window.gtag) return;
+
+    // Create and load the gtag script
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    document.head.appendChild(script);
+
+    // Initialize gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', measurementId, {
+      'anonymize_ip': true // Additional privacy protection
+    });
+  }
+
+  // Load immediately if consent already given
+  if (hasAnalyticsConsent()) {
+    loadGoogleAnalytics();
+  }
+
+  // Listen for consent event from CookieConsent component
+  window.addEventListener('cookieConsentGranted', (event) => {
+    if (event.detail && event.detail.analytics) {
+      loadGoogleAnalytics();
+    }
+  });
+</script>

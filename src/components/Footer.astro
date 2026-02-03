@@ -56,9 +56,11 @@ const categoryLinks = [
         <ul class="space-y-2 text-gray-300">
           <li>Fort Lauderdale, FL</li>
           <li>Hollywood, FL</li>
+          <li>Dania Beach, FL</li>
           <li>Pompano Beach, FL</li>
-          <li>Broward County</li>
-          <li class="text-sm text-gray-400 mt-2">Including Las Olas, Nurmi Isles, Seven Isles</li>
+          <li>Deerfield Beach, FL</li>
+          <li>Boca Raton, FL</li>
+          <li class="text-sm text-gray-400 mt-2">Including Las Olas, Nurmi Isles, Seven Isles & all of Broward County</li>
         </ul>
       </div>
 
@@ -122,9 +124,12 @@ const categoryLinks = [
         <p class="text-gray-400 text-sm">
           &copy; {currentYear} Route95 Mobile Car Detailing LLC. All rights reserved.
         </p>
-        <div class="flex gap-6 text-sm">
+        <div class="flex flex-wrap gap-4 lg:gap-6 text-sm">
           <a href={`${base}about/`} class="text-gray-400 hover:text-[#c9a227] transition-colors">About</a>
           <a href={`${base}contact/`} class="text-gray-400 hover:text-[#c9a227] transition-colors">Contact</a>
+          <button onclick="openCookiePreferences()" class="text-gray-400 hover:text-[#c9a227] transition-colors">
+            Do Not Sell or Share My Personal Information
+          </button>
         </div>
       </div>
     </div>
