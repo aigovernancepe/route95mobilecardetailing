@@ -1,135 +1,153 @@
 ---
-import ServiceLayout from '../layouts/ServiceLayout.astro';
-import ProcessSteps from '../components/ProcessSteps.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Car Wash Fort Lauderdale | Mobile Service | Route95";
 const description = "Mobile car wash in Fort Lauderdale. We come to your home or office with all equipment. Hand wash, waxing, clay bar, wheel cleaning. Same-day available. Call 754-215-2272.";
-
-const services = [
-  { href: `${base}hand-wash-fort-lauderdale/`, title: "Hand Wash", description: "Chemical Guys Mr. Pink Super Suds in a two-bucket method that prevents scratches." },
-  { href: `${base}car-waxing-fort-lauderdale/`, title: "Car Waxing", description: "Chemical Guys Butter Wet Wax by hand for deep gloss and 4-6 weeks of protection." },
-  { href: `${base}clay-bar-treatment-fort-lauderdale/`, title: "Clay Bar Treatment", description: "Removes bonded contaminants—industrial fallout, tree sap, overspray, and rail dust." },
-  { href: `${base}wheel-cleaning-fort-lauderdale/`, title: "Wheel Cleaning", description: "pH-balanced wheel cleaners safe for chrome, polished aluminum, and painted wheels." },
-  { href: `${base}tire-dressing-fort-lauderdale/`, title: "Tire Dressing", description: "Water-based dressings that restore deep black and won't sling onto your paint." },
-  { href: `${base}chrome-polishing-fort-lauderdale/`, title: "Chrome Polishing", description: "Polish chrome trim, exhaust tips, and emblems with sealant to slow future corrosion." },
-  { href: `${base}bug-and-tar-removal-fort-lauderdale/`, title: "Bug and Tar Removal", description: "Safely dissolve love bug splatter and road tar without damaging paint or wax." },
-  { href: `${base}water-spot-removal-fort-lauderdale/`, title: "Water Spot Removal", description: "Remove mineral deposits and apply protection to prevent future spotting." },
-];
 ---
 
-<ServiceLayout
-  title={title}
-  description={description}
-  h1="Car Wash Fort Lauderdale"
-  intro="Mobile car wash that comes to your Fort Lauderdale home or office. We bring all water and equipment—you don't lift a finger. We use Chemical Guys premium wash products in a two-bucket system that safely lifts dirt without scratching your paint. This matters especially for luxury vehicles where swirl marks show easily on dark finishes."
-  currentPage="/car-wash-fort-lauderdale/"
-  services={services}
->
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-    <div class="lg:col-span-2 space-y-8">
-      <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Why Hand Washing Matters in South Florida</h2>
+<BaseLayout title={title} description={description} currentPage="/car-wash-fort-lauderdale/">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-[#1e3a5f] to-[#152a45] text-white py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Car Wash Fort Lauderdale</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mb-6">
+        <strong>Mobile car wash that comes to your Fort Lauderdale home or office. We bring all water and equipment—you don't lift a finger.</strong>
+      </p>
+      <p class="text-lg text-gray-300 max-w-3xl mb-4">
+        We bring professional car washing directly to you anywhere in Fort Lauderdale, Hollywood, and Pompano Beach. No need to wait in line or drive across town. Our mobile service arrives at your home, office, or anywhere convenient with everything needed for a thorough exterior clean.
+      </p>
+      <p class="text-lg text-gray-300 max-w-3xl mb-4">
+        We use Chemical Guys premium wash products in a two-bucket system that safely lifts dirt without scratching your paint. This matters especially for luxury vehicles where swirl marks show easily on dark finishes.
+      </p>
+      <p class="text-lg text-gray-300 max-w-3xl mb-8">
+        Same-day appointments often available. Call 754-215-2272.
+      </p>
+      <a href="tel:+17542152272" class="btn-accent inline-flex items-center justify-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        Call 754-215-2272
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Content -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4 space-y-12">
+
+      <!-- Hand Wash -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Hand Wash</h2>
         <p class="text-gray-600 mb-4">
-          Fort Lauderdale's environment is harsh on vehicles. Salt air from the ocean deposits corrosive residue on your paint daily. The intense Florida sun bakes contaminants into your clear coat. Automatic car washes with spinning brushes grind this debris across your paint, creating fine scratches that dull your finish over time.
+          Our hand wash uses Chemical Guys Mr. Pink Super Suds in a two-bucket method that prevents scratches. We wash by hand because automated brushes damage paint over time—especially on luxury vehicles like Mercedes, BMW, and Porsche.
         </p>
+        <a href={`${base}hand-wash-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Hand Wash Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Car Waxing -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Car Waxing</h2>
         <p class="text-gray-600 mb-4">
-          Our mobile car wash service eliminates these problems. We hand wash every vehicle using the two-bucket method that professional detailers trust. Fresh microfiber mitts glide across your paint without scratching. And we bring our own purified water to prevent mineral deposits and water spots.
+          Wax creates a protective barrier between your paint and Florida's intense sun, salt air, and daily contaminants. We apply Chemical Guys Butter Wet Wax by hand for deep gloss and 4-6 weeks of protection.
+        </p>
+        <a href={`${base}car-waxing-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Car Waxing Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Clay Bar Treatment -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Clay Bar Treatment</h2>
+        <p class="text-gray-600 mb-4">
+          Clay bar removes bonded contaminants that washing alone can't touch—industrial fallout, tree sap, overspray, and rail dust. If your paint feels rough after washing, it needs clay bar treatment before waxing.
+        </p>
+        <a href={`${base}clay-bar-treatment-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Clay Bar Treatment Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Wheel Cleaning -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Wheel Cleaning</h2>
+        <p class="text-gray-600 mb-4">
+          Brake dust is corrosive and bakes onto wheels in Florida heat. We use pH-balanced wheel cleaners safe for all finishes—chrome, polished aluminum, and painted wheels—to remove buildup without damage.
+        </p>
+        <a href={`${base}wheel-cleaning-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Wheel Cleaning Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Tire Dressing -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Tire Dressing</h2>
+        <p class="text-gray-600 mb-4">
+          Tire dressing restores the deep black appearance of your sidewalls while protecting rubber from UV cracking. We use water-based dressings that won't sling onto your paint when you drive.
+        </p>
+        <a href={`${base}tire-dressing-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Tire Dressing Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Chrome Polishing -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Chrome Polishing</h2>
+        <p class="text-gray-600 mb-4">
+          Salt air in Fort Lauderdale causes chrome to pit and dull over time. We polish chrome trim, exhaust tips, and emblems to restore shine and apply sealant to slow future corrosion.
+        </p>
+        <a href={`${base}chrome-polishing-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Chrome Polishing Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Bug and Tar Removal -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Bug and Tar Removal</h2>
+        <p class="text-gray-600 mb-4">
+          Love bug season in May and September leaves acidic residue that etches clear coat within 24 hours. We safely dissolve bug splatter and road tar without damaging your paint or wax protection.
+        </p>
+        <a href={`${base}bug-and-tar-removal-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Bug and Tar Removal Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Water Spot Removal -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Water Spot Removal</h2>
+        <p class="text-gray-600 mb-4">
+          Sprinkler systems and hard water leave mineral deposits that etch into paint if left untreated. We remove water spots and can apply protection to prevent future spotting on vehicles parked near irrigation.
+        </p>
+        <a href={`${base}water-spot-removal-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Water Spot Removal Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Book Your Mobile Car Wash -->
+      <div class="border-t pt-12">
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Book Your Mobile Car Wash</h2>
+        <p class="text-gray-600 mb-4">
+          Ready for a professional car wash at your location? We serve Fort Lauderdale, Hollywood, and Pompano Beach Monday through Saturday, 8 AM to 8 PM. Same-day appointments often available.
+        </p>
+        <p class="text-gray-600 mb-2">
+          <strong>Call or text:</strong> <a href="tel:+17542152272" class="text-[#1e3a5f] hover:text-[#c9a227]">754-215-2272</a>
         </p>
         <p class="text-gray-600">
-          Whether you're in Las Olas Isles, Nurmi Isles, Seven Isles, or anywhere in Broward County, Route95 delivers car wash results that automated washes simply cannot match.
+          <strong>Email:</strong> <a href="mailto:contact@route95mobilecardetailing.com" class="text-[#1e3a5f] hover:text-[#c9a227]">contact@route95mobilecardetailing.com</a>
         </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Car Wash Process</h2>
-        <ProcessSteps steps={[
-          { title: "Pre-Rinse", description: "We rinse your vehicle to remove loose dirt and debris before touching the paint." },
-          { title: "Two-Bucket Wash", description: "pH-balanced soap and fresh microfiber mitts prevent scratching while lifting grime." },
-          { title: "Wheel & Tire Care", description: "Dedicated brushes and cleaners for wheels, with tire dressing to finish." },
-          { title: "Dry & Detail", description: "Soft drying towels prevent water spots. Door jambs and details cleaned thoroughly." }
-        ]} />
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Protection Services</h2>
-        <p class="text-gray-600 mb-4">
-          Beyond basic washing, we offer services to protect your vehicle from Fort Lauderdale's harsh environment:
-        </p>
-        <ul class="space-y-2">
-          <li class="flex items-start gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-gray-600"><strong>Car Waxing</strong> - UV protection that preserves your paint</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-gray-600"><strong>Clay Bar Treatment</strong> - Removes embedded contaminants</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-gray-600"><strong>Chrome Polishing</strong> - Restores mirror-like shine to trim</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-gray-600"><strong>Water Spot Removal</strong> - Eliminates mineral deposits</span>
-          </li>
-        </ul>
-      </section>
-    </div>
-
-    <aside class="lg:col-span-1">
-      <div class="sticky top-24 space-y-6">
-        <div class="bg-gray-50 rounded-xl p-6">
-          <h3 class="font-bold text-[#1e3a5f] mb-4">Why Choose Route95?</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-gray-600">We come to your location</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-gray-600">Chemical Guys products</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-gray-600">Same-day service available</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-gray-600">Satisfaction guaranteed</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-[#1e3a5f] rounded-xl p-6 text-white">
-          <h3 class="font-bold mb-4">Book Your Car Wash</h3>
-          <p class="text-gray-300 text-sm mb-4">
-            Same-day appointments available throughout Fort Lauderdale.
-          </p>
-          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-            754-215-2272
-          </a>
-        </div>
       </div>
-    </aside>
-  </div>
-</ServiceLayout>
+
+    </div>
+  </section>
+
+  <!-- Footer Info -->
+  <section class="py-8 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center text-gray-600">
+      <p class="font-semibold text-[#1e3a5f]">Route95 Mobile Car Detailing LLC</p>
+      <p>Fort Lauderdale, FL</p>
+      <p>754-215-2272</p>
+      <p>route95mobilecardetailing.com</p>
+    </div>
+  </section>
+</BaseLayout>

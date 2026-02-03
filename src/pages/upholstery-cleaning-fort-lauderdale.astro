@@ -1,140 +1,197 @@
 ---
-import ServiceLayout from '../layouts/ServiceLayout.astro';
-import ProcessSteps from '../components/ProcessSteps.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Upholstery Cleaning Fort Lauderdale | Mobile Service | Route95";
 const description = "Mobile upholstery cleaning in Fort Lauderdale. Seats, carpets, leather, odor removal. We come to you with professional equipment. Same-day available. Call 754-215-2272.";
-
-const services = [
-  { href: `${base}seat-shampooing-fort-lauderdale/`, title: "Seat Shampooing", description: "Chemical Guys Foaming Citrus Fabric Clean with hot water extraction." },
-  { href: `${base}carpet-shampooing-fort-lauderdale/`, title: "Carpet Shampooing", description: "Extract sand, salt, dirt, and stains. Proper extraction prevents mildew." },
-  { href: `${base}leather-cleaning-fort-lauderdale/`, title: "Leather Cleaning", description: "pH-balanced Chemical Guys Leather Cleaner with horse hair brush." },
-  { href: `${base}leather-conditioning-fort-lauderdale/`, title: "Leather Conditioning", description: "Chemical Guys Leather Conditioner with Vitamin E and aloe." },
-  { href: `${base}dashboard-cleaning-fort-lauderdale/`, title: "Dashboard Cleaning", description: "Clean interior plastics and apply UV protectant to prevent fading." },
-  { href: `${base}interior-vacuuming-fort-lauderdale/`, title: "Interior Vacuuming", description: "Commercial equipment with crevice tools for every corner." },
-  { href: `${base}steam-cleaning-fort-lauderdale/`, title: "Steam Cleaning", description: "High-temperature steam sanitizes without harsh chemicals." },
-  { href: `${base}odor-removal-fort-lauderdale/`, title: "Odor Removal", description: "Enzymatic treatments that break down odor-causing bacteria at the source." },
-  { href: `${base}smoke-odor-removal-fort-lauderdale/`, title: "Smoke Odor Removal", description: "Ozone treatment combined with deep cleaning to eliminate smoke odor." },
-  { href: `${base}pet-hair-removal-fort-lauderdale/`, title: "Pet Hair Removal", description: "Specialized tools to extract embedded pet hair. 40% of clients request this." },
-  { href: `${base}interior-protection-fort-lauderdale/`, title: "Interior Protection", description: "UV blockers, fabric sealant, and leather conditioner for all surfaces." },
-  { href: `${base}fabric-protection-fort-lauderdale/`, title: "Fabric Protection", description: "Chemical Guys Hydro Thread creates invisible ceramic barrier." },
-];
 ---
 
-<ServiceLayout
-  title={title}
-  description={description}
-  h1="Upholstery Cleaning Fort Lauderdale"
-  intro="Mobile interior cleaning that comes to your Fort Lauderdale location. We deep clean seats, carpets, leather, and remove odors on-site. Florida's humidity, sand, and sun take a toll on your vehicle's interior. We use Chemical Guys interior products designed for each surface type—pH-balanced leather cleaners, oxygen-infused fabric shampoos, and enzymatic odor eliminators."
-  currentPage="/upholstery-cleaning-fort-lauderdale/"
-  services={services}
->
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-    <div class="lg:col-span-2 space-y-8">
-      <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Why Interior Cleaning Matters in South Florida</h2>
+<BaseLayout title={title} description={description} currentPage="/upholstery-cleaning-fort-lauderdale/">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-[#1e3a5f] to-[#152a45] text-white py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Upholstery Cleaning Fort Lauderdale</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mb-6">
+        <strong>Mobile interior cleaning that comes to your Fort Lauderdale location. We deep clean seats, carpets, leather, and remove odors on-site.</strong>
+      </p>
+      <p class="text-lg text-gray-300 max-w-3xl mb-4">
+        Florida's humidity, sand, and sun take a toll on your vehicle's interior. Sweat soaks into fabric seats, leather dries and cracks, and mildew grows in damp carpet fibers. We bring professional interior cleaning directly to your home or office in Fort Lauderdale, Hollywood, and Pompano Beach.
+      </p>
+      <p class="text-lg text-gray-300 max-w-3xl mb-4">
+        We use Chemical Guys interior products designed for each surface type—pH-balanced leather cleaners, oxygen-infused fabric shampoos, and enzymatic odor eliminators. Our extraction equipment removes deep-set dirt and moisture that causes mildew in humid climates.
+      </p>
+      <p class="text-lg text-gray-300 max-w-3xl mb-8">
+        Same-day appointments often available. Call 754-215-2272.
+      </p>
+      <a href="tel:+17542152272" class="btn-accent inline-flex items-center justify-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        Call 754-215-2272
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Content -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4 space-y-12">
+
+      <!-- Seat Shampooing -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Seat Shampooing</h2>
         <p class="text-gray-600 mb-4">
-          You spend hours inside your car every week. The air you breathe circulates through carpets, seats, and air vents that trap dust, allergens, and bacteria. Florida humidity accelerates the growth of mold and mildew in these hidden areas.
+          We deep clean fabric seats using Chemical Guys Foaming Citrus Fabric Clean, an oxygen-infused shampoo that penetrates fibers to lift embedded dirt, sweat, and stains. Hot water extraction pulls out contaminants and excess moisture.
         </p>
+        <a href={`${base}seat-shampooing-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Seat Shampooing Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Carpet Shampooing -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Carpet Shampooing</h2>
         <p class="text-gray-600 mb-4">
-          Sunscreen, sweat, and body oils transfer to your seats every time you drive. Food crumbs fall between seats where they decompose. Sand from Fort Lauderdale Beach works its way into carpet fibers. Over time, your interior becomes a collection of everything that's touched it.
+          Beach sand works deep into carpet fibers where vacuuming can't reach. We shampoo and extract carpets to remove sand, salt, dirt, and stains. Proper extraction prevents mildew growth in Florida's humidity.
+        </p>
+        <a href={`${base}carpet-shampooing-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Carpet Shampooing Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Leather Cleaning -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Leather Cleaning</h2>
+        <p class="text-gray-600 mb-4">
+          Leather collects body oils, sunscreen, and dirt that break down the finish over time. We use pH-balanced Chemical Guys Leather Cleaner with a horse hair brush to lift grime from leather pores without damage.
+        </p>
+        <a href={`${base}leather-cleaning-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Leather Cleaning Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Leather Conditioning -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Leather Conditioning</h2>
+        <p class="text-gray-600 mb-4">
+          Florida sun through windows dries leather and causes cracking. We apply Chemical Guys Leather Conditioner with Vitamin E and aloe to restore moisture and flexibility. Most Fort Lauderdale vehicles need conditioning every 2-3 months.
+        </p>
+        <a href={`${base}leather-conditioning-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Leather Conditioning Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Dashboard Cleaning -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Dashboard Cleaning</h2>
+        <p class="text-gray-600 mb-4">
+          Dashboards collect dust, UV damage, and greasy film from air conditioning. We clean all interior plastics and apply UV protectant to prevent fading and cracking from intense Florida sun exposure.
+        </p>
+        <a href={`${base}dashboard-cleaning-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Dashboard Cleaning Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Interior Vacuuming -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Interior Vacuuming</h2>
+        <p class="text-gray-600 mb-4">
+          Thorough vacuuming reaches under seats, in crevices, and between cushions where dirt hides. We use commercial equipment with crevice tools to remove sand, crumbs, pet hair, and debris from every corner.
+        </p>
+        <a href={`${base}interior-vacuuming-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Interior Vacuuming Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Steam Cleaning -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Steam Cleaning</h2>
+        <p class="text-gray-600 mb-4">
+          Steam sanitizes and deep cleans without harsh chemicals. High-temperature steam kills bacteria, loosens grime, and refreshes fabrics. Safe for all interior surfaces including sensitive leather and electronics.
+        </p>
+        <a href={`${base}steam-cleaning-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Steam Cleaning Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Odor Removal -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Odor Removal</h2>
+        <p class="text-gray-600 mb-4">
+          Odors from food, mildew, and spills absorb into fabric and carpet padding. We use enzymatic treatments that break down odor-causing bacteria at the source rather than masking smells with fragrance.
+        </p>
+        <a href={`${base}odor-removal-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Odor Removal Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Smoke Odor Removal -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Smoke Odor Removal</h2>
+        <p class="text-gray-600 mb-4">
+          Cigarette and cigar smoke penetrates every porous surface—headliner, seats, carpet, and air vents. We use ozone treatment combined with deep cleaning to eliminate smoke odor, not just cover it up.
+        </p>
+        <a href={`${base}smoke-odor-removal-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Smoke Odor Removal Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Pet Hair Removal -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Pet Hair Removal</h2>
+        <p class="text-gray-600 mb-4">
+          Pet hair weaves into fabric fibers and resists normal vacuuming. We use specialized tools and techniques to extract embedded pet hair from seats, carpets, and tight spaces. About 40% of our Fort Lauderdale clients request this service.
+        </p>
+        <a href={`${base}pet-hair-removal-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Pet Hair Removal Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Interior Protection -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Interior Protection</h2>
+        <p class="text-gray-600 mb-4">
+          After cleaning, we apply protectants to all interior surfaces—UV blockers for plastics, fabric sealant for seats, and leather conditioner for hides. Protection extends the life of your interior and makes future cleaning easier.
+        </p>
+        <a href={`${base}interior-protection-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Interior Protection Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Fabric Protection -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Fabric Protection</h2>
+        <p class="text-gray-600 mb-4">
+          Chemical Guys Hydro Thread creates an invisible ceramic barrier on fabric seats and carpets. Spills bead up on the surface instead of soaking in, giving you time to wipe up before stains set.
+        </p>
+        <a href={`${base}fabric-protection-fort-lauderdale/`} class="text-[#1e3a5f] font-medium hover:text-[#c9a227] transition-colors">
+          Learn more about Fabric Protection Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Book Your Interior Cleaning -->
+      <div class="border-t pt-12">
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Book Your Interior Cleaning</h2>
+        <p class="text-gray-600 mb-4">
+          Ready for a fresh, clean interior? We serve Fort Lauderdale, Hollywood, and Pompano Beach Monday through Saturday, 8 AM to 8 PM. Same-day appointments often available.
+        </p>
+        <p class="text-gray-600 mb-2">
+          <strong>Call or text:</strong> <a href="tel:+17542152272" class="text-[#1e3a5f] hover:text-[#c9a227]">754-215-2272</a>
         </p>
         <p class="text-gray-600">
-          Our upholstery cleaning service removes what you can see and what you can't. We extract embedded dirt from carpets and seats. We sanitize surfaces that harbor bacteria. We eliminate odors at their source instead of covering them up.
+          <strong>Email:</strong> <a href="mailto:contact@route95mobilecardetailing.com" class="text-[#1e3a5f] hover:text-[#c9a227]">contact@route95mobilecardetailing.com</a>
         </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Interior Cleaning Process</h2>
-        <ProcessSteps steps={[
-          { title: "Thorough Vacuuming", description: "We remove all loose dirt, debris, and pet hair from every surface and crevice." },
-          { title: "Deep Cleaning", description: "Carpets and seats get shampooed with hot water extraction. Leather is cleaned with pH-balanced products." },
-          { title: "Sanitization", description: "Steam cleaning kills bacteria, dust mites, and mold throughout your interior." },
-          { title: "Protection", description: "We apply protectants that repel stains and UV damage to extend your results." }
-        ]} />
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Specialized Interior Services</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <h3 class="font-semibold text-[#1e3a5f] mb-2">Leather Care</h3>
-            <p class="text-gray-600 text-sm">Cleaning and conditioning to prevent cracking and fading from Florida sun.</p>
-          </div>
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <h3 class="font-semibold text-[#1e3a5f] mb-2">Odor Elimination</h3>
-            <p class="text-gray-600 text-sm">Ozone treatment removes smoke, mold, and food odors permanently.</p>
-          </div>
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <h3 class="font-semibold text-[#1e3a5f] mb-2">Pet Hair Removal</h3>
-            <p class="text-gray-600 text-sm">Specialized tools extract embedded fur from carpets and upholstery.</p>
-          </div>
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <h3 class="font-semibold text-[#1e3a5f] mb-2">Stain Protection</h3>
-            <p class="text-gray-600 text-sm">Fabric protector causes spills to bead up instead of soaking in.</p>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <aside class="lg:col-span-1">
-      <div class="sticky top-24 space-y-6">
-        <div class="bg-gray-50 rounded-xl p-6">
-          <h3 class="font-bold text-[#1e3a5f] mb-4">Common Interior Problems We Solve</h3>
-          <ul class="space-y-3 text-gray-600">
-            <li class="flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Musty mildew smell</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Coffee & food stains</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Cracked leather</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Embedded pet hair</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Cigarette smoke odor</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Sand from the beach</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-[#1e3a5f] rounded-xl p-6 text-white">
-          <h3 class="font-bold mb-4">Book Interior Cleaning</h3>
-          <p class="text-gray-300 text-sm mb-4">
-            Same-day appointments available throughout Fort Lauderdale.
-          </p>
-          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-            754-215-2272
-          </a>
-        </div>
       </div>
-    </aside>
-  </div>
-</ServiceLayout>
+
+    </div>
+  </section>
+
+  <!-- Footer Info -->
+  <section class="py-8 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center text-gray-600">
+      <p class="font-semibold text-[#1e3a5f]">Route95 Mobile Car Detailing LLC</p>
+      <p>Fort Lauderdale, FL</p>
+      <p>754-215-2272</p>
+      <p>route95mobilecardetailing.com</p>
+    </div>
+  </section>
+</BaseLayout>
