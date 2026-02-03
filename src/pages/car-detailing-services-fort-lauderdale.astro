@@ -3,16 +3,18 @@ import ServiceLayout from '../layouts/ServiceLayout.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Car Detailing Services Fort Lauderdale | Mobile | Route95";
-const description = "Professional mobile car detailing in Fort Lauderdale. Full detail, express detail, luxury cars, headlight restoration, trim restoration & more. Call 754-215-2272";
+const description = "Mobile car detailing in Fort Lauderdale. Full details, express details, luxury vehicles, engine cleaning. We come to you. Same-day available. Call 754-215-2272.";
 
 const services = [
   { href: `${base}packages-fort-lauderdale/`, title: "📦 View All Packages", description: "Bundle & save up to 25% on detailing services." },
-  { href: `${base}full-detail-fort-lauderdale/`, title: "Full Detail", description: "Complete interior and exterior transformation." },
-  { href: `${base}express-detail-fort-lauderdale/`, title: "Express Detail", description: "Quick refresh in about an hour." },
-  { href: `${base}luxury-car-detailing-fort-lauderdale/`, title: "Luxury Car Detailing", description: "Specialized care for high-end vehicles." },
-  { href: `${base}engine-bay-cleaning-fort-lauderdale/`, title: "Engine Bay Cleaning", description: "Degrease and detail your engine compartment." },
-  { href: `${base}paint-protection-film-fort-lauderdale/`, title: "Paint Protection Film", description: "Clear film that protects against rock chips." },
-  { href: `${base}mobile-detailing-fort-lauderdale/`, title: "Mobile Detailing", description: "Professional detailing at your location." },
+  { href: `${base}full-detail-fort-lauderdale/`, title: "Full Detail", description: "Complete detail—hand wash, clay bar, wax, plus full interior deep cleaning." },
+  { href: `${base}express-detail-fort-lauderdale/`, title: "Express Detail", description: "Essentials in about an hour—wash, vacuum, wipe-down, glass cleaning." },
+  { href: `${base}luxury-car-detailing-fort-lauderdale/`, title: "Luxury Car Detailing", description: "Specialized care for Mercedes, BMW, Porsche, Ferrari, and exotics." },
+  { href: `${base}engine-bay-cleaning-fort-lauderdale/`, title: "Engine Bay Cleaning", description: "Degrease, detail, and protect against Florida's salt air corrosion." },
+  { href: `${base}paint-protection-film-fort-lauderdale/`, title: "Paint Protection Film", description: "Clear PPF for hoods, bumpers, and mirrors to preserve finish and value." },
+  { href: `${base}mobile-detailing-fort-lauderdale/`, title: "Mobile Detailing", description: "We come to you—home, office, gym, anywhere in Fort Lauderdale." },
+  { href: `${base}headlight-restoration-fort-lauderdale/`, title: "Headlight Restoration", description: "Wet-sand oxidation, polish to clarity, and seal to prevent yellowing." },
+  { href: `${base}trim-restoration-fort-lauderdale/`, title: "Trim Restoration", description: "Restore faded black plastic trim and apply protectant against UV damage." },
 ];
 ---
 
@@ -20,7 +22,7 @@ const services = [
   title={title}
   description={description}
   h1="Car Detailing Services Fort Lauderdale"
-  intro="When your vehicle needs more than a wash, Route95's professional car detailing services deliver complete transformation. From quick refreshes to comprehensive details, we bring expert care directly to your Fort Lauderdale location. Our specialty services protect your investment and keep luxury vehicles looking showroom-perfect."
+  intro="Complete mobile detailing that comes to your Fort Lauderdale location. Full interior and exterior restoration for vehicles of all types. We specialize in luxury and high-end vehicles including Mercedes, BMW, Porsche, Range Rover, and exotics. Our team uses Chemical Guys premium products chosen specifically for each surface type."
   currentPage="/car-detailing-services-fort-lauderdale/"
   services={services}
 >

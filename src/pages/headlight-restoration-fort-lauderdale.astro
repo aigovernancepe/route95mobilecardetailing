@@ -1,0 +1,149 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+
+const base = import.meta.env.BASE_URL;
+const title = "Headlight Restoration Fort Lauderdale | Mobile Service | Route95";
+const description = "Professional headlight restoration in Fort Lauderdale. Mobile service - we come to you! Restore cloudy, yellowed headlights to like-new clarity. Call 754-215-2272";
+
+const parentCategory = {
+  href: `${base}car-detailing-services-fort-lauderdale/`,
+  title: "Car Detailing Services"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Headlight Restoration Fort Lauderdale"
+  intro="Cloudy, yellowed headlights reduce visibility and make your car look older. We wet-sand oxidation, polish to clarity, and seal the lens to prevent future yellowing. Results are immediate and dramatic."
+  currentPage="/headlight-restoration-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Florida's intense UV exposure takes a serious toll on your headlight lenses. The plastic oxidizes, turns yellow, and becomes hazy over time. This isn't just a cosmetic issue—cloudy headlights significantly reduce your nighttime visibility and make your vehicle look years older than it is.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Route95 brings professional headlight restoration directly to your Fort Lauderdale location. We use a multi-step process that removes oxidation from the surface, polishes the lens to optical clarity, and seals it with UV protection to slow future degradation.
+        </p>
+        <p class="text-gray-600">
+          The transformation is dramatic and immediate. What looked like ten-year-old headlights will look factory fresh when we're done.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">How Much Does Headlight Restoration Cost in Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Headlight restoration in Fort Lauderdale costs $75 to $125 for both headlights depending on severity of oxidation.</strong>
+        </p>
+        <p class="text-gray-600">
+          Lightly hazed lenses that just need polishing fall on the lower end. Heavily oxidized, yellowed lenses that require multiple stages of wet sanding take more time and materials. We assess your headlights and provide an exact quote before starting.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">How Long Does Headlight Restoration Take?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Headlight restoration takes 30 to 60 minutes for both headlights depending on condition.</strong>
+        </p>
+        <p class="text-gray-600">
+          Rushing the process leads to uneven results. We take the time to properly sand through each grit level, polish completely, and apply UV sealant for lasting protection.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Why Restore Your Headlights?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Clear headlights improve nighttime visibility by up to 50% and dramatically improve your vehicle's appearance.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Benefits of headlight restoration:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>Dramatically improved nighttime visibility</li>
+          <li>Vehicle looks years newer instantly</li>
+          <li>Fraction of the cost of lens replacement</li>
+          <li>May help pass vehicle inspection</li>
+          <li>Increases resale value</li>
+          <li>UV sealant prevents rapid re-oxidation</li>
+        </ul>
+        <p class="text-gray-600">
+          Replacement headlight assemblies can cost $200-$800 each for modern vehicles. Restoration achieves the same visual result at a fraction of the cost.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Our Headlight Restoration Process</h2>
+        <ProcessSteps steps={[
+          { title: "Assessment", description: "We evaluate the level of oxidation and hazing to determine the appropriate starting grit for wet sanding." },
+          { title: "Masking", description: "We tape off surrounding paint to protect it from sanding and polishing compounds." },
+          { title: "Wet Sanding", description: "We progressively sand through multiple grits (800, 1500, 2000, 3000) to remove all oxidation from the lens surface." },
+          { title: "Polishing", description: "Using a polishing compound and foam pad, we restore optical clarity to the lens." },
+          { title: "UV Sealant", description: "We apply a professional UV-blocking sealant that protects against future oxidation for 1-2 years." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#1e3a5f] mb-4">Headlight Restoration Quick Facts</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c9a227] font-bold">$</span>
+              <span class="text-gray-600">$75-$125 for both headlights</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">30-60 minutes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Multi-stage wet sanding</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Professional polishing</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c9a227] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">UV sealant protection</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#1e3a5f] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Book Headlight Restoration</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Same-day appointments available throughout Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#1e3a5f] mb-4">Related Services</h3>
+          <ul class="space-y-2">
+            <li><a href={`${base}full-detail-fort-lauderdale/`} class="text-gray-600 hover:text-[#c9a227]">Full Detail</a></li>
+            <li><a href={`${base}trim-restoration-fort-lauderdale/`} class="text-gray-600 hover:text-[#c9a227]">Trim Restoration</a></li>
+            <li><a href={`${base}paint-protection-film-fort-lauderdale/`} class="text-gray-600 hover:text-[#c9a227]">Paint Protection Film</a></li>
+            <li><a href={`${base}luxury-car-detailing-fort-lauderdale/`} class="text-gray-600 hover:text-[#c9a227]">Luxury Car Detailing</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>
