@@ -3,100 +3,58 @@ import ServiceLayout from '../layouts/ServiceLayout.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Car Detailing Packages Fort Lauderdale | Route95 Mobile Detailing";
-const description = "Professional car detailing packages in Fort Lauderdale. Save up to 25% with our bundle deals. Mobile service - we come to you! Sedan, SUV & truck pricing. Call 754-215-2272";
+const description = "Professional mobile car detailing packages in Fort Lauderdale. Choose from Quick Wash, Fresh Start, or Complete Clean. We come to you! Sedan, SUV & truck pricing. Call 754-215-2272";
 
 const packages = [
   {
-    name: "Quick Shine",
-    description: "Perfect for a fast refresh between full details",
-    services: ["Hand Wash", "Vacuum", "Window Clean"],
-    sedan: 65,
-    suv: 80,
-    truck: 95,
-    discount: 15,
+    name: "Quick Wash",
+    description: "A fast exterior & interior refresh to keep your car looking sharp",
+    services: ["Hand Wash", "Tires & Rims", "Window Cleaning", "Interior Wipe Down", "Vacuum"],
+    sedan: 50,
+    suv: 65,
+    truck: 80,
     popular: false
   },
   {
     name: "Fresh Start",
-    description: "Interior refresh with exterior clean",
-    services: ["Hand Wash", "Interior Vacuum", "Dashboard Wipe", "Tire Dress"],
-    sedan: 85,
-    suv: 105,
-    truck: 125,
-    discount: 12,
+    description: "A step up with tire dressing and full interior wipe down",
+    services: ["Hand Wash", "Tires & Rims", "Tire Dressing", "Window Cleaning", "Dashboard", "Center Console", "Vacuum"],
+    sedan: 80,
+    suv: 95,
+    truck: 110,
     popular: false
   },
   {
     name: "Complete Clean",
-    description: "Full interior and exterior treatment",
-    services: ["Full Exterior Wash", "Full Interior Clean", "Light Shampoo"],
-    sedan: 145,
-    suv: 185,
-    truck: 225,
-    discount: 18,
-    popular: true
+    description: "Our most thorough package — inside and out, trunk included",
+    services: ["Hand Wash", "Tires & Rims", "Tire Dressing", "Fender Wells", "Exterior Plastic Restorer", "Window Cleaning", "Dashboard", "Center Console", "Floor Mats", "Vacuum (incl. Trunk)"],
+    sedan: 130,
+    suv: 145,
+    truck: 160,
+    popular: true,
+    promo: true,
+    promoLabel: "10% OFF — Feb & March 2026",
+    promoDiscount: 0.10
   },
   {
     name: "Premium Refresh",
-    description: "Deep clean with paint protection",
-    services: ["Full Detail", "Clay Bar", "Wax"],
-    sedan: 235,
-    suv: 295,
-    truck: 355,
-    discount: 15,
-    popular: false
-  },
-  {
-    name: "Ultimate Detail",
-    description: "The complete transformation package",
-    services: ["Full Detail", "Clay Bar", "Wax", "Leather Treatment", "Engine Bay"],
-    sedan: 295,
-    suv: 375,
-    truck: 455,
-    discount: 20,
-    popular: false
-  },
-  {
-    name: "Leather Lover",
-    description: "Premium leather care package",
-    services: ["Leather Clean", "Condition", "Interior Protection"],
-    sedan: 95,
-    suv: 120,
-    truck: 145,
-    discount: 22,
-    popular: false
-  },
-  {
-    name: "New Car Feel",
-    description: "Eliminate odors and protect fabrics",
-    services: ["Full Detail", "Odor Removal", "Fabric Protection"],
-    sedan: 245,
-    suv: 305,
-    truck: 365,
-    discount: 15,
-    popular: false
-  },
-  {
-    name: "Paint Perfection",
-    description: "Showroom-quality exterior finish",
-    services: ["Hand Wash", "Clay Bar", "Polish", "Wax"],
-    sedan: 175,
-    suv: 220,
-    truck: 265,
-    discount: 18,
-    popular: false
-  },
-  {
-    name: "Monthly Maintenance",
-    description: "Subscription service - best value!",
-    services: ["Hand Wash", "Vacuum", "Dashboard", "Windows"],
-    sedan: 55,
-    suv: 70,
-    truck: 85,
-    discount: 25,
+    description: "Deep interior shampoo with steam cleaning — the ultimate detail",
+    services: ["Interior Shampoo (Seats, Carpets, Door Panels, Seatbelts)", "Door Jambs", "Steam Cleaning", "+ Everything in Complete Clean"],
+    sedan: null,
+    suv: null,
+    truck: null,
     popular: false,
-    subscription: true
+    comingSoon: true
   }
+];
+
+const addOns = [
+  { name: "Doorjambs", price: 20 },
+  { name: "Vacuum Truck", price: 20 },
+  { name: "Pet Hair Removal", price: 25 },
+  { name: "Floor Mat Cleaning", price: 25 },
+  { name: "Exterior Plastic Restorer", price: 20 },
+  { name: "Steam Cleaning", price: 50 }
 ];
 
 const parentCategory = {
@@ -115,11 +73,11 @@ const parentCategory = {
 >
   <div class="space-y-12">
     <!-- Pricing Note -->
-    <div class="bg-gradient-to-r from-[#1e3a5f] to-[#2d5a8f] rounded-xl p-6 text-white">
+    <div class="bg-gradient-to-r from-[#0a1e38] to-[#0f2a4a] rounded-xl p-6 text-white">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
-          <h2 class="text-xl font-bold mb-2">Bundle & Save Up to 25%</h2>
-          <p class="text-gray-300">Prices vary by vehicle size. All packages include mobile service—we come to you!</p>
+          <h2 class="text-xl font-bold mb-2">Mobile Detailing Packages</h2>
+          <p class="text-gray-300">Prices vary by vehicle size. We come to your location in Fort Lauderdale, Hollywood & Pompano Beach!</p>
         </div>
         <a href="tel:+17542152272" class="btn-accent inline-flex items-center justify-center gap-2 whitespace-nowrap">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -131,103 +89,144 @@ const parentCategory = {
     </div>
 
     <!-- Package Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {packages.map(pkg => (
-        <div class={`bg-white rounded-xl shadow-lg overflow-hidden border-2 ${pkg.popular ? 'border-[#c9a227]' : 'border-transparent'} hover:shadow-xl transition-shadow relative`}>
-          {pkg.popular && (
-            <div class="absolute top-0 right-0 bg-[#c9a227] text-[#1e3a5f] px-4 py-1 text-sm font-bold rounded-bl-lg">
+        <div class={`bg-white rounded-xl shadow-lg overflow-hidden border-2 ${pkg.promo ? 'border-green-500 ring-2 ring-green-200' : pkg.popular ? 'border-[#0f2a4a]' : 'border-transparent'} hover:shadow-xl transition-shadow relative`}>
+          {pkg.promo && (
+            <div class="bg-green-500 text-white text-center py-2 text-sm font-bold tracking-wide">
+              {pkg.promoLabel}
+            </div>
+          )}
+          {pkg.popular && !pkg.promo && (
+            <div class="absolute top-0 right-0 bg-[#0f2a4a] text-white px-4 py-1 text-sm font-bold rounded-bl-lg">
               Most Popular
             </div>
           )}
-          {pkg.subscription && (
-            <div class="absolute top-0 right-0 bg-green-500 text-white px-4 py-1 text-sm font-bold rounded-bl-lg">
-              Best Value
+          {pkg.comingSoon && (
+            <div class="absolute top-0 right-0 bg-[#c0c7cf] text-[#0f2a4a] px-4 py-1 text-sm font-bold rounded-bl-lg">
+              Coming Soon
             </div>
           )}
 
           <div class="p-6">
-            <h3 class="text-xl font-bold text-[#1e3a5f] mb-1">{pkg.name}</h3>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-1">{pkg.name}</h3>
             <p class="text-gray-500 text-sm mb-4">{pkg.description}</p>
 
             <!-- Services included -->
             <div class="mb-4">
               <p class="text-xs text-gray-400 uppercase tracking-wide mb-2">Includes:</p>
-              <div class="flex flex-wrap gap-1">
+              <ul class="space-y-1">
                 {pkg.services.map(service => (
-                  <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                  <li class="flex items-center gap-2 text-sm text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#0f2a4a] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
                     {service}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
 
             <!-- Pricing -->
-            <div class="border-t pt-4 mt-4">
-              <div class="grid grid-cols-3 gap-2 text-center mb-3">
-                <div>
-                  <p class="text-xs text-gray-400">Sedan</p>
-                  <p class="text-lg font-bold text-[#1e3a5f]">${pkg.sedan}</p>
-                </div>
-                <div>
-                  <p class="text-xs text-gray-400">SUV</p>
-                  <p class="text-lg font-bold text-[#1e3a5f]">${pkg.suv}</p>
-                </div>
-                <div>
-                  <p class="text-xs text-gray-400">Truck</p>
-                  <p class="text-lg font-bold text-[#1e3a5f]">${pkg.truck}</p>
+            {!pkg.comingSoon ? (
+              <div class="border-t pt-4 mt-4">
+                <div class="grid grid-cols-3 gap-2 text-center">
+                  <div>
+                    <p class="text-xs text-gray-400">Sedan/Hatchback</p>
+                    {pkg.promo ? (
+                      <div>
+                        <p class="text-sm text-gray-400 line-through">${pkg.sedan}</p>
+                        <p class="text-2xl font-bold text-green-600">${Math.round(pkg.sedan * (1 - pkg.promoDiscount))}</p>
+                      </div>
+                    ) : (
+                      <p class="text-2xl font-bold text-[#0f2a4a]">${pkg.sedan}</p>
+                    )}
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-400">Crossover/SUV</p>
+                    {pkg.promo ? (
+                      <div>
+                        <p class="text-sm text-gray-400 line-through">${pkg.suv}</p>
+                        <p class="text-2xl font-bold text-green-600">${Math.round(pkg.suv * (1 - pkg.promoDiscount))}</p>
+                      </div>
+                    ) : (
+                      <p class="text-2xl font-bold text-[#0f2a4a]">${pkg.suv}</p>
+                    )}
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-400">Truck/Large</p>
+                    {pkg.promo ? (
+                      <div>
+                        <p class="text-sm text-gray-400 line-through">${pkg.truck}</p>
+                        <p class="text-2xl font-bold text-green-600">${Math.round(pkg.truck * (1 - pkg.promoDiscount))}</p>
+                      </div>
+                    ) : (
+                      <p class="text-2xl font-bold text-[#0f2a4a]">${pkg.truck}</p>
+                    )}
+                  </div>
                 </div>
               </div>
-
-              <div class="flex items-center justify-between">
-                <span class="inline-flex items-center bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">
-                  Save {pkg.discount}%
-                </span>
-                {pkg.subscription && (
-                  <span class="text-xs text-gray-500">per month</span>
-                )}
+            ) : (
+              <div class="border-t pt-4 mt-4 text-center">
+                <p class="text-gray-500 italic">Pricing coming soon — contact us for details</p>
               </div>
-            </div>
+            )}
           </div>
 
           <div class="bg-gray-50 px-6 py-4">
-            <a href="tel:+17542152272" class="block w-full text-center bg-[#1e3a5f] text-white py-2 rounded-lg font-semibold hover:bg-[#2d5a8f] transition-colors">
-              Book This Package
+            <a href="tel:+17542152272" class="block w-full text-center bg-[#0f2a4a] text-white py-2 rounded-lg font-semibold hover:bg-[#1a3d6b] transition-colors">
+              {pkg.comingSoon ? 'Contact Us' : 'Book This Package'}
             </a>
           </div>
         </div>
       ))}
     </div>
 
+    <!-- Add-Ons Section -->
+    <section>
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Add-Ons</h2>
+      <p class="text-gray-600 mb-6">Enhance any package with these individual services:</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {addOns.map(addon => (
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex items-center justify-between hover:shadow-md transition-shadow">
+            <span class="font-medium text-gray-700">{addon.name}</span>
+            <span class="text-lg font-bold text-[#0f2a4a]">${addon.price}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
     <!-- Pricing Table for Desktop -->
     <section class="hidden lg:block">
-      <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Complete Pricing Overview</h2>
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Complete Pricing Overview</h2>
       <div class="overflow-x-auto">
         <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden">
           <thead>
-            <tr class="bg-[#1e3a5f] text-white">
-              <th class="px-6 py-4 text-left font-semibold">Package Name</th>
+            <tr class="bg-[#0f2a4a] text-white">
+              <th class="px-6 py-4 text-left font-semibold">Package</th>
               <th class="px-6 py-4 text-left font-semibold">Included Services</th>
-              <th class="px-4 py-4 text-center font-semibold">Sedan</th>
-              <th class="px-4 py-4 text-center font-semibold">SUV</th>
-              <th class="px-4 py-4 text-center font-semibold">Truck</th>
-              <th class="px-4 py-4 text-center font-semibold">Savings</th>
+              <th class="px-4 py-4 text-center font-semibold">Sedan/Hatchback</th>
+              <th class="px-4 py-4 text-center font-semibold">Crossover/SUV</th>
+              <th class="px-4 py-4 text-center font-semibold">Truck/Large</th>
             </tr>
           </thead>
           <tbody>
             {packages.map((pkg, index) => (
               <tr class={`border-b ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} hover:bg-blue-50 transition-colors`}>
                 <td class="px-6 py-4">
-                  <span class="font-semibold text-[#1e3a5f]">{pkg.name}</span>
-                  {pkg.subscription && <span class="ml-2 text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Monthly</span>}
+                  <span class="font-semibold text-[#0f2a4a]">{pkg.name}</span>
+                  {pkg.promo && <span class="ml-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded font-semibold">10% OFF</span>}
+                  {pkg.comingSoon && <span class="ml-2 text-xs bg-gray-200 text-gray-600 px-2 py-0.5 rounded">Coming Soon</span>}
                 </td>
-                <td class="px-6 py-4 text-gray-600 text-sm">{pkg.services.join(' + ')}</td>
-                <td class="px-4 py-4 text-center font-semibold">${pkg.sedan}</td>
-                <td class="px-4 py-4 text-center font-semibold">${pkg.suv}</td>
-                <td class="px-4 py-4 text-center font-semibold">${pkg.truck}</td>
-                <td class="px-4 py-4 text-center">
-                  <span class="bg-green-100 text-green-800 text-sm font-semibold px-2 py-1 rounded">
-                    {pkg.discount}%
-                  </span>
+                <td class="px-6 py-4 text-gray-600 text-sm">{pkg.services.join(', ')}</td>
+                <td class="px-4 py-4 text-center font-semibold">
+                  {pkg.sedan ? (pkg.promo ? <span><span class="line-through text-gray-400 text-sm">${pkg.sedan}</span> <span class="text-green-600">${Math.round(pkg.sedan * (1 - pkg.promoDiscount))}</span></span> : `$${pkg.sedan}`) : '—'}
+                </td>
+                <td class="px-4 py-4 text-center font-semibold">
+                  {pkg.suv ? (pkg.promo ? <span><span class="line-through text-gray-400 text-sm">${pkg.suv}</span> <span class="text-green-600">${Math.round(pkg.suv * (1 - pkg.promoDiscount))}</span></span> : `$${pkg.suv}`) : '—'}
+                </td>
+                <td class="px-4 py-4 text-center font-semibold">
+                  {pkg.truck ? (pkg.promo ? <span><span class="line-through text-gray-400 text-sm">${pkg.truck}</span> <span class="text-green-600">${Math.round(pkg.truck * (1 - pkg.promoDiscount))}</span></span> : `$${pkg.truck}`) : '—'}
                 </td>
               </tr>
             ))}
@@ -238,10 +237,10 @@ const parentCategory = {
 
     <!-- Custom Package CTA -->
     <section class="bg-gray-50 rounded-xl p-8 text-center">
-      <h2 class="text-2xl font-bold text-[#1e3a5f] mb-4">Need a Custom Package?</h2>
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Need Something Custom?</h2>
       <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Don't see exactly what you need? We can create a custom package tailored to your vehicle's specific needs.
-        Call us to discuss your requirements and we'll put together a personalized quote.
+        Every vehicle is different. Call us to discuss your specific needs and we'll put together a personalized quote.
+        Add-ons can be combined with any package.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="tel:+17542152272" class="btn-accent inline-flex items-center justify-center gap-2">
@@ -250,7 +249,7 @@ const parentCategory = {
           </svg>
           Call 754-215-2272
         </a>
-        <a href={`${base}contact/`} class="bg-white border-2 border-[#1e3a5f] text-[#1e3a5f] px-6 py-3 rounded-md font-semibold hover:bg-gray-50 transition-colors">
+        <a href={`${base}contact/`} class="bg-white border-2 border-[#0f2a4a] text-[#0f2a4a] px-6 py-3 rounded-md font-semibold hover:bg-gray-50 transition-colors">
           Request Quote Online
         </a>
       </div>
@@ -258,23 +257,23 @@ const parentCategory = {
 
     <!-- FAQ Section -->
     <section>
-      <h2 class="text-2xl font-bold text-[#1e3a5f] mb-6">Package FAQs</h2>
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Package FAQs</h2>
       <div class="space-y-4">
         <div class="bg-white rounded-lg p-6 shadow-sm">
-          <h3 class="font-semibold text-[#1e3a5f] mb-2">What's the difference between Sedan, SUV, and Truck pricing?</h3>
-          <p class="text-gray-600">Pricing is based on vehicle size. Sedans and coupes are the base price. SUVs, crossovers, and minivans are mid-tier. Trucks, full-size SUVs, and large vehicles are the highest tier due to additional surface area and time required.</p>
+          <h3 class="font-semibold text-[#0f2a4a] mb-2">What's the difference between Sedan, SUV, and Truck pricing?</h3>
+          <p class="text-gray-600">Sedans and hatchbacks are the base price. Crossovers, SUVs, and minivans are mid-tier. Trucks, full-size SUVs, and large vehicles are the highest tier due to additional surface area and time required.</p>
         </div>
         <div class="bg-white rounded-lg p-6 shadow-sm">
-          <h3 class="font-semibold text-[#1e3a5f] mb-2">How does the Monthly Maintenance subscription work?</h3>
-          <p class="text-gray-600">Sign up for recurring monthly service and save 25%. We'll schedule your detail for the same time each month. You can cancel or pause anytime with 24-hour notice. It's the best way to keep your car consistently clean.</p>
+          <h3 class="font-semibold text-[#0f2a4a] mb-2">Can I add extra services to a package?</h3>
+          <p class="text-gray-600">Absolutely! Any of our add-ons (doorjambs, pet hair removal, steam cleaning, etc.) can be combined with any package. Just let us know when you book.</p>
         </div>
         <div class="bg-white rounded-lg p-6 shadow-sm">
-          <h3 class="font-semibold text-[#1e3a5f] mb-2">Can I add extra services to a package?</h3>
-          <p class="text-gray-600">Absolutely! Packages can be customized with add-ons like headlight restoration, trim restoration, pet hair removal, or additional odor treatment. Just ask when you book.</p>
+          <h3 class="font-semibold text-[#0f2a4a] mb-2">Do you come to my location?</h3>
+          <p class="text-gray-600">Yes! We're a fully mobile service. We come to your home, office, or any location in Fort Lauderdale, Hollywood, and Pompano Beach. All we need is access to water and your vehicle.</p>
         </div>
         <div class="bg-white rounded-lg p-6 shadow-sm">
-          <h3 class="font-semibold text-[#1e3a5f] mb-2">Do you service luxury and exotic vehicles?</h3>
-          <p class="text-gray-600">Yes! We specialize in high-end vehicles including Mercedes, BMW, Porsche, Ferrari, Lamborghini, and more. We use premium Chemical Guys products safe for all finishes. Luxury vehicle pricing may vary based on specific requirements.</p>
+          <h3 class="font-semibold text-[#0f2a4a] mb-2">When will Premium Refresh be available?</h3>
+          <p class="text-gray-600">We're finalizing the products for our Premium Refresh package. Contact us for updates or to discuss a custom deep-cleaning solution in the meantime.</p>
         </div>
       </div>
     </section>
