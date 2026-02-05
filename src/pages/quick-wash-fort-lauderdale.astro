@@ -1,0 +1,134 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+
+const base = import.meta.env.BASE_URL;
+const title = "Quick Wash Fort Lauderdale | Mobile Service | Route95";
+const description = "Mobile Quick Wash in Fort Lauderdale. Hand wash, tires & rims, window cleaning, interior wipe down & vacuum. From $50. We come to you! Call 754-215-2272";
+
+const parentCategory = {
+  href: `${base}car-detailing-services-fort-lauderdale/`,
+  title: "Car Detailing Services"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Quick Wash Fort Lauderdale"
+  intro="A fast exterior & interior refresh to keep your car looking sharp between full details. We come to your location with everything needed."
+  currentPage="/quick-wash-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          The Quick Wash is our entry-level package designed for Fort Lauderdale drivers who want to maintain a clean vehicle without the time commitment of a full detail. It covers the essentials — a thorough hand wash, tire and rim cleaning, window cleaning inside and out, an interior wipe down, and a complete vacuum.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Perfect for weekly or bi-weekly maintenance, the Quick Wash keeps your car presentable and protected from South Florida's sun, salt air, and daily grime. We use Chemical Guys premium products and the two-bucket wash method to ensure a scratch-free finish every time.
+        </p>
+        <p class="text-gray-600">
+          We serve all of Fort Lauderdale including Las Olas, Nurmi Isles, Seven Isles, Hollywood, and Pompano Beach. Same-day appointments are often available.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does a Quick Wash Cost?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Quick Wash pricing starts at $50 for sedans, $65 for SUVs and crossovers, and $80 for trucks and large vehicles.</strong>
+        </p>
+        <p class="text-gray-600">
+          Pricing varies by vehicle size due to the additional surface area and time required. We provide exact pricing based on your specific vehicle when you call or message us.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What's Included in the Quick Wash?</h2>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li><strong>Hand Wash</strong> — Full exterior wash using two-bucket method and pH-balanced soap</li>
+          <li><strong>Tires & Rims</strong> — Brake dust and road grime removed from wheels and tires</li>
+          <li><strong>Window Cleaning</strong> — Interior and exterior glass cleaned streak-free</li>
+          <li><strong>Interior Wipe Down</strong> — Dashboard, console, and surfaces wiped clean</li>
+          <li><strong>Vacuum</strong> — Seats, carpets, and floor mats thoroughly vacuumed</li>
+        </ul>
+        <p class="text-gray-600">
+          Need more? You can always add individual services like tire dressing, pet hair removal, or floor mat cleaning to any package.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Long Does a Quick Wash Take?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>A Quick Wash typically takes 30 to 45 minutes depending on vehicle size and condition.</strong>
+        </p>
+        <p class="text-gray-600">
+          Since we come to your location, you can continue your day while we work. Many of our Fort Lauderdale clients book us at their office and come back to a freshly washed car.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Our Quick Wash Process</h2>
+        <ProcessSteps steps={[
+          { title: "Pre-Rinse", description: "We thoroughly rinse your vehicle to remove loose dirt, sand, and debris before any contact washing." },
+          { title: "Two-Bucket Hand Wash", description: "Full exterior wash with pH-balanced Chemical Guys soap using clean microfiber mitts." },
+          { title: "Tires & Rims", description: "Wheels and tires are cleaned with dedicated brushes and wheel-safe cleaners." },
+          { title: "Windows & Interior", description: "All glass cleaned inside and out. Interior surfaces wiped down and vacuumed." },
+          { title: "Dry & Inspect", description: "Hand dried with clean microfiber towels. Final inspection to ensure every surface is spotless." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Quick Wash Pricing</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">Sedan / Hatchback: <strong>$50</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">Crossover / SUV: <strong>$65</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">Truck / Large: <strong>$80</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">30-45 minutes</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Book Your Quick Wash</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Same-day appointments available throughout Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Other Packages</h3>
+          <ul class="space-y-2">
+            <li><a href={`${base}fresh-start-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Fresh Start</a></li>
+            <li><a href={`${base}complete-clean-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Complete Clean</a></li>
+            <li><a href={`${base}premium-refresh-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Premium Refresh</a></li>
+            <li><a href={`${base}packages-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">View All Packages</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

@@ -4,7 +4,43 @@ import InstagramFeed from '../components/InstagramFeed.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Car Detailing Services Fort Lauderdale | Mobile | Route95";
-const description = "Mobile car detailing in Fort Lauderdale. Full details, express details, luxury vehicles, engine cleaning. We come to you. Same-day available. Call 754-215-2272.";
+const description = "Mobile car detailing packages in Fort Lauderdale. Quick Wash, Fresh Start, Complete Clean & Premium Refresh. We come to you! Call 754-215-2272.";
+
+const packages = [
+  {
+    name: "Quick Wash",
+    slug: "quick-wash-fort-lauderdale",
+    description: "A fast exterior & interior refresh to keep your car looking sharp. Hand wash, tires & rims, window cleaning, interior wipe down, and vacuum.",
+    sedan: 50,
+    suv: 65,
+    truck: 80
+  },
+  {
+    name: "Fresh Start",
+    slug: "fresh-start-fort-lauderdale",
+    description: "A step up with tire dressing and full interior wipe down. Includes hand wash, tires & rims, tire dressing, window cleaning, dashboard, center console, and vacuum.",
+    sedan: 80,
+    suv: 95,
+    truck: 110
+  },
+  {
+    name: "Complete Clean",
+    slug: "complete-clean-fort-lauderdale",
+    description: "Our most thorough package — inside and out, trunk included. Hand wash, tires & rims, tire dressing, fender wells, exterior plastic restorer, windows, dashboard, console, floor mats, and full vacuum.",
+    sedan: 130,
+    suv: 145,
+    truck: 160,
+    popular: true,
+    promo: true,
+    promoLabel: "10% OFF — Feb & March 2026"
+  },
+  {
+    name: "Premium Refresh",
+    slug: "premium-refresh-fort-lauderdale",
+    description: "Deep interior shampoo with steam cleaning — the ultimate detail. Includes interior shampoo (seats, carpets, door panels, seatbelts), door jambs, steam cleaning, plus everything in Complete Clean.",
+    comingSoon: true
+  }
+];
 ---
 
 <BaseLayout title={title} description={description} currentPage="/car-detailing-services-fort-lauderdale/">
@@ -13,13 +49,10 @@ const description = "Mobile car detailing in Fort Lauderdale. Full details, expr
     <div class="max-w-7xl mx-auto px-4">
       <h1 class="text-4xl lg:text-5xl font-bold mb-6">Car Detailing Services Fort Lauderdale</h1>
       <p class="text-xl text-gray-300 max-w-3xl mb-6">
-        <strong>Complete mobile detailing that comes to your Fort Lauderdale location. Full interior and exterior restoration for vehicles of all types.</strong>
+        <strong>Professional mobile detailing packages that come to your Fort Lauderdale location. Choose the level of care your vehicle needs — from a quick refresh to a complete deep clean.</strong>
       </p>
       <p class="text-lg text-gray-300 max-w-3xl mb-4">
-        Professional detailing goes beyond washing—it's complete vehicle restoration inside and out. We bring full detailing service directly to your home or office in Fort Lauderdale, Hollywood, and Pompano Beach. No dropping off your car, no waiting at a shop.
-      </p>
-      <p class="text-lg text-gray-300 max-w-3xl mb-4">
-        We specialize in luxury and high-end vehicles including Mercedes, BMW, Porsche, Range Rover, and exotics. Our team uses Chemical Guys premium products chosen specifically for each surface type. Every detail includes our satisfaction guarantee.
+        Every package includes mobile service at your home or office in Fort Lauderdale, Hollywood, and Pompano Beach. We use Chemical Guys premium products and our satisfaction guarantee backs every detail.
       </p>
       <p class="text-lg text-gray-300 max-w-3xl mb-8">
         Same-day appointments often available. Call 754-215-2272.
@@ -33,98 +66,62 @@ const description = "Mobile car detailing in Fort Lauderdale. Full details, expr
     </div>
   </section>
 
-  <!-- Services Content -->
+  <!-- Package Cards -->
   <section class="py-12 lg:py-16">
-    <div class="max-w-4xl mx-auto px-4 space-y-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {packages.map(pkg => (
+          <div class={`bg-white rounded-xl shadow-lg overflow-hidden border-2 ${pkg.promo ? 'border-green-500 ring-2 ring-green-200' : pkg.popular ? 'border-[#0f2a4a]' : 'border-transparent'} hover:shadow-xl transition-shadow relative`}>
+            {pkg.promo && (
+              <div class="bg-green-500 text-white text-center py-2 text-sm font-bold tracking-wide">
+                {pkg.promoLabel}
+              </div>
+            )}
+            {pkg.popular && !pkg.promo && (
+              <div class="absolute top-0 right-0 bg-[#0f2a4a] text-white px-4 py-1 text-sm font-bold rounded-bl-lg">
+                Most Popular
+              </div>
+            )}
+            {pkg.comingSoon && (
+              <div class="absolute top-0 right-0 bg-[#c0c7cf] text-[#0f2a4a] px-4 py-1 text-sm font-bold rounded-bl-lg">
+                Coming Soon
+              </div>
+            )}
 
-      <!-- Full Detail -->
-      <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Full Detail</h2>
-        <p class="text-gray-600 mb-4">
-          Our complete detail covers everything—thorough hand wash, clay bar, wax, plus full interior deep cleaning, leather conditioning, and protection. This is the reset button for vehicles that need comprehensive attention inside and out.
-        </p>
-        <a href={`${base}full-detail-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
-          Learn more about Full Detail Fort Lauderdale →
-        </a>
+            <div class="p-6">
+              <h2 class="text-2xl font-bold text-[#0f2a4a] mb-2">{pkg.name}</h2>
+              <p class="text-gray-600 mb-4">{pkg.description}</p>
+
+              {!pkg.comingSoon ? (
+                <div class="border-t pt-4 mt-4">
+                  <div class="grid grid-cols-3 gap-2 text-center mb-4">
+                    <div>
+                      <p class="text-xs text-gray-400">Sedan</p>
+                      <p class="text-xl font-bold text-[#0f2a4a]">${pkg.sedan}</p>
+                    </div>
+                    <div>
+                      <p class="text-xs text-gray-400">SUV</p>
+                      <p class="text-xl font-bold text-[#0f2a4a]">${pkg.suv}</p>
+                    </div>
+                    <div>
+                      <p class="text-xs text-gray-400">Truck</p>
+                      <p class="text-xl font-bold text-[#0f2a4a]">${pkg.truck}</p>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div class="border-t pt-4 mt-4 text-center">
+                  <p class="text-gray-500 italic mb-4">Pricing coming soon — contact us for details</p>
+                </div>
+              )}
+
+              <a href={`${base}${pkg.slug}/`} class="block w-full text-center bg-[#0f2a4a] text-white py-3 rounded-lg font-semibold hover:bg-[#1a3d6b] transition-colors">
+                {pkg.comingSoon ? 'Learn More' : 'View Package Details'}
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
-
-      <!-- Express Detail -->
-      <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Express Detail</h2>
-        <p class="text-gray-600 mb-4">
-          Need your car looking great but short on time? Express detail covers the essentials—exterior wash and dry, interior vacuum, wipe-down, and glass cleaning—in about an hour. Perfect for maintenance between full details.
-        </p>
-        <a href={`${base}express-detail-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
-          Learn more about Express Detail Fort Lauderdale →
-        </a>
-      </div>
-
-      <!-- Luxury Car Detailing -->
-      <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Luxury Car Detailing</h2>
-        <p class="text-gray-600 mb-4">
-          High-end vehicles need specialized care. We understand the materials and finishes on Mercedes, BMW, Porsche, Ferrari, and other luxury brands. Our detailers know how to handle sensitive clear coats, exotic leathers, and Alcantara without damage.
-        </p>
-        <a href={`${base}luxury-car-detailing-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
-          Learn more about Luxury Car Detailing Fort Lauderdale →
-        </a>
-      </div>
-
-      <!-- Engine Bay Cleaning -->
-      <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Engine Bay Cleaning</h2>
-        <p class="text-gray-600 mb-4">
-          A clean engine bay makes inspections easier, helps spot leaks, and shows pride of ownership. We carefully degrease and detail engine components, dress plastics, and protect against corrosion from Florida's salt air.
-        </p>
-        <a href={`${base}engine-bay-cleaning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
-          Learn more about Engine Bay Cleaning Fort Lauderdale →
-        </a>
-      </div>
-
-      <!-- Paint Protection Film -->
-      <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Paint Protection Film</h2>
-        <p class="text-gray-600 mb-4">
-          Clear protective film shields your paint from rock chips, bug acids, and minor abrasions. We apply PPF to high-impact areas like hoods, bumpers, and mirrors to preserve your finish and resale value.
-        </p>
-        <a href={`${base}paint-protection-film-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
-          Learn more about Paint Protection Film Fort Lauderdale →
-        </a>
-      </div>
-
-      <!-- Mobile Detailing -->
-      <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Mobile Detailing</h2>
-        <p class="text-gray-600 mb-4">
-          We come to you—home, office, gym, or anywhere in Fort Lauderdale, Hollywood, and Pompano Beach. Our van carries all water, power, and professional equipment. Your car gets detailed while you work, exercise, or relax at home.
-        </p>
-        <a href={`${base}mobile-detailing-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
-          Learn more about Mobile Detailing Fort Lauderdale →
-        </a>
-      </div>
-
-      <!-- Headlight Restoration -->
-      <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Headlight Restoration</h2>
-        <p class="text-gray-600 mb-4">
-          Cloudy, yellowed headlights reduce visibility and make your car look older. We wet-sand oxidation, polish to clarity, and seal the lens to prevent future yellowing. Results are immediate and dramatic.
-        </p>
-        <a href={`${base}headlight-restoration-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
-          Learn more about Headlight Restoration Fort Lauderdale →
-        </a>
-      </div>
-
-      <!-- Trim Restoration -->
-      <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Trim Restoration</h2>
-        <p class="text-gray-600 mb-4">
-          Black plastic trim fades to gray under Florida sun. We restore faded trim pieces to deep black and apply protectant to slow future UV damage. Makes an older vehicle look years newer.
-        </p>
-        <a href={`${base}trim-restoration-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
-          Learn more about Trim Restoration Fort Lauderdale →
-        </a>
-      </div>
-
     </div>
   </section>
 
@@ -146,7 +143,6 @@ const description = "Mobile car detailing in Fort Lauderdale. Full details, expr
           <strong>Email:</strong> <a href="mailto:contact@route95mobilecardetailing.com" class="text-[#0f2a4a] hover:text-[#c0c7cf]">contact@route95mobilecardetailing.com</a>
         </p>
       </div>
-
     </div>
   </section>
 

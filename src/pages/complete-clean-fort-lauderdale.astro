@@ -1,0 +1,150 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+
+const base = import.meta.env.BASE_URL;
+const title = "Complete Clean Fort Lauderdale | Mobile Detailing | Route95";
+const description = "Complete Clean mobile detailing in Fort Lauderdale. Our most thorough package — inside and out, trunk included. From $130. 10% OFF Feb & March 2026. Call 754-215-2272";
+
+const parentCategory = {
+  href: `${base}car-detailing-services-fort-lauderdale/`,
+  title: "Car Detailing Services"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Complete Clean Fort Lauderdale"
+  intro="Our most thorough package — every surface inside and out gets professional attention, trunk included. This is the detail your vehicle deserves."
+  currentPage="/complete-clean-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <!-- Promo Banner -->
+      <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+        <p class="text-green-800 font-bold text-lg">10% OFF — February & March 2026</p>
+        <p class="text-green-700 text-sm">Book your Complete Clean now and save. Limited-time launch offer.</p>
+      </div>
+
+      <section>
+        <p class="text-gray-600 mb-4">
+          The Complete Clean is our most popular package for good reason — it covers every inch of your vehicle inside and out. This is the package for drivers who want their car to look and feel like it just rolled off the dealership lot. From fender wells to trunk, nothing gets missed.
+        </p>
+        <p class="text-gray-600 mb-4">
+          We add fender well cleaning, exterior plastic restorer, floor mat detailing, and a full trunk vacuum to the Fresh Start package. The result is a vehicle that looks comprehensively cared for — not just surface-level clean.
+        </p>
+        <p class="text-gray-600">
+          Mobile service throughout Fort Lauderdale, Hollywood, Pompano Beach, and all of Broward County. We bring all equipment, water, and premium Chemical Guys products to your location.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does the Complete Clean Cost?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Complete Clean pricing is $130 for sedans, $145 for SUVs and crossovers, and $160 for trucks and large vehicles.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          During our February and March 2026 promotion, you get 10% off these prices — that's $117 for sedans, $131 for SUVs, and $144 for trucks.
+        </p>
+        <p class="text-gray-600">
+          For the level of detail included, the Complete Clean delivers exceptional value. You'd pay significantly more at a fixed location for the same thoroughness.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What's Included in the Complete Clean?</h2>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li><strong>Hand Wash</strong> — Full exterior wash using two-bucket method and pH-balanced soap</li>
+          <li><strong>Tires & Rims</strong> — Brake dust and road grime removed from wheels and tires</li>
+          <li><strong>Tire Dressing</strong> — Water-based dressing for deep black, non-sling finish</li>
+          <li><strong>Fender Wells</strong> — Wheel wells cleaned of mud, road debris, and buildup</li>
+          <li><strong>Exterior Plastic Restorer</strong> — Faded trim and plastic pieces restored to black</li>
+          <li><strong>Window Cleaning</strong> — Interior and exterior glass cleaned streak-free</li>
+          <li><strong>Dashboard</strong> — Cleaned, dusted, and protected</li>
+          <li><strong>Center Console</strong> — Cup holders, storage areas, and controls detailed</li>
+          <li><strong>Floor Mats</strong> — Removed, cleaned, and replaced</li>
+          <li><strong>Vacuum (incl. Trunk)</strong> — Full interior and trunk vacuum</li>
+        </ul>
+        <p class="text-gray-600">
+          This package covers everything most vehicles need. For deep stains or heavy soiling, consider upgrading to the Premium Refresh when it launches — or add individual services like pet hair removal or steam cleaning.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Long Does the Complete Clean Take?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>The Complete Clean takes approximately 1.5 to 2 hours depending on vehicle size and condition.</strong>
+        </p>
+        <p class="text-gray-600">
+          The extra time is well spent — fender wells, trunk, floor mats, and plastic restoration all add up to a dramatically more thorough result. Most clients are surprised by how different their vehicle looks and feels.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Our Complete Clean Process</h2>
+        <ProcessSteps steps={[
+          { title: "Pre-Rinse & Hand Wash", description: "Full exterior wash including fender wells and undercarriage edges with pH-balanced Chemical Guys soap." },
+          { title: "Tires, Rims & Dressing", description: "Wheels cleaned, tires scrubbed, then dressed. Fender wells degreased and cleaned." },
+          { title: "Exterior Plastic Restoration", description: "All faded exterior trim pieces treated with restorer for deep black appearance." },
+          { title: "Windows & Exterior Dry", description: "All glass cleaned. Vehicle hand dried with clean microfiber towels." },
+          { title: "Full Interior Detail", description: "Dashboard, console, door panels cleaned. Floor mats removed and cleaned. Full vacuum including trunk." },
+          { title: "Final Inspection", description: "Complete walk-around checking every surface — exterior paint, wheels, glass, interior, and trunk." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-green-50 border border-green-200 rounded-xl p-6">
+          <h3 class="font-bold text-green-800 mb-4">Complete Clean Pricing</h3>
+          <p class="text-green-700 text-sm font-semibold mb-3">10% OFF — Feb & March 2026</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">$</span>
+              <span class="text-gray-600">Sedan: <span class="line-through text-gray-400">$130</span> <strong class="text-green-600">$117</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">$</span>
+              <span class="text-gray-600">SUV: <span class="line-through text-gray-400">$145</span> <strong class="text-green-600">$131</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">$</span>
+              <span class="text-gray-600">Truck: <span class="line-through text-gray-400">$160</span> <strong class="text-green-600">$144</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">1.5-2 hours</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Book Your Complete Clean</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Same-day appointments available throughout Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Other Packages</h3>
+          <ul class="space-y-2">
+            <li><a href={`${base}quick-wash-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Quick Wash</a></li>
+            <li><a href={`${base}fresh-start-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Fresh Start</a></li>
+            <li><a href={`${base}premium-refresh-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Premium Refresh</a></li>
+            <li><a href={`${base}packages-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">View All Packages</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>
