@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import InstagramFeed from '../components/InstagramFeed.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Car Detailing Services Fort Lauderdale | Mobile | Route95";
@@ -124,7 +125,15 @@ const description = "Mobile car detailing in Fort Lauderdale. Full details, expr
         </a>
       </div>
 
-      <!-- Book Your Detail -->
+    </div>
+  </section>
+
+  <!-- Instagram Feed Section -->
+  <InstagramFeed scriptSrc="https://cdn.trustindex.io/loader-feed.js?d8507166482b128b321694773f5" />
+
+  <!-- Book Your Detail -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4">
       <div class="border-t pt-12">
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Book Your Detail</h2>
         <p class="text-gray-600 mb-4">

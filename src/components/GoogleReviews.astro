@@ -1,0 +1,45 @@
+---
+interface Props {
+  widgetId?: string;
+}
+
+const { widgetId = 'REPLACE_WITH_YOUR_ELFSIGHT_WIDGET_ID' } = Astro.props;
+---
+
+<section class="py-16 lg:py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#0f2a4a] mb-4">
+        What Our Customers Say
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        See why Fort Lauderdale car owners trust Route95 for their mobile detailing needs.
+      </p>
+    </div>
+    <div class="elfsight-widget" data-widget-id={widgetId}>
+      <div class={`elfsight-app-${widgetId}`} data-elfsight-app-lazy></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function loadElfsight() {
+    if (document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) return;
+    const script = document.createElement('script');
+    script.src = 'https://elfsightcdn.com/platform.js';
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  const widgets = document.querySelectorAll('.elfsight-widget');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        loadElfsight();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '200px' });
+
+  widgets.forEach(widget => observer.observe(widget));
+</script>
