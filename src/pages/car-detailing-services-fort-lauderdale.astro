@@ -71,12 +71,15 @@ const packageIncludes: Record<string, Set<string>> = {
 };
 
 const addOns = [
-  { name: "Doorjambs", price: 20 },
+  { name: "Door Jambs", price: 20 },
   { name: "Vacuum Truck", price: 20 },
   { name: "Pet Hair Removal", price: 25 },
   { name: "Floor Mat Cleaning", price: 25 },
   { name: "Exterior Plastic Restorer", price: 20 },
-  { name: "Steam Cleaning", price: 50 }
+  { name: "Steam Cleaning", price: 50 },
+  { name: "Odor Removal", price: 75 },
+  { name: "Leather Conditioning", price: 40 },
+  { name: "Bug & Tar Removal", price: 40 }
 ];
 ---
 
@@ -186,8 +189,9 @@ const addOns = [
   <!-- Add-Ons Section -->
   <section class="py-12 lg:py-16 bg-gray-50">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-2">Add-Ons</h2>
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-2">Add-Ons*</h2>
       <p class="text-gray-600 mb-6">Enhance any package with these individual services:</p>
+      <p class="text-sm text-gray-500 mb-6">*Prices apply only in combination with a package booking.</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {addOns.map(addon => (
           <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex items-center justify-between hover:shadow-md transition-shadow">
