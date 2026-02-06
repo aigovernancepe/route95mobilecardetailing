@@ -79,7 +79,7 @@ const addOns = [
   { name: "Odor Removal", price: 40 },
   { name: "Leather Conditioning", price: 40 },
   { name: "Bug & Tar Removal", price: 30 },
-  { name: "Car Waxing", price: 60 }
+  { name: "Car Waxing", price: 60, from: true }
 ];
 ---
 
@@ -196,7 +196,7 @@ const addOns = [
         {addOns.map(addon => (
           <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex items-center justify-between hover:shadow-md transition-shadow">
             <span class="font-medium text-gray-700">{addon.name}</span>
-            <span class="text-lg font-bold text-[#0f2a4a]">${addon.price}</span>
+            <span class="text-lg font-bold text-[#0f2a4a]">{addon.from ? `from $${addon.price}` : `$${addon.price}`}</span>
           </div>
         ))}
       </div>
@@ -316,7 +316,7 @@ const addOns = [
   </section>
 
   <!-- Instagram Feed Section -->
-  <InstagramFeed scriptSrc="https://cdn.trustindex.io/loader-feed.js?d8507166482b128b321694773f5" />
+  <InstagramFeed scriptSrc="https://cdn.trustindex.io/loader-feed.js?31d15e4644082675a636b64f954" />
 
   <!-- Custom Package CTA -->
   <section class="py-12 lg:py-16">

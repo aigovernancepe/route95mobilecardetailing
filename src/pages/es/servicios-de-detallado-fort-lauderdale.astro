@@ -80,7 +80,7 @@ const addOns = [
   { name: "Eliminación de Olores", price: 40 },
   { name: "Acondicionamiento de Cuero", price: 40 },
   { name: "Eliminación de Insectos y Brea", price: 30 },
-  { name: "Encerado de Autos", price: 60 }
+  { name: "Encerado de Autos", price: 60, from: true }
 ];
 ---
 
@@ -197,7 +197,7 @@ const addOns = [
         {addOns.map(addon => (
           <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex items-center justify-between hover:shadow-md transition-shadow">
             <span class="font-medium text-gray-700">{addon.name}</span>
-            <span class="text-lg font-bold text-[#0f2a4a]">${addon.price}</span>
+            <span class="text-lg font-bold text-[#0f2a4a]">{addon.from ? `desde $${addon.price}` : `$${addon.price}`}</span>
           </div>
         ))}
       </div>

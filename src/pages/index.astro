@@ -33,7 +33,7 @@ const categories = [
 
 const usps = [
   { title: "Mobile Convenience", description: "We come to your home, office, or any location", icon: "truck" },
-  { title: "Premium Products", description: "We use Chemical Guys professional-grade products", icon: "star" },
+  { title: "Premium Products", description: "We use professional-grade products from Chemical Guys, Koch-Chemie & 3D", icon: "star" },
   { title: "Same-Day Service", description: "Appointments often available today", icon: "clock" },
   { title: "Satisfaction Guarantee", description: "You'll love the results or we make it right", icon: "check" }
 ];
@@ -64,19 +64,19 @@ const serviceAreas = [
           Fort Lauderdale's sun, salt air, and humidity can be tough on your car. That's why Route95 Mobile Car Detailing brings professional car care right to your driveway, office, or wherever you are in Broward County.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="tel:+17542152272" class="btn-accent text-center text-lg flex items-center justify-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <a href="tel:+17542152272" class="btn-accent text-center text-lg flex items-center justify-center gap-2 sm:flex-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            Call 754-215-2272
+            Call<br/>754-215-2272
           </a>
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-6 py-3 rounded-md font-semibold text-center text-lg flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-6 py-3 rounded-md font-semibold text-center text-lg flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors sm:flex-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12.003 0h-.006C5.385 0 0 5.382 0 12c0 2.625.847 5.058 2.285 7.034L.79 23.467l4.591-1.472A11.942 11.942 0 0012.003 24C18.618 24 24 18.616 24 12S18.618 0 12.003 0zm6.986 16.946c-.293.825-1.449 1.51-2.375 1.71-.634.135-1.462.243-4.252-.914-3.572-1.48-5.87-5.108-6.048-5.343-.171-.236-1.437-1.914-1.437-3.65 0-1.736.909-2.589 1.232-2.943.293-.321.769-.47 1.225-.47.149 0 .282.008.402.014.323.014.485.033.697.538.267.635.918 2.24.998 2.403.081.164.162.383.065.6-.09.224-.171.323-.335.51-.163.186-.318.33-.481.531-.149.179-.316.37-.135.726.18.356.804 1.326 1.727 2.148 1.188 1.059 2.188 1.388 2.498 1.542.236.117.515.103.702-.09.237-.245.53-.65.828-1.049.212-.285.48-.321.74-.217.264.098 1.667.786 1.953.929.285.143.476.217.546.335.069.117.069.678-.224 1.503z"/>
             </svg>
             WhatsApp Us
           </a>
-          <a href={`${base}contact/`} class="bg-white text-[#0f2a4a] px-6 py-3 rounded-md font-semibold text-center hover:bg-gray-100 transition-colors">
+          <a href={`${base}contact/`} class="bg-white text-[#0f2a4a] px-6 py-3 rounded-md font-semibold text-center text-lg flex items-center justify-center hover:bg-gray-100 transition-colors sm:flex-1">
             Get a Free Quote
           </a>
         </div>
@@ -101,7 +101,7 @@ const serviceAreas = [
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {usps.map(usp => (
           <div class="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
             <div class="w-20 h-20 bg-[#0f2a4a] rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg">
@@ -146,7 +146,7 @@ const serviceAreas = [
           Our Mobile Detailing Services
         </h2>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-          From quick washes to complete details, we bring professional car care to your location. We use Chemical Guys products to deliver showroom results every time.
+          From quick washes to complete details, we bring professional car care to your location. We use products from Chemical Guys, Koch-Chemie & 3D to deliver showroom results every time.
         </p>
       </div>
 
@@ -212,7 +212,7 @@ const serviceAreas = [
             Most car washes rush through dozens of vehicles per hour. They use harsh chemicals and recycled water. The result? Swirl marks, missed spots, and a "clean" that lasts maybe two days.
           </p>
           <p class="text-gray-600 mb-4">
-            Route95 takes a different approach. We treat every vehicle like it's our own. Each mobile car detailing appointment gets our full attention. We bring all our own water, power, and premium Chemical Guys products.
+            Route95 takes a different approach. We treat every vehicle like it's our own. Each mobile car detailing appointment gets our full attention. We bring all our own water, power, and premium products from Chemical Guys, Koch-Chemie & 3D.
           </p>
           <p class="text-gray-600 mb-6">
             Owner Gustavo Moya started Route95 with a simple idea: bring professional detailing to where you are. No more waiting at a shop. No more rearranging your schedule.
@@ -251,22 +251,22 @@ const serviceAreas = [
         Schedule Your Mobile Car Detailing Today
       </h2>
       <p class="text-xl text-gray-300 mb-8">
-        Your car deserves better than a drive-through car wash. It deserves the attention and care that only professional mobile detailing provides. We work around your schedule, use premium Chemical Guys products, and guarantee your satisfaction.
+        Your car deserves better than a drive-through car wash. It deserves the attention and care that only professional mobile detailing provides. We work around your schedule, use premium products from Chemical Guys, Koch-Chemie & 3D, and guarantee your satisfaction.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:+17542152272" class="btn-accent text-lg flex items-center justify-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <a href="tel:+17542152272" class="btn-accent text-lg flex items-center justify-center gap-2 sm:flex-1 sm:max-w-[220px]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
-          Call 754-215-2272
+          Call<br/>754-215-2272
         </a>
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-6 py-3 rounded-md font-semibold text-lg flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-6 py-3 rounded-md font-semibold text-lg flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors sm:flex-1 sm:max-w-[220px]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12.003 0h-.006C5.385 0 0 5.382 0 12c0 2.625.847 5.058 2.285 7.034L.79 23.467l4.591-1.472A11.942 11.942 0 0012.003 24C18.618 24 24 18.616 24 12S18.618 0 12.003 0zm6.986 16.946c-.293.825-1.449 1.51-2.375 1.71-.634.135-1.462.243-4.252-.914-3.572-1.48-5.87-5.108-6.048-5.343-.171-.236-1.437-1.914-1.437-3.65 0-1.736.909-2.589 1.232-2.943.293-.321.769-.47 1.225-.47.149 0 .282.008.402.014.323.014.485.033.697.538.267.635.918 2.24.998 2.403.081.164.162.383.065.6-.09.224-.171.323-.335.51-.163.186-.318.33-.481.531-.149.179-.316.37-.135.726.18.356.804 1.326 1.727 2.148 1.188 1.059 2.188 1.388 2.498 1.542.236.117.515.103.702-.09.237-.245.53-.65.828-1.049.212-.285.48-.321.74-.217.264.098 1.667.786 1.953.929.285.143.476.217.546.335.069.117.069.678-.224 1.503z"/>
           </svg>
           WhatsApp Us
         </a>
-        <a href={`${base}contact/`} class="bg-white text-[#0f2a4a] px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+        <a href={`${base}contact/`} class="bg-white text-[#0f2a4a] px-6 py-3 rounded-md font-semibold text-lg flex items-center justify-center hover:bg-gray-100 transition-colors sm:flex-1 sm:max-w-[220px]">
           Request a Quote Online
         </a>
       </div>
