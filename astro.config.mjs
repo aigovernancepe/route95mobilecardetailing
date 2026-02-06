@@ -4,8 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://aigovernancepe.github.io',
-  base: '/route95mobilecardetailing',
+  site: 'https://www.route95mobilecardetailing.com',
+  base: '/',
   output: 'static',
   trailingSlash: 'always',
   i18n: {
