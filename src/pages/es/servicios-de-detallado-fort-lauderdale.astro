@@ -27,7 +27,7 @@ const packages = [
   {
     name: "Limpieza Completa",
     slug: "complete-clean-fort-lauderdale",
-    description: "Nuestro paquete más completo — por dentro y por fuera, incluyendo cajuela. Lavado a mano, llantas y rines, acondicionador de llantas, guardabarros, restaurador de plásticos exteriores, ventanas, tablero, consola, tapetes y aspirado completo.",
+    description: "Nuestro paquete más completo — por dentro y por fuera, incluyendo cajuela. Lavado a mano, llantas y rines, acondicionador de llantas, guardabarros, ventanas, tablero, consola, tapetes y aspirado completo.",
     sedan: 130,
     suv: 145,
     truck: 160,
@@ -55,7 +55,6 @@ const allServices = [
   "Tablero",
   "Consola Central",
   "Guardabarros",
-  "Restaurador de Plásticos Exteriores",
   "Tapetes",
   "Aspirado (incl. Cajuela)",
   "Champú Interior",
@@ -67,20 +66,21 @@ const allServices = [
 const packageIncludes: Record<string, Set<string>> = {
   "Lavado Rápido": new Set(["Lavado a Mano", "Llantas y Rines", "Limpieza de Ventanas", "Limpieza Interior", "Aspirado"]),
   "Nuevo Comienzo": new Set(["Lavado a Mano", "Llantas y Rines", "Limpieza de Ventanas", "Limpieza Interior", "Aspirado", "Acondicionador de Llantas", "Tablero", "Consola Central"]),
-  "Limpieza Completa": new Set(["Lavado a Mano", "Llantas y Rines", "Limpieza de Ventanas", "Limpieza Interior", "Aspirado", "Acondicionador de Llantas", "Tablero", "Consola Central", "Guardabarros", "Restaurador de Plásticos Exteriores", "Tapetes", "Aspirado (incl. Cajuela)"]),
-  "Renovación Premium": new Set(["Lavado a Mano", "Llantas y Rines", "Limpieza de Ventanas", "Limpieza Interior", "Aspirado", "Acondicionador de Llantas", "Tablero", "Consola Central", "Guardabarros", "Restaurador de Plásticos Exteriores", "Tapetes", "Aspirado (incl. Cajuela)", "Champú Interior", "Marcos de Puertas", "Limpieza a Vapor"]),
+  "Limpieza Completa": new Set(["Lavado a Mano", "Llantas y Rines", "Limpieza de Ventanas", "Limpieza Interior", "Aspirado", "Acondicionador de Llantas", "Tablero", "Consola Central", "Guardabarros", "Tapetes", "Aspirado (incl. Cajuela)"]),
+  "Renovación Premium": new Set(["Lavado a Mano", "Llantas y Rines", "Limpieza de Ventanas", "Limpieza Interior", "Aspirado", "Acondicionador de Llantas", "Tablero", "Consola Central", "Guardabarros", "Tapetes", "Aspirado (incl. Cajuela)", "Champú Interior", "Marcos de Puertas", "Limpieza a Vapor"]),
 };
 
 const addOns = [
   { name: "Marcos de Puertas", price: 20 },
-  { name: "Aspirado de Camioneta", price: 20 },
+  { name: "Aspirado de Cajuela", price: 20 },
   { name: "Eliminación de Pelo de Mascota", price: 25 },
   { name: "Limpieza de Tapetes", price: 25 },
-  { name: "Restaurador de Plásticos Exteriores", price: 20 },
+  { name: "Restauración de Molduras", price: 30 },
   { name: "Limpieza a Vapor", price: 50 },
-  { name: "Eliminación de Olores", price: 75 },
+  { name: "Eliminación de Olores", price: 40 },
   { name: "Acondicionamiento de Cuero", price: 40 },
-  { name: "Eliminación de Insectos y Alquitrán", price: 40 }
+  { name: "Eliminación de Insectos y Brea", price: 30 },
+  { name: "Encerado de Autos", price: 60 }
 ];
 ---
 
@@ -93,7 +93,7 @@ const addOns = [
         <strong>Paquetes profesionales de detallado a domicilio que van a tu ubicación en Fort Lauderdale. Elige el nivel de cuidado que tu vehículo necesita — desde un refrescamiento rápido hasta una limpieza profunda completa.</strong>
       </p>
       <p class="text-lg text-gray-300 max-w-3xl mb-4">
-        Cada paquete incluye servicio móvil en tu casa u oficina en Fort Lauderdale, Hollywood y Pompano Beach. Usamos productos premium Chemical Guys y nuestra garantía de satisfacción respalda cada detallado.
+        Cada paquete incluye servicio móvil en tu casa u oficina en Fort Lauderdale, Hollywood y Pompano Beach. Usamos productos premium de Chemical Guys, Koch-Chemie y 3D, y nuestra garantía de satisfacción respalda cada detallado.
       </p>
       <p class="text-lg text-gray-300 max-w-3xl mb-8">
         Citas el mismo día frecuentemente disponibles. Llama al 754-215-2272.

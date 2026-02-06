@@ -26,7 +26,7 @@ const packages = [
   {
     name: "Complete Clean",
     slug: "complete-clean-fort-lauderdale",
-    description: "Our most thorough package — inside and out, trunk included. Hand wash, tires & rims, tire dressing, fender wells, exterior plastic restorer, windows, dashboard, console, floor mats, and full vacuum.",
+    description: "Our most thorough package — inside and out, trunk included. Hand wash, tires & rims, tire dressing, fender wells, windows, dashboard, console, floor mats, and full vacuum.",
     sedan: 130,
     suv: 145,
     truck: 160,
@@ -54,7 +54,6 @@ const allServices = [
   "Dashboard",
   "Center Console",
   "Fender Wells",
-  "Exterior Plastic Restorer",
   "Floor Mats",
   "Vacuum (incl. Trunk)",
   "Interior Shampoo",
@@ -66,20 +65,21 @@ const allServices = [
 const packageIncludes: Record<string, Set<string>> = {
   "Quick Wash": new Set(["Hand Wash", "Tires & Rims", "Window Cleaning", "Interior Wipe Down", "Vacuum"]),
   "Fresh Start": new Set(["Hand Wash", "Tires & Rims", "Window Cleaning", "Interior Wipe Down", "Vacuum", "Tire Dressing", "Dashboard", "Center Console"]),
-  "Complete Clean": new Set(["Hand Wash", "Tires & Rims", "Window Cleaning", "Interior Wipe Down", "Vacuum", "Tire Dressing", "Dashboard", "Center Console", "Fender Wells", "Exterior Plastic Restorer", "Floor Mats", "Vacuum (incl. Trunk)"]),
-  "Premium Refresh": new Set(["Hand Wash", "Tires & Rims", "Window Cleaning", "Interior Wipe Down", "Vacuum", "Tire Dressing", "Dashboard", "Center Console", "Fender Wells", "Exterior Plastic Restorer", "Floor Mats", "Vacuum (incl. Trunk)", "Interior Shampoo", "Door Jambs", "Steam Cleaning"]),
+  "Complete Clean": new Set(["Hand Wash", "Tires & Rims", "Window Cleaning", "Interior Wipe Down", "Vacuum", "Tire Dressing", "Dashboard", "Center Console", "Fender Wells", "Floor Mats", "Vacuum (incl. Trunk)"]),
+  "Premium Refresh": new Set(["Hand Wash", "Tires & Rims", "Window Cleaning", "Interior Wipe Down", "Vacuum", "Tire Dressing", "Dashboard", "Center Console", "Fender Wells", "Floor Mats", "Vacuum (incl. Trunk)", "Interior Shampoo", "Door Jambs", "Steam Cleaning"]),
 };
 
 const addOns = [
   { name: "Door Jambs", price: 20 },
-  { name: "Vacuum Truck", price: 20 },
+  { name: "Vacuum Trunk", price: 20 },
   { name: "Pet Hair Removal", price: 25 },
   { name: "Floor Mat Cleaning", price: 25 },
-  { name: "Exterior Plastic Restorer", price: 20 },
+  { name: "Trim Restoration", price: 30 },
   { name: "Steam Cleaning", price: 50 },
-  { name: "Odor Removal", price: 75 },
+  { name: "Odor Removal", price: 40 },
   { name: "Leather Conditioning", price: 40 },
-  { name: "Bug & Tar Removal", price: 40 }
+  { name: "Bug & Tar Removal", price: 30 },
+  { name: "Car Waxing", price: 60 }
 ];
 ---
 
@@ -92,7 +92,7 @@ const addOns = [
         <strong>Professional mobile detailing packages that come to your Fort Lauderdale location. Choose the level of care your vehicle needs — from a quick refresh to a complete deep clean.</strong>
       </p>
       <p class="text-lg text-gray-300 max-w-3xl mb-4">
-        Every package includes mobile service at your home or office in Fort Lauderdale, Hollywood, and Pompano Beach. We use Chemical Guys premium products and our satisfaction guarantee backs every detail.
+        Every package includes mobile service at your home or office in Fort Lauderdale, Hollywood, and Pompano Beach. We use premium products from Chemical Guys, Koch-Chemie, and 3D, and our satisfaction guarantee backs every detail.
       </p>
       <p class="text-lg text-gray-300 max-w-3xl mb-8">
         Same-day appointments often available. Call 754-215-2272.
