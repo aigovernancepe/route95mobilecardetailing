@@ -21,30 +21,6 @@ const t = getTranslations(locale);
         {t.instagramFeed.description}
       </p>
     </div>
-    <div class="trustindex-widget" data-script-src={scriptSrc}></div>
+    <script defer async src={scriptSrc}></script>
   </div>
 </section>
-
-<script>
-  function loadTrustindex(src: string) {
-    if (document.querySelector(`script[src="${src}"]`)) return;
-    const script = document.createElement('script');
-    script.src = src;
-    script.defer = true;
-    script.async = true;
-    document.head.appendChild(script);
-  }
-
-  const widgets = document.querySelectorAll('.trustindex-widget');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const src = (entry.target as HTMLElement).dataset.scriptSrc;
-        if (src) loadTrustindex(src);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { rootMargin: '200px' });
-
-  widgets.forEach(widget => observer.observe(widget));
-</script>
