@@ -1,0 +1,160 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Limpieza de Cuero Fort Lauderdale | Servicio Móvil | Route95";
+const description = "Limpieza profesional móvil de cuero en Fort Lauderdale. Elimina aceites corporales, protector solar y suciedad de los asientos de cuero. ¡Vamos a usted! Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('upholstery-cleaning-fort-lauderdale'),
+  title: "Limpieza de Tapicería"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Limpieza de Cuero Fort Lauderdale"
+  intro="La limpieza de cuero elimina aceites corporales, protector solar y suciedad que deterioran sus asientos con el tiempo y causan grietas y decoloración."
+  currentPage="/es/limpieza-de-cuero-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Route95 proporciona limpieza móvil de cuero en todo Fort Lauderdale. Llevamos equipo profesional y limpiador de cuero Chemical Guys con pH balanceado directamente a su hogar u oficina. Sus superficies de cuero se limpian a fondo sin químicos agresivos que dañen el material.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Vivir en el sur de Florida significa que su cuero recibe un castigo adicional. El protector solar se transfiere de su piel cada vez que se sienta. El sudor y los aceites corporales se absorben en el cuero diariamente. El sol de Florida cocina estos contaminantes más profundamente en el material. Sin una limpieza adecuada, su cuero envejece años más rápido de lo que debería.
+        </p>
+        <p class="text-gray-600">
+          Atendemos a propietarios de vehículos de lujo en Las Olas, Nurmi Isles, Seven Isles y todo Fort Lauderdale que entienden que los interiores premium requieren cuidado premium.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta la Limpieza de Cuero en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La limpieza profesional de cuero en Fort Lauderdale típicamente cuesta entre $50 y $100 dependiendo de cuántas superficies de cuero tenga su vehículo.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los vehículos con solo asientos de cuero cuestan menos que aquellos con interiores completamente de cuero incluyendo paneles de puertas, consola central y tablero. Evaluamos su vehículo específico y proporcionamos precios exactos antes de comenzar cualquier trabajo.
+        </p>
+        <p class="text-gray-600">
+          Muchos propietarios de autos de lujo combinan la limpieza de cuero con el acondicionamiento de cuero para un cuidado completo. El precio del paquete ofrece mejor valor que reservar servicios por separado.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Tiempo Toma la Limpieza de Cuero?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La limpieza de cuero toma aproximadamente 30 minutos para la mayoría de los vehículos con áreas de asientos de cuero estándar.</strong>
+        </p>
+        <p class="text-gray-600">
+          Los interiores completos de cuero con paneles de puertas, apoyabrazos y molduras de consola toman más tiempo—generalmente de 45 minutos a una hora. No apuramos el proceso porque las áreas que se pasan por alto siguen deteriorándose aunque el resto se vea limpio. Como vamos a su ubicación, puede continuar su día mientras trabajamos.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Por Qué el Cuero Necesita Limpieza Profesional?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El cuero absorbe aceites y contaminantes que los productos de limpieza caseros no pueden eliminar de forma segura sin arriesgar dañar el material.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Cada vez que conduce, su cuerpo transfiere aceites y productos a sus asientos de cuero. El protector solar es especialmente dañino. Lociones, cremas para manos y aceites naturales de la piel se acumulan en las superficies de cuero. En el clima de Fort Lauderdale, aplica protector solar casi a diario—y mucho termina en sus asientos.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Estos contaminantes no solo se quedan en la superficie. Penetran en el cuero, descomponiendo el acabado protector y eventualmente el cuero mismo. Notará que el asiento del conductor muestra desgaste mucho antes que los asientos de pasajeros porque es donde los aceites se concentran más.
+        </p>
+        <p class="text-gray-600">
+          La limpieza profesional utiliza productos con pH balanceado diseñados específicamente para cuero automotriz. Levantamos estos contaminantes incrustados de forma segura sin eliminar las propiedades naturales del cuero o el acabado de fábrica.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Limpieza de Cuero</h2>
+        <ProcessSteps steps={[
+          { title: "Inspección", description: "Examinamos todas las superficies de cuero para identificar áreas de suciedad pesada, daños existentes y tipo de material." },
+          { title: "Aspiración", description: "La suciedad suelta y los residuos se eliminan primero para evitar frotarlos contra el cuero durante la limpieza." },
+          { title: "Solución Limpiadora", description: "Aplicamos el limpiador de cuero Chemical Guys usando cepillos suaves que agitan la suciedad sin rayar." },
+          { title: "Limpieza", description: "Toallas de microfibra limpias levantan el limpiador junto con los aceites y la suciedad disueltos." },
+          { title: "Secado", description: "El cuero se seca brevemente al aire antes de aplicar cualquier tratamiento de acondicionamiento." }
+        ]} />
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Debo Acondicionar el Cuero Después de la Limpieza?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El acondicionamiento del cuero después de la limpieza restaura la humedad y crea protección contra el daño futuro del sol y la humedad de Florida.</strong>
+        </p>
+        <p class="text-gray-600">
+          La limpieza elimina aceites—tanto los malos de su piel como los buenos que mantienen el cuero flexible. El acondicionamiento reemplaza esa humedad y agrega una barrera protectora. Recomendamos encarecidamente combinar la limpieza de cuero con el acondicionamiento de cuero, especialmente para vehículos que se conducen a diario en Fort Lauderdale. El sol de Florida seca el cuero más rápido que casi cualquier otro lugar del país.
+        </p>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rápidos de Limpieza de Cuero</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$50-$100 según la cobertura</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">30-60 minutos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Productos con pH balanceado</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Elimina aceites y protector solar</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Previene grietas y decoloración</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Limpieza de Cuero</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas el mismo día disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('leather-conditioning-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Acondicionamiento de Cuero</a></li>
+            <li><a href={url('seat-shampooing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado de Asientos</a></li>
+            <li><a href={url('interior-protection-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Protección Interior</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

@@ -1,21 +1,18 @@
 ---
+import { getTranslations, getLocalizedNavLinks, localizedUrl, type Locale } from '../i18n/utils';
+
+interface Props {
+  locale?: string;
+}
+
+const { locale: localeProp } = Astro.props;
+const locale = (localeProp ?? Astro.currentLocale ?? 'en') as Locale;
+const t = getTranslations(locale);
+const nav = getLocalizedNavLinks(locale);
 const currentYear = new Date().getFullYear();
-const base = import.meta.env.BASE_URL;
 
-const serviceLinks = [
-  { href: `${base}hand-wash-fort-lauderdale/`, label: 'Hand Wash' },
-  { href: `${base}car-waxing-fort-lauderdale/`, label: 'Car Waxing' },
-  { href: `${base}leather-cleaning-fort-lauderdale/`, label: 'Leather Cleaning' },
-  { href: `${base}seat-shampooing-fort-lauderdale/`, label: 'Seat Shampooing' },
-  { href: `${base}complete-clean-fort-lauderdale/`, label: 'Complete Clean' },
-  { href: `${base}odor-removal-fort-lauderdale/`, label: 'Odor Removal' },
-];
-
-const categoryLinks = [
-  { href: `${base}car-wash-fort-lauderdale/`, label: 'Car Wash Services' },
-  { href: `${base}upholstery-cleaning-fort-lauderdale/`, label: 'Upholstery Cleaning' },
-  { href: `${base}car-detailing-services-fort-lauderdale/`, label: 'Detailing Services' },
-];
+const aboutUrl = localizedUrl(locale, 'about');
+const contactUrl = localizedUrl(locale, 'contact');
 ---
 
 <footer class="bg-[#0f2a4a] text-white">
@@ -24,23 +21,23 @@ const categoryLinks = [
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Company Info -->
       <div>
-        <h3 class="text-xl font-bold mb-4">Route95 Mobile Car Detailing</h3>
+        <h3 class="text-xl font-bold mb-4">{t.footer.companyName}</h3>
         <p class="text-gray-300 mb-4">
-          Professional mobile car detailing in Fort Lauderdale. We come to you with premium Chemical Guys products for luxury results.
+          {t.footer.companyDescription}
         </p>
         <div class="flex items-center gap-2 text-[#c0c7cf]">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <span class="font-semibold">Satisfaction Guaranteed</span>
+          <span class="font-semibold">{t.footer.satisfactionGuaranteed}</span>
         </div>
       </div>
 
       <!-- Services -->
       <div>
-        <h3 class="text-xl font-bold mb-4">Popular Services</h3>
+        <h3 class="text-xl font-bold mb-4">{t.footer.popularServices}</h3>
         <ul class="space-y-2">
-          {serviceLinks.map(link => (
+          {nav.footerServiceLinks.map(link => (
             <li>
               <a href={link.href} class="text-gray-300 hover:text-[#c0c7cf] transition-colors">
                 {link.label}
@@ -52,7 +49,7 @@ const categoryLinks = [
 
       <!-- Service Areas -->
       <div>
-        <h3 class="text-xl font-bold mb-4">Service Areas</h3>
+        <h3 class="text-xl font-bold mb-4">{t.footer.serviceAreas}</h3>
         <ul class="space-y-2 text-gray-300">
           <li>Fort Lauderdale, FL</li>
           <li>Hollywood, FL</li>
@@ -60,13 +57,13 @@ const categoryLinks = [
           <li>Pompano Beach, FL</li>
           <li>Deerfield Beach, FL</li>
           <li>Boca Raton, FL</li>
-          <li class="text-sm text-gray-400 mt-2">Including Las Olas, Nurmi Isles, Seven Isles & all of Broward County</li>
+          <li class="text-sm text-gray-400 mt-2">{t.footer.includingAreas}</li>
         </ul>
       </div>
 
       <!-- Contact -->
       <div>
-        <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+        <h3 class="text-xl font-bold mb-4">{t.footer.contactUs}</h3>
         <ul class="space-y-3">
           <li>
             <a href="tel:+17542152272" class="flex items-center gap-2 text-[#c0c7cf] hover:text-white transition-colors">
@@ -88,13 +85,13 @@ const categoryLinks = [
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span>Mon - Sat: 8AM - 8PM</span>
+            <span>{t.footer.hours}</span>
           </li>
         </ul>
 
         <!-- Social Media -->
         <div class="mt-6">
-          <h4 class="text-sm font-semibold mb-3">Follow Us</h4>
+          <h4 class="text-sm font-semibold mb-3">{t.footer.followUs}</h4>
           <div class="flex gap-4">
             <a href="https://facebook.com/route95mobilecardetailing" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#c0c7cf] transition-colors" aria-label="Facebook">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -122,13 +119,13 @@ const categoryLinks = [
     <div class="max-w-7xl mx-auto px-4 py-6">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-gray-400 text-sm">
-          &copy; {currentYear} Route95 Mobile Car Detailing LLC. All rights reserved.
+          &copy; {currentYear} {t.footer.copyright}
         </p>
         <div class="flex flex-wrap gap-4 lg:gap-6 text-sm">
-          <a href={`${base}about/`} class="text-gray-400 hover:text-[#c0c7cf] transition-colors">About</a>
-          <a href={`${base}contact/`} class="text-gray-400 hover:text-[#c0c7cf] transition-colors">Contact</a>
+          <a href={aboutUrl} class="text-gray-400 hover:text-[#c0c7cf] transition-colors">{t.header.about}</a>
+          <a href={contactUrl} class="text-gray-400 hover:text-[#c0c7cf] transition-colors">{t.header.contact}</a>
           <button onclick="openCookiePreferences()" class="text-gray-400 hover:text-[#c0c7cf] transition-colors">
-            Do Not Sell or Share My Personal Information
+            {t.footer.doNotSell}
           </button>
         </div>
       </div>

@@ -1,19 +1,24 @@
 ---
+import { getTranslations, type Locale } from '../i18n/utils';
+
 interface Props {
   widgetId?: string;
+  locale?: string;
 }
 
-const { widgetId = 'REPLACE_WITH_YOUR_ELFSIGHT_WIDGET_ID' } = Astro.props;
+const { widgetId = 'REPLACE_WITH_YOUR_ELFSIGHT_WIDGET_ID', locale: localeProp } = Astro.props;
+const locale = (localeProp ?? Astro.currentLocale ?? 'en') as Locale;
+const t = getTranslations(locale);
 ---
 
 <section class="py-16 lg:py-24 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center mb-12">
       <h2 class="text-3xl lg:text-4xl font-bold text-[#0f2a4a] mb-4">
-        What Our Customers Say
+        {t.googleReviews.heading}
       </h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-        See why Fort Lauderdale car owners trust Route95 for their mobile detailing needs.
+        {t.googleReviews.description}
       </p>
     </div>
     <div class="elfsight-widget" data-widget-id={widgetId}>

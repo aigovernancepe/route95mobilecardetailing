@@ -1,0 +1,150 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Renovacion Premium Fort Lauderdale | Paquete de Detallado | Route95";
+const description = "Renovacion Premium movil en Fort Lauderdale. Champu interior profundo, limpieza a vapor, marcos de puertas y detallado exterior completo. Proximamente. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('car-detailing-services-fort-lauderdale'),
+  title: "Servicios de Detallado"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Renovacion Premium Fort Lauderdale"
+  intro="Champu interior profundo con limpieza a vapor — el detallado movil definitivo. Todo lo incluido en la Limpieza Completa mas restauracion interior de grado profesional."
+  currentPage="/es/renovacion-premium-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <!-- Coming Soon Banner -->
+      <div class="bg-[#f0f2f5] border border-[#c0c7cf] rounded-xl p-6">
+        <p class="text-[#0f2a4a] font-bold text-lg mb-2">Proximamente</p>
+        <p class="text-gray-600">Estamos finalizando los productos y el proceso para el paquete Renovacion Premium. Contactenos para actualizaciones o para discutir una solucion de limpieza profunda personalizada mientras tanto.</p>
+      </div>
+
+      <section>
+        <p class="text-gray-600 mb-4">
+          La Renovacion Premium es nuestro paquete de nivel superior para vehiculos que necesitan mas que una limpieza superficial. Esta disenado para autos con asientos manchados, suciedad incrustada en alfombras, olores persistentes o interiores que no han sido limpiados profundamente en mucho tiempo.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Este paquete agrega champu interior profesional de asientos, alfombras, paneles de puertas y cinturones de seguridad, mas limpieza a vapor para desinfectar y desodorizar cada superficie. Los marcos de las puertas tambien reciben atencion detallada — esas areas frecuentemente descuidadas que acumulan suciedad cada vez que abre la puerta.
+        </p>
+        <p class="text-gray-600">
+          Todo lo incluido en la Limpieza Completa tambien esta incluido aqui, haciendo de esta una verdadera restauracion de parachoques a parachoques para el interior y exterior de su vehiculo.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Que Incluira?</h2>
+        <p class="text-gray-600 mb-4"><strong>Todo lo de la Limpieza Completa, mas:</strong></p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li><strong>Champu Interior — Asientos</strong> — Limpieza de extraccion profunda que elimina manchas, suciedad y alergenos</li>
+          <li><strong>Champu Interior — Alfombras</strong> — Alfombras del piso lavadas y extraidas para apariencia como nueva</li>
+          <li><strong>Champu Interior — Paneles de Puertas</strong> — Superficies de tela y plastico de paneles de puertas limpiados profundamente</li>
+          <li><strong>Champu Interior — Cinturones de Seguridad</strong> — Frecuentemente pasados por alto, los cinturones albergan bacterias y manchas</li>
+          <li><strong>Marcos de Puertas</strong> — Limpieza detallada de todas las areas de marcos de puertas y bisagras</li>
+          <li><strong>Limpieza a Vapor</strong> — Vapor a alta temperatura desinfecta superficies y elimina olores</li>
+        </ul>
+        <p class="text-gray-600">
+          Este es el paquete que recomendamos para vehiculos que se preparan para la venta, despues de un viaje largo, o cualquier auto que no ha tenido atencion interior profesional en mas de un ano.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Para Quien es la Renovacion Premium?</h2>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>Vehiculos con asientos y alfombras manchados o sucios</li>
+          <li>Autos con pelo de mascota, olor a mascota o preocupaciones de alergenos</li>
+          <li>Preparacion para venta para maximizar el valor de reventa</li>
+          <li>Vehiculos que no han sido detallados en mas de 6 meses</li>
+          <li>Cualquiera que desee la limpieza mas profunda posible</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">No Puede Esperar? Contactenos para una Cotizacion Personalizada</h2>
+        <p class="text-gray-600 mb-4">
+          Mientras finalizamos el paquete Renovacion Premium, podemos crear una solucion de limpieza profunda personalizada para su vehiculo usando nuestros servicios y complementos existentes. Llamenos para discutir lo que su vehiculo necesita y le crearemos una cotizacion personalizada.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="tel:+17542152272" class="btn-accent inline-flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Llame al 754-215-2272
+          </a>
+          <a href={url('contact')} class="bg-white border-2 border-[#0f2a4a] text-[#0f2a4a] px-6 py-3 rounded-md font-semibold hover:bg-gray-50 transition-colors text-center">
+            Solicitar Cotizacion en Linea
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Detalles de Renovacion Premium</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">Precios proximamente</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">Estimado 2.5-3.5 horas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Champu interior completo</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Limpieza a vapor y desinfeccion</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Todo lo de Limpieza Completa</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reciba Notificacion al Lanzamiento</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Contactenos para ser el primero cuando la Renovacion Premium se lance.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Paquetes Disponibles</h3>
+          <ul class="space-y-2">
+            <li><a href={url('quick-wash-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado Rapido</a></li>
+            <li><a href={url('fresh-start-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Nuevo Comienzo</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+            <li><a href={url('car-detailing-services-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Ver Todos los Paquetes</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

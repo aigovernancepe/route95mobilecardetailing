@@ -1,19 +1,24 @@
 ---
+import { getTranslations, type Locale } from '../i18n/utils';
+
 interface Props {
   scriptSrc: string;
+  locale?: string;
 }
 
-const { scriptSrc } = Astro.props;
+const { scriptSrc, locale: localeProp } = Astro.props;
+const locale = (localeProp ?? Astro.currentLocale ?? 'en') as Locale;
+const t = getTranslations(locale);
 ---
 
 <section class="py-16 lg:py-24 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center mb-12">
       <h2 class="text-3xl lg:text-4xl font-bold text-[#0f2a4a] mb-4">
-        See Our Work
+        {t.instagramFeed.heading}
       </h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-        Follow us on Instagram for the latest before-and-after results.
+        {t.instagramFeed.description}
       </p>
     </div>
     <div class="trustindex-widget" data-script-src={scriptSrc}></div>

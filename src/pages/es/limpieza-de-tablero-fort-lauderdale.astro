@@ -1,0 +1,171 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Limpieza de Tablero Fort Lauderdale | Servicio Móvil | Route95";
+const description = "Limpieza profesional de tablero en Fort Lauderdale. Servicio móvil - ¡vamos a usted! Elimina polvo y protege contra el daño UV. Citas el mismo día. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('car-detailing-services-fort-lauderdale'),
+  title: "Servicios de Detallado"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Limpieza de Tablero Fort Lauderdale"
+  intro="La limpieza profesional del tablero elimina polvo, suciedad y huellas mientras agrega protección UV contra el sol intenso de Florida."
+  currentPage="/es/limpieza-de-tablero-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Su tablero recibe la peor exposición solar de cualquier superficie interior. En Fort Lauderdale, eso significa bombardeo UV durante todo el año que desvanece el color, reseca el vinilo y eventualmente causa grietas. Un tablero polvoriento también se ve descuidado y puede provocar alergias cuando su AC sopla las partículas por la cabina.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Llevamos nuestro servicio de limpieza de tablero directamente a su hogar u oficina en cualquier lugar de Fort Lauderdale. Ya sea que viva cerca del barrio Boatyard o por Plantation, vamos a usted con productos profesionales que limpian y protegen en una sola visita.
+        </p>
+        <p class="text-gray-600">
+          La limpieza del tablero incluye toda el área del tablero frontal—la superficie principal, el panel de instrumentos, la consola central, las rejillas de ventilación, las pantallas y todas las piezas de moldura que acumulan polvo y huellas.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta la Limpieza de Tablero en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La limpieza de tablero en Fort Lauderdale cuesta de $30 a $50 dependiendo de la complejidad del interior de su vehículo.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los interiores básicos con diseños de tablero simples están en el extremo inferior. Los vehículos de lujo con múltiples pantallas, piezas de moldura intrincadas y superficies texturizadas toman más tiempo y cuidado, lo cual afecta el precio.
+        </p>
+        <p class="text-gray-600">
+          La mayoría de los clientes agregan la limpieza de tablero a otros servicios interiores como aspirado o cuidado de cuero. Podemos combinar servicios para mejor valor.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Tiempo Toma la Limpieza de Tablero?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La limpieza de tablero toma aproximadamente 30 minutos para la mayoría de los vehículos, con la protección durando de 4-6 semanas.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Trabajamos cada sección de su tablero metódicamente. Las rejillas de ventilación necesitan atención especial porque el polvo se acumula profundamente en su interior. Las pantallas requieren limpieza suave con productos que no dejan residuos ni dañan las pantallas. Las superficies texturizadas atrapan polvo y necesitan agitación adecuada para liberarlo.
+        </p>
+        <p class="text-gray-600">
+          Su auto está listo para conducir inmediatamente después de terminar.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Por Qué Su Tablero Necesita Limpieza Profesional?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El sol de Florida daña los tableros desprotegidos más rápido que en cualquier otro lugar. Los rayos UV desvanecen el color, resecan los materiales y causan grietas que arruinan su interior.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los tableros están hechos de compuestos de vinilo, plástico y caucho que se degradan bajo la exposición UV. Sin protección, estos materiales:
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>Se desvanecen de negro o gris a un color calcáreo más claro</li>
+          <li>Se vuelven frágiles y desarrollan grietas</li>
+          <li>Se encogen ligeramente, causando huecos y chirridos</li>
+          <li>Liberan químicos que crean esa película en su parabrisas</li>
+        </ul>
+        <p class="text-gray-600 mb-4">
+          Más allá del daño solar, un tablero sucio afecta su experiencia de conducción. Las partículas de polvo se soplan a través de las rejillas y a sus pulmones. La suciedad en las pantallas las hace más difíciles de leer. Los residuos pegajosos en los controles se sienten desagradables cada vez que ajusta algo.
+        </p>
+        <p class="text-gray-600 mb-4">Señales de que su tablero necesita atención:</p>
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <li>Capa visible de polvo en las superficies</li>
+          <li>Color desvanecido o grisáceo en las piezas de moldura</li>
+          <li>Huellas y manchas en las pantallas</li>
+          <li>Sensación pegajosa en botones y controles</li>
+          <li>Acumulación de película en el interior del parabrisas</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Limpieza de Tablero</h2>
+        <ProcessSteps steps={[
+          { title: "Eliminación de Polvo", description: "Comenzamos con cepillos suaves para desprender el polvo de las rejillas, hendiduras y superficies texturizadas sin rayar." },
+          { title: "Limpieza de Superficies", description: "Aplicamos el limpiador Chemical Guys Total Interior para disolver la suciedad, aceites y residuos pegajosos de todas las superficies del tablero." },
+          { title: "Trabajo de Detalle", description: "Hisopos de algodón y cepillos de detallado llegan a los botones, rejillas y áreas estrechas alrededor de pantallas y controles." },
+          { title: "Cuidado de Pantallas", description: "Las pantallas táctiles y los paneles de instrumentos reciben limpieza suave con productos que no dejan rayas ni dañan las pantallas." },
+          { title: "Protección UV", description: "Aplicamos el protectante Chemical Guys Silk Shine para un acabado satinado natural. Esta fórmula no grasosa bloquea los rayos UV sin ese aspecto brillante y artificial." }
+        ]} />
+      </section>
+
+      <section class="bg-gray-50 rounded-xl p-6">
+        <h3 class="font-bold text-[#0f2a4a] mb-2">¿Tablero Desvanecido?</h3>
+        <p class="text-gray-600">
+          Para tableros severamente desvanecidos, podemos aplicar restaurador VRP (Vinilo, Caucho, Plástico) para devolver el color oscuro original antes de proteger.
+        </p>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rápidos de Limpieza de Tablero</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$30-$50 según la complejidad</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">Aproximadamente 30 minutos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Protección UV incluida</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Productos seguros para pantallas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Protección dura 4-6 semanas</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Limpieza de Tablero</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas el mismo día disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('interior-vacuuming-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Aspirado Interior</a></li>
+            <li><a href={url('interior-protection-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Protección Interior</a></li>
+            <li><a href={url('leather-conditioning-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Acondicionamiento de Cuero</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

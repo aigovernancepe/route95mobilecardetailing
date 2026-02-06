@@ -1,0 +1,187 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Eliminación de Olores Fort Lauderdale | Servicio Móvil | Route95";
+const description = "Eliminación profesional de olores de auto en Fort Lauderdale. Servicio móvil - ¡vamos a usted! Elimina olores en la fuente, no solo los cubre. Citas el mismo día. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('upholstery-cleaning-fort-lauderdale'),
+  title: "Limpieza de Tapicería"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Eliminación de Olores Fort Lauderdale"
+  intro="La eliminación profesional de olores elimina los malos olores de su auto tratando la fuente, no solo cubriéndolos con ambientadores."
+  currentPage="/es/eliminacion-de-olores-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Los ambientadores y aerosoles solo enmascaran los olores temporalmente. El olor siempre regresa porque la fuente todavía está ahí. La verdadera eliminación de olores significa encontrar qué está causando el olor, tratarlo directamente y eliminarlo permanentemente.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Llevamos nuestro servicio de eliminación de olores directamente a su hogar u oficina en cualquier lugar de Fort Lauderdale. Desde casas cerca del Boulevard Las Olas hasta apartamentos en Victoria Park, vamos a usted con equipo y productos profesionales que realmente funcionan.
+        </p>
+        <p class="text-gray-600">
+          La humedad de Florida empeora los olores del auto más que en cualquier otro lugar. La humedad alimenta las bacterias y el moho que crean los malos olores. Lo que podría ser un olor menor en el norte se convierte en un problema serio en nuestro clima.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta la Eliminación de Olores de Auto en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La eliminación de olores de auto en Fort Lauderdale cuesta de $75 a $200 dependiendo de la fuente del olor y el tratamiento necesario.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los olores ligeros de comida o humedad están en el extremo inferior. Los olores severos de accidentes de mascotas, comida en descomposición o moho requieren un tratamiento más intensivo. El tratamiento con ozono para olores persistentes cuesta más pero da resultados cuando otros métodos fallan.
+        </p>
+        <p class="text-gray-600">
+          Diagnosticaremos su situación y le daremos opciones antes de comenzar cualquier trabajo.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Tiempo Toma la Eliminación de Olores?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La eliminación de olores toma de 1 a 2 horas dependiendo del método de tratamiento y la severidad del olor.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          El tratamiento básico de olores implica limpiar la fuente y aplicar eliminadores de olores. Los olores más persistentes pueden necesitar tratamiento con ozono, que requiere que el auto permanezca cerrado por una hora mientras funciona la máquina de ozono. Los casos severos pueden necesitar que se repita el proceso.
+        </p>
+        <p class="text-gray-600">
+          Su auto está listo para conducir después del tratamiento, aunque los vehículos tratados con ozono necesitan ventilarse por 15-20 minutos primero.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Por Qué los Autos Desarrollan Malos Olores en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El calor y la humedad de Florida aceleran el desarrollo de olores. La comida se descompone más rápido, la humedad produce moho y las bacterias prosperan en condiciones cálidas y húmedas.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Fuentes comunes de olores en vehículos de Fort Lauderdale:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-2">Hongos</h3>
+            <p class="text-gray-600 text-sm">La humedad de la lluvia, trajes de baño mojados o la humedad queda atrapada y produce moho. Ese olor a humedad son esporas de moho.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-2">Comida</h3>
+            <p class="text-gray-600 text-sm">Los artículos olvidados se descomponen rápido en el calor de Florida. Incluso las migas pueden atraer humedad y comenzar a oler.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-2">Derrames</h3>
+            <p class="text-gray-600 text-sm">Las bebidas que se absorben en la alfombra o los asientos alimentan las bacterias mientras se descomponen.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-2">Accidentes de Mascotas</h3>
+            <p class="text-gray-600 text-sm">La orina se absorbe profundamente en el acolchado de la alfombra y requiere tratamiento enzimático para eliminarse completamente.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-2">Sistema de AC</h3>
+            <p class="text-gray-600 text-sm">El moho crece en el evaporador de su aire acondicionado, soplando aire con olor a humedad cada vez que enciende el AC.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-2">Olor Corporal</h3>
+            <p class="text-gray-600 text-sm">El sudor absorbido por los asientos con el tiempo crea un olor agrio.</p>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">Señales de que necesita eliminación profesional de olores:</p>
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <li>El mal olor regresa después de limpiar o usar ambientadores</li>
+          <li>No puede identificar de dónde viene el olor</li>
+          <li>El olor empeora en días calurosos</li>
+          <li>Su AC sopla aire con olor a humedad</li>
+          <li>Los pasajeros comentan sobre el olor</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Eliminación de Olores</h2>
+        <ProcessSteps steps={[
+          { title: "Identificación de la Fuente", description: "Encontramos de dónde viene el olor. Esto determina el enfoque de tratamiento correcto." },
+          { title: "Limpieza Profunda", description: "Limpiamos el área afectada a fondo. No se pueden eliminar olores sin remover lo que los causa." },
+          { title: "Tratamiento Enzimático", description: "Para olores orgánicos como comida, accidentes de mascotas o fluidos corporales, aplicamos productos a base de enzimas que descomponen las moléculas que causan el olor." },
+          { title: "Tratamiento con Ozono", description: "Para olores persistentes, hacemos funcionar un generador de ozono dentro de su auto sellado. Las moléculas de ozono se adhieren a las partículas de olor y las neutralizan permanentemente." },
+          { title: "Tratamiento del AC", description: "Si el olor viene de su sistema de aire, tratamos el evaporador y las rejillas para matar moho y bacterias." },
+          { title: "Verificación Final", description: "Verificamos que el olor se haya eliminado antes de terminar." }
+        ]} />
+      </section>
+
+      <section class="bg-gray-50 rounded-xl p-6">
+        <h3 class="font-bold text-[#0f2a4a] mb-2">Nota Sobre Accidentes de Mascotas</h3>
+        <p class="text-gray-600">
+          Para accidentes de mascotas, el tratamiento enzimático es esencial. La limpieza regular solo enmascara el olor temporalmente. Las proteínas de la orina se descomponen y huelen peor con el tiempo a menos que se traten con enzimas que las destruyan completamente.
+        </p>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rápidos de Eliminación de Olores</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$75-$200 según la severidad</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">1-2 horas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Tratamiento con ozono disponible</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Trata la fuente, no los síntomas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Resultados permanentes</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Eliminación de Olores</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas el mismo día disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('smoke-odor-removal-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Eliminación de Olor a Humo</a></li>
+            <li><a href={url('pet-hair-removal-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Eliminación de Pelo de Mascota</a></li>
+            <li><a href={url('steam-cleaning-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza a Vapor</a></li>
+            <li><a href={url('seat-shampooing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado de Asientos</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

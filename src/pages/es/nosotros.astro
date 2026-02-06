@@ -1,0 +1,228 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const base = import.meta.env.BASE_URL;
+const title = "Nosotros | Route95 Mobile Car Detailing";
+const description = "Conoce Route95 Mobile Car Detailing en Fort Lauderdale. El propietario Gustavo Moya lleva detallado profesional a domicilio con productos Chemical Guys a tu ubicación.";
+---
+
+<BaseLayout title={title} description={description} currentPage="/es/nosotros/">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-[#0a1e38] to-[#0f2a4a] text-white py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Sobre Route95 Mobile Car Detailing</h1>
+      <p class="text-xl text-gray-300 max-w-3xl">
+        Detallado profesional de autos a domicilio directamente en tu ubicación en Fort Lauderdale, Hollywood y Pompano Beach.
+      </p>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-[#0f2a4a] mb-6">Nuestra Historia</h2>
+          <p class="text-gray-600 mb-4">
+            Route95 Mobile Car Detailing fue fundado por Gustavo Moya con una idea simple: llevar el detallado profesional a donde tú estés. Sin más manejar a un taller. Sin más hacer fila. Sin más reacomodar tu agenda.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Vivir en Fort Lauderdale significa entender lo que el ambiente del sur de Florida le hace a los vehículos. El sol intenso decolora la pintura y agrieta los interiores. El aire salado del Atlántico corroe el metal y el cromo. La humedad genera moho y hongos dentro de las cabinas.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Construimos nuestro servicio específicamente para estos desafíos. Cada producto que usamos, cada técnica que empleamos se elige porque funciona en las condiciones de Florida. Detallamos autos aquí todos los días, desde las casas de lujo en Las Olas hasta las propiedades frente al agua en Nurmi Isles.
+          </p>
+          <p class="text-gray-600">
+            Nuestro servicio móvil significa que vamos a tu casa, tu oficina o donde esté tu vehículo. Obtienes resultados profesionales sin las complicaciones de los talleres de detallado tradicionales.
+          </p>
+        </div>
+        <div class="bg-gradient-to-br from-[#0a1e38] to-[#0f2a4a] rounded-xl p-8 text-white">
+          <h3 class="text-2xl font-bold mb-6">Nuestros Valores</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#c0c7cf] rounded-full flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#0f2a4a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold">Calidad Primero</h4>
+                <p class="text-gray-300 text-sm">Nunca tomamos atajos. Cada vehículo recibe nuestra atención completa y mejor esfuerzo.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#c0c7cf] rounded-full flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#0f2a4a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold">Respetamos Tu Tiempo</h4>
+                <p class="text-gray-300 text-sm">Vamos a ti para que puedas enfocarte en lo que importa. Servicio el mismo día disponible.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#c0c7cf] rounded-full flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#0f2a4a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold">Satisfacción Garantizada</h4>
+                <p class="text-gray-300 text-sm">Te encantarán los resultados o lo corregimos. Punto.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="py-16 lg:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[#0f2a4a] mb-4">Productos Premium Chemical Guys</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Usamos exclusivamente productos profesionales Chemical Guys porque ofrecen resultados superiores y protegen tu vehículo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <div class="w-12 h-12 bg-[#0f2a4a] rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#c0c7cf]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Cuidado Exterior</h3>
+          <p class="text-gray-600">
+            Mr. Pink Super Suds, cera de carnauba premium y productos de barra de arcilla que limpian sin rayar y protegen contra el daño UV.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <div class="w-12 h-12 bg-[#0f2a4a] rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#c0c7cf]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Cuidado del Cuero</h3>
+          <p class="text-gray-600">
+            Limpiador y acondicionador de cuero con pH balanceado con Vitamina E que limpia, hidrata y protege contra el sol de Florida.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <div class="w-12 h-12 bg-[#0f2a4a] rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#c0c7cf]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Cuidado Interior</h3>
+          <p class="text-gray-600">
+            Foaming Citrus Fabric Clean, extractores de manchas y protección de tela que limpian profundamente y protegen contra futuros derrames.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-bold text-[#0f2a4a] mb-6">Áreas que Servimos</h2>
+          <p class="text-gray-600 mb-6">
+            Route95 Mobile Car Detailing sirve todo el Condado de Broward con citas el mismo día disponibles. Llevamos toda nuestra propia agua, energía y equipo — no necesitas hacer nada.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-[#0f2a4a]">Fort Lauderdale</h4>
+              <p class="text-sm text-gray-600">Área principal de servicio</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-[#0f2a4a]">Las Olas</h4>
+              <p class="text-sm text-gray-600">Incluyendo Las Olas Isles</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-[#0f2a4a]">Nurmi Isles</h4>
+              <p class="text-sm text-gray-600">Propiedades frente al agua</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-[#0f2a4a]">Seven Isles</h4>
+              <p class="text-sm text-gray-600">Área exclusiva</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-[#0f2a4a]">Hollywood</h4>
+              <p class="text-sm text-gray-600">Cobertura completa</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-[#0f2a4a]">Pompano Beach</h4>
+              <p class="text-sm text-gray-600">Cobertura completa</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-8 text-white">
+          <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#c0c7cf]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <div>
+                <p class="text-gray-400 text-sm">Teléfono</p>
+                <a href="tel:+17542152272" class="text-[#c0c7cf] font-semibold hover:underline">754-215-2272</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#c0c7cf]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <div>
+                <p class="text-gray-400 text-sm">Correo Electrónico</p>
+                <a href="mailto:contact@route95mobilecardetailing.com" class="text-[#c0c7cf] hover:underline break-all">contact@route95mobilecardetailing.com</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#c0c7cf]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <p class="text-gray-400 text-sm">Horario</p>
+                <p>Lunes - Sábado: 8AM - 8PM</p>
+              </div>
+            </li>
+          </ul>
+          <a href={localizedUrl('es', 'contact')} class="btn-accent w-full mt-8 flex items-center justify-center gap-2">
+            Contáctanos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-[#0a1e38] to-[#0f2a4a] text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">¿Listo para Experimentar la Diferencia?</h2>
+      <p class="text-xl text-gray-300 mb-8">
+        Llámanos hoy para agendar tu cita de detallado de auto a domicilio. Servicio el mismo día disponible en toda Fort Lauderdale.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+17542152272" class="btn-accent text-lg flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Llama al 754-215-2272
+        </a>
+        <a href={localizedUrl('es', 'contact')} class="bg-white text-[#0f2a4a] px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+          Solicita una Cotización
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

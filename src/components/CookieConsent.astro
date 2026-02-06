@@ -1,6 +1,15 @@
 ---
 // Cookie Consent Banner - CCPA/CPRA Compliant
 // Allows users to accept, customize, or reject non-essential cookies
+import { getTranslations, type Locale } from '../i18n/utils';
+
+interface Props {
+  locale?: string;
+}
+
+const { locale: localeProp } = Astro.props;
+const locale = (localeProp ?? Astro.currentLocale ?? 'en') as Locale;
+const t = getTranslations(locale);
 ---
 
 <div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-[#0f2a4a] text-white p-4 shadow-lg z-50 hidden">
@@ -8,20 +17,19 @@
     <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
       <div class="flex-1">
         <p class="text-sm text-gray-200">
-          We use cookies to improve your experience and analyze site traffic. You can choose to accept all cookies,
-          customize your preferences, or reject non-essential cookies.
-          <a href="#" id="cookie-learn-more" class="text-[#c0c7cf] hover:underline">Learn more</a>
+          {t.cookieConsent.bannerText}
+          <a href="#" id="cookie-learn-more" class="text-[#c0c7cf] hover:underline">{t.cookieConsent.learnMore}</a>
         </p>
       </div>
       <div class="flex flex-wrap gap-2">
         <button id="cookie-reject" class="px-4 py-2 text-sm border border-gray-400 text-gray-200 rounded hover:bg-gray-700 transition-colors">
-          Reject All
+          {t.cookieConsent.rejectAll}
         </button>
         <button id="cookie-customize" class="px-4 py-2 text-sm border border-[#c0c7cf] text-[#c0c7cf] rounded hover:bg-[#c0c7cf] hover:text-white transition-colors">
-          Customize
+          {t.cookieConsent.customize}
         </button>
         <button id="cookie-accept" class="px-4 py-2 text-sm bg-[#c0c7cf] text-white rounded hover:bg-[#adb5bd] transition-colors">
-          Accept All
+          {t.cookieConsent.acceptAll}
         </button>
       </div>
     </div>
@@ -33,7 +41,7 @@
   <div class="bg-white rounded-lg max-w-lg w-full max-h-[90vh] overflow-y-auto">
     <div class="p-6">
       <div class="flex justify-between items-center mb-4">
-        <h2 class="text-xl font-bold text-gray-900">Cookie Preferences</h2>
+        <h2 class="text-xl font-bold text-gray-900">{t.cookieConsent.preferencesTitle}</h2>
         <button id="cookie-modal-close" class="text-gray-400 hover:text-gray-600">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -42,17 +50,17 @@
       </div>
 
       <p class="text-gray-600 text-sm mb-6">
-        Choose which cookies you want to allow. Essential cookies are required for the website to function and cannot be disabled.
+        {t.cookieConsent.preferencesDescription}
       </p>
 
       <!-- Essential Cookies -->
       <div class="border-b border-gray-200 pb-4 mb-4">
         <div class="flex justify-between items-center">
           <div>
-            <h3 class="font-semibold text-gray-900">Essential Cookies</h3>
-            <p class="text-sm text-gray-500">Required for the website to function properly</p>
+            <h3 class="font-semibold text-gray-900">{t.cookieConsent.essentialCookies}</h3>
+            <p class="text-sm text-gray-500">{t.cookieConsent.essentialDescription}</p>
           </div>
-          <span class="text-sm text-gray-400">Always Active</span>
+          <span class="text-sm text-gray-400">{t.cookieConsent.alwaysActive}</span>
         </div>
       </div>
 
@@ -60,8 +68,8 @@
       <div class="border-b border-gray-200 pb-4 mb-4">
         <div class="flex justify-between items-center">
           <div>
-            <h3 class="font-semibold text-gray-900">Analytics Cookies</h3>
-            <p class="text-sm text-gray-500">Help us understand how visitors interact with our website</p>
+            <h3 class="font-semibold text-gray-900">{t.cookieConsent.analyticsCookies}</h3>
+            <p class="text-sm text-gray-500">{t.cookieConsent.analyticsDescription}</p>
           </div>
           <label class="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" id="cookie-analytics" class="sr-only peer">
@@ -74,8 +82,8 @@
       <div class="pb-4 mb-6">
         <div class="flex justify-between items-center">
           <div>
-            <h3 class="font-semibold text-gray-900">Marketing Cookies</h3>
-            <p class="text-sm text-gray-500">Used to deliver personalized advertisements</p>
+            <h3 class="font-semibold text-gray-900">{t.cookieConsent.marketingCookies}</h3>
+            <p class="text-sm text-gray-500">{t.cookieConsent.marketingDescription}</p>
           </div>
           <label class="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" id="cookie-marketing" class="sr-only peer">
@@ -86,7 +94,7 @@
 
       <div class="flex gap-3">
         <button id="cookie-save-preferences" class="flex-1 px-4 py-2 bg-[#c0c7cf] text-white rounded hover:bg-[#adb5bd] transition-colors">
-          Save Preferences
+          {t.cookieConsent.savePreferences}
         </button>
       </div>
     </div>
@@ -153,10 +161,7 @@
   }
 
   function loadAnalytics() {
-    // Only load if not already loaded
     if (window.gtag) return;
-
-    // Dispatch event for analytics to load
     window.dispatchEvent(new CustomEvent('cookieConsentGranted', {
       detail: { analytics: true }
     }));
@@ -179,15 +184,11 @@
     }
   }
 
-  // Initialize on page load
   document.addEventListener('DOMContentLoaded', () => {
     const prefs = getCookiePreferences();
-
-    // Check for Global Privacy Control signal
     const gpcEnabled = navigator.globalPrivacyControl === true;
 
     if (gpcEnabled && !prefs) {
-      // Honor GPC signal - reject non-essential cookies
       handleConsent(false, false);
       return;
     }
@@ -198,7 +199,6 @@
       loadAnalytics();
     }
 
-    // Banner buttons
     document.getElementById('cookie-accept')?.addEventListener('click', () => {
       handleConsent(true, true);
     });
@@ -218,7 +218,6 @@
       showModal();
     });
 
-    // Modal buttons
     document.getElementById('cookie-modal-close')?.addEventListener('click', () => {
       hideModal();
       const prefs = getCookiePreferences();
@@ -235,7 +234,6 @@
       );
     });
 
-    // Close modal on backdrop click
     document.getElementById('cookie-modal')?.addEventListener('click', (e) => {
       if (e.target === e.currentTarget) {
         hideModal();
@@ -245,12 +243,10 @@
     });
   });
 
-  // Expose function to open preferences (for "Do Not Sell" link)
   (window as any).openCookiePreferences = () => {
     hideBanner();
     showModal();
 
-    // Set checkboxes to current state
     const prefs = getCookiePreferences();
     const analyticsCheckbox = document.getElementById('cookie-analytics') as HTMLInputElement;
     const marketingCheckbox = document.getElementById('cookie-marketing') as HTMLInputElement;
@@ -259,7 +255,6 @@
     if (marketingCheckbox) marketingCheckbox.checked = prefs?.marketing || false;
   };
 
-  // TypeScript declarations
   declare global {
     interface Navigator {
       globalPrivacyControl?: boolean;

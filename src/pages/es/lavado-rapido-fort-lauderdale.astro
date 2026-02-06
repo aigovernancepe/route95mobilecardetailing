@@ -1,0 +1,135 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Lavado Rapido Fort Lauderdale | Paquete de Detallado | Route95";
+const description = "Lavado Rapido movil en Fort Lauderdale. Lavado a mano, llantas y rines, limpieza de ventanas, limpieza interior y aspirado. Desde $50. Llamenos al 754-215-2272";
+
+const parentCategory = {
+  href: url('car-detailing-services-fort-lauderdale'),
+  title: "Servicios de Detallado"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Lavado Rapido Fort Lauderdale"
+  intro="Un refrescamiento rapido exterior e interior para mantener su auto impecable entre detallados completos. Vamos a su ubicacion con todo lo necesario."
+  currentPage="/es/lavado-rapido-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          El Lavado Rapido es nuestro paquete de nivel basico disenado para conductores de Fort Lauderdale que desean mantener un vehiculo limpio sin el compromiso de tiempo de un detallado completo. Cubre lo esencial: un lavado a mano completo, limpieza de llantas y rines, limpieza de ventanas por dentro y por fuera, limpieza de superficies interiores y un aspirado completo.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Perfecto para mantenimiento semanal o quincenal, el Lavado Rapido mantiene su auto presentable y protegido del sol del sur de Florida, el aire salado y la suciedad diaria. Usamos productos premium Chemical Guys y el metodo de dos cubetas para garantizar un acabado sin rayaduras cada vez.
+        </p>
+        <p class="text-gray-600">
+          Servimos todo Fort Lauderdale incluyendo Las Olas, Nurmi Isles, Seven Isles, Hollywood y Pompano Beach. Citas el mismo dia frecuentemente disponibles.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta un Lavado Rapido?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Los precios del Lavado Rapido comienzan en $50 para sedanes, $65 para SUVs y crossovers, y $80 para camionetas y vehiculos grandes.</strong>
+        </p>
+        <p class="text-gray-600">
+          El precio varia segun el tamano del vehiculo debido al area de superficie adicional y el tiempo requerido. Proporcionamos precios exactos basados en su vehiculo especifico cuando nos llame o envie un mensaje.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Que Incluye el Lavado Rapido?</h2>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li><strong>Lavado a Mano</strong> — Lavado exterior completo usando el metodo de dos cubetas y jabon de pH balanceado</li>
+          <li><strong>Llantas y Rines</strong> — Polvo de frenos y suciedad del camino removidos de rines y llantas</li>
+          <li><strong>Limpieza de Ventanas</strong> — Vidrios interiores y exteriores limpiados sin rayas</li>
+          <li><strong>Limpieza Interior</strong> — Tablero, consola y superficies limpiadas</li>
+          <li><strong>Aspirado</strong> — Asientos, alfombras y tapetes aspirados a fondo</li>
+        </ul>
+        <p class="text-gray-600">
+          Necesita mas? Siempre puede agregar servicios individuales como acondicionador de llantas, eliminacion de pelo de mascota o limpieza de tapetes a cualquier paquete.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Tiempo Toma un Lavado Rapido?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Un Lavado Rapido tipicamente toma de 30 a 45 minutos dependiendo del tamano y condicion del vehiculo.</strong>
+        </p>
+        <p class="text-gray-600">
+          Como vamos a su ubicacion, puede continuar su dia mientras trabajamos. Muchos de nuestros clientes en Fort Lauderdale nos reservan en su oficina y regresan a un auto recien lavado.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Lavado Rapido</h2>
+        <ProcessSteps steps={[
+          { title: "Pre-Enjuague", description: "Enjuagamos su vehiculo a fondo para remover suciedad suelta, arena y escombros antes de cualquier lavado de contacto." },
+          { title: "Lavado a Mano con Dos Cubetas", description: "Lavado exterior completo con jabon Chemical Guys de pH balanceado usando guantes de microfibra limpios." },
+          { title: "Llantas y Rines", description: "Rines y llantas se limpian con cepillos dedicados y limpiadores seguros para rines." },
+          { title: "Ventanas e Interior", description: "Todos los vidrios limpiados por dentro y por fuera. Superficies interiores limpiadas y aspiradas." },
+          { title: "Secado e Inspeccion", description: "Secado a mano con toallas de microfibra limpias. Inspeccion final para asegurar que cada superficie este impecable." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Precios del Lavado Rapido</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">Sedan / Hatchback: <strong>$50</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">Crossover / SUV: <strong>$65</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">Camioneta / Grande: <strong>$80</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">30-45 minutos</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Su Lavado Rapido</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas el mismo dia disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Otros Paquetes</h3>
+          <ul class="space-y-2">
+            <li><a href={url('fresh-start-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Nuevo Comienzo</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+            <li><a href={url('premium-refresh-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Renovacion Premium</a></li>
+            <li><a href={url('car-detailing-services-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Ver Todos los Paquetes</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

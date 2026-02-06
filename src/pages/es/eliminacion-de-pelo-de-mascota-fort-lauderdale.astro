@@ -1,0 +1,182 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Eliminación de Pelo de Mascota Fort Lauderdale | Route95";
+const description = "Eliminación profesional de pelo de mascota en Fort Lauderdale. Servicio móvil - ¡vamos a usted! Elimina completamente el pelo de perro y gato incrustado. Citas el mismo día. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('upholstery-cleaning-fort-lauderdale'),
+  title: "Limpieza de Tapicería"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Eliminación de Pelo de Mascota Fort Lauderdale"
+  intro="La eliminación profesional de pelo de mascota extrae el pelo incrustado de perro y gato de los asientos, alfombras y áreas de difícil acceso de su auto."
+  currentPage="/es/eliminacion-de-pelo-de-mascota-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          El pelo de mascota se introduce profundamente en las fibras de la tela y se incrusta en las hendiduras donde las aspiradoras no pueden llegar. La limpieza regular puede quitar el pelo suelto de la superficie, pero los pelos incrustados quedan atrás. Cada vez que se sienta, más pelo sale—se siente como si nunca terminara.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Llevamos nuestro servicio de eliminación de pelo de mascota directamente a su hogar u oficina en cualquier lugar de Fort Lauderdale. Ya sea que viva cerca de Snyder Park o por Coral Springs, vamos a usted con herramientas especializadas diseñadas específicamente para la extracción de pelo de mascota.
+        </p>
+        <p class="text-gray-600">
+          Aproximadamente el 40% de nuestros clientes en Fort Lauderdale tienen mascotas. La eliminación de pelo de perro es uno de nuestros servicios adicionales más solicitados, especialmente de dueños que llevan a sus perros a la playa o parques para perros.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta la Eliminación de Pelo de Mascota en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La eliminación de pelo de mascota en Fort Lauderdale cuesta de $50 a $100 dependiendo de la cantidad de pelo con la que estemos lidiando.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Un auto con pelo de mascota ligero de viajes ocasionales está en el extremo inferior. Los vehículos usados regularmente para transportar mascotas—especialmente razas de pelo largo—necesitan más tiempo y esfuerzo. Si su perro viaja en el auto diariamente, espere estar más cerca del extremo superior.
+        </p>
+        <p class="text-gray-600">
+          Podemos combinar la eliminación de pelo de mascota con otros servicios como aspiración o tratamiento de olores para mayor valor.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Tiempo Toma la Eliminación de Pelo de Mascota?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La eliminación de pelo de mascota toma de 30 a 45 minutos para la mayoría de los vehículos, dependiendo del volumen de pelo y qué tan profundamente esté incrustado.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          No apuramos este servicio. La eliminación de pelo de mascota requiere paciencia y la técnica correcta. Ir demasiado rápido significa dejar pelo atrás. Trabajamos metódicamente a través de asientos, alfombras, paneles de puertas y todas las hendiduras donde se acumula el pelo.
+        </p>
+        <p class="text-gray-600">
+          Su auto está listo para conducir inmediatamente después de terminar.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Por Qué el Pelo de Mascota es Tan Difícil de Eliminar?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El pelo de mascota tiene una estructura con púas que se agarra a las fibras de la tela. La electricidad estática lo hace adherirse a las superficies. Las aspiradoras regulares no tienen la succión o accesorios para extraer el pelo incrustado.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          El estilo de vida amigable con perros de Florida significa muchas mascotas en los autos. Tenemos clima de parque todo el año, playas que permiten perros y cafés al aire libre que dan la bienvenida a las mascotas. Todos esos viajes significan acumulación de pelo.
+        </p>
+        <p class="text-gray-600 mb-4">El pelo de mascota causa varios problemas más allá de solo verse desordenado:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Alergias</h3>
+            <p class="text-gray-600 text-sm">El pelo y la caspa provocan reacciones en pasajeros sensibles.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Olor</h3>
+            <p class="text-gray-600 text-sm">El pelo retiene aceites corporales y olores del exterior que se acumulan con el tiempo.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Contaminación del AC</h3>
+            <p class="text-gray-600 text-sm">El pelo suelto es absorbido por las rejillas y circula por la cabina.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Impacto en la reventa</h3>
+            <p class="text-gray-600 text-sm">El pelo de mascota es una de las primeras cosas que los compradores notan al ver un auto usado.</p>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">Señales de que necesita eliminación profesional de pelo de mascota:</p>
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <li>Pelo visible en los asientos a pesar de aspirar</li>
+          <li>Pelo flotando en el aire cuando se sienta</li>
+          <li>Pasajeros con alergias reaccionan en su auto</li>
+          <li>Pelo atascado en las hendiduras de los asientos y paneles de puertas</li>
+          <li>Está preparando el vehículo para venderlo</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Eliminación de Pelo de Mascota</h2>
+        <ProcessSteps steps={[
+          { title: "Evaluación", description: "Identificamos dónde se ha acumulado el pelo y qué áreas necesitan más atención." },
+          { title: "Trabajo con Cepillo de Goma", description: "Los cepillos de goma especializados crean estática que extrae el pelo incrustado de las fibras de la tela. Esto es más efectivo que la aspiración sola." },
+          { title: "Extracción de Hendiduras", description: "Usamos herramientas de detallado para extraer pelo de las costuras de los asientos, entre los cojines y a lo largo de los bordes de los paneles de las puertas." },
+          { title: "Aspiración de Alta Potencia", description: "Una vez que el pelo está suelto, la extracción con aspiradora comercial lo elimina de todas las superficies." },
+          { title: "Acabado con Rodillo de Pelusa", description: "Las pasadas finales con rodillos de pelusa atrapan cualquier pelo fino restante en las superficies de tela." },
+          { title: "Limpieza de Superficies Duras", description: "Limpiamos el tablero, la consola y los paneles de puertas para eliminar el pelo que se depositó en las superficies duras." }
+        ]} />
+      </section>
+
+      <section class="bg-gray-50 rounded-xl p-6">
+        <h3 class="font-bold text-[#0f2a4a] mb-2">Consejo de Mantenimiento</h3>
+        <p class="text-gray-600">
+          Para dueños de mascotas, recomendamos la eliminación de pelo de mascota cada 1-2 meses dependiendo de qué tan seguido viaje su mascota. El mantenimiento regular es más fácil que lidiar con una acumulación mayor.
+        </p>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rápidos de Eliminación de Pelo de Mascota</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$50-$100 según la severidad</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">30-45 minutos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Herramientas de extracción especializadas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Elimina pelo incrustado</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Reduce alérgenos</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Eliminación de Pelo de Mascota</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas el mismo día disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('odor-removal-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Eliminación de Olores</a></li>
+            <li><a href={url('interior-vacuuming-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Aspirado Interior</a></li>
+            <li><a href={url('seat-shampooing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado de Asientos</a></li>
+            <li><a href={url('fabric-protection-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Protección de Tela</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

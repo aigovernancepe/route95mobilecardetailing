@@ -1,0 +1,149 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Eliminacion de Insectos y Alquitran Fort Lauderdale | Route95";
+const description = "Eliminacion profesional de insectos y alquitran en Fort Lauderdale. Remocion segura sin danar la pintura, restaure el acabado liso. Servicio movil - vamos a usted! Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('car-wash-fort-lauderdale'),
+  title: "Servicios de Lavado"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Eliminacion de Insectos y Alquitran Fort Lauderdale"
+  intro="La eliminacion profesional de insectos y alquitran elimina de manera segura los restos de insectos obstinados y el alquitran del camino de su pintura sin rayar ni danar el acabado."
+  currentPage="/es/eliminacion-de-insectos-y-alquitran-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Conduzca a cualquier lugar del sur de Florida y recolectara insectos. Los lovebugs en primavera y otono cubren su frente con restos acidos. Mosquitos, jejenes y otros insectos dejan proteinas que se adhieren a la pintura. El alquitran del camino de carreteras y estacionamientos recien pavimentados agrega otra capa de contaminacion obstinada.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los lavados de autos regulares no eliminan insectos horneados o alquitran. Restregar con productos o tecnicas incorrectas raya su capa transparente. Muchas personas dejan las salpicaduras de insectos en su pintura, sin darse cuenta de que los compuestos acidos estan grabando lentamente el acabado.
+        </p>
+        <p class="text-gray-600">
+          Usamos Chemical Guys Bug & Tar Heavy Duty Car Wash y removedores especializados que disuelven estos contaminantes sin danar su pintura. Nuestro servicio movil lleva la eliminacion profesional de insectos y alquitran directamente a su ubicacion en Fort Lauderdale.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta la Eliminacion de Insectos y Alquitran en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La eliminacion profesional de insectos y alquitran en Fort Lauderdale cuesta de $40 a $75 dependiendo del nivel de contaminacion.</strong>
+        </p>
+        <p class="text-gray-600">
+          La eliminacion ligera de insectos de un viaje rapido por la autopista esta en el rango inferior. Una capa pesada de lovebugs cubriendo todo el frente, o manchas extensas de alquitran en multiples paneles, requiere mas producto y tiempo. La contaminacion horneada de semanas de descuido cuesta mas.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Tiempo Toma la Eliminacion de Insectos y Alquitran?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La eliminacion de insectos y alquitran toma de 30 a 45 minutos dependiendo de la extension de la contaminacion.</strong>
+        </p>
+        <p class="text-gray-600">
+          El removedor necesita tiempo de permanencia para disolver los contaminantes adheridos. La capa pesada de insectos o insectos viejos y horneados requieren un remojo mas prolongado y pueden necesitar multiples aplicaciones. Nunca nos apresuramos y arriesgamos rayar su pintura.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Por Que Importa la Eliminacion Profesional de Insectos y Alquitran</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Los restos de insectos son acidos y graban la pintura. Lo que parece una mancha superficial puede convertirse en dano permanente en dias bajo el calor de Florida.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Dano causado por insectos y alquitran descuidados:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>El grabado acido de proteinas de insectos dana la capa transparente</li>
+          <li>Manchas permanentes que ningun pulido puede remover</li>
+          <li>El alquitran se adhiere a la pintura y arranca la capa transparente al rasparlo</li>
+          <li>Restregar causa marcas de remolino y rayaduras</li>
+          <li>La pintura contaminada se siente aspera incluso despues de lavarla</li>
+        </ul>
+        <p class="text-gray-600">
+          La temporada de lovebugs en Fort Lauderdale — mayo y septiembre — crea una capa tan gruesa que puede bloquear el flujo de aire del radiador. La eliminacion rapida previene tanto el dano a la pintura como el sobrecalentamiento.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Eliminacion de Insectos y Alquitran</h2>
+        <ProcessSteps steps={[
+          { title: "Pre-Enjuague", description: "Enjuagamos el vehiculo para remover escombros sueltos y ablandar los residuos de insectos secos antes de aplicar quimicos." },
+          { title: "Aplicacion de Removedor de Insectos", description: "Rociamos removedor de insectos Chemical Guys en las areas afectadas y dejamos que actue, disolviendo los lazos de proteina que mantienen los restos de insectos en la pintura." },
+          { title: "Tratamiento de Manchas de Alquitran", description: "Las manchas de alquitran reciben tratamiento especifico con removedor de alquitran que descompone los lazos de petroleo sin danar la pintura ni la capa transparente." },
+          { title: "Agitacion Segura", description: "Usando guantes suaves de microfibra, trabajamos suavemente los residuos restantes sin rayar. Sin restregado agresivo ni almohadillas abrasivas." },
+          { title: "Lavado Final e Inspeccion", description: "Lavamos todo el vehiculo para remover todos los residuos quimicos, luego inspeccionamos para detectar cualquier contaminacion restante que necesite retratamiento." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rapidos de Eliminacion de Insectos y Alquitran</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$40-$75 por tratamiento</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">30-45 minutos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Seguro para toda pintura</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Sin rayones ni marcas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Previene dano a la pintura</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Eliminacion de Insectos y Alquitran</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas el mismo dia disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('clay-bar-treatment-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Tratamiento Barra de Arcilla</a></li>
+            <li><a href={url('hand-wash-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado a Mano</a></li>
+            <li><a href={url('car-waxing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Encerado de Autos</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

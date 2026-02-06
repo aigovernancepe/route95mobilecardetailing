@@ -1,0 +1,137 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Nuevo Comienzo Fort Lauderdale | Paquete de Detallado | Route95";
+const description = "Detallado Nuevo Comienzo movil en Fort Lauderdale. Lavado a mano, acondicionador de llantas, limpieza interior completa, tablero y consola. Desde $80. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('car-detailing-services-fort-lauderdale'),
+  title: "Servicios de Detallado"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Nuevo Comienzo Fort Lauderdale"
+  intro="Un paso mas alla del Lavado Rapido — acondicionador de llantas, limpieza interior completa y atencion dedicada a su tablero y consola central. El paquete intermedio perfecto."
+  currentPage="/es/nuevo-comienzo-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          El paquete Nuevo Comienzo esta disenado para conductores de Fort Lauderdale que desean mas que un lavado basico pero no necesitan una limpieza profunda completa. Se basa en el Lavado Rapido agregando acondicionador de llantas para ese aspecto negro de sala de exhibicion, mas limpieza dedicada de su tablero y consola central — las areas que acumulan mas polvo y huellas dactilares.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Este es el paquete que la mayoria de nuestros clientes regulares eligen para su programa de mantenimiento quincenal o mensual. Mantiene su vehiculo luciendo impecable por dentro y por fuera, con suficiente atencion a los detalles que mas importan — como llantas acondicionadas y un area de cabina limpia.
+        </p>
+        <p class="text-gray-600">
+          Llevamos todo a su ubicacion en Fort Lauderdale, Hollywood, Pompano Beach y en todo el Condado de Broward. Todos productos premium Chemical Guys, todo equipo profesional.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta el Nuevo Comienzo?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Los precios del Nuevo Comienzo son $80 para sedanes, $95 para SUVs y crossovers, y $110 para camionetas y vehiculos grandes.</strong>
+        </p>
+        <p class="text-gray-600">
+          Esto representa un excelente valor sobre el Lavado Rapido — por solo $30 mas, obtiene acondicionador de llantas y limpieza dedicada de superficies interiores que hacen una diferencia notable en la apariencia general.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Que Incluye el Nuevo Comienzo?</h2>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li><strong>Lavado a Mano</strong> — Lavado exterior completo usando el metodo de dos cubetas y jabon de pH balanceado</li>
+          <li><strong>Llantas y Rines</strong> — Polvo de frenos y suciedad del camino removidos de rines y llantas</li>
+          <li><strong>Acondicionador de Llantas</strong> — Acondicionador a base de agua aplicado para un acabado negro profundo sin salpicaduras</li>
+          <li><strong>Limpieza de Ventanas</strong> — Vidrios interiores y exteriores limpiados sin rayas</li>
+          <li><strong>Tablero</strong> — Polvo, suciedad y huellas dactilares removidas; superficie acondicionada y protegida</li>
+          <li><strong>Consola Central</strong> — Portavasos, areas de almacenamiento y controles limpiados a fondo</li>
+          <li><strong>Aspirado</strong> — Asientos, alfombras y tapetes aspirados a fondo</li>
+        </ul>
+        <p class="text-gray-600">
+          Desea aun mas cobertura? Agregue servicios como eliminacion de pelo de mascota, limpieza de tapetes o restaurador de plasticos exteriores para personalizar su paquete.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Tiempo Toma el Nuevo Comienzo?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El paquete Nuevo Comienzo toma aproximadamente de 45 minutos a 1 hora dependiendo del tamano y condicion del vehiculo.</strong>
+        </p>
+        <p class="text-gray-600">
+          El acondicionador de llantas y el trabajo adicional en superficies interiores agregan aproximadamente 15 minutos sobre un Lavado Rapido. Muchos clientes nos programan en su oficina o casa y apenas notan que estamos ahi.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Nuevo Comienzo</h2>
+        <ProcessSteps steps={[
+          { title: "Pre-Enjuague y Lavado a Mano", description: "Lavado exterior completo con jabon de pH balanceado usando guantes de microfibra limpios y metodo de dos cubetas." },
+          { title: "Llantas, Rines y Acondicionador", description: "Rines limpiados, llantas restregadas, luego acondicionadas con producto a base de agua para acabado negro profundo." },
+          { title: "Ventanas", description: "Todos los vidrios limpiados por dentro y por fuera para un acabado sin rayas." },
+          { title: "Tablero y Consola", description: "Superficies interiores limpiadas, desempolvadas y acondicionadas. Consola y portavasos limpiados a fondo." },
+          { title: "Aspirado e Inspeccion Final", description: "Aspirado interior completo seguido de una inspeccion para asegurar que todo cumpla nuestros estandares." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Precios del Nuevo Comienzo</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">Sedan / Hatchback: <strong>$80</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">Crossover / SUV: <strong>$95</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">Camioneta / Grande: <strong>$110</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">45-60 minutos</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Su Nuevo Comienzo</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas el mismo dia disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Otros Paquetes</h3>
+          <ul class="space-y-2">
+            <li><a href={url('quick-wash-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado Rapido</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+            <li><a href={url('premium-refresh-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Renovacion Premium</a></li>
+            <li><a href={url('car-detailing-services-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Ver Todos los Paquetes</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

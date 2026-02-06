@@ -1,0 +1,167 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Lavado de Alfombras Fort Lauderdale | Servicio Móvil | Route95";
+const description = "Lavado profesional de alfombras de auto en Fort Lauderdale. Servicio móvil - ¡vamos a usted! Elimina arena, manchas y olores. Citas el mismo día. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('upholstery-cleaning-fort-lauderdale'),
+  title: "Limpieza de Tapicería"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Lavado de Alfombras Fort Lauderdale"
+  intro="El lavado profesional de alfombras elimina la suciedad incrustada, arena y manchas del piso de su auto mediante limpieza de extracción profunda."
+  currentPage="/es/lavado-de-alfombras-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Las alfombras de su auto atrapan todo lo que entra con sus zapatos. En Fort Lauderdale, eso significa arena de playa, lodo de las lluvias de la tarde y tierra de los estacionamientos. Con el tiempo, estos residuos se introducen profundamente en las fibras de la alfombra donde la aspiración no puede alcanzar.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Llevamos nuestro servicio de lavado de alfombras directamente a su hogar u oficina en cualquier lugar de Fort Lauderdale. Desde las casas frente al agua en Nurmi Isles hasta condominios cerca del centro, vamos a usted con todo nuestro equipo y agua. No necesita dejar su auto en ningún lado.
+        </p>
+        <p class="text-gray-600">
+          La limpieza profesional de alfombras hace más que mejorar la apariencia de sus pisos. Elimina la humedad atrapada y la materia orgánica que puede provocar el crecimiento de moho en el clima húmedo de Florida.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta el Lavado de Alfombras de Auto en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El lavado de alfombras de auto en Fort Lauderdale cuesta de $40 a $80 dependiendo del tamaño de su vehículo y la condición de la alfombra.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los autos compactos y sedanes con suciedad ligera están en el extremo inferior. SUVs, camionetas y minivans tienen más espacio de piso y cuestan más limpiar. Las manchas pesadas de lodo, derrames o años de descuido pueden necesitar múltiples pasadas y pre-tratamiento, lo cual suma al precio.
+        </p>
+        <p class="text-gray-600">
+          Siempre le damos un presupuesto exacto antes de comenzar. Solo describa con qué está lidiando y le diremos qué esperar.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Tiempo Toma el Lavado de Alfombras?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El lavado de alfombras toma de 30 a 45 minutos para la mayoría de los vehículos, más 2-4 horas de tiempo de secado después.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Retiramos los tapetes y los limpiamos por separado. La alfombra principal se lava por secciones para no sobresaturar ningún área. Dedicamos tiempo extra a la extracción porque sacar la humedad es la clave para prevenir el moho en la humedad de Florida.
+        </p>
+        <p class="text-gray-600">
+          Dejar las ventanas ligeramente abiertas después de terminar ayuda a que las alfombras se sequen más rápido, especialmente en días húmedos.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Por Qué Sus Alfombras del Auto Necesitan Lavado?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Las alfombras del auto atrapan arena, suciedad y humedad que la aspiración sola no puede eliminar. El lavado extrae los contaminantes de lo profundo de las fibras.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          La arena de playa es el problema número uno de alfombras que vemos en vehículos de Fort Lauderdale. Las partículas de arena son afiladas y se introducen profundamente en las fibras de la alfombra. Cada vez que pisa la alfombra, esas partículas rozan contra las fibras y causan desgaste. La extracción profesional saca lo que la aspiración deja atrás.
+        </p>
+        <p class="text-gray-600 mb-4">
+          La humedad de Florida hace que el cuidado de alfombras sea aún más importante. La humedad de zapatos mojados, bebidas derramadas o lluvia que entra crea condiciones perfectas para moho y hongos. Ese olor a humedad que muchos autos desarrollan proviene de la materia orgánica descomponiéndose en alfombras húmedas.
+        </p>
+        <p class="text-gray-600 mb-4">Señales de que sus alfombras necesitan lavado:</p>
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <li>Manchas visibles de bebidas, comida o lodo</li>
+          <li>Sensación arenosa incluso después de aspirar</li>
+          <li>Olor a humedad o agrio en su auto</li>
+          <li>Decoloración o manchas oscuras</li>
+          <li>Las alergias se activan al conducir</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Lavado de Alfombras</h2>
+        <ProcessSteps steps={[
+          { title: "Retiro de Tapetes", description: "Sacamos todos los tapetes y los limpiamos por separado para poder alcanzar la alfombra debajo." },
+          { title: "Aspiración Profunda", description: "La extracción con aspiradora de alta potencia elimina la arena y residuos sueltos antes de agregar cualquier líquido." },
+          { title: "Pre-Tratamiento", description: "Las manchas se tratan con Chemical Guys Lightning Fast Stain Extractor. Esta fórmula enzimática descompone manchas de café, comida y accidentes de mascotas." },
+          { title: "Lavado", description: "Aplicamos Chemical Guys Foaming Citrus Fabric Clean y agitamos con cepillos rígidos para levantar la suciedad incrustada de las fibras de la alfombra." },
+          { title: "Extracción con Agua Caliente", description: "Nuestro extractor inyecta agua caliente e inmediatamente la aspira, sacando la suciedad disuelta de lo profundo de la alfombra." },
+          { title: "Extracción Máxima", description: "Hacemos múltiples pasadas para eliminar la mayor cantidad de humedad posible. Esto previene el moho y acelera el secado." }
+        ]} />
+      </section>
+
+      <section class="bg-[#c0c7cf] rounded-xl p-6 text-[#0f2a4a]">
+        <h3 class="font-bold mb-2">Proteja Sus Alfombras</h3>
+        <p class="text-sm mb-4">
+          ¿Quiere proteger sus alfombras después de la limpieza? Pregunte sobre el recubrimiento cerámico para tela Hydro Thread. Crea una barrera que hace que los derrames se formen en gotas en lugar de absorberse.
+        </p>
+        <a href={url('fabric-protection-fort-lauderdale')} class="font-semibold hover:underline">Conozca la Protección de Tela →</a>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rápidos del Lavado de Alfombras</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$40-$80 según el tamaño</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">30-45 min + 2-4 hrs secado</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Extracción con agua caliente</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Elimina arena y manchas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Previene crecimiento de moho</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Lavado de Alfombras</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas el mismo día disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('seat-shampooing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado de Asientos</a></li>
+            <li><a href={url('odor-removal-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Eliminación de Olores</a></li>
+            <li><a href={url('fabric-protection-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Protección de Tela</a></li>
+            <li><a href={url('interior-vacuuming-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Aspirado Interior</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

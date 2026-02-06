@@ -1,0 +1,150 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Limpieza de Rines Fort Lauderdale | Servicio Movil | Route95";
+const description = "Limpieza profesional de rines en Fort Lauderdale. Eliminacion de polvo de frenos, restauracion de rines, acondicionamiento de llantas. Servicio movil. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('car-wash-fort-lauderdale'),
+  title: "Servicios de Lavado"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Limpieza de Rines Fort Lauderdale"
+  intro="La limpieza profesional de rines elimina el polvo de frenos, la mugre del camino y el alquitran de sus ruedas y llantas, restaurando ese brillo de sala de exhibicion."
+  currentPage="/es/limpieza-de-rines-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Sus rines reciben mas abuso que cualquier otra parte del exterior de su auto. El polvo de frenos, una mezcla corrosiva de particulas metalicas y adhesivo, cubre sus rines cada vez que frena. La mugre del camino, el alquitran y el rocio de sal se suman a la acumulacion.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los lavados automaticos apenas tocan sus rines. Los lavados rapidos con spray dejan el polvo de frenos incrustado en el acabado. Con el tiempo, esta contaminacion se graba en las superficies de los rines y se vuelve permanente si no se elimina adecuadamente.
+        </p>
+        <p class="text-gray-600">
+          Llevamos la limpieza profesional de rines directamente a su ubicacion en Fort Lauderdale, usando productos seguros para rines que disuelven el polvo de frenos sin danar el acabado de sus rines.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta la Limpieza de Rines en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La limpieza profesional de rines en Fort Lauderdale cuesta de $40 a $80 por las cuatro ruedas dependiendo del tamano y condicion.</strong>
+        </p>
+        <p class="text-gray-600">
+          Los rines estandar con contaminacion leve estan en el rango mas bajo. Los rines grandes con acumulacion pesada de polvo de frenos o disenos de rayos intrincados toman mas tiempo y producto.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Tiempo Toma la Limpieza de Rines?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La limpieza de rines toma de 30 a 45 minutos por las cuatro ruedas, incluyendo el acondicionamiento de llantas.</strong>
+        </p>
+        <p class="text-gray-600">
+          Cada rueda recibe atencion individual. Limpiamos la cara, los rayos, el barril interior (donde es visible), las tuercas y las paredes laterales de las llantas. El resultado son rines que lucen como nuevos.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Por Que Importa la Limpieza Profesional de Rines</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El polvo de frenos es corrosivo. Si se deja en sus rines, se adhiere al acabado y eventualmente causa picaduras y danos permanentes.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Problemas causados por rines descuidados:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>El polvo de frenos se graba en la capa transparente y la pintura</li>
+          <li>La corrosion comienza bajo la contaminacion incrustada</li>
+          <li>Los acabados de cromo y pulidos desarrollan picaduras</li>
+          <li>Los rines lucen sucios incluso despues del lavado</li>
+          <li>El valor de reventa disminuye</li>
+        </ul>
+        <p class="text-gray-600">
+          En Fort Lauderdale, la sal del aire costero acelera la corrosion de los rines. La limpieza regular previene danos permanentes.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Limpieza de Rines</h2>
+        <ProcessSteps steps={[
+          { title: "Enjuague Inicial", description: "Enjuagamos la suciedad suelta y los residuos de las ruedas y llantas antes de aplicar cualquier quimico." },
+          { title: "Aplicacion de Limpiador de Rines", description: "Rociamos limpiador de rines pH balanceado que disuelve el polvo de frenos sin danar los acabados de los rines." },
+          { title: "Agitacion", description: "Usamos cepillos para rines para fregar cada superficie: cara, rayos, barril interior y area de tuercas." },
+          { title: "Limpieza de Llantas", description: "Las paredes laterales de las llantas se limpian con desengrasante para eliminar el oscurecimiento y la acumulacion de acondicionador viejo." },
+          { title: "Enjuague y Secado", description: "Un enjuague completo elimina todo el limpiador y la contaminacion desprendida. Secamos los rines para prevenir manchas de agua." },
+          { title: "Acondicionamiento de Llantas", description: "Aplicamos acondicionador de llantas para un acabado rico y oscuro. Usamos formula anti-salpicaduras para que se quede en sus llantas, no en sus guardabarros." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rapidos de Limpieza de Rines</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$40-$80 por las cuatro</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">30-45 minutos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Eliminacion de polvo de frenos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Acondicionamiento de llantas incluido</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Seguro para todos los acabados</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Limpieza de Rines</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas para el mismo dia disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('tire-dressing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Acondicionador de Llantas</a></li>
+            <li><a href={url('hand-wash-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado a Mano</a></li>
+            <li><a href={url('chrome-polishing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Pulido de Cromo</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

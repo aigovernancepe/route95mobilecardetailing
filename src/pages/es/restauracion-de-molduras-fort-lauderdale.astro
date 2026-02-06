@@ -1,0 +1,150 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Restauracion de Molduras Fort Lauderdale | Route95";
+const description = "Restauracion profesional de molduras en Fort Lauderdale. Servicio movil. Restaure las molduras de plastico negro desvanecidas a negro profundo. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('car-wash-fort-lauderdale'),
+  title: "Servicios de Lavado"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Restauracion de Molduras Fort Lauderdale"
+  intro="Las molduras de plastico negro se desvanecen a gris bajo el sol de Florida. Restauramos las molduras desvanecidas a negro profundo y aplicamos protector para retardar el futuro dano UV. Hace que un vehiculo antiguo luzca anos mas nuevo."
+  currentPage="/es/restauracion-de-molduras-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Pocas cosas envejecen la apariencia de un vehiculo mas rapido que las molduras exteriores desvanecidas. Esas piezas de plastico negro alrededor de las ventanas, parachoques, guardabarros y espejos lentamente se vuelven gris calcificado bajo la implacable exposicion UV de Florida. Incluso un vehiculo bien mantenido luce descuidado cuando las molduras se han desvanecido.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Route95 lleva la restauracion profesional de molduras directamente a su ubicacion en Fort Lauderdale. Limpiamos, tratamos y protegemos las molduras de plastico exterior para restaurar la apariencia de negro profundo que tenian cuando eran nuevas. La transformacion es impresionante: los vehiculos a menudo lucen cinco anos mas nuevos despues de la restauracion de molduras.
+        </p>
+        <p class="text-gray-600">
+          A diferencia de los productos de solucion rapida que se lavan despues de unos dias, nuestro tratamiento profesional penetra el plastico y proporciona resultados duraderos.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta la Restauracion de Molduras en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La restauracion de molduras en Fort Lauderdale cuesta de $50 a $150 dependiendo de cuantas molduras tenga su vehiculo y que tan desvanecidas esten.</strong>
+        </p>
+        <p class="text-gray-600">
+          Los vehiculos con molduras minimas (solo cubiertas de espejos y marcos de ventanas) estan en el rango mas bajo. Las SUVs y camionetas con extensas molduras de guardabarros, paneles de balancin y molduras de parachoques requieren mas producto y tiempo. Cotizamos segun su vehiculo especifico.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Tiempo Toma la Restauracion de Molduras?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La restauracion de molduras toma de 30 a 90 minutos dependiendo de cuantas molduras tenga su vehiculo.</strong>
+        </p>
+        <p class="text-gray-600">
+          La preparacion adecuada es clave. Limpiamos completamente cada pieza de moldura antes de aplicar el restaurador, asegurando que el producto se adhiera correctamente para resultados duraderos.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Por Que Restaurar Sus Molduras?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Las molduras restauradas hacen que cualquier vehiculo luzca dramaticamente mas nuevo y mejor mantenido, mejorando tanto la apariencia como el valor de reventa.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Beneficios de la restauracion de molduras:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>El vehiculo luce anos mas nuevo al instante</li>
+          <li>Apariencia de negro profundo que dura meses</li>
+          <li>La proteccion UV retarda el desvanecimiento futuro</li>
+          <li>Fraccion del costo de reemplazo de molduras</li>
+          <li>Mejora el valor de reventa y la percepcion del comprador</li>
+          <li>Complementa la correccion de pintura y el trabajo de detallado</li>
+        </ul>
+        <p class="text-gray-600">
+          Reemplazar las molduras desvanecidas puede costar cientos o miles de dolares dependiendo de su vehiculo. La restauracion logra el mismo resultado visual por una fraccion del precio.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Restauracion de Molduras</h2>
+        <ProcessSteps steps={[
+          { title: "Limpieza Profunda", description: "Limpiamos completamente todas las piezas de moldura para eliminar suciedad, pelicula del camino y acondicionador viejo que impedirian la adhesion adecuada." },
+          { title: "Evaluacion", description: "Identificamos el nivel de desvanecimiento y cualquier area danada que pueda necesitar atencion extra o multiples aplicaciones." },
+          { title: "Aplicacion de Restaurador", description: "Aplicamos restaurador profesional de molduras que penetra el plastico para restaurar el color desde adentro, no solo cubrir la superficie." },
+          { title: "Proteccion UV", description: "Aplicamos protector UV que retarda el desvanecimiento futuro y mantiene las molduras luciendo mas oscuras por mas tiempo." },
+          { title: "Inspeccion Final", description: "Revisamos todas las piezas de moldura para una cobertura uniforme y retocamos cualquier punto que necesite tratamiento adicional." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rapidos de Restauracion de Molduras</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$50-$150 segun la extension</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">30-90 minutos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Restaurador de grado profesional</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Proteccion UV incluida</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Dura meses, no dias</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Restauracion de Molduras</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas para el mismo dia disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('car-waxing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Encerado de Autos</a></li>
+            <li><a href={url('chrome-polishing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Pulido de Cromo</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+            <li><a href={url('car-detailing-services-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Ver Todos los Paquetes</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

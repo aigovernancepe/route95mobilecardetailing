@@ -1,0 +1,150 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Encerado de Autos Fort Lauderdale | Servicio Movil | Route95";
+const description = "Servicio profesional de encerado de autos movil en Fort Lauderdale. Proteccion con cera de carnauba contra el sol de Florida. Vamos a usted! Servicio el mismo dia. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('car-wash-fort-lauderdale'),
+  title: "Servicios de Lavado"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Encerado de Autos Fort Lauderdale"
+  intro="El encerado profesional aplica una capa protectora de cera de carnauba que protege su pintura de los intensos rayos UV de Florida y agrega un brillo profundo y duradero."
+  currentPage="/es/encerado-de-autos-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          La pintura de su auto enfrenta un ataque constante en el sur de Florida. La radiacion UV desvanece el color. El aire salado acelera la oxidacion. La mugre del camino y los excrementos de aves corroen las superficies sin proteccion. Una cera de calidad crea una barrera sacrificial que recibe este castigo en lugar de su pintura.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Llevamos nuestro servicio de encerado directamente a su ubicacion en Fort Lauderdale. Ya sea que este en su hogar en Wilton Manors o en el trabajo en el centro, vamos a usted con cera de carnauba profesional de Chemical Guys.
+        </p>
+        <p class="text-gray-600">
+          En nuestra experiencia, los autos en Fort Lauderdale necesitan encerado mas frecuentemente que los vehiculos del norte. Recomendamos cada 2-3 meses para mantener la proteccion contra nuestra exposicion solar extrema.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta el Encerado de Autos en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El encerado profesional de autos en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamano del vehiculo y la condicion de la pintura.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los sedanes y coupes estan en el rango mas bajo. Las SUVs, camionetas y vehiculos mas grandes cuestan mas debido a la superficie adicional. La pintura severamente oxidada puede necesitar tratamiento de barra de arcilla primero, lo cual agrega al precio.
+        </p>
+        <p class="text-gray-600">
+          Aplicamos la cera a mano para obtener los mejores resultados, sin pulidoras orbitales que pueden danar la pintura en manos inexpertas.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Tiempo Toma el Encerado de Autos?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El encerado de autos toma de 1 a 2 horas dependiendo del tamano del vehiculo y si realizamos preparacion de pintura primero.</strong>
+        </p>
+        <p class="text-gray-600">
+          Lavamos el auto primero si es necesario; la cera no se adhiere correctamente a la pintura sucia. Luego aplicamos cera por secciones, dejamos que se opaque y pulimos hasta obtener un brillo brillante. Cada panel recibe atencion para asegurar una cobertura completa y uniforme.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Por Que Su Auto Necesita Encerado?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La cera crea una barrera protectora entre su pintura y el medio ambiente. Sin ella, los rayos UV, el aire salado y los contaminantes atacan directamente su capa transparente.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Beneficios del encerado regular:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>La proteccion UV previene el desvanecimiento y la oxidacion</li>
+          <li>La superficie hidrofobica hace que el agua forme gotas y se deslice</li>
+          <li>Limpieza mas facil: la suciedad no se adhiere tan facilmente</li>
+          <li>Proteccion contra excrementos de aves y savia de arboles</li>
+          <li>Brillo mejorado y profundidad de color</li>
+          <li>Mayor valor de reventa por pintura bien mantenida</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Encerado</h2>
+        <ProcessSteps steps={[
+          { title: "Preparacion de Superficie", description: "Lavamos y secamos su vehiculo completamente. La cera necesita una superficie limpia para adherirse correctamente." },
+          { title: "Barra de Arcilla (si es necesario)", description: "Si su pintura se siente aspera, eliminamos los contaminantes incrustados con tratamiento de barra de arcilla primero." },
+          { title: "Aplicacion de Cera", description: "Aplicamos cera de carnauba Chemical Guys a mano, trabajando una seccion a la vez para una cobertura uniforme." },
+          { title: "Opacado y Pulido", description: "Dejamos que la cera se opaque ligeramente, luego pulimos hasta obtener un brillo profundo usando toallas de microfibra limpias." },
+          { title: "Inspeccion Final", description: "Revisamos cada panel para una cobertura uniforme y retocamos cualquier area que necesite atencion adicional." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rapidos del Encerado</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$75-$150 segun el tamano</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">1-2 horas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Proteccion con cera de carnauba</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Proteccion UV</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Dura 2-3 meses</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve el Encerado</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas para el mismo dia disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('clay-bar-treatment-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Tratamiento Barra de Arcilla</a></li>
+            <li><a href={url('hand-wash-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado a Mano</a></li>
+            <li><a href={url('quick-wash-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado Rapido</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

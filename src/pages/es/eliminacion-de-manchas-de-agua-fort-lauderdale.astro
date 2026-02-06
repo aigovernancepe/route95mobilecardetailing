@@ -1,0 +1,149 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Eliminacion de Manchas de Agua Fort Lauderdale | Route95";
+const description = "Eliminacion profesional de manchas de agua en Fort Lauderdale. Remueva depositos minerales, restaure la claridad, proteja su pintura. Servicio movil. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('car-wash-fort-lauderdale'),
+  title: "Servicios de Lavado"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Eliminacion de Manchas de Agua Fort Lauderdale"
+  intro="La eliminacion profesional de manchas de agua remueve los depositos minerales persistentes del agua dura, aspersores y lluvia que se graban en la pintura y el vidrio, restaurando un acabado impecable."
+  currentPage="/es/eliminacion-de-manchas-de-agua-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          El agua de Fort Lauderdale es notoriamente dura, cargada de calcio, magnesio y otros minerales. Cuando el agua se evapora de la superficie de su auto, estos minerales quedan atras como manchas blancas y calcificadas. El exceso de rociadores, la lluvia e incluso el secado inadecuado despues del lavado dejan depositos minerales que se adhieren a la pintura y el vidrio.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Las manchas de agua frescas se eliminan facilmente. Pero con el calor de Florida, las manchas se hornean en la capa transparente en cuestion de horas. Una vez que los minerales se graban en la superficie, el lavado regular no los elimina. Muchas personas confunden las manchas de agua grabadas con dano permanente en la pintura, pero con las tecnicas adecuadas, pueden eliminarse.
+        </p>
+        <p class="text-gray-600">
+          Usamos el removedor de manchas de agua de Chemical Guys y compuestos especializados para disolver depositos minerales de manera segura sin danar su pintura. Nuestro servicio movil lleva la eliminacion profesional de manchas de agua directamente a su ubicacion en Fort Lauderdale.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta la Eliminacion de Manchas de Agua en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La eliminacion profesional de manchas de agua en Fort Lauderdale cuesta de $75 a $150 dependiendo de la severidad y el area de cobertura.</strong>
+        </p>
+        <p class="text-gray-600">
+          Las manchas leves en unos pocos paneles estan en el rango mas bajo. El grabado mineral severo que cubre todo el vehiculo, o manchas que se han horneado por semanas, requiere tratamiento extenso y pulido. La eliminacion de manchas de agua en vidrio puede ser adicional.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Tiempo Toma la Eliminacion de Manchas de Agua?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La eliminacion de manchas de agua toma de 1 a 2 horas dependiendo de la severidad y cuantos paneles estan afectados.</strong>
+        </p>
+        <p class="text-gray-600">
+          Cada area afectada necesita tratamiento quimico, tiempo de accion y frecuentemente pulido para eliminar completamente el grabado. Los casos severos pueden requerir multiples etapas de tratamiento. Nos tomamos el tiempo necesario para corregir completamente el dano sin atajos.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Por Que Importa la Eliminacion de Manchas de Agua en el Sur de Florida</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El agua dura de Fort Lauderdale y el sol intenso crean condiciones perfectas para el grabado permanente de manchas de agua en cuestion de horas de exposicion.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Causas comunes de manchas de agua en Fort Lauderdale:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>Sistemas de rociadores que salpican autos estacionados, extremadamente comun en comunidades HOA</li>
+          <li>Lluvias vespertinas seguidas de sol intenso</li>
+          <li>Agua dura en lavados caseros y estaciones de autoservicio</li>
+          <li>Agua de piscina salpicando desde piscinas cercanas</li>
+          <li>Condensacion del aire acondicionado goteando sobre la pintura</li>
+        </ul>
+        <p class="text-gray-600">
+          Mientras mas tiempo permanezcan las manchas de agua, mas profundo se graban. Lo que comienza como un deposito superficial se convierte en dano permanente a la capa transparente. El tratamiento temprano ahorra tiempo, dinero y su pintura.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Eliminacion de Manchas de Agua</h2>
+        <ProcessSteps steps={[
+          { title: "Evaluacion", description: "Examinamos las manchas para determinar si son depositos superficiales o grabados en la capa transparente. Esto determina el enfoque de tratamiento." },
+          { title: "Tratamiento Quimico", description: "Aplicamos un removedor especializado de manchas de agua que disuelve los enlaces minerales. La formula acida neutraliza los depositos minerales alcalinos de manera segura." },
+          { title: "Accion y Agitacion", description: "Permitimos que el producto trabaje, luego agitamos suavemente con una toalla de microfibra para levantar los minerales disueltos de la superficie." },
+          { title: "Correccion con Pulido", description: "Para manchas grabadas, usamos un compuesto de pulido para nivelar la capa transparente y eliminar los crateres grabados dejados por los depositos minerales." },
+          { title: "Aplicacion de Proteccion", description: "Aplicamos un sellador o cera para proteger la pintura corregida y facilitar la eliminacion de futuras manchas de agua antes de que se graben." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rapidos de Manchas de Agua</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$75-$150 por tratamiento</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">1-2 horas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Elimina grabado mineral</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Tratamiento de pintura y vidrio</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Proteccion con sellador incluida</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Eliminacion de Manchas</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas para el mismo dia disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('clay-bar-treatment-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Tratamiento Barra de Arcilla</a></li>
+            <li><a href={url('car-waxing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Encerado de Autos</a></li>
+            <li><a href={url('quick-wash-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado Rapido</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

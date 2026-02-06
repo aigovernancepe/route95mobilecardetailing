@@ -1,50 +1,32 @@
 ---
+import { getTranslations, getLocalizedNavLinks, localizedUrl, type Locale } from '../i18n/utils';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
 interface Props {
   currentPage?: string;
+  locale?: string;
 }
 
-const { currentPage = '' } = Astro.props;
+const { currentPage = '', locale: localeProp } = Astro.props;
+const locale = (localeProp ?? Astro.currentLocale ?? 'en') as Locale;
+const t = getTranslations(locale);
+const nav = getLocalizedNavLinks(locale);
 const base = import.meta.env.BASE_URL;
 
 // WhatsApp configuration
 const whatsappNumber = "17542152272";
-const whatsappMessage = "Hi! I'd like to get a quote for mobile car detailing.";
+const whatsappMessage = t.header.whatsappMessage;
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-const carWashServices = [
-  { href: `${base}hand-wash-fort-lauderdale/`, label: 'Hand Wash' },
-  { href: `${base}car-waxing-fort-lauderdale/`, label: 'Car Waxing' },
-  { href: `${base}clay-bar-treatment-fort-lauderdale/`, label: 'Clay Bar Treatment' },
-  { href: `${base}wheel-cleaning-fort-lauderdale/`, label: 'Wheel Cleaning' },
-  { href: `${base}chrome-polishing-fort-lauderdale/`, label: 'Chrome Polishing' },
-  { href: `${base}water-spot-removal-fort-lauderdale/`, label: 'Water Spot Removal' },
-  { href: `${base}trim-restoration-fort-lauderdale/`, label: 'Trim Restoration' },
-];
+const { carWashServices, upholsteryServices, detailingServices, mobileNavLinks } = nav;
 
-const upholsteryServices = [
-  { href: `${base}seat-shampooing-fort-lauderdale/`, label: 'Seat Shampooing' },
-  { href: `${base}carpet-shampooing-fort-lauderdale/`, label: 'Carpet Shampooing' },
-  { href: `${base}leather-cleaning-fort-lauderdale/`, label: 'Leather Cleaning' },
-  { href: `${base}leather-conditioning-fort-lauderdale/`, label: 'Leather Conditioning' },
-  { href: `${base}steam-cleaning-fort-lauderdale/`, label: 'Steam Cleaning' },
-  { href: `${base}odor-removal-fort-lauderdale/`, label: 'Odor Removal' },
-];
-
-const detailingServices = [
-  { href: `${base}quick-wash-fort-lauderdale/`, label: 'Quick Wash' },
-  { href: `${base}fresh-start-fort-lauderdale/`, label: 'Fresh Start' },
-  { href: `${base}complete-clean-fort-lauderdale/`, label: 'Complete Clean' },
-  { href: `${base}premium-refresh-fort-lauderdale/`, label: 'Premium Refresh' },
-];
-
-const mobileNavLinks = [
-  { href: `${base}`, label: 'Home' },
-  { href: `${base}car-wash-fort-lauderdale/`, label: 'Car Wash' },
-  { href: `${base}upholstery-cleaning-fort-lauderdale/`, label: 'Upholstery Cleaning' },
-  { href: `${base}car-detailing-services-fort-lauderdale/`, label: 'Detailing Services' },
-  { href: `${base}about/`, label: 'About' },
-  { href: `${base}contact/`, label: 'Contact' },
-];
+// Localized category URLs
+const homeUrl = localizedUrl(locale, '');
+const carWashUrl = localizedUrl(locale, 'car-wash-fort-lauderdale');
+const upholsteryUrl = localizedUrl(locale, 'upholstery-cleaning-fort-lauderdale');
+const detailingUrl = localizedUrl(locale, 'car-detailing-services-fort-lauderdale');
+const aboutUrl = localizedUrl(locale, 'about');
+const contactUrl = localizedUrl(locale, 'contact');
 ---
 
 <header class="sticky top-0 z-50 bg-white shadow-md">
@@ -52,7 +34,7 @@ const mobileNavLinks = [
   <div class="bg-[#0f2a4a] text-white py-2">
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center text-sm">
       <div class="flex items-center gap-4">
-        <span class="hidden sm:inline">Fort Lauderdale, Hollywood, Pompano Beach</span>
+        <span class="hidden sm:inline">{t.header.topBarLocations}</span>
       </div>
       <div class="flex items-center gap-4">
         <a href="tel:+17542152272" class="flex items-center gap-2 hover:text-[#c0c7cf] transition-colors">
@@ -61,7 +43,7 @@ const mobileNavLinks = [
           </svg>
           <span class="font-semibold">754-215-2272</span>
         </a>
-        <span class="hidden md:inline">Mon-Sat: 8AM-8PM</span>
+        <span class="hidden md:inline">{t.header.topBarHours}</span>
       </div>
     </div>
   </div>
@@ -70,34 +52,34 @@ const mobileNavLinks = [
   <nav class="max-w-7xl mx-auto px-4 py-4">
     <div class="flex justify-between items-center">
       <!-- Logo -->
-      <a href={base} class="flex items-center gap-2">
+      <a href={homeUrl} class="flex items-center gap-2">
         <img src={`${base}logo-transparent.png`} alt="Route95 Mobile Car Detailing" class="h-20 w-auto" />
       </a>
 
       <!-- Desktop Navigation -->
       <div class="hidden lg:flex items-center gap-6">
         <a
-          href={base}
+          href={homeUrl}
           class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium ${currentPage === '/' ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
         >
-          Home
+          {t.header.home}
         </a>
 
         <!-- Car Wash Dropdown -->
         <div class="relative group">
           <a
-            href={`${base}car-wash-fort-lauderdale/`}
-            class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium inline-flex items-center gap-1 ${currentPage.includes('car-wash') ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
+            href={carWashUrl}
+            class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium inline-flex items-center gap-1 ${currentPage.includes('car-wash') || currentPage.includes('lavado-de-autos') ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
           >
-            Car Wash
+            {t.header.carWash}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </a>
           <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
             <div class="py-2">
-              <a href={`${base}car-wash-fort-lauderdale/`} class="block px-4 py-2 text-sm font-semibold text-[#0f2a4a] hover:bg-gray-50 border-b border-gray-100">
-                All Car Wash Services
+              <a href={carWashUrl} class="block px-4 py-2 text-sm font-semibold text-[#0f2a4a] hover:bg-gray-50 border-b border-gray-100">
+                {t.header.allCarWashServices}
               </a>
               {carWashServices.map(service => (
                 <a href={service.href} class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1a3d6b]">
@@ -111,18 +93,18 @@ const mobileNavLinks = [
         <!-- Upholstery Cleaning Dropdown -->
         <div class="relative group">
           <a
-            href={`${base}upholstery-cleaning-fort-lauderdale/`}
-            class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium inline-flex items-center gap-1 ${currentPage.includes('upholstery') ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
+            href={upholsteryUrl}
+            class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium inline-flex items-center gap-1 ${currentPage.includes('upholstery') || currentPage.includes('tapiceria') ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
           >
-            Upholstery Cleaning
+            {t.header.upholsteryCleaning}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </a>
           <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
             <div class="py-2">
-              <a href={`${base}upholstery-cleaning-fort-lauderdale/`} class="block px-4 py-2 text-sm font-semibold text-[#0f2a4a] hover:bg-gray-50 border-b border-gray-100">
-                All Upholstery Services
+              <a href={upholsteryUrl} class="block px-4 py-2 text-sm font-semibold text-[#0f2a4a] hover:bg-gray-50 border-b border-gray-100">
+                {t.header.allUpholsteryServices}
               </a>
               {upholsteryServices.map(service => (
                 <a href={service.href} class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1a3d6b]">
@@ -136,18 +118,18 @@ const mobileNavLinks = [
         <!-- Detailing Services Dropdown -->
         <div class="relative group">
           <a
-            href={`${base}car-detailing-services-fort-lauderdale/`}
-            class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium inline-flex items-center gap-1 ${currentPage.includes('detailing-services') ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
+            href={detailingUrl}
+            class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium inline-flex items-center gap-1 ${currentPage.includes('detailing-services') || currentPage.includes('servicios-de-detallado') ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
           >
-            Detailing Services
+            {t.header.detailingServices}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </a>
           <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
             <div class="py-2">
-              <a href={`${base}car-detailing-services-fort-lauderdale/`} class="block px-4 py-2 text-sm font-semibold text-[#0f2a4a] hover:bg-gray-50 border-b border-gray-100">
-                All Detailing Services
+              <a href={detailingUrl} class="block px-4 py-2 text-sm font-semibold text-[#0f2a4a] hover:bg-gray-50 border-b border-gray-100">
+                {t.header.allDetailingServices}
               </a>
               {detailingServices.map(service => (
                 <a href={service.href} class={`block px-4 py-2 text-sm hover:bg-gray-50 hover:text-[#1a3d6b] ${service.highlight ? 'text-[#0f2a4a] font-semibold bg-blue-50' : 'text-gray-700'}`}>
@@ -159,33 +141,34 @@ const mobileNavLinks = [
         </div>
 
         <a
-          href={`${base}about/`}
-          class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium ${currentPage === '/about/' ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
+          href={aboutUrl}
+          class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium ${currentPage === '/about/' || currentPage === '/es/nosotros/' ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
         >
-          About
+          {t.header.about}
         </a>
         <a
-          href={`${base}contact/`}
-          class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium ${currentPage === '/contact/' ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
+          href={contactUrl}
+          class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium ${currentPage === '/contact/' || currentPage === '/es/contacto/' ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
         >
-          Contact
+          {t.header.contact}
         </a>
+        <LanguageSwitcher locale={locale} />
         <a href="tel:+17542152272" class="btn-accent inline-flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
-          Call Now
+          {t.header.callNow}
         </a>
         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-md font-semibold hover:bg-[#20bd5a] transition-colors">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12.003 0h-.006C5.385 0 0 5.382 0 12c0 2.625.847 5.058 2.285 7.034L.79 23.467l4.591-1.472A11.942 11.942 0 0012.003 24C18.618 24 24 18.616 24 12S18.618 0 12.003 0zm6.986 16.946c-.293.825-1.449 1.51-2.375 1.71-.634.135-1.462.243-4.252-.914-3.572-1.48-5.87-5.108-6.048-5.343-.171-.236-1.437-1.914-1.437-3.65 0-1.736.909-2.589 1.232-2.943.293-.321.769-.47 1.225-.47.149 0 .282.008.402.014.323.014.485.033.697.538.267.635.918 2.24.998 2.403.081.164.162.383.065.6-.09.224-.171.323-.335.51-.163.186-.318.33-.481.531-.149.179-.316.37-.135.726.18.356.804 1.326 1.727 2.148 1.188 1.059 2.188 1.388 2.498 1.542.236.117.515.103.702-.09.237-.245.53-.65.828-1.049.212-.285.48-.321.74-.217.264.098 1.667.786 1.953.929.285.143.476.217.546.335.069.117.069.678-.224 1.503z"/>
           </svg>
-          WhatsApp
+          {t.header.whatsapp}
         </a>
       </div>
 
       <!-- Mobile menu button -->
-      <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700" aria-label="Open menu">
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700" aria-label={t.header.openMenu}>
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -195,6 +178,9 @@ const mobileNavLinks = [
     <!-- Mobile Navigation -->
     <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t pt-4">
       <div class="flex flex-col gap-2">
+        <div class="pb-2 mb-2 border-b border-gray-200">
+          <LanguageSwitcher locale={locale} />
+        </div>
         {mobileNavLinks.map(link => (
           <a
             href={link.href}
@@ -204,13 +190,13 @@ const mobileNavLinks = [
           </a>
         ))}
         <a href="tel:+17542152272" class="btn-accent text-center mt-2">
-          Call 754-215-2272
+          {t.header.call}
         </a>
         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 py-3 rounded-md font-semibold hover:bg-[#20bd5a] transition-colors mt-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12.003 0h-.006C5.385 0 0 5.382 0 12c0 2.625.847 5.058 2.285 7.034L.79 23.467l4.591-1.472A11.942 11.942 0 0012.003 24C18.618 24 24 18.616 24 12S18.618 0 12.003 0zm6.986 16.946c-.293.825-1.449 1.51-2.375 1.71-.634.135-1.462.243-4.252-.914-3.572-1.48-5.87-5.108-6.048-5.343-.171-.236-1.437-1.914-1.437-3.65 0-1.736.909-2.589 1.232-2.943.293-.321.769-.47 1.225-.47.149 0 .282.008.402.014.323.014.485.033.697.538.267.635.918 2.24.998 2.403.081.164.162.383.065.6-.09.224-.171.323-.335.51-.163.186-.318.33-.481.531-.149.179-.316.37-.135.726.18.356.804 1.326 1.727 2.148 1.188 1.059 2.188 1.388 2.498 1.542.236.117.515.103.702-.09.237-.245.53-.65.828-1.049.212-.285.48-.321.74-.217.264.098 1.667.786 1.953.929.285.143.476.217.546.335.069.117.069.678-.224 1.503z"/>
           </svg>
-          WhatsApp Us
+          {t.header.whatsappUs}
         </a>
       </div>
     </div>

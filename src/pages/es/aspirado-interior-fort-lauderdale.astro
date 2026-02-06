@@ -1,0 +1,168 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Aspirado Interior Fort Lauderdale | Servicio Móvil | Route95";
+const description = "Aspirado interior profesional en Fort Lauderdale. Servicio móvil - ¡vamos a usted! Elimina arena, suciedad y residuos de cada hendidura. Citas el mismo día. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('upholstery-cleaning-fort-lauderdale'),
+  title: "Limpieza de Tapicería"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Aspirado Interior Fort Lauderdale"
+  intro="El aspirado interior profesional elimina arena, suciedad y residuos de cada superficie y hendidura de su auto usando equipo de grado comercial."
+  currentPage="/es/aspirado-interior-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          La aspiradora de su hogar no puede hacer lo que nuestro equipo hace. Usamos extractores comerciales con accesorios especializados diseñados para interiores automotrices. Estas herramientas llegan a los rieles de los asientos, entre los cojines, debajo de los asientos y a todos los espacios estrechos donde se esconde la suciedad.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Llevamos nuestro servicio de aspirado interior directamente a su hogar u oficina en cualquier lugar de Fort Lauderdale. Desde edificios altos del centro hasta casas cerca del Hugh Taylor Birch State Park, vamos a usted listos para hacer el trabajo correctamente.
+        </p>
+        <p class="text-gray-600">
+          La arena de playa es el problema número uno de alfombras que vemos en vehículos de Fort Lauderdale. Las partículas de arena se introducen profundamente en las fibras y hendiduras de los asientos donde las aspiradoras regulares no pueden llegar. La extracción profesional hace una diferencia real.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta el Aspirado Interior en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El aspirado interior en Fort Lauderdale cuesta de $25 a $40 dependiendo del tamaño y condición de su vehículo.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los autos compactos y sedanes están en el extremo inferior. Vehículos más grandes como SUVs, camionetas y minivans con más espacio de piso y asientos cuestan más. Los vehículos con mucha acumulación de arena o residuos pueden necesitar tiempo extra.
+        </p>
+        <p class="text-gray-600">
+          El aspirado interior se combina bien con otros servicios como lavado de asientos o cuidado de cuero. Pregunte sobre precios de paquete cuando llame.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Tiempo Toma el Aspirado Interior?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El aspirado interior toma de 20 a 30 minutos para la mayoría de los vehículos, dependiendo del tamaño y la cantidad de residuos que estemos eliminando.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          No nos apuramos como un autolavado exprés. Cada asiento se mueve para alcanzar la alfombra debajo. Cada hendidura recibe atención. Los tapetes se sacan y se limpian por separado para que podamos acceder a la alfombra debajo.
+        </p>
+        <p class="text-gray-600">
+          Su auto está listo para conducir inmediatamente después de terminar.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Por Qué Necesita Aspirado Interior Profesional?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Las aspiradoras domésticas carecen de la potencia de succión y los accesorios especializados necesarios para eliminar residuos de los interiores automotrices.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Los interiores de los autos tienen docenas de lugares donde se acumula la suciedad:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>Entre los cojines y refuerzos de los asientos</li>
+          <li>En los rieles de los asientos donde se deslizan</li>
+          <li>Debajo de los asientos en la alfombra</li>
+          <li>Dentro de los bolsillos de las puertas y compartimentos de almacenamiento</li>
+          <li>Alrededor de los pedales y el área de los pies</li>
+          <li>En los portavasos y áreas de la consola</li>
+        </ul>
+        <p class="text-gray-600 mb-4">
+          La aspiradora de su hogar puede quitar lo visible, pero la arena y suciedad escondida en estos lugares se queda. Esos residuos siguen frotándose contra las superficies cada vez que se mueve, desgastando alfombras y tapicería más rápido.
+        </p>
+        <p class="text-gray-600 mb-4">
+          En Fort Lauderdale, la arena es el mayor problema. Un solo viaje a la playa puede depositar arena en cada rincón de su interior. Esas partículas son afiladas y abrasivas. Si se dejan en su lugar, dañan las fibras de la alfombra y rayan las molduras plásticas.
+        </p>
+        <p class="text-gray-600 mb-4">Señales de que necesita aspirado profesional:</p>
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <li>Sensación arenosa al pasar la mano por las alfombras</li>
+          <li>Residuos visibles en las hendiduras de los asientos</li>
+          <li>Arena o suciedad cayendo cuando mueve los asientos</li>
+          <li>Migas y residuos en portavasos y bolsillos</li>
+          <li>Olor a humedad por materia orgánica atrapada</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Aspirado Interior</h2>
+        <ProcessSteps steps={[
+          { title: "Retiro de Tapetes", description: "Sacamos todos los tapetes y los limpiamos por separado para poder alcanzar la alfombra debajo." },
+          { title: "Ajuste de Asientos", description: "Movemos los asientos hacia adelante y atrás para acceder a las áreas de alfombra que normalmente están ocultas." },
+          { title: "Trabajo de Hendiduras", description: "Los accesorios especializados llegan a los rieles de los asientos, entre los cojines y los espacios estrechos alrededor de la consola central." },
+          { title: "Aspirado de Superficies", description: "La extracción de alta potencia elimina los residuos sueltos de todas las superficies de alfombra y tapicería." },
+          { title: "Áreas de Detalle", description: "Atendemos los bolsillos de las puertas, portavasos, compartimentos de almacenamiento y otros puntos donde se acumulan residuos." },
+          { title: "Limpieza de Tapetes", description: "Los tapetes se aspiran por ambos lados y se golpean para liberar la arena atrapada antes de volver a colocarlos." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rápidos del Aspirado Interior</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$25-$40 según el tamaño</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">20-30 minutos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Equipo de grado comercial</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Alcanza cada hendidura</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Servicio el mismo día</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Aspirado Interior</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas el mismo día disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('seat-shampooing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado de Asientos</a></li>
+            <li><a href={url('carpet-shampooing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado de Alfombras</a></li>
+            <li><a href={url('dashboard-cleaning-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza de Tablero</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

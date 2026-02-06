@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 import CookieConsent from '../components/CookieConsent.astro';
 import Analytics from '../components/Analytics.astro';
+import { getTranslations, getAlternateUrl, type Locale } from '../i18n/utils';
 
 interface Props {
   title: string;
@@ -14,6 +15,12 @@ interface Props {
 }
 
 const { title, description, currentPage = '', schema } = Astro.props;
+const locale = (Astro.currentLocale ?? 'en') as Locale;
+const t = getTranslations(locale);
+
+const siteUrl = 'https://route95mobilecardetailing.com';
+const enUrl = getAlternateUrl(Astro.url, 'en');
+const esUrl = getAlternateUrl(Astro.url, 'es');
 
 // LocalBusiness Schema (included on all pages)
 const localBusinessSchema = {
@@ -47,6 +54,7 @@ const localBusinessSchema = {
     }
   ],
   "priceRange": "$$",
+  "availableLanguage": ["en", "es"],
   "areaServed": [
     {
       "@type": "City",
@@ -69,7 +77,7 @@ const localBusinessSchema = {
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={locale}>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,7 +88,8 @@ const localBusinessSchema = {
   <meta property="og:title" content={title}>
   <meta property="og:description" content={description}>
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:locale" content={locale === 'es' ? 'es_US' : 'en_US'}>
+  <meta property="og:locale:alternate" content={locale === 'es' ? 'en_US' : 'es_US'}>
   <meta property="og:site_name" content="Route95 Mobile Car Detailing">
 
   <!-- Twitter Card -->
@@ -94,6 +103,11 @@ const localBusinessSchema = {
   <!-- Canonical -->
   <link rel="canonical" href={Astro.url.href}>
 
+  <!-- hreflang for SEO -->
+  <link rel="alternate" hreflang="en" href={`${siteUrl}${enUrl}`} />
+  <link rel="alternate" hreflang="es" href={`${siteUrl}${esUrl}`} />
+  <link rel="alternate" hreflang="x-default" href={`${siteUrl}${enUrl}`} />
+
   <title>{title}</title>
 
   <!-- LocalBusiness Schema -->
@@ -105,15 +119,15 @@ const localBusinessSchema = {
   )}
 </head>
 <body class="min-h-screen flex flex-col">
-  <Header currentPage={currentPage} />
+  <Header currentPage={currentPage} locale={locale} />
 
   <main class="flex-grow">
     <slot />
   </main>
 
-  <Footer />
-  <WhatsAppFloat />
-  <CookieConsent />
+  <Footer locale={locale} />
+  <WhatsAppFloat locale={locale} />
+  <CookieConsent locale={locale} />
   <Analytics measurementId="G-XXXXXXXXXX" />
 </body>
 </html>

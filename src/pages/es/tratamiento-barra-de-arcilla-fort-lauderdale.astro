@@ -1,0 +1,157 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Tratamiento Barra de Arcilla Fort Lauderdale | Route95";
+const description = "Tratamiento profesional de barra de arcilla en Fort Lauderdale. Elimina contaminantes incrustados para una pintura suave como el vidrio. Servicio movil. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('car-wash-fort-lauderdale'),
+  title: "Servicios de Lavado"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Tratamiento Barra de Arcilla Fort Lauderdale"
+  intro="El tratamiento con barra de arcilla elimina los contaminantes incrustados en su pintura que el lavado solo no puede remover, dejando una superficie suave como el vidrio lista para cera o sellador."
+  currentPage="/es/tratamiento-barra-de-arcilla-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Pase su mano por la pintura de su auto despues de lavarlo. Si se siente aspera o arenosa, eso es contaminacion incrustada en su capa transparente. Residuos industriales, polvo de frenos, savia de arboles, overspray y polvo ferroviario se adhieren a la pintura y no se eliminan solo con jabon.
+        </p>
+        <p class="text-gray-600 mb-4">
+          El tratamiento con barra de arcilla utiliza un compuesto de arcilla especialmente formulado que extrae estos contaminantes de su pintura de manera segura. El resultado es una superficie perfectamente lisa que refleja la luz de manera uniforme y permite que la cera se adhiera correctamente.
+        </p>
+        <p class="text-gray-600">
+          Llevamos el tratamiento de barra de arcilla directamente a su ubicacion en Fort Lauderdale. Este servicio es una preparacion esencial antes de cualquier aplicacion de cera o proteccion de pintura.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta el Tratamiento de Barra de Arcilla en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El tratamiento de barra de arcilla en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamano del vehiculo y el nivel de contaminacion.</strong>
+        </p>
+        <p class="text-gray-600">
+          Los vehiculos muy contaminados que no han recibido tratamiento de arcilla en anos requieren mas tiempo y arcilla. Evaluamos la condicion de su pintura y proporcionamos una cotizacion exacta.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Tiempo Toma el Tratamiento de Barra de Arcilla?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El tratamiento de barra de arcilla toma de 1 a 2 horas dependiendo del tamano del vehiculo y que tan contaminada este la pintura.</strong>
+        </p>
+        <p class="text-gray-600">
+          Trabajamos una seccion a la vez, usando abundante lubricante para asegurar que la arcilla se deslice de manera segura sin marcar su pintura. Apresurar este proceso causa rayaduras, por lo que nos tomamos el tiempo para hacerlo bien.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Por Que Su Auto Necesita Tratamiento de Barra de Arcilla?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Los contaminantes se incrustan en su capa transparente y no pueden eliminarse con el lavado. La barra de arcilla los extrae de manera segura sin danar su pintura.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Contaminantes comunes que requieren remocion con barra de arcilla:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>Residuos industriales de fabricas y construccion</li>
+          <li>Polvo de frenos de sus ruedas y otros vehiculos</li>
+          <li>Polvo ferroviario si estaciona cerca de vias de tren</li>
+          <li>Overspray de proyectos de pintura cercanos</li>
+          <li>Residuos de savia de arboles que no se eliminan con el lavado</li>
+          <li>Alquitran y pelicula del camino</li>
+        </ul>
+        <p class="text-gray-600">
+          Los vehiculos en Fort Lauderdale acumulan contaminantes mas rapido debido a nuestra proximidad al oceano (sal), aeropuerto (depositos de combustible de avion) y la I-95 (mugre del camino y polvo de frenos).
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Barra de Arcilla</h2>
+        <ProcessSteps steps={[
+          { title: "Lavado Primero", description: "Lavamos su vehiculo a mano para eliminar la suciedad suelta. La arcilla trabaja sobre contaminantes adheridos, no sobre suciedad superficial." },
+          { title: "Verificacion de Contaminacion", description: "Palpamos la pintura para identificar las areas mas contaminadas y determinar cuanto trabajo se necesita." },
+          { title: "Lubricacion de Superficie", description: "Rociamos lubricante de arcilla generosamente. La arcilla debe deslizarse, nunca arrastrarse, sobre su pintura." },
+          { title: "Aplicacion de Arcilla", description: "Frotamos suavemente la barra de arcilla sobre cada panel. Los contaminantes se transfieren de su pintura a la arcilla." },
+          { title: "Limpieza y Verificacion", description: "Limpiamos el lubricante y palpamos la pintura. Si aun esta aspera, repetimos. Si esta suave, pasamos a la siguiente seccion." }
+        ]} />
+      </section>
+
+      <section class="bg-gray-50 rounded-xl p-6">
+        <h3 class="font-bold text-[#0f2a4a] mb-2">Mejor Combinado con Cera</h3>
+        <p class="text-gray-600">
+          El tratamiento de barra de arcilla es la preparacion ideal para el encerado. Una vez que se eliminan los contaminantes, la cera se adhiere directamente a la pintura limpia y dura mas. Recomendamos combinar estos servicios.
+        </p>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rapidos de Barra de Arcilla</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$75-$150 segun el tamano</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">1-2 horas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Elimina contaminantes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Acabado suave como vidrio</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Preparacion para cera</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Tratamiento de Arcilla</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas para el mismo dia disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('car-waxing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Encerado de Autos</a></li>
+            <li><a href={url('hand-wash-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado a Mano</a></li>
+            <li><a href={url('water-spot-removal-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Eliminacion de Manchas de Agua</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

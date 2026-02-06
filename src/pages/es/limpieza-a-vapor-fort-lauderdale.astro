@@ -1,0 +1,186 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Limpieza a Vapor Fort Lauderdale | Servicio Móvil | Route95";
+const description = "Limpieza profesional a vapor para autos en Fort Lauderdale. Servicio móvil - ¡vamos a usted! Mata bacterias, moho y alérgenos sin químicos. Citas el mismo día. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('upholstery-cleaning-fort-lauderdale'),
+  title: "Limpieza de Tapicería"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Limpieza a Vapor Fort Lauderdale"
+  intro="La limpieza profesional a vapor desinfecta el interior de su auto usando vapor de alta temperatura que mata bacterias, moho y alérgenos sin químicos."
+  currentPage="/es/limpieza-a-vapor-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          La limpieza a vapor es la limpieza más profunda que puede darle al interior de un auto. El agua calentada por encima de 200°F produce vapor que penetra las superficies, mata microorganismos al contacto y afloja la suciedad que otros métodos dejan atrás. No se necesitan químicos—solo vapor puro y caliente.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Llevamos nuestro servicio de limpieza a vapor directamente a su hogar u oficina en cualquier lugar de Fort Lauderdale. Desde casas frente al agua en Rio Vista hasta condominios cerca de Flagler Village, vamos a usted con equipo de vapor comercial.
+        </p>
+        <p class="text-gray-600">
+          En el clima húmedo de Florida, el moho y los hongos prosperan dentro de los vehículos. La limpieza a vapor mata estos organismos en la fuente en lugar de solo enmascarar el olor con ambientadores.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta la Limpieza a Vapor en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La limpieza a vapor en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamaño de su vehículo y qué tan exhaustiva quiera que sea.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Una limpieza a vapor básica cubre asientos, alfombras y superficies principales. La limpieza a vapor completa del interior incluye paneles de puertas, techo interior, rejillas de ventilación y cada rincón de la cabina. Vehículos más grandes con más superficie cuestan más.
+        </p>
+        <p class="text-gray-600">
+          Discutiremos sus necesidades y le daremos un precio exacto antes de comenzar.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Tiempo Toma la Limpieza a Vapor?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>La limpieza a vapor toma aproximadamente 45 minutos para la mayoría de los vehículos, con las superficies secándose en 1-2 horas.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          La limpieza a vapor en realidad usa muy poca agua comparada con el lavado. La alta temperatura significa que la humedad se evapora rápidamente, así que su auto se seca más rápido. Esto también hace que la limpieza a vapor sea segura para electrónicos, pantallas y áreas donde no quiere exceso de agua.
+        </p>
+        <p class="text-gray-600">
+          Su auto está listo para conducir inmediatamente después de terminar, aunque las superficies pueden sentirse ligeramente húmedas por una hora aproximadamente.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Por Qué Elegir Limpieza a Vapor para Su Auto?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El vapor mata el 99% de las bacterias, moho y alérgenos sin dejar residuos químicos. Es la opción de limpieza profunda más segura para su interior.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          La humedad de Fort Lauderdale crea condiciones perfectas para el crecimiento de moho y hongos dentro de los vehículos. Los sistemas de aire acondicionado absorben humedad. Los zapatos mojados y trajes de baño introducen agua. Los derrames que no se secan completamente se convierten en criaderos.
+        </p>
+        <p class="text-gray-600 mb-4">La limpieza a vapor aborda problemas que otros métodos no pueden:</p>
+        <div class="space-y-3 mb-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Mata moho y hongos</h3>
+            <p class="text-gray-600 text-sm">La alta temperatura destruye organismos al contacto, no solo en la superficie sino profundamente en los materiales.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Elimina alérgenos</h3>
+            <p class="text-gray-600 text-sm">Los ácaros del polvo, polen y caspa de mascotas se neutralizan por el calor.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Elimina olores en la fuente</h3>
+            <p class="text-gray-600 text-sm">El vapor penetra donde se originan los olores en lugar de cubrirlos.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Sin químicos</h3>
+            <p class="text-gray-600 text-sm">Seguro para personas con sensibilidades, niños y mascotas. Nada más que agua.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Desinfecta superficies duras</h3>
+            <p class="text-gray-600 text-sm">El volante, la palanca de cambios y los botones se limpian verdaderamente, no solo se limpian con un trapo.</p>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">Señales de que la limpieza a vapor le ayudaría:</p>
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <li>Olor a humedad o moho en su auto</li>
+          <li>Las alergias se activan al conducir</li>
+          <li>Manchas visibles de moho en las superficies</li>
+          <li>Quiere la limpieza más profunda posible</li>
+          <li>Las sensibilidades químicas impiden usar productos tradicionales</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Limpieza a Vapor</h2>
+        <ProcessSteps steps={[
+          { title: "Aspiración Inicial", description: "Eliminamos los residuos sueltos primero para que el vapor pueda penetrar las superficies efectivamente." },
+          { title: "Vaporización de Tapicería", description: "El vapor de alta temperatura penetra las fibras de los asientos y alfombras, matando bacterias y aflojando la suciedad incrustada." },
+          { title: "Superficies de Cuero", description: "Vapor a menor presión limpia y desinfecta de forma segura el cuero sin dañarlo." },
+          { title: "Superficies Duras", description: "El tablero, paneles de puertas, consola y molduras se vaporizan para eliminar la suciedad y matar gérmenes." },
+          { title: "Áreas de Detalle", description: "Las rejillas de ventilación, portavasos, botones y hendiduras reciben limpieza a vapor dirigida." },
+          { title: "Limpieza Final", description: "Limpiamos todas las superficies para eliminar cualquier suciedad aflojada y humedad." }
+        ]} />
+      </section>
+
+      <section class="bg-gray-50 rounded-xl p-6">
+        <h3 class="font-bold text-[#0f2a4a] mb-2">Proteja Después de la Limpieza</h3>
+        <p class="text-gray-600">
+          La limpieza a vapor se puede combinar con otros servicios. Muchos clientes continúan con protección de tela o acondicionamiento de cuero para mantener su interior recién desinfectado protegido por más tiempo.
+        </p>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rápidos de Limpieza a Vapor</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$75-$150 según el alcance</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">Aproximadamente 45 minutos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Mata el 99% de las bacterias</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Limpieza sin químicos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Se seca en 1-2 horas</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Limpieza a Vapor</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas el mismo día disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('odor-removal-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Eliminación de Olores</a></li>
+            <li><a href={url('fabric-protection-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Protección de Tela</a></li>
+            <li><a href={url('leather-conditioning-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Acondicionamiento de Cuero</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

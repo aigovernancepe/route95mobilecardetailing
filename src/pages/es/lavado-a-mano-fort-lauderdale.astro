@@ -1,0 +1,151 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Lavado a Mano Fort Lauderdale | Servicio Movil | Route95";
+const description = "Servicio profesional de lavado a mano movil en Fort Lauderdale. Vamos a usted! Metodo de dos cubetas, jabon pH balanceado, sin rayaduras. Servicio el mismo dia. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('car-wash-fort-lauderdale'),
+  title: "Servicios de Lavado"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Lavado a Mano Fort Lauderdale"
+  intro="El lavado profesional a mano elimina la suciedad de manera segura sin rayar su pintura, a diferencia de los lavados automaticos que danan la capa transparente con el tiempo."
+  currentPage="/es/lavado-a-mano-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Route95 lleva el servicio de lavado a mano movil directamente a su hogar u oficina en Fort Lauderdale. Utilizamos el metodo de dos cubetas en el que confian los detalladores profesionales de todo el mundo, combinado con jabon pH balanceado de Chemical Guys que elimina la mugre sin remover la proteccion de cera existente.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los lavados automaticos pueden ser convenientes, pero esos cepillos giratorios acumulan suciedad y la arrastran por su pintura cientos de veces. El resultado son marcas circulares y micro-rayaduras que opacan su acabado. Nuestro proceso de lavado a mano trata su vehiculo como merece ser tratado.
+        </p>
+        <p class="text-gray-600">
+          Servimos toda el area de Fort Lauderdale incluyendo Las Olas, Nurmi Isles, Seven Isles y las areas circundantes del condado de Broward. Las citas para el mismo dia estan disponibles frecuentemente.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta un Lavado a Mano en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Un lavado a mano movil profesional en Fort Lauderdale generalmente cuesta entre $30 y $50 dependiendo del tamano de su vehiculo.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los sedanes y coupes estan en el rango mas bajo. Las SUVs, camionetas y vehiculos mas grandes cuestan un poco mas debido a la superficie adicional. Proporcionamos precios exactos cuando llame segun su vehiculo especifico.
+        </p>
+        <p class="text-gray-600">
+          La inversion vale la pena cuando considera el costo de la correccion de pintura para eliminar las marcas circulares de los lavados automaticos. Un solo paso por un tunel de lavado puede causar danos que cuestan cientos de dolares reparar.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Tiempo Toma un Lavado a Mano?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Un lavado a mano completo toma aproximadamente 30 a 45 minutos dependiendo del tamano del vehiculo y que tan sucio este.</strong>
+        </p>
+        <p class="text-gray-600">
+          No apresuramos el proceso como los lavados automaticos que procesan autos en minutos. Cada panel recibe atencion individual. Lavamos de arriba hacia abajo, enjuagamos nuestros guantes frecuentemente y nos aseguramos de que ningun residuo se arrastre por su pintura. Como vamos a usted, este tiempo no le cuesta nada adicional.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Por Que Elegir el Lavado a Mano Sobre los Lavados Automaticos?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El lavado a mano es el unico metodo seguro para limpiar su vehiculo sin causar danos a la pintura por cepillos y agua reciclada.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Esto es lo que sucede en los lavados automaticos:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>Los cepillos giratorios acumulan suciedad y residuos de vehiculos anteriores</li>
+          <li>Esa arenilla se arrastra por su pintura, creando rayaduras finas</li>
+          <li>El agua reciclada contiene contaminantes que se depositan en su superficie</li>
+          <li>Los detergentes fuertes eliminan la cera y resecan los sellos de goma</li>
+        </ul>
+        <p class="text-gray-600">
+          Nuestro proceso de lavado a mano elimina todos estos problemas. Guantes de microfibra frescos se deslizan suavemente sobre su pintura. Agua limpia enjuaga los contaminantes. Jabon pH balanceado limpia sin eliminar la proteccion.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Lavado a Mano</h2>
+        <ProcessSteps steps={[
+          { title: "Pre-Enjuague", description: "Enjuagamos completamente su vehiculo para eliminar suciedad suelta, arena y residuos antes de cualquier lavado de contacto." },
+          { title: "Lavado de Dos Cubetas", description: "Una cubeta contiene agua jabonosa limpia. La segunda cubeta es para enjuagar nuestro guante de lavado. Esto evita reintroducir suciedad a su pintura." },
+          { title: "Limpieza Panel por Panel", description: "Lavamos una seccion a la vez, trabajando de arriba hacia abajo. Cada panel recibe solucion de jabon fresca." },
+          { title: "Enjuague y Secado", description: "Un enjuague completo elimina todo el jabon. Secamos a mano con toallas de microfibra limpias para prevenir manchas de agua." },
+          { title: "Inspeccion Final", description: "Revisamos cada panel en busca de puntos omitidos, manchas de agua o areas que necesiten atencion adicional." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rapidos del Lavado a Mano</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$30-$50 segun el tamano</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">30-45 minutos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Metodo de dos cubetas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Jabon pH balanceado</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Acabado sin rayaduras</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Su Lavado a Mano</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas para el mismo dia disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('car-waxing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Encerado de Autos</a></li>
+            <li><a href={url('clay-bar-treatment-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Tratamiento Barra de Arcilla</a></li>
+            <li><a href={url('wheel-cleaning-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza de Rines</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

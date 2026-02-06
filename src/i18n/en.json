@@ -1,0 +1,95 @@
+{
+  "header": {
+    "home": "Home",
+    "carWash": "Car Wash",
+    "upholsteryCleaning": "Upholstery Cleaning",
+    "detailingServices": "Detailing Services",
+    "about": "About",
+    "contact": "Contact",
+    "callNow": "Call Now",
+    "call": "Call 754-215-2272",
+    "whatsapp": "WhatsApp",
+    "whatsappUs": "WhatsApp Us",
+    "allCarWashServices": "All Car Wash Services",
+    "allUpholsteryServices": "All Upholstery Services",
+    "allDetailingServices": "All Detailing Services",
+    "topBarLocations": "Fort Lauderdale, Hollywood, Pompano Beach",
+    "topBarHours": "Mon-Sat: 8AM-8PM",
+    "openMenu": "Open menu",
+    "whatsappMessage": "Hi! I'd like to get a quote for mobile car detailing."
+  },
+  "footer": {
+    "companyName": "Route95 Mobile Car Detailing",
+    "companyDescription": "Professional mobile car detailing in Fort Lauderdale. We come to you with premium Chemical Guys products for luxury results.",
+    "satisfactionGuaranteed": "Satisfaction Guaranteed",
+    "popularServices": "Popular Services",
+    "serviceAreas": "Service Areas",
+    "contactUs": "Contact Us",
+    "followUs": "Follow Us",
+    "hours": "Mon - Sat: 8AM - 8PM",
+    "copyright": "Route95 Mobile Car Detailing LLC. All rights reserved.",
+    "doNotSell": "Do Not Sell or Share My Personal Information",
+    "includingAreas": "Including Las Olas, Nurmi Isles, Seven Isles & all of Broward County"
+  },
+  "serviceLayout": {
+    "backTo": "Back to",
+    "call": "Call 754-215-2272",
+    "getAFreeQuote": "Get a Free Quote",
+    "ourServices": "Our Services",
+    "learnMore": "Learn More",
+    "readyToGetStarted": "Ready to Get Started?",
+    "ctaDescription": "Call us today for same-day mobile service throughout Fort Lauderdale, Hollywood, and Pompano Beach.",
+    "requestAQuote": "Request a Quote"
+  },
+  "cookieConsent": {
+    "bannerText": "We use cookies to improve your experience and analyze site traffic. You can choose to accept all cookies, customize your preferences, or reject non-essential cookies.",
+    "learnMore": "Learn more",
+    "rejectAll": "Reject All",
+    "customize": "Customize",
+    "acceptAll": "Accept All",
+    "preferencesTitle": "Cookie Preferences",
+    "preferencesDescription": "Choose which cookies you want to allow. Essential cookies are required for the website to function and cannot be disabled.",
+    "essentialCookies": "Essential Cookies",
+    "essentialDescription": "Required for the website to function properly",
+    "alwaysActive": "Always Active",
+    "analyticsCookies": "Analytics Cookies",
+    "analyticsDescription": "Help us understand how visitors interact with our website",
+    "marketingCookies": "Marketing Cookies",
+    "marketingDescription": "Used to deliver personalized advertisements",
+    "savePreferences": "Save Preferences"
+  },
+  "googleReviews": {
+    "heading": "What Our Customers Say",
+    "description": "See why Fort Lauderdale car owners trust Route95 for their mobile detailing needs."
+  },
+  "instagramFeed": {
+    "heading": "See Our Work",
+    "description": "Follow us on Instagram for the latest before-and-after results."
+  },
+  "whatsapp": {
+    "message": "Hi! I'd like to get a quote for mobile car detailing.",
+    "ariaLabel": "Chat on WhatsApp"
+  },
+  "nav": {
+    "handWash": "Hand Wash",
+    "carWaxing": "Car Waxing",
+    "clayBarTreatment": "Clay Bar Treatment",
+    "wheelCleaning": "Wheel Cleaning",
+    "chromePolishing": "Chrome Polishing",
+    "waterSpotRemoval": "Water Spot Removal",
+    "trimRestoration": "Trim Restoration",
+    "seatShampooing": "Seat Shampooing",
+    "carpetShampooing": "Carpet Shampooing",
+    "leatherCleaning": "Leather Cleaning",
+    "leatherConditioning": "Leather Conditioning",
+    "steamCleaning": "Steam Cleaning",
+    "odorRemoval": "Odor Removal",
+    "quickWash": "Quick Wash",
+    "freshStart": "Fresh Start",
+    "completeClean": "Complete Clean",
+    "premiumRefresh": "Premium Refresh",
+    "carWashServices": "Car Wash Services",
+    "upholsteryCleaning": "Upholstery Cleaning",
+    "detailingServices": "Detailing Services"
+  }
+}

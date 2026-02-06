@@ -1,0 +1,166 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Lavado de Asientos Fort Lauderdale | Servicio Móvil | Route95";
+const description = "Lavado profesional de asientos en Fort Lauderdale. Servicio móvil - ¡vamos a usted! Elimina manchas, olores y suciedad incrustada. Citas el mismo día. Llame al 754-215-2272";
+
+const parentCategory = {
+  href: url('upholstery-cleaning-fort-lauderdale'),
+  title: "Limpieza de Tapicería"
+};
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Lavado de Asientos Fort Lauderdale"
+  intro="El lavado profesional de asientos elimina manchas, olores y suciedad incrustada de los asientos de tela de su auto mediante extracción con agua caliente."
+  currentPage="/es/lavado-de-asientos-fort-lauderdale/"
+  parentCategory={parentCategory}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Los asientos de su auto sufren mucho en el sur de Florida. Entre el sudor en los días calurosos, el protector solar de los viajes a la playa y las bebidas derramadas, los asientos de tela absorben todo. La aspiración regular solo elimina la suciedad superficial. Los aceites, manchas y olores atrapados en lo profundo de las fibras necesitan un lavado profesional para salir.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Llevamos nuestro servicio de lavado de asientos directamente a su hogar u oficina en cualquier lugar de Fort Lauderdale. Ya sea que viva cerca de Las Olas o en el área de Sawgrass Mills, vamos a usted con todo el equipo y agua que necesitamos. No tiene que dejar su auto en ningún lado.
+        </p>
+        <p class="text-gray-600">
+          Nuestro servicio móvil funciona excelente para profesionales ocupados y familias que necesitan limpiar su auto sin la molestia de esperar en un taller.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta el Lavado de Asientos en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El lavado de asientos en Fort Lauderdale cuesta de $50 a $100 dependiendo del tamaño de su vehículo y la condición de sus asientos.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Un sedán estándar con suciedad ligera está en el extremo inferior. Vehículos más grandes como SUVs o minivans cuestan más porque hay más asientos que limpiar. Las manchas pesadas de café, accidentes de mascotas o años de acumulación pueden necesitar tiempo extra de tratamiento, lo cual afecta el precio.
+        </p>
+        <p class="text-gray-600">
+          Le damos un presupuesto exacto antes de comenzar para que no haya sorpresas. Llámenos y describa su situación—le diremos exactamente qué esperar.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Tiempo Toma el Lavado de Asientos?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El lavado de asientos toma aproximadamente 45 minutos para la mayoría de los vehículos, con un tiempo de secado de 2-4 horas dependiendo de la humedad.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Trabajamos eficientemente pero nunca nos apuramos. Cada asiento recibe la atención adecuada. La limpieza en sí es rápida, pero dedicamos tiempo extra a la extracción. Sacar la mayor cantidad de humedad posible acelera el secado y previene ese olor a humedad que puede desarrollarse con la humedad de Florida.
+        </p>
+        <p class="text-gray-600">
+          En días húmedos, recomendamos dejar las ventanas ligeramente abiertas para ayudar a que los asientos se sequen más rápido.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Por Qué Sus Asientos Necesitan Lavado?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Los asientos de tela absorben sudor, aceites corporales y derrames que la aspiración sola no puede eliminar. El lavado extrae lo que está atrapado en lo profundo de las fibras.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          En Fort Lauderdale, sus asientos enfrentan desafíos adicionales. El protector solar se transfiere de su piel y deja residuos aceitosos. El sudor se absorbe durante los meses calurosos de verano. La arena de los viajes a la playa se introduce profundamente en la tela. Con el tiempo, esta acumulación crea olores y hace que los asientos se vean opacos incluso después de aspirar.
+        </p>
+        <p class="text-gray-600 mb-4">Señales de que sus asientos necesitan lavado:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>Manchas visibles de bebidas, comida o protector solar</li>
+          <li>Olor a humedad o agrio al entrar al auto</li>
+          <li>La tela se ve más oscura o descolorida</li>
+          <li>Se puede ver el contorno donde se sientan las personas</li>
+          <li>Las alergias se activan al conducir</li>
+        </ul>
+        <p class="text-gray-600">
+          El café y el protector solar son las dos manchas más comunes que tratamos en Fort Lauderdale. Ambas requieren pre-tratamiento para una eliminación completa.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Lavado de Asientos</h2>
+        <ProcessSteps steps={[
+          { title: "Inspección", description: "Revisamos sus asientos en busca de manchas, desgaste y tipo de tela para elegir el enfoque correcto." },
+          { title: "Pre-Tratamiento", description: "Las manchas difíciles se tratan con Chemical Guys Lightning Fast Stain Extractor. Este limpiador a base de enzimas descompone manchas de café, comida y orgánicas antes del lavado." },
+          { title: "Lavado", description: "Aplicamos Chemical Guys Foaming Citrus Fabric Clean, un champú infundido con oxígeno que penetra profundamente en las fibras. Agitamos con cepillos suaves para levantar la suciedad de la tela." },
+          { title: "Extracción con Agua Caliente", description: "Nuestro extractor inyecta agua caliente e inmediatamente la aspira, sacando la suciedad disuelta y el champú de lo profundo de los cojines del asiento." },
+          { title: "Extracción Final", description: "Hacemos múltiples pasadas para eliminar la mayor cantidad de humedad posible. Esto previene el crecimiento de moho y ayuda a que los asientos se sequen más rápido en la humedad de Florida." }
+        ]} />
+      </section>
+
+      <section class="bg-[#c0c7cf] rounded-xl p-6 text-[#0f2a4a]">
+        <h3 class="font-bold mb-2">Proteja Su Inversión</h3>
+        <p class="text-sm mb-4">
+          ¿Quiere protección más duradera? Pregunte sobre nuestro recubrimiento cerámico para tela Hydro Thread. Crea una barrera que hace que los derrames futuros se formen en gotas en lugar de absorberse.
+        </p>
+        <a href={url('fabric-protection-fort-lauderdale')} class="font-semibold hover:underline">Conozca la Protección de Tela →</a>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rápidos del Lavado de Asientos</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$50-$100 según el tamaño</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">45 min + 2-4 hrs secado</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Extracción con agua caliente</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Elimina manchas y olores</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Citas el mismo día</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Lavado de Asientos</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Citas el mismo día disponibles en todo Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('carpet-shampooing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado de Alfombras</a></li>
+            <li><a href={url('odor-removal-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Eliminación de Olores</a></li>
+            <li><a href={url('fabric-protection-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Protección de Tela</a></li>
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

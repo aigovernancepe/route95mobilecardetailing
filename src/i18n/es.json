@@ -1,0 +1,95 @@
+{
+  "header": {
+    "home": "Inicio",
+    "carWash": "Lavado de Autos",
+    "upholsteryCleaning": "Limpieza de Tapiceria",
+    "detailingServices": "Servicios de Detallado",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "callNow": "Llamar Ahora",
+    "call": "Llamar 754-215-2272",
+    "whatsapp": "WhatsApp",
+    "whatsappUs": "Escríbenos por WhatsApp",
+    "allCarWashServices": "Todos los Servicios de Lavado",
+    "allUpholsteryServices": "Todos los Servicios de Tapicería",
+    "allDetailingServices": "Todos los Servicios de Detallado",
+    "topBarLocations": "Fort Lauderdale, Hollywood, Pompano Beach",
+    "topBarHours": "Lun-Sáb: 8AM-8PM",
+    "openMenu": "Abrir menú",
+    "whatsappMessage": "¡Hola! Me gustaría obtener una cotización para detallado de auto a domicilio."
+  },
+  "footer": {
+    "companyName": "Route95 Mobile Car Detailing",
+    "companyDescription": "Detallado profesional de autos a domicilio en Fort Lauderdale. Vamos a usted con productos premium Chemical Guys para resultados de lujo.",
+    "satisfactionGuaranteed": "Satisfacción Garantizada",
+    "popularServices": "Servicios Populares",
+    "serviceAreas": "Áreas de Servicio",
+    "contactUs": "Contáctenos",
+    "followUs": "Síguenos",
+    "hours": "Lun - Sáb: 8AM - 8PM",
+    "copyright": "Route95 Mobile Car Detailing LLC. Todos los derechos reservados.",
+    "doNotSell": "No Vender ni Compartir Mi Información Personal",
+    "includingAreas": "Incluyendo Las Olas, Nurmi Isles, Seven Isles y todo el condado de Broward"
+  },
+  "serviceLayout": {
+    "backTo": "Volver a",
+    "call": "Llamar 754-215-2272",
+    "getAFreeQuote": "Cotización Gratis",
+    "ourServices": "Nuestros Servicios",
+    "learnMore": "Ver Más",
+    "readyToGetStarted": "¿Listo para Empezar?",
+    "ctaDescription": "Llámenos hoy para servicio móvil el mismo día en Fort Lauderdale, Hollywood y Pompano Beach.",
+    "requestAQuote": "Solicitar Cotización"
+  },
+  "cookieConsent": {
+    "bannerText": "Usamos cookies para mejorar su experiencia y analizar el tráfico del sitio. Puede aceptar todas las cookies, personalizar sus preferencias o rechazar las cookies no esenciales.",
+    "learnMore": "Más información",
+    "rejectAll": "Rechazar Todas",
+    "customize": "Personalizar",
+    "acceptAll": "Aceptar Todas",
+    "preferencesTitle": "Preferencias de Cookies",
+    "preferencesDescription": "Elija qué cookies desea permitir. Las cookies esenciales son necesarias para el funcionamiento del sitio y no se pueden desactivar.",
+    "essentialCookies": "Cookies Esenciales",
+    "essentialDescription": "Necesarias para el correcto funcionamiento del sitio web",
+    "alwaysActive": "Siempre Activas",
+    "analyticsCookies": "Cookies de Análisis",
+    "analyticsDescription": "Nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web",
+    "marketingCookies": "Cookies de Marketing",
+    "marketingDescription": "Se utilizan para ofrecer anuncios personalizados",
+    "savePreferences": "Guardar Preferencias"
+  },
+  "googleReviews": {
+    "heading": "Lo Que Dicen Nuestros Clientes",
+    "description": "Vea por qué los propietarios de autos en Fort Lauderdale confían en Route95 para sus necesidades de detallado móvil."
+  },
+  "instagramFeed": {
+    "heading": "Vea Nuestro Trabajo",
+    "description": "Síganos en Instagram para ver los últimos resultados de antes y después."
+  },
+  "whatsapp": {
+    "message": "¡Hola! Me gustaría obtener una cotización para detallado de auto a domicilio.",
+    "ariaLabel": "Chatear por WhatsApp"
+  },
+  "nav": {
+    "handWash": "Lavado a Mano",
+    "carWaxing": "Encerado de Autos",
+    "clayBarTreatment": "Barra de Arcilla",
+    "wheelCleaning": "Limpieza de Rines",
+    "chromePolishing": "Pulido de Cromo",
+    "waterSpotRemoval": "Manchas de Agua",
+    "trimRestoration": "Restauración de Molduras",
+    "seatShampooing": "Lavado de Asientos",
+    "carpetShampooing": "Lavado de Alfombras",
+    "leatherCleaning": "Limpieza de Cuero",
+    "leatherConditioning": "Acondicionamiento de Cuero",
+    "steamCleaning": "Limpieza a Vapor",
+    "odorRemoval": "Eliminación de Olores",
+    "quickWash": "Lavado Rápido",
+    "freshStart": "Nuevo Comienzo",
+    "completeClean": "Limpieza Completa",
+    "premiumRefresh": "Renovación Premium",
+    "carWashServices": "Servicios de Lavado",
+    "upholsteryCleaning": "Limpieza de Tapicería",
+    "detailingServices": "Servicios de Detallado"
+  }
+}
