@@ -32,7 +32,7 @@ const contactUrl = localizedUrl(locale, 'contact');
   <section class="bg-gradient-to-br from-[#0a1e38] to-[#0f2a4a] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">
       {parentCategory && (
-        <a href={parentCategory.href} class="inline-flex items-center gap-2 text-gray-300 hover:text-[#c0c7cf] mb-4 transition-colors">
+        <a href={parentCategory.href} class="inline-flex items-center gap-2 text-gray-200 hover:text-[#c0c7cf] mb-4 transition-colors">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
@@ -40,7 +40,7 @@ const contactUrl = localizedUrl(locale, 'contact');
         </a>
       )}
       <h1 class="text-4xl lg:text-5xl font-bold mb-6">{h1}</h1>
-      <p class="text-xl text-gray-300 max-w-3xl">{intro}</p>
+      <p class="text-xl text-gray-200 max-w-3xl">{intro}</p>
       <div class="mt-8 flex flex-col sm:flex-row gap-4">
         <a href="tel:+17542152272" class="btn-accent inline-flex items-center justify-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -95,7 +95,7 @@ const contactUrl = localizedUrl(locale, 'contact');
   <section class="py-12 lg:py-16 bg-gradient-to-br from-[#0a1e38] to-[#0f2a4a] text-white">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-4">{t.serviceLayout.readyToGetStarted}</h2>
-      <p class="text-xl text-gray-300 mb-8">
+      <p class="text-xl text-gray-200 mb-8">
         {t.serviceLayout.ctaDescription}
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">

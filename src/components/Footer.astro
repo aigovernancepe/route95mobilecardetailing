@@ -22,7 +22,7 @@ const contactUrl = localizedUrl(locale, 'contact');
       <!-- Company Info -->
       <div>
         <h3 class="text-xl font-bold mb-4">{t.footer.companyName}</h3>
-        <p class="text-gray-300 mb-4">
+        <p class="text-gray-200 mb-4">
           {t.footer.companyDescription}
         </p>
         <div class="flex items-center gap-2 text-[#c0c7cf]">
@@ -39,7 +39,7 @@ const contactUrl = localizedUrl(locale, 'contact');
         <ul class="space-y-2">
           {nav.footerServiceLinks.map(link => (
             <li>
-              <a href={link.href} class="text-gray-300 hover:text-[#c0c7cf] transition-colors">
+              <a href={link.href} class="text-gray-200 hover:text-white transition-colors">
                 {link.label}
               </a>
             </li>
@@ -50,14 +50,14 @@ const contactUrl = localizedUrl(locale, 'contact');
       <!-- Service Areas -->
       <div>
         <h3 class="text-xl font-bold mb-4">{t.footer.serviceAreas}</h3>
-        <ul class="space-y-2 text-gray-300">
+        <ul class="space-y-2 text-gray-200">
           <li>Fort Lauderdale, FL</li>
           <li>Hollywood, FL</li>
           <li>Dania Beach, FL</li>
           <li>Pompano Beach, FL</li>
           <li>Deerfield Beach, FL</li>
           <li>Boca Raton, FL</li>
-          <li class="text-sm text-gray-400 mt-2">{t.footer.includingAreas}</li>
+          <li class="text-sm text-gray-200 mt-2">{t.footer.includingAreas}</li>
         </ul>
       </div>
 
@@ -74,14 +74,14 @@ const contactUrl = localizedUrl(locale, 'contact');
             </a>
           </li>
           <li>
-            <a href="mailto:contact@route95mobilecardetailing.com" class="flex items-center gap-2 text-gray-300 hover:text-[#c0c7cf] transition-colors">
+            <a href="mailto:contact@route95mobilecardetailing.com" class="flex items-center gap-2 text-gray-200 hover:text-white transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               <span class="text-sm">contact@route95mobilecardetailing.com</span>
             </a>
           </li>
-          <li class="flex items-center gap-2 text-gray-300">
+          <li class="flex items-center gap-2 text-gray-200">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -118,13 +118,13 @@ const contactUrl = localizedUrl(locale, 'contact');
   <div class="border-t border-gray-700">
     <div class="max-w-7xl mx-auto px-4 py-6">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-gray-400 text-sm">
+        <p class="text-gray-200 text-sm">
           &copy; {currentYear} {t.footer.copyright}
         </p>
         <div class="flex flex-wrap gap-4 lg:gap-6 text-sm">
-          <a href={aboutUrl} class="text-gray-400 hover:text-[#c0c7cf] transition-colors">{t.header.about}</a>
-          <a href={contactUrl} class="text-gray-400 hover:text-[#c0c7cf] transition-colors">{t.header.contact}</a>
-          <button onclick="openCookiePreferences()" class="text-gray-400 hover:text-[#c0c7cf] transition-colors">
+          <a href={aboutUrl} class="text-gray-200 hover:text-white transition-colors">{t.header.about}</a>
+          <a href={contactUrl} class="text-gray-200 hover:text-white transition-colors">{t.header.contact}</a>
+          <button onclick="openCookiePreferences()" class="text-gray-200 hover:text-white transition-colors">
             {t.footer.doNotSell}
           </button>
         </div>
