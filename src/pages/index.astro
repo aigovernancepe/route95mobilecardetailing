@@ -48,7 +48,9 @@ const serviceAreas = [
 
 <BaseLayout title={title} description={description} currentPage="/">
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-[#0a1e38] to-[#0f2a4a] text-white py-20 lg:py-32">
+  <section class="relative text-white py-20 lg:py-32 overflow-hidden" style="background: linear-gradient(135deg, rgba(12,36,72,0.85), rgba(30,80,160,0.7), rgba(15,50,100,0.8)), url('/route95_hero_background_wide.jpg') center/cover no-repeat; background-color: #0c2448;">
+    <!-- Water drops overlay -->
+    <div class="absolute inset-0 pointer-events-none" style="background: url('/water-drops-overlay.png') center/cover no-repeat; z-index: 1;"></div>
     <div class="max-w-7xl mx-auto px-4">
       <div class="max-w-3xl">
         <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
@@ -217,7 +219,7 @@ const serviceAreas = [
             </p>
           </div>
         </div>
-        <div class="bg-gradient-to-br from-[#0a1e38] to-[#0f2a4a] rounded-xl p-8 text-white">
+        <div class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] rounded-xl p-8 text-white">
           <h3 class="text-2xl font-bold mb-6">Service Areas</h3>
           <p class="text-gray-200 mb-6">
             We serve all of Fort Lauderdale and surrounding areas. Same-day appointments available - call us in the morning, and we can often be at your location that afternoon.
@@ -239,7 +241,7 @@ const serviceAreas = [
   </section>
 
   <!-- CTA Section -->
-  <section class="py-16 lg:py-24 bg-gradient-to-br from-[#0a1e38] to-[#0f2a4a] text-white">
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-3xl lg:text-4xl font-bold mb-6">
         Schedule Your Mobile Car Detailing Today

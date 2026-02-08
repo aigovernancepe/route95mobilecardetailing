@@ -1,15 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-  <!-- Outer shield shape - white fill with navy border -->
-  <path d="M 80.75,0 C 115.43,10.58 152.24,16.28 190.38,16.28 C 228.52,16.28 265.32,10.58 300,0 C 334.68,10.58 371.48,16.28 409.62,16.28 C 447.76,16.28 484.57,10.58 519.25,0 C 569.81,63.91 600,144.68 600,232.5 C 600,413.92 471.17,565.25 300,600 C 128.83,565.25 0,413.92 0,232.5 C 0,144.68 30.19,63.91 80.75,0 z" fill="#ffffff" stroke="#0f2a4a" stroke-width="4"/>
+  <defs>
+    <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c2448"/>
+      <stop offset="100%" stop-color="#1a5ca0"/>
+    </linearGradient>
+  </defs>
 
-  <!-- Inner navy blue shield fill (bottom section) -->
-  <path d="M 15,232.5 C 15,200.52 19.17,169.52 27,140 L 573,140 C 580.83,169.52 585,200.52 585,232.5 C 585,405.61 462.83,550.17 300,584.68 C 137.17,550.17 15,405.61 15,232.5 z" fill="#0f2a4a"/>
+  <!-- Outer shield shape - white fill with navy border -->
+  <path d="M 80.75,0 C 115.43,10.58 152.24,16.28 190.38,16.28 C 228.52,16.28 265.32,10.58 300,0 C 334.68,10.58 371.48,16.28 409.62,16.28 C 447.76,16.28 484.57,10.58 519.25,0 C 569.81,63.91 600,144.68 600,232.5 C 600,413.92 471.17,565.25 300,600 C 128.83,565.25 0,413.92 0,232.5 C 0,144.68 30.19,63.91 80.75,0 z" fill="#ffffff" stroke="#0c2448" stroke-width="4"/>
+
+  <!-- Inner navy blue shield fill (bottom section) with gradient -->
+  <path d="M 15,232.5 C 15,200.52 19.17,169.52 27,140 L 573,140 C 580.83,169.52 585,200.52 585,232.5 C 585,405.61 462.83,550.17 300,584.68 C 137.17,550.17 15,405.61 15,232.5 z" fill="url(#shieldGrad)"/>
 
   <!-- Top silver accent band -->
   <path d="M 31.32,125 C 43.58,85.78 62.36,49.44 86.4,17.26 C 119.5,26.39 154.37,31.27 190.38,31.27 C 228.44,31.27 265.22,25.82 300,15.65 C 334.78,25.82 371.56,31.27 409.62,31.27 C 445.63,31.27 480.5,26.39 513.6,17.26 C 537.64,49.44 556.42,85.78 568.68,125 L 31.32,125 z" fill="#c0c7cf"/>
 
   <!-- "ROUTE" text on the silver band -->
-  <text x="300" y="78" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="bold" fill="#0f2a4a" text-anchor="middle" dominant-baseline="central" letter-spacing="10">ROUTE</text>
+  <text x="300" y="78" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="bold" fill="#0c2448" text-anchor="middle" dominant-baseline="central" letter-spacing="10">ROUTE</text>
 
   <!-- "95" large centered text in blue area -->
   <text x="300" y="380" font-family="Arial, Helvetica, sans-serif" font-size="300" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="central">95</text>
