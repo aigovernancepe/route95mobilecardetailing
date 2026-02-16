@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.route95mobilecardetailing.com',
+  site: 'https://route95mobilecardetailing.com',
   base: '/',
   output: 'static',
   trailingSlash: 'always',
