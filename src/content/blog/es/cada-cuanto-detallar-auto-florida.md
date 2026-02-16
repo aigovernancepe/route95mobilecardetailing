@@ -46,40 +46,44 @@ Florida presenta una combinación perfecta de condiciones que dañan los vehícu
 
 No todos los servicios necesitan la misma frecuencia. Aquí está el calendario óptimo para vehículos en Florida:
 
-### Detallado Interior Completo: Cada 3-4 Meses
-
-La humedad de Florida hace que el detallado interior sea crítico. Un detallado interior completo cada trimestre previene:
-- Acumulación de moho en alfombras y asientos
-- Manchas permanentes por sudor y humedad
-- Penetración de olores en la tapicería
-- Daño UV al tablero y piezas de moldura
-
-### Detallado Exterior Completo: Cada 3-4 Meses
-
-Los detallados exteriores trimestrales protegen contra:
-- Oxidación de la pintura por exposición UV
-- Corrosión por aire salado en vehículos costeros
-- Grabado de manchas de agua por agua dura y lluvia
-- Adhesión de contaminantes (alquitrán, insectos, savia)
-
-### Detallado Completo (Interior + Exterior): Cada 3-4 Meses
-
-Para máxima protección, los detallados completos cada 3-4 meses proporcionan cuidado integral para las condiciones de Florida.
-
-### Lavados de Mantenimiento: Cada 2 Semanas
-
-Entre detallados completos, los lavados de mantenimiento cada 2 semanas eliminan:
-- Acumulación de sal del aire costero
-- Polen y residuos orgánicos
-- Excrementos de aves y restos de insectos
-- Contaminantes superficiales antes de que se adhieran a la pintura
-
-### Mantenimiento de Recubrimiento Cerámico: Cada 6 Meses
-
-Si su vehículo tiene recubrimiento cerámico, puede extender los detallados completos a cada 6 meses, pero aún necesita:
-- Lavados de mantenimiento cada 2 semanas
-- Inspección y retoque del recubrimiento cada 6 meses
-- Descontaminación completa anualmente
+<div class="not-prose my-8 overflow-x-auto">
+  <table class="w-full border-collapse rounded-xl overflow-hidden shadow-lg text-sm">
+    <thead>
+      <tr class="bg-[#0f2a4a] text-white">
+        <th class="px-5 py-4 text-left font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Tipo de Servicio</th>
+        <th class="px-5 py-4 text-left font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Frecuencia</th>
+        <th class="px-5 py-4 text-left font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Beneficios Clave</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-gray-200 bg-white">
+        <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Detallado Interior Completo</td>
+        <td class="px-5 py-4 text-gray-700">Cada 3-4 meses</td>
+        <td class="px-5 py-4 text-gray-600">Previene moho, manchas, olores y daño UV al tablero y molduras</td>
+      </tr>
+      <tr class="border-b border-gray-200 bg-gray-50">
+        <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Detallado Exterior Completo</td>
+        <td class="px-5 py-4 text-gray-700">Cada 3-4 meses</td>
+        <td class="px-5 py-4 text-gray-600">Protege contra oxidación, corrosión por sal, manchas de agua y adhesión de contaminantes</td>
+      </tr>
+      <tr class="border-b border-gray-200 bg-white">
+        <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Detallado Completo</td>
+        <td class="px-5 py-4 text-gray-700">Cada 3-4 meses</td>
+        <td class="px-5 py-4 text-gray-600">Cuidado integral interior + exterior para máxima protección contra el clima de Florida</td>
+      </tr>
+      <tr class="border-b border-gray-200 bg-gray-50">
+        <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Lavado de Mantenimiento</td>
+        <td class="px-5 py-4 text-gray-700">Cada 2 semanas</td>
+        <td class="px-5 py-4 text-gray-600">Elimina sal, polen, excrementos de aves y contaminantes superficiales entre detallados</td>
+      </tr>
+      <tr class="bg-white">
+        <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Mantenimiento de Recubrimiento Cerámico</td>
+        <td class="px-5 py-4 text-gray-700">Cada 6 meses</td>
+        <td class="px-5 py-4 text-gray-600">Inspección, retoque y descontaminación completa (lavados cada 2 semanas aún necesarios)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Frecuencia de Detallado por Uso del Vehículo
 
