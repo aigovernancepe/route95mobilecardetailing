@@ -84,9 +84,52 @@ const addOns = [
   { name: "Lavado de Alfombras", price: 60, from: true },
   { name: "Encerado de Autos", price: 60, from: true }
 ];
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const categorySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/servicios-de-detallado-fort-lauderdale/#service`,
+  "name": "Servicios de Detallado de Autos a Domicilio Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/servicios-de-detallado-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Paquetes de Detallado de Autos",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Lavado Rápido", "url": `${siteUrl}/es/lavado-rapido-fort-lauderdale/` },
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 50, "maxPrice": 80, "priceCurrency": "USD" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Nuevo Comienzo", "url": `${siteUrl}/es/nuevo-comienzo-fort-lauderdale/` },
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 80, "maxPrice": 110, "priceCurrency": "USD" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Limpieza Completa", "url": `${siteUrl}/es/limpieza-completa-fort-lauderdale/` },
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 130, "maxPrice": 160, "priceCurrency": "USD" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Renovación Premium", "url": `${siteUrl}/es/renovacion-premium-fort-lauderdale/` }
+      }
+    ]
+  }
+};
 ---
 
-<BaseLayout title={title} description={description} currentPage="/es/servicios-de-detallado-fort-lauderdale/">
+<BaseLayout title={title} description={description} currentPage="/es/servicios-de-detallado-fort-lauderdale/" schema={categorySchema}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">

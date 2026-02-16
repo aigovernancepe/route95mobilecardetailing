@@ -10,6 +10,58 @@ const parentCategory = {
   href: `${base}upholstery-cleaning-fort-lauderdale/`,
   title: "Upholstery Cleaning Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/pet-hair-removal-fort-lauderdale/#service`,
+  "name": "Pet Hair Removal Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/pet-hair-removal-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 50, "highPrice": 100 }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Pet Hair Removal Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pet hair removal in Fort Lauderdale costs $50 to $100 depending on how much hair we're dealing with."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Pet Hair Removal Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pet hair removal takes 30 to 45 minutes for most vehicles, depending on hair volume and how deeply it's embedded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Is Pet Hair So Hard to Remove?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pet hair has a barbed structure that grips fabric fibers. Static electricity makes it cling to surfaces. Regular vacuums don't have the suction or attachments to pull embedded hair free."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +71,7 @@ const parentCategory = {
   intro="Professional pet hair removal extracts embedded dog and cat hair from your car's seats, carpets, and hard-to-reach areas."
   currentPage="/pet-hair-removal-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

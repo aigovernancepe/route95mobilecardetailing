@@ -10,6 +10,63 @@ const parentCategory = {
   href: `${base}car-wash-fort-lauderdale/`,
   title: "Car Wash Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/wheel-cleaning-fort-lauderdale/#service`,
+  "name": "Wheel Cleaning Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/wheel-cleaning-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 40,
+    "highPrice": 80
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Wheel Cleaning Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional wheel cleaning in Fort Lauderdale costs $40 to $80 for all four wheels depending on size and condition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Wheel Cleaning Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wheel cleaning takes 30 to 45 minutes for all four wheels, including tire dressing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Professional Wheel Cleaning Matters",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Brake dust is corrosive. Left on your wheels, it bonds to the finish and eventually causes permanent pitting and damage."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +76,7 @@ const parentCategory = {
   intro="Professional wheel cleaning removes brake dust, road grime, and tar from your wheels and tires, restoring that showroom shine."
   currentPage="/wheel-cleaning-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

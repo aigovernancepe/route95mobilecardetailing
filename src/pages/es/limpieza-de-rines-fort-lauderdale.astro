@@ -11,6 +11,55 @@ const parentCategory = {
   href: url('car-wash-fort-lauderdale'),
   title: "Servicios de Lavado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/limpieza-de-rines-fort-lauderdale/#service`,
+  "name": "Limpieza de Rines Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/limpieza-de-rines-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 40,
+    "highPrice": 80
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta la Limpieza de Rines en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La limpieza profesional de rines en Fort Lauderdale cuesta de $40 a $80 por las cuatro ruedas dependiendo del tamano y condicion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma la Limpieza de Rines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La limpieza de rines toma de 30 a 45 minutos por las cuatro ruedas, incluyendo el acondicionamiento de llantas."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +69,7 @@ const parentCategory = {
   intro="La limpieza profesional de rines elimina el polvo de frenos, la mugre del camino y la brea de sus ruedas y llantas, restaurando ese brillo de sala de exhibicion."
   currentPage="/es/limpieza-de-rines-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

@@ -6,6 +6,49 @@ const base = import.meta.env.BASE_URL;
 const title = "Car Detailing Services Fort Lauderdale | Mobile | Route95";
 const description = "Mobile car detailing packages in Fort Lauderdale. Quick Wash, Fresh Start, Complete Clean & Premium Refresh. Compare packages, add-ons & pricing. Call 754-215-2272.";
 
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const categorySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/car-detailing-services-fort-lauderdale/#service`,
+  "name": "Mobile Car Detailing Services Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/car-detailing-services-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Car Detailing Packages",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Quick Wash", "url": `${siteUrl}/quick-wash-fort-lauderdale/` },
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 50, "maxPrice": 80, "priceCurrency": "USD" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Fresh Start", "url": `${siteUrl}/fresh-start-fort-lauderdale/` },
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 80, "maxPrice": 110, "priceCurrency": "USD" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Complete Clean", "url": `${siteUrl}/complete-clean-fort-lauderdale/` },
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 130, "maxPrice": 160, "priceCurrency": "USD" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Premium Refresh", "url": `${siteUrl}/premium-refresh-fort-lauderdale/` }
+      }
+    ]
+  }
+};
+
 const packages = [
   {
     name: "Quick Wash",
@@ -85,7 +128,7 @@ const addOns = [
 ];
 ---
 
-<BaseLayout title={title} description={description} currentPage="/car-detailing-services-fort-lauderdale/">
+<BaseLayout title={title} description={description} currentPage="/car-detailing-services-fort-lauderdale/" schema={categorySchema}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">

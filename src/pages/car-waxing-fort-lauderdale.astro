@@ -10,6 +10,63 @@ const parentCategory = {
   href: `${base}car-wash-fort-lauderdale/`,
   title: "Car Wash Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/car-waxing-fort-lauderdale/#service`,
+  "name": "Car Waxing Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/car-waxing-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 75,
+    "highPrice": 150
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Car Waxing Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional car waxing in Fort Lauderdale costs $75 to $150 depending on vehicle size and paint condition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Car Waxing Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Car waxing takes 1 to 2 hours depending on vehicle size and whether we're doing paint prep first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Does Your Car Need Waxing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wax creates a protective barrier between your paint and the environment. Without it, UV rays, salt air, and contaminants attack your clear coat directly."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +76,7 @@ const parentCategory = {
   intro="Professional car waxing applies a protective layer of carnauba wax that shields your paint from Florida's intense UV rays and adds deep, lasting shine."
   currentPage="/car-waxing-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

@@ -11,6 +11,57 @@ const parentCategory = {
   href: url('upholstery-cleaning-fort-lauderdale'),
   title: "Limpieza de Tapiceria"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/eliminacion-de-olor-a-humo-fort-lauderdale/#service`,
+  "name": "Eliminacion de Olor a Humo Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/eliminacion-de-olor-a-humo-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta la Eliminacion de Olor a Humo en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La eliminacion de olor a humo en Fort Lauderdale cuesta de $200 a $400 dependiendo de que tan intensamente se fumo en el auto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma la Eliminacion de Olor a Humo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La eliminacion de olor a humo toma de 3 a 4 horas para un tratamiento completo, a veces mas para dano severo por humo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por Que Es Tan Dificil Eliminar el Olor a Humo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las particulas de humo son microscopicas y cubren cada superficie de su auto. El olor se esconde en las fibras de la tela, el relleno de espuma, los ductos de ventilacion y los materiales porosos en toda la cabina."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +71,7 @@ const parentCategory = {
   intro="La eliminacion profesional de olor a humo elimina el olor a cigarrillo y cigarro del interior de su auto usando limpieza profunda y tratamiento de ozono."
   currentPage="/es/eliminacion-de-olor-a-humo-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

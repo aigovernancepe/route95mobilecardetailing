@@ -11,6 +11,65 @@ const parentCategory = {
   href: url('car-detailing-services-fort-lauderdale'),
   title: "Servicios de Detallado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/lavado-rapido-fort-lauderdale/#service`,
+  "name": "Lavado Rápido Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/lavado-rapido-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 50,
+    "highPrice": 80,
+    "offerCount": 3
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta un Lavado Rapido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los precios del Lavado Rapido comienzan en $50 para sedanes, $65 para SUVs y crossovers, y $80 para camionetas y vehiculos grandes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que Incluye el Lavado Rapido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El Lavado Rapido incluye lavado a mano, llantas y rines, limpieza de ventanas, limpieza interior y aspirado completo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma un Lavado Rapido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un Lavado Rapido tipicamente toma de 30 a 45 minutos dependiendo del tamano y condicion del vehiculo."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +79,7 @@ const parentCategory = {
   intro="Un refrescamiento rapido exterior e interior para mantener su auto impecable entre detallados completos. Vamos a su ubicacion con todo lo necesario."
   currentPage="/es/lavado-rapido-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

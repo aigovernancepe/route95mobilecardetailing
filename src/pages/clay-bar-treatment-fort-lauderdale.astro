@@ -10,6 +10,63 @@ const parentCategory = {
   href: `${base}car-wash-fort-lauderdale/`,
   title: "Car Wash Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/clay-bar-treatment-fort-lauderdale/#service`,
+  "name": "Clay Bar Treatment Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/clay-bar-treatment-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 75,
+    "highPrice": 150
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Clay Bar Treatment Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clay bar treatment in Fort Lauderdale costs $75 to $150 depending on vehicle size and contamination level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Clay Bar Treatment Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clay bar treatment takes 1 to 2 hours depending on vehicle size and how contaminated the paint is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Does Your Car Need Clay Bar Treatment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Contaminants embed in your clear coat and can't be removed by washing. Clay bar safely extracts them without damaging your paint."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +76,7 @@ const parentCategory = {
   intro="Clay bar treatment removes embedded contaminants from your paint that washing alone can't touch, leaving a glass-smooth surface ready for wax or sealant."
   currentPage="/clay-bar-treatment-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

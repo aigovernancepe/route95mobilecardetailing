@@ -11,6 +11,57 @@ const parentCategory = {
   href: url('upholstery-cleaning-fort-lauderdale'),
   title: "Limpieza de Tapicería"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/limpieza-a-vapor-fort-lauderdale/#service`,
+  "name": "Limpieza a Vapor Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/limpieza-a-vapor-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuesta la Limpieza a Vapor en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La limpieza a vapor en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamaño de su vehículo y qué tan exhaustiva quiera que sea."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Tiempo Toma la Limpieza a Vapor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La limpieza a vapor toma aproximadamente 45 minutos para la mayoría de los vehículos, con las superficies secándose en 1-2 horas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por Qué Elegir Limpieza a Vapor para Su Auto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El vapor mata el 99% de las bacterias, moho y alérgenos sin dejar residuos químicos. Es la opción de limpieza profunda más segura para su interior."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +71,7 @@ const parentCategory = {
   intro="La limpieza profesional a vapor desinfecta el interior de su auto usando vapor de alta temperatura que mata bacterias, moho y alérgenos sin químicos."
   currentPage="/es/limpieza-a-vapor-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

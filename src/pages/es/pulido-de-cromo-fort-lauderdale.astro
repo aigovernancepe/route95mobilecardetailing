@@ -11,6 +11,55 @@ const parentCategory = {
   href: url('car-wash-fort-lauderdale'),
   title: "Servicios de Lavado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/pulido-de-cromo-fort-lauderdale/#service`,
+  "name": "Pulido de Cromo Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/pulido-de-cromo-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 50,
+    "highPrice": 100
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta el Pulido de Cromo en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pulido profesional de cromo en Fort Lauderdale cuesta de $50 a $100 dependiendo de la cantidad de cromo y su condicion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma el Pulido de Cromo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pulido de cromo toma de 30 a 60 minutos dependiendo de la extension de las superficies de cromo y el nivel de oxidacion."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +69,7 @@ const parentCategory = {
   intro="El pulido profesional de cromo elimina la oxidacion, manchas de agua y corrosion para restaurar el brillo de espejo en las molduras de cromo, parachoques y acentos de su vehiculo."
   currentPage="/es/pulido-de-cromo-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

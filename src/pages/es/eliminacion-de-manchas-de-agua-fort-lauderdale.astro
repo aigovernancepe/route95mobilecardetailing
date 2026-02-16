@@ -11,6 +11,55 @@ const parentCategory = {
   href: url('car-wash-fort-lauderdale'),
   title: "Servicios de Lavado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/eliminacion-de-manchas-de-agua-fort-lauderdale/#service`,
+  "name": "Eliminacion de Manchas de Agua Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/eliminacion-de-manchas-de-agua-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 75,
+    "highPrice": 150
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta la Eliminacion de Manchas de Agua en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La eliminacion profesional de manchas de agua en Fort Lauderdale cuesta de $75 a $150 dependiendo de la severidad y el area de cobertura."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma la Eliminacion de Manchas de Agua?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La eliminacion de manchas de agua toma de 1 a 2 horas dependiendo de la severidad y cuantos paneles estan afectados."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +69,7 @@ const parentCategory = {
   intro="La eliminacion profesional de manchas de agua remueve los depositos minerales persistentes del agua dura, aspersores y lluvia que se graban en la pintura y el vidrio, restaurando un acabado impecable."
   currentPage="/es/eliminacion-de-manchas-de-agua-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

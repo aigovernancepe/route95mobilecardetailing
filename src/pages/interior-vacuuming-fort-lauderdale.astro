@@ -10,6 +10,58 @@ const parentCategory = {
   href: `${base}upholstery-cleaning-fort-lauderdale/`,
   title: "Upholstery Cleaning Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/interior-vacuuming-fort-lauderdale/#service`,
+  "name": "Interior Vacuuming Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/interior-vacuuming-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 25, "highPrice": 40 }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Interior Vacuuming Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interior vacuuming in Fort Lauderdale costs $25 to $40 depending on your vehicle size and condition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Interior Vacuuming Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interior vacuuming takes 20 to 30 minutes for most vehicles, depending on size and how much debris we're removing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Do You Need Professional Interior Vacuuming?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Consumer vacuums lack the suction power and specialized attachments needed to remove debris from automotive interiors."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +71,7 @@ const parentCategory = {
   intro="Professional interior vacuuming removes sand, dirt, and debris from every surface and crevice in your car using commercial-grade equipment."
   currentPage="/interior-vacuuming-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

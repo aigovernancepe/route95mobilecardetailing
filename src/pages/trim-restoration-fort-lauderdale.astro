@@ -10,6 +10,63 @@ const parentCategory = {
   href: `${base}car-wash-fort-lauderdale/`,
   title: "Car Wash Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/trim-restoration-fort-lauderdale/#service`,
+  "name": "Trim Restoration Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/trim-restoration-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 50,
+    "highPrice": 150
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Trim Restoration Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trim restoration in Fort Lauderdale costs $50 to $150 depending on how much trim your vehicle has and how badly it's faded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Trim Restoration Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trim restoration takes 30 to 90 minutes depending on how much trim your vehicle has."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Restore Your Trim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Restored trim makes any vehicle look dramatically newer and better maintained, improving both appearance and resale value."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +76,7 @@ const parentCategory = {
   intro="Black plastic trim fades to gray under Florida sun. We restore faded trim pieces to deep black and apply protectant to slow future UV damage. Makes an older vehicle look years newer."
   currentPage="/trim-restoration-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

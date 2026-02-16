@@ -10,6 +10,63 @@ const parentCategory = {
   href: `${base}car-wash-fort-lauderdale/`,
   title: "Car Wash Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/chrome-polishing-fort-lauderdale/#service`,
+  "name": "Chrome Polishing Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/chrome-polishing-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 50,
+    "highPrice": 100
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Chrome Polishing Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional chrome polishing in Fort Lauderdale costs $50 to $100 depending on the amount of chrome and condition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Chrome Polishing Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chrome polishing takes 30 to 60 minutes depending on the extent of chrome surfaces and oxidation level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Chrome Polishing Matters in South Florida",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Salt air is chrome's worst enemy. Living near Fort Lauderdale's beaches means constant exposure to corrosive salt that attacks chrome surfaces."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +76,7 @@ const parentCategory = {
   intro="Professional chrome polishing removes oxidation, water spots, and corrosion to restore the mirror-like shine to your vehicle's chrome trim, bumpers, and accents."
   currentPage="/chrome-polishing-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

@@ -6,9 +6,42 @@ import { localizedUrl } from '../../i18n/utils';
 const base = import.meta.env.BASE_URL;
 const title = "Lavado de Autos Fort Lauderdale | Servicio Móvil | Route95";
 const description = "Lavado de autos a domicilio en Fort Lauderdale. Vamos a tu casa u oficina con todo el equipo. Lavado a mano, encerado, barra de arcilla, limpieza de rines. Mismo día disponible. Llama al 754-215-2272.";
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const categorySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/lavado-de-autos-fort-lauderdale/#service`,
+  "name": "Lavado de Autos a Domicilio Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/lavado-de-autos-fort-lauderdale/`,
+  "serviceType": "Mobile Car Wash",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Lavado de Autos",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lavado a Mano", "url": `${siteUrl}/es/lavado-a-mano-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Encerado de Autos", "url": `${siteUrl}/es/encerado-de-autos-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tratamiento Barra de Arcilla", "url": `${siteUrl}/es/tratamiento-barra-de-arcilla-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de Rines", "url": `${siteUrl}/es/limpieza-de-rines-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Acondicionador de Llantas", "url": `${siteUrl}/es/acondicionador-de-llantas-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Insectos y Alquitrán", "url": `${siteUrl}/es/eliminacion-de-insectos-y-alquitran-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Manchas de Agua", "url": `${siteUrl}/es/eliminacion-de-manchas-de-agua-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Restauración de Molduras", "url": `${siteUrl}/es/restauracion-de-molduras-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pulido de Cromo", "url": `${siteUrl}/es/pulido-de-cromo-fort-lauderdale/` }}
+    ]
+  }
+};
 ---
 
-<BaseLayout title={title} description={description} currentPage="/es/lavado-de-autos-fort-lauderdale/">
+<BaseLayout title={title} description={description} currentPage="/es/lavado-de-autos-fort-lauderdale/" schema={categorySchema}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">

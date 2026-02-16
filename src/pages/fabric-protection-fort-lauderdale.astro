@@ -10,6 +10,58 @@ const parentCategory = {
   href: `${base}upholstery-cleaning-fort-lauderdale/`,
   title: "Upholstery Cleaning Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/fabric-protection-fort-lauderdale/#service`,
+  "name": "Fabric Protection Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/fabric-protection-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 50, "highPrice": 100 }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Fabric Protection Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fabric protection in Fort Lauderdale costs $50 to $100 depending on your vehicle size and how much fabric needs coating."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Fabric Protection Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fabric protection takes about 15 minutes to apply, with the coating fully cured within 24 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Do Your Fabric Seats Need Protection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unprotected fabric absorbs spills instantly, creating stains that are difficult or impossible to fully remove. Protection gives you a second chance."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +71,7 @@ const parentCategory = {
   intro="Professional fabric protection creates an invisible barrier on your car's seats and carpets that makes spills bead up instead of soaking in."
   currentPage="/fabric-protection-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

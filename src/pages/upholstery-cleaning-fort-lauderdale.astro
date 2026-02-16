@@ -5,9 +5,45 @@ import InstagramFeed from '../components/InstagramFeed.astro';
 const base = import.meta.env.BASE_URL;
 const title = "Upholstery Cleaning Fort Lauderdale | Mobile Service | Route95";
 const description = "Mobile upholstery cleaning in Fort Lauderdale. Seats, carpets, leather, odor removal. We come to you with professional equipment. Same-day available. Call 754-215-2272.";
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const categorySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/upholstery-cleaning-fort-lauderdale/#service`,
+  "name": "Mobile Upholstery Cleaning Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/upholstery-cleaning-fort-lauderdale/`,
+  "serviceType": "Mobile Upholstery Cleaning",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Upholstery Cleaning Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seat Shampooing", "url": `${siteUrl}/seat-shampooing-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carpet Shampooing", "url": `${siteUrl}/carpet-shampooing-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leather Cleaning", "url": `${siteUrl}/leather-cleaning-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leather Conditioning", "url": `${siteUrl}/leather-conditioning-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Steam Cleaning", "url": `${siteUrl}/steam-cleaning-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Odor Removal", "url": `${siteUrl}/odor-removal-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smoke Odor Removal", "url": `${siteUrl}/smoke-odor-removal-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pet Hair Removal", "url": `${siteUrl}/pet-hair-removal-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Vacuuming", "url": `${siteUrl}/interior-vacuuming-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dashboard Cleaning", "url": `${siteUrl}/dashboard-cleaning-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Protection", "url": `${siteUrl}/interior-protection-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fabric Protection", "url": `${siteUrl}/fabric-protection-fort-lauderdale/` }}
+    ]
+  }
+};
 ---
 
-<BaseLayout title={title} description={description} currentPage="/upholstery-cleaning-fort-lauderdale/">
+<BaseLayout title={title} description={description} currentPage="/upholstery-cleaning-fort-lauderdale/" schema={categorySchema}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">

@@ -11,6 +11,57 @@ const parentCategory = {
   href: url('upholstery-cleaning-fort-lauderdale'),
   title: "Limpieza de Tapicería"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/acondicionamiento-de-cuero-fort-lauderdale/#service`,
+  "name": "Acondicionamiento de Cuero Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/acondicionamiento-de-cuero-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuesta el Acondicionamiento de Cuero en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El acondicionamiento de cuero en Fort Lauderdale cuesta de $40 a $75 dependiendo del tamaño de su vehículo y la condición del cuero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Tiempo Toma el Acondicionamiento de Cuero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El acondicionamiento de cuero toma aproximadamente 20 minutos para la mayoría de los vehículos, con el producto absorbiéndose completamente en una hora."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por Qué Su Cuero Necesita Acondicionamiento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El sol intenso de Florida seca el cuero más rápido que en cualquier otro lugar. El acondicionamiento reemplaza la humedad perdida y crea una barrera contra el daño UV."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +71,7 @@ const parentCategory = {
   intro="El acondicionamiento profesional de cuero restaura la humedad y flexibilidad del cuero de su auto, previniendo las grietas que causa el sol de Florida."
   currentPage="/es/acondicionamiento-de-cuero-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

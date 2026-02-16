@@ -11,6 +11,57 @@ const parentCategory = {
   href: url('upholstery-cleaning-fort-lauderdale'),
   title: "Limpieza de Tapicería"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/eliminacion-de-pelo-de-mascota-fort-lauderdale/#service`,
+  "name": "Eliminación de Pelo de Mascota Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/eliminacion-de-pelo-de-mascota-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuesta la Eliminación de Pelo de Mascota en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La eliminación de pelo de mascota en Fort Lauderdale cuesta de $50 a $100 dependiendo de la cantidad de pelo con la que estemos lidiando."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Tiempo Toma la Eliminación de Pelo de Mascota?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La eliminación de pelo de mascota toma de 30 a 45 minutos para la mayoría de los vehículos, dependiendo del volumen de pelo y qué tan profundamente esté incrustado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por Qué el Pelo de Mascota es Tan Difícil de Eliminar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El pelo de mascota tiene una estructura con púas que se agarra a las fibras de la tela. La electricidad estática lo hace adherirse a las superficies. Las aspiradoras regulares no tienen la succión o accesorios para extraer el pelo incrustado."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +71,7 @@ const parentCategory = {
   intro="La eliminación profesional de pelo de mascota extrae el pelo incrustado de perro y gato de los asientos, alfombras y áreas de difícil acceso de su auto."
   currentPage="/es/eliminacion-de-pelo-de-mascota-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

@@ -10,6 +10,58 @@ const parentCategory = {
   href: `${base}upholstery-cleaning-fort-lauderdale/`,
   title: "Upholstery Cleaning Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/odor-removal-fort-lauderdale/#service`,
+  "name": "Odor Removal Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/odor-removal-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 75, "highPrice": 200 }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Car Odor Removal Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Car odor removal in Fort Lauderdale costs $75 to $200 depending on the odor source and treatment needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Odor Removal Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Odor removal takes 1 to 2 hours depending on the treatment method and severity of the smell."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Do Cars Develop Bad Odors in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Florida's heat and humidity accelerate odor development. Food spoils faster, moisture breeds mold, and bacteria thrive in warm, damp conditions."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +71,7 @@ const parentCategory = {
   intro="Professional odor removal eliminates bad smells from your car by treating the source, not just covering it up with air fresheners."
   currentPage="/odor-removal-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

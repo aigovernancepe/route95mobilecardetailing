@@ -11,6 +11,63 @@ const parentCategory = {
   href: url('car-wash-fort-lauderdale'),
   title: "Servicios de Lavado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/lavado-a-mano-fort-lauderdale/#service`,
+  "name": "Lavado a Mano Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/lavado-a-mano-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 30,
+    "highPrice": 50
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta un Lavado a Mano en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un lavado a mano movil profesional en Fort Lauderdale generalmente cuesta entre $30 y $50 dependiendo del tamano de su vehiculo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma un Lavado a Mano?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un lavado a mano completo toma aproximadamente 30 a 45 minutos dependiendo del tamano del vehiculo y que tan sucio este."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por Que Elegir el Lavado a Mano Sobre los Lavados Automaticos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El lavado a mano es el unico metodo seguro para limpiar su vehiculo sin causar danos a la pintura por cepillos y agua reciclada."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +77,7 @@ const parentCategory = {
   intro="El lavado profesional a mano elimina la suciedad de manera segura sin rayar su pintura, a diferencia de los lavados automaticos que danan la capa transparente con el tiempo."
   currentPage="/es/lavado-a-mano-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

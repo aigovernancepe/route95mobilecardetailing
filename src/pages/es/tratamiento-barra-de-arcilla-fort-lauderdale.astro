@@ -11,6 +11,63 @@ const parentCategory = {
   href: url('car-wash-fort-lauderdale'),
   title: "Servicios de Lavado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/tratamiento-barra-de-arcilla-fort-lauderdale/#service`,
+  "name": "Tratamiento Barra de Arcilla Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/tratamiento-barra-de-arcilla-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 75,
+    "highPrice": 150
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta el Tratamiento de Barra de Arcilla en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El tratamiento de barra de arcilla en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamano del vehiculo y el nivel de contaminacion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma el Tratamiento de Barra de Arcilla?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El tratamiento de barra de arcilla toma de 1 a 2 horas dependiendo del tamano del vehiculo y que tan contaminada este la pintura."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por Que Su Auto Necesita Tratamiento de Barra de Arcilla?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los contaminantes se incrustan en su capa transparente y no pueden eliminarse con el lavado. La barra de arcilla los extrae de manera segura sin danar su pintura."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +77,7 @@ const parentCategory = {
   intro="El tratamiento con barra de arcilla elimina los contaminantes incrustados en su pintura que el lavado solo no puede remover, dejando una superficie suave como el vidrio lista para cera o sellador."
   currentPage="/es/tratamiento-barra-de-arcilla-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

@@ -10,6 +10,58 @@ const parentCategory = {
   href: `${base}upholstery-cleaning-fort-lauderdale/`,
   title: "Upholstery Cleaning Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/leather-conditioning-fort-lauderdale/#service`,
+  "name": "Leather Conditioning Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/leather-conditioning-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 40, "highPrice": 75 }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Leather Conditioning Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leather conditioning in Fort Lauderdale costs $40 to $75 depending on your vehicle size and leather condition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Leather Conditioning Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leather conditioning takes about 20 minutes for most vehicles, with the product absorbing fully within an hour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Does Your Leather Need Conditioning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Florida's intense sun dries out leather faster than anywhere else. Conditioning replaces lost moisture and creates a barrier against UV damage."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +71,7 @@ const parentCategory = {
   intro="Professional leather conditioning restores moisture and flexibility to your car's leather, preventing the cracking that Florida sun causes."
   currentPage="/leather-conditioning-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

@@ -10,6 +10,57 @@ const parentCategory = {
   href: `${base}car-detailing-services-fort-lauderdale/`,
   title: "Car Detailing Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/complete-clean-fort-lauderdale/#service`,
+  "name": "Complete Clean Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/complete-clean-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 130,
+    "highPrice": 160,
+    "offerCount": 3
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does the Complete Clean Cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Complete Clean pricing is $130 for sedans, $145 for SUVs and crossovers, and $160 for trucks and large vehicles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does the Complete Clean Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Complete Clean takes approximately 1.5 to 2 hours depending on vehicle size and condition."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +70,7 @@ const parentCategory = {
   intro="Our most thorough package — every surface inside and out gets professional attention, trunk included. This is the detail your vehicle deserves."
   currentPage="/complete-clean-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

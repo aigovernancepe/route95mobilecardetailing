@@ -10,6 +10,63 @@ const parentCategory = {
   href: `${base}car-wash-fort-lauderdale/`,
   title: "Car Wash Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/water-spot-removal-fort-lauderdale/#service`,
+  "name": "Water Spot Removal Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/water-spot-removal-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 75,
+    "highPrice": 150
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Water Spot Removal Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional water spot removal in Fort Lauderdale costs $75 to $150 depending on severity and coverage area."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Water Spot Removal Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Water spot removal takes 1 to 2 hours depending on severity and how many panels are affected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Water Spot Removal Matters in South Florida",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fort Lauderdale's hard water and intense sun create perfect conditions for permanent water spot etching within hours of exposure."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +76,7 @@ const parentCategory = {
   intro="Professional water spot removal eliminates stubborn mineral deposits from hard water, sprinklers, and rain that etch into paint and glass, restoring a flawless finish."
   currentPage="/water-spot-removal-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

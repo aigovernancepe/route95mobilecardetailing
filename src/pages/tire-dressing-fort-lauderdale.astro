@@ -10,6 +10,63 @@ const parentCategory = {
   href: `${base}car-wash-fort-lauderdale/`,
   title: "Car Wash Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/tire-dressing-fort-lauderdale/#service`,
+  "name": "Tire Dressing Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/tire-dressing-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 25,
+    "highPrice": 40
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Tire Dressing Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional tire dressing in Fort Lauderdale costs $25 to $40 for all four tires."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Tire Dressing Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tire dressing takes 10 to 15 minutes for all four tires when added to a wash or detail service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Professional Tire Dressing Matters in South Florida",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fort Lauderdale's climate is brutal on tires. UV radiation, salt air, and humidity cause premature aging that proper dressing prevents."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +76,7 @@ const parentCategory = {
   intro="Professional tire dressing gives your tires a rich, dark finish while protecting them from Florida's intense UV rays, salt air, and road grime."
   currentPage="/tire-dressing-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

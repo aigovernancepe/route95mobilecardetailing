@@ -11,6 +11,55 @@ const parentCategory = {
   href: url('car-wash-fort-lauderdale'),
   title: "Servicios de Lavado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/acondicionador-de-llantas-fort-lauderdale/#service`,
+  "name": "Acondicionador de Llantas Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/acondicionador-de-llantas-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 25,
+    "highPrice": 40
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta el Acondicionador de Llantas en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El acondicionador de llantas profesional en Fort Lauderdale cuesta de $25 a $40 para las cuatro llantas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma el Acondicionador de Llantas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El acondicionador de llantas toma de 10 a 15 minutos para las cuatro llantas cuando se agrega a un servicio de lavado o detallado."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +69,7 @@ const parentCategory = {
   intro="El acondicionador de llantas profesional le da a sus llantas un acabado rico y oscuro mientras las protege de los intensos rayos UV de Florida, el aire salado y la suciedad del camino."
   currentPage="/es/acondicionador-de-llantas-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

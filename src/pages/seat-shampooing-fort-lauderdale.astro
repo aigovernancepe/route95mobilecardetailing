@@ -10,6 +10,58 @@ const parentCategory = {
   href: `${base}upholstery-cleaning-fort-lauderdale/`,
   title: "Upholstery Cleaning Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/seat-shampooing-fort-lauderdale/#service`,
+  "name": "Seat Shampooing Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/seat-shampooing-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 75 }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Seat Shampooing Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seat shampooing in Fort Lauderdale starts from $75 depending on your vehicle size and the condition of your seats."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Seat Shampooing Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seat shampooing takes about 45 minutes for most vehicles, with drying time of 2-4 hours depending on humidity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Do Your Car Seats Need Shampooing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fabric seats absorb sweat, body oils, and spills that vacuuming alone cannot remove. Shampooing extracts what's trapped deep in the fibers."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +71,7 @@ const parentCategory = {
   intro="Professional seat shampooing removes stains, odors, and ground-in dirt from your car's fabric seats using hot water extraction."
   currentPage="/seat-shampooing-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

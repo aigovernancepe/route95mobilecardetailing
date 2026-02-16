@@ -6,9 +6,45 @@ import { localizedUrl } from '../../i18n/utils';
 const base = import.meta.env.BASE_URL;
 const title = "Limpieza de Tapicería Fort Lauderdale | Servicio Móvil | Route95";
 const description = "Limpieza de tapicería a domicilio en Fort Lauderdale. Asientos, alfombras, cuero, eliminación de olores. Vamos a ti con equipo profesional. Mismo día disponible. Llama al 754-215-2272.";
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const categorySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/limpieza-de-tapiceria-fort-lauderdale/#service`,
+  "name": "Limpieza de Tapicería a Domicilio Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/limpieza-de-tapiceria-fort-lauderdale/`,
+  "serviceType": "Mobile Upholstery Cleaning",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Limpieza de Tapicería",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lavado de Asientos", "url": `${siteUrl}/es/lavado-de-asientos-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lavado de Alfombras", "url": `${siteUrl}/es/lavado-de-alfombras-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de Cuero", "url": `${siteUrl}/es/limpieza-de-cuero-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Acondicionamiento de Cuero", "url": `${siteUrl}/es/acondicionamiento-de-cuero-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza a Vapor", "url": `${siteUrl}/es/limpieza-a-vapor-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Olores", "url": `${siteUrl}/es/eliminacion-de-olores-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Olor a Humo", "url": `${siteUrl}/es/eliminacion-de-olor-a-humo-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Pelo de Mascota", "url": `${siteUrl}/es/eliminacion-de-pelo-de-mascota-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aspirado Interior", "url": `${siteUrl}/es/aspirado-interior-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de Tablero", "url": `${siteUrl}/es/limpieza-de-tablero-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Protección Interior", "url": `${siteUrl}/es/proteccion-interior-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Protección de Tela", "url": `${siteUrl}/es/proteccion-de-tela-fort-lauderdale/` }}
+    ]
+  }
+};
 ---
 
-<BaseLayout title={title} description={description} currentPage="/es/limpieza-de-tapiceria-fort-lauderdale/">
+<BaseLayout title={title} description={description} currentPage="/es/limpieza-de-tapiceria-fort-lauderdale/" schema={categorySchema}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">
