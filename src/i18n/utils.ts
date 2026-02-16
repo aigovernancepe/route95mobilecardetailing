@@ -89,6 +89,7 @@ export function getLocalizedNavLinks(locale: Locale) {
       { href: url('car-wash-fort-lauderdale'), label: t.header.carWash },
       { href: url('upholstery-cleaning-fort-lauderdale'), label: t.header.upholsteryCleaning },
       { href: url('car-detailing-services-fort-lauderdale'), label: t.header.detailingServices },
+      { href: url('blog'), label: t.blog.title },
       { href: url('about'), label: t.header.about },
       { href: url('contact'), label: t.header.contact },
     ],

@@ -1,0 +1,101 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { getTranslations, localizedUrl, type Locale } from '../i18n/utils';
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  author: string;
+}
+
+const { title, description, date, author } = Astro.props;
+const locale = (Astro.currentLocale ?? 'en') as Locale;
+const t = getTranslations(locale);
+const blogUrl = locale === 'es' ? '/es/blog/' : '/blog/';
+const contactUrl = localizedUrl(locale, 'contact');
+
+const formattedDate = date.toLocaleDateString(locale === 'es' ? 'es-US' : 'en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "datePublished": date.toISOString(),
+  "author": {
+    "@type": "Person",
+    "name": author,
+  },
+  "publisher": {
+    "@id": "https://route95mobilecardetailing.com/#organization",
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": Astro.url.href,
+  },
+};
+---
+
+<BaseLayout title={`${title} | Route95 Blog`} description={description} currentPage="/blog/" schema={articleSchema}>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <a href={blogUrl} class="inline-flex items-center gap-2 text-gray-200 hover:text-[#c0c7cf] mb-4 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        {t.blog.backToBlog}
+      </a>
+      <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6">{title}</h1>
+      <div class="flex items-center gap-4 text-gray-200">
+        <span>{author}</span>
+        <span>·</span>
+        <time datetime={date.toISOString()}>{formattedDate}</time>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="prose prose-lg max-w-none
+        [&_h2]:font-[Oswald,sans-serif] [&_h2]:text-[#0f2a4a] [&_h2]:text-2xl [&_h2]:lg:text-3xl [&_h2]:font-bold [&_h2]:mt-10 [&_h2]:mb-4 [&_h2]:uppercase [&_h2]:tracking-wide
+        [&_h3]:font-[Oswald,sans-serif] [&_h3]:text-[#0f2a4a] [&_h3]:text-xl [&_h3]:lg:text-2xl [&_h3]:font-bold [&_h3]:mt-8 [&_h3]:mb-3 [&_h3]:uppercase [&_h3]:tracking-wide
+        [&_p]:text-gray-600 [&_p]:mb-4 [&_p]:leading-relaxed
+        [&_ul]:space-y-2 [&_ul]:mb-6 [&_ul]:pl-0
+        [&_ol]:space-y-2 [&_ol]:mb-6
+        [&_li]:text-gray-600
+        [&_strong]:text-[#0f2a4a]
+        [&_a]:text-[#1a3d6b] [&_a]:underline [&_a]:hover:text-[#0f2a4a]
+      ">
+        <slot />
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA Section -->
+  <section class="py-12 lg:py-16 bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">{t.serviceLayout.readyToGetStarted}</h2>
+      <p class="text-xl text-gray-200 mb-8">
+        {t.serviceLayout.ctaDescription}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+17542152272" class="btn-accent text-lg flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          {t.serviceLayout.call}
+        </a>
+        <a href={contactUrl} class="bg-white text-[#0f2a4a] px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+          {t.serviceLayout.requestAQuote}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

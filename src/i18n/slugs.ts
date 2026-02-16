@@ -33,6 +33,7 @@ export const slugMap: Record<string, string> = {
   'premium-refresh-fort-lauderdale': 'renovacion-premium-fort-lauderdale',
   'fabric-protection-fort-lauderdale': 'proteccion-de-tela-fort-lauderdale',
   'interior-protection-fort-lauderdale': 'proteccion-interior-fort-lauderdale',
+  'blog': 'blog',
 };
 
 // Reverse map: Spanish slug -> English slug

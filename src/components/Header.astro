@@ -27,6 +27,7 @@ const upholsteryUrl = localizedUrl(locale, 'upholstery-cleaning-fort-lauderdale'
 const detailingUrl = localizedUrl(locale, 'car-detailing-services-fort-lauderdale');
 const aboutUrl = localizedUrl(locale, 'about');
 const contactUrl = localizedUrl(locale, 'contact');
+const blogUrl = localizedUrl(locale, 'blog');
 ---
 
 <header class="sticky top-0 z-50 bg-white shadow-md">
@@ -140,6 +141,12 @@ const contactUrl = localizedUrl(locale, 'contact');
           </div>
         </div>
 
+        <a
+          href={blogUrl}
+          class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium ${currentPage.includes('/blog/') ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
+        >
+          {t.blog.title}
+        </a>
         <a
           href={aboutUrl}
           class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium ${currentPage === '/about/' || currentPage === '/es/nosotros/' ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
