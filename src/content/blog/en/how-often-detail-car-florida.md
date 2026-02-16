@@ -46,40 +46,44 @@ Florida presents a perfect storm of conditions that damage vehicles:
 
 Not every service needs the same frequency. Here's the optimal schedule for Florida vehicles:
 
-### Full Interior Detail: Every 3-4 Months
-
-Florida's humidity makes interior detailing critical. A full interior detail every quarter prevents:
-- Mold and mildew buildup in carpets and seats
-- Permanent staining from sweat and humidity
-- Odor penetration into upholstery
-- UV damage to dashboard and trim pieces
-
-### Full Exterior Detail: Every 3-4 Months
-
-Quarterly exterior details protect against:
-- Paint oxidation from UV exposure
-- Salt air corrosion on coastal vehicles
-- Water spot etching from hard water and rain
-- Contaminant bonding (tar, bugs, tree sap)
-
-### Complete Detail (Interior + Exterior): Every 3-4 Months
-
-For maximum protection, complete details every 3-4 months provide comprehensive care for Florida conditions.
-
-### Maintenance Washes: Every 2 Weeks
-
-Between full details, maintenance washes every 2 weeks remove:
-- Salt accumulation from coastal air
-- Pollen and organic debris
-- Bird droppings and bug splatter
-- Surface contaminants before they bond to paint
-
-### Ceramic Coating Maintenance: Every 6 Months
-
-If your vehicle has ceramic coating, you can extend full details to every 6 months, but still need:
-- Maintenance washes every 2 weeks
-- Coating inspection and top-up every 6 months
-- Full decontamination annually
+<div class="not-prose my-8 overflow-x-auto">
+  <table class="w-full border-collapse rounded-xl overflow-hidden shadow-lg text-sm">
+    <thead>
+      <tr class="bg-[#0f2a4a] text-white">
+        <th class="px-5 py-4 text-left font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Service Type</th>
+        <th class="px-5 py-4 text-left font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Frequency</th>
+        <th class="px-5 py-4 text-left font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Key Benefits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-gray-200 bg-white">
+        <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Full Interior Detail</td>
+        <td class="px-5 py-4 text-gray-700">Every 3-4 months</td>
+        <td class="px-5 py-4 text-gray-600">Prevents mold, stains, odors, and UV damage to dashboard and trim</td>
+      </tr>
+      <tr class="border-b border-gray-200 bg-gray-50">
+        <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Full Exterior Detail</td>
+        <td class="px-5 py-4 text-gray-700">Every 3-4 months</td>
+        <td class="px-5 py-4 text-gray-600">Protects against paint oxidation, salt corrosion, water spots, and contaminant bonding</td>
+      </tr>
+      <tr class="border-b border-gray-200 bg-white">
+        <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Complete Detail</td>
+        <td class="px-5 py-4 text-gray-700">Every 3-4 months</td>
+        <td class="px-5 py-4 text-gray-600">Comprehensive interior + exterior care for maximum Florida climate protection</td>
+      </tr>
+      <tr class="border-b border-gray-200 bg-gray-50">
+        <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Maintenance Wash</td>
+        <td class="px-5 py-4 text-gray-700">Every 2 weeks</td>
+        <td class="px-5 py-4 text-gray-600">Removes salt, pollen, bird droppings, and surface contaminants between details</td>
+      </tr>
+      <tr class="bg-white">
+        <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Ceramic Coating Maintenance</td>
+        <td class="px-5 py-4 text-gray-700">Every 6 months</td>
+        <td class="px-5 py-4 text-gray-600">Coating inspection, top-up, and full decontamination (bi-weekly washes still needed)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Detailing Frequency by Vehicle Usage
 
