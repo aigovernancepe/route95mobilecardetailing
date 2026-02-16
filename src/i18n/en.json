@@ -70,6 +70,11 @@
     "message": "Hi! I'd like to get a quote for mobile car detailing.",
     "ariaLabel": "Chat on WhatsApp"
   },
+  "blog": {
+    "title": "Blog",
+    "backToBlog": "Back to Blog",
+    "readMore": "Read More"
+  },
   "nav": {
     "handWash": "Hand Wash",
     "carWaxing": "Car Waxing",

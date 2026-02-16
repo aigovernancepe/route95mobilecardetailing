@@ -39,6 +39,19 @@ export default defineConfig({
           item.priority = 0.9;
           item.changefreq = 'weekly';
         }
+        // Blog index pages
+        else if (
+          item.url.match(/\/blog\/$/) ||
+          item.url.match(/\/es\/blog\/$/)
+        ) {
+          item.priority = 0.8;
+          item.changefreq = 'weekly';
+        }
+        // Blog posts
+        else if (item.url.includes('/blog/')) {
+          item.priority = 0.6;
+          item.changefreq = 'monthly';
+        }
         // About and Contact pages
         else if (
           item.url.includes('/about/') ||
