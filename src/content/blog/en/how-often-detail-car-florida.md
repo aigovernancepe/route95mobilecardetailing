@@ -208,10 +208,24 @@ Quarterly detailing prevents far more expensive corrections and preserves vehicl
 
 Here's a practical quarterly schedule:
 
-**Q1 (Jan-Mar):** Complete detail after winter (dry season, less harsh)
-**Q2 (Apr-Jun):** Complete detail before peak summer heat
-**Q3 (Jul-Sep):** Complete detail mid-summer (peak UV damage period)
-**Q4 (Oct-Dec):** Complete detail after rainy season
+<div class="grid grid-cols-2 gap-4 not-prose my-6">
+  <div class="bg-gray-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-[#0f2a4a] font-[Oswald,sans-serif] uppercase tracking-wide">Q1 (Jan-Mar)</h4>
+    <p class="text-sm text-gray-600">Complete detail after winter (dry season, less harsh)</p>
+  </div>
+  <div class="bg-gray-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-[#0f2a4a] font-[Oswald,sans-serif] uppercase tracking-wide">Q2 (Apr-Jun)</h4>
+    <p class="text-sm text-gray-600">Complete detail before peak summer heat</p>
+  </div>
+  <div class="bg-gray-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-[#0f2a4a] font-[Oswald,sans-serif] uppercase tracking-wide">Q3 (Jul-Sep)</h4>
+    <p class="text-sm text-gray-600">Complete detail mid-summer (peak UV damage period)</p>
+  </div>
+  <div class="bg-gray-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-[#0f2a4a] font-[Oswald,sans-serif] uppercase tracking-wide">Q4 (Oct-Dec)</h4>
+    <p class="text-sm text-gray-600">Complete detail after rainy season</p>
+  </div>
+</div>
 
 Between each quarterly detail, maintain with:
 - Bi-weekly maintenance washes
