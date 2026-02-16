@@ -81,7 +81,16 @@ const businessSchema = {
     }
   ],
   "priceRange": "$$",
-  "availableLanguage": ["en", "es"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-754-215-2272",
+    "email": "contact@route95mobilecardetailing.com",
+    "contactType": "customer service",
+    "availableLanguage": [
+      { "@type": "Language", "name": "English", "alternateName": "en" },
+      { "@type": "Language", "name": "Spanish", "alternateName": "es" }
+    ]
+  },
   "founder": {
     "@type": "Person",
     "name": "Gustavo Moya"
