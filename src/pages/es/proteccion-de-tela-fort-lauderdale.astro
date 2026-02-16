@@ -11,6 +11,57 @@ const parentCategory = {
   href: url('upholstery-cleaning-fort-lauderdale'),
   title: "Limpieza de Tapiceria"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/proteccion-de-tela-fort-lauderdale/#service`,
+  "name": "Proteccion de Tela Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/proteccion-de-tela-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta la Proteccion de Tela en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La proteccion de tela en Fort Lauderdale cuesta de $50 a $100 dependiendo del tamano de su vehiculo y cuanta tela necesita revestimiento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma la Proteccion de Tela?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La proteccion de tela toma aproximadamente 15 minutos para aplicar, con el revestimiento completamente curado en 24 horas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por Que Sus Asientos de Tela Necesitan Proteccion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La tela sin proteccion absorbe los derrames instantaneamente, creando manchas que son dificiles o imposibles de remover completamente. La proteccion le da una segunda oportunidad."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +71,7 @@ const parentCategory = {
   intro="La proteccion profesional de tela crea una barrera invisible en los asientos y alfombras de su auto que hace que los derrames se perlen en vez de absorberse."
   currentPage="/es/proteccion-de-tela-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

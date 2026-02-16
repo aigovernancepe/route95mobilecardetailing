@@ -10,6 +10,58 @@ const parentCategory = {
   href: `${base}upholstery-cleaning-fort-lauderdale/`,
   title: "Upholstery Cleaning Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/steam-cleaning-fort-lauderdale/#service`,
+  "name": "Steam Cleaning Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/steam-cleaning-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 75, "highPrice": 150 }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Steam Cleaning Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Steam cleaning in Fort Lauderdale costs $75 to $150 depending on your vehicle size and how thorough you want us to be."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Steam Cleaning Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Steam cleaning takes about 45 minutes for most vehicles, with surfaces drying within 1-2 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Choose Steam Cleaning for Your Car?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Steam kills 99% of bacteria, mold, and allergens without leaving chemical residue behind. It's the safest deep-clean option for your interior."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +71,7 @@ const parentCategory = {
   intro="Professional steam cleaning sanitizes your car's interior using high-temperature vapor that kills bacteria, mold, and allergens without chemicals."
   currentPage="/steam-cleaning-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

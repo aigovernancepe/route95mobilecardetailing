@@ -11,6 +11,65 @@ const parentCategory = {
   href: url('car-detailing-services-fort-lauderdale'),
   title: "Servicios de Detallado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/limpieza-completa-fort-lauderdale/#service`,
+  "name": "Limpieza Completa Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/limpieza-completa-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 130,
+    "highPrice": 160,
+    "offerCount": 3
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta la Limpieza Completa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los precios de la Limpieza Completa son $130 para sedanes, $145 para SUVs y crossovers, y $160 para camionetas y vehiculos grandes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que Incluye la Limpieza Completa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Limpieza Completa incluye lavado a mano, llantas y rines, acondicionador de llantas, guardafangos, limpieza de ventanas, tablero, consola central, tapetes y aspirado completo incluyendo cajuela."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma la Limpieza Completa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Limpieza Completa toma aproximadamente de 1.5 a 2 horas dependiendo del tamano y condicion del vehiculo."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +79,7 @@ const parentCategory = {
   intro="Nuestro paquete mas completo — cada superficie por dentro y por fuera recibe atencion profesional, cajuela incluida. Este es el detallado que su vehiculo merece."
   currentPage="/es/limpieza-completa-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

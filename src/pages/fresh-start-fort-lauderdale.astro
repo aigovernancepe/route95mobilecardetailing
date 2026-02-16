@@ -10,6 +10,57 @@ const parentCategory = {
   href: `${base}car-detailing-services-fort-lauderdale/`,
   title: "Car Detailing Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/fresh-start-fort-lauderdale/#service`,
+  "name": "Fresh Start Detailing Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/fresh-start-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 80,
+    "highPrice": 110,
+    "offerCount": 3
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does the Fresh Start Cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fresh Start pricing is $80 for sedans, $95 for SUVs and crossovers, and $110 for trucks and large vehicles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does the Fresh Start Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Fresh Start package takes approximately 45 minutes to 1 hour depending on vehicle size and condition."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +70,7 @@ const parentCategory = {
   intro="A step up from the Quick Wash — tire dressing, full interior wipe down, and dedicated attention to your dashboard and center console. The perfect mid-range package."
   currentPage="/fresh-start-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

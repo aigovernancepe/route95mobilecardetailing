@@ -10,6 +10,27 @@ const parentCategory = {
   href: url('car-detailing-services-fort-lauderdale'),
   title: "Servicios de Detallado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/renovacion-premium-fort-lauderdale/#service`,
+  "name": "Renovación Premium Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/renovacion-premium-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ]
+};
+
+const schemas = [serviceSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +40,7 @@ const parentCategory = {
   intro="Champu interior profundo con limpieza a vapor — el detallado movil definitivo. Todo lo incluido en la Limpieza Completa mas restauracion interior de grado profesional."
   currentPage="/es/renovacion-premium-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

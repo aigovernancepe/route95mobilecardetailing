@@ -11,6 +11,65 @@ const parentCategory = {
   href: url('upholstery-cleaning-fort-lauderdale'),
   title: "Limpieza de Tapicería"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/limpieza-de-cuero-fort-lauderdale/#service`,
+  "name": "Limpieza de Cuero Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/limpieza-de-cuero-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuesta la Limpieza de Cuero en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La limpieza profesional de cuero en Fort Lauderdale típicamente cuesta entre $50 y $100 dependiendo de cuántas superficies de cuero tenga su vehículo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Tiempo Toma la Limpieza de Cuero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La limpieza de cuero toma aproximadamente 30 minutos para la mayoría de los vehículos con áreas de asientos de cuero estándar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por Qué el Cuero Necesita Limpieza Profesional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El cuero absorbe aceites y contaminantes que los productos de limpieza caseros no pueden eliminar de forma segura sin arriesgar dañar el material."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Debo Acondicionar el Cuero Después de la Limpieza?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El acondicionamiento del cuero después de la limpieza restaura la humedad y crea protección contra el daño futuro del sol y la humedad de Florida."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +79,7 @@ const parentCategory = {
   intro="La limpieza de cuero elimina aceites corporales, protector solar y suciedad que deterioran sus asientos con el tiempo y causan grietas y decoloración."
   currentPage="/es/limpieza-de-cuero-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

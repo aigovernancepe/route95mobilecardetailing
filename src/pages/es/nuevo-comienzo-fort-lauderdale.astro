@@ -11,6 +11,65 @@ const parentCategory = {
   href: url('car-detailing-services-fort-lauderdale'),
   title: "Servicios de Detallado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/nuevo-comienzo-fort-lauderdale/#service`,
+  "name": "Nuevo Comienzo Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/nuevo-comienzo-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 80,
+    "highPrice": 110,
+    "offerCount": 3
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta el Nuevo Comienzo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los precios del Nuevo Comienzo son $80 para sedanes, $95 para SUVs y crossovers, y $110 para camionetas y vehiculos grandes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que Incluye el Nuevo Comienzo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El Nuevo Comienzo incluye lavado a mano, llantas y rines, acondicionador de llantas, limpieza de ventanas, tablero, consola central y aspirado completo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma el Nuevo Comienzo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El paquete Nuevo Comienzo toma aproximadamente de 45 minutos a 1 hora dependiendo del tamano y condicion del vehiculo."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +79,7 @@ const parentCategory = {
   intro="Un paso mas alla del Lavado Rapido — acondicionador de llantas, limpieza interior completa y atencion dedicada a su tablero y consola central. El paquete intermedio perfecto."
   currentPage="/es/nuevo-comienzo-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

@@ -11,6 +11,63 @@ const parentCategory = {
   href: url('car-wash-fort-lauderdale'),
   title: "Servicios de Lavado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/restauracion-de-molduras-fort-lauderdale/#service`,
+  "name": "Restauracion de Molduras Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/restauracion-de-molduras-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 50,
+    "highPrice": 150
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta la Restauracion de Molduras en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La restauracion de molduras en Fort Lauderdale cuesta de $50 a $150 dependiendo de cuantas molduras tenga su vehiculo y que tan desvanecidas esten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma la Restauracion de Molduras?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La restauracion de molduras toma de 30 a 90 minutos dependiendo de cuantas molduras tenga su vehiculo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por Que Restaurar Sus Molduras?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las molduras restauradas hacen que cualquier vehiculo luzca dramaticamente mas nuevo y mejor mantenido, mejorando tanto la apariencia como el valor de reventa."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +77,7 @@ const parentCategory = {
   intro="Las molduras de plastico negro se desvanecen a gris bajo el sol de Florida. Restauramos las molduras desvanecidas a negro profundo y aplicamos protector para retardar el futuro dano UV. Hace que un vehiculo antiguo luzca anos mas nuevo."
   currentPage="/es/restauracion-de-molduras-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

@@ -11,6 +11,57 @@ const parentCategory = {
   href: url('upholstery-cleaning-fort-lauderdale'),
   title: "Limpieza de Tapicería"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/aspirado-interior-fort-lauderdale/#service`,
+  "name": "Aspirado Interior Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/aspirado-interior-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuesta el Aspirado Interior en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El aspirado interior en Fort Lauderdale cuesta de $25 a $40 dependiendo del tamaño y condición de su vehículo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Tiempo Toma el Aspirado Interior?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El aspirado interior toma de 20 a 30 minutos para la mayoría de los vehículos, dependiendo del tamaño y la cantidad de residuos que estemos eliminando."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por Qué Necesita Aspirado Interior Profesional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las aspiradoras domésticas carecen de la potencia de succión y los accesorios especializados necesarios para eliminar residuos de los interiores automotrices."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +71,7 @@ const parentCategory = {
   intro="El aspirado interior profesional elimina arena, suciedad y residuos de cada superficie y hendidura de su auto usando equipo de grado comercial."
   currentPage="/es/aspirado-interior-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

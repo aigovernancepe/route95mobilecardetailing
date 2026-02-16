@@ -10,6 +10,63 @@ const parentCategory = {
   href: `${base}car-wash-fort-lauderdale/`,
   title: "Car Wash Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/hand-wash-fort-lauderdale/#service`,
+  "name": "Hand Wash Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/hand-wash-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 30,
+    "highPrice": 50
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does a Hand Wash Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A professional mobile hand wash in Fort Lauderdale typically costs between $30 and $50 depending on your vehicle size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does a Hand Wash Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A complete hand wash takes approximately 30 to 45 minutes depending on vehicle size and how dirty it is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Choose Hand Washing Over Automated Car Washes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hand washing is the only safe method to clean your vehicle without causing paint damage from brushes and recycled water."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +76,7 @@ const parentCategory = {
   intro="Professional hand washing removes dirt safely without scratching your paint, unlike automated car washes that damage clear coats over time."
   currentPage="/hand-wash-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

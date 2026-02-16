@@ -10,6 +10,58 @@ const parentCategory = {
   href: `${base}upholstery-cleaning-fort-lauderdale/`,
   title: "Upholstery Cleaning Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/interior-protection-fort-lauderdale/#service`,
+  "name": "Interior Protection Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/interior-protection-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 75, "highPrice": 150 }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Interior Protection Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interior protection in Fort Lauderdale costs $75 to $150 depending on your vehicle size and which surfaces you want protected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Interior Protection Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interior protection takes about 30 minutes for most vehicles, with products fully cured within 24 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Does Your Interior Need Protection in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Florida's UV index regularly hits extreme levels. Without protection, sun damage accumulates daily and causes permanent deterioration."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +71,7 @@ const parentCategory = {
   intro="Professional interior protection applies UV-blocking coatings to your car's leather, fabric, vinyl, and plastic surfaces to prevent sun damage."
   currentPage="/interior-protection-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

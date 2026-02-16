@@ -11,6 +11,57 @@ const parentCategory = {
   href: url('car-detailing-services-fort-lauderdale'),
   title: "Servicios de Detallado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/limpieza-de-tablero-fort-lauderdale/#service`,
+  "name": "Limpieza de Tablero Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/limpieza-de-tablero-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuesta la Limpieza de Tablero en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La limpieza de tablero en Fort Lauderdale cuesta de $30 a $50 dependiendo de la complejidad del interior de su vehículo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Tiempo Toma la Limpieza de Tablero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La limpieza de tablero toma aproximadamente 30 minutos para la mayoría de los vehículos, con la protección durando de 4-6 semanas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por Qué Su Tablero Necesita Limpieza Profesional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El sol de Florida daña los tableros desprotegidos más rápido que en cualquier otro lugar. Los rayos UV desvanecen el color, resecan los materiales y causan grietas que arruinan su interior."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +71,7 @@ const parentCategory = {
   intro="La limpieza profesional del tablero elimina polvo, suciedad y huellas mientras agrega protección UV contra el sol intenso de Florida."
   currentPage="/es/limpieza-de-tablero-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

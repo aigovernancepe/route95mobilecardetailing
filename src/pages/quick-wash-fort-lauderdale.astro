@@ -10,6 +10,57 @@ const parentCategory = {
   href: `${base}car-detailing-services-fort-lauderdale/`,
   title: "Car Detailing Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/quick-wash-fort-lauderdale/#service`,
+  "name": "Quick Wash Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/quick-wash-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 50,
+    "highPrice": 80,
+    "offerCount": 3
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does a Quick Wash Cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quick Wash pricing starts at $50 for sedans, $65 for SUVs and crossovers, and $80 for trucks and large vehicles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does a Quick Wash Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Quick Wash typically takes 30 to 45 minutes depending on vehicle size and condition."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +70,7 @@ const parentCategory = {
   intro="A fast exterior & interior refresh to keep your car looking sharp between full details. We come to your location with everything needed."
   currentPage="/quick-wash-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

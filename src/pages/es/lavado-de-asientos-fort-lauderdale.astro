@@ -11,6 +11,57 @@ const parentCategory = {
   href: url('upholstery-cleaning-fort-lauderdale'),
   title: "Limpieza de Tapicería"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/lavado-de-asientos-fort-lauderdale/#service`,
+  "name": "Lavado de Asientos Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/lavado-de-asientos-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuesta el Lavado de Asientos en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El lavado de asientos en Fort Lauderdale comienza desde $75 dependiendo del tamaño de su vehículo y la condición de sus asientos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Tiempo Toma el Lavado de Asientos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El lavado de asientos toma aproximadamente 45 minutos para la mayoría de los vehículos, con un tiempo de secado de 2-4 horas dependiendo de la humedad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por Qué Sus Asientos Necesitan Lavado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los asientos de tela absorben sudor, aceites corporales y derrames que la aspiración sola no puede eliminar. El lavado extrae lo que está atrapado en lo profundo de las fibras."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +71,7 @@ const parentCategory = {
   intro="El lavado profesional de asientos elimina manchas, olores y suciedad incrustada de los asientos de tela de su auto mediante extracción con agua caliente."
   currentPage="/es/lavado-de-asientos-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

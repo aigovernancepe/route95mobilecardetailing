@@ -11,6 +11,55 @@ const parentCategory = {
   href: url('car-wash-fort-lauderdale'),
   title: "Servicios de Lavado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/eliminacion-de-insectos-y-alquitran-fort-lauderdale/#service`,
+  "name": "Eliminacion de Insectos y Brea Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/eliminacion-de-insectos-y-alquitran-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 40,
+    "highPrice": 75
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta la Eliminacion de Insectos y Brea en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La eliminacion profesional de insectos y brea en Fort Lauderdale cuesta de $40 a $75 dependiendo del nivel de contaminacion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma la Eliminacion de Insectos y Brea?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La eliminacion de insectos y brea toma de 30 a 45 minutos dependiendo de la extension de la contaminacion."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +69,7 @@ const parentCategory = {
   intro="La eliminacion profesional de insectos y brea elimina de manera segura los restos de insectos obstinados y la brea del camino de su pintura sin rayar ni danar el acabado."
   currentPage="/es/eliminacion-de-insectos-y-brea-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

@@ -11,6 +11,57 @@ const parentCategory = {
   href: url('upholstery-cleaning-fort-lauderdale'),
   title: "Limpieza de Tapicería"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/eliminacion-de-olores-fort-lauderdale/#service`,
+  "name": "Eliminación de Olores Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/eliminacion-de-olores-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuesta la Eliminación de Olores de Auto en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La eliminación de olores de auto en Fort Lauderdale cuesta de $75 a $200 dependiendo de la fuente del olor y el tratamiento necesario."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Tiempo Toma la Eliminación de Olores?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La eliminación de olores toma de 1 a 2 horas dependiendo del método de tratamiento y la severidad del olor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por Qué los Autos Desarrollan Malos Olores en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El calor y la humedad de Florida aceleran el desarrollo de olores. La comida se descompone más rápido, la humedad produce moho y las bacterias prosperan en condiciones cálidas y húmedas."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +71,7 @@ const parentCategory = {
   intro="La eliminación profesional de olores elimina los malos olores de su auto tratando la fuente, no solo cubriéndolos con ambientadores."
   currentPage="/es/eliminacion-de-olores-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

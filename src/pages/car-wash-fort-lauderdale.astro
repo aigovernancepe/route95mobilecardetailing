@@ -5,9 +5,42 @@ import InstagramFeed from '../components/InstagramFeed.astro';
 const base = import.meta.env.BASE_URL;
 const title = "Car Wash Fort Lauderdale | Mobile Service | Route95";
 const description = "Mobile car wash in Fort Lauderdale. We come to your home or office with all equipment. Hand wash, waxing, clay bar, wheel cleaning. Same-day available. Call 754-215-2272.";
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const categorySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/car-wash-fort-lauderdale/#service`,
+  "name": "Mobile Car Wash Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/car-wash-fort-lauderdale/`,
+  "serviceType": "Mobile Car Wash",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Car Wash Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hand Wash", "url": `${siteUrl}/hand-wash-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Car Waxing", "url": `${siteUrl}/car-waxing-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Clay Bar Treatment", "url": `${siteUrl}/clay-bar-treatment-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wheel Cleaning", "url": `${siteUrl}/wheel-cleaning-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tire Dressing", "url": `${siteUrl}/tire-dressing-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bug and Tar Removal", "url": `${siteUrl}/bug-and-tar-removal-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water Spot Removal", "url": `${siteUrl}/water-spot-removal-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trim Restoration", "url": `${siteUrl}/trim-restoration-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chrome Polishing", "url": `${siteUrl}/chrome-polishing-fort-lauderdale/` }}
+    ]
+  }
+};
 ---
 
-<BaseLayout title={title} description={description} currentPage="/car-wash-fort-lauderdale/">
+<BaseLayout title={title} description={description} currentPage="/car-wash-fort-lauderdale/" schema={categorySchema}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">

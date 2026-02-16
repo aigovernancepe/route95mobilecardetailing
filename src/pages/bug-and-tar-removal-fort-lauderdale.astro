@@ -10,6 +10,63 @@ const parentCategory = {
   href: `${base}car-wash-fort-lauderdale/`,
   title: "Car Wash Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/bug-and-tar-removal-fort-lauderdale/#service`,
+  "name": "Bug and Tar Removal Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/bug-and-tar-removal-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 40,
+    "highPrice": 75
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Bug and Tar Removal Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional bug and tar removal in Fort Lauderdale costs $40 to $75 depending on contamination level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Bug and Tar Removal Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bug and tar removal takes 30 to 45 minutes depending on the extent of contamination."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Professional Bug and Tar Removal Matters",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bug remains are acidic and etch into paint. What looks like a surface stain can become permanent damage within days in Florida's heat."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +76,7 @@ const parentCategory = {
   intro="Professional bug and tar removal safely eliminates stubborn insect remains and road tar from your paint without scratching or damaging the finish."
   currentPage="/bug-and-tar-removal-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

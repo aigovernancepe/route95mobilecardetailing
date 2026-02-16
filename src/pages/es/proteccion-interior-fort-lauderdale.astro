@@ -11,6 +11,57 @@ const parentCategory = {
   href: url('car-detailing-services-fort-lauderdale'),
   title: "Servicios de Detallado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/proteccion-interior-fort-lauderdale/#service`,
+  "name": "Proteccion Interior Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/proteccion-interior-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta la Proteccion Interior en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La proteccion interior en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamano de su vehiculo y que superficies desea proteger."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma la Proteccion Interior?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La proteccion interior toma aproximadamente 30 minutos para la mayoria de vehiculos, con los productos completamente curados en 24 horas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por Que Su Interior Necesita Proteccion en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El indice UV de Florida alcanza regularmente niveles extremos. Sin proteccion, el dano solar se acumula diariamente y causa deterioro permanente."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +71,7 @@ const parentCategory = {
   intro="La proteccion interior profesional aplica revestimientos bloqueadores de UV a las superficies de cuero, tela, vinilo y plastico de su auto para prevenir el dano solar."
   currentPage="/es/proteccion-interior-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

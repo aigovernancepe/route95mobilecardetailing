@@ -10,6 +10,58 @@ const parentCategory = {
   href: `${base}upholstery-cleaning-fort-lauderdale/`,
   title: "Upholstery Cleaning Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/dashboard-cleaning-fort-lauderdale/#service`,
+  "name": "Dashboard Cleaning Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/dashboard-cleaning-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 30, "highPrice": 50 }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Dashboard Cleaning Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dashboard cleaning in Fort Lauderdale costs $30 to $50 depending on your vehicle's interior complexity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Dashboard Cleaning Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dashboard cleaning takes about 30 minutes for most vehicles, with protection lasting 4-6 weeks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Does Your Dashboard Need Professional Cleaning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Florida sun damages unprotected dashboards faster than anywhere else. UV rays fade color, dry out materials, and cause cracking that ruins your interior."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +71,7 @@ const parentCategory = {
   intro="Professional dashboard cleaning removes dust, grime, and fingerprints while adding UV protection against Florida's intense sun."
   currentPage="/dashboard-cleaning-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

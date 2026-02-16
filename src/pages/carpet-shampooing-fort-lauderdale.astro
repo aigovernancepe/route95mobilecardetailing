@@ -10,6 +10,58 @@ const parentCategory = {
   href: `${base}upholstery-cleaning-fort-lauderdale/`,
   title: "Upholstery Cleaning Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/carpet-shampooing-fort-lauderdale/#service`,
+  "name": "Carpet Shampooing Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/carpet-shampooing-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 60 }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Car Carpet Shampooing Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Car carpet shampooing in Fort Lauderdale starts from $60 depending on your vehicle size and carpet condition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Carpet Shampooing Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Carpet shampooing takes 30 to 45 minutes for most vehicles, plus 2-4 hours of drying time afterward."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Do Your Car Carpets Need Shampooing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Car carpets trap sand, dirt, and moisture that vacuuming alone cannot remove. Shampooing extracts contaminants from deep in the fibers."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +71,7 @@ const parentCategory = {
   intro="Professional carpet shampooing removes ground-in dirt, sand, and stains from your car's floor using deep extraction cleaning."
   currentPage="/carpet-shampooing-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

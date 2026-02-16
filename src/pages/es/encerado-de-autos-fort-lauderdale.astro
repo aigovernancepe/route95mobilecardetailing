@@ -11,6 +11,63 @@ const parentCategory = {
   href: url('car-wash-fort-lauderdale'),
   title: "Servicios de Lavado"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/encerado-de-autos-fort-lauderdale/#service`,
+  "name": "Encerado de Autos Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/encerado-de-autos-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 75,
+    "highPrice": 150
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta el Encerado de Autos en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El encerado profesional de autos en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamano del vehiculo y la condicion de la pintura."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma el Encerado de Autos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El encerado de autos toma de 1 a 2 horas dependiendo del tamano del vehiculo y si realizamos preparacion de pintura primero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por Que Su Auto Necesita Encerado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La cera crea una barrera protectora entre su pintura y el medio ambiente. Sin ella, los rayos UV, el aire salado y los contaminantes atacan directamente su capa transparente."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -20,6 +77,7 @@ const parentCategory = {
   intro="El encerado profesional aplica una capa protectora de cera de carnauba que protege su pintura de los intensos rayos UV de Florida y agrega un brillo profundo y duradero."
   currentPage="/es/encerado-de-autos-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

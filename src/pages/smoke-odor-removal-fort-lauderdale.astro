@@ -10,6 +10,58 @@ const parentCategory = {
   href: `${base}upholstery-cleaning-fort-lauderdale/`,
   title: "Upholstery Cleaning Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/smoke-odor-removal-fort-lauderdale/#service`,
+  "name": "Smoke Odor Removal Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/smoke-odor-removal-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 200, "highPrice": 400 }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Smoke Odor Removal Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smoke odor removal in Fort Lauderdale costs $200 to $400 depending on how heavily the car was smoked in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Smoke Odor Removal Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smoke odor removal takes 3 to 4 hours for a full treatment, sometimes longer for heavy smoke damage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Is Smoke Smell So Hard to Remove?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smoke particles are microscopic and coat every surface in your car. The smell hides in fabric fibers, foam padding, ventilation ducts, and porous materials throughout the cabin."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +71,7 @@ const parentCategory = {
   intro="Professional smoke odor removal eliminates cigarette and cigar smell from your car's interior using deep cleaning and ozone treatment."
   currentPage="/smoke-odor-removal-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">

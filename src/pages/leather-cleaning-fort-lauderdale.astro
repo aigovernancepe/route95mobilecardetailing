@@ -10,6 +10,66 @@ const parentCategory = {
   href: `${base}upholstery-cleaning-fort-lauderdale/`,
   title: "Upholstery Cleaning Services"
 };
+
+const siteUrl = "https://www.route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/leather-cleaning-fort-lauderdale/#service`,
+  "name": "Leather Cleaning Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/leather-cleaning-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 50, "highPrice": 100 }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Leather Cleaning Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional leather cleaning in Fort Lauderdale typically costs between $50 and $100 depending on how many leather surfaces your vehicle has."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Leather Cleaning Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leather cleaning takes approximately 30 minutes for most vehicles with standard leather seating areas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Does Leather Need Professional Cleaning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leather absorbs oils and contaminants that home cleaning products cannot safely remove without risking damage to the material."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I Condition Leather After Cleaning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leather conditioning after cleaning restores moisture and creates protection against future damage from Florida sun and humidity."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -19,6 +79,7 @@ const parentCategory = {
   intro="Leather cleaning removes body oils, sunscreen, and grime that break down your seats over time and cause cracking and discoloration."
   currentPage="/leather-cleaning-fort-lauderdale/"
   parentCategory={parentCategory}
+  schema={schemas}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">
