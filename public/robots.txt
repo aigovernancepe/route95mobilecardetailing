@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.route95mobilecardetailing.com/sitemap-index.xml
+Sitemap: https://route95mobilecardetailing.com/sitemap-index.xml
