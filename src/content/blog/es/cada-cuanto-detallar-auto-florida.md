@@ -208,10 +208,24 @@ El detallado trimestral previene correcciones mucho más costosas y preserva el 
 
 Aquí hay un calendario trimestral práctico:
 
-**T1 (Ene-Mar):** Detallado completo después del invierno (temporada seca, menos agresiva)
-**T2 (Abr-Jun):** Detallado completo antes del pico de calor veraniego
-**T3 (Jul-Sep):** Detallado completo a mitad de verano (período de máximo daño UV)
-**T4 (Oct-Dic):** Detallado completo después de la temporada de lluvias
+<div class="grid grid-cols-2 gap-4 not-prose my-6">
+  <div class="bg-gray-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-[#0f2a4a] font-[Oswald,sans-serif] uppercase tracking-wide">T1 (Ene-Mar)</h4>
+    <p class="text-sm text-gray-600">Detallado completo después del invierno (temporada seca, menos agresiva)</p>
+  </div>
+  <div class="bg-gray-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-[#0f2a4a] font-[Oswald,sans-serif] uppercase tracking-wide">T2 (Abr-Jun)</h4>
+    <p class="text-sm text-gray-600">Detallado completo antes del pico de calor veraniego</p>
+  </div>
+  <div class="bg-gray-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-[#0f2a4a] font-[Oswald,sans-serif] uppercase tracking-wide">T3 (Jul-Sep)</h4>
+    <p class="text-sm text-gray-600">Detallado completo a mitad de verano (período de máximo daño UV)</p>
+  </div>
+  <div class="bg-gray-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-[#0f2a4a] font-[Oswald,sans-serif] uppercase tracking-wide">T4 (Oct-Dic)</h4>
+    <p class="text-sm text-gray-600">Detallado completo después de la temporada de lluvias</p>
+  </div>
+</div>
 
 Entre cada detallado trimestral, mantenga con:
 - Lavados de mantenimiento cada dos semanas
