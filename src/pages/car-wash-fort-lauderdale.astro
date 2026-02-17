@@ -34,7 +34,7 @@ const categorySchema = {
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bug and Tar Removal", "url": `${siteUrl}/bug-and-tar-removal-fort-lauderdale/` }},
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water Spot Removal", "url": `${siteUrl}/water-spot-removal-fort-lauderdale/` }},
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trim Restoration", "url": `${siteUrl}/trim-restoration-fort-lauderdale/` }},
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chrome Polishing", "url": `${siteUrl}/chrome-polishing-fort-lauderdale/` }}
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Engine Bay Cleaning", "url": `${siteUrl}/engine-bay-cleaning-fort-lauderdale/` }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 75, "maxPrice": 150, "priceCurrency": "USD" }}
     ]
   }
 };
@@ -226,6 +226,17 @@ const faqSchema = {
         </p>
         <a href={`${base}trim-restoration-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Trim Restoration Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Engine Bay Cleaning -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Engine Bay Cleaning</h2>
+        <p class="text-gray-600 mb-4">
+          Grease, road grime, and leaked fluids build up under your hood over time. We safely degrease and clean your engine bay while protecting sensitive electronics, making it easier to spot leaks and improving resale value.
+        </p>
+        <a href={`${base}engine-bay-cleaning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+          Learn more about Engine Bay Cleaning Fort Lauderdale →
         </a>
       </div>
 
