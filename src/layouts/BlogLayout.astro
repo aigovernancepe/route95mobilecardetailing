@@ -27,7 +27,9 @@ const articleSchema = {
   "@type": "BlogPosting",
   "headline": title,
   "description": description,
+  "image": "https://route95mobilecardetailing.com/logo-transparent.png",
   "datePublished": date.toISOString(),
+  "dateModified": date.toISOString(),
   "author": {
     "@type": "Person",
     "name": author,
@@ -39,6 +41,7 @@ const articleSchema = {
     "@type": "WebPage",
     "@id": Astro.url.href,
   },
+  "inLanguage": locale === 'es' ? 'es' : 'en',
 };
 ---
 

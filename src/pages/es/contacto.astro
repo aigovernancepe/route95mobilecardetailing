@@ -5,6 +5,19 @@ import { localizedUrl } from '../../i18n/utils';
 const title = "Contacto | Route95 Mobile Car Detailing";
 const description = "Contacta a Route95 Mobile Car Detailing para detallado profesional de autos a domicilio en Fort Lauderdale. Llama al 754-215-2272 o solicita una cotización gratis en línea. Servicio el mismo día disponible.";
 
+const siteUrl = "https://route95mobilecardetailing.com";
+
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": title,
+  "description": description,
+  "url": `${siteUrl}/es/contacto/`,
+  "mainEntity": {
+    "@id": `${siteUrl}/#business`
+  }
+};
+
 const services = [
   "Lavado a Mano",
   "Detallado Completo",
@@ -18,7 +31,7 @@ const services = [
 ];
 ---
 
-<BaseLayout title={title} description={description} currentPage="/es/contacto/">
+<BaseLayout title={title} description={description} currentPage="/es/contacto/" schema={contactPageSchema}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16">
     <div class="max-w-7xl mx-auto px-4 text-center">
