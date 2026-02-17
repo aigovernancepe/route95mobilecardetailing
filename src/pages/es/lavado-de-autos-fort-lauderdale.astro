@@ -35,7 +35,7 @@ const categorySchema = {
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Insectos y Alquitrán", "url": `${siteUrl}/es/eliminacion-de-insectos-y-alquitran-fort-lauderdale/` }},
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Manchas de Agua", "url": `${siteUrl}/es/eliminacion-de-manchas-de-agua-fort-lauderdale/` }},
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Restauración de Molduras", "url": `${siteUrl}/es/restauracion-de-molduras-fort-lauderdale/` }},
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pulido de Cromo", "url": `${siteUrl}/es/pulido-de-cromo-fort-lauderdale/` }}
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de Motor", "url": `${siteUrl}/es/limpieza-de-motor-fort-lauderdale/` }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 75, "maxPrice": 150, "priceCurrency": "USD" }}
     ]
   }
 };
@@ -156,6 +156,17 @@ const categorySchema = {
         </p>
         <a href={localizedUrl('es', 'trim-restoration-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Restauración de Molduras Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Engine Bay Cleaning -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Limpieza de Motor</h2>
+        <p class="text-gray-600 mb-4">
+          La grasa, mugre del camino y fluidos derramados se acumulan debajo del capó con el tiempo. Desengrasamos y limpiamos su compartimiento de motor de forma segura mientras protegemos los componentes electrónicos sensibles, facilitando la detección de fugas y mejorando el valor de reventa.
+        </p>
+        <a href={localizedUrl('es', 'engine-bay-cleaning-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+          Más información sobre Limpieza de Motor Fort Lauderdale →
         </a>
       </div>
 

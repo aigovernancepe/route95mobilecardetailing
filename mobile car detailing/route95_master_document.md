@@ -140,42 +140,47 @@ Open Monday through Saturday, 8 AM to 8 PM. Satisfaction guaranteed on every det
 Call 754-215-2272 or book online at route95mobilecardetailing.com
 ```
 
-### 3.3 Services List (29 Total)
+### 3.3 Services List
 
-**Exterior Services (11):**
+**Exterior / Car Wash Services (9 active on website):**
 1. Hand Wash (Handwäsche)
 2. Car Waxing (Autowachsen)
 3. Clay Bar Treatment (Behandlung mit Reinigungsknete)
 4. Wheel Cleaning (Radwäsche)
 5. Tire Dressing (Reifenpflege)
-6. Chrome Polishing (Chrompolieren)
-7. Trim Restoration (Kunststoffpflege)
-8. Bug and Tar Removal (Insekten- und Teerentfernung)
-9. Water Spot Removal (Wasserfleckenentfernung)
-10. Headlight Restoration (Polieren von Scheinwerfern)
-11. Paint Protection Film (Lackschutzfolie)
+6. Trim Restoration (Kunststoffpflege)
+7. Bug and Tar Removal (Insekten- und Teerentfernung)
+8. Water Spot Removal (Wasserfleckenentfernung)
+9. Engine Bay Cleaning (Motorraumreinigung)
+
+*Paused (not on website for now):*
+- ~~Chrome Polishing~~ — paused
+- ~~Headlight Restoration~~ — paused
+- ~~Paint Protection Film~~ — paused
 
 **Interior Services (12):**
-12. Seat Shampooing (Schamponieren von Sitzen)
-13. Carpet Shampooing (Teppichreinigung)
-14. Leather Cleaning (Lederreinigung)
-15. Leather Conditioning (Lederpflege)
-16. Dashboard Cleaning (Armaturenbrettreinigung)
-17. Interior Vacuuming (Staubsaugen des Fahrzeuginnenbereichs)
-18. Steam Cleaning (Dampfreinigung)
-19. Odor Removal (Duftbehandlung für den Innenraum)
-20. Smoke Odor Removal (Rauchgeruchentfernung)
-21. Pet Hair Removal (Tierharentfernung)
-22. Interior Protection (Innenraumversiegelung)
-23. Fabric Protection (Stoffimprägnierung)
+10. Seat Shampooing (Schamponieren von Sitzen)
+11. Carpet Shampooing (Teppichreinigung)
+12. Leather Cleaning (Lederreinigung)
+13. Leather Conditioning (Lederpflege)
+14. Dashboard Cleaning (Armaturenbrettreinigung)
+15. Interior Vacuuming (Staubsaugen des Fahrzeuginnenbereichs)
+16. Steam Cleaning (Dampfreinigung)
+17. Odor Removal (Duftbehandlung für den Innenraum)
+18. Smoke Odor Removal (Rauchgeruchentfernung)
+19. Pet Hair Removal (Tierharentfernung)
+20. Interior Protection (Innenraumversiegelung)
+21. Fabric Protection (Stoffimprägnierung)
 
-**Specialty Services (6):**
-24. Full Detail / Complete Vehicle Detailing (Fahrzeugaufbereitung / Komplettwäsche)
-25. Express Detail (Expressaufbereitung)
-26. Luxury Car Detailing (Luxusfahrzeugaufbereitung)
-27. Engine Bay Cleaning (Motorraumreinigung)
-28. Mobile Detailing (Mobile Fahrzeugaufbereitung)
-29. Same-Day Service (Service am selben Tag)
+**Detailing Packages (4 on website):**
+22. Quick Wash
+23. Fresh Start
+24. Complete Clean
+25. Premium Refresh (Coming Soon)
+
+**GBP-only Services (not individual website pages):**
+- Mobile Detailing (Mobile Fahrzeugaufbereitung)
+- Same-Day Service (Service am selben Tag)
 
 ### 3.4 GBP Service Descriptions
 
@@ -203,9 +208,10 @@ CATEGORY 1: /car-wash-fort-lauderdale/
 ├── H2: Clay Bar Treatment → links to service page
 ├── H2: Wheel Cleaning → links to service page
 ├── H2: Tire Dressing → links to service page
-├── H2: Chrome Polishing → links to service page
 ├── H2: Bug and Tar Removal → links to service page
-└── H2: Water Spot Removal → links to service page
+├── H2: Water Spot Removal → links to service page
+├── H2: Trim Restoration → links to service page
+└── H2: Engine Bay Cleaning → links to service page
 
 CATEGORY 2: /upholstery-cleaning-fort-lauderdale/
 ├── Title: Upholstery Cleaning Fort Lauderdale | Mobile Service | Route95
@@ -226,14 +232,10 @@ CATEGORY 2: /upholstery-cleaning-fort-lauderdale/
 CATEGORY 3: /car-detailing-services-fort-lauderdale/
 ├── Title: Car Detailing Services Fort Lauderdale | Mobile | Route95
 ├── H1: Car Detailing Services Fort Lauderdale
-├── H2: Full Detail → links to service page
-├── H2: Express Detail → links to service page
-├── H2: Luxury Car Detailing → links to service page
-├── H2: Engine Bay Cleaning → links to service page
-├── H2: Paint Protection Film → links to service page
-├── H2: Mobile Detailing → links to service page
-├── H2: Headlight Restoration → links to service page
-└── H2: Trim Restoration → links to service page
+├── H2: Quick Wash → links to package page
+├── H2: Fresh Start → links to package page
+├── H2: Complete Clean → links to package page
+└── H2: Premium Refresh → links to package page (Coming Soon)
 
 ADDITIONAL PAGES:
 ├── /about/ - About Us (training, products, story)
@@ -252,14 +254,17 @@ ADDITIONAL PAGES:
 
 ### 4.3 Page Count Summary
 
-| Type | Count |
-|------|-------|
-| Homepage | 1 |
-| Category Pages | 3 |
-| Service Pages | 28 |
-| About | 1 |
-| Contact | 1 |
-| **Phase 1 Total** | **34 pages** |
+| Type | Count | Details |
+|------|-------|---------|
+| Homepage | 1 | |
+| Category Pages | 3 | Car Wash, Upholstery Cleaning, Car Detailing Services |
+| Car Wash Services | 9 | Hand Wash, Car Waxing, Clay Bar, Wheel Cleaning, Tire Dressing, Bug & Tar, Water Spot, Trim Restoration, Engine Bay Cleaning |
+| Upholstery Services | 12 | Seat Shampooing, Carpet Shampooing, Leather Cleaning, Leather Conditioning, Dashboard, Interior Vacuuming, Steam Cleaning, Odor Removal, Smoke Odor, Pet Hair, Interior Protection, Fabric Protection |
+| Detailing Packages | 4 | Quick Wash, Fresh Start, Complete Clean, Premium Refresh |
+| Blog | 4 | + 4 Spanish |
+| About | 1 | |
+| Contact | 1 | |
+| **Phase 1 Total** | **35 pages** | All bilingual (EN + ES) |
 
 **Phase 2 (After Rank Map Analysis):**
 - Service Area: Hollywood
@@ -438,14 +443,7 @@ For every service page, ensure:
 - **Florida Angle:** UV exposure causes tire cracking/dry rot
 - **Voice Query Match:** "tire shine service", "make my tires look new"
 
-#### 7.6 Chrome Polishing Fort Lauderdale
-- **URL:** /chrome-polishing-fort-lauderdale/
-- **Parent:** /car-wash-fort-lauderdale/
-- **Key Points:** Removes oxidation, water spots, light corrosion, mirror finish
-- **Price Range:** $30-60
-- **Time:** 20-30 minutes
-- **Florida Angle:** Salt air near Intracoastal/ocean damages chrome quickly
-- **Voice Query Match:** "polish chrome on my car", "chrome trim oxidation"
+#### ~~7.6 Chrome Polishing Fort Lauderdale~~ — PAUSED (page removed)
 
 #### 7.7 Bug and Tar Removal Fort Lauderdale
 - **URL:** /bug-tar-removal-fort-lauderdale/
@@ -579,77 +577,63 @@ For every service page, ensure:
 
 ---
 
-### CATEGORY 3: Car Detailing Services (8 Service Pages)
+### CATEGORY 1 (continued): Engine Bay Cleaning
 
-#### 7.21 Full Detail Fort Lauderdale
-- **URL:** /full-detail-fort-lauderdale/
-- **Parent:** /car-detailing-services-fort-lauderdale/
-- **Key Points:** Complete interior + exterior, showroom results
-- **Price Range:** $200-400
-- **Time:** 4-6 hours
-- **Florida Angle:** Comprehensive protection against all Florida elements
-- **Voice Query Match:** "full car detail near me", "complete auto detailing"
-
-#### 7.22 Express Detail Fort Lauderdale
-- **URL:** /express-detail-fort-lauderdale/
-- **Parent:** /car-detailing-services-fort-lauderdale/
-- **Key Points:** Quick refresh, wash + vacuum + wipe, 1 hour
-- **Price Range:** $75-125
-- **Time:** 1 hour
-- **Florida Angle:** Quick refresh before events, maintains between full details
-- **Voice Query Match:** "quick car detail", "fast car cleaning"
-
-#### 7.23 Luxury Car Detailing Fort Lauderdale
-- **URL:** /luxury-car-detailing-fort-lauderdale/
-- **Parent:** /car-detailing-services-fort-lauderdale/
-- **Key Points:** Premium materials expertise, exotic cars, special finishes
-- **Price Range:** $300-600+
-- **Time:** 5-8 hours
-- **Florida Angle:** Fort Lauderdale has high concentration of luxury/exotic vehicles
-- **Voice Query Match:** "exotic car detailing", "Mercedes detailing Fort Lauderdale"
-
-#### 7.24 Engine Bay Cleaning Fort Lauderdale
+#### 7.9 Engine Bay Cleaning Fort Lauderdale ✅
 - **URL:** /engine-bay-cleaning-fort-lauderdale/
-- **Parent:** /car-detailing-services-fort-lauderdale/
+- **Parent:** /car-wash-fort-lauderdale/
 - **Key Points:** Degreasing, protects electronics, spot leaks, resale value
 - **Price Range:** $75-150
 - **Time:** 45 minutes
 - **Florida Angle:** Shows care when selling car, easier maintenance
 - **Voice Query Match:** "clean engine bay", "engine detailing"
 
-#### 7.25 Paint Protection Film Fort Lauderdale
-- **URL:** /paint-protection-film-fort-lauderdale/
-- **Parent:** /car-detailing-services-fort-lauderdale/
-- **Key Points:** Clear film, rock chip protection, self-healing
-- **Price Range:** $500-2000+ (depends on coverage)
-- **Time:** 4-8 hours
-- **Florida Angle:** Highway debris, preserves paint for resale
-- **Voice Query Match:** "PPF installation", "paint protection film near me"
+---
 
-#### 7.26 Mobile Detailing Fort Lauderdale
-- **URL:** /mobile-detailing-fort-lauderdale/
-- **Parent:** /car-detailing-services-fort-lauderdale/
-- **Key Points:** We come to you, bring everything, same-day available
-- **Price Range:** Varies by service
-- **Time:** Varies by service
-- **Florida Angle:** Convenient in Fort Lauderdale's spread-out layout
-- **Voice Query Match:** "mobile car detailing near me", "detailer that comes to you"
+### CATEGORY 3: Car Detailing Packages (4 Packages)
 
-#### 7.27 Headlight Restoration Fort Lauderdale
-- **URL:** /headlight-restoration-fort-lauderdale/
-- **Parent:** /car-detailing-services-fort-lauderdale/
-- **Key Points:** Wet-sand, polish, UV seal, improves visibility, cheaper than replacement
-- **Price Range:** $75-150 (both lights)
-- **Time:** 45 minutes
-- **Florida Angle:** UV damage yellows headlights faster in Florida
-- **Voice Query Match:** "fix foggy headlights", "headlight restoration near me"
+*Note: Category 3 uses package-based pages instead of individual service briefs. Each package page is a standalone page with pricing, inclusions, and comparison matrix.*
 
-#### 7.28 Trim Restoration Fort Lauderdale
+#### 7.21 Quick Wash Fort Lauderdale ✅
+- **URL:** /quick-wash-fort-lauderdale/
+- **Parent:** /car-detailing-services-fort-lauderdale/
+- **Key Points:** Fast exterior & interior refresh, hand wash, tires & rims, windows, interior wipe down, vacuum
+- **Price Range:** Sedan $50 / SUV $65 / Truck $80
+
+#### 7.22 Fresh Start Fort Lauderdale ✅
+- **URL:** /fresh-start-fort-lauderdale/
+- **Parent:** /car-detailing-services-fort-lauderdale/
+- **Key Points:** Step up from Quick Wash, adds tire dressing, dashboard, center console
+- **Price Range:** Sedan $80 / SUV $95 / Truck $110
+
+#### 7.23 Complete Clean Fort Lauderdale ✅
+- **URL:** /complete-clean-fort-lauderdale/
+- **Parent:** /car-detailing-services-fort-lauderdale/
+- **Key Points:** Most thorough package, fender wells, floor mats, trunk vacuum, inside and out
+- **Price Range:** Sedan $130 / SUV $145 / Truck $160
+
+#### 7.24 Premium Refresh Fort Lauderdale ✅
+- **URL:** /premium-refresh-fort-lauderdale/
+- **Parent:** /car-detailing-services-fort-lauderdale/
+- **Key Points:** Deep interior shampoo + steam cleaning, the ultimate detail, includes everything in Complete Clean
+- **Price Range:** Coming Soon
+
+---
+
+### PAUSED SERVICES (pages removed, may return later)
+
+#### ~~7.25 Paint Protection Film Fort Lauderdale~~ — PAUSED
+#### ~~7.27 Headlight Restoration Fort Lauderdale~~ — PAUSED
+#### ~~Mobile Detailing Fort Lauderdale~~ — no individual page (entire business is mobile)
+
+### CATEGORY 1 (moved from Category 3): Trim Restoration
+
+#### 7.28 Trim Restoration Fort Lauderdale ✅
 - **URL:** /trim-restoration-fort-lauderdale/
-- **Parent:** /car-detailing-services-fort-lauderdale/
+- **Parent:** /car-wash-fort-lauderdale/
 - **Key Points:** Restores faded black plastic, UV protection, makes car look newer
-- **Price Range:** $40-75
-- **Time:** 30 minutes
+- **Price Range:** $50-150
+- **Time:** 30-90 minutes
 - **Florida Angle:** Florida sun fades plastic trim to gray rapidly
 - **Voice Query Match:** "fix faded plastic trim", "black trim restoration"
 
@@ -671,9 +655,12 @@ For every service page, ensure:
 - [x] Category Page 1: Car Wash created
 - [x] Category Page 2: Upholstery Cleaning created
 - [x] Category Page 3: Car Detailing Services created
-- [ ] Create 28 service pages (use templates + briefs)
-- [ ] Create About Us page
-- [ ] Create Contact page
+- [x] All service pages created (9 Car Wash + 12 Upholstery + 4 Packages = 25 service pages)
+- [x] Engine Bay Cleaning page created (EN + ES)
+- [x] Chrome Polishing, Headlight Restoration, Paint Protection Film — pages removed (services paused)
+- [x] About Us page created
+- [x] Contact page created
+- [x] Blog section with 4 EN + 4 ES posts
 
 **Technical SEO:**
 - [ ] Implement title tags exactly as specified
@@ -1004,7 +991,7 @@ Based on Chemical Guys product categories and Fort Lauderdale market:
 
 ---
 
-*Document Version: 1.3*
+*Document Version: 1.4*
 *Created: February 2025*
-*Last Updated: February 2025*
-*Updates: v1.1 - Added email, Phase 2 FAQ reminder, Chemical Guys product reference. v1.2 - Added carpet/upholstery products, stain-specific treatments, interior protection products, glass products, expanded content examples, expanded original data opportunities, future service expansion notes. v1.3 - Restructured service distribution: moved Headlight Restoration and Trim Restoration from Car Wash to Car Detailing Services category (8/12/8 split), fixed H-tag structure guidance*
+*Last Updated: February 2026*
+*Updates: v1.1 - Added email, Phase 2 FAQ reminder, Chemical Guys product reference. v1.2 - Added carpet/upholstery products, stain-specific treatments, interior protection products, glass products, expanded content examples, expanded original data opportunities, future service expansion notes. v1.3 - Restructured service distribution: moved Headlight Restoration and Trim Restoration from Car Wash to Car Detailing Services category (8/12/8 split), fixed H-tag structure guidance. v1.4 - Updated to reflect actual site: removed Chrome Polishing, Headlight Restoration, Paint Protection Film (paused). Replaced Full Detail/Express Detail/Luxury Car Detailing with actual package names (Quick Wash, Fresh Start, Complete Clean, Premium Refresh). Moved Engine Bay Cleaning and Trim Restoration to Category 1 (Car Wash). Updated page counts and service briefs.*
