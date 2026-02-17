@@ -126,9 +126,40 @@ const addOns = [
   { name: "Carpet Shampooing", price: 60, from: true },
   { name: "Car Waxing", price: 60, from: true }
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Mobile Car Detailing Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mobile car detailing in Fort Lauderdale costs between $50 and $350+ depending on the package and vehicle size. A basic Quick Wash starts at $50 for sedans, while our Complete Clean package ranges from $117 to $144. Premium packages with full interior and exterior detail cost $200-$350."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Is Included in Each Detailing Package?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Route95 offers four detailing tiers: Quick Wash (exterior wash and dry), Fresh Start (exterior plus basic interior), Complete Clean (full interior and exterior detail), and Premium Refresh (comprehensive detail with engine bay, leather conditioning, and fabric protection)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Do You Choose the Right Detailing Package?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose based on your vehicle's current condition and maintenance history. Quick Wash works for regularly maintained cars. Fresh Start is ideal for monthly maintenance. Complete Clean suits vehicles needing deep cleaning every 3-4 months. Premium Refresh is best for neglected or pre-sale vehicles."
+      }
+    }
+  ]
+};
 ---
 
-<BaseLayout title={title} description={description} currentPage="/car-detailing-services-fort-lauderdale/" schema={categorySchema}>
+<BaseLayout title={title} description={description} currentPage="/car-detailing-services-fort-lauderdale/" schema={[categorySchema, faqSchema]}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -148,6 +179,41 @@ const addOns = [
         </svg>
         Call 754-215-2272
       </a>
+    </div>
+  </section>
+
+  <!-- FAQ Sections -->
+  <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="mb-10">
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Mobile Car Detailing Cost in Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Mobile car detailing in Fort Lauderdale costs between $50 and $350+ depending on the package and vehicle size. A basic Quick Wash starts at $50 for sedans, while our Complete Clean package ranges from $117 to $144. Premium packages with full interior and exterior detail cost $200-$350.</strong>
+        </p>
+        <p class="text-gray-600">
+          Pricing varies by vehicle class (sedan, SUV, or truck) and the level of service you select. We use professional-grade products from <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Chemical Guys</a> and <a href="https://www.koch-chemie.com/en" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Koch-Chemie</a> across every package, so you get premium results at every price point.
+        </p>
+      </div>
+
+      <div class="mb-10">
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Is Included in Each Detailing Package?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Route95 offers four detailing tiers: Quick Wash (exterior wash and dry), Fresh Start (exterior plus basic interior), Complete Clean (full interior and exterior detail), and Premium Refresh (comprehensive detail with engine bay, leather conditioning, and fabric protection).</strong>
+        </p>
+        <p class="text-gray-600">
+          Each tier builds on the one before it. Our technicians follow <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">IDA (International Detailing Association)</a> best practices and use products from <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Chemical Guys</a> and <a href="https://www.koch-chemie.com/en" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Koch-Chemie</a> to deliver consistent, high-quality results. See the comparison table below for a full service-by-service breakdown.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Do You Choose the Right Detailing Package?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Choose based on your vehicle's current condition and maintenance history. Quick Wash works for regularly maintained cars. Fresh Start is ideal for monthly maintenance. Complete Clean suits vehicles needing deep cleaning every 3-4 months. Premium Refresh is best for neglected or pre-sale vehicles.</strong>
+        </p>
+        <p class="text-gray-600">
+          Not sure which package fits? Call us at <a href="tel:+17542152272" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">754-215-2272</a> and we will help you choose based on your vehicle type, condition, and budget.
+        </p>
+      </div>
     </div>
   </section>
 

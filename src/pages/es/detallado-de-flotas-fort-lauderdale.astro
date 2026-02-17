@@ -1,0 +1,207 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const url = (slug: string) => localizedUrl('es', slug);
+const title = "Detallado de Flotas Fort Lauderdale | Servicio Movil | Route95";
+const description = "Detallado movil de flotas en Fort Lauderdale para empresas. Descuentos por volumen, horarios flexibles, todo tipo de vehiculos. Vamos a su estacionamiento. Llame al 754-215-2272.";
+
+const parentCategory = {
+  href: url('car-detailing-services-fort-lauderdale'),
+  title: "Servicios de Detallado"
+};
+
+const siteUrl = "https://route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/detallado-de-flotas-fort-lauderdale/#service`,
+  "name": "Detallado de Flotas Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/detallado-de-flotas-fort-lauderdale/`,
+  "serviceType": "Mobile Fleet Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 75,
+    "highPrice": 300
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta el Detallado de Flotas en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El detallado de flotas en Fort Lauderdale comienza en $75 por vehiculo con descuentos por volumen para flotas de 5 o mas vehiculos. El precio depende del tipo de vehiculo, nivel de servicio y tamano de la flota."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que Tipos de Flotas Atienden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Atendemos todo tipo de flotas comerciales y empresariales incluyendo camionetas de reparto, autos de empresa, flotas de alquiler, inventario de concesionarios, vehiculos de viajes compartidos y autos de agentes inmobiliarios."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como el Detallado Movil de Flotas Ahorra Dinero a Su Empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El detallado movil de flotas elimina el tiempo improductivo al ir directamente a su estacionamiento. Sin tiempo de traslado, precios por volumen en multiples vehiculos y una apariencia profesional que genera mas negocios."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Detallado de Flotas Fort Lauderdale"
+  intro="Mantenga su flota empresarial con apariencia profesional con detallado movil que llega directamente a su estacionamiento. Sin tiempo improductivo, sin complicaciones, solo vehiculos limpios listos para representar su marca."
+  currentPage="/es/detallado-de-flotas-fort-lauderdale/"
+  parentCategory={parentCategory}
+  schema={schemas}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Route95 ofrece servicios de detallado movil de flotas en todo el condado de Broward, llevando limpieza profesional directamente a la ubicacion de su empresa. Ya sea que administre una flota de camionetas de reparto, autos de empresa o vehiculos de alquiler, nos encargamos de todo en el sitio para que su equipo siga siendo productivo mientras sus vehiculos reciben la atencion que necesitan.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Una flota limpia es mas que apariencia. Refleja su marca, protege su inversion en vehiculos y deja una impresion duradera en los clientes. Nuestros programas de detallado de flotas estan disenados para empresas que entienden el valor del mantenimiento constante de vehiculos sin la interrupcion operativa de los talleres de detallado tradicionales.
+        </p>
+        <p class="text-gray-600">
+          Servimos a empresas en Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach. Programacion personalizada disponible para servicio recurrente semanal, quincenal o mensual.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta el Detallado de Flotas en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El detallado de flotas en Fort Lauderdale comienza en $75 por vehiculo con descuentos por volumen para flotas de 5 o mas vehiculos. El precio depende del tipo de vehiculo, nivel de servicio y tamano de la flota. Ofrecemos planes de mantenimiento personalizados para empresas que necesitan servicio programado regular.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los autos compactos y sedanes estan en el rango mas bajo. Las camionetas, camiones y SUVs cuestan mas debido a la superficie adicional y el tiempo requerido. Proporcionamos una cotizacion detallada despues de evaluar su flota especifica y necesidades de servicio.
+        </p>
+        <p class="text-gray-600">
+          Las empresas que se comprometen con servicio recurrente reciben las mejores tarifas. El mantenimiento regular tambien reduce el costo por visita porque los vehiculos se mantienen mas limpios entre citas, requiriendo menos trabajo intensivo cada vez.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Que Tipos de Flotas Atienden?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Atendemos todo tipo de flotas comerciales y empresariales en el condado de Broward. Ninguna flota es demasiado pequena ni demasiado grande. Desde un punado de autos de empresa hasta un lote completo de concesionario, tenemos el equipo y el personal para manejarlo.</strong>
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>Camionetas de reparto y camiones</li>
+          <li>Autos de empresa y vehiculos ejecutivos</li>
+          <li>Flotas de autos de alquiler</li>
+          <li>Inventario de concesionarios y vehiculos de intercambio</li>
+          <li>Vehiculos de viajes compartidos (Uber, Lyft)</li>
+          <li>Autos de agentes inmobiliarios</li>
+        </ul>
+        <p class="text-gray-600">
+          Cada tipo de flota tiene necesidades unicas. Las camionetas de reparto acumulan mugre del camino rapidamente y necesitan lavados exteriores frecuentes. Los vehiculos de viajes compartidos requieren sanitizacion interior entre pasajeros. El inventario de concesionarios necesita detallado listo para exhibicion. Adaptamos nuestro servicio para satisfacer sus requisitos especificos.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Como el Detallado Movil de Flotas Ahorra Dinero a Su Empresa?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El detallado movil de flotas elimina el tiempo improductivo porque vamos directamente a su estacionamiento con todo el equipo necesario. Sus empleados se quedan trabajando, sus vehiculos permanecen en el sitio y los precios por volumen en multiples vehiculos mantienen los costos mas bajos que las visitas individuales a talleres de detallado.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Considere los costos ocultos de enviar vehiculos a un taller: el tiempo del empleado conduciendo cada vehiculo de ida y vuelta, vehiculos fuera de servicio durante la cita y pagar precio completo por vehiculo. Con nuestro servicio movil, nos encargamos de todo en su estacionamiento mientras su equipo trabaja.
+        </p>
+        <p class="text-gray-600">
+          La apariencia profesional tambien genera ingresos. Vehiculos limpios y bien mantenidos construyen confianza y seguridad en los clientes. Una camioneta de reparto o auto de empresa impecable envia el mensaje de que su empresa presta atencion al detalle y se enorgullece de su trabajo.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Detallado de Flotas</h2>
+        <ProcessSteps steps={[
+          { title: "Evaluacion de Flota", description: "Evaluamos sus vehiculos y recomendamos niveles de servicio apropiados segun el tipo de vehiculo, condicion y las necesidades de su empresa." },
+          { title: "Horario Personalizado", description: "Establezca citas recurrentes semanales, quincenales o mensuales que se adapten a las operaciones de su empresa y la disponibilidad de vehiculos." },
+          { title: "Servicio en el Sitio", description: "Vamos a su estacionamiento con todo el equipo y suministros. No necesita mover vehiculos fuera del sitio ni interrumpir su flujo de trabajo." },
+          { title: "Control de Calidad", description: "Cada vehiculo pasa por una inspeccion detallada antes de la aprobacion para asegurar que cada superficie cumpla con nuestros estandares profesionales." },
+          { title: "Reportes", description: "Proporcionamos un registro detallado de servicio para los registros de administracion de su flota, rastreando cada vehiculo atendido y el trabajo realizado." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rapidos del Detallado de Flotas</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$75-$300 por vehiculo</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Descuentos por volumen</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Todo tipo de vehiculos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">Horarios flexibles</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Reserve Detallado de Flotas</h3>
+          <p class="text-gray-200 text-sm mb-4">
+            Planes personalizados para flotas disponibles en todo Fort Lauderdale y el condado de Broward.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
+          <ul class="space-y-2">
+            <li><a href={url('complete-clean-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza Completa</a></li>
+            <li><a href={url('premium-refresh-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Renovacion Premium</a></li>
+            <li><a href={url('hand-wash-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado a Mano</a></li>
+            <li><a href={url('odor-removal-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Eliminacion de Olores</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

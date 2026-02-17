@@ -32,9 +32,21 @@ export default defineConfig({
           item.url.includes('/car-wash-fort-lauderdale/') ||
           item.url.includes('/upholstery-cleaning-fort-lauderdale/') ||
           item.url.includes('/car-detailing-services-fort-lauderdale/') ||
+          item.url.includes('/interior-car-detailing-fort-lauderdale/') ||
           item.url.includes('/lavado-de-autos-fort-lauderdale/') ||
           item.url.includes('/limpieza-de-tapiceria-fort-lauderdale/') ||
-          item.url.includes('/servicios-de-detallado-fort-lauderdale/')
+          item.url.includes('/servicios-de-detallado-fort-lauderdale/') ||
+          item.url.includes('/detallado-interior-fort-lauderdale/')
+        ) {
+          item.priority = 0.9;
+          item.changefreq = 'weekly';
+        }
+        // Pricing and FAQ pages — high priority
+        else if (
+          item.url.includes('/mobile-car-detailing-prices-fort-lauderdale/') ||
+          item.url.includes('/precios-detallado-movil-fort-lauderdale/') ||
+          item.url.includes('/faq/') ||
+          item.url.includes('/preguntas-frecuentes/')
         ) {
           item.priority = 0.9;
           item.changefreq = 'weekly';

@@ -7,9 +7,10 @@ interface Props {
   description: string;
   date: Date;
   author: string;
+  schema?: object | object[];
 }
 
-const { title, description, date, author } = Astro.props;
+const { title, description, date, author, schema: additionalSchema } = Astro.props;
 const locale = (Astro.currentLocale ?? 'en') as Locale;
 const t = getTranslations(locale);
 const blogUrl = locale === 'es' ? '/es/blog/' : '/blog/';
@@ -41,7 +42,7 @@ const articleSchema = {
 };
 ---
 
-<BaseLayout title={`${title} | Route95 Blog`} description={description} currentPage="/blog/" schema={articleSchema}>
+<BaseLayout title={`${title} | Route95 Blog`} description={description} currentPage="/blog/" schema={additionalSchema ? [articleSchema, ...(Array.isArray(additionalSchema) ? additionalSchema : [additionalSchema])] : articleSchema}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-4xl mx-auto px-4">

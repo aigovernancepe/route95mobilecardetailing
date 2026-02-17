@@ -127,9 +127,40 @@ const categorySchema = {
     ]
   }
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuesta el Detallado Móvil de Autos en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El detallado móvil de autos en Fort Lauderdale cuesta entre $50 y $350+ dependiendo del paquete y el tamaño del vehículo. Un Lavado Rápido básico comienza en $50 para sedanes, mientras que nuestro paquete Limpieza Completa va de $117 a $144. Los paquetes premium con detallado completo interior y exterior cuestan $200-$350."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué Incluye Cada Paquete de Detallado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Route95 ofrece cuatro niveles de detallado: Lavado Rápido (lavado y secado exterior), Nuevo Comienzo (exterior más interior básico), Limpieza Completa (detallado completo interior y exterior), y Renovación Premium (detallado integral con motor, acondicionamiento de cuero y protección de telas)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo Elegir el Paquete de Detallado Correcto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Elige según la condición actual de tu vehículo y su historial de mantenimiento. El Lavado Rápido funciona para autos con mantenimiento regular. Nuevo Comienzo es ideal para mantenimiento mensual. Limpieza Completa es para vehículos que necesitan limpieza profunda cada 3-4 meses. Renovación Premium es mejor para vehículos descuidados o en preparación para venta."
+      }
+    }
+  ]
+};
 ---
 
-<BaseLayout title={title} description={description} currentPage="/es/servicios-de-detallado-fort-lauderdale/" schema={categorySchema}>
+<BaseLayout title={title} description={description} currentPage="/es/servicios-de-detallado-fort-lauderdale/" schema={[categorySchema, faqSchema]}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -149,6 +180,41 @@ const categorySchema = {
         </svg>
         Llama al 754-215-2272
       </a>
+    </div>
+  </section>
+
+  <!-- FAQ Sections -->
+  <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="mb-10">
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta el Detallado Móvil de Autos en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El detallado móvil de autos en Fort Lauderdale cuesta entre $50 y $350+ dependiendo del paquete y el tamaño del vehículo. Un Lavado Rápido básico comienza en $50 para sedanes, mientras que nuestro paquete Limpieza Completa va de $117 a $144. Los paquetes premium con detallado completo interior y exterior cuestan $200-$350.</strong>
+        </p>
+        <p class="text-gray-600">
+          Los precios varían según la clase de vehículo (sedán, SUV o camioneta) y el nivel de servicio que selecciones. Usamos productos de grado profesional de <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Chemical Guys</a> y <a href="https://www.koch-chemie.com/en" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Koch-Chemie</a> en cada paquete, para que obtengas resultados premium en cada nivel de precio.
+        </p>
+      </div>
+
+      <div class="mb-10">
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Qué Incluye Cada Paquete de Detallado?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Route95 ofrece cuatro niveles de detallado: Lavado Rápido (lavado y secado exterior), Nuevo Comienzo (exterior más interior básico), Limpieza Completa (detallado completo interior y exterior), y Renovación Premium (detallado integral con motor, acondicionamiento de cuero y protección de telas).</strong>
+        </p>
+        <p class="text-gray-600">
+          Cada nivel se construye sobre el anterior. Nuestros técnicos siguen las mejores prácticas de la <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">IDA (International Detailing Association)</a> y utilizan productos de <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Chemical Guys</a> y <a href="https://www.koch-chemie.com/en" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Koch-Chemie</a> para entregar resultados consistentes y de alta calidad. Consulta la tabla comparativa abajo para un desglose completo servicio por servicio.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cómo Elegir el Paquete de Detallado Correcto?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Elige según la condición actual de tu vehículo y su historial de mantenimiento. El Lavado Rápido funciona para autos con mantenimiento regular. Nuevo Comienzo es ideal para mantenimiento mensual. Limpieza Completa es para vehículos que necesitan limpieza profunda cada 3-4 meses. Renovación Premium es mejor para vehículos descuidados o en preparación para venta.</strong>
+        </p>
+        <p class="text-gray-600">
+          ¿No estás seguro de qué paquete te conviene? Llámanos al <a href="tel:+17542152272" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">754-215-2272</a> y te ayudaremos a elegir según tu tipo de vehículo, condición y presupuesto.
+        </p>
+      </div>
     </div>
   </section>
 

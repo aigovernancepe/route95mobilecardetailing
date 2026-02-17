@@ -90,6 +90,8 @@ export function getLocalizedNavLinks(locale: Locale) {
       { href: url('car-wash-fort-lauderdale'), label: t.header.carWash },
       { href: url('upholstery-cleaning-fort-lauderdale'), label: t.header.upholsteryCleaning },
       { href: url('car-detailing-services-fort-lauderdale'), label: t.header.detailingServices },
+      { href: url('mobile-car-detailing-prices-fort-lauderdale'), label: t.header.pricing },
+      { href: url('faq'), label: t.header.faq },
       { href: url('blog'), label: t.blog.title },
       { href: url('about'), label: t.header.about },
       { href: url('contact'), label: t.header.contact },
@@ -101,6 +103,8 @@ export function getLocalizedNavLinks(locale: Locale) {
       { href: url('seat-shampooing-fort-lauderdale'), label: t.nav.seatShampooing },
       { href: url('complete-clean-fort-lauderdale'), label: t.nav.completeClean },
       { href: url('odor-removal-fort-lauderdale'), label: t.nav.odorRemoval },
+      { href: url('mobile-car-detailing-prices-fort-lauderdale'), label: t.nav.pricing },
+      { href: url('faq'), label: t.nav.faq },
     ],
   };
 }

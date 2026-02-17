@@ -28,6 +28,8 @@ const detailingUrl = localizedUrl(locale, 'car-detailing-services-fort-lauderdal
 const aboutUrl = localizedUrl(locale, 'about');
 const contactUrl = localizedUrl(locale, 'contact');
 const blogUrl = localizedUrl(locale, 'blog');
+const pricingUrl = localizedUrl(locale, 'mobile-car-detailing-prices-fort-lauderdale');
+const faqUrl = localizedUrl(locale, 'faq');
 ---
 
 <header class="sticky top-0 z-50 bg-white shadow-md">
@@ -141,6 +143,18 @@ const blogUrl = localizedUrl(locale, 'blog');
           </div>
         </div>
 
+        <a
+          href={pricingUrl}
+          class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium ${currentPage.includes('prices') || currentPage.includes('precios') ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
+        >
+          {t.header.pricing}
+        </a>
+        <a
+          href={faqUrl}
+          class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium ${currentPage.includes('/faq/') || currentPage.includes('/preguntas-frecuentes/') ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
+        >
+          {t.header.faq}
+        </a>
         <a
           href={blogUrl}
           class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium ${currentPage.includes('/blog/') ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}

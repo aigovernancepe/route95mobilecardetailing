@@ -16,7 +16,9 @@
     "topBarLocations": "Fort Lauderdale, Dania Beach, Hollywood, Pompano Beach",
     "topBarHours": "Lun-Sáb: 8AM-8PM",
     "openMenu": "Abrir menú",
-    "whatsappMessage": "¡Hola! Me gustaría obtener una cotización para detallado de auto a domicilio."
+    "whatsappMessage": "¡Hola! Me gustaría obtener una cotización para detallado de auto a domicilio.",
+    "pricing": "Precios",
+    "faq": "Preguntas Frecuentes"
   },
   "footer": {
     "companyName": "Route95 Mobile Car Detailing",
@@ -95,6 +97,11 @@
     "premiumRefresh": "Renovación Premium",
     "carWashServices": "Servicios de Lavado",
     "upholsteryCleaning": "Limpieza de Tapicería",
-    "detailingServices": "Servicios de Detallado"
+    "detailingServices": "Servicios de Detallado",
+    "engineBayCleaning": "Limpieza de Motor",
+    "interiorCarDetailing": "Detallado Interior",
+    "fleetDetailing": "Detallado de Flotas",
+    "pricing": "Precios",
+    "faq": "Preguntas Frecuentes"
   }
 }

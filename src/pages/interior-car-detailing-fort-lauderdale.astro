@@ -1,0 +1,351 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InstagramFeed from '../components/InstagramFeed.astro';
+
+const base = import.meta.env.BASE_URL;
+const title = "Interior Car Detailing Fort Lauderdale | Mobile Service | Route95";
+const description = "Professional mobile interior car detailing in Fort Lauderdale. Seat shampooing, leather cleaning, steam cleaning, odor removal. We come to you. Call 754-215-2272.";
+
+const siteUrl = "https://route95mobilecardetailing.com";
+const categorySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/interior-car-detailing-fort-lauderdale/#service`,
+  "name": "Mobile Interior Car Detailing Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/interior-car-detailing-fort-lauderdale/`,
+  "serviceType": "Mobile Interior Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Interior Car Detailing Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seat Shampooing", "url": `${siteUrl}/seat-shampooing-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carpet Shampooing", "url": `${siteUrl}/carpet-shampooing-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leather Cleaning", "url": `${siteUrl}/leather-cleaning-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leather Conditioning", "url": `${siteUrl}/leather-conditioning-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Steam Cleaning", "url": `${siteUrl}/steam-cleaning-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Odor Removal", "url": `${siteUrl}/odor-removal-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smoke Odor Removal", "url": `${siteUrl}/smoke-odor-removal-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pet Hair Removal", "url": `${siteUrl}/pet-hair-removal-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Vacuuming", "url": `${siteUrl}/interior-vacuuming-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dashboard Cleaning", "url": `${siteUrl}/dashboard-cleaning-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Protection", "url": `${siteUrl}/interior-protection-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fabric Protection", "url": `${siteUrl}/fabric-protection-fort-lauderdale/` }}
+    ]
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What Is Interior Car Detailing and What Does It Include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interior car detailing is a comprehensive deep cleaning of every surface inside your vehicle. It includes seat shampooing or leather cleaning, carpet extraction, dashboard and console cleaning, steam sanitization, and protective treatments. Professional detailing reaches areas regular cleaning misses — under seats, inside vents, and embedded stains."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Much Does Interior Car Detailing Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interior car detailing in Fort Lauderdale typically costs between $75 and $250 depending on the package and vehicle size. A basic interior clean starts around $75, while a full interior detail with leather conditioning, steam cleaning, and odor treatment runs $150-$250. Heavily soiled vehicles or smoke odor removal may cost more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Interior Detailing Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interior detailing takes between 1 and 3 hours depending on your vehicle's size and condition. A standard sedan in good condition takes about 1-1.5 hours. SUVs and trucks take 1.5-2.5 hours. Vehicles with heavy staining, pet hair, or smoke odor may require 3 or more hours for proper treatment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Is Interior Detailing Critical in Florida's Climate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Florida's high humidity and heat create ideal conditions for mold, mildew, and bacteria growth inside vehicles. Moisture trapped in carpets and seats breeds odor-causing microbes within days. Intense UV radiation also cracks and fades dashboards, leather, and trim. Professional interior detailing removes contaminants and applies UV protectants to prevent damage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Products Do Professional Interior Detailers Use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional interior detailers use specialized products from brands like Chemical Guys and Koch-Chemie that are formulated for specific materials — pH-balanced leather cleaners, enzyme-based odor eliminators, and UV-blocking dashboard protectants. These professional-grade products outperform retail cleaners and are safe for all interior surfaces."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description} currentPage="/interior-car-detailing-fort-lauderdale/" schema={[categorySchema, faqSchema]}>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Interior Car Detailing Fort Lauderdale</h1>
+      <p class="text-xl text-gray-200 max-w-3xl mb-6">
+        <strong>Complete interior car detailing brought to your Fort Lauderdale location. We deep clean seats, carpets, leather, dashboards, and every surface inside your vehicle using professional-grade products and steam cleaning equipment.</strong>
+      </p>
+      <p class="text-lg text-gray-200 max-w-3xl mb-4">
+        We bring full interior detailing directly to your home, office, or anywhere in Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach. No need to drop off your car and wait — our mobile service arrives with hot water extractors, steam cleaners, and everything needed for a thorough interior restoration.
+      </p>
+      <p class="text-lg text-gray-200 max-w-3xl mb-4">
+        We use <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-white underline hover:text-[#c0c7cf]">Chemical Guys</a> and <a href="https://www.koch-chemie.com/" target="_blank" rel="noopener noreferrer" class="text-white underline hover:text-[#c0c7cf]">Koch-Chemie</a> professional-grade interior products formulated for every surface type — fabric, leather, vinyl, and plastic. This matters because using the wrong product on leather or sensitive trim causes permanent damage.
+      </p>
+      <p class="text-lg text-gray-200 max-w-3xl mb-8">
+        Same-day appointments often available. Call 754-215-2272.
+      </p>
+      <a href="tel:+17542152272" class="btn-accent inline-flex items-center justify-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        Call 754-215-2272
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Content -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4 space-y-12">
+
+      <!-- What Is Interior Car Detailing -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Is Interior Car Detailing and What Does It Include?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Interior car detailing is a comprehensive deep cleaning of every surface inside your vehicle — from headliner to floor mats. It goes far beyond vacuuming and wiping. Professional interior detailing extracts embedded dirt from fabric, conditions and protects leather, sanitizes with steam, and eliminates odors at their source rather than masking them.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          A full interior detail includes:
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-1">
+          <li>Seat shampooing or leather cleaning and conditioning</li>
+          <li>Carpet and floor mat deep extraction</li>
+          <li>Dashboard, console, and door panel cleaning</li>
+          <li>Steam cleaning and sanitization</li>
+          <li>Interior glass cleaning</li>
+          <li>Air vent and crevice detailing</li>
+          <li>Odor elimination treatment</li>
+          <li>UV protectant application on all surfaces</li>
+        </ul>
+        <p class="text-gray-600 mb-4">
+          We follow <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">IDA (International Detailing Association)</a> standards for interior care, using material-specific products and techniques that clean thoroughly without damaging surfaces.
+        </p>
+      </div>
+
+      <!-- Cost -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Interior Car Detailing Cost in Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Interior car detailing in Fort Lauderdale ranges from $75 to $250 depending on your vehicle size, interior condition, and the services included. A basic interior clean with vacuuming, wipe-down, and glass starts around $75. A full interior detail with shampooing, leather care, steam cleaning, and odor treatment runs $150-$250. Heavily neglected interiors or smoke odor removal may require additional treatment time.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Our mobile service includes no hidden fees — the price covers travel, equipment, water, and all products. We provide exact quotes before starting so you know the cost upfront. Call 754-215-2272 for a quick estimate based on your vehicle.
+        </p>
+      </div>
+
+      <!-- How Long -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Long Does Interior Detailing Take?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Interior detailing takes 1 to 3 hours depending on your vehicle's size and condition. A standard sedan in good shape takes about 1-1.5 hours. SUVs and trucks need 1.5-2.5 hours. Vehicles with heavy staining, pet hair buildup, or embedded smoke odor may require 3 hours or more for proper extraction and treatment.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          We don't rush interior work. Proper extraction requires dwell time for cleaning solutions to break down stains, and steam cleaning needs thorough coverage to sanitize every surface. You can go about your day while we work — we'll let you know when your vehicle is ready.
+        </p>
+      </div>
+
+      <!-- Florida Climate -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Why Is Interior Detailing Critical in Florida's Climate?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Florida's combination of extreme humidity, intense heat, and year-round UV exposure creates uniquely harsh conditions for vehicle interiors. Moisture trapped in carpets and seat fabric breeds mold, mildew, and bacteria within days. UV radiation cracks dashboards, fades leather, and degrades plastic trim faster than in any northern state.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Regular interior detailing in Fort Lauderdale isn't just cosmetic — it's protective. Steam cleaning kills mold spores before they spread. Leather conditioning prevents cracking caused by heat cycling between scorching sun and air conditioning. UV protectant on dashboards and trim blocks the radiation that causes fading and brittleness.
+        </p>
+        <p class="text-gray-600 mb-4">
+          We recommend interior detailing every 3-4 months in South Florida to stay ahead of humidity damage and keep your cabin fresh and protected.
+        </p>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Products Do Professional Interior Detailers Use?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Professional interior detailers use material-specific products from brands like <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> and <a href="https://www.koch-chemie.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Koch-Chemie</a> — pH-balanced leather cleaners that won't strip natural oils, enzyme-based odor eliminators that destroy bacteria rather than masking smells, and UV-blocking protectants formulated for dashboards and trim.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Using the right product on the right surface matters. Leather requires different care than fabric. Vinyl dashboards need different protection than plastic trim. We carry a full range of professional-grade products so every material in your vehicle gets the correct treatment — never a one-size-fits-all spray.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-8">Our Interior Detailing Services</h2>
+      <div class="space-y-12">
+
+        <!-- Seat Shampooing -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Seat Shampooing</h3>
+          <p class="text-gray-600 mb-2">
+            Deep extraction cleaning that removes stains, spills, sweat, and embedded dirt from fabric and cloth seats. We use hot water extractors and professional upholstery shampoo to restore your seats to like-new condition.
+          </p>
+          <a href={`${base}seat-shampooing-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Seat Shampooing Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Carpet Shampooing -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Carpet Shampooing</h3>
+          <p class="text-gray-600 mb-2">
+            Professional carpet extraction that pulls out ground-in dirt, sand, salt, and stains from your vehicle's carpeting and floor mats. Essential in Fort Lauderdale where sand and moisture accumulate quickly.
+          </p>
+          <a href={`${base}carpet-shampooing-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Carpet Shampooing Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Leather Cleaning -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Leather Cleaning</h3>
+          <p class="text-gray-600 mb-2">
+            pH-balanced leather cleaning that safely removes body oils, dirt, and grime from leather seats and surfaces without stripping the leather's natural moisture or causing discoloration.
+          </p>
+          <a href={`${base}leather-cleaning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Leather Cleaning Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Leather Conditioning -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Leather Conditioning</h3>
+          <p class="text-gray-600 mb-2">
+            Professional leather conditioning replenishes essential oils and creates a protective barrier against Florida's UV rays and heat cycling. Prevents cracking, fading, and premature aging of leather surfaces.
+          </p>
+          <a href={`${base}leather-conditioning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Leather Conditioning Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Steam Cleaning -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Steam Cleaning</h3>
+          <p class="text-gray-600 mb-2">
+            High-temperature steam cleaning sanitizes and deodorizes every interior surface without harsh chemicals. Kills bacteria, mold spores, and dust mites while safely cleaning leather, fabric, plastic, and vinyl.
+          </p>
+          <a href={`${base}steam-cleaning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Steam Cleaning Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Odor Removal -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Odor Removal</h3>
+          <p class="text-gray-600 mb-2">
+            Professional odor elimination that destroys odor-causing bacteria at the source rather than covering smells with fragrance. We treat food, mildew, pet, and general musty odors using enzyme-based treatments and ozone generators.
+          </p>
+          <a href={`${base}odor-removal-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Odor Removal Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Pet Hair Removal -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Pet Hair Removal</h3>
+          <p class="text-gray-600 mb-2">
+            Thorough pet hair extraction from seats, carpets, floor mats, and hard-to-reach crevices. We use specialized tools and techniques to remove embedded pet hair that regular vacuuming leaves behind.
+          </p>
+          <a href={`${base}pet-hair-removal-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Pet Hair Removal Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Dashboard Cleaning -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Dashboard Cleaning</h3>
+          <p class="text-gray-600 mb-2">
+            Detailed dashboard, console, and trim cleaning that removes dust, fingerprints, and UV damage. We apply non-greasy protectant that blocks UV radiation and keeps surfaces looking factory-fresh without attracting dust.
+          </p>
+          <a href={`${base}dashboard-cleaning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Dashboard Cleaning Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Interior Protection -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Interior Protection</h3>
+          <p class="text-gray-600 mb-2">
+            Comprehensive interior protection treatment that shields all surfaces from UV damage, spills, and wear. Includes dashboard protectant, leather sealant, and fabric guard to extend the life of your vehicle's interior.
+          </p>
+          <a href={`${base}interior-protection-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Interior Protection Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Fabric Protection -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Fabric Protection</h3>
+          <p class="text-gray-600 mb-2">
+            Professional fabric protection coating that repels liquids, prevents staining, and makes future spill cleanup effortless. Applied after shampooing to keep your cloth seats and carpets protected between details.
+          </p>
+          <a href={`${base}fabric-protection-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Fabric Protection Fort Lauderdale →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Evidence Cluster Links -->
+  <section class="py-8">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-sm text-gray-500">
+        Products and standards we trust:
+        <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">Chemical Guys</a> ·
+        <a href="https://www.koch-chemie.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">Koch-Chemie</a> ·
+        <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">International Detailing Association (IDA)</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Instagram Feed Section -->
+  <InstagramFeed scriptSrc="https://cdn.trustindex.io/loader-feed.js?31d15e4644082675a636b64f954" />
+
+  <!-- Book Your Mobile Interior Detailing -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="border-t pt-12">
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Book Your Mobile Interior Detailing</h2>
+        <p class="text-gray-600 mb-4">
+          Ready for a professional interior detail at your location? We serve Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach Monday through Saturday, 8 AM to 8 PM. Same-day appointments often available.
+        </p>
+        <p class="text-gray-600 mb-2">
+          <strong>Call or text:</strong> <a href="tel:+17542152272" class="text-[#0f2a4a] hover:text-[#c0c7cf]">754-215-2272</a>
+        </p>
+        <p class="text-gray-600">
+          <strong>Email:</strong> <a href="mailto:contact@route95mobilecardetailing.com" class="text-[#0f2a4a] hover:text-[#c0c7cf]">contact@route95mobilecardetailing.com</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>

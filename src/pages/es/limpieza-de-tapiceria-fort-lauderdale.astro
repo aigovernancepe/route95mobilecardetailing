@@ -42,9 +42,56 @@ const categorySchema = {
     ]
   }
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo funciona el lavado profesional de asientos para tu vehículo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El lavado profesional de asientos utiliza champú con oxígeno y extracción con agua caliente para sacar la suciedad incrustada, el sudor y las manchas de las fibras de la tela. En el clima húmedo de Fort Lauderdale, este proceso también elimina la humedad y las esporas de moho que causan olores a humedad, dejando los asientos sanitizados y frescos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué los autos en Florida necesitan lavado de alfombras regular?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los autos en Florida arrastran arena de playa, sal y humedad que se meten profundo en las fibras de la alfombra donde la aspiradora sola no alcanza. El lavado profesional de alfombras con extracción de agua caliente elimina estas partículas abrasivas y la humedad atrapada que genera moho en la humedad constante del sur de Florida."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la mejor manera de limpiar los asientos de cuero del auto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El mejor método usa un limpiador de cuero con pH balanceado aplicado con un cepillo de crin de caballo para levantar aceites corporales, protector solar y mugre de los poros del cuero sin dañar el acabado. En Fort Lauderdale, la limpieza de cuero cada 2-3 meses previene el desgaste acelerado causado por la exposición UV y la humedad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo sanitiza la limpieza a vapor el interior de tu auto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La limpieza a vapor usa vapor a alta temperatura por encima de 200 grados para matar bacterias, ácaros del polvo y esporas de moho al contacto sin químicos agresivos. Este método sin químicos es seguro para todas las superficies interiores y es especialmente valioso en Florida donde el calor y la humedad aceleran el crecimiento bacteriano dentro de los vehículos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué causa los olores en el auto y cómo se eliminan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los olores del auto provienen de bacterias que se alimentan de materia orgánica atrapada en la tela, el acolchado de la alfombra y las ventilaciones de aire. La eliminación profesional usa tratamientos enzimáticos que descomponen las bacterias causantes de olores a nivel molecular en lugar de enmascarar los olores. La humedad de Florida hace que la eliminación de olores sea especialmente crítica para prevenir el moho recurrente."
+      }
+    }
+  ]
+};
 ---
 
-<BaseLayout title={title} description={description} currentPage="/es/limpieza-de-tapiceria-fort-lauderdale/" schema={categorySchema}>
+<BaseLayout title={title} description={description} currentPage="/es/limpieza-de-tapiceria-fort-lauderdale/" schema={[categorySchema, faqSchema]}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -56,7 +103,7 @@ const categorySchema = {
         La humedad, la arena y el sol de Florida desgastan el interior de tu vehículo. El sudor se absorbe en los asientos de tela, el cuero se seca y se agrieta, y el moho crece en las fibras húmedas de la alfombra. Llevamos la limpieza interior profesional directamente a tu casa u oficina en Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach.
       </p>
       <p class="text-lg text-gray-200 max-w-3xl mb-4">
-        Usamos productos Chemical Guys para interiores diseñados para cada tipo de superficie — limpiadores de cuero con pH balanceado, champús de tela con oxígeno y eliminadores de olores enzimáticos. Nuestro equipo de extracción elimina la suciedad profunda y la humedad que causa moho en climas húmedos.
+        Usamos productos <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-white underline hover:text-gray-300">Chemical Guys</a> para interiores diseñados para cada tipo de superficie — limpiadores de cuero con pH balanceado, champús de tela con oxígeno y eliminadores de olores enzimáticos. Nuestro equipo de extracción elimina la suciedad profunda y la humedad que causa moho en climas húmedos.
       </p>
       <p class="text-lg text-gray-200 max-w-3xl mb-8">
         Citas el mismo día frecuentemente disponibles. Llama al 754-215-2272.
@@ -76,9 +123,12 @@ const categorySchema = {
 
       <!-- Seat Shampooing -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Lavado de Asientos</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cómo funciona el lavado profesional de asientos para tu vehículo?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>El lavado profesional de asientos utiliza champú con oxígeno y extracción con agua caliente para sacar la suciedad incrustada, el sudor y las manchas de las fibras de la tela. En el clima húmedo de Fort Lauderdale, este proceso también elimina la humedad y las esporas de moho que causan olores a humedad, dejando los asientos sanitizados y frescos.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          Limpiamos profundamente los asientos de tela usando Chemical Guys Foaming Citrus Fabric Clean, un champú con oxígeno que penetra las fibras para levantar la suciedad incrustada, el sudor y las manchas. La extracción con agua caliente saca los contaminantes y el exceso de humedad.
+          Limpiamos profundamente los asientos de tela usando <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> Foaming Citrus Fabric Clean, un champú con oxígeno que penetra las fibras para levantar la suciedad incrustada, el sudor y las manchas. La extracción con agua caliente saca los contaminantes y el exceso de humedad.
         </p>
         <a href={localizedUrl('es', 'seat-shampooing-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Lavado de Asientos Fort Lauderdale →
@@ -87,7 +137,10 @@ const categorySchema = {
 
       <!-- Carpet Shampooing -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Lavado de Alfombras</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Por qué los autos en Florida necesitan lavado de alfombras regular?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Los autos en Florida arrastran arena de playa, sal y humedad que se meten profundo en las fibras de la alfombra donde la aspiradora sola no alcanza. El lavado profesional de alfombras con extracción de agua caliente elimina estas partículas abrasivas y la humedad atrapada que genera moho en la humedad constante del sur de Florida.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
           La arena de la playa se mete profundo en las fibras de la alfombra donde la aspiradora no alcanza. Lavamos y extraemos las alfombras para eliminar arena, sal, suciedad y manchas. La extracción adecuada previene el crecimiento de moho en la humedad de Florida.
         </p>
@@ -98,9 +151,12 @@ const categorySchema = {
 
       <!-- Leather Cleaning -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Limpieza de Cuero</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuál es la mejor manera de limpiar los asientos de cuero del auto?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>El mejor método usa un limpiador de cuero con pH balanceado aplicado con un cepillo de crin de caballo para levantar aceites corporales, protector solar y mugre de los poros del cuero sin dañar el acabado. En Fort Lauderdale, la limpieza de cuero cada 2-3 meses previene el desgaste acelerado causado por la exposición UV y la humedad.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          El cuero acumula aceites corporales, protector solar y suciedad que deterioran el acabado con el tiempo. Usamos Chemical Guys Leather Cleaner con pH balanceado y un cepillo de crin de caballo para levantar la mugre de los poros del cuero sin dañarlo.
+          El cuero acumula aceites corporales, protector solar y suciedad que deterioran el acabado con el tiempo. Usamos <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> Leather Cleaner con pH balanceado y un cepillo de crin de caballo para levantar la mugre de los poros del cuero sin dañarlo.
         </p>
         <a href={localizedUrl('es', 'leather-cleaning-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Limpieza de Cuero Fort Lauderdale →
@@ -109,9 +165,12 @@ const categorySchema = {
 
       <!-- Leather Conditioning -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Acondicionamiento de Cuero</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Con qué frecuencia debes acondicionar los asientos de cuero en Florida?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Los intensos rayos UV y los ciclos de humedad de Florida secan el cuero más rápido que en climas del norte, haciendo esencial el acondicionamiento cada 2-3 meses. El acondicionamiento profesional del cuero restaura la humedad, previene el agrietamiento y agrega una barrera resistente a los UV que mantiene los asientos flexibles a pesar de la exposición solar diaria.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          El sol de Florida a través de las ventanas seca el cuero y causa agrietamiento. Aplicamos Chemical Guys Leather Conditioner con Vitamina E y aloe para restaurar la humedad y flexibilidad. La mayoría de los vehículos en Fort Lauderdale necesitan acondicionamiento cada 2-3 meses.
+          El sol de Florida a través de las ventanas seca el cuero y causa agrietamiento. Aplicamos <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> Leather Conditioner con Vitamina E y aloe para restaurar la humedad y flexibilidad. La mayoría de los vehículos en Fort Lauderdale necesitan acondicionamiento cada 2-3 meses.
         </p>
         <a href={localizedUrl('es', 'leather-conditioning-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Acondicionamiento de Cuero Fort Lauderdale →
@@ -120,7 +179,10 @@ const categorySchema = {
 
       <!-- Dashboard Cleaning -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Limpieza de Tablero</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Qué incluye la limpieza de tablero y protección UV?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>La limpieza de tablero elimina polvo, película grasosa y daño UV de todos los plásticos interiores, seguida de la aplicación de protector bloqueador de UV. En Fort Lauderdale, donde los tableros enfrentan exposición solar implacable todo el año, este servicio previene el agrietamiento, la decoloración y la apariencia opaca que envejece los interiores.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
           Los tableros acumulan polvo, daño UV y película grasosa del aire acondicionado. Limpiamos todos los plásticos interiores y aplicamos protector UV para prevenir la decoloración y el agrietamiento por la intensa exposición al sol de Florida.
         </p>
@@ -131,9 +193,12 @@ const categorySchema = {
 
       <!-- Interior Vacuuming -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Aspirado Interior</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Por qué el aspirado interior profesional es mejor que hacerlo tú mismo?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>El aspirado interior profesional usa equipo de grado comercial con herramientas de grietas especializadas que alcanzan áreas que las aspiradoras domésticas no pueden, incluyendo debajo de los asientos, dentro de los rieles y entre las costuras de los cojines. En Florida, la extracción completa de arena y escombros previene el desgaste abrasivo que deteriora las fibras de la tapicería con el tiempo.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          Un aspirado completo llega debajo de los asientos, en las grietas y entre los cojines donde se esconde la suciedad. Usamos equipo comercial con herramientas de grietas para eliminar arena, migajas, pelo de mascota y escombros de cada rincón.
+          Un aspirado completo llega debajo de los asientos, en las grietas y entre los cojines donde se esconde la suciedad. Usamos equipo comercial con herramientas de grietas para eliminar arena, migajas, pelo de mascota y escombros de cada rincón. Nuestro proceso recomendado por la <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">IDA</a> asegura que ningún área se pase por alto.
         </p>
         <a href={localizedUrl('es', 'interior-vacuuming-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Aspirado Interior Fort Lauderdale →
@@ -142,9 +207,12 @@ const categorySchema = {
 
       <!-- Steam Cleaning -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Limpieza a Vapor</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cómo sanitiza la limpieza a vapor el interior de tu auto?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>La limpieza a vapor usa vapor a alta temperatura por encima de 200 grados para matar bacterias, ácaros del polvo y esporas de moho al contacto sin químicos agresivos. Este método sin químicos es seguro para todas las superficies interiores y es especialmente valioso en Florida donde el calor y la humedad aceleran el crecimiento bacteriano dentro de los vehículos.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          El vapor sanitiza y limpia profundamente sin químicos agresivos. El vapor a alta temperatura mata bacterias, afloja la mugre y refresca las telas. Seguro para todas las superficies interiores incluyendo cuero sensible y electrónicos.
+          El vapor sanitiza y limpia profundamente sin químicos agresivos. El vapor a alta temperatura mata bacterias, afloja la mugre y refresca las telas. Seguro para todas las superficies interiores incluyendo cuero sensible y electrónicos. Esta técnica reconocida por la <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">IDA</a> es ideal para personas alérgicas y familias con niños.
         </p>
         <a href={localizedUrl('es', 'steam-cleaning-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Limpieza a Vapor Fort Lauderdale →
@@ -153,7 +221,10 @@ const categorySchema = {
 
       <!-- Odor Removal -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Eliminación de Olores</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Qué causa los olores en el auto y cómo se eliminan?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Los olores del auto provienen de bacterias que se alimentan de materia orgánica atrapada en la tela, el acolchado de la alfombra y las ventilaciones de aire. La eliminación profesional usa tratamientos enzimáticos que descomponen las bacterias causantes de olores a nivel molecular en lugar de enmascarar los olores. La humedad de Florida hace que la eliminación de olores sea especialmente crítica para prevenir el moho recurrente.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
           Los olores de comida, moho y derrames se absorben en la tela y el acolchado de la alfombra. Usamos tratamientos enzimáticos que descomponen las bacterias causantes de olores en su origen en lugar de enmascarar los olores con fragancia.
         </p>
@@ -164,7 +235,10 @@ const categorySchema = {
 
       <!-- Smoke Odor Removal -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Eliminación de Olor a Humo</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Se puede realmente eliminar el olor a humo de un auto?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Sí, el olor a humo se puede eliminar completamente usando tratamiento de ozono combinado con limpieza profunda por extracción de cada superficie porosa. Las moléculas de ozono se unen a las partículas de humo incrustadas en el techo interior, asientos, alfombra y ventilaciones de aire, neutralizándolas permanentemente en lugar de enmascarar el olor con fragancias.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
           El humo de cigarrillo y cigarro penetra cada superficie porosa — techo interior, asientos, alfombra y ventilaciones de aire. Usamos tratamiento de ozono combinado con limpieza profunda para eliminar el olor a humo, no solo cubrirlo.
         </p>
@@ -175,7 +249,10 @@ const categorySchema = {
 
       <!-- Pet Hair Removal -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Eliminación de Pelo de Mascota</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cómo eliminan los profesionales el pelo de mascota del interior del auto?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>La eliminación profesional de pelo de mascota combina herramientas de extracción de goma, aire comprimido y aspirado comercial para sacar el pelo incrustado del tejido de la tela, las fibras de la alfombra y las grietas estrechas. En Fort Lauderdale, donde las mascotas viajan en el auto todo el año, aproximadamente el 40% de nuestros clientes necesitan este servicio para mantener los alérgenos y el pelo bajo control.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
           El pelo de mascota se entrelaza en las fibras de la tela y resiste el aspirado normal. Usamos herramientas y técnicas especializadas para extraer pelo de mascota incrustado de asientos, alfombras y espacios estrechos. Aproximadamente el 40% de nuestros clientes en Fort Lauderdale solicitan este servicio.
         </p>
@@ -186,9 +263,12 @@ const categorySchema = {
 
       <!-- Interior Protection -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Protección Interior</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Qué hace la protección interior por tu vehículo?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>La protección interior aplica recubrimientos especializados a cada superficie después de la limpieza — bloqueadores UV para plásticos, sellador cerámico para tela y acondicionador para cuero. En el implacable sol y ambiente salino de Florida, estos protectores retardan la degradación UV, repelen las manchas y extienden la vida de tu interior por años.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          Después de la limpieza, aplicamos protectores a todas las superficies interiores — bloqueadores UV para plásticos, sellador de tela para asientos y acondicionador de cuero para las pieles. La protección extiende la vida de tu interior y facilita la limpieza futura.
+          Después de la limpieza, aplicamos protectores <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> a todas las superficies interiores — bloqueadores UV para plásticos, sellador de tela para asientos y acondicionador de cuero para las pieles. La protección extiende la vida de tu interior y facilita la limpieza futura.
         </p>
         <a href={localizedUrl('es', 'interior-protection-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Protección Interior Fort Lauderdale →
@@ -197,9 +277,12 @@ const categorySchema = {
 
       <!-- Fabric Protection -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Protección de Tela</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cómo previene la protección de tela las manchas en tu auto?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>La protección de tela crea una barrera cerámica invisible en los asientos y alfombras que hace que los líquidos se perlen en la superficie en lugar de absorberse en las fibras. En Florida, donde la lluvia, el sudor y las bebidas derramadas son amenazas constantes, este recubrimiento te da tiempo para limpiar antes de que las manchas se fijen permanentemente en la tapicería.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          Chemical Guys Hydro Thread crea una barrera cerámica invisible en los asientos de tela y alfombras. Los derrames se perlan en la superficie en lugar de absorberse, dándote tiempo para limpiar antes de que las manchas se fijen.
+          <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> Hydro Thread crea una barrera cerámica invisible en los asientos de tela y alfombras. Los derrames se perlan en la superficie en lugar de absorberse, dándote tiempo para limpiar antes de que las manchas se fijen.
         </p>
         <a href={localizedUrl('es', 'fabric-protection-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Protección de Tela Fort Lauderdale →

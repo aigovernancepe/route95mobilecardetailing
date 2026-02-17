@@ -39,9 +39,56 @@ const categorySchema = {
     ]
   }
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué Incluye un Lavado a Mano a Domicilio en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un lavado a mano profesional a domicilio en Fort Lauderdale usa el método de dos cubetas con jabón Chemical Guys de pH balanceado para levantar la suciedad de forma segura sin rayar tu pintura. Vamos a tu casa u oficina con toda el agua y el equipo para que nunca tengas que manejar a un autolavado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por Qué Su Auto Necesita Encerado Profesional en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los intensos rayos UV de Fort Lauderdale, el aire salado del Atlántico y los contaminantes diarios deterioran la capa transparente de tu pintura más rápido que en la mayoría de las ciudades de EE.UU. La cera de carnauba profesional crea una barrera protectora que bloquea la radiación UV, repele los depósitos de sal y mantiene tu pintura brillante por 2-3 meses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué Es el Tratamiento con Barra de Arcilla y Cuándo Lo Necesita Su Auto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El tratamiento con barra de arcilla elimina contaminantes adheridos a la superficie que el lavado regular no puede tocar, incluyendo residuos industriales, savia de árboles, exceso de pintura y polvo de rieles. Si tu pintura se siente áspera después de lavarla, necesita descontaminación con barra de arcilla antes del encerado para un acabado suave y protegido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo Protege la Limpieza Profesional de Rines a Sus Ruedas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El polvo de frenos es corrosivo y se hornea en las superficies de los rines con el calor de Florida, causando picaduras permanentes si no se trata. La limpieza profesional de rines usa productos de pH balanceado seguros para cromo, aluminio pulido y acabados pintados para disolver la acumulación sin dañar sus ruedas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo Debe Hacer la Eliminación de Insectos y Brea en el Sur de Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En el sur de Florida, la eliminación de insectos y brea es esencial durante las temporadas de love bugs en mayo y septiembre cuando los residuos ácidos de insectos pueden corroer la capa transparente en 24 horas. Disolvemos de forma segura las salpicaduras y la brea del camino sin dañar tu pintura ni la protección de cera existente."
+      }
+    }
+  ]
+};
 ---
 
-<BaseLayout title={title} description={description} currentPage="/es/lavado-de-autos-fort-lauderdale/" schema={categorySchema}>
+<BaseLayout title={title} description={description} currentPage="/es/lavado-de-autos-fort-lauderdale/" schema={[categorySchema, faqSchema]}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -53,7 +100,7 @@ const categorySchema = {
         Llevamos el lavado profesional de autos directamente a ti en cualquier lugar de Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach. No necesitas hacer fila ni manejar por toda la ciudad. Nuestro servicio móvil llega a tu casa, oficina o cualquier lugar conveniente con todo lo necesario para una limpieza exterior completa.
       </p>
       <p class="text-lg text-gray-200 max-w-3xl mb-4">
-        Usamos productos premium de lavado Chemical Guys en un sistema de dos cubetas que levanta la suciedad de forma segura sin rayar tu pintura. Esto es especialmente importante para vehículos de lujo donde las marcas de remolino se notan fácilmente en acabados oscuros.
+        Usamos productos premium de lavado <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-white underline hover:text-[#c0c7cf]">Chemical Guys</a> en un sistema de dos cubetas que levanta la suciedad de forma segura sin rayar tu pintura. Esto es especialmente importante para vehículos de lujo donde las marcas de remolino se notan fácilmente en acabados oscuros.
       </p>
       <p class="text-lg text-gray-200 max-w-3xl mb-8">
         Citas el mismo día frecuentemente disponibles. Llama al 754-215-2272.
@@ -73,9 +120,12 @@ const categorySchema = {
 
       <!-- Hand Wash -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Lavado a Mano</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Qué Incluye un Lavado a Mano a Domicilio en Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          Nuestro lavado a mano usa Chemical Guys Mr. Pink Super Suds en un método de dos cubetas que previene rayones. Lavamos a mano porque los cepillos automáticos dañan la pintura con el tiempo — especialmente en vehículos de lujo como Mercedes, BMW y Porsche.
+          <strong>Un lavado a mano profesional a domicilio en Fort Lauderdale usa el método de dos cubetas con jabón <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> de pH balanceado para levantar la suciedad de forma segura sin rayar tu pintura. Vamos a tu casa u oficina con toda el agua y el equipo para que nunca tengas que manejar a un autolavado.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Lavamos a mano porque los cepillos automáticos dañan la pintura con el tiempo — especialmente en vehículos de lujo como Mercedes, BMW y Porsche. Nuestro proceso <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">recomendado por la IDA</a> usa guantes de microfibra nuevos y agua limpia en cada panel.
         </p>
         <a href={localizedUrl('es', 'hand-wash-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Lavado a Mano Fort Lauderdale →
@@ -84,9 +134,12 @@ const categorySchema = {
 
       <!-- Car Waxing -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Encerado de Autos</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Por Qué Su Auto Necesita Encerado Profesional en Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          La cera crea una barrera protectora entre tu pintura y el sol intenso de Florida, el aire salado y los contaminantes diarios. Aplicamos cera de carnauba <a href="https://www.meguiars.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Meguiar's</a> a mano para un brillo profundo y protección duradera.
+          <strong>Los intensos rayos UV de Fort Lauderdale, el aire salado del Atlántico y los contaminantes diarios deterioran la capa transparente de tu pintura más rápido que en la mayoría de las ciudades de EE.UU. La cera de carnauba profesional crea una barrera protectora que bloquea la radiación UV, repele los depósitos de sal y mantiene tu pintura brillante por 2-3 meses.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Aplicamos cera de carnauba <a href="https://www.meguiars.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Meguiar's</a> a mano para un brillo profundo y protección duradera. La aplicación a mano asegura una cobertura uniforme sin las rayas o puntos perdidos comunes con la aplicación a máquina.
         </p>
         <a href={localizedUrl('es', 'car-waxing-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Encerado de Autos Fort Lauderdale →
@@ -95,9 +148,12 @@ const categorySchema = {
 
       <!-- Clay Bar Treatment -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Tratamiento con Barra de Arcilla</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Qué Es el Tratamiento con Barra de Arcilla y Cuándo Lo Necesita Su Auto?</h2>
         <p class="text-gray-600 mb-4">
-          La barra de arcilla elimina contaminantes adheridos que el lavado solo no puede tocar — residuos industriales, savia de árboles, exceso de pintura y polvo de rieles. Si tu pintura se siente áspera después de lavarla, necesita tratamiento con barra de arcilla antes del encerado.
+          <strong>El tratamiento con barra de arcilla elimina contaminantes adheridos a la superficie que el lavado regular no puede tocar, incluyendo residuos industriales, savia de árboles, exceso de pintura y polvo de rieles. Si tu pintura se siente áspera después de lavarla, necesita descontaminación con barra de arcilla antes del encerado para un acabado suave y protegido.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          En el sur de Florida, los contaminantes del aire se adhieren a tu pintura rápidamente debido al calor y la humedad. Recomendamos el tratamiento con barra de arcilla cada 6 meses o antes de cualquier aplicación de cera o sellador para mejores resultados.
         </p>
         <a href={localizedUrl('es', 'clay-bar-treatment-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Tratamiento con Barra de Arcilla Fort Lauderdale →
@@ -106,9 +162,12 @@ const categorySchema = {
 
       <!-- Wheel Cleaning -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Limpieza de Rines</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cómo Protege la Limpieza Profesional de Rines a Sus Ruedas?</h2>
         <p class="text-gray-600 mb-4">
-          El polvo de frenos es corrosivo y se hornea en los rines con el calor de Florida. Usamos limpiadores de rines con pH balanceado seguros para todos los acabados — cromo, aluminio pulido y rines pintados — para eliminar la acumulación sin daño.
+          <strong>El polvo de frenos es corrosivo y se hornea en las superficies de los rines con el calor de Florida, causando picaduras permanentes si no se trata. La limpieza profesional de rines usa productos de pH balanceado seguros para cromo, aluminio pulido y acabados pintados para disolver la acumulación sin dañar sus ruedas.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Usamos cepillos dedicados para rines y limpiadores seguros <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> que descomponen las partículas ferrosas de freno sin daño ácido. La limpieza regular de rines cada 2-4 semanas previene el grabado permanente.
         </p>
         <a href={localizedUrl('es', 'wheel-cleaning-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Limpieza de Rines Fort Lauderdale →
@@ -117,9 +176,12 @@ const categorySchema = {
 
       <!-- Tire Dressing -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Acondicionador de Llantas</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Qué Hace el Acondicionador de Llantas por Su Vehículo?</h2>
         <p class="text-gray-600 mb-4">
-          El acondicionador de llantas restaura la apariencia negra profunda de tus laterales mientras protege el caucho del agrietamiento por rayos UV. Usamos acondicionadores a base de agua que no salpican tu pintura cuando manejas.
+          <strong>El acondicionador de llantas restaura la apariencia negra profunda de tus laterales mientras protege el caucho del agrietamiento y deterioro causado por los rayos UV. Usamos acondicionadores a base de agua que proporcionan un acabado satinado natural sin salpicaduras en tu pintura cuando manejas.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          El sol intenso de Florida seca el caucho de las llantas más rápido que en climas del norte. El acondicionamiento regular de llantas extiende la vida de los laterales y hace que todo tu vehículo se vea recién detallado.
         </p>
         <a href={localizedUrl('es', 'tire-dressing-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Acondicionador de Llantas Fort Lauderdale →
@@ -128,9 +190,12 @@ const categorySchema = {
 
       <!-- Bug and Tar Removal -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Eliminación de Insectos y Brea</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuándo Debe Hacer la Eliminación de Insectos y Brea en el Sur de Florida?</h2>
         <p class="text-gray-600 mb-4">
-          La temporada de love bugs en mayo y septiembre deja residuos ácidos que corroen la capa transparente en 24 horas. Disolvemos de forma segura los restos de insectos y la brea del camino sin dañar tu pintura ni la protección de cera.
+          <strong>En el sur de Florida, la eliminación de insectos y brea es esencial durante las temporadas de love bugs en mayo y septiembre cuando los residuos ácidos de insectos pueden corroer la capa transparente en 24 horas. Disolvemos de forma segura las salpicaduras y la brea del camino sin dañar tu pintura ni la protección de cera existente.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          No dejes que los residuos de insectos se queden en tu pintura. Cuanto más tiempo permanecen, más profundo es el daño. Nuestro solvente especializado para insectos y brea descompone los ácidos orgánicos sin afectar tu pintura ni la capa de cera.
         </p>
         <a href={localizedUrl('es', 'bug-and-tar-removal-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Eliminación de Insectos y Brea Fort Lauderdale →
@@ -139,9 +204,12 @@ const categorySchema = {
 
       <!-- Water Spot Removal -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Eliminación de Manchas de Agua</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Qué Causa las Manchas de Agua y Cómo Se Eliminan?</h2>
         <p class="text-gray-600 mb-4">
-          Los sistemas de rociadores y el agua dura dejan depósitos minerales que se graban en la pintura si no se tratan. Eliminamos las manchas de agua y podemos aplicar protección para prevenir futuras manchas en vehículos estacionados cerca de sistemas de riego.
+          <strong>Las manchas de agua se forman cuando el agua rica en minerales de los rociadores, agua dura o lluvia se evapora y deja depósitos de calcio y magnesio en tu pintura. Sin tratamiento, estos minerales se graban en la capa transparente y requieren corrección profesional para eliminarlos de forma segura.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          El agua dura y el riego frecuente del sur de Florida hacen que las manchas de agua sean especialmente comunes. Eliminamos las manchas existentes y podemos aplicar protección hidrofóbica para prevenir futuras manchas en vehículos estacionados cerca de sistemas de riego.
         </p>
         <a href={localizedUrl('es', 'water-spot-removal-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Eliminación de Manchas de Agua Fort Lauderdale →
@@ -150,9 +218,12 @@ const categorySchema = {
 
       <!-- Trim Restoration -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Restauración de Molduras</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cómo la Restauración de Molduras Hace que Su Auto Se Vea Más Nuevo?</h2>
         <p class="text-gray-600 mb-4">
-          Las molduras plásticas negras se descoloran a gris bajo el sol de Florida. Restauramos las piezas de moldura descoloridas a negro profundo y aplicamos protector para retardar el daño futuro por rayos UV. Hace que un vehículo viejo se vea años más nuevo.
+          <strong>Las molduras plásticas negras se descoloran a un gris opaco bajo el sol implacable de Florida cuando la radiación UV degrada la superficie del plástico. La restauración profesional de molduras devuelve las piezas descoloridas a un negro profundo y aplica protector contra UV para retardar el deterioro futuro por meses.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          La restauración de molduras es una de las formas más rápidas de hacer que un vehículo viejo se vea años más nuevo. Tratamos manijas de puertas, tapas de espejos, marcos de ventanas y molduras de parachoques con restaurador y protector de grado profesional.
         </p>
         <a href={localizedUrl('es', 'trim-restoration-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Más información sobre Restauración de Molduras Fort Lauderdale →

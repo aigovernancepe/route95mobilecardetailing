@@ -38,9 +38,56 @@ const categorySchema = {
     ]
   }
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What Does a Mobile Hand Wash Include in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A professional mobile hand wash in Fort Lauderdale uses the two-bucket method with pH-balanced Chemical Guys soap to safely lift dirt without scratching your paint. We come to your home or office with all water and equipment so you never need to drive to a car wash."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Does Your Car Need Professional Waxing in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fort Lauderdale's intense UV rays, salt air from the Atlantic, and daily contaminants break down your paint's clear coat faster than most U.S. cities. Professional carnauba wax creates a protective barrier that blocks UV radiation, repels salt deposits, and keeps your paint glossy for 2-3 months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Is Clay Bar Treatment and When Does Your Car Need It?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clay bar treatment removes bonded surface contaminants that regular washing cannot touch, including industrial fallout, tree sap, overspray, and rail dust. If your paint feels rough after washing, it needs clay bar decontamination before waxing to ensure a smooth, protected finish."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Does Professional Wheel Cleaning Protect Your Wheels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Brake dust is corrosive and bakes onto wheel surfaces in Florida's heat, causing permanent pitting if left untreated. Professional wheel cleaning uses pH-balanced products safe for chrome, polished aluminum, and painted finishes to dissolve buildup without damaging your wheels."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When Should You Get Bug and Tar Removal in South Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In South Florida, bug and tar removal is essential during love bug seasons in May and September when acidic bug residue can etch through clear coat within 24 hours. We safely dissolve splatter and road tar without damaging your paint or existing wax protection."
+      }
+    }
+  ]
+};
 ---
 
-<BaseLayout title={title} description={description} currentPage="/car-wash-fort-lauderdale/" schema={categorySchema}>
+<BaseLayout title={title} description={description} currentPage="/car-wash-fort-lauderdale/" schema={[categorySchema, faqSchema]}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -52,7 +99,7 @@ const categorySchema = {
         We bring professional car washing directly to you anywhere in Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach. No need to wait in line or drive across town. Our mobile service arrives at your home, office, or anywhere convenient with everything needed for a thorough exterior clean.
       </p>
       <p class="text-lg text-gray-200 max-w-3xl mb-4">
-        We use Chemical Guys premium wash products in a two-bucket system that safely lifts dirt without scratching your paint. This matters especially for luxury vehicles where swirl marks show easily on dark finishes.
+        We use <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-white underline hover:text-[#c0c7cf]">Chemical Guys</a> premium wash products in a two-bucket system that safely lifts dirt without scratching your paint. This matters especially for luxury vehicles where swirl marks show easily on dark finishes.
       </p>
       <p class="text-lg text-gray-200 max-w-3xl mb-8">
         Same-day appointments often available. Call 754-215-2272.
@@ -72,9 +119,12 @@ const categorySchema = {
 
       <!-- Hand Wash -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Hand Wash</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Does a Mobile Hand Wash Include in Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          Our hand wash uses Chemical Guys Mr. Pink Super Suds in a two-bucket method that prevents scratches. We wash by hand because automated brushes damage paint over time—especially on luxury vehicles like Mercedes, BMW, and Porsche.
+          <strong>A professional mobile hand wash in Fort Lauderdale uses the two-bucket method with pH-balanced <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> soap to safely lift dirt without scratching your paint. We come to your home or office with all water and equipment so you never need to drive to a car wash.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          We wash by hand because automated brushes damage paint over time — especially on luxury vehicles like Mercedes, BMW, and Porsche. Our <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">IDA-recommended</a> process uses fresh microfiber mitts and clean water on every panel.
         </p>
         <a href={`${base}hand-wash-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Hand Wash Fort Lauderdale →
@@ -83,9 +133,12 @@ const categorySchema = {
 
       <!-- Car Waxing -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Car Waxing</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Why Does Your Car Need Professional Waxing in Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          Wax creates a protective barrier between your paint and Florida's intense sun, salt air, and daily contaminants. We apply <a href="https://www.meguiars.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Meguiar's</a> carnauba wax by hand for deep gloss and lasting protection.
+          <strong>Fort Lauderdale's intense UV rays, salt air from the Atlantic, and daily contaminants break down your paint's clear coat faster than most U.S. cities. Professional carnauba wax creates a protective barrier that blocks UV radiation, repels salt deposits, and keeps your paint glossy for 2-3 months.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          We apply <a href="https://www.meguiars.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Meguiar's</a> carnauba wax by hand for deep gloss and lasting protection. Hand application ensures even coverage without the streaks or missed spots common with machine application.
         </p>
         <a href={`${base}car-waxing-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Car Waxing Fort Lauderdale →
@@ -94,9 +147,12 @@ const categorySchema = {
 
       <!-- Clay Bar Treatment -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Clay Bar Treatment</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Is Clay Bar Treatment and When Does Your Car Need It?</h2>
         <p class="text-gray-600 mb-4">
-          Clay bar removes bonded contaminants that washing alone can't touch—industrial fallout, tree sap, overspray, and rail dust. If your paint feels rough after washing, it needs clay bar treatment before waxing.
+          <strong>Clay bar treatment removes bonded surface contaminants that regular washing cannot touch, including industrial fallout, tree sap, overspray, and rail dust. If your paint feels rough after washing, it needs clay bar decontamination before waxing to ensure a smooth, protected finish.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          In South Florida, airborne contaminants bond to your paint quickly due to heat and humidity. We recommend clay bar treatment every 6 months or before any wax or sealant application for best results.
         </p>
         <a href={`${base}clay-bar-treatment-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Clay Bar Treatment Fort Lauderdale →
@@ -105,9 +161,12 @@ const categorySchema = {
 
       <!-- Wheel Cleaning -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Wheel Cleaning</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Does Professional Wheel Cleaning Protect Your Wheels?</h2>
         <p class="text-gray-600 mb-4">
-          Brake dust is corrosive and bakes onto wheels in Florida heat. We use pH-balanced wheel cleaners safe for all finishes—chrome, polished aluminum, and painted wheels—to remove buildup without damage.
+          <strong>Brake dust is corrosive and bakes onto wheel surfaces in Florida's heat, causing permanent pitting if left untreated. Professional wheel cleaning uses pH-balanced products safe for chrome, polished aluminum, and painted finishes to dissolve buildup without damaging your wheels.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          We use dedicated wheel brushes and <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> wheel-safe cleaners that break down ferrous brake particles without acid damage. Regular wheel cleaning every 2-4 weeks prevents permanent etching.
         </p>
         <a href={`${base}wheel-cleaning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Wheel Cleaning Fort Lauderdale →
@@ -116,9 +175,12 @@ const categorySchema = {
 
       <!-- Tire Dressing -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Tire Dressing</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Does Tire Dressing Do for Your Vehicle?</h2>
         <p class="text-gray-600 mb-4">
-          Tire dressing restores the deep black appearance of your sidewalls while protecting rubber from UV cracking. We use water-based dressings that won't sling onto your paint when you drive.
+          <strong>Tire dressing restores the deep black appearance of your sidewalls while protecting rubber from UV-induced cracking and dry rot. We use water-based dressings that provide a natural satin finish without slinging onto your paint when you drive.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Florida's intense sun dries out tire rubber faster than northern climates. Regular tire dressing extends sidewall life and makes your entire vehicle look freshly detailed.
         </p>
         <a href={`${base}tire-dressing-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Tire Dressing Fort Lauderdale →
@@ -127,9 +189,12 @@ const categorySchema = {
 
       <!-- Bug and Tar Removal -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Bug and Tar Removal</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">When Should You Get Bug and Tar Removal in South Florida?</h2>
         <p class="text-gray-600 mb-4">
-          Love bug season in May and September leaves acidic residue that etches clear coat within 24 hours. We safely dissolve bug splatter and road tar without damaging your paint or wax protection.
+          <strong>In South Florida, bug and tar removal is essential during love bug seasons in May and September when acidic bug residue can etch through clear coat within 24 hours. We safely dissolve splatter and road tar without damaging your paint or existing wax protection.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Don't let bug residue sit on your paint. The longer it stays, the deeper the damage. Our specialized bug and tar solvent breaks down organic acids without affecting your paint or wax layer.
         </p>
         <a href={`${base}bug-and-tar-removal-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Bug and Tar Removal Fort Lauderdale →
@@ -138,9 +203,12 @@ const categorySchema = {
 
       <!-- Water Spot Removal -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Water Spot Removal</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Causes Water Spots and How Are They Removed?</h2>
         <p class="text-gray-600 mb-4">
-          Sprinkler systems and hard water leave mineral deposits that etch into paint if left untreated. We remove water spots and can apply protection to prevent future spotting on vehicles parked near irrigation.
+          <strong>Water spots form when mineral-rich water from sprinklers, hard water, or rain evaporates and leaves calcium and magnesium deposits on your paint. Left untreated, these minerals etch into the clear coat and require professional correction to remove safely.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          South Florida's hard water and frequent irrigation make water spotting especially common. We remove existing spots and can apply hydrophobic protection to prevent future spotting on vehicles parked near irrigation systems.
         </p>
         <a href={`${base}water-spot-removal-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Water Spot Removal Fort Lauderdale →
@@ -149,9 +217,12 @@ const categorySchema = {
 
       <!-- Trim Restoration -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Trim Restoration</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Does Trim Restoration Make Your Car Look Newer?</h2>
         <p class="text-gray-600 mb-4">
-          Black plastic trim fades to gray under Florida sun. We restore faded trim pieces to deep black and apply protectant to slow future UV damage. Makes an older vehicle look years newer.
+          <strong>Black plastic trim fades to chalky gray under Florida's relentless sun as UV radiation breaks down the plastic's surface. Professional trim restoration brings faded pieces back to deep black and applies UV-blocking protectant to slow future deterioration by months.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Trim restoration is one of the fastest ways to make an older vehicle look years newer. We treat door handles, mirror caps, window surrounds, and bumper trim with professional-grade restorer and protectant.
         </p>
         <a href={`${base}trim-restoration-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Trim Restoration Fort Lauderdale →

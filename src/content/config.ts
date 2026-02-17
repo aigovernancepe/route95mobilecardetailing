@@ -7,6 +7,10 @@ const blog = defineCollection({
     description: z.string(),
     date: z.date(),
     author: z.string().default('Route95 Mobile Car Detailing'),
+    faqs: z.array(z.object({
+      question: z.string(),
+      answer: z.string(),
+    })).optional(),
   }),
 });
 
