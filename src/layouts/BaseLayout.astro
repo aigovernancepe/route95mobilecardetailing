@@ -127,6 +127,39 @@ const businessSchema = {
   "sameAs": []
 };
 
+// BreadcrumbList Schema (included on all pages)
+const pathname = Astro.url.pathname;
+const pathSegments = pathname.split('/').filter(Boolean);
+
+// Build breadcrumb items from URL path
+const breadcrumbItems: { name: string; url: string }[] = [
+  { name: locale === 'es' ? 'Inicio' : 'Home', url: `${siteUrl}${locale === 'es' ? '/es/' : '/'}` }
+];
+
+// Skip the locale prefix segment for Spanish pages
+const startIdx = (locale === 'es' && pathSegments[0] === 'es') ? 1 : 0;
+let currentPath = locale === 'es' ? '/es' : '';
+
+for (let i = startIdx; i < pathSegments.length; i++) {
+  const segment = pathSegments[i];
+  currentPath += `/${segment}`;
+  const name = segment
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (c: string) => c.toUpperCase());
+  breadcrumbItems.push({ name, url: `${siteUrl}${currentPath}/` });
+}
+
+const breadcrumbSchema = breadcrumbItems.length > 1 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbItems.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    "item": item.url
+  }))
+} : null;
+
 // Organization Schema (included on all pages)
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -193,6 +226,11 @@ const organizationSchema = {
 
   <!-- Organization Schema -->
   <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+
+  <!-- BreadcrumbList Schema -->
+  {breadcrumbSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  )}
 
   <!-- Additional Schema(s) if provided -->
   {schema && (

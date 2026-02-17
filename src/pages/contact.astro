@@ -4,6 +4,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const title = "Contact Us | Route95 Mobile Car Detailing Fort Lauderdale";
 const description = "Contact Route95 Mobile Car Detailing for professional mobile car detailing in Fort Lauderdale. Call 754-215-2272 or request a free quote online. Same-day service available.";
 
+const siteUrl = "https://route95mobilecardetailing.com";
+
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": title,
+  "description": description,
+  "url": `${siteUrl}/contact/`,
+  "mainEntity": {
+    "@id": `${siteUrl}/#business`
+  }
+};
+
 const services = [
   "Hand Wash",
   "Full Detail",
@@ -17,7 +30,7 @@ const services = [
 ];
 ---
 
-<BaseLayout title={title} description={description} currentPage="/contact/">
+<BaseLayout title={title} description={description} currentPage="/contact/" schema={contactPageSchema}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16">
     <div class="max-w-7xl mx-auto px-4 text-center">
