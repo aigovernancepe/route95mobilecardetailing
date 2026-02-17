@@ -1,0 +1,206 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+
+const base = import.meta.env.BASE_URL;
+const title = "Fleet Detailing Fort Lauderdale | Mobile Service | Route95";
+const description = "Mobile fleet detailing in Fort Lauderdale for businesses. Volume discounts, flexible scheduling, all vehicle types. We come to your lot. Call 754-215-2272.";
+
+const parentCategory = {
+  href: `${base}car-detailing-services-fort-lauderdale/`,
+  title: "Detailing Services"
+};
+
+const siteUrl = "https://route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/fleet-detailing-fort-lauderdale/#service`,
+  "name": "Fleet Detailing Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/fleet-detailing-fort-lauderdale/`,
+  "serviceType": "Mobile Fleet Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 75,
+    "highPrice": 300
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Fleet Detailing Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fleet detailing in Fort Lauderdale starts at $75 per vehicle with volume discounts for fleets of 5+ vehicles. Pricing depends on vehicle type, service level, and fleet size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Types of Fleets Do You Service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We service all types of commercial and business fleets including delivery vans, company cars, rental fleets, dealership inventory, rideshare vehicles, and real estate agents' cars."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Does Mobile Fleet Detailing Save Your Business Money?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mobile fleet detailing eliminates employee downtime by coming directly to your lot. No travel time, bulk pricing on multiple vehicles, and a professional appearance that generates more business."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Fleet Detailing Fort Lauderdale"
+  intro="Keep your business fleet looking professional with mobile detailing that comes directly to your parking lot. No downtime, no hassle, just clean vehicles ready to represent your brand."
+  currentPage="/fleet-detailing-fort-lauderdale/"
+  parentCategory={parentCategory}
+  schema={schemas}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Route95 provides mobile fleet detailing services throughout Broward County, bringing professional cleaning directly to your business location. Whether you manage a fleet of delivery vans, company cars, or rental vehicles, we handle everything on-site so your team stays productive while your vehicles get the attention they need.
+        </p>
+        <p class="text-gray-600 mb-4">
+          A clean fleet is more than appearance. It reflects your brand, protects your vehicle investments, and makes a lasting impression on customers. Our fleet detailing programs are designed for businesses that understand the value of consistent vehicle maintenance without the operational disruption of traditional detail shops.
+        </p>
+        <p class="text-gray-600">
+          We serve businesses in Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach. Custom scheduling available for recurring weekly, biweekly, or monthly service.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Fleet Detailing Cost in Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Fleet detailing in Fort Lauderdale starts at $75 per vehicle with volume discounts for fleets of 5+ vehicles. Pricing depends on vehicle type, service level, and fleet size. We offer custom maintenance plans for businesses that need regular scheduled service.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Compact cars and sedans fall at the lower end of the range. Vans, trucks, and SUVs cost more due to additional surface area and time required. We provide a detailed quote after evaluating your specific fleet and service needs.
+        </p>
+        <p class="text-gray-600">
+          Businesses that commit to recurring service receive the best rates. Regular maintenance also reduces the cost per visit because vehicles stay cleaner between appointments, requiring less intensive work each time.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Types of Fleets Do You Service?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>We service all types of commercial and business fleets in Broward County. No fleet is too small or too large. From a handful of company cars to a full dealership lot, we have the equipment and team to handle it.</strong>
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>Delivery vans and box trucks</li>
+          <li>Company cars and executive vehicles</li>
+          <li>Rental car fleets</li>
+          <li>Dealership inventory and trade-ins</li>
+          <li>Rideshare vehicles (Uber, Lyft)</li>
+          <li>Real estate agents' cars</li>
+        </ul>
+        <p class="text-gray-600">
+          Each fleet type has unique needs. Delivery vans accumulate road grime quickly and need frequent exterior washes. Rideshare vehicles require interior sanitization between passengers. Dealership inventory needs showroom-ready detailing. We tailor our service to match your specific requirements.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Does Mobile Fleet Detailing Save Your Business Money?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Mobile fleet detailing eliminates downtime because we come directly to your lot with all necessary equipment. Your employees stay on the job, your vehicles stay on-site, and bulk pricing on multiple vehicles keeps costs lower than individual detail shop visits.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Consider the hidden costs of sending vehicles to a shop: employee time driving each vehicle there and back, vehicles out of service during the appointment, and paying full retail price per vehicle. With our mobile service, we handle everything in your parking lot while your team works.
+        </p>
+        <p class="text-gray-600">
+          Professional appearance also drives revenue. Clean, well-maintained vehicles build customer trust and confidence. A spotless delivery van or company car sends the message that your business pays attention to detail and takes pride in its work.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Our Fleet Detailing Process</h2>
+        <ProcessSteps steps={[
+          { title: "Fleet Assessment", description: "We evaluate your vehicles and recommend appropriate service levels based on vehicle type, condition, and your business needs." },
+          { title: "Custom Schedule", description: "Set recurring weekly, biweekly, or monthly appointments that work around your business operations and vehicle availability." },
+          { title: "On-Site Service", description: "We come to your parking lot with all equipment and supplies. No need to move vehicles off-site or disrupt your workflow." },
+          { title: "Quality Check", description: "Each vehicle undergoes a thorough inspection before sign-off to ensure every surface meets our professional standards." },
+          { title: "Reporting", description: "We provide a detailed service log for your fleet management records, tracking each vehicle serviced and work performed." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Fleet Detailing Quick Facts</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$75-$300 per vehicle</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Volume discounts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">All vehicle types</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">Flexible scheduling</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Book Fleet Detailing</h3>
+          <p class="text-gray-200 text-sm mb-4">
+            Custom fleet plans available throughout Fort Lauderdale and Broward County.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Related Services</h3>
+          <ul class="space-y-2">
+            <li><a href={`${base}complete-clean-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Complete Clean</a></li>
+            <li><a href={`${base}premium-refresh-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Premium Refresh</a></li>
+            <li><a href={`${base}hand-wash-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Hand Wash</a></li>
+            <li><a href={`${base}odor-removal-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Odor Removal</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

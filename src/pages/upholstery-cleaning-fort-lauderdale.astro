@@ -41,9 +41,56 @@ const categorySchema = {
     ]
   }
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Does Professional Seat Shampooing Work for Your Vehicle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional seat shampooing uses oxygen-infused shampoo and hot water extraction to pull embedded dirt, sweat, and stains from deep within fabric fibers. In Fort Lauderdale's humid climate, this process also removes moisture and mildew spores that cause musty odors, leaving seats sanitized and fresh."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Do Florida Cars Need Regular Carpet Shampooing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Florida cars track in beach sand, salt, and moisture that work deep into carpet fibers where vacuuming alone cannot reach. Professional carpet shampooing with hot water extraction removes these abrasive particles and eliminates trapped moisture that breeds mildew in South Florida's year-round humidity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Is the Best Way to Clean Leather Car Seats?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best method uses pH-balanced leather cleaner applied with a horse hair brush to lift body oils, sunscreen, and grime from leather pores without stripping the finish. In Fort Lauderdale, leather cleaning every 2-3 months prevents accelerated wear caused by UV exposure and humidity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Does Steam Cleaning Sanitize Your Car Interior?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Steam cleaning uses high-temperature vapor above 200 degrees to kill bacteria, dust mites, and mold spores on contact without harsh chemicals. This chemical-free method is safe for all interior surfaces and is especially valuable in Florida where heat and humidity accelerate bacterial growth inside vehicles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Causes Car Odors and How Are They Removed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Car odors stem from bacteria feeding on organic matter trapped in fabric, carpet padding, and air vents. Professional removal uses enzymatic treatments that break down odor-causing bacteria at the molecular level rather than masking smells. Florida's humidity makes odor removal especially critical to prevent recurring mildew."
+      }
+    }
+  ]
+};
 ---
 
-<BaseLayout title={title} description={description} currentPage="/upholstery-cleaning-fort-lauderdale/" schema={categorySchema}>
+<BaseLayout title={title} description={description} currentPage="/upholstery-cleaning-fort-lauderdale/" schema={[categorySchema, faqSchema]}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -75,9 +122,12 @@ const categorySchema = {
 
       <!-- Seat Shampooing -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Seat Shampooing</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Does Professional Seat Shampooing Work for Your Vehicle?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Professional seat shampooing uses oxygen-infused shampoo and hot water extraction to pull embedded dirt, sweat, and stains from deep within fabric fibers. In Fort Lauderdale's humid climate, this process also removes moisture and mildew spores that cause musty odors, leaving seats sanitized and fresh.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          We deep clean fabric seats using Chemical Guys Foaming Citrus Fabric Clean, an oxygen-infused shampoo that penetrates fibers to lift embedded dirt, sweat, and stains. Hot water extraction pulls out contaminants and excess moisture.
+          We deep clean fabric seats using <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> Foaming Citrus Fabric Clean, an oxygen-infused shampoo that penetrates fibers to lift embedded dirt, sweat, and stains. Hot water extraction pulls out contaminants and excess moisture.
         </p>
         <a href={`${base}seat-shampooing-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Seat Shampooing Fort Lauderdale →
@@ -86,7 +136,10 @@ const categorySchema = {
 
       <!-- Carpet Shampooing -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Carpet Shampooing</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Why Do Florida Cars Need Regular Carpet Shampooing?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Florida cars track in beach sand, salt, and moisture that work deep into carpet fibers where vacuuming alone cannot reach. Professional carpet shampooing with hot water extraction removes these abrasive particles and eliminates trapped moisture that breeds mildew in South Florida's year-round humidity.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
           Beach sand works deep into carpet fibers where vacuuming can't reach. We shampoo and extract carpets to remove sand, salt, dirt, and stains. Proper extraction prevents mildew growth in Florida's humidity.
         </p>
@@ -97,9 +150,12 @@ const categorySchema = {
 
       <!-- Leather Cleaning -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Leather Cleaning</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Is the Best Way to Clean Leather Car Seats?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>The best method uses pH-balanced leather cleaner applied with a horse hair brush to lift body oils, sunscreen, and grime from leather pores without stripping the finish. In Fort Lauderdale, leather cleaning every 2-3 months prevents accelerated wear caused by UV exposure and humidity.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          Leather collects body oils, sunscreen, and dirt that break down the finish over time. We use pH-balanced Chemical Guys Leather Cleaner with a horse hair brush to lift grime from leather pores without damage.
+          Leather collects body oils, sunscreen, and dirt that break down the finish over time. We use pH-balanced <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> Leather Cleaner with a horse hair brush to lift grime from leather pores without damage.
         </p>
         <a href={`${base}leather-cleaning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Leather Cleaning Fort Lauderdale →
@@ -108,9 +164,12 @@ const categorySchema = {
 
       <!-- Leather Conditioning -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Leather Conditioning</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Often Should You Condition Leather Seats in Florida?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Florida's intense UV rays and humidity cycle dry out leather faster than northern climates, making conditioning every 2-3 months essential. Professional leather conditioning restores moisture, prevents cracking, and adds a UV-resistant barrier that keeps seats supple despite daily sun exposure through your windshield and windows.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          Florida sun through windows dries leather and causes cracking. We apply Chemical Guys Leather Conditioner with Vitamin E and aloe to restore moisture and flexibility. Most Fort Lauderdale vehicles need conditioning every 2-3 months.
+          Florida sun through windows dries leather and causes cracking. We apply <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> Leather Conditioner with Vitamin E and aloe to restore moisture and flexibility. Most Fort Lauderdale vehicles need conditioning every 2-3 months.
         </p>
         <a href={`${base}leather-conditioning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Leather Conditioning Fort Lauderdale →
@@ -119,7 +178,10 @@ const categorySchema = {
 
       <!-- Dashboard Cleaning -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Dashboard Cleaning</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Does Dashboard Cleaning and UV Protection Include?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Dashboard cleaning removes dust, greasy film, and UV damage from all interior plastics, followed by application of UV-blocking protectant. In Fort Lauderdale where dashboards face relentless sun exposure year-round, this service prevents cracking, fading, and the chalky appearance that makes interiors look aged.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
           Dashboards collect dust, UV damage, and greasy film from air conditioning. We clean all interior plastics and apply UV protectant to prevent fading and cracking from intense Florida sun exposure.
         </p>
@@ -130,9 +192,12 @@ const categorySchema = {
 
       <!-- Interior Vacuuming -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Interior Vacuuming</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Why Is Professional Interior Vacuuming Better Than DIY?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Professional interior vacuuming uses commercial-grade equipment with specialized crevice tools that reach areas household vacuums cannot, including under seats, inside track rails, and between cushion seams. In Florida, thorough extraction of sand and debris prevents abrasive wear that grinds down upholstery fibers over time.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          Thorough vacuuming reaches under seats, in crevices, and between cushions where dirt hides. We use commercial equipment with crevice tools to remove sand, crumbs, pet hair, and debris from every corner.
+          Thorough vacuuming reaches under seats, in crevices, and between cushions where dirt hides. We use commercial equipment with crevice tools to remove sand, crumbs, pet hair, and debris from every corner. Our <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">IDA-recommended</a> process ensures no area is overlooked.
         </p>
         <a href={`${base}interior-vacuuming-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Interior Vacuuming Fort Lauderdale →
@@ -141,9 +206,12 @@ const categorySchema = {
 
       <!-- Steam Cleaning -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Steam Cleaning</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Does Steam Cleaning Sanitize Your Car Interior?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Steam cleaning uses high-temperature vapor above 200 degrees to kill bacteria, dust mites, and mold spores on contact without harsh chemicals. This chemical-free method is safe for all interior surfaces and is especially valuable in Florida where heat and humidity accelerate bacterial growth inside vehicles.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          Steam sanitizes and deep cleans without harsh chemicals. High-temperature steam kills bacteria, loosens grime, and refreshes fabrics. Safe for all interior surfaces including sensitive leather and electronics.
+          Steam sanitizes and deep cleans without harsh chemicals. High-temperature steam kills bacteria, loosens grime, and refreshes fabrics. Safe for all interior surfaces including sensitive leather and electronics. This <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">IDA-recognized</a> technique is ideal for allergy sufferers and families with children.
         </p>
         <a href={`${base}steam-cleaning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Steam Cleaning Fort Lauderdale →
@@ -152,7 +220,10 @@ const categorySchema = {
 
       <!-- Odor Removal -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Odor Removal</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Causes Car Odors and How Are They Removed?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Car odors stem from bacteria feeding on organic matter trapped in fabric, carpet padding, and air vents. Professional removal uses enzymatic treatments that break down odor-causing bacteria at the molecular level rather than masking smells. Florida's humidity makes odor removal especially critical to prevent recurring mildew.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
           Odors from food, mildew, and spills absorb into fabric and carpet padding. We use enzymatic treatments that break down odor-causing bacteria at the source rather than masking smells with fragrance.
         </p>
@@ -163,7 +234,10 @@ const categorySchema = {
 
       <!-- Smoke Odor Removal -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Smoke Odor Removal</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Can Smoke Odor Really Be Eliminated from a Car?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Yes, smoke odor can be fully eliminated using ozone treatment combined with deep extraction cleaning of every porous surface. Ozone molecules bond with smoke particles embedded in the headliner, seats, carpet, and air vents, neutralizing them permanently rather than masking the smell with fragrances.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
           Cigarette and cigar smoke penetrates every porous surface—headliner, seats, carpet, and air vents. We use ozone treatment combined with deep cleaning to eliminate smoke odor, not just cover it up.
         </p>
@@ -174,7 +248,10 @@ const categorySchema = {
 
       <!-- Pet Hair Removal -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Pet Hair Removal</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Do Professionals Remove Pet Hair from Car Interiors?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Professional pet hair removal combines rubber extraction tools, compressed air, and commercial vacuuming to pull embedded hair from fabric weave, carpet fibers, and tight crevices. In Fort Lauderdale where pets ride along year-round, about 40% of our clients need this service to keep allergens and hair under control.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
           Pet hair weaves into fabric fibers and resists normal vacuuming. We use specialized tools and techniques to extract embedded pet hair from seats, carpets, and tight spaces. About 40% of our Fort Lauderdale clients request this service.
         </p>
@@ -185,9 +262,12 @@ const categorySchema = {
 
       <!-- Interior Protection -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Interior Protection</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Does Interior Protection Do for Your Vehicle?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Interior protection applies specialized coatings to every surface after cleaning—UV blockers for plastics, ceramic sealant for fabric, and conditioner for leather. In Florida's punishing sun and salt-air environment, these protectants slow UV degradation, repel stains, and extend the life of your interior by years.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          After cleaning, we apply protectants to all interior surfaces—UV blockers for plastics, fabric sealant for seats, and leather conditioner for hides. Protection extends the life of your interior and makes future cleaning easier.
+          After cleaning, we apply <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> protectants to all interior surfaces—UV blockers for plastics, fabric sealant for seats, and leather conditioner for hides. Protection extends the life of your interior and makes future cleaning easier.
         </p>
         <a href={`${base}interior-protection-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Interior Protection Fort Lauderdale →
@@ -196,9 +276,12 @@ const categorySchema = {
 
       <!-- Fabric Protection -->
       <div>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Fabric Protection</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Does Fabric Protection Prevent Stains in Your Car?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Fabric protection creates an invisible ceramic barrier on seats and carpets that causes liquids to bead on the surface instead of soaking into fibers. In Florida where rain, sweat, and spilled drinks are constant threats, this coating gives you time to wipe up before stains permanently set into upholstery.</strong>
+        </p>
         <p class="text-gray-600 mb-4">
-          Chemical Guys Hydro Thread creates an invisible ceramic barrier on fabric seats and carpets. Spills bead up on the surface instead of soaking in, giving you time to wipe up before stains set.
+          <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> Hydro Thread creates an invisible ceramic barrier on fabric seats and carpets. Spills bead up on the surface instead of soaking in, giving you time to wipe up before stains set.
         </p>
         <a href={`${base}fabric-protection-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
           Learn more about Fabric Protection Fort Lauderdale →

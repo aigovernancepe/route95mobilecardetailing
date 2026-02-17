@@ -1,0 +1,201 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+
+const base = import.meta.env.BASE_URL;
+const title = "Engine Bay Cleaning Fort Lauderdale | Mobile Service | Route95";
+const description = "Professional mobile engine bay cleaning in Fort Lauderdale. Safe, thorough degreasing and detailing for all vehicle types. Same-day service. Call 754-215-2272.";
+
+const parentCategory = {
+  href: `${base}car-wash-fort-lauderdale/`,
+  title: "Car Wash Services"
+};
+
+const siteUrl = "https://route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/engine-bay-cleaning-fort-lauderdale/#service`,
+  "name": "Engine Bay Cleaning Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/engine-bay-cleaning-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 50,
+    "highPrice": 100
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Engine Bay Cleaning Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Engine bay cleaning in Fort Lauderdale costs between $50 and $100 depending on engine size and condition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Engine Bay Cleaning Safe for Modern Cars?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, professional engine bay cleaning using steam and low-pressure methods is completely safe for modern vehicles with sensitive electronics."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Often Should You Clean Your Engine Bay in Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Florida's heat and humidity, we recommend cleaning your engine bay every 6 to 12 months to prevent corrosion and maintain performance."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Engine Bay Cleaning Fort Lauderdale"
+  intro="A clean engine bay protects components from corrosion, makes maintenance easier, and reveals leaks before they become costly repairs."
+  currentPage="/engine-bay-cleaning-fort-lauderdale/"
+  parentCategory={parentCategory}
+  schema={schemas}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Route95 provides professional mobile engine bay cleaning throughout Fort Lauderdale. Our technicians use steam and low-pressure methods combined with biodegradable degreasers to safely remove oil, grease, and road grime from your engine compartment without risking damage to electrical connections or sensitive components.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Florida's heat and humidity create the perfect conditions for corrosion, mold, and accelerated wear under the hood. Salt air from the coast compounds the problem. Regular engine bay cleaning removes these harmful contaminants and keeps your engine running cooler by allowing proper heat dissipation.
+        </p>
+        <p class="text-gray-600">
+          We serve Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach including Las Olas, Nurmi Isles, and Seven Isles. Same-day appointments are often available.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Engine Bay Cleaning Cost in Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Engine bay cleaning in Fort Lauderdale costs between $50 and $100 depending on engine size and condition. Heavily neglected engine bays with years of grease buildup may cost more due to additional degreasing time and product needed.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Four-cylinder engines in compact cars fall at the lower end of that range. Larger V6 and V8 engines in trucks and SUVs require more time and product, putting them toward the higher end. We provide exact pricing when you call based on your specific vehicle.
+        </p>
+        <p class="text-gray-600">
+          Consider the cost savings: a clean engine bay lets you spot oil leaks, coolant drips, and worn belts early. Catching a small leak before it becomes a major failure can save you hundreds or even thousands in repair bills.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Is Engine Bay Cleaning Safe for Modern Cars?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Yes, professional engine bay cleaning using steam and low-pressure methods is completely safe for modern vehicles with sensitive electronics. We cover and protect alternators, fuse boxes, and exposed electrical connectors before any cleaning begins.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          The key is technique. High-pressure washing can force water past seals and into connectors where it causes shorts and corrosion. Our approach uses controlled steam and targeted low-pressure rinsing that removes grime without penetrating sensitive areas. As recommended by the <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#c0c7cf] hover:underline">Chemical Guys</a> detailing community and the <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#c0c7cf] hover:underline">International Detailing Association</a>, proper preparation and technique make engine bay cleaning safe for any vehicle.
+        </p>
+        <p class="text-gray-600">
+          We clean everything from daily drivers to luxury European vehicles. Each engine bay gets the same careful treatment regardless of make or model.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Often Should You Clean Your Engine Bay in Florida?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>In Florida's heat and humidity, we recommend cleaning your engine bay every 6 to 12 months to prevent corrosion, mold growth, and premature component wear. Vehicles parked near the coast or driven on unpaved roads may benefit from more frequent cleaning.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          South Florida's climate is particularly harsh on engine bays. Temperatures regularly exceed 90 degrees, and humidity levels stay above 70 percent for months. This combination accelerates oxidation on metal components, degrades rubber hoses and seals, and encourages mold growth in damp areas under the hood.
+        </p>
+        <p class="text-gray-600">
+          If you're preparing your vehicle for sale, an engine bay cleaning is one of the highest-return investments you can make. Buyers and mechanics immediately notice a clean engine compartment, and it signals that the vehicle has been well maintained.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Our Engine Bay Cleaning Process</h2>
+        <ProcessSteps steps={[
+          { title: "Preparation and Protection", description: "We cover sensitive electrical components including the alternator, fuse box, and exposed connectors with waterproof barriers before any cleaning begins." },
+          { title: "Degreasing", description: "A biodegradable engine degreaser is applied to all surfaces. We let it dwell to break down oil, grease, and road film without scrubbing delicate parts." },
+          { title: "Agitation", description: "Using soft detailing brushes, we gently agitate stubborn buildup around brackets, hoses, and hard-to-reach areas where grime accumulates." },
+          { title: "Steam and Rinse", description: "Controlled steam and low-pressure rinsing remove the loosened contaminants. We work methodically to ensure complete removal without forcing water into protected areas." },
+          { title: "Dressing and Protection", description: "After drying, we apply a UV-resistant engine bay dressing to plastic and rubber components. This restores a like-new appearance and provides protection against future buildup." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Engine Bay Cleaning Quick Facts</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$50-$100 depending on size</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">45-60 minutes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Safe steam/low-pressure methods</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">All engine types</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Book Your Engine Bay Cleaning</h3>
+          <p class="text-gray-200 text-sm mb-4">
+            Same-day appointments available throughout Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Related Services</h3>
+          <ul class="space-y-2">
+            <li><a href={`${base}car-waxing-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Car Waxing</a></li>
+            <li><a href={`${base}clay-bar-treatment-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Clay Bar Treatment</a></li>
+            <li><a href={`${base}complete-clean-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Complete Clean</a></li>
+            <li><a href={`${base}trim-restoration-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Trim Restoration</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>

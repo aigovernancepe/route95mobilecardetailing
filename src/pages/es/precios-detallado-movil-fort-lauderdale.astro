@@ -1,0 +1,508 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const title = "Precios de Detallado Móvil Fort Lauderdale | Route95";
+const description = "Precios de detallado móvil de autos en Fort Lauderdale desde $50. Vea nuestros paquetes: Lavado Rápido, Nuevo Comienzo, Limpieza Completa, Renovación Premium. Llame al 754-215-2272.";
+
+const siteUrl = "https://route95mobilecardetailing.com";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/precios-detallado-movil-fort-lauderdale/#service`,
+  "name": "Precios de Detallado Móvil Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/es/precios-detallado-movil-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Paquetes de Detallado Móvil",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Lavado Rápido", "url": `${siteUrl}/es/lavado-rapido-fort-lauderdale/` },
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 50, "maxPrice": 80, "priceCurrency": "USD" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Nuevo Comienzo", "url": `${siteUrl}/es/nuevo-comienzo-fort-lauderdale/` },
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 80, "maxPrice": 110, "priceCurrency": "USD" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Limpieza Completa", "url": `${siteUrl}/es/limpieza-completa-fort-lauderdale/` },
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 130, "maxPrice": 160, "priceCurrency": "USD" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Renovación Premium", "url": `${siteUrl}/es/renovacion-premium-fort-lauderdale/` },
+        "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD" }
+      }
+    ]
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuesta el Detallado Móvil de Autos en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El detallado móvil de autos en Fort Lauderdale comienza en $50 para un sedán con Lavado Rápido y sube hasta $160 para una camioneta con Limpieza Completa. Los precios varían según el nivel del paquete y el tamaño del vehículo, con sedanes al precio base y camionetas en el extremo superior de cada rango."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué Incluyen los Paquetes de Detallado Móvil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Route95 ofrece cuatro niveles: Lavado Rápido incluye lavado a mano, llantas y rines, limpieza de ventanas, limpieza interior y aspirado. Nuevo Comienzo agrega acondicionador de llantas, tablero y consola central. Limpieza Completa agrega guardabarros, tapetes y aspirado de cajuela. Renovación Premium agrega champú interior, marcos de puertas y limpieza a vapor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuestan los Servicios Adicionales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los servicios adicionales van desde $20 por marcos de puertas o aspirado de cajuela hasta $75 por lavado de asientos. Opciones populares incluyen eliminación de pelo de mascota a $25, limpieza a vapor a $50, eliminación de olores a $40, acondicionamiento de cuero a $40 y encerado desde $60. Todos los adicionales requieren reserva de un paquete."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Son los Precios del Detallado Móvil Más Altos que los de un Taller?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los precios del detallado móvil son comparables a los de un taller cuando consideras el valor de la conveniencia. Ahorras tiempo de traslado y combustible al quedarte en casa o en el trabajo. Usamos los mismos productos profesionales de Chemical Guys y Koch-Chemie que usan los mejores talleres."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo Afecta el Tamaño del Vehículo a los Precios?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El tamaño del vehículo afecta los precios en todos los paquetes. Los sedanes tienen el precio base, las SUVs y crossovers cuestan $15 más por paquete, y las camionetas o vehículos grandes cuestan $30 más. Por ejemplo, una Limpieza Completa es $130 para un sedán, $145 para una SUV y $160 para una camioneta."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description} currentPage="/es/precios-detallado-movil-fort-lauderdale/" schema={[serviceSchema, faqSchema]}>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Precios de Detallado Móvil Fort Lauderdale</h1>
+      <p class="text-xl text-gray-200 max-w-3xl mb-6">
+        <strong>Los paquetes de detallado móvil de Route95 en Fort Lauderdale van desde $50 hasta $160 dependiendo del tamaño del vehículo y el nivel de servicio. Cada paquete incluye servicio en tu ubicación, productos de grado profesional y nuestra garantía de satisfacción.</strong>
+      </p>
+      <p class="text-lg text-gray-200 max-w-3xl mb-8">
+        Precios transparentes sin cargos ocultos. Llama para una cotización gratis o agenda tu detallado hoy.
+      </p>
+      <a href="tel:+17542152272" class="btn-accent inline-flex items-center justify-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        Llama al 754-215-2272
+      </a>
+    </div>
+  </section>
+
+  <!-- ¿Cuánto Cuesta el Detallado Móvil de Autos en Fort Lauderdale? -->
+  <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta el Detallado Móvil de Autos en Fort Lauderdale?</h2>
+      <p class="text-gray-600 mb-4">
+        <strong>El detallado móvil de autos en Fort Lauderdale comienza en $50 para un sedán con Lavado Rápido y sube hasta $160 para una camioneta con Limpieza Completa. Los precios varían según el nivel del paquete y el tamaño del vehículo, con sedanes al precio base, SUVs $15 más y camionetas $30 más por paquete.</strong>
+      </p>
+      <p class="text-gray-600 mb-8">
+        Usamos productos de grado profesional de <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Chemical Guys</a> y <a href="https://www.koch-chemie.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Koch-Chemie</a> en cada paquete. Nuestros técnicos siguen las mejores prácticas de la <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">IDA (International Detailing Association)</a> para que obtengas resultados premium en cada nivel de precio.
+      </p>
+
+      <div class="not-prose my-8 overflow-x-auto">
+        <table class="w-full border-collapse rounded-xl overflow-hidden shadow-lg text-sm">
+          <thead>
+            <tr class="bg-[#0f2a4a] text-white">
+              <th class="px-5 py-4 text-left font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Paquete</th>
+              <th class="px-5 py-4 text-center font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Sedán</th>
+              <th class="px-5 py-4 text-center font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">SUV</th>
+              <th class="px-5 py-4 text-center font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Camioneta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-200 bg-white">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">
+                <a href={localizedUrl('es', 'quick-wash-fort-lauderdale')} class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Lavado Rápido</a>
+              </td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$50</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$65</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$80</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-gray-50">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">
+                <a href={localizedUrl('es', 'fresh-start-fort-lauderdale')} class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Nuevo Comienzo</a>
+              </td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$80</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$95</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$110</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-white">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">
+                <a href={localizedUrl('es', 'complete-clean-fort-lauderdale')} class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Limpieza Completa</a>
+              </td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$130</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$145</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$160</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">
+                <a href={localizedUrl('es', 'premium-refresh-fort-lauderdale')} class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Renovación Premium</a>
+              </td>
+              <td class="px-5 py-4 text-center text-gray-500 italic" colspan="3">Próximamente — Contáctenos para Detalles</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Qué Incluyen los Paquetes de Detallado Móvil? -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Qué Incluyen los Paquetes de Detallado Móvil?</h2>
+      <p class="text-gray-600 mb-4">
+        <strong>Cada paquete de Route95 se construye sobre el anterior. Lavado Rápido cubre lo esencial, Nuevo Comienzo agrega acondicionador de llantas y limpieza interior completa, Limpieza Completa incluye guardabarros y cajuela, y Renovación Premium agrega champú interior profundo con limpieza a vapor.</strong>
+      </p>
+      <p class="text-gray-600 mb-8">
+        Todos los paquetes usan productos de <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Chemical Guys</a> y <a href="https://www.koch-chemie.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Koch-Chemie</a>, y nuestros técnicos siguen las mejores prácticas de la <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">IDA</a> para resultados profesionales y consistentes.
+      </p>
+
+      <div class="space-y-6">
+        <!-- Lavado Rápido -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">
+            <a href={localizedUrl('es', 'quick-wash-fort-lauderdale')} class="hover:text-[#1a5ca0] transition-colors">Lavado Rápido — desde $50</a>
+          </h3>
+          <p class="text-gray-600 mb-3">Una renovación rápida exterior e interior para mantener tu auto impecable.</p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Lavado a Mano
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Llantas y Rines
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Limpieza de Ventanas
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Limpieza Interior
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Aspirado
+            </li>
+          </ul>
+        </div>
+
+        <!-- Nuevo Comienzo -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">
+            <a href={localizedUrl('es', 'fresh-start-fort-lauderdale')} class="hover:text-[#1a5ca0] transition-colors">Nuevo Comienzo — desde $80</a>
+          </h3>
+          <p class="text-gray-600 mb-3">Un nivel más con acondicionador de llantas y limpieza interior completa para mantenimiento mensual.</p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Lavado a Mano
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Llantas y Rines
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Acondicionador de Llantas
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Limpieza de Ventanas
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Tablero
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Consola Central
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Limpieza Interior
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Aspirado
+            </li>
+          </ul>
+        </div>
+
+        <!-- Limpieza Completa -->
+        <div class="bg-white rounded-xl shadow-sm border-2 border-[#0f2a4a] p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <h3 class="text-xl font-bold text-[#0f2a4a]">
+              <a href={localizedUrl('es', 'complete-clean-fort-lauderdale')} class="hover:text-[#1a5ca0] transition-colors">Limpieza Completa — desde $130</a>
+            </h3>
+            <span class="bg-[#0f2a4a] text-white text-xs font-bold px-3 py-1 rounded-full">Más Popular</span>
+          </div>
+          <p class="text-gray-600 mb-3">Nuestro paquete más completo — por dentro y por fuera, cajuela incluida.</p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Lavado a Mano
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Llantas y Rines
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Acondicionador de Llantas
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Guardabarros
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Limpieza de Ventanas
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Tablero
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Consola Central
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Limpieza Interior
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Tapetes
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Aspirado (incl. Cajuela)
+            </li>
+          </ul>
+        </div>
+
+        <!-- Renovación Premium -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 relative">
+          <div class="absolute top-4 right-4 bg-[#c0c7cf] text-[#0f2a4a] px-3 py-1 text-xs font-bold rounded-full">Próximamente</div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">
+            <a href={localizedUrl('es', 'premium-refresh-fort-lauderdale')} class="hover:text-[#1a5ca0] transition-colors">Renovación Premium</a>
+          </h3>
+          <p class="text-gray-600 mb-3">Champú interior profundo con limpieza a vapor — el detallado definitivo. Incluye todo lo de Limpieza Completa más:</p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Champú Interior (asientos, alfombras, paneles de puertas, cinturones)
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Marcos de Puertas
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Limpieza a Vapor
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Cuánto Cuestan los Servicios Adicionales? -->
+  <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuestan los Servicios Adicionales?</h2>
+      <p class="text-gray-600 mb-4">
+        <strong>Los servicios adicionales van desde $20 por marcos de puertas o aspirado de cajuela hasta $75 por lavado de asientos. Opciones populares incluyen eliminación de pelo de mascota a $25, limpieza a vapor a $50, acondicionamiento de cuero a $40 y encerado desde $60. Todos los adicionales requieren reserva de un paquete.</strong>
+      </p>
+      <p class="text-gray-600 mb-8">
+        Personaliza cualquier paquete con servicios adicionales individuales para atender las necesidades específicas de tu vehículo. Los precios aplican solo en combinación con la reserva de un paquete.
+      </p>
+
+      <div class="not-prose my-8 overflow-x-auto">
+        <table class="w-full border-collapse rounded-xl overflow-hidden shadow-lg text-sm">
+          <thead>
+            <tr class="bg-[#0f2a4a] text-white">
+              <th class="px-5 py-4 text-left font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Servicio Adicional</th>
+              <th class="px-5 py-4 text-right font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-200 bg-white">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Marcos de Puertas</td>
+              <td class="px-5 py-4 text-right text-gray-700 font-semibold">$20</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-gray-50">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Aspirado de Cajuela</td>
+              <td class="px-5 py-4 text-right text-gray-700 font-semibold">$20</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-white">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Eliminación de Pelo de Mascota</td>
+              <td class="px-5 py-4 text-right text-gray-700 font-semibold">$25</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-gray-50">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Limpieza de Tapetes</td>
+              <td class="px-5 py-4 text-right text-gray-700 font-semibold">$25</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-white">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Eliminación de Insectos y Brea</td>
+              <td class="px-5 py-4 text-right text-gray-700 font-semibold">$30</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-gray-50">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Restauración de Molduras</td>
+              <td class="px-5 py-4 text-right text-gray-700 font-semibold">$30</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-white">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Eliminación de Olores</td>
+              <td class="px-5 py-4 text-right text-gray-700 font-semibold">$40</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-gray-50">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Acondicionamiento de Cuero</td>
+              <td class="px-5 py-4 text-right text-gray-700 font-semibold">$40</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-white">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Limpieza a Vapor</td>
+              <td class="px-5 py-4 text-right text-gray-700 font-semibold">$50</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-gray-50">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Lavado de Alfombras</td>
+              <td class="px-5 py-4 text-right text-gray-700 font-semibold">desde $60</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-white">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Encerado de Auto</td>
+              <td class="px-5 py-4 text-right text-gray-700 font-semibold">desde $60</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Lavado de Asientos</td>
+              <td class="px-5 py-4 text-right text-gray-700 font-semibold">desde $75</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Son los Precios del Detallado Móvil Más Altos que los de un Taller? -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Son los Precios del Detallado Móvil Más Altos que los de un Taller?</h2>
+      <p class="text-gray-600 mb-4">
+        <strong>Los precios del detallado móvil son comparables a los de un taller cuando consideras el valor de la conveniencia. Ahorras tiempo de traslado y costos de combustible al quedarte en casa o en el trabajo. Usamos los mismos productos profesionales de Chemical Guys y Koch-Chemie que usan los mejores talleres.</strong>
+      </p>
+      <p class="text-gray-600 mb-4">
+        Muchos conductores de Fort Lauderdale asumen que el detallado móvil cuesta más que ir a un taller fijo. En realidad, nuestros gastos generales son menores porque no pagamos por un local comercial, y pasamos esos ahorros a ti. El resultado es detallado profesional a precios competitivos — entregado en tu entrada, estacionamiento de oficina o cualquier lugar con conexión de agua.
+      </p>
+      <p class="text-gray-600 mb-4">
+        Cada detallado de Route95 usa productos de <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Chemical Guys</a> y <a href="https://www.koch-chemie.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Koch-Chemie</a> — las mismas marcas de confianza de detalladores <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">certificados por la IDA</a> en todo el país. Obtienes resultados de calidad de taller sin salir de tu ubicación.
+      </p>
+      <p class="text-gray-600">
+        Además, puedes observar todo el proceso, hacer preguntas y señalar áreas problemáticas en persona — algo que no puedes hacer cuando dejas tu auto en un taller y lo recoges después.
+      </p>
+    </div>
+  </section>
+
+  <!-- ¿Cómo Afecta el Tamaño del Vehículo a los Precios? -->
+  <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cómo Afecta el Tamaño del Vehículo a los Precios?</h2>
+      <p class="text-gray-600 mb-4">
+        <strong>Los sedanes y hatchbacks tienen el precio base en todos los paquetes. Las SUVs y crossovers cuestan $15 más debido a la mayor superficie. Las camionetas y vehículos grandes cuestan $30 más por la altura adicional, limpieza de caja y superficies interiores extendidas.</strong>
+      </p>
+      <p class="text-gray-600 mb-8">
+        Los vehículos más grandes requieren más producto, más agua y más tiempo para detallar correctamente. La diferencia de precio refleja los materiales y mano de obra adicionales reales — no un cargo arbitrario. Así es como se desglosa cada clase de vehículo en todos los paquetes disponibles:
+      </p>
+
+      <div class="not-prose my-8 overflow-x-auto">
+        <table class="w-full border-collapse rounded-xl overflow-hidden shadow-lg text-sm">
+          <thead>
+            <tr class="bg-[#0f2a4a] text-white">
+              <th class="px-5 py-4 text-left font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Tamaño del Vehículo</th>
+              <th class="px-5 py-4 text-center font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Lavado Rápido</th>
+              <th class="px-5 py-4 text-center font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Nuevo Comienzo</th>
+              <th class="px-5 py-4 text-center font-[Oswald,sans-serif] uppercase tracking-wide font-semibold">Limpieza Completa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-200 bg-white">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Sedán / Hatchback</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$50</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$80</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$130</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-gray-50">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Crossover / SUV</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$65</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$95</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$145</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Camioneta / Grande</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$80</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$110</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$160</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-gray-600 text-sm">
+        ¿No estás seguro en qué categoría cae tu vehículo? Llama al <a href="tel:+17542152272" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">754-215-2272</a> y te confirmaremos la clase de tu vehículo y el precio exacto.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] rounded-xl p-8 text-center text-white">
+        <h2 class="text-2xl font-bold mb-4">¿Listo para Agendar Tu Detallado?</h2>
+        <p class="text-gray-200 mb-6 max-w-2xl mx-auto">
+          Llama ahora para una cotización gratis o para agendar tu cita de detallado móvil en Fort Lauderdale, Dania Beach, Hollywood o Pompano Beach. Citas el mismo día frecuentemente disponibles.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+17542152272" class="btn-accent inline-flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Llama al 754-215-2272
+          </a>
+          <a href={localizedUrl('es', 'car-detailing-services-fort-lauderdale')} class="bg-white/10 border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white/20 transition-colors">
+            Ver Todos los Paquetes
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

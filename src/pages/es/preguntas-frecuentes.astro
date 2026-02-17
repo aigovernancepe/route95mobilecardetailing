@@ -1,0 +1,447 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const title = "Preguntas Frecuentes | Detallado Movil Fort Lauderdale | Route95";
+const description = "Preguntas frecuentes sobre detallado movil de autos en Fort Lauderdale. Conozca precios, servicios, horarios y que esperar. Llame al 754-215-2272.";
+
+const siteUrl = "https://route95mobilecardetailing.com";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué Es el Detallado Móvil de Autos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El detallado móvil es un servicio profesional de limpieza y restauración de vehículos que se realiza directamente en la ubicación del cliente. A diferencia de un autolavado convencional, un detallador móvil llega a su casa, oficina o cualquier lugar con todo el equipo, agua y productos necesarios para dejar su auto como nuevo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo Funciona el Detallado Móvil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usted agenda una cita por teléfono o texto al 754-215-2272. Nuestro equipo llega a su ubicación en Fort Lauderdale con toda el agua, electricidad y productos profesionales. Realizamos el servicio completo en su entrada, estacionamiento o garaje sin que usted tenga que mover su vehículo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué Áreas Atienden en el Sur de Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Atendemos Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach en el condado de Broward. Nuestro equipo móvil cubre toda el área metropolitana de Fort Lauderdale, incluyendo zonas residenciales, oficinas corporativas y condominios."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuesta el Detallado Móvil en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los precios varían según el tamaño del vehículo y el paquete seleccionado. Ofrecemos desde lavados rápidos hasta paquetes premium completos. Visite nuestra página de precios o llame al 754-215-2272 para una cotización personalizada basada en las necesidades específicas de su vehículo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ofrecen Descuentos para Clientes Regulares?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, valoramos la lealtad de nuestros clientes y ofrecemos beneficios para quienes mantienen un servicio regular. Contáctenos al 754-215-2272 para conocer las opciones disponibles para clientes frecuentes y programas de mantenimiento mensual que mantienen su vehículo en condiciones óptimas todo el año."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué Incluye un Detallado Completo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un detallado completo incluye lavado exterior a mano, descontaminación con barra de arcilla, encerado protector, limpieza de rines y llantas, aspirado interior completo, limpieza de tapicería y alfombras, acondicionamiento de cuero, limpieza de tablero y paneles, y limpieza de vidrios interiores y exteriores."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Tiempo Toma un Detallado Completo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un detallado completo generalmente toma entre 2 y 4 horas dependiendo del tamaño del vehículo y su condición actual. Un lavado rápido exterior puede completarse en 45 minutos a 1 hora. Le proporcionamos un estimado de tiempo preciso cuando agenda su cita."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ofrecen Limpieza de Motor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, ofrecemos limpieza profesional del compartimiento del motor. El servicio incluye desengrasado, limpieza a vapor, y aplicación de protector para mantener las superficies del motor limpias y protegidas. Una bahía de motor limpia facilita la detección de fugas y mejora la presentación general del vehículo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden Eliminar el Olor a Humo de un Auto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, nuestro servicio de eliminación de olor a humo utiliza técnicas profesionales que neutralizan las moléculas de olor en lugar de simplemente enmascararlas. El proceso incluye limpieza profunda de tapicería, alfombras y superficies interiores, además de tratamiento con ozono para eliminar olores persistentes de cigarrillo o tabaco."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo Reservo una Cita?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reservar es fácil. Llame o envíe un texto al 754-215-2272, o envíe un correo a contact@route95mobilecardetailing.com. Atendemos de lunes a sábado de 8 AM a 8 PM. Frecuentemente tenemos disponibilidad para citas el mismo día, especialmente entre semana."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesitan Acceso a Agua o Electricidad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, nuestro equipo móvil es completamente autónomo. Llevamos toda el agua, electricidad y productos necesarios para realizar cualquier servicio. No necesita proporcionar ningún recurso — solo necesitamos un espacio adecuado para estacionar junto a su vehículo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué Pasa Si Llueve el Día de Mi Cita?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si hay lluvia el día de su cita, nos comunicamos con usted para reprogramar sin costo alguno. Monitoreamos las condiciones meteorológicas y le avisamos con anticipación si necesitamos reagendar. Su satisfacción es nuestra prioridad y preferimos trabajar en condiciones óptimas para garantizar los mejores resultados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito Estar en Casa Durante el Servicio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No es necesario que esté presente durante todo el servicio. Muchos de nuestros clientes nos dejan las llaves y continúan con su día. Solo necesitamos acceso al vehículo y un lugar de estacionamiento adecuado. Le avisamos por texto cuando terminamos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Con Qué Frecuencia Debe Detallar un Auto en Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En Florida, recomendamos un detallado completo cada 3-4 meses y lavados de mantenimiento cada 2-3 semanas. El sol intenso, la humedad, el aire salado del océano y los insectos del sur de Florida deterioran la pintura y el interior más rápido que en otros estados. Un programa regular de mantenimiento protege su inversión."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El Aire Salado Daña la Pintura de Mi Auto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, la brisa salada del Atlántico es uno de los mayores enemigos de la pintura automotriz en Fort Lauderdale. Los depósitos de sal corroen la capa transparente y aceleran la oxidación, especialmente en vehículos estacionados al aire libre cerca de la costa. El encerado regular y los selladores crean una barrera protectora contra el daño salino."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo Prevenir el Moho Dentro de un Auto en Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La humedad extrema de Florida crea condiciones ideales para el moho en interiores de vehículos. Para prevenirlo, mantenga las ventanas cerradas, use el aire acondicionado regularmente, y limpie cualquier derrame inmediatamente. El detallado interior profesional cada 3-4 meses elimina la humedad atrapada y trata las superficies con productos antimicrobianos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Se Debe Dar de Propina a un Detallador Móvil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las propinas no son obligatorias pero siempre son apreciadas. La mayoría de los clientes en Fort Lauderdale dan entre 15% y 20% del costo del servicio cuando están satisfechos con el trabajo. Para servicios más extensos como detallados completos, algunos clientes prefieren dar una propina fija de $20-$40."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description} currentPage="/es/preguntas-frecuentes/" schema={faqSchema}>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Preguntas Frecuentes</h1>
+      <p class="text-xl text-gray-200 max-w-3xl mb-6">
+        <strong>Encuentre respuestas a las preguntas mas comunes sobre nuestro servicio de detallado movil de autos en Fort Lauderdale. Si no encuentra lo que busca, llamenos al 754-215-2272.</strong>
+      </p>
+      <a href="tel:+17542152272" class="btn-accent inline-flex items-center justify-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        Llama al 754-215-2272
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ Content -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4 space-y-16">
+
+      <!-- Preguntas Generales -->
+      <div>
+        <h2 class="text-3xl font-bold text-[#0f2a4a] mb-8 pb-4 border-b-2 border-[#0f2a4a]/20">Preguntas Generales</h2>
+        <div class="space-y-10">
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Que Es el Detallado Movil de Autos?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>El detallado movil es un servicio profesional de limpieza y restauracion de vehiculos que se realiza directamente en la ubicacion del cliente. A diferencia de un autolavado convencional, un detallador movil llega a su casa u oficina con todo el equipo, agua y productos necesarios para dejar su auto como nuevo.</strong>
+            </p>
+            <p class="text-gray-600 mb-4">
+              Nuestro servicio de detallado movil en Fort Lauderdale elimina la necesidad de manejar a un establecimiento y esperar horas. Mientras usted trabaja, descansa o atiende sus asuntos, nosotros nos encargamos de que su vehiculo reciba el cuidado profesional que merece con productos premium de <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a>.
+            </p>
+            <p class="text-gray-600">
+              Cada servicio se adapta a las necesidades especificas de su vehiculo. Ya sea un sedan compacto o una SUV grande, aplicamos las mismas tecnicas profesionales y productos de alta calidad para resultados excepcionales.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Como Funciona el Detallado Movil?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>Usted agenda una cita por telefono o texto al 754-215-2272. Nuestro equipo llega a su ubicacion en Fort Lauderdale con toda el agua, electricidad y productos profesionales. Realizamos el servicio completo en su entrada, estacionamiento o garaje sin que usted tenga que mover su vehiculo.</strong>
+            </p>
+            <p class="text-gray-600 mb-4">
+              El proceso es sencillo: nos contacta, le proporcionamos una cotizacion basada en el tipo de vehiculo y los servicios que necesita, y agendamos una cita en el horario mas conveniente para usted. Llegamos puntuales con nuestra unidad movil completamente equipada.
+            </p>
+            <p class="text-gray-600">
+              Al finalizar, le mostramos los resultados y le damos recomendaciones para mantener su vehiculo en optimas condiciones entre citas. Conozca nuestros <a href={localizedUrl('es', 'car-detailing-services-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">paquetes de detallado</a> disponibles.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Que Areas Atienden en el Sur de Florida?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>Atendemos Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach en el condado de Broward. Nuestro equipo movil cubre toda el area metropolitana de Fort Lauderdale, incluyendo zonas residenciales, oficinas corporativas y condominios.</strong>
+            </p>
+            <p class="text-gray-600 mb-4">
+              Ya sea que viva en Las Olas, Victoria Park, Wilton Manors, Lauderdale-by-the-Sea o cualquier vecindario del area, nuestro servicio movil llega hasta usted. Tambien atendemos clientes en estacionamientos de oficinas y complejos de apartamentos.
+            </p>
+            <p class="text-gray-600">
+              Si no esta seguro de si cubrimos su zona, <a href={localizedUrl('es', 'contact')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">contactenos</a> y con gusto le confirmaremos la disponibilidad en su area.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Precios y Paquetes -->
+      <div>
+        <h2 class="text-3xl font-bold text-[#0f2a4a] mb-8 pb-4 border-b-2 border-[#0f2a4a]/20">Precios y Paquetes</h2>
+        <div class="space-y-10">
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Cuanto Cuesta el Detallado Movil en Fort Lauderdale?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>Los precios varian segun el tamano del vehiculo y el paquete seleccionado. Ofrecemos desde lavados rapidos accesibles hasta paquetes premium completos con proteccion ceramica. Visite nuestra pagina de precios o llame al 754-215-2272 para una cotizacion personalizada.</strong>
+            </p>
+            <p class="text-gray-600 mb-4">
+              Nuestros paquetes estan disenados para adaptarse a diferentes presupuestos y necesidades. Desde el <a href={localizedUrl('es', 'quick-wash-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Lavado Rapido</a> para mantenimiento regular hasta la <a href={localizedUrl('es', 'premium-refresh-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Renovacion Premium</a> para una restauracion completa, tenemos opciones para cada vehiculo.
+            </p>
+            <p class="text-gray-600">
+              Consulte nuestra <a href={localizedUrl('es', 'mobile-car-detailing-prices-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">pagina de precios</a> para ver todos los paquetes y precios actualizados.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Ofrecen Descuentos para Clientes Regulares?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>Si, valoramos la lealtad de nuestros clientes y ofrecemos beneficios para quienes mantienen un servicio regular. Contactenos al 754-215-2272 para conocer las opciones disponibles para clientes frecuentes y programas de mantenimiento mensual.</strong>
+            </p>
+            <p class="text-gray-600">
+              Mantener un programa regular de detallado no solo le ahorra dinero a largo plazo, sino que protege su inversion. Un vehiculo bien mantenido conserva mejor su valor de reventa y evita reparaciones costosas de pintura o tapiceria danada por falta de cuidado.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Servicios -->
+      <div>
+        <h2 class="text-3xl font-bold text-[#0f2a4a] mb-8 pb-4 border-b-2 border-[#0f2a4a]/20">Servicios</h2>
+        <div class="space-y-10">
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Que Incluye un Detallado Completo?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>Un detallado completo incluye lavado exterior a mano, descontaminacion con barra de arcilla, encerado protector, limpieza de rines y llantas, aspirado interior completo, limpieza de tapiceria y alfombras, acondicionamiento de cuero, limpieza de tablero y paneles, y limpieza de vidrios.</strong>
+            </p>
+            <p class="text-gray-600 mb-4">
+              Nuestro paquete de <a href={localizedUrl('es', 'complete-clean-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Limpieza Completa</a> cubre cada rincon de su vehiculo, desde el exterior hasta los detalles mas pequenos del interior. Usamos productos profesionales de <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> y tecnicas recomendadas por la industria.
+            </p>
+            <p class="text-gray-600">
+              El resultado es un vehiculo que se ve, huele y se siente como nuevo. Cada detallado completo termina con una inspeccion final para asegurar que nada se pase por alto.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Cuanto Tiempo Toma un Detallado Completo?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>Un detallado completo generalmente toma entre 2 y 4 horas dependiendo del tamano del vehiculo y su condicion actual. Un lavado rapido exterior puede completarse en 45 minutos a 1 hora. Le proporcionamos un estimado de tiempo preciso al agendar.</strong>
+            </p>
+            <p class="text-gray-600">
+              Vehiculos con suciedad acumulada, pelo de mascota o manchas dificiles pueden requerir tiempo adicional para alcanzar resultados optimos. Siempre priorizamos la calidad sobre la velocidad para que su vehiculo reciba la atencion que merece. Le avisamos si anticipamos que el servicio tardara mas de lo estimado.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Ofrecen Limpieza de Motor?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>Si, ofrecemos <a href={localizedUrl('es', 'engine-bay-cleaning-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">limpieza profesional del compartimiento del motor</a>. El servicio incluye desengrasado, limpieza cuidadosa y aplicacion de protector para mantener las superficies del motor limpias y protegidas contra el polvo y la corrosion.</strong>
+            </p>
+            <p class="text-gray-600">
+              Una bahia de motor limpia facilita la deteccion de fugas de aceite o liquidos, mejora la presentacion general del vehiculo y es especialmente importante si esta considerando vender su auto. Utilizamos metodos seguros que protegen los componentes electricos y sensores del motor.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Pueden Eliminar el Olor a Humo de un Auto?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>Si, nuestro servicio de <a href={localizedUrl('es', 'smoke-odor-removal-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">eliminacion de olor a humo</a> utiliza tecnicas profesionales que neutralizan las moleculas de olor en lugar de simplemente enmascararlas. El proceso incluye limpieza profunda de tapiceria, alfombras y todas las superficies interiores.</strong>
+            </p>
+            <p class="text-gray-600">
+              El olor a cigarrillo penetra profundamente en las fibras de la tapiceria, alfombras, el sistema de ventilacion y hasta el relleno de los asientos. Nuestro proceso de multiples pasos incluye <a href={localizedUrl('es', 'steam-cleaning-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">limpieza a vapor</a>, tratamiento de superficies y tecnicas de eliminacion de olores para resultados duraderos.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Programacion y Logistica -->
+      <div>
+        <h2 class="text-3xl font-bold text-[#0f2a4a] mb-8 pb-4 border-b-2 border-[#0f2a4a]/20">Programacion y Logistica</h2>
+        <div class="space-y-10">
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Como Reservo una Cita?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>Reservar es facil. Llame o envie un texto al 754-215-2272, o envie un correo a contact@route95mobilecardetailing.com. Atendemos de lunes a sabado de 8 AM a 8 PM. Frecuentemente tenemos disponibilidad para citas el mismo dia.</strong>
+            </p>
+            <p class="text-gray-600">
+              Tambien puede <a href={localizedUrl('es', 'contact')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">contactarnos a traves de nuestro formulario</a> en linea. Le responderemos lo antes posible con la confirmacion de su cita y toda la informacion que necesita para prepararse. Recomendamos reservar con al menos 24 horas de anticipacion, aunque citas de ultimo momento son frecuentemente posibles.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Necesitan Acceso a Agua o Electricidad?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>No, nuestro equipo movil es completamente autonomo. Llevamos toda el agua, electricidad y productos necesarios para realizar cualquier servicio. No necesita proporcionar ningun recurso — solo necesitamos un espacio adecuado para estacionar junto a su vehiculo.</strong>
+            </p>
+            <p class="text-gray-600">
+              Nuestra unidad movil esta equipada con tanques de agua, generadores y todas las herramientas profesionales necesarias. Esto significa que podemos trabajar en cualquier ubicacion, ya sea en su entrada residencial, un estacionamiento de oficina o un garaje de condominio.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Que Pasa Si Llueve el Dia de Mi Cita?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>Si hay lluvia el dia de su cita, nos comunicamos con usted para reprogramar sin costo alguno. Monitoreamos las condiciones meteorologicas y le avisamos con anticipacion si necesitamos reagendar para garantizar los mejores resultados.</strong>
+            </p>
+            <p class="text-gray-600">
+              En el sur de Florida, las lluvias de la tarde son comunes, especialmente en verano. Por eso, frecuentemente programamos servicios en la manana cuando las condiciones son mas estables. Si la lluvia es ligera y temporal, podemos esperar a que pase y continuar con el servicio. Su satisfaccion es nuestra prioridad.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Necesito Estar en Casa Durante el Servicio?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>No es necesario que este presente durante todo el servicio. Muchos de nuestros clientes nos dejan las llaves y continuan con su dia. Solo necesitamos acceso al vehiculo y un lugar de estacionamiento adecuado. Le avisamos por texto cuando terminamos.</strong>
+            </p>
+            <p class="text-gray-600">
+              Esta flexibilidad es una de las mayores ventajas de nuestro servicio movil. Puede estar en una reunion, hacer ejercicio o simplemente relajarse mientras nosotros nos encargamos de su vehiculo. Al finalizar, le enviamos fotos del resultado y coordinamos la devolucion de las llaves.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Especificas de Florida -->
+      <div>
+        <h2 class="text-3xl font-bold text-[#0f2a4a] mb-8 pb-4 border-b-2 border-[#0f2a4a]/20">Especificas de Florida</h2>
+        <div class="space-y-10">
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Con Que Frecuencia Debe Detallar un Auto en Florida?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>En Florida, recomendamos un detallado completo cada 3-4 meses y lavados de mantenimiento cada 2-3 semanas. El sol intenso, la humedad, el aire salado del oceano y los insectos del sur de Florida deterioran la pintura y el interior mas rapido que en otros estados.</strong>
+            </p>
+            <p class="text-gray-600 mb-4">
+              La radiacion UV en el sur de Florida es de las mas fuertes de Estados Unidos y degrada la pintura, las molduras plasticas y los interiores de cuero constantemente. Un programa regular de <a href={localizedUrl('es', 'car-waxing-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">encerado protector</a> cada 2-3 meses es esencial para mantener la capa transparente en buenas condiciones.
+            </p>
+            <p class="text-gray-600">
+              Ademas, el <a href={localizedUrl('es', 'leather-conditioning-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">acondicionamiento de cuero</a> regular previene el agrietamiento que el calor y la humedad de Florida causan en los asientos y superficies de cuero.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿El Aire Salado Dana la Pintura de Mi Auto?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>Si, la brisa salada del Atlantico es uno de los mayores enemigos de la pintura automotriz en Fort Lauderdale. Los depositos de sal corroen la capa transparente y aceleran la oxidacion, especialmente en vehiculos estacionados al aire libre cerca de la costa.</strong>
+            </p>
+            <p class="text-gray-600 mb-4">
+              El cloruro de sodio del aire marino se adhiere a la pintura y penetra las microfisuras de la capa transparente, iniciando un proceso de corrosion que puede volverse irreversible si no se trata. Los vehiculos estacionados a menos de 5 millas de la costa son especialmente vulnerables.
+            </p>
+            <p class="text-gray-600">
+              El <a href={localizedUrl('es', 'car-waxing-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">encerado regular</a> y los lavados frecuentes son su mejor defensa. La cera crea una barrera fisica entre la sal y su pintura, mientras que el <a href={localizedUrl('es', 'hand-wash-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">lavado a mano</a> elimina los depositos salinos antes de que causen dano.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Como Prevenir el Moho Dentro de un Auto en Florida?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>La humedad extrema de Florida crea condiciones ideales para el moho en interiores de vehiculos. Para prevenirlo, mantenga las ventanas cerradas, use el aire acondicionado regularmente, y limpie cualquier derrame inmediatamente. El detallado interior profesional elimina la humedad atrapada.</strong>
+            </p>
+            <p class="text-gray-600 mb-4">
+              El moho puede crecer debajo de las alfombras, dentro de los conductos de ventilacion y en las costuras de la tapiceria donde la humedad se acumula sin ser detectada. Nuestro servicio de <a href={localizedUrl('es', 'carpet-shampooing-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">lavado de alfombras</a> y <a href={localizedUrl('es', 'seat-shampooing-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">lavado de asientos</a> extrae la humedad profunda y aplica tratamientos antimicrobianos.
+            </p>
+            <p class="text-gray-600">
+              Si su vehiculo ya tiene olor a humedad o moho visible, nuestro servicio de <a href={localizedUrl('es', 'odor-removal-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">eliminacion de olores</a> puede restaurar un interior fresco y saludable.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Propinas -->
+      <div>
+        <h2 class="text-3xl font-bold text-[#0f2a4a] mb-8 pb-4 border-b-2 border-[#0f2a4a]/20">Propinas</h2>
+        <div class="space-y-10">
+
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">¿Cuanto Se Debe Dar de Propina a un Detallador Movil?</h3>
+            <p class="text-gray-600 mb-4">
+              <strong>Las propinas no son obligatorias pero siempre son apreciadas. La mayoria de los clientes en Fort Lauderdale dan entre 15% y 20% del costo del servicio cuando estan satisfechos con el trabajo. Para servicios extensos, algunos clientes prefieren una propina fija de $20-$40.</strong>
+            </p>
+            <p class="text-gray-600">
+              A diferencia de un autolavado automatico, el detallado movil es un servicio personalizado y manual que requiere habilidad, atencion al detalle y esfuerzo fisico considerable. Si el detallador hizo un trabajo excepcional, supero sus expectativas o trabajo en condiciones dificiles como calor extremo, una propina generosa es una excelente forma de reconocer su dedicacion.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">¿Tiene Mas Preguntas?</h2>
+      <p class="text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+        Estamos aqui para ayudarle. Llame o envie un texto para obtener respuestas inmediatas y agendar su proximo detallado movil en Fort Lauderdale.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="tel:+17542152272" class="btn-accent inline-flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Llama al 754-215-2272
+        </a>
+        <a href={localizedUrl('es', 'contact')} class="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#0f2a4a] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Formulario de Contacto
+        </a>
+      </div>
+      <p class="text-gray-300 mt-8">
+        Lunes a Sabado &bull; 8 AM - 8 PM &bull; Fort Lauderdale, Dania Beach, Hollywood, Pompano Beach
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>

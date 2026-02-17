@@ -16,7 +16,9 @@
     "topBarLocations": "Fort Lauderdale, Dania Beach, Hollywood, Pompano Beach",
     "topBarHours": "Mon-Sat: 8AM-8PM",
     "openMenu": "Open menu",
-    "whatsappMessage": "Hi! I'd like to get a quote for mobile car detailing."
+    "whatsappMessage": "Hi! I'd like to get a quote for mobile car detailing.",
+    "pricing": "Pricing",
+    "faq": "FAQ"
   },
   "footer": {
     "companyName": "Route95 Mobile Car Detailing",
@@ -95,6 +97,11 @@
     "premiumRefresh": "Premium Refresh",
     "carWashServices": "Car Wash Services",
     "upholsteryCleaning": "Upholstery Cleaning",
-    "detailingServices": "Detailing Services"
+    "detailingServices": "Detailing Services",
+    "engineBayCleaning": "Engine Bay Cleaning",
+    "interiorCarDetailing": "Interior Car Detailing",
+    "fleetDetailing": "Fleet Detailing",
+    "pricing": "Pricing",
+    "faq": "FAQ"
   }
 }
