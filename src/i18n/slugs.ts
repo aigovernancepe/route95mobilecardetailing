@@ -10,7 +10,7 @@ export const slugMap: Record<string, string> = {
   'car-waxing-fort-lauderdale': 'encerado-de-autos-fort-lauderdale',
   'clay-bar-treatment-fort-lauderdale': 'tratamiento-barra-de-arcilla-fort-lauderdale',
   'wheel-cleaning-fort-lauderdale': 'limpieza-de-rines-fort-lauderdale',
-  'chrome-polishing-fort-lauderdale': 'pulido-de-cromo-fort-lauderdale',
+  'engine-bay-cleaning-fort-lauderdale': 'limpieza-de-motor-fort-lauderdale',
   'water-spot-removal-fort-lauderdale': 'eliminacion-de-manchas-de-agua-fort-lauderdale',
   'trim-restoration-fort-lauderdale': 'restauracion-de-molduras-fort-lauderdale',
   'tire-dressing-fort-lauderdale': 'acondicionador-de-llantas-fort-lauderdale',

@@ -1,0 +1,207 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+
+const base = import.meta.env.BASE_URL;
+const title = "Engine Bay Cleaning Fort Lauderdale | Mobile Service | Route95";
+const description = "Professional engine bay cleaning in Fort Lauderdale. Degreasing, electronics protection, leak detection. Mobile service - we come to you! Call 754-215-2272";
+
+const parentCategory = {
+  href: `${base}car-wash-fort-lauderdale/`,
+  title: "Car Wash Services"
+};
+
+const siteUrl = "https://route95mobilecardetailing.com";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/engine-bay-cleaning-fort-lauderdale/#service`,
+  "name": "Engine Bay Cleaning Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/engine-bay-cleaning-fort-lauderdale/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": 75,
+    "highPrice": 150
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does Engine Bay Cleaning Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Engine bay cleaning in Fort Lauderdale costs $75 to $150 depending on engine size and level of buildup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does Engine Bay Cleaning Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Engine bay cleaning takes about 45 minutes including degreasing, rinsing, and dressing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Clean Your Engine Bay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A clean engine bay makes it easier to spot leaks, improves resale value, and shows buyers or mechanics the vehicle has been well maintained."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
+---
+
+<ServiceLayout
+  title={title}
+  description={description}
+  h1="Engine Bay Cleaning Fort Lauderdale"
+  intro="Professional engine bay cleaning removes grease, grime, and road debris from under the hood while protecting sensitive electronics and wiring."
+  currentPage="/engine-bay-cleaning-fort-lauderdale/"
+  parentCategory={parentCategory}
+  schema={schemas}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <section>
+        <p class="text-gray-600 mb-4">
+          Most people never think about what's under the hood until something goes wrong. Grease, road grime, dirt, and leaked fluids accumulate over months and years. That buildup traps heat, hides leaks, and makes your engine bay look neglected when you pop the hood for any reason.
+        </p>
+        <p class="text-gray-600 mb-4">
+          In Fort Lauderdale, the combination of heat and humidity accelerates grime buildup. Salt air from the ocean corrodes exposed metal surfaces faster than in drier climates. A clean engine bay runs cooler, lasts longer, and gives you peace of mind.
+        </p>
+        <p class="text-gray-600">
+          Route95 brings professional engine bay cleaning directly to your Fort Lauderdale location. We use automotive-specific degreasers and low-pressure rinsing to safely clean your engine bay without damaging sensitive electrical components.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Engine Bay Cleaning Cost in Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Engine bay cleaning in Fort Lauderdale costs $75 to $150 depending on engine size and level of buildup.</strong>
+        </p>
+        <p class="text-gray-600">
+          A regularly maintained engine bay with light dust falls at the lower end. Engines with heavy grease buildup, leaked fluids, or years of neglect require more product and labor. We quote based on your vehicle's condition.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Long Does Engine Bay Cleaning Take?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Engine bay cleaning takes about 45 minutes including degreasing, rinsing, and dressing.</strong>
+        </p>
+        <p class="text-gray-600">
+          Heavily soiled engines may take up to an hour. The degreaser needs dwell time to break down baked-on grease and grime before rinsing. We allow proper time for each step to get the best results safely.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Why Clean Your Engine Bay?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>A clean engine bay makes it easier to spot leaks, improves resale value, and shows buyers or mechanics the vehicle has been well maintained.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Benefits of engine bay cleaning:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li>Spot oil, coolant, or power steering leaks early</li>
+          <li>Prevent corrosion on metal components</li>
+          <li>Remove heat-trapping grime for better cooling</li>
+          <li>Increase resale value with a clean presentation</li>
+          <li>Make future maintenance easier for your mechanic</li>
+        </ul>
+        <p class="text-gray-600">
+          If you're selling your car in Fort Lauderdale's competitive used car market, a clean engine bay signals careful ownership. Buyers and dealers notice.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Our Engine Bay Cleaning Process</h2>
+        <ProcessSteps steps={[
+          { title: "Cover Sensitive Components", description: "We protect electrical connections, the alternator, and air intake with plastic covers before any water or chemicals touch the engine bay." },
+          { title: "Apply Degreaser", description: "We spray automotive-grade degreaser on all surfaces and let it dwell to break down grease, oil, and road grime." },
+          { title: "Agitate", description: "We use detailing brushes to scrub stubborn areas like valve covers, hoses, and brackets where grime builds up thickest." },
+          { title: "Low-Pressure Rinse", description: "We rinse with controlled low-pressure water to remove all degreaser and loosened grime without forcing water into electrical connections." },
+          { title: "Dry and Inspect", description: "We dry surfaces with compressed air and microfiber towels, then inspect for any remaining spots or areas that need attention." },
+          { title: "Dress and Protect", description: "We apply protectant to rubber hoses and plastic covers to restore their appearance and provide UV protection against Florida sun." }
+        ]} />
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1">
+      <div class="sticky top-24 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Engine Bay Cleaning Quick Facts</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">$75-$150 depending on condition</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-gray-600">About 45 minutes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Electronics protected</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Helps spot leaks early</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Boosts resale value</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+          <h3 class="font-bold mb-4">Book Engine Bay Cleaning</h3>
+          <p class="text-gray-200 text-sm mb-4">
+            Same-day appointments available throughout Fort Lauderdale.
+          </p>
+          <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            754-215-2272
+          </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Related Services</h3>
+          <ul class="space-y-2">
+            <li><a href={`${base}hand-wash-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Hand Wash</a></li>
+            <li><a href={`${base}trim-restoration-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Trim Restoration</a></li>
+            <li><a href={`${base}water-spot-removal-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Water Spot Removal</a></li>
+            <li><a href={`${base}complete-clean-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Complete Clean</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</ServiceLayout>
