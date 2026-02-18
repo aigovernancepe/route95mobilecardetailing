@@ -159,10 +159,20 @@ const faqSchema = {
             <tr class="border-b border-gray-200 bg-white">
               <td class="px-5 py-4 font-semibold text-[#0f2a4a]">
                 <a href={localizedUrl('es', 'complete-clean-fort-lauderdale')} class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Limpieza Completa</a>
+                <span class="block text-xs text-green-600 font-bold mt-1">10% DESC. — Feb y Marzo</span>
               </td>
-              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$130</td>
-              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$145</td>
-              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$160</td>
+              <td class="px-5 py-4 text-center">
+                <span class="text-gray-400 line-through text-sm">$130</span>
+                <span class="block text-gray-700 font-semibold text-green-600">$117</span>
+              </td>
+              <td class="px-5 py-4 text-center">
+                <span class="text-gray-400 line-through text-sm">$145</span>
+                <span class="block text-gray-700 font-semibold text-green-600">$131</span>
+              </td>
+              <td class="px-5 py-4 text-center">
+                <span class="text-gray-400 line-through text-sm">$160</span>
+                <span class="block text-gray-700 font-semibold text-green-600">$144</span>
+              </td>
             </tr>
             <tr class="bg-gray-50">
               <td class="px-5 py-4 font-semibold text-[#0f2a4a]">
@@ -273,7 +283,8 @@ const faqSchema = {
         </div>
 
         <!-- Limpieza Completa -->
-        <div class="bg-white rounded-xl shadow-sm border-2 border-[#0f2a4a] p-6">
+        <div class="bg-white rounded-xl shadow-sm border-2 border-green-500 p-6 relative">
+          <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 text-xs font-bold rounded-full">10% DESC. — Feb y Marzo</div>
           <div class="flex items-center gap-3 mb-3">
             <h3 class="text-xl font-bold text-[#0f2a4a]">
               <a href={localizedUrl('es', 'complete-clean-fort-lauderdale')} class="hover:text-[#1a5ca0] transition-colors">Limpieza Completa — desde $130</a>
