@@ -43,7 +43,8 @@ const categorySchema = {
       },
       {
         "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Premium Refresh", "url": `${siteUrl}/premium-refresh-fort-lauderdale/` }
+        "itemOffered": { "@type": "Service", "name": "Premium Refresh", "url": `${siteUrl}/premium-refresh-fort-lauderdale/` },
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 400, "maxPrice": 460, "priceCurrency": "USD" }
       }
     ]
   }
@@ -81,8 +82,13 @@ const packages = [
   {
     name: "Premium Refresh",
     slug: "premium-refresh-fort-lauderdale",
-    description: "Deep interior shampoo with steam cleaning — the ultimate detail. Includes interior shampoo (seats, carpets, door panels, seatbelts), door jambs, steam cleaning, plus everything in Complete Clean.",
-    comingSoon: true
+    description: "Deep interior shampoo with steam cleaning and car waxing — the ultimate detail. Includes interior shampoo (seats, carpets, door panels, seatbelts), door jambs, steam cleaning, car waxing, plus everything in Complete Clean.",
+    sedan: 400,
+    suv: 420,
+    truck: 460,
+    promo: true,
+    promoLabel: "15% OFF — Feb & March 2026",
+    promoDiscount: 0.15
   }
 ];
 
@@ -102,6 +108,7 @@ const allServices = [
   "Interior Shampoo",
   "Door Jambs",
   "Steam Cleaning",
+  "Car Waxing",
 ];
 
 // Map which services are included in each package
@@ -109,7 +116,7 @@ const packageIncludes: Record<string, Set<string>> = {
   "Quick Wash": new Set(["Hand Wash", "Tires & Rims", "Window Cleaning", "Interior Wipe Down", "Vacuum"]),
   "Fresh Start": new Set(["Hand Wash", "Tires & Rims", "Window Cleaning", "Interior Wipe Down", "Vacuum", "Tire Dressing", "Dashboard", "Center Console"]),
   "Complete Clean": new Set(["Hand Wash", "Tires & Rims", "Window Cleaning", "Interior Wipe Down", "Vacuum", "Tire Dressing", "Dashboard", "Center Console", "Fender Wells", "Floor Mats", "Vacuum (incl. Trunk)"]),
-  "Premium Refresh": new Set(["Hand Wash", "Tires & Rims", "Window Cleaning", "Interior Wipe Down", "Vacuum", "Tire Dressing", "Dashboard", "Center Console", "Fender Wells", "Floor Mats", "Vacuum (incl. Trunk)", "Interior Shampoo", "Door Jambs", "Steam Cleaning"]),
+  "Premium Refresh": new Set(["Hand Wash", "Tires & Rims", "Window Cleaning", "Interior Wipe Down", "Vacuum", "Tire Dressing", "Dashboard", "Center Console", "Fender Wells", "Floor Mats", "Vacuum (incl. Trunk)", "Interior Shampoo", "Door Jambs", "Steam Cleaning", "Car Waxing"]),
 };
 
 const addOns = [
@@ -233,62 +240,51 @@ const faqSchema = {
                 Most Popular
               </div>
             )}
-            {pkg.comingSoon && (
-              <div class="absolute top-0 right-0 bg-[#c0c7cf] text-[#0f2a4a] px-4 py-1 text-sm font-bold rounded-bl-lg">
-                Coming Soon
-              </div>
-            )}
 
             <div class="p-6">
               <h2 class="text-2xl font-bold text-[#0f2a4a] mb-2">{pkg.name}</h2>
               <p class="text-gray-600 mb-4">{pkg.description}</p>
 
-              {!pkg.comingSoon ? (
-                <div class="border-t pt-4 mt-4">
-                  <div class="grid grid-cols-3 gap-2 text-center mb-4">
-                    <div>
-                      <p class="text-xs text-gray-400">Sedan</p>
-                      {pkg.promo ? (
-                        <div>
-                          <p class="text-sm text-gray-400 line-through">${pkg.sedan}</p>
-                          <p class="text-xl font-bold text-green-600">${Math.round(pkg.sedan * (1 - pkg.promoDiscount))}</p>
-                        </div>
-                      ) : (
-                        <p class="text-xl font-bold text-[#0f2a4a]">${pkg.sedan}</p>
-                      )}
-                    </div>
-                    <div>
-                      <p class="text-xs text-gray-400">SUV</p>
-                      {pkg.promo ? (
-                        <div>
-                          <p class="text-sm text-gray-400 line-through">${pkg.suv}</p>
-                          <p class="text-xl font-bold text-green-600">${Math.round(pkg.suv * (1 - pkg.promoDiscount))}</p>
-                        </div>
-                      ) : (
-                        <p class="text-xl font-bold text-[#0f2a4a]">${pkg.suv}</p>
-                      )}
-                    </div>
-                    <div>
-                      <p class="text-xs text-gray-400">Truck</p>
-                      {pkg.promo ? (
-                        <div>
-                          <p class="text-sm text-gray-400 line-through">${pkg.truck}</p>
-                          <p class="text-xl font-bold text-green-600">${Math.round(pkg.truck * (1 - pkg.promoDiscount))}</p>
-                        </div>
-                      ) : (
-                        <p class="text-xl font-bold text-[#0f2a4a]">${pkg.truck}</p>
-                      )}
-                    </div>
+              <div class="border-t pt-4 mt-4">
+                <div class="grid grid-cols-3 gap-2 text-center mb-4">
+                  <div>
+                    <p class="text-xs text-gray-400">Sedan</p>
+                    {pkg.promo ? (
+                      <div>
+                        <p class="text-sm text-gray-400 line-through">${pkg.sedan}</p>
+                        <p class="text-xl font-bold text-green-600">${Math.round(pkg.sedan * (1 - pkg.promoDiscount))}</p>
+                      </div>
+                    ) : (
+                      <p class="text-xl font-bold text-[#0f2a4a]">${pkg.sedan}</p>
+                    )}
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-400">SUV</p>
+                    {pkg.promo ? (
+                      <div>
+                        <p class="text-sm text-gray-400 line-through">${pkg.suv}</p>
+                        <p class="text-xl font-bold text-green-600">${Math.round(pkg.suv * (1 - pkg.promoDiscount))}</p>
+                      </div>
+                    ) : (
+                      <p class="text-xl font-bold text-[#0f2a4a]">${pkg.suv}</p>
+                    )}
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-400">Truck</p>
+                    {pkg.promo ? (
+                      <div>
+                        <p class="text-sm text-gray-400 line-through">${pkg.truck}</p>
+                        <p class="text-xl font-bold text-green-600">${Math.round(pkg.truck * (1 - pkg.promoDiscount))}</p>
+                      </div>
+                    ) : (
+                      <p class="text-xl font-bold text-[#0f2a4a]">${pkg.truck}</p>
+                    )}
                   </div>
                 </div>
-              ) : (
-                <div class="border-t pt-4 mt-4 text-center">
-                  <p class="text-gray-500 italic mb-4">Pricing coming soon — contact us for details</p>
-                </div>
-              )}
+              </div>
 
               <a href={`${base}${pkg.slug}/`} class="block w-full text-center bg-[#0f2a4a] text-white py-3 rounded-lg font-semibold hover:bg-[#1a3d6b] transition-colors">
-                {pkg.comingSoon ? 'Learn More' : 'View Package Details'}
+                View Package Details
               </a>
             </div>
           </div>
@@ -326,8 +322,7 @@ const faqSchema = {
               {packages.map(pkg => (
                 <th class="px-3 py-4 text-center font-semibold min-w-[120px]">
                   <span>{pkg.name}</span>
-                  {pkg.promo && <span class="block text-xs text-green-300 mt-1">10% OFF</span>}
-                  {pkg.comingSoon && <span class="block text-xs text-gray-200 mt-1">Coming Soon</span>}
+                  {pkg.promo && <span class="block text-xs text-green-300 mt-1">{pkg.promoLabel?.includes('15%') ? '15% OFF' : '10% OFF'}</span>}
                 </th>
               ))}
             </tr>
@@ -415,7 +410,7 @@ const faqSchema = {
               {packages.map(pkg => (
                 <td class="px-3 py-4 text-center">
                   <a href="tel:+17542152272" class={`inline-block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${pkg.promo ? 'bg-green-500 text-white hover:bg-green-600' : 'bg-[#0f2a4a] text-white hover:bg-[#1a3d6b]'}`}>
-                    {pkg.comingSoon ? 'Contact Us' : 'Book Now'}
+                    Book Now
                   </a>
                 </td>
               ))}
