@@ -3,8 +3,8 @@ import ServiceLayout from '../layouts/ServiceLayout.astro';
 import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
-const title = "Wheel Cleaning Fort Lauderdale | Mobile Service | Route95";
-const description = "Professional wheel cleaning in Fort Lauderdale. Brake dust removal, rim restoration, tire dressing. Mobile service - we come to you! Call 754-215-2272";
+const title = "Wheel & Rim Cleaning Fort Lauderdale | Mobile Rim Cleaner | Route95";
+const description = "Professional wheel and rim cleaning in Fort Lauderdale. Brake dust removal, rim restoration, tire dressing. Mobile rim cleaner — we come to you! Same-day service. Call 754-215-2272";
 
 const parentCategory = {
   href: `${base}car-wash-fort-lauderdale/`,
@@ -16,22 +16,36 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${siteUrl}/wheel-cleaning-fort-lauderdale/#service`,
-  "name": "Wheel Cleaning Fort Lauderdale",
+  "name": "Wheel and Rim Cleaning Fort Lauderdale",
+  "alternateName": "Rim Cleaner Fort Lauderdale",
   "description": description,
   "url": `${siteUrl}/wheel-cleaning-fort-lauderdale/`,
-  "serviceType": "Mobile Car Detailing",
+  "serviceType": "Wheel and Rim Cleaning",
+  "category": "Mobile Car Detailing",
   "provider": { "@id": `${siteUrl}/#business` },
   "areaServed": [
-    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Fort Lauderdale", "sameAs": "https://en.wikipedia.org/wiki/Fort_Lauderdale,_Florida" },
     { "@type": "City", "name": "Dania Beach" },
     { "@type": "City", "name": "Hollywood" },
-    { "@type": "City", "name": "Pompano Beach" }
+    { "@type": "City", "name": "Pompano Beach" },
+    { "@type": "City", "name": "Coral Springs" },
+    { "@type": "City", "name": "Wilton Manors" }
   ],
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
     "lowPrice": 40,
-    "highPrice": 80
+    "highPrice": 80,
+    "availability": "https://schema.org/InStock"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Wheel and Rim Cleaning Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brake Dust Removal from Rims" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rim Restoration and Cleaning" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tire Dressing and Sidewall Cleaning" } }
+    ]
   }
 };
 
@@ -41,10 +55,10 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How Much Does Wheel Cleaning Cost in Fort Lauderdale?",
+      "name": "How Much Does Wheel and Rim Cleaning Cost in Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Professional wheel cleaning in Fort Lauderdale costs $40 to $80 for all four wheels depending on size and condition."
+        "text": "Professional wheel and rim cleaning in Fort Lauderdale costs $40 to $80 for all four wheels depending on size and condition. Standard rims with light brake dust fall at the lower end, while large rims with heavy buildup or intricate spoke designs cost more."
       }
     },
     {
@@ -52,15 +66,39 @@ const faqSchema = {
       "name": "How Long Does Wheel Cleaning Take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Wheel cleaning takes 30 to 45 minutes for all four wheels, including tire dressing."
+        "text": "Wheel and rim cleaning takes 30 to 45 minutes for all four wheels, including tire dressing. Each rim gets individual attention on the face, spokes, inner barrel, lug nuts, and tire sidewalls."
       }
     },
     {
       "@type": "Question",
-      "name": "Why Professional Wheel Cleaning Matters",
+      "name": "Why Does Professional Rim Cleaning Matter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Brake dust is corrosive. Left on your wheels, it bonds to the finish and eventually causes permanent pitting and damage."
+        "text": "Brake dust is corrosive. Left on your rims, it bonds to the finish and eventually causes permanent pitting and damage. In Fort Lauderdale, coastal salt air accelerates this corrosion. Regular professional rim cleaning prevents permanent damage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer mobile rim cleaning near me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Route95 provides mobile wheel and rim cleaning throughout Fort Lauderdale and surrounding areas including Dania Beach, Hollywood, Pompano Beach, and Coral Springs. We bring all equipment directly to your location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of rims can you clean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We clean all rim types including chrome, polished aluminum, painted, powder-coated, and alloy rims. We use pH-balanced, wheel-safe products that dissolve brake dust without damaging any finish."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I get my rims professionally cleaned?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend professional rim cleaning every 4 to 6 weeks in Fort Lauderdale due to the coastal salt air that accelerates brake dust corrosion. Regular cleaning prevents the damage that leads to expensive rim refinishing or replacement."
       }
     }
   ]
@@ -72,8 +110,8 @@ const schemas = [serviceSchema, faqSchema];
 <ServiceLayout
   title={title}
   description={description}
-  h1="Wheel Cleaning Fort Lauderdale"
-  intro="Professional wheel cleaning removes brake dust, road grime, and tar from your wheels and tires, restoring that showroom shine."
+  h1="Wheel & Rim Cleaning Fort Lauderdale"
+  intro="Professional wheel and rim cleaning removes brake dust, road grime, and tar from your wheels and tires, restoring that showroom shine. Mobile service — we come to you."
   currentPage="/wheel-cleaning-fort-lauderdale/"
   parentCategory={parentCategory}
   schema={schemas}
@@ -82,81 +120,145 @@ const schemas = [serviceSchema, faqSchema];
     <div class="lg:col-span-2 space-y-8">
       <section>
         <p class="text-gray-600 mb-4">
-          Your wheels take more abuse than any other part of your car's exterior. Brake dust—a corrosive mixture of metal particles and adhesive—coats your wheels every time you stop. Road grime, tar, and salt spray add to the buildup.
+          Your wheels and rims take more abuse than any other part of your car's exterior. Brake dust—a corrosive mixture of metal particles and adhesive—coats your rims every time you stop. Road grime, tar, and salt spray add to the buildup.
         </p>
         <p class="text-gray-600 mb-4">
-          Automatic car washes barely touch your wheels. Quick spray washes leave brake dust embedded in the finish. Over time, this contamination etches into wheel surfaces and becomes permanent if not properly removed.
+          Automatic car washes barely touch your rims. Quick spray washes leave brake dust embedded in the finish. Over time, this contamination etches into rim surfaces and becomes permanent if not properly removed.
         </p>
         <p class="text-gray-600">
-          We bring professional wheel cleaning directly to your Fort Lauderdale location, using wheel-safe products that dissolve brake dust without damaging your wheel finish.
+          We bring professional wheel and rim cleaning directly to your Fort Lauderdale location, using wheel-safe products that dissolve brake dust without damaging your rim finish—whether chrome, polished aluminum, painted, or alloy.
         </p>
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Wheel Cleaning Cost in Fort Lauderdale?</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Wheel and Rim Cleaning Cost in Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Professional wheel cleaning in Fort Lauderdale costs $40 to $80 for all four wheels depending on size and condition.</strong>
+          <strong>Professional wheel and rim cleaning in Fort Lauderdale costs $40 to $80 for all four wheels depending on size and condition.</strong>
         </p>
         <p class="text-gray-600">
-          Standard wheels with light contamination fall at the lower end. Large wheels with heavy brake dust buildup or intricate spoke designs take more time and product.
+          Standard rims with light contamination fall at the lower end. Large rims with heavy brake dust buildup or intricate spoke designs take more time and product. We clean all rim types including chrome, alloy, and painted finishes.
         </p>
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Long Does Wheel Cleaning Take?</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Long Does Rim Cleaning Take?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Wheel cleaning takes 30 to 45 minutes for all four wheels, including tire dressing.</strong>
+          <strong>Rim cleaning takes 30 to 45 minutes for all four wheels, including tire dressing.</strong>
         </p>
         <p class="text-gray-600">
-          Each wheel gets individual attention. We clean the face, spokes, inner barrel (where visible), lug nuts, and tire sidewalls. The result is wheels that look brand new.
+          Each rim gets individual attention. We clean the face, spokes, inner barrel (where visible), lug nuts, and tire sidewalls. The result is rims that look brand new.
         </p>
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Why Professional Wheel Cleaning Matters</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Why Professional Rim Cleaning Matters</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Brake dust is corrosive. Left on your wheels, it bonds to the finish and eventually causes permanent pitting and damage.</strong>
+          <strong>Brake dust is corrosive. Left on your rims, it bonds to the finish and eventually causes permanent pitting and damage.</strong>
         </p>
-        <p class="text-gray-600 mb-4">Problems caused by neglected wheels:</p>
+        <p class="text-gray-600 mb-4">Problems caused by neglected rims and wheels:</p>
         <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
-          <li>Brake dust etches into clear coat and paint</li>
+          <li>Brake dust etches into rim clear coat and paint</li>
           <li>Corrosion starts under embedded contamination</li>
-          <li>Chrome and polished finishes become pitted</li>
-          <li>Wheels look dirty even after washing</li>
-          <li>Resale value decreases</li>
+          <li>Chrome and polished rim finishes become pitted</li>
+          <li>Rims look dirty even after washing</li>
+          <li>Resale value decreases significantly</li>
         </ul>
         <p class="text-gray-600">
-          In Fort Lauderdale, road salt from coastal air accelerates wheel corrosion. Regular cleaning prevents permanent damage.
+          In Fort Lauderdale, road salt from coastal air accelerates rim corrosion. Regular professional rim cleaning prevents permanent damage that would require expensive refinishing or replacement.
         </p>
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Our Wheel Cleaning Process</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Rim Types We Clean</h2>
+        <p class="text-gray-600 mb-4">We use the right products and techniques for every rim type:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Chrome Rims</h3>
+            <p class="text-gray-600 text-sm">Non-acidic cleaners that dissolve brake dust without etching chrome plating.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Alloy Rims</h3>
+            <p class="text-gray-600 text-sm">pH-balanced cleaners safe for clear-coated and bare aluminum alloy surfaces.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Painted Rims</h3>
+            <p class="text-gray-600 text-sm">Gentle yet effective cleaning that preserves painted and powder-coated finishes.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Polished Rims</h3>
+            <p class="text-gray-600 text-sm">Careful cleaning and drying to maintain mirror-finish polish without swirl marks.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Our Wheel & Rim Cleaning Process</h2>
         <ProcessSteps steps={[
-          { title: "Initial Rinse", description: "We rinse loose dirt and debris from wheels and tires before applying any chemicals." },
-          { title: "Wheel Cleaner Application", description: "We spray pH-balanced wheel cleaner that dissolves brake dust without harming wheel finishes." },
-          { title: "Agitation", description: "We use wheel brushes to scrub every surface—face, spokes, inner barrel, and lug area." },
+          { title: "Initial Rinse", description: "We rinse loose dirt and debris from wheels and rims before applying any chemicals." },
+          { title: "Rim Cleaner Application", description: "We spray pH-balanced rim cleaner that dissolves brake dust without harming any wheel finish." },
+          { title: "Agitation", description: "We use wheel brushes to scrub every rim surface—face, spokes, inner barrel, and lug area." },
           { title: "Tire Scrub", description: "Tire sidewalls get cleaned with degreaser to remove browning and old dressing buildup." },
-          { title: "Rinse and Dry", description: "Thorough rinse removes all cleaner and loosened contamination. We dry wheels to prevent water spots." },
+          { title: "Rinse and Dry", description: "Thorough rinse removes all cleaner and loosened contamination. We dry rims to prevent water spots." },
           { title: "Tire Dressing", description: "We apply tire dressing for a rich, dark finish. We use non-sling formula so it stays on your tires, not your fenders." }
         ]} />
+      </section>
+
+      <!-- FAQ Section -->
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Wheel & Rim Cleaning FAQ</h2>
+        <div class="space-y-4">
+          <details class="bg-gray-50 rounded-lg p-5 group" open>
+            <summary class="font-semibold text-[#0f2a4a] cursor-pointer list-none flex items-center justify-between">
+              Do you offer mobile rim cleaning near me?
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="text-gray-600 mt-3 text-sm">Yes. Route95 provides mobile wheel and rim cleaning throughout Fort Lauderdale and surrounding areas including Dania Beach, Hollywood, Pompano Beach, and Coral Springs. We bring all equipment and products directly to your home or office.</p>
+          </details>
+          <details class="bg-gray-50 rounded-lg p-5 group">
+            <summary class="font-semibold text-[#0f2a4a] cursor-pointer list-none flex items-center justify-between">
+              What types of rims can you clean?
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="text-gray-600 mt-3 text-sm">We clean all rim types including chrome, polished aluminum, painted, powder-coated, and alloy rims. We use pH-balanced, wheel-safe products that dissolve brake dust without damaging any finish.</p>
+          </details>
+          <details class="bg-gray-50 rounded-lg p-5 group">
+            <summary class="font-semibold text-[#0f2a4a] cursor-pointer list-none flex items-center justify-between">
+              How often should I get my rims professionally cleaned?
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="text-gray-600 mt-3 text-sm">We recommend professional rim cleaning every 4 to 6 weeks in Fort Lauderdale due to the coastal salt air that accelerates brake dust corrosion. Regular cleaning prevents damage that leads to expensive rim refinishing or replacement.</p>
+          </details>
+          <details class="bg-gray-50 rounded-lg p-5 group">
+            <summary class="font-semibold text-[#0f2a4a] cursor-pointer list-none flex items-center justify-between">
+              Can you remove curb rash or rim scratches?
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="text-gray-600 mt-3 text-sm">Our wheel cleaning service focuses on removing brake dust, grime, and contamination. For curb rash or deep scratches, rim refinishing would be needed. However, our thorough cleaning often reveals that what looked like damage was actually baked-on brake dust.</p>
+          </details>
+        </div>
       </section>
     </div>
 
     <aside class="lg:col-span-1">
       <div class="sticky top-24 space-y-6">
         <div class="bg-gray-50 rounded-xl p-6">
-          <h3 class="font-bold text-[#0f2a4a] mb-4">Wheel Cleaning Quick Facts</h3>
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Rim Cleaning Quick Facts</h3>
           <ul class="space-y-3">
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">$40-$80 for all four</span>
+              <span class="text-gray-600">$40-$80 for all four rims</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span class="text-gray-600">30-45 minutes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">Mobile service — we come to you</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -174,13 +276,13 @@ const schemas = [serviceSchema, faqSchema];
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="text-gray-600">Safe for all finishes</span>
+              <span class="text-gray-600">Safe for all rim finishes</span>
             </li>
           </ul>
         </div>
 
         <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
-          <h3 class="font-bold mb-4">Book Wheel Cleaning</h3>
+          <h3 class="font-bold mb-4">Book Rim Cleaning</h3>
           <p class="text-gray-200 text-sm mb-4">
             Same-day appointments available throughout Fort Lauderdale.
           </p>
