@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { localizedUrl } from '../../i18n/utils';
+
+const base = import.meta.env.BASE_URL;
+const title = "Detallado de Autos a Domicilio Hollywood FL | Route95";
+const description = "Detallado profesional de autos a domicilio en Hollywood, FL. ¡Vamos a ti! Lavado a mano, limpieza interior, paquetes completos. Servicio el mismo día. Llama al 754-215-2272";
+
+const whatsappNumber = "17542152272";
+const whatsappMessage = "¡Hola! Me gustaría obtener una cotización para detallado de autos en Hollywood, FL.";
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+const siteUrl = "https://route95mobilecardetailing.com";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/es/detallado-movil-hollywood-fl/#service`,
+  "name": "Detallado de Autos a Domicilio Hollywood FL",
+  "description": description,
+  "url": `${siteUrl}/es/detallado-movil-hollywood-fl/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": {
+    "@type": "City",
+    "name": "Hollywood",
+    "sameAs": "https://en.wikipedia.org/wiki/Hollywood,_Florida"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Detallado de Autos en Hollywood FL",
+    "itemListElement": [
+      { "@type": "OfferCatalog", "name": "Servicios de Lavado", "url": `${siteUrl}/es/lavado-de-autos-fort-lauderdale/` },
+      { "@type": "OfferCatalog", "name": "Limpieza de Tapicería", "url": `${siteUrl}/es/limpieza-de-tapiceria-fort-lauderdale/` },
+      { "@type": "OfferCatalog", "name": "Paquetes de Detallado", "url": `${siteUrl}/es/servicios-de-detallado-fort-lauderdale/` }
+    ]
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta el detallado de autos a domicilio en Hollywood, FL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El detallado de autos a domicilio en Hollywood, FL comienza desde $50 por un Lavado Rápido y hasta $460 por una Renovación Premium, dependiendo del tamaño del vehículo y el paquete seleccionado. Llama al 754-215-2272 para una cotización exacta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Sirven toda el área de Hollywood, Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, servimos todo Hollywood incluyendo Hollywood Beach, Downtown Hollywood, Emerald Hills, Hollywood Hills y vecindarios a lo largo de Hollywood Boulevard, US-1 y el Intracoastal. También servimos Fort Lauderdale, Dania Beach y Pompano Beach cercanos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo obtener detallado de auto el mismo día en Hollywood, FL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "¡Sí! Citas el mismo día están frecuentemente disponibles en Hollywood. Llámanos en la mañana y frecuentemente podemos estar en tu ubicación esa misma tarde. Operamos de lunes a sábado, de 8 AM a 8 PM."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
+
+const services = [
+  { title: "Servicios de Lavado", description: "Lavado a mano, encerado, barra de arcilla, limpieza de rines, eliminación de manchas de agua y más.", href: localizedUrl('es', 'car-wash-fort-lauderdale') },
+  { title: "Limpieza de Tapicería", description: "Lavado de asientos, limpieza y acondicionamiento de cuero, lavado de alfombras, limpieza a vapor.", href: localizedUrl('es', 'upholstery-cleaning-fort-lauderdale') },
+  { title: "Paquetes de Detallado", description: "Lavado Rápido, Nuevo Comienzo, Limpieza Completa y Renovación Premium desde $50.", href: localizedUrl('es', 'car-detailing-services-fort-lauderdale') }
+];
+
+const popularServices = [
+  { title: "Lavado a Mano", href: localizedUrl('es', 'hand-wash-fort-lauderdale') },
+  { title: "Limpieza Completa", href: localizedUrl('es', 'complete-clean-fort-lauderdale') },
+  { title: "Limpieza de Cuero", href: localizedUrl('es', 'leather-cleaning-fort-lauderdale') },
+  { title: "Lavado de Asientos", href: localizedUrl('es', 'seat-shampooing-fort-lauderdale') },
+  { title: "Eliminación de Olores", href: localizedUrl('es', 'odor-removal-fort-lauderdale') },
+  { title: "Renovación Premium", href: localizedUrl('es', 'premium-refresh-fort-lauderdale') }
+];
+
+const packages = [
+  { name: "Lavado Rápido", price: "$50-$80", description: "Lavado a mano, limpieza de llantas y rines, limpieza de ventanas, limpieza interior, aspirado" },
+  { name: "Nuevo Comienzo", price: "$80-$110", description: "Lavado Rápido más acondicionador de llantas, tablero, consola central" },
+  { name: "Limpieza Completa", price: "$130-$160", description: "Nuevo Comienzo más guardabarros, alfombras, aspirado de cajuela" },
+  { name: "Renovación Premium", price: "$400-$460", description: "Limpieza Completa más shampoo interior, marcos de puertas, limpieza a vapor" }
+];
+---
+
+<BaseLayout title={title} description={description} currentPage="/es/detallado-movil-hollywood-fl/" schema={schemas}>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Detallado de Autos a Domicilio Hollywood, FL</h1>
+      <p class="text-xl text-gray-200 max-w-3xl mb-8">
+        Detallado profesional de autos que llega a tu casa u oficina en Hollywood, Florida. Route95 lleva productos premium, equipo y cuidado experto directamente a tu ubicación — desde Hollywood Beach hasta Hollywood Hills.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="tel:+17542152272" class="btn-accent text-lg flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Llama al 754-215-2272
+        </a>
+        <a href={localizedUrl('es', 'contact')} class="bg-white text-[#0f2a4a] px-6 py-3 rounded-md font-semibold text-center hover:bg-gray-100 transition-colors">
+          Obtén una Cotización Gratis
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 space-y-8">
+          <section>
+            <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Servicios de Detallado de Autos en Hollywood, Florida</h2>
+            <p class="text-gray-600 mb-4">
+              Hollywood, FL se encuentra justo en la costa del Atlántico, y tu auto lo siente todos los días. El rocío salado del océano acelera la corrosión en cromo, molduras y componentes del chasis. El implacable sol de Florida decolora la pintura, agrieta el cuero y deforma los materiales del tablero. El detallado profesional regular no es solo cuestión de apariencia — es proteger tu inversión.
+            </p>
+            <p class="text-gray-600 mb-4">
+              Route95 Mobile Car Detailing sirve todo Hollywood — desde los condominios frente al mar a lo largo del Broadwalk hasta las calles arboladas de Emerald Hills y Hollywood Hills. Detallamos autos en Downtown Hollywood, a lo largo de Hollywood Boulevard y en todos los vecindarios a lo largo de US-1 y el Intracoastal Waterway.
+            </p>
+            <p class="text-gray-600">
+              Llevamos todo lo que necesitamos directamente a ti: agua, energía y productos profesionales de <a href={localizedUrl('es', 'car-waxing-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys, Koch-Chemie y 3D</a>. Sin necesidad de salir de tu casa, oficina o donde sea que estés.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Nuestros Paquetes de Detallado</h2>
+            <div class="space-y-4">
+              {packages.map(pkg => (
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-[#0f2a4a]">{pkg.name}</h3>
+                    <span class="text-[#0f2a4a] font-semibold">{pkg.price}</span>
+                  </div>
+                  <p class="text-gray-600 text-sm">{pkg.description}</p>
+                </div>
+              ))}
+            </div>
+            <p class="mt-4 text-gray-600">
+              Los precios varían según el tamaño del vehículo. <a href={localizedUrl('es', 'mobile-car-detailing-prices-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Ver precios completos</a>.
+            </p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section>
+            <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Preguntas Frecuentes sobre Detallado en Hollywood, FL</h2>
+            <div class="space-y-4">
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h3 class="font-bold text-[#0f2a4a] mb-2">¿Cuánto cuesta el detallado a domicilio en Hollywood, FL?</h3>
+                <p class="text-gray-600">El detallado a domicilio en Hollywood comienza desde $50 por un Lavado Rápido y hasta $460 por una Renovación Premium, dependiendo del tamaño del vehículo y el paquete. Llama al 754-215-2272 para una cotización exacta.</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h3 class="font-bold text-[#0f2a4a] mb-2">¿Sirven toda el área de Hollywood, Florida?</h3>
+                <p class="text-gray-600">Sí, servimos todo Hollywood incluyendo Hollywood Beach, Downtown Hollywood, Emerald Hills, Hollywood Hills y vecindarios a lo largo de Hollywood Boulevard, US-1 y el Intracoastal. También servimos Fort Lauderdale, Dania Beach y Pompano Beach.</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h3 class="font-bold text-[#0f2a4a] mb-2">¿Puedo obtener detallado el mismo día en Hollywood, FL?</h3>
+                <p class="text-gray-600">¡Sí! Citas el mismo día están frecuentemente disponibles. Llámanos en la mañana y frecuentemente podemos estar en tu ubicación esa misma tarde. Operamos de lunes a sábado, 8 AM a 8 PM.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24 space-y-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-[#0f2a4a] mb-4">Nuestros Servicios</h3>
+              {services.map(service => (
+                <a href={service.href} class="block mb-4 last:mb-0 group">
+                  <h4 class="font-semibold text-[#0f2a4a] group-hover:text-[#c0c7cf] transition-colors">{service.title}</h4>
+                  <p class="text-gray-600 text-sm">{service.description}</p>
+                </a>
+              ))}
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Populares</h3>
+              <ul class="space-y-2">
+                {popularServices.map(service => (
+                  <li><a href={service.href} class="text-gray-600 hover:text-[#c0c7cf]">{service.title}</a></li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+              <h3 class="font-bold mb-4">Reserva en Hollywood, FL</h3>
+              <p class="text-gray-200 text-sm mb-4">
+                Citas el mismo día disponibles. Vamos a ti con todo lo necesario.
+              </p>
+              <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                754-215-2272
+              </a>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="mt-3 bg-[#25D366] text-white w-full py-2 rounded-md font-semibold flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors">
+                Escríbenos por WhatsApp
+              </a>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-[#0f2a4a] mb-4">Otras Áreas de Servicio</h3>
+              <ul class="space-y-2">
+                <li><a href={`${base}es/`} class="text-gray-600 hover:text-[#c0c7cf]">Fort Lauderdale</a></li>
+                <li><a href={`${base}es/detallado-movil-dania-beach/`} class="text-gray-600 hover:text-[#c0c7cf]">Dania Beach</a></li>
+                <li><a href={`${base}es/detallado-movil-pompano-beach/`} class="text-gray-600 hover:text-[#c0c7cf]">Pompano Beach</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-12 lg:py-16 bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">¿Listo para Detallado Profesional en Hollywood?</h2>
+      <p class="text-xl text-gray-200 mb-8">
+        Deja de conformarte con autolavados automáticos que rayan tu pintura. Route95 entrega resultados de sala de exhibición en tu ubicación en Hollywood. Usamos productos premium y garantizamos tu satisfacción.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+17542152272" class="btn-accent text-lg flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Llama al 754-215-2272
+        </a>
+        <a href={localizedUrl('es', 'contact')} class="bg-white text-[#0f2a4a] px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+          Solicita una Cotización en Línea
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

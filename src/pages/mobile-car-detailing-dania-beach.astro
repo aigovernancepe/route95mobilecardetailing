@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+const title = "Mobile Car Detailing Dania Beach | Route95";
+const description = "Professional mobile car detailing in Dania Beach, FL. We come to you! Hand wash, interior cleaning, full detailing packages. Same-day service. Call 754-215-2272";
+
+const whatsappNumber = "17542152272";
+const whatsappMessage = "Hi! I'd like to get a quote for mobile car detailing in Dania Beach.";
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+const siteUrl = "https://route95mobilecardetailing.com";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/mobile-car-detailing-dania-beach/#service`,
+  "name": "Mobile Car Detailing Dania Beach",
+  "description": description,
+  "url": `${siteUrl}/mobile-car-detailing-dania-beach/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": {
+    "@type": "City",
+    "name": "Dania Beach",
+    "sameAs": "https://en.wikipedia.org/wiki/Dania_Beach,_Florida"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Mobile Car Detailing Services in Dania Beach",
+    "itemListElement": [
+      { "@type": "OfferCatalog", "name": "Car Wash Services", "url": `${siteUrl}/car-wash-fort-lauderdale/` },
+      { "@type": "OfferCatalog", "name": "Upholstery Cleaning Services", "url": `${siteUrl}/upholstery-cleaning-fort-lauderdale/` },
+      { "@type": "OfferCatalog", "name": "Car Detailing Packages", "url": `${siteUrl}/car-detailing-services-fort-lauderdale/` }
+    ]
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does mobile car detailing cost in Dania Beach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mobile car detailing in Dania Beach starts at $50 for a Quick Wash and ranges up to $460 for a Premium Refresh, depending on vehicle size and package selected. Call 754-215-2272 for an exact quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you serve all of Dania Beach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we serve all of Dania Beach including areas near Dania Beach Boulevard, the Dania Pointe shopping area, Dania Beach Marina, and neighborhoods east and west of US-1. We also serve nearby Fort Lauderdale, Hollywood, and Pompano Beach."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get same-day car detailing in Dania Beach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Same-day appointments are frequently available in Dania Beach. Call us in the morning and we can often be at your location that afternoon. We operate Monday through Saturday, 8 AM to 8 PM."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
+
+const services = [
+  { title: "Car Wash Services", description: "Hand wash, waxing, clay bar treatment, wheel cleaning, water spot removal, and more.", href: `${base}car-wash-fort-lauderdale/` },
+  { title: "Upholstery Cleaning", description: "Seat shampooing, leather cleaning & conditioning, carpet cleaning, steam cleaning, odor removal.", href: `${base}upholstery-cleaning-fort-lauderdale/` },
+  { title: "Detailing Packages", description: "Quick Wash, Fresh Start, Complete Clean & Premium Refresh packages starting at $50.", href: `${base}car-detailing-services-fort-lauderdale/` }
+];
+
+const popularServices = [
+  { title: "Hand Wash", href: `${base}hand-wash-fort-lauderdale/` },
+  { title: "Complete Clean", href: `${base}complete-clean-fort-lauderdale/` },
+  { title: "Leather Cleaning", href: `${base}leather-cleaning-fort-lauderdale/` },
+  { title: "Seat Shampooing", href: `${base}seat-shampooing-fort-lauderdale/` },
+  { title: "Odor Removal", href: `${base}odor-removal-fort-lauderdale/` },
+  { title: "Premium Refresh", href: `${base}premium-refresh-fort-lauderdale/` }
+];
+
+const packages = [
+  { name: "Quick Wash", price: "$50-$80", description: "Hand wash, tire & rim cleaning, window cleaning, interior wipe down, vacuum" },
+  { name: "Fresh Start", price: "$80-$110", description: "Quick Wash plus tire dressing, dashboard, center console cleaning" },
+  { name: "Complete Clean", price: "$130-$160", description: "Fresh Start plus fender wells, floor mats, trunk vacuum" },
+  { name: "Premium Refresh", price: "$400-$460", description: "Complete Clean plus interior shampoo, door jambs, steam cleaning" }
+];
+---
+
+<BaseLayout title={title} description={description} currentPage="/mobile-car-detailing-dania-beach/" schema={schemas}>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Mobile Car Detailing Dania Beach</h1>
+      <p class="text-xl text-gray-200 max-w-3xl mb-8">
+        Professional mobile car detailing that comes to your home or office in Dania Beach. Route95 brings premium products, equipment, and expert care directly to your location — no need to drive anywhere.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="tel:+17542152272" class="btn-accent text-lg flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call 754-215-2272
+        </a>
+        <a href={`${base}contact/`} class="bg-white text-[#0f2a4a] px-6 py-3 rounded-md font-semibold text-center hover:bg-gray-100 transition-colors">
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 space-y-8">
+          <section>
+            <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Car Detailing Services in Dania Beach, FL</h2>
+            <p class="text-gray-600 mb-4">
+              Living near the coast in Dania Beach means your car deals with salt air, humidity, and intense Florida sun every day. These elements attack your paint, fade your interior, and cause premature aging. That's exactly why regular professional detailing matters here more than almost anywhere else.
+            </p>
+            <p class="text-gray-600 mb-4">
+              Route95 Mobile Car Detailing serves all of Dania Beach — from neighborhoods near Dania Beach Boulevard and the Dania Pointe area to homes along the Intracoastal and east of US-1. We bring everything we need: water, power, and professional-grade products from Chemical Guys, Koch-Chemie, and 3D.
+            </p>
+            <p class="text-gray-600">
+              Whether you're at home, at work, or even at the <a href={`${base}fleet-detailing-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">marina with a fleet</a>, we come to you. No more driving to a car wash and waiting around.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Our Detailing Packages</h2>
+            <div class="space-y-4">
+              {packages.map(pkg => (
+                <div class="bg-gray-50 rounded-lg p-4">
+                  <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-[#0f2a4a]">{pkg.name}</h3>
+                    <span class="text-[#0f2a4a] font-semibold">{pkg.price}</span>
+                  </div>
+                  <p class="text-gray-600 text-sm">{pkg.description}</p>
+                </div>
+              ))}
+            </div>
+            <p class="mt-4 text-gray-600">
+              Prices vary by vehicle size. <a href={`${base}mobile-car-detailing-prices-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">See full pricing details</a>.
+            </p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section>
+            <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Dania Beach Car Detailing FAQ</h2>
+            <div class="space-y-4">
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h3 class="font-bold text-[#0f2a4a] mb-2">How much does mobile car detailing cost in Dania Beach?</h3>
+                <p class="text-gray-600">Mobile car detailing in Dania Beach starts at $50 for a Quick Wash and ranges up to $460 for a Premium Refresh, depending on vehicle size and package selected. Call 754-215-2272 for an exact quote.</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h3 class="font-bold text-[#0f2a4a] mb-2">Do you serve all of Dania Beach?</h3>
+                <p class="text-gray-600">Yes, we serve all of Dania Beach including areas near Dania Beach Boulevard, the Dania Pointe shopping area, Dania Beach Marina, and neighborhoods east and west of US-1. We also serve nearby Fort Lauderdale, Hollywood, and Pompano Beach.</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h3 class="font-bold text-[#0f2a4a] mb-2">Can I get same-day car detailing in Dania Beach?</h3>
+                <p class="text-gray-600">Yes! Same-day appointments are frequently available in Dania Beach. Call us in the morning and we can often be at your location that afternoon. We operate Monday through Saturday, 8 AM to 8 PM.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24 space-y-6">
+            <!-- Service Categories -->
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-[#0f2a4a] mb-4">Our Services</h3>
+              {services.map(service => (
+                <a href={service.href} class="block mb-4 last:mb-0 group">
+                  <h4 class="font-semibold text-[#0f2a4a] group-hover:text-[#c0c7cf] transition-colors">{service.title}</h4>
+                  <p class="text-gray-600 text-sm">{service.description}</p>
+                </a>
+              ))}
+            </div>
+
+            <!-- Popular Services -->
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-[#0f2a4a] mb-4">Popular Services</h3>
+              <ul class="space-y-2">
+                {popularServices.map(service => (
+                  <li><a href={service.href} class="text-gray-600 hover:text-[#c0c7cf]">{service.title}</a></li>
+                ))}
+              </ul>
+            </div>
+
+            <!-- CTA Card -->
+            <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
+              <h3 class="font-bold mb-4">Book in Dania Beach</h3>
+              <p class="text-gray-200 text-sm mb-4">
+                Same-day appointments available. We come to you with everything we need.
+              </p>
+              <a href="tel:+17542152272" class="btn-accent w-full flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                754-215-2272
+              </a>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="mt-3 bg-[#25D366] text-white w-full py-2 rounded-md font-semibold flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors">
+                WhatsApp Us
+              </a>
+            </div>
+
+            <!-- Other Service Areas -->
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-[#0f2a4a] mb-4">Other Service Areas</h3>
+              <ul class="space-y-2">
+                <li><a href={`${base}`} class="text-gray-600 hover:text-[#c0c7cf]">Fort Lauderdale</a></li>
+                <li><a href={`${base}mobile-car-detailing-hollywood-fl/`} class="text-gray-600 hover:text-[#c0c7cf]">Hollywood, FL</a></li>
+                <li><a href={`${base}mobile-car-detailing-pompano-beach/`} class="text-gray-600 hover:text-[#c0c7cf]">Pompano Beach</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-12 lg:py-16 bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready for Professional Detailing in Dania Beach?</h2>
+      <p class="text-xl text-gray-200 mb-8">
+        Stop settling for automatic car washes that scratch your paint. Route95 delivers showroom-quality results at your Dania Beach location. We use premium products and guarantee your satisfaction.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+17542152272" class="btn-accent text-lg flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call 754-215-2272
+        </a>
+        <a href={`${base}contact/`} class="bg-white text-[#0f2a4a] px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+          Request a Quote Online
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

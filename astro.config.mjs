@@ -64,6 +64,18 @@ export default defineConfig({
           item.priority = 0.6;
           item.changefreq = 'monthly';
         }
+        // Service area pages — high priority
+        else if (
+          item.url.includes('/mobile-car-detailing-dania-beach/') ||
+          item.url.includes('/mobile-car-detailing-hollywood-fl/') ||
+          item.url.includes('/mobile-car-detailing-pompano-beach/') ||
+          item.url.includes('/detallado-movil-dania-beach/') ||
+          item.url.includes('/detallado-movil-hollywood-fl/') ||
+          item.url.includes('/detallado-movil-pompano-beach/')
+        ) {
+          item.priority = 0.9;
+          item.changefreq = 'weekly';
+        }
         // About and Contact pages
         else if (
           item.url.includes('/about/') ||
