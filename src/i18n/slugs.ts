@@ -36,9 +36,12 @@ export const slugMap: Record<string, string> = {
   'blog': 'blog',
   'mobile-car-detailing-prices-fort-lauderdale': 'precios-detallado-movil-fort-lauderdale',
   'faq': 'preguntas-frecuentes',
-  'engine-bay-cleaning-fort-lauderdale': 'limpieza-de-motor-fort-lauderdale',
   'interior-car-detailing-fort-lauderdale': 'detallado-interior-fort-lauderdale',
   'fleet-detailing-fort-lauderdale': 'detallado-de-flotas-fort-lauderdale',
+  'areas': 'areas',
+  'mobile-car-detailing-dania-beach': 'detallado-movil-dania-beach',
+  'mobile-car-detailing-hollywood-fl': 'detallado-movil-hollywood-fl',
+  'mobile-car-detailing-pompano-beach': 'detallado-movil-pompano-beach',
 };
 
 // Reverse map: Spanish slug -> English slug

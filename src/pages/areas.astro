@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+const title = "Areas We Serve | Route95 Mobile Car Detailing";
+const description = "Route95 Mobile Car Detailing serves Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach in Broward County, FL. Professional mobile detailing at your location. Call 754-215-2272";
+
+const siteUrl = "https://route95mobilecardetailing.com";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/areas/#service`,
+  "name": "Mobile Car Detailing — Broward County",
+  "description": description,
+  "url": `${siteUrl}/areas/`,
+  "serviceType": "Mobile Car Detailing",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Fort Lauderdale",
+      "sameAs": "https://en.wikipedia.org/wiki/Fort_Lauderdale,_Florida",
+      "geo": { "@type": "GeoCoordinates", "latitude": 26.1224, "longitude": -80.1373 }
+    },
+    {
+      "@type": "City",
+      "name": "Dania Beach",
+      "sameAs": "https://en.wikipedia.org/wiki/Dania_Beach,_Florida",
+      "geo": { "@type": "GeoCoordinates", "latitude": 26.0523, "longitude": -80.1440 }
+    },
+    {
+      "@type": "City",
+      "name": "Hollywood",
+      "sameAs": "https://en.wikipedia.org/wiki/Hollywood,_Florida",
+      "geo": { "@type": "GeoCoordinates", "latitude": 26.0112, "longitude": -80.1495 }
+    },
+    {
+      "@type": "City",
+      "name": "Pompano Beach",
+      "sameAs": "https://en.wikipedia.org/wiki/Pompano_Beach,_Florida",
+      "geo": { "@type": "GeoCoordinates", "latitude": 26.2379, "longitude": -80.1248 }
+    }
+  ]
+};
+
+const cities = [
+  {
+    name: "Fort Lauderdale",
+    href: `${base}`,
+    description: "Our home base. We serve all Fort Lauderdale neighborhoods including Las Olas, Victoria Park, Flagler Village, Rio Vista, Coral Ridge, and more. Full range of detailing packages from Quick Wash to Premium Refresh.",
+    highlights: ["Home base location", "Same-day appointments", "All packages available"]
+  },
+  {
+    name: "Dania Beach",
+    href: `${base}mobile-car-detailing-dania-beach/`,
+    description: "Serving Dania Beach from Dania Beach Boulevard to the marina. Coastal salt air and humidity make regular detailing essential to protect your vehicle's paint and interior near the Intracoastal.",
+    highlights: ["Coastal salt protection", "Near FLL Airport", "Dania Pointe area"]
+  },
+  {
+    name: "Hollywood, FL",
+    href: `${base}mobile-car-detailing-hollywood-fl/`,
+    description: "Mobile detailing across Hollywood — from Hollywood Beach and the Broadwalk to Emerald Hills and Hollywood Hills. We protect your car from beachside salt exposure and intense Florida sun.",
+    highlights: ["Beach & inland coverage", "Broadwalk area", "Emerald Hills"]
+  },
+  {
+    name: "Pompano Beach",
+    href: `${base}mobile-car-detailing-pompano-beach/`,
+    description: "Professional detailing in Pompano Beach including Palm Aire, Cypress Bend, and areas near the Pompano Beach Pier. Harbor-area vehicles benefit from our salt removal and paint protection services.",
+    highlights: ["Harbor salt removal", "Palm Aire area", "Near Lighthouse Point"]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} currentPage="/areas/" schema={serviceSchema}>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Areas We Serve</h1>
+      <p class="text-xl text-gray-200 max-w-3xl mb-8">
+        Route95 Mobile Car Detailing brings professional auto detailing directly to your location across Broward County, Florida. We serve Fort Lauderdale and surrounding cities with premium products from Chemical Guys, Koch-Chemie &amp; 3D.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="tel:+17542152272" class="btn-accent text-lg flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call 754-215-2272
+        </a>
+        <a href={`${base}contact/`} class="bg-white text-[#0f2a4a] px-6 py-3 rounded-md font-semibold text-center hover:bg-gray-100 transition-colors">
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- City Cards -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-[#0f2a4a] mb-4 text-center">Mobile Car Detailing Across Broward County</h2>
+      <p class="text-gray-600 text-center max-w-3xl mx-auto mb-10">
+        We bring everything we need — water, power, and professional-grade equipment — directly to your home, office, or any location in these cities. No need to drive anywhere.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {cities.map(city => (
+          <a href={city.href} class="group block bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-[#0f2a4a] transition-all">
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-3 group-hover:text-[#1a5ca0] transition-colors">{city.name}</h3>
+            <p class="text-gray-600 mb-4">{city.description}</p>
+            <ul class="flex flex-wrap gap-2">
+              {city.highlights.map(h => (
+                <li class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">{h}</li>
+              ))}
+            </ul>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Route95 -->
+  <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-[#0f2a4a] mb-8 text-center">Why Broward County Chooses Route95</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-2">We Come to You</h3>
+          <p class="text-gray-600">No more waiting at car washes. We bring water, power, and premium equipment to your driveway, parking garage, or office parking lot.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-2">Florida-Specific Care</h3>
+          <p class="text-gray-600">Broward County's coastal climate is tough on vehicles. We specialize in removing salt deposits, protecting against UV damage, and fighting humidity-related issues.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-2">Premium Products Only</h3>
+          <p class="text-gray-600">We use professional-grade products from Chemical Guys, Koch-Chemie, and 3D — the same brands trusted by professional detailers and dealerships nationwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-12 lg:py-16 bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready for Professional Mobile Detailing?</h2>
+      <p class="text-xl text-gray-200 mb-8">
+        Wherever you are in Broward County, Route95 delivers showroom-quality results at your location. Same-day appointments often available. Call now or request a quote online.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+17542152272" class="btn-accent text-lg flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call 754-215-2272
+        </a>
+        <a href={`${base}contact/`} class="bg-white text-[#0f2a4a] px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+          Request a Quote Online
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

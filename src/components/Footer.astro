@@ -13,6 +13,7 @@ const currentYear = new Date().getFullYear();
 
 const aboutUrl = localizedUrl(locale, 'about');
 const contactUrl = localizedUrl(locale, 'contact');
+const base = import.meta.env.BASE_URL;
 ---
 
 <footer class="bg-[#0f2a4a] text-white">
@@ -49,12 +50,14 @@ const contactUrl = localizedUrl(locale, 'contact');
 
       <!-- Service Areas -->
       <div>
-        <h3 class="text-xl font-bold mb-4">{t.footer.serviceAreas}</h3>
-        <ul class="space-y-2 text-gray-200">
-          <li>Fort Lauderdale, FL</li>
-          <li>Dania Beach, FL</li>
-          <li>Hollywood, FL</li>
-          <li>Pompano Beach, FL</li>
+        <h3 class="text-xl font-bold mb-4">
+          <a href={localizedUrl(locale, 'areas')} class="hover:text-gray-200 transition-colors">{t.footer.serviceAreas}</a>
+        </h3>
+        <ul class="space-y-2">
+          <li><a href={locale === 'es' ? `${base}es/` : `${base}`} class="text-gray-200 hover:text-white transition-colors">Fort Lauderdale, FL</a></li>
+          <li><a href={localizedUrl(locale, 'mobile-car-detailing-dania-beach')} class="text-gray-200 hover:text-white transition-colors">Dania Beach, FL</a></li>
+          <li><a href={localizedUrl(locale, 'mobile-car-detailing-hollywood-fl')} class="text-gray-200 hover:text-white transition-colors">Hollywood, FL</a></li>
+          <li><a href={localizedUrl(locale, 'mobile-car-detailing-pompano-beach')} class="text-gray-200 hover:text-white transition-colors">Pompano Beach, FL</a></li>
         </ul>
       </div>
 
