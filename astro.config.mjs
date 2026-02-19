@@ -76,6 +76,14 @@ export default defineConfig({
           item.priority = 0.9;
           item.changefreq = 'weekly';
         }
+        // Areas hub pages
+        else if (
+          item.url.match(/\/areas\/$/) ||
+          item.url.match(/\/es\/areas\/$/)
+        ) {
+          item.priority = 0.7;
+          item.changefreq = 'monthly';
+        }
         // About and Contact pages
         else if (
           item.url.includes('/about/') ||

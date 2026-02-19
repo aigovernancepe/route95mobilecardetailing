@@ -38,6 +38,7 @@ export const slugMap: Record<string, string> = {
   'faq': 'preguntas-frecuentes',
   'interior-car-detailing-fort-lauderdale': 'detallado-interior-fort-lauderdale',
   'fleet-detailing-fort-lauderdale': 'detallado-de-flotas-fort-lauderdale',
+  'areas': 'areas',
   'mobile-car-detailing-dania-beach': 'detallado-movil-dania-beach',
   'mobile-car-detailing-hollywood-fl': 'detallado-movil-hollywood-fl',
   'mobile-car-detailing-pompano-beach': 'detallado-movil-pompano-beach',

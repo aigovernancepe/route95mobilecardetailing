@@ -24,7 +24,12 @@ const serviceSchema = {
   "areaServed": {
     "@type": "City",
     "name": "Hollywood",
-    "sameAs": "https://en.wikipedia.org/wiki/Hollywood,_Florida"
+    "sameAs": "https://en.wikipedia.org/wiki/Hollywood,_Florida",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 26.0112,
+      "longitude": -80.1495
+    }
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -168,6 +173,20 @@ const packages = [
                 <p class="text-gray-600">¡Sí! Citas el mismo día están frecuentemente disponibles. Llámanos en la mañana y frecuentemente podemos estar en tu ubicación esa misma tarde. Operamos de lunes a sábado, 8 AM a 8 PM.</p>
               </div>
             </div>
+          </section>
+
+          <!-- Sobre Hollywood, FL -->
+          <section>
+            <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Sobre Hollywood, FL</h2>
+            <p class="text-gray-600 mb-4">
+              Hollywood es la tercera ciudad más grande del condado de Broward, extendiéndose desde la costa atlántica hasta los suburbios occidentales. La ciudad es más conocida por el <strong>Hollywood Beach Broadwalk</strong>, un paseo marítimo de 2.5 millas a lo largo del océano que atrae visitantes todo el año. Para los dueños de autos, eso significa exposición al rocío salado, arena y rayos UV intensos en los estacionamientos de la playa.
+            </p>
+            <p class="text-gray-600 mb-4">
+              Vecindarios del interior como <strong>Emerald Hills</strong>, <strong>Hollywood Hills</strong>, <strong>Parkside</strong> y <strong>Hollywood Lakes</strong> experimentan la humedad de Florida y ciclos frecuentes de lluvia que dejan manchas de agua y promueven el crecimiento de moho en interiores de vehículos. Nuestro <a href={localizedUrl('es', 'interior-car-detailing-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">detallado interior</a> y <a href={localizedUrl('es', 'steam-cleaning-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">limpieza a vapor</a> abordan estos problemas efectivamente.
+            </p>
+            <p class="text-gray-600">
+              Desde la escena artística en <strong>ArtsPark at Young Circle</strong> en Downtown Hollywood hasta la recreación al aire libre en el <strong>Parque Topeekeegee Yugnee (T.Y.)</strong>, los residentes de Hollywood son activos y están en movimiento. Ya sea que vivas cerca del Broadwalk, viajes de Hollywood a Fort Lauderdale, o estaciones en un condominio de gran altura cerca de Aventura, Route95 lleva el detallado profesional a tu ubicación.
+            </p>
           </section>
         </div>
 

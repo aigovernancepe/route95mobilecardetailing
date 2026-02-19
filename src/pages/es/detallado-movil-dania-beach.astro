@@ -24,7 +24,12 @@ const serviceSchema = {
   "areaServed": {
     "@type": "City",
     "name": "Dania Beach",
-    "sameAs": "https://en.wikipedia.org/wiki/Dania_Beach,_Florida"
+    "sameAs": "https://en.wikipedia.org/wiki/Dania_Beach,_Florida",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 26.0523,
+      "longitude": -80.1440
+    }
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -168,6 +173,20 @@ const packages = [
                 <p class="text-gray-600">¡Sí! Citas el mismo día están frecuentemente disponibles. Llámanos en la mañana y frecuentemente podemos estar en tu ubicación esa misma tarde. Operamos de lunes a sábado, 8 AM a 8 PM.</p>
               </div>
             </div>
+          </section>
+
+          <!-- Sobre Dania Beach -->
+          <section>
+            <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Sobre Dania Beach, FL</h2>
+            <p class="text-gray-600 mb-4">
+              Dania Beach es una de las ciudades más antiguas del condado de Broward, ubicada entre Fort Lauderdale y Hollywood a lo largo de la costa. Conocida por su cercanía al Aeropuerto Internacional Fort Lauderdale-Hollywood (FLL), la ciudad atrae una mezcla de residentes, viajeros y trabajadores — cuyos vehículos sufren por el ambiente costero.
+            </p>
+            <p class="text-gray-600 mb-4">
+              Vecindarios como <strong>Dania Isles</strong>, <strong>Dania Cove</strong> y <strong>Melaleuca Gardens</strong> están cerca del Intracoastal Waterway, donde el aire salado acelera la oxidación de la pintura y causa manchas de agua que el lavado regular no puede eliminar. Nuestro <a href={localizedUrl('es', 'clay-bar-treatment-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">tratamiento de barra de arcilla</a> y <a href={localizedUrl('es', 'car-waxing-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">servicio de encerado</a> son especialmente populares entre los residentes de Dania Beach por esta razón.
+            </p>
+            <p class="text-gray-600">
+              Puntos de referencia locales como el <strong>Muelle de Dania Beach</strong>, el <strong>IGFA Fishing Hall of Fame &amp; Museum</strong> y la histórica instalación de <strong>Dania Jai-Alai</strong> reflejan el carácter de la ciudad. Ya sea que estés estacionado en Dania Pointe de compras o en la marina después de un día en el agua, Route95 va a donde estés — tu entrada, tu estacionamiento o tu condominio.
+            </p>
           </section>
         </div>
 

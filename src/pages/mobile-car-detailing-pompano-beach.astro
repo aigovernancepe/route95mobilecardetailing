@@ -23,7 +23,12 @@ const serviceSchema = {
   "areaServed": {
     "@type": "City",
     "name": "Pompano Beach",
-    "sameAs": "https://en.wikipedia.org/wiki/Pompano_Beach,_Florida"
+    "sameAs": "https://en.wikipedia.org/wiki/Pompano_Beach,_Florida",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 26.2379,
+      "longitude": -80.1248
+    }
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -167,6 +172,20 @@ const packages = [
                 <p class="text-gray-600">Yes! Same-day appointments are frequently available in Pompano Beach. Call us in the morning and we can often be at your location that afternoon. We operate Monday through Saturday, 8 AM to 8 PM.</p>
               </div>
             </div>
+          </section>
+
+          <!-- About Pompano Beach -->
+          <section>
+            <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">About Pompano Beach, FL</h2>
+            <p class="text-gray-600 mb-4">
+              Pompano Beach sits at the northern edge of the Fort Lauderdale metro area and is known for its fishing heritage, beach culture, and growing residential communities. The <strong>Pompano Beach Pier</strong> anchors the oceanfront, while the city's commercial fishing fleet at the <strong>Hillsboro Inlet</strong> harbor keeps the maritime economy alive — and salt in the air.
+            </p>
+            <p class="text-gray-600 mb-4">
+              Popular neighborhoods like <strong>Palm Aire</strong>, <strong>Cypress Bend</strong>, <strong>Cresthaven</strong>, and <strong>Highlands</strong> each have their own vehicle care challenges. Golf course communities in Palm Aire deal with fertilizer residue and tree sap. Coastal homes near the pier face constant salt exposure. Our <a href={`${base}water-spot-removal-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">water spot removal</a> and <a href={`${base}bug-and-tar-removal-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">bug and tar removal</a> services handle these local conditions.
+            </p>
+            <p class="text-gray-600">
+              The iconic <strong>Hillsboro Inlet Lighthouse</strong>, the historic <strong>Sample-McDougald House</strong>, and Pompano Beach's proximity to <strong>Lighthouse Point</strong> make this a vibrant community with deep local roots. Route95 services the entire Pompano Beach area — from harbor-side parking to suburban driveways.
+            </p>
           </section>
         </div>
 

@@ -24,7 +24,12 @@ const serviceSchema = {
   "areaServed": {
     "@type": "City",
     "name": "Pompano Beach",
-    "sameAs": "https://en.wikipedia.org/wiki/Pompano_Beach,_Florida"
+    "sameAs": "https://en.wikipedia.org/wiki/Pompano_Beach,_Florida",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 26.2379,
+      "longitude": -80.1248
+    }
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -168,6 +173,20 @@ const packages = [
                 <p class="text-gray-600">¡Sí! Citas el mismo día están frecuentemente disponibles. Llámanos en la mañana y frecuentemente podemos estar en tu ubicación esa misma tarde. Operamos de lunes a sábado, 8 AM a 8 PM.</p>
               </div>
             </div>
+          </section>
+
+          <!-- Sobre Pompano Beach -->
+          <section>
+            <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Sobre Pompano Beach, FL</h2>
+            <p class="text-gray-600 mb-4">
+              Pompano Beach se encuentra en el extremo norte del área metropolitana de Fort Lauderdale y es conocida por su herencia pesquera, cultura de playa y comunidades residenciales en crecimiento. El <strong>Muelle de Pompano Beach</strong> ancla el frente oceánico, mientras que la flota pesquera comercial en el puerto del <strong>Hillsboro Inlet</strong> mantiene viva la economía marítima — y la sal en el aire.
+            </p>
+            <p class="text-gray-600 mb-4">
+              Vecindarios populares como <strong>Palm Aire</strong>, <strong>Cypress Bend</strong>, <strong>Cresthaven</strong> y <strong>Highlands</strong> tienen cada uno sus propios desafíos de cuidado vehicular. Las comunidades de campos de golf en Palm Aire lidian con residuos de fertilizante y savia de árboles. Los hogares costeros cerca del muelle enfrentan exposición constante a la sal. Nuestros servicios de <a href={localizedUrl('es', 'water-spot-removal-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">eliminación de manchas de agua</a> y <a href={localizedUrl('es', 'bug-and-tar-removal-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">eliminación de insectos y alquitrán</a> manejan estas condiciones locales.
+            </p>
+            <p class="text-gray-600">
+              El icónico <strong>Faro de Hillsboro Inlet</strong>, la histórica <strong>Casa Sample-McDougald</strong> y la cercanía de Pompano Beach a <strong>Lighthouse Point</strong> hacen de esta una comunidad vibrante con profundas raíces locales. Route95 da servicio a toda el área de Pompano Beach — desde estacionamientos junto al puerto hasta entradas de casas suburbanas.
+            </p>
           </section>
         </div>
 
