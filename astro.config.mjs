@@ -106,6 +106,10 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+  redirects: {
+    '/chrome-polishing-fort-lauderdale/': '/car-wash-fort-lauderdale/',
+    '/es/pulido-de-cromo-fort-lauderdale/': '/es/lavado-de-autos-fort-lauderdale/',
+  },
   vite: {
     plugins: [tailwindcss()]
   }
