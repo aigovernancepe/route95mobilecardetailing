@@ -13,9 +13,10 @@ interface Props {
   description: string;
   currentPage?: string;
   schema?: object | object[];
+  preloadImages?: string[];
 }
 
-const { title, description, currentPage = '', schema } = Astro.props;
+const { title, description, currentPage = '', schema, preloadImages = [] } = Astro.props;
 const locale = (Astro.currentLocale ?? 'en') as Locale;
 const t = getTranslations(locale);
 
@@ -186,6 +187,12 @@ const organizationSchema = {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content={description}>
   <meta name="robots" content="index, follow">
+
+  <!-- Preload critical images -->
+  <link rel="preload" as="image" type="image/webp" href="/logo-transparent-mobile.webp" fetchpriority="high" />
+  {preloadImages.map(src => (
+    <link rel="preload" as="image" href={src} fetchpriority="high" />
+  ))}
 
   <!-- Google Fonts: preconnect + non-blocking load -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
