@@ -17,16 +17,19 @@ const contactPageSchema = {
   }
 };
 
-const services = [
-  "Hand Wash",
-  "Full Detail",
-  "Interior Cleaning",
-  "Leather Cleaning & Conditioning",
-  "Odor Removal",
-  "Pet Hair Removal",
-  "Headlight Restoration",
-  "Paint Protection",
-  "Other"
+const serviceGroups = [
+  {
+    label: "Car Wash Services",
+    services: ["Hand Wash", "Car Waxing", "Clay Bar Treatment", "Wheel Cleaning", "Water Spot Removal", "Trim Restoration", "Engine Bay Cleaning"],
+  },
+  {
+    label: "Upholstery Cleaning",
+    services: ["Seat Shampooing", "Carpet Shampooing", "Leather Cleaning", "Leather Conditioning", "Steam Cleaning", "Odor Removal"],
+  },
+  {
+    label: "Detailing Packages",
+    services: ["Quick Wash", "Fresh Start", "Complete Clean", "Premium Refresh"],
+  },
 ];
 ---
 
@@ -93,9 +96,14 @@ const services = [
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#c0c7cf] focus:border-transparent outline-none transition-all bg-white"
               >
                 <option value="">Select a service</option>
-                {services.map(service => (
-                  <option value={service}>{service}</option>
+                {serviceGroups.map(group => (
+                  <optgroup label={group.label}>
+                    {group.services.map(service => (
+                      <option value={service}>{service}</option>
+                    ))}
+                  </optgroup>
                 ))}
+                <option value="Other">Other</option>
               </select>
             </div>
 
