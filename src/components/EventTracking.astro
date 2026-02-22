@@ -1,0 +1,386 @@
+---
+// GA4 Key Event Tracking
+// Fires custom gtag events after analytics consent is granted.
+// All events are sent only when window.gtag is available.
+---
+
+<script>
+  function initEventTracking() {
+    if (!window.gtag) return;
+
+    // Helper: safe gtag call
+    function track(eventName: string, params: Record<string, string>) {
+      if (window.gtag) {
+        window.gtag('event', eventName, params);
+      }
+    }
+
+    // Helper: determine page type from pathname
+    function getPageType(): string {
+      const path = window.location.pathname;
+      if (path === '/' || path === '/es/') return 'homepage';
+      if (path.includes('/contact') || path.includes('/contacto')) return 'contact';
+      if (path.includes('/blog/')) return 'blog_post';
+      if (path.includes('/blog') || path.includes('/es/blog')) return 'blog_listing';
+      if (path.includes('/faq') || path.includes('/preguntas-frecuentes')) return 'faq';
+      if (path.includes('/prices') || path.includes('/precios')) return 'pricing';
+      if (path.includes('/about') || path.includes('/nosotros')) return 'about';
+      if (path.includes('/areas')) return 'areas';
+      if (path.includes('/dania-beach') || path.includes('/hollywood') || path.includes('/pompano-beach')) return 'city';
+      if (path.includes('/car-wash') || path.includes('/lavado')) return 'service';
+      if (path.includes('/upholstery') || path.includes('/tapiceria') || path.includes('/limpieza')) return 'service';
+      if (path.includes('/detailing') || path.includes('/detallado')) return 'service';
+      if (path.includes('/fort-lauderdale')) return 'service';
+      return 'other';
+    }
+
+    // Helper: get closest meaningful link text
+    function getLinkLabel(el: HTMLElement): string {
+      return (el.textContent || '').trim().substring(0, 50);
+    }
+
+    // Helper: determine CTA location from element position
+    function getCtaLocation(el: HTMLElement): string {
+      const header = el.closest('header');
+      if (header) return 'header';
+
+      const footer = el.closest('footer');
+      if (footer) return 'footer';
+
+      const section = el.closest('section');
+      if (section) {
+        const allSections = document.querySelectorAll('main section');
+        const idx = Array.from(allSections).indexOf(section);
+        if (idx === 0) return 'hero';
+        if (idx === allSections.length - 1) return 'final_cta';
+        return 'body';
+      }
+
+      // Sidebar / aside
+      if (el.closest('aside') || el.closest('[class*="sidebar"]')) return 'sidebar';
+
+      return 'page';
+    }
+
+    const pageType = getPageType();
+    const pagePath = window.location.pathname;
+
+    // ------------------------------------------------------------------
+    // 1. Form submissions: generate_lead + form_submission
+    // ------------------------------------------------------------------
+    const quoteForm = document.getElementById('quote-form');
+    if (quoteForm) {
+      quoteForm.addEventListener('submit', () => {
+        const service = (document.getElementById('service') as HTMLSelectElement)?.value || '';
+        track('generate_lead', {
+          event_category: 'form',
+          event_label: 'quote_form',
+          form_id: 'quote-form',
+          page_type: pageType,
+          service_selected: service
+        });
+        track('form_submission', {
+          event_category: 'form',
+          event_label: 'quote_form',
+          form_id: 'quote-form',
+          page_type: pageType,
+          service_selected: service
+        });
+      });
+    }
+
+    // ------------------------------------------------------------------
+    // 2. Phone call clicks: phone_call_click
+    // ------------------------------------------------------------------
+    document.querySelectorAll('a[href^="tel:"]').forEach(el => {
+      el.addEventListener('click', () => {
+        track('phone_call_click', {
+          event_category: 'contact',
+          event_label: getLinkLabel(el as HTMLElement),
+          link_url: (el as HTMLAnchorElement).href,
+          click_location: getCtaLocation(el as HTMLElement),
+          page_type: pageType
+        });
+      });
+    });
+
+    // ------------------------------------------------------------------
+    // 3. CTA button clicks: cta_click
+    //    Hero CTAs, final CTAs, service/city/blog page CTAs
+    // ------------------------------------------------------------------
+    // btn-accent = primary CTA buttons (phone, quote)
+    document.querySelectorAll('.btn-accent').forEach(el => {
+      el.addEventListener('click', () => {
+        track('cta_click', {
+          event_category: 'cta',
+          event_label: getLinkLabel(el as HTMLElement),
+          click_location: getCtaLocation(el as HTMLElement),
+          page_type: pageType,
+          cta_type: 'primary'
+        });
+      });
+    });
+
+    // WhatsApp CTA buttons (green bg, not the floating one)
+    document.querySelectorAll('a[href*="wa.me"]:not(.whatsapp-float)').forEach(el => {
+      el.addEventListener('click', () => {
+        track('cta_click', {
+          event_category: 'cta',
+          event_label: 'whatsapp_cta',
+          click_location: getCtaLocation(el as HTMLElement),
+          page_type: pageType,
+          cta_type: 'whatsapp'
+        });
+      });
+    });
+
+    // "Get a Free Quote" / "Request a Quote" links to contact page
+    document.querySelectorAll('a[href*="contact"], a[href*="contacto"]').forEach(el => {
+      const anchor = el as HTMLAnchorElement;
+      // Only track if it's a CTA-style link (not nav links)
+      if (anchor.closest('nav') && !anchor.classList.contains('btn-accent')) return;
+      if (anchor.closest('header') || anchor.closest('footer')) return;
+      el.addEventListener('click', () => {
+        track('cta_click', {
+          event_category: 'cta',
+          event_label: getLinkLabel(el as HTMLElement),
+          click_location: getCtaLocation(el as HTMLElement),
+          page_type: pageType,
+          cta_type: 'quote_link'
+        });
+      });
+    });
+
+    // ------------------------------------------------------------------
+    // 4. Email clicks: email_click
+    // ------------------------------------------------------------------
+    document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+      el.addEventListener('click', () => {
+        track('email_click', {
+          event_category: 'contact',
+          event_label: (el as HTMLAnchorElement).href.replace('mailto:', ''),
+          click_location: getCtaLocation(el as HTMLElement),
+          page_type: pageType
+        });
+      });
+    });
+
+    // ------------------------------------------------------------------
+    // 5. Service engagement: service_click
+    //    Service cards, service listings, child services
+    // ------------------------------------------------------------------
+    document.querySelectorAll('.service-card').forEach(el => {
+      el.addEventListener('click', () => {
+        const anchor = el.closest('a') || el.querySelector('a') || el;
+        const href = (anchor as HTMLAnchorElement).href || '';
+        track('service_click', {
+          event_category: 'engagement',
+          event_label: getLinkLabel(el as HTMLElement),
+          link_url: href,
+          click_location: getCtaLocation(el as HTMLElement),
+          page_type: pageType,
+          content_type: 'service_card'
+        });
+      });
+    });
+
+    // Child service links in nav dropdowns
+    document.querySelectorAll('header .group a[href*="fort-lauderdale"]').forEach(el => {
+      el.addEventListener('click', () => {
+        track('service_click', {
+          event_category: 'engagement',
+          event_label: getLinkLabel(el as HTMLElement),
+          link_url: (el as HTMLAnchorElement).href,
+          click_location: 'header_dropdown',
+          page_type: pageType,
+          content_type: 'nav_service'
+        });
+      });
+    });
+
+    // ------------------------------------------------------------------
+    // 6. FAQ interactions: faq_open
+    //    Homepage FAQ accordion / service page <details> elements
+    // ------------------------------------------------------------------
+    document.querySelectorAll('details').forEach(el => {
+      el.addEventListener('toggle', () => {
+        const details = el as HTMLDetailsElement;
+        if (details.open) {
+          const summary = details.querySelector('summary');
+          track('faq_open', {
+            event_category: 'engagement',
+            event_label: summary ? getLinkLabel(summary) : 'unknown',
+            page_type: pageType
+          });
+        }
+      });
+    });
+
+    // ------------------------------------------------------------------
+    // 7. Scroll depth: scroll_depth
+    //    25%, 50%, 75%, 100% milestones
+    // ------------------------------------------------------------------
+    const scrollMilestones = new Set<string>();
+    const thresholds = [25, 50, 75, 100];
+
+    function checkScrollDepth() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      const percent = Math.round((scrollTop / docHeight) * 100);
+
+      for (const t of thresholds) {
+        const key = String(t);
+        if (percent >= t && !scrollMilestones.has(key)) {
+          scrollMilestones.add(key);
+          track('scroll_depth', {
+            event_category: 'engagement',
+            event_label: `${t}%`,
+            page_type: pageType,
+            percent_scrolled: key
+          });
+        }
+      }
+    }
+
+    let scrollTimer: ReturnType<typeof setTimeout>;
+    window.addEventListener('scroll', () => {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(checkScrollDepth, 150);
+    }, { passive: true });
+
+    // ------------------------------------------------------------------
+    // 8. Outbound links: outbound_click
+    //    Any external link (not route95mobilecardetailing.com)
+    // ------------------------------------------------------------------
+    document.querySelectorAll('a[href^="http"]').forEach(el => {
+      const anchor = el as HTMLAnchorElement;
+      try {
+        const url = new URL(anchor.href);
+        if (url.hostname && !url.hostname.includes('route95mobilecardetailing.com') && !url.hostname.includes('wa.me')) {
+          el.addEventListener('click', () => {
+            track('outbound_click', {
+              event_category: 'outbound',
+              event_label: url.hostname,
+              link_url: anchor.href,
+              click_location: getCtaLocation(el as HTMLElement),
+              page_type: pageType
+            });
+          });
+        }
+      } catch {
+        // invalid URL, skip
+      }
+    });
+
+    // ------------------------------------------------------------------
+    // 9. Language toggle: language_toggle
+    // ------------------------------------------------------------------
+    document.querySelectorAll('a[aria-label*="Switch to"], a[aria-label*="Cambiar a"]').forEach(el => {
+      el.addEventListener('click', () => {
+        const anchor = el as HTMLAnchorElement;
+        const targetLang = anchor.href.includes('/es/') ? 'es' : 'en';
+        track('language_toggle', {
+          event_category: 'engagement',
+          event_label: `switch_to_${targetLang}`,
+          page_type: pageType,
+          target_language: targetLang
+        });
+      });
+    });
+
+    // ------------------------------------------------------------------
+    // 10. Floating CTA button: floating_cta_click
+    //     Mobile floating WhatsApp button
+    // ------------------------------------------------------------------
+    const floatingBtn = document.querySelector('.whatsapp-float');
+    if (floatingBtn) {
+      floatingBtn.addEventListener('click', () => {
+        track('floating_cta_click', {
+          event_category: 'cta',
+          event_label: 'whatsapp_float',
+          page_type: pageType,
+          page_path: pagePath
+        });
+      });
+    }
+
+    // ------------------------------------------------------------------
+    // 11. Area/city clicks: area_click
+    //     City links across all pages
+    // ------------------------------------------------------------------
+    const cityPatterns = ['dania-beach', 'hollywood', 'pompano-beach', '/areas'];
+    const cityPatternsEs = ['playa-dania', '/es/areas'];
+
+    document.querySelectorAll('a[href]').forEach(el => {
+      const anchor = el as HTMLAnchorElement;
+      const href = anchor.getAttribute('href') || '';
+      const isCity = [...cityPatterns, ...cityPatternsEs].some(p => href.includes(p));
+
+      if (isCity) {
+        el.addEventListener('click', () => {
+          // Extract city name from link text or href
+          const cityName = getLinkLabel(el as HTMLElement) || href;
+          track('area_click', {
+            event_category: 'engagement',
+            event_label: cityName,
+            link_url: anchor.href,
+            click_location: getCtaLocation(el as HTMLElement),
+            page_type: pageType
+          });
+        });
+      }
+    });
+
+    // ------------------------------------------------------------------
+    // 12. Blog clicks: blog_click
+    //     Blog post links on listing page
+    // ------------------------------------------------------------------
+    document.querySelectorAll('a[href*="/blog/"]').forEach(el => {
+      const anchor = el as HTMLAnchorElement;
+      // Skip nav links to blog listing
+      if (anchor.pathname === '/blog/' || anchor.pathname === '/es/blog/') return;
+
+      el.addEventListener('click', () => {
+        track('blog_click', {
+          event_category: 'engagement',
+          event_label: getLinkLabel(el as HTMLElement),
+          link_url: anchor.href,
+          click_location: getCtaLocation(el as HTMLElement),
+          page_type: pageType
+        });
+      });
+    });
+
+    // ------------------------------------------------------------------
+    // 13. Custom pageview: page_view_custom
+    //     Enhanced pageview with page type, language, path
+    // ------------------------------------------------------------------
+    const lang = document.documentElement.lang || 'en';
+    track('page_view_custom', {
+      event_category: 'pageview',
+      event_label: document.title,
+      page_type: pageType,
+      page_path: pagePath,
+      page_language: lang
+    });
+  }
+
+  // Initialize tracking when analytics is ready
+  if (window.gtag) {
+    initEventTracking();
+  } else {
+    // Analytics loads after cookie consent — listen for it
+    window.addEventListener('cookieConsentGranted', () => {
+      // Small delay to let gtag initialize
+      setTimeout(initEventTracking, 500);
+    });
+  }
+
+  // Also handle Astro view transitions (SPA navigation)
+  document.addEventListener('astro:page-load', () => {
+    if (window.gtag) {
+      initEventTracking();
+    }
+  });
+</script>
