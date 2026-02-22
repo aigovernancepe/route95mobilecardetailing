@@ -56,7 +56,14 @@ const faqUrl = localizedUrl(locale, 'faq');
     <div class="flex justify-between items-center">
       <!-- Logo -->
       <a href={homeUrl} class="flex items-center gap-2">
-        <img src={`${base}logo-transparent.png`} alt="Route95 Mobile Car Detailing" class="h-20 w-auto" width="400" height="293" loading="eager" fetchpriority="high" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset={`${base}logo-transparent-mobile.webp 218w, ${base}logo-transparent-medium.webp 328w, ${base}logo-transparent.webp 400w`}
+            sizes="(max-width: 768px) 218px, 328px"
+          />
+          <img src={`${base}logo-transparent.png`} alt="Route95 Mobile Car Detailing" class="h-20 w-auto" width="400" height="293" loading="eager" fetchpriority="high" />
+        </picture>
       </a>
 
       <!-- Desktop Navigation -->

@@ -58,11 +58,11 @@ const websiteSchema = {
 };
 ---
 
-<BaseLayout title={title} description={description} currentPage="/" schema={websiteSchema}>
+<BaseLayout title={title} description={description} currentPage="/" schema={websiteSchema} preloadImages={['/route95_hero_background_wide.webp']}>
   <!-- Hero Section -->
   <section class="relative text-white py-20 lg:py-32 overflow-hidden" style="background: linear-gradient(135deg, rgba(12,36,72,0.85), rgba(30,80,160,0.7), rgba(15,50,100,0.8)), url('/route95_hero_background_wide.webp') center/cover no-repeat; background-color: #0c2448;">
-    <!-- Water drops overlay -->
-    <div class="absolute inset-0 pointer-events-none" style="background: url('/water-drops-overlay.webp') center/cover no-repeat; z-index: 1;"></div>
+    <!-- Water drops overlay (deferred for performance) -->
+    <div id="water-drops-overlay" class="absolute inset-0 pointer-events-none" style="z-index: 1;"></div>
     <div class="max-w-7xl mx-auto px-4">
       <div class="max-w-3xl">
         <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
@@ -285,4 +285,15 @@ const websiteSchema = {
       </p>
     </div>
   </section>
+  <script>
+    // Defer loading of decorative water drops overlay
+    const overlay = document.getElementById('water-drops-overlay');
+    if (overlay) {
+      const img = new Image();
+      img.onload = () => {
+        overlay.style.background = "url('/water-drops-overlay.webp') center/cover no-repeat";
+      };
+      img.src = '/water-drops-overlay.webp';
+    }
+  </script>
 </BaseLayout>
