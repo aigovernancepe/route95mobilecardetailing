@@ -17,6 +17,12 @@ pnpm-debug.log*
 .env
 .env.production
 
+# service account keys (NEVER commit these)
+*-credentials.json
+service-account*.json
+gsc-*.json
+*.p12
+
 # macOS-specific files
 .DS_Store
 
