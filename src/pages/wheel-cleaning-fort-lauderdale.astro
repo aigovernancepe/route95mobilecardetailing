@@ -20,6 +20,15 @@ const serviceSchema = {
   "alternateName": "Rim Cleaner Fort Lauderdale",
   "description": description,
   "url": `${siteUrl}/wheel-cleaning-fort-lauderdale/`,
+  "image": {
+    "@type": "ImageObject",
+    "url": `${siteUrl}/route95-wheel-rim-cleaning-fort-lauderdale.webp`,
+    "contentUrl": `${siteUrl}/route95-wheel-rim-cleaning-fort-lauderdale.webp`,
+    "name": "Professional wheel and rim cleaning service by Route95 Mobile Car Detailing in Fort Lauderdale",
+    "description": "A Route95 technician uses pH-balanced foaming wheel cleaner to hand-scrub brake dust and road grime from an alloy rim during a mobile detailing appointment in Fort Lauderdale, Florida.",
+    "width": 800,
+    "height": 970
+  },
   "serviceType": "Wheel and Rim Cleaning",
   "category": "Mobile Car Detailing",
   "provider": { "@id": `${siteUrl}/#business` },
@@ -190,6 +199,31 @@ const schemas = [serviceSchema, faqSchema];
           </div>
         </div>
       </section>
+
+      <figure class="my-2" itemscope itemtype="https://schema.org/ImageObject">
+        <picture>
+          <source
+            type="image/webp"
+            srcset={`${base}route95-wheel-rim-cleaning-fort-lauderdale.webp`}
+          />
+          <img
+            src={`${base}route95-wheel-rim-cleaning-fort-lauderdale.jpg`}
+            alt="Route95 technician hand-scrubbing brake dust off an alloy rim with foaming wheel cleaner during a mobile wheel cleaning service in Fort Lauderdale"
+            title="Professional Wheel and Rim Cleaning – Route95 Mobile Car Detailing Fort Lauderdale"
+            width="800"
+            height="970"
+            loading="lazy"
+            decoding="async"
+            class="w-full rounded-xl object-cover"
+            itemprop="contentUrl"
+          />
+        </picture>
+        <figcaption class="text-sm text-gray-500 mt-2 text-center" itemprop="caption">
+          Route95 Mobile Car Detailing technician performing professional wheel and rim cleaning on location in Fort Lauderdale, FL.
+        </figcaption>
+        <meta itemprop="name" content="Professional wheel and rim cleaning service by Route95 Mobile Car Detailing in Fort Lauderdale" />
+        <meta itemprop="description" content="A Route95 technician uses pH-balanced foaming wheel cleaner to hand-scrub brake dust and road grime from an alloy rim during a mobile detailing appointment in Fort Lauderdale, Florida." />
+      </figure>
 
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Our Wheel & Rim Cleaning Process</h2>
