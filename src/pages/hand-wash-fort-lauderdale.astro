@@ -12,6 +12,8 @@ const parentCategory = {
 };
 
 const siteUrl = "https://route95mobilecardetailing.com";
+const handWashImageUrl = `${siteUrl}/route95-hand-wash-fort-lauderdale-microfiber-mitt.webp`;
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -19,6 +21,7 @@ const serviceSchema = {
   "name": "Hand Wash Fort Lauderdale",
   "description": description,
   "url": `${siteUrl}/hand-wash-fort-lauderdale/`,
+  "image": handWashImageUrl,
   "serviceType": "Mobile Car Detailing",
   "provider": { "@id": `${siteUrl}/#business` },
   "areaServed": [
@@ -33,6 +36,19 @@ const serviceSchema = {
     "lowPrice": 30,
     "highPrice": 50
   }
+};
+
+const imageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": handWashImageUrl,
+  "url": handWashImageUrl,
+  "name": "Route95 Professional Hand Wash Fort Lauderdale",
+  "description": "A Route95 Mobile Car Detailing technician hand washing a white SUV with a green microfiber wash mitt, demonstrating the professional two-bucket method in Fort Lauderdale.",
+  "caption": "Route95 technician performing a professional hand wash using a microfiber mitt and pH-balanced soap in Fort Lauderdale, FL.",
+  "width": 1106,
+  "height": 637,
+  "encodingFormat": "image/webp"
 };
 
 const faqSchema = {
@@ -66,7 +82,7 @@ const faqSchema = {
   ]
 };
 
-const schemas = [serviceSchema, faqSchema];
+const schemas = [serviceSchema, faqSchema, imageSchema];
 ---
 
 <ServiceLayout
@@ -131,6 +147,25 @@ const schemas = [serviceSchema, faqSchema];
           Our hand wash process eliminates all these problems. Fresh microfiber mitts glide gently across your paint. Clean water rinses away contaminants. pH-balanced soap from brands like <a href="https://www.meguiars.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Meguiar's</a> cleans without stripping protection.
         </p>
       </section>
+
+      <figure class="my-8" itemscope itemtype="https://schema.org/ImageObject">
+        <img
+          src={`${base}route95-hand-wash-fort-lauderdale-microfiber-mitt.webp`}
+          alt="Route95 detailer hand washing a white SUV with a microfiber wash mitt in Fort Lauderdale"
+          title="Professional Mobile Hand Wash Service in Fort Lauderdale – Route95 Mobile Car Detailing"
+          width="1106"
+          height="637"
+          loading="lazy"
+          decoding="async"
+          class="w-full h-auto rounded-xl shadow-md"
+          itemprop="contentUrl"
+        />
+        <figcaption class="text-sm text-gray-500 mt-2 text-center" itemprop="caption">
+          Route95 technician performing a professional hand wash using a microfiber mitt and pH-balanced soap in Fort Lauderdale, FL.
+        </figcaption>
+        <meta itemprop="name" content="Route95 Professional Hand Wash Fort Lauderdale" />
+        <meta itemprop="description" content="A Route95 Mobile Car Detailing technician hand washing a white SUV with a green microfiber wash mitt, demonstrating the professional two-bucket method in Fort Lauderdale." />
+      </figure>
 
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Our Hand Wash Process</h2>
