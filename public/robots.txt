@@ -1,4 +1,6 @@
+# Allow all search engines to crawl the entire site
 User-agent: *
 Allow: /
 
+# Sitemaps
 Sitemap: https://route95mobilecardetailing.com/sitemap-index.xml
