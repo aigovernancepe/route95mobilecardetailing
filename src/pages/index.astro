@@ -58,9 +58,9 @@ const websiteSchema = {
 };
 ---
 
-<BaseLayout title={title} description={description} currentPage="/" schema={websiteSchema} preloadImages={['/route95_hero_background_wide.webp']}>
+<BaseLayout title={title} description={description} currentPage="/" schema={websiteSchema} preloadImages={['/route95_hero_background_mobile.webp', '/route95_hero_background_wide.webp']}>
   <!-- Hero Section -->
-  <section class="relative text-white py-20 lg:py-32 overflow-hidden" style="background: linear-gradient(135deg, rgba(12,36,72,0.85), rgba(30,80,160,0.7), rgba(15,50,100,0.8)), url('/route95_hero_background_wide.webp') center/cover no-repeat; background-color: #0c2448;">
+  <section class="hero-section relative text-white py-20 lg:py-32 overflow-hidden">
     <!-- Water drops overlay (deferred for performance) -->
     <div id="water-drops-overlay" class="absolute inset-0 pointer-events-none" style="z-index: 1;"></div>
     <div class="max-w-7xl mx-auto px-4">
@@ -279,6 +279,20 @@ const websiteSchema = {
       </p>
     </div>
   </section>
+  <style>
+    .hero-section {
+      background: linear-gradient(135deg, rgba(12,36,72,0.85), rgba(30,80,160,0.7), rgba(15,50,100,0.8)),
+        url('/route95_hero_background_mobile.webp') center/cover no-repeat;
+      background-color: #0c2448;
+    }
+    @media (min-width: 768px) {
+      .hero-section {
+        background: linear-gradient(135deg, rgba(12,36,72,0.85), rgba(30,80,160,0.7), rgba(15,50,100,0.8)),
+          url('/route95_hero_background_wide.webp') center/cover no-repeat;
+        background-color: #0c2448;
+      }
+    }
+  </style>
   <script>
     // Defer loading of decorative water drops overlay
     const overlay = document.getElementById('water-drops-overlay');

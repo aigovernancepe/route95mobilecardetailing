@@ -12,7 +12,7 @@ const locale = (localeProp ?? Astro.currentLocale ?? 'en') as Locale;
 const t = getTranslations(locale);
 ---
 
-<div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-[#0f2a4a] text-white p-4 shadow-lg z-50 hidden">
+<div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-[#0f2a4a] text-white p-4 shadow-lg z-50 hidden" style="contain: layout style;">
   <div class="max-w-7xl mx-auto">
     <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
       <div class="flex-1">

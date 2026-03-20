@@ -64,7 +64,7 @@ const businessDescription = locale === 'es'
 
 const businessSchema = {
   "@context": "https://schema.org",
-  "@type": "AutomotiveBusiness",
+  "@type": ["AutomotiveBusiness", "LocalBusiness"],
   "@id": "https://route95mobilecardetailing.com/#business",
   "name": "Route95 Mobile Car Detailing LLC",
   "description": businessDescription,
@@ -213,7 +213,7 @@ const organizationSchema = {
   <!-- Preload critical images -->
   <link rel="preload" as="image" type="image/webp" href="/logo-transparent-mobile.webp" fetchpriority="high" />
   {preloadImages.map(src => (
-    <link rel="preload" as="image" href={src} fetchpriority="high" />
+    <link rel="preload" as="image" type="image/webp" href={src} fetchpriority="high" />
   ))}
 
   <!-- Google Fonts: preconnect + non-blocking load -->
