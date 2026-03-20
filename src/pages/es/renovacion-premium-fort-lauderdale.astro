@@ -36,7 +36,46 @@ const serviceSchema = {
   }
 };
 
-const schemas = [serviceSchema];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto Cuesta la Renovacion Premium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los precios de la Renovacion Premium son $400 para sedanes, $420 para SUVs y crossovers, y $460 para camionetas y vehiculos grandes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que Incluye la Renovacion Premium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Renovacion Premium incluye todo lo de la Limpieza Completa mas champu interior (asientos, alfombras, paneles de puertas, cinturones de seguridad), detallado de marcos de puertas, limpieza a vapor y encerado profesional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuanto Tiempo Toma la Renovacion Premium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Renovacion Premium toma aproximadamente de 2.5 a 3.5 horas dependiendo del tamano y condicion del vehiculo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Para Quien es la Renovacion Premium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Renovacion Premium es ideal para vehiculos con asientos o alfombras manchados, preocupaciones de pelo o olor a mascota, preparacion para venta, autos sin detallar en mas de 6 meses, o cualquiera que desee la limpieza mas profunda posible."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout

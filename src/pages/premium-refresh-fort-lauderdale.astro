@@ -35,7 +35,46 @@ const serviceSchema = {
   }
 };
 
-const schemas = [serviceSchema];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How Much Does the Premium Refresh Cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Premium Refresh pricing is $400 for sedans, $420 for SUVs and crossovers, and $460 for trucks and large vehicles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's Included in the Premium Refresh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Premium Refresh includes everything in the Complete Clean plus interior shampoo (seats, carpets, door panels, seatbelts), door jambs detailing, steam cleaning, and professional car waxing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does the Premium Refresh Take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Premium Refresh takes approximately 2.5 to 3.5 hours depending on vehicle size and condition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who Is the Premium Refresh For?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Premium Refresh is ideal for vehicles with stained seats or carpets, pet hair or odor concerns, pre-sale preparation, cars not detailed in 6+ months, or anyone wanting the deepest possible clean."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
 <ServiceLayout

@@ -58,12 +58,16 @@ const areaServed = [
 ];
 
 // AutomotiveBusiness Schema (included on all pages)
+const businessDescription = locale === 'es'
+  ? "Detallado móvil profesional de autos en Fort Lauderdale. Vamos a tu ubicación con productos premium de Chemical Guys, Koch-Chemie y 3D. Sirviendo Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach."
+  : "Professional mobile car detailing in Fort Lauderdale. We come to you with premium products from Chemical Guys, Koch-Chemie & 3D. Serving Fort Lauderdale, Dania Beach, Hollywood & Pompano Beach.";
+
 const businessSchema = {
   "@context": "https://schema.org",
   "@type": "AutomotiveBusiness",
   "@id": "https://route95mobilecardetailing.com/#business",
   "name": "Route95 Mobile Car Detailing LLC",
-  "description": "Professional mobile car detailing in Fort Lauderdale. We come to you with premium products from Chemical Guys, Koch-Chemie & 3D. Serving Fort Lauderdale, Dania Beach, Hollywood & Pompano Beach.",
+  "description": businessDescription,
   "image": "https://route95mobilecardetailing.com/logo-transparent.png",
   "telephone": "+1-754-215-2272",
   "email": "contact@route95mobilecardetailing.com",
@@ -126,7 +130,14 @@ const businessSchema = {
       }
     ]
   },
-  "sameAs": []
+  "sameAs": [
+    "https://share.google/1JC5K14vEZQaW2ufr",
+    "https://www.facebook.com/people/Route95-Mobile-Car-Detailing/61587641785127/",
+    "https://instagram.com/route95mobilecardetailing",
+    "https://tiktok.com/@route95mobcardetailing",
+    "https://biz.yelp.com/biz_info/9rr4IomZPYtuCXZg4Raytg",
+    "https://www.bbb.org/us/fl/fort-lauderdale/profile/mobile-auto-detailing/route95-carwash-llc-0633-92058081"
+  ]
 };
 
 // BreadcrumbList Schema (included on all pages)
@@ -163,6 +174,10 @@ const breadcrumbSchema = breadcrumbItems.length > 1 ? {
 } : null;
 
 // Organization Schema (included on all pages)
+const orgDescription = locale === 'es'
+  ? "Servicio profesional de detallado móvil de autos en el Condado de Broward, Florida. Llevamos el detallado automotriz premium directamente a tu ubicación en Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach."
+  : "Professional mobile car detailing service in Broward County, Florida. We bring premium auto detailing directly to your location in Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach.";
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -171,12 +186,19 @@ const organizationSchema = {
   "url": "https://route95mobilecardetailing.com",
   "logo": "https://route95mobilecardetailing.com/logo-transparent.png",
   "image": "https://route95mobilecardetailing.com/logo-transparent.png",
-  "description": "Professional mobile car detailing service in Broward County, Florida. We bring premium auto detailing directly to your location in Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach.",
+  "description": orgDescription,
   "telephone": "+1-754-215-2272",
   "email": "contact@route95mobilecardetailing.com",
   "address": businessAddress,
   "areaServed": areaServed,
-  "sameAs": []
+  "sameAs": [
+    "https://share.google/1JC5K14vEZQaW2ufr",
+    "https://www.facebook.com/people/Route95-Mobile-Car-Detailing/61587641785127/",
+    "https://instagram.com/route95mobilecardetailing",
+    "https://tiktok.com/@route95mobcardetailing",
+    "https://biz.yelp.com/biz_info/9rr4IomZPYtuCXZg4Raytg",
+    "https://www.bbb.org/us/fl/fort-lauderdale/profile/mobile-auto-detailing/route95-carwash-llc-0633-92058081"
+  ]
 };
 ---
 

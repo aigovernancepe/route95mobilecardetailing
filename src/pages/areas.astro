@@ -70,9 +70,42 @@ const cities = [
     highlights: ["Harbor salt removal", "Palm Aire area", "Near Lighthouse Point"]
   }
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What Areas Does Route95 Mobile Car Detailing Serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Route95 serves Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach in Broward County, Florida. We bring all equipment, water, and products to your location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do You Charge Extra for Travel to Different Cities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, there is no extra travel charge for any of our service areas within Broward County including Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can You Detail My Car at My Office or Apartment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we can detail your vehicle at your home, office, parking garage, or any location in our service area. We bring everything we need including water and power."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
-<BaseLayout title={title} description={description} currentPage="/areas/" schema={serviceSchema}>
+<BaseLayout title={title} description={description} currentPage="/areas/" schema={schemas}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4">

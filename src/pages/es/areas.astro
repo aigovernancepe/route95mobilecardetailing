@@ -71,9 +71,42 @@ const cities = [
     highlights: ["Eliminación de sal del puerto", "Zona Palm Aire", "Cerca de Lighthouse Point"]
   }
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Que Areas Sirve Route95 Mobile Car Detailing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Route95 sirve Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach en el condado de Broward, Florida. Llevamos todo el equipo, agua y productos a su ubicacion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cobran Extra por Viajar a Diferentes Ciudades?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, no hay cargo extra por viaje a ninguna de nuestras areas de servicio dentro del condado de Broward incluyendo Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pueden Detallar Mi Auto en Mi Oficina o Apartamento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si, podemos detallar su vehiculo en su hogar, oficina, garaje de estacionamiento o cualquier ubicacion en nuestra area de servicio. Llevamos todo lo que necesitamos incluyendo agua y electricidad."
+      }
+    }
+  ]
+};
+
+const schemas = [serviceSchema, faqSchema];
 ---
 
-<BaseLayout title={title} description={description} currentPage="/es/areas/" schema={serviceSchema}>
+<BaseLayout title={title} description={description} currentPage="/es/areas/" schema={schemas}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4">
