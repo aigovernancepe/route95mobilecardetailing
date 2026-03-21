@@ -38,7 +38,7 @@ const blogSchema = {
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {enPosts.map(post => {
-          const slug = post.id.replace('en/', '').replace(/\.md$/, '');
+          const slug = post.id.replace('en/', '');
           return (
             <a href={`/blog/${slug}/`} class="service-card bg-white rounded-xl shadow-lg overflow-hidden group">
               <div class="h-3 bg-gradient-to-r from-[#0c2448] to-[#1a5ca0]"></div>
