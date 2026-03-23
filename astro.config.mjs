@@ -30,11 +30,11 @@ export default defineConfig({
         // Category pages
         else if (
           item.url.includes('/car-wash-fort-lauderdale/') ||
-          item.url.includes('/upholstery-cleaning-fort-lauderdale/') ||
+          item.url.includes('/interior-car-detailing-fort-lauderdale/') ||
           item.url.includes('/car-detailing-services-fort-lauderdale/') ||
           item.url.includes('/interior-car-detailing-fort-lauderdale/') ||
           item.url.includes('/lavado-de-autos-fort-lauderdale/') ||
-          item.url.includes('/limpieza-de-tapiceria-fort-lauderdale/') ||
+          item.url.includes('/detallado-interior-fort-lauderdale/') ||
           item.url.includes('/servicios-de-detallado-fort-lauderdale/') ||
           item.url.includes('/detallado-interior-fort-lauderdale/')
         ) {
@@ -110,6 +110,8 @@ export default defineConfig({
     '/chrome-polishing-fort-lauderdale/': '/car-wash-fort-lauderdale/',
     '/es/pulido-de-cromo-fort-lauderdale/': '/es/lavado-de-autos-fort-lauderdale/',
     '/mobile-car-detailing-fort-lauderdale/': '/car-detailing-services-fort-lauderdale/',
+    '/upholstery-cleaning-fort-lauderdale/': '/interior-car-detailing-fort-lauderdale/',
+    '/es/limpieza-de-tapiceria-fort-lauderdale/': '/es/detallado-interior-fort-lauderdale/',
   },
   vite: {
     plugins: [tailwindcss()]

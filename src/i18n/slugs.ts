@@ -15,7 +15,7 @@ export const slugMap: Record<string, string> = {
   'trim-restoration-fort-lauderdale': 'restauracion-de-molduras-fort-lauderdale',
   'tire-dressing-fort-lauderdale': 'acondicionador-de-llantas-fort-lauderdale',
   'bug-and-tar-removal-fort-lauderdale': 'eliminacion-de-insectos-y-alquitran-fort-lauderdale',
-  'upholstery-cleaning-fort-lauderdale': 'limpieza-de-tapiceria-fort-lauderdale',
+  'upholstery-cleaning-fort-lauderdale': 'limpieza-de-tapiceria-fort-lauderdale', // redirected to interior-car-detailing
   'seat-shampooing-fort-lauderdale': 'lavado-de-asientos-fort-lauderdale',
   'carpet-shampooing-fort-lauderdale': 'lavado-de-alfombras-fort-lauderdale',
   'leather-cleaning-fort-lauderdale': 'limpieza-de-cuero-fort-lauderdale',

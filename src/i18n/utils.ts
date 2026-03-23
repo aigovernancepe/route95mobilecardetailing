@@ -88,7 +88,7 @@ export function getLocalizedNavLinks(locale: Locale) {
     mobileNavLinks: [
       { href: url(''), label: t.header.home },
       { href: url('car-wash-fort-lauderdale'), label: t.header.carWash },
-      { href: url('upholstery-cleaning-fort-lauderdale'), label: t.header.upholsteryCleaning },
+      { href: url('interior-car-detailing-fort-lauderdale'), label: t.header.upholsteryCleaning },
       { href: url('car-detailing-services-fort-lauderdale'), label: t.header.detailingServices },
       { href: url('mobile-car-detailing-prices-fort-lauderdale'), label: t.header.pricing },
       { href: url('faq'), label: t.header.faq },

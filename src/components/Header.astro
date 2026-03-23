@@ -23,7 +23,7 @@ const { carWashServices, upholsteryServices, detailingServices, mobileNavLinks }
 // Localized category URLs
 const homeUrl = localizedUrl(locale, '');
 const carWashUrl = localizedUrl(locale, 'car-wash-fort-lauderdale');
-const upholsteryUrl = localizedUrl(locale, 'upholstery-cleaning-fort-lauderdale');
+const upholsteryUrl = localizedUrl(locale, 'interior-car-detailing-fort-lauderdale');
 const detailingUrl = localizedUrl(locale, 'car-detailing-services-fort-lauderdale');
 const aboutUrl = localizedUrl(locale, 'about');
 const contactUrl = localizedUrl(locale, 'contact');
@@ -104,7 +104,7 @@ const faqUrl = localizedUrl(locale, 'faq');
         <div class="relative group">
           <a
             href={upholsteryUrl}
-            class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium inline-flex items-center gap-1 ${currentPage.includes('upholstery') || currentPage.includes('tapiceria') ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
+            class={`text-gray-700 hover:text-[#1a3d6b] transition-colors font-medium inline-flex items-center gap-1 ${currentPage.includes('interior-car-detailing') || currentPage.includes('detallado-interior') ? 'text-[#0f2a4a] border-b-2 border-[#c0c7cf]' : ''}`}
           >
             {t.header.upholsteryCleaning}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
