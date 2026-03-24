@@ -4,7 +4,7 @@
 - **Name:** Route95 Mobile Car Detailing LLC
 - **Domain:** route95mobilecardetailing.com
 - **Location:** Fort Lauderdale, Florida
-- **Service Area:** Broward County — Fort Lauderdale, Pompano Beach, Coral Springs, Plantation, Davie, Hollywood, Deerfield Beach
+- **Service Area:** Fort Lauderdale, Pompano Beach, Dania Beach, Hollywood
 - **Industry:** Auto services (mobile detailing)
 - **Framework:** Astro
 - **Languages:** English (root) + Spanish (`/es/` prefix)
