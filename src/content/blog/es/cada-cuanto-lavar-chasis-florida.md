@@ -1,6 +1,6 @@
 ---
-title: "Así Es Como Lavo el Chasis de Mi Auto Viviendo en Florida (Y Por Qué Usted Debería Hacerlo También)"
-description: "En Florida, debe lavar el chasis de su auto cada 1-2 semanas para prevenir la corrosión por aire salado, el óxido y daños ocultos. Aquí está el calendario exacto y lo que pasa cuando no lo hace."
+title: "¿Cada Cuánto Lavar el Chasis del Auto en Florida?"
+description: "Lave el chasis de su auto cada 1-2 semanas en Florida para prevenir corrosión y óxido. Aquí está el calendario exacto que necesita."
 date: 2026-02-22
 author: "Gustavo Moya"
 faqs:

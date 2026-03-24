@@ -1,6 +1,6 @@
 ---
-title: "Cómo Proteger la Pintura de Su Auto del Sol del Sur de Florida"
-description: "Los rayos UV del sur de Florida están entre los más fuertes del país. Aprenda métodos comprobados para proteger la pintura de su auto contra el daño solar y la oxidación en Fort Lauderdale."
+title: "Proteja la Pintura de Su Auto del Sol de Florida"
+description: "Los rayos UV del sur de Florida son de los más fuertes del país. Aprenda a proteger la pintura de su auto del daño solar y la oxidación."
 date: 2025-07-20
 author: "Gustavo Moya"
 faqs:

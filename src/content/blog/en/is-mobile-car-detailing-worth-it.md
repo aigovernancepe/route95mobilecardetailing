@@ -1,6 +1,6 @@
 ---
-title: "Is Mobile Car Detailing Worth It? Cost, Benefits & What to Expect"
-description: "Mobile car detailing costs $50-$350 per session but saves time, protects your vehicle's value, and delivers better results than automated washes. Here's the full breakdown."
+title: "Is Mobile Car Detailing Worth It? Full Breakdown"
+description: "Mobile car detailing costs $50-$350 per session but saves time and protects your vehicle's value. Here's the full cost-benefit breakdown."
 date: 2026-02-17
 author: "Gustavo Moya"
 faqs:

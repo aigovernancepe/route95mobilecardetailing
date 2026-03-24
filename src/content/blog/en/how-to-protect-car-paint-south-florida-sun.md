@@ -1,6 +1,6 @@
 ---
 title: "How to Protect Your Car's Paint from the South Florida Sun"
-description: "South Florida's UV rays are among the strongest in the country. Learn proven methods to protect your car's paint from sun damage, oxidation, and fading in Fort Lauderdale."
+description: "South Florida's UV rays are among the strongest in the U.S. Learn proven methods to protect your car's paint from sun damage and oxidation."
 date: 2025-07-20
 author: "Gustavo Moya"
 faqs:

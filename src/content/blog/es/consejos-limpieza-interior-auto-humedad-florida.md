@@ -1,6 +1,6 @@
 ---
-title: "Consejos de Limpieza Interior del Auto para la Humedad de Florida"
-description: "La humedad de Florida crea desafíos únicos para el interior de su auto. Aprenda cómo prevenir el moho, eliminar olores y mantener sus asientos y alfombras limpios en el clima tropical de Fort Lauderdale."
+title: "Limpieza Interior del Auto: Humedad en Florida"
+description: "La humedad de Florida crea desafíos para el interior de su auto. Aprenda a prevenir moho, eliminar olores y mantener asientos limpios."
 date: 2025-08-10
 author: "Gustavo Moya"
 faqs:

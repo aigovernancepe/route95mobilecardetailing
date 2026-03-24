@@ -1,6 +1,6 @@
 ---
-title: "¿Vale la Pena el Detallado Móvil de Autos? Costos, Beneficios y Qué Esperar"
-description: "El detallado móvil de autos cuesta entre $50 y $350 por sesión, pero ahorra tiempo, protege el valor de su vehículo y ofrece mejores resultados que los lavados automáticos. Aquí tiene el análisis completo."
+title: "¿Vale la Pena el Detallado Móvil? Costos y Beneficios"
+description: "El detallado móvil cuesta $50-$350 por sesión pero ahorra tiempo y protege el valor de su vehículo. Aquí tiene el análisis completo."
 date: 2026-02-17
 author: "Gustavo Moya"
 faqs:

@@ -1,6 +1,6 @@
 ---
 title: "Interior Car Cleaning Tips for Florida's Humidity"
-description: "Florida's humidity creates unique challenges for your car's interior. Learn how to prevent mold, eliminate odors, and keep your seats and carpets clean in Fort Lauderdale's tropical climate."
+description: "Florida's humidity creates unique challenges for your car's interior. Learn how to prevent mold, eliminate odors, and keep seats clean."
 date: 2025-08-10
 author: "Gustavo Moya"
 faqs:
