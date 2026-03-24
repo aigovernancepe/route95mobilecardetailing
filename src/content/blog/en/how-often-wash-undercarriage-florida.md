@@ -1,6 +1,6 @@
 ---
-title: "Here's How Often I Wash My Undercarriage Living in Florida (And Why You Should Too)"
-description: "In Florida, you should wash your car's undercarriage every 1-2 weeks to prevent salt air corrosion, rust, and hidden damage. Here's the exact schedule and what happens when you skip it."
+title: "How Often to Wash Your Undercarriage in Florida"
+description: "Wash your car's undercarriage every 1-2 weeks in Florida to prevent salt corrosion and rust. Here's the exact schedule you need."
 date: 2026-02-22
 author: "Gustavo Moya"
 faqs:

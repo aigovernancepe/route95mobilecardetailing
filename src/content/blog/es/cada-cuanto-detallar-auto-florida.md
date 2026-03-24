@@ -1,6 +1,6 @@
 ---
 title: "¿Con Qué Frecuencia Debe Detallar Su Auto en Florida?"
-description: "El clima de Florida exige detallado de autos cada 3-4 meses. Aprenda por qué los rayos UV, la humedad y el aire salado hacen que el detallado regular sea crítico para los vehículos en Florida."
+description: "El clima de Florida exige detallado cada 3-4 meses. Los rayos UV, la humedad y el aire salado hacen el detallado regular crítico. Sepa más."
 date: 2026-01-15
 author: "Gustavo Moya"
 faqs:
