@@ -1,6 +1,6 @@
 import en from './en.json';
 import es from './es.json';
-import { slugMap, reverseSlugMap } from './slugs';
+import { slugMap, reverseSlugMap, blogSlugMap, reverseBlogSlugMap } from './slugs';
 
 const translations = { en, es } as const;
 export type Locale = 'en' | 'es';
@@ -33,16 +33,32 @@ export function getAlternateUrl(url: URL, targetLocale: Locale): string {
   const pathAfterBase = url.pathname.replace(base, '').replace(/^\//, '').replace(/\/$/, '');
   const isSpanish = pathAfterBase.startsWith('es/') || pathAfterBase === 'es';
 
-  let currentEnSlug: string;
-
   if (isSpanish) {
-    const esSlug = pathAfterBase.replace(/^es\/?/, '').replace(/\/$/, '');
-    currentEnSlug = reverseSlugMap[esSlug] ?? esSlug;
-  } else {
-    currentEnSlug = pathAfterBase;
+    const esPath = pathAfterBase.replace(/^es\/?/, '').replace(/\/$/, '');
+    // Handle blog post paths (different slugs per language)
+    if (esPath.startsWith('blog/')) {
+      const esBlogSlug = esPath.slice('blog/'.length);
+      const enBlogSlug = reverseBlogSlugMap[esBlogSlug] ?? esBlogSlug;
+      if (targetLocale === 'en') {
+        return `${base}blog/${enBlogSlug}/`;
+      }
+      return `${base}es/blog/${esBlogSlug}/`;
+    }
+    const currentEnSlug = reverseSlugMap[esPath] ?? esPath;
+    return localizedUrl(targetLocale, currentEnSlug);
   }
 
-  return localizedUrl(targetLocale, currentEnSlug);
+  // Handle blog post paths (different slugs per language)
+  if (pathAfterBase.startsWith('blog/')) {
+    const enBlogSlug = pathAfterBase.slice('blog/'.length);
+    const esBlogSlug = blogSlugMap[enBlogSlug] ?? enBlogSlug;
+    if (targetLocale === 'en') {
+      return `${base}blog/${enBlogSlug}/`;
+    }
+    return `${base}es/blog/${esBlogSlug}/`;
+  }
+
+  return localizedUrl(targetLocale, pathAfterBase);
 }
 
 /**
