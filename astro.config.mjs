@@ -11,13 +11,6 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     sitemap({
-      i18n: {
-        defaultLocale: 'en',
-        locales: {
-          en: 'en-US',
-          es: 'es-ES',
-        },
-      },
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),

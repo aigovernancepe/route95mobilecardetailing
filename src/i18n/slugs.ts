@@ -48,3 +48,18 @@ export const slugMap: Record<string, string> = {
 export const reverseSlugMap: Record<string, string> = Object.fromEntries(
   Object.entries(slugMap).map(([en, es]) => [es, en])
 );
+
+// Maps English blog post slugs to Spanish blog post slugs
+export const blogSlugMap: Record<string, string> = {
+  'interior-car-cleaning-tips-florida-humidity': 'consejos-limpieza-interior-auto-humedad-florida',
+  'how-often-detail-car-florida': 'cada-cuanto-detallar-auto-florida',
+  'why-mobile-car-detailing-fort-lauderdale': 'por-que-detallado-movil-fort-lauderdale',
+  'how-often-wash-undercarriage-florida': 'cada-cuanto-lavar-chasis-florida',
+  'is-mobile-car-detailing-worth-it': 'vale-la-pena-el-detallado-movil',
+  'how-to-protect-car-paint-south-florida-sun': 'como-proteger-pintura-auto-sol-sur-florida',
+};
+
+// Reverse map: Spanish blog post slug -> English blog post slug
+export const reverseBlogSlugMap: Record<string, string> = Object.fromEntries(
+  Object.entries(blogSlugMap).map(([en, es]) => [es, en])
+);
