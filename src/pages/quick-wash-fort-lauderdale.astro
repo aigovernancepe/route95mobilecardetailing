@@ -4,7 +4,7 @@ import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Quick Wash Fort Lauderdale | Mobile Service | Route95";
-const description = "Mobile Quick Wash in Fort Lauderdale. Hand wash, tires & rims, window cleaning, interior wipe down & vacuum. From $50. We come to you! Call 754-215-2272";
+const description = "Mobile Quick Wash in Fort Lauderdale. Exterior hand wash, tires, tire dressing & window cleaning. From $40. We come to you! Call 754-215-2272";
 
 const parentCategory = {
   href: `${base}car-detailing-services-fort-lauderdale/`,
@@ -31,8 +31,8 @@ const serviceSchema = {
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
-    "lowPrice": 50,
-    "highPrice": 80,
+    "lowPrice": 40,
+    "highPrice": 60,
     "offerCount": 3
   }
 };
@@ -46,7 +46,7 @@ const faqSchema = {
       "name": "How Much Does a Quick Wash Cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Quick Wash pricing starts at $50 for sedans, $65 for SUVs and crossovers, and $80 for trucks and large vehicles."
+        "text": "Quick Wash pricing starts at $40 for sedans, $50 for SUVs and crossovers, and $60 for trucks and large vehicles."
       }
     },
     {
@@ -54,7 +54,7 @@ const faqSchema = {
       "name": "How Long Does a Quick Wash Take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A Quick Wash typically takes 30 to 45 minutes depending on vehicle size and condition."
+        "text": "A Quick Wash typically takes 20 to 30 minutes depending on vehicle size and condition."
       }
     }
   ]
@@ -67,7 +67,7 @@ const schemas = [serviceSchema, faqSchema];
   title={title}
   description={description}
   h1="Quick Wash Fort Lauderdale"
-  intro="A fast exterior & interior refresh to keep your car looking sharp between full details. We come to your location with everything needed."
+  intro="A fast exterior wash to keep your car looking sharp between full details. We come to your location with everything needed."
   currentPage="/quick-wash-fort-lauderdale/"
   parentCategory={parentCategory}
   schema={schemas}
@@ -76,10 +76,10 @@ const schemas = [serviceSchema, faqSchema];
     <div class="lg:col-span-2 space-y-8">
       <section>
         <p class="text-gray-600 mb-4">
-          The Quick Wash is our entry-level package designed for Fort Lauderdale drivers who want to maintain a clean vehicle without the time commitment of a full detail. It covers the essentials — a thorough hand wash, tire and rim cleaning, window cleaning inside and out, an interior wipe down, and a complete vacuum.
+          The Quick Wash is our entry-level exterior package designed for Fort Lauderdale drivers who want to maintain a clean vehicle without the time commitment of a full detail. It covers the exterior essentials — a thorough hand wash, tire and rim cleaning, tire dressing, and exterior window cleaning.
         </p>
         <p class="text-gray-600 mb-4">
-          Perfect for weekly or bi-weekly maintenance, the Quick Wash keeps your car presentable and protected from South Florida's sun, salt air, and daily grime. We use Chemical Guys premium products and the two-bucket wash method to ensure a scratch-free finish every time.
+          Perfect for weekly or bi-weekly maintenance, the Quick Wash keeps your car's exterior presentable and protected from South Florida's sun, salt air, and daily grime. We use Chemical Guys premium products and the two-bucket wash method to ensure a scratch-free finish every time.
         </p>
         <p class="text-gray-600">
           We serve Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach including Las Olas, Nurmi Isles, and Seven Isles. Same-day appointments are often available.
@@ -89,7 +89,7 @@ const schemas = [serviceSchema, faqSchema];
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does a Quick Wash Cost?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Quick Wash pricing starts at $50 for sedans, $65 for SUVs and crossovers, and $80 for trucks and large vehicles.</strong>
+          <strong>Quick Wash pricing starts at $40 for sedans, $50 for SUVs and crossovers, and $60 for trucks and large vehicles.</strong>
         </p>
         <p class="text-gray-600">
           Pricing varies by vehicle size due to the additional surface area and time required. We provide exact pricing based on your specific vehicle when you call or message us.
@@ -101,22 +101,21 @@ const schemas = [serviceSchema, faqSchema];
         <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
           <li><strong>Hand Wash</strong> — Full exterior wash using two-bucket method and pH-balanced soap</li>
           <li><strong>Tires & Rims</strong> — Brake dust and road grime removed from wheels and tires</li>
-          <li><strong>Window Cleaning</strong> — Interior and exterior glass cleaned streak-free</li>
-          <li><strong>Interior Wipe Down</strong> — Dashboard, console, and surfaces wiped clean</li>
-          <li><strong>Vacuum</strong> — Seats, carpets, and floor mats thoroughly vacuumed</li>
+          <li><strong>Tire Dressing</strong> — Tires dressed for a clean, dark finish</li>
+          <li><strong>Window Cleaning</strong> — Exterior glass cleaned streak-free</li>
         </ul>
         <p class="text-gray-600">
-          Need more? You can always add individual services like tire dressing, pet hair removal, or floor mat cleaning to any package.
+          Need interior cleaning too? Check out our <a href={`${base}fresh-start-fort-lauderdale/`} class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Fresh Start</a> package, or add individual services like tire dressing, pet hair removal, or floor mat cleaning to any package.
         </p>
       </section>
 
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Long Does a Quick Wash Take?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>A Quick Wash typically takes 30 to 45 minutes depending on vehicle size and condition.</strong>
+          <strong>A Quick Wash typically takes 20 to 30 minutes depending on vehicle size and condition.</strong>
         </p>
         <p class="text-gray-600">
-          Since we come to your location, you can continue your day while we work. Many of our Fort Lauderdale clients book us at their office and come back to a freshly washed car.
+          Since it's an exterior-only service, it's our fastest turnaround. Many of our Fort Lauderdale clients book us at their office and come back to a freshly washed car.
         </p>
       </section>
 
@@ -126,8 +125,8 @@ const schemas = [serviceSchema, faqSchema];
           { title: "Pre-Rinse", description: "We thoroughly rinse your vehicle to remove loose dirt, sand, and debris before any contact washing." },
           { title: "Two-Bucket Hand Wash", description: "Full exterior wash with pH-balanced Chemical Guys soap using clean microfiber mitts." },
           { title: "Tires & Rims", description: "Wheels and tires are cleaned with dedicated brushes and wheel-safe cleaners." },
-          { title: "Windows & Interior", description: "All glass cleaned inside and out. Interior surfaces wiped down and vacuumed." },
-          { title: "Dry & Inspect", description: "Hand dried with clean microfiber towels. Final inspection to ensure every surface is spotless." }
+          { title: "Window Cleaning", description: "All exterior glass cleaned streak-free for a crystal-clear finish." },
+          { title: "Dry & Inspect", description: "Hand dried with clean microfiber towels. Final inspection to ensure every exterior surface is spotless." }
         ]} />
       </section>
     </div>
@@ -139,21 +138,21 @@ const schemas = [serviceSchema, faqSchema];
           <ul class="space-y-3">
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">Sedan / Hatchback: <strong>$50</strong></span>
+              <span class="text-gray-600">Sedan / Hatchback: <strong>$40</strong></span>
             </li>
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">Crossover / SUV: <strong>$65</strong></span>
+              <span class="text-gray-600">Crossover / SUV: <strong>$50</strong></span>
             </li>
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">Truck / Large: <strong>$80</strong></span>
+              <span class="text-gray-600">Truck / Large: <strong>$60</strong></span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span class="text-gray-600">30-45 minutes</span>
+              <span class="text-gray-600">20-30 minutes</span>
             </li>
           </ul>
         </div>

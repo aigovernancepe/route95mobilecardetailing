@@ -5,7 +5,7 @@ import { localizedUrl } from '../../i18n/utils';
 
 const url = (slug: string) => localizedUrl('es', slug);
 const title = "Lavado Rápido Fort Lauderdale | Route95";
-const description = "Lavado Rápido móvil en Fort Lauderdale. Lavado a mano, llantas, ventanas e interior. Desde $50. Llame al 754-215-2272.";
+const description = "Lavado Rápido móvil en Fort Lauderdale. Lavado exterior a mano, llantas, acondicionador y ventanas. Desde $40. Llame al 754-215-2272.";
 
 const parentCategory = {
   href: url('car-detailing-services-fort-lauderdale'),
@@ -32,8 +32,8 @@ const serviceSchema = {
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
-    "lowPrice": 50,
-    "highPrice": 80,
+    "lowPrice": 40,
+    "highPrice": 60,
     "offerCount": 3
   }
 };
@@ -47,7 +47,7 @@ const faqSchema = {
       "name": "Cuanto Cuesta un Lavado Rapido?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Los precios del Lavado Rapido comienzan en $50 para sedanes, $65 para SUVs y crossovers, y $80 para camionetas y vehiculos grandes."
+        "text": "Los precios del Lavado Rapido comienzan en $40 para sedanes, $50 para SUVs y crossovers, y $60 para camionetas y vehiculos grandes."
       }
     },
     {
@@ -55,7 +55,7 @@ const faqSchema = {
       "name": "Que Incluye el Lavado Rapido?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El Lavado Rapido incluye lavado a mano, llantas y rines, limpieza de ventanas, limpieza interior y aspirado completo."
+        "text": "El Lavado Rapido incluye lavado exterior a mano, limpieza de llantas y rines, acondicionador de llantas, y limpieza de ventanas exteriores."
       }
     },
     {
@@ -63,7 +63,7 @@ const faqSchema = {
       "name": "Cuanto Tiempo Toma un Lavado Rapido?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Un Lavado Rapido tipicamente toma de 30 a 45 minutos dependiendo del tamano y condicion del vehiculo."
+        "text": "Un Lavado Rapido tipicamente toma de 20 a 30 minutos dependiendo del tamano y condicion del vehiculo."
       }
     }
   ]
@@ -76,7 +76,7 @@ const schemas = [serviceSchema, faqSchema];
   title={title}
   description={description}
   h1="Lavado Rapido Fort Lauderdale"
-  intro="Un refrescamiento rapido exterior e interior para mantener su auto impecable entre detallados completos. Vamos a su ubicacion con todo lo necesario."
+  intro="Un lavado exterior rapido para mantener su auto impecable entre detallados completos. Vamos a su ubicacion con todo lo necesario."
   currentPage="/es/lavado-rapido-fort-lauderdale/"
   parentCategory={parentCategory}
   schema={schemas}
@@ -85,10 +85,10 @@ const schemas = [serviceSchema, faqSchema];
     <div class="lg:col-span-2 space-y-8">
       <section>
         <p class="text-gray-600 mb-4">
-          El Lavado Rapido es nuestro paquete de nivel basico disenado para conductores de Fort Lauderdale que desean mantener un vehiculo limpio sin el compromiso de tiempo de un detallado completo. Cubre lo esencial: un lavado a mano completo, limpieza de llantas y rines, limpieza de ventanas por dentro y por fuera, limpieza de superficies interiores y un aspirado completo.
+          El Lavado Rapido es nuestro paquete exterior de nivel basico disenado para conductores de Fort Lauderdale que desean mantener un vehiculo limpio sin el compromiso de tiempo de un detallado completo. Cubre lo esencial del exterior: un lavado a mano completo, limpieza de llantas y rines, acondicionador de llantas, y limpieza de ventanas exteriores.
         </p>
         <p class="text-gray-600 mb-4">
-          Perfecto para mantenimiento semanal o quincenal, el Lavado Rapido mantiene su auto presentable y protegido del sol del sur de Florida, el aire salado y la suciedad diaria. Usamos productos premium Chemical Guys y el metodo de dos cubetas para garantizar un acabado sin rayaduras cada vez.
+          Perfecto para mantenimiento semanal o quincenal, el Lavado Rapido mantiene el exterior de su auto presentable y protegido del sol del sur de Florida, el aire salado y la suciedad diaria. Usamos productos premium Chemical Guys y el metodo de dos cubetas para garantizar un acabado sin rayaduras cada vez.
         </p>
         <p class="text-gray-600">
           Servimos Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach incluyendo Las Olas, Nurmi Isles y Seven Isles. Citas el mismo dia frecuentemente disponibles.
@@ -98,7 +98,7 @@ const schemas = [serviceSchema, faqSchema];
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta un Lavado Rapido?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Los precios del Lavado Rapido comienzan en $50 para sedanes, $65 para SUVs y crossovers, y $80 para camionetas y vehiculos grandes.</strong>
+          <strong>Los precios del Lavado Rapido comienzan en $40 para sedanes, $50 para SUVs y crossovers, y $60 para camionetas y vehiculos grandes.</strong>
         </p>
         <p class="text-gray-600">
           El precio varia segun el tamano del vehiculo debido al area de superficie adicional y el tiempo requerido. Proporcionamos precios exactos basados en su vehiculo especifico cuando nos llame o envie un mensaje.
@@ -110,22 +110,21 @@ const schemas = [serviceSchema, faqSchema];
         <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
           <li><strong>Lavado a Mano</strong> — Lavado exterior completo usando el metodo de dos cubetas y jabon de pH balanceado</li>
           <li><strong>Llantas y Rines</strong> — Polvo de frenos y suciedad del camino removidos de rines y llantas</li>
-          <li><strong>Limpieza de Ventanas</strong> — Vidrios interiores y exteriores limpiados sin rayas</li>
-          <li><strong>Limpieza Interior</strong> — Tablero, consola y superficies limpiadas</li>
-          <li><strong>Aspirado</strong> — Asientos, alfombras y tapetes aspirados a fondo</li>
+          <li><strong>Acondicionador de Llantas</strong> — Llantas acondicionadas para un acabado limpio y oscuro</li>
+          <li><strong>Limpieza de Ventanas</strong> — Vidrios exteriores limpiados sin rayas</li>
         </ul>
         <p class="text-gray-600">
-          Necesita mas? Siempre puede agregar servicios individuales como acondicionador de llantas, eliminacion de pelo de mascota o limpieza de tapetes a cualquier paquete.
+          Necesita limpieza interior tambien? Consulte nuestro paquete <a href={url('fresh-start-fort-lauderdale')} class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Nuevo Comienzo</a>, o agregue servicios individuales como acondicionador de llantas, eliminacion de pelo de mascota o limpieza de tapetes a cualquier paquete.
         </p>
       </section>
 
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Tiempo Toma un Lavado Rapido?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Un Lavado Rapido tipicamente toma de 30 a 45 minutos dependiendo del tamano y condicion del vehiculo.</strong>
+          <strong>Un Lavado Rapido tipicamente toma de 20 a 30 minutos dependiendo del tamano y condicion del vehiculo.</strong>
         </p>
         <p class="text-gray-600">
-          Como vamos a su ubicacion, puede continuar su dia mientras trabajamos. Muchos de nuestros clientes en Fort Lauderdale nos reservan en su oficina y regresan a un auto recien lavado.
+          Como es un servicio solo exterior, es nuestro servicio mas rapido. Muchos de nuestros clientes en Fort Lauderdale nos reservan en su oficina y regresan a un auto recien lavado.
         </p>
       </section>
 
@@ -135,8 +134,8 @@ const schemas = [serviceSchema, faqSchema];
           { title: "Pre-Enjuague", description: "Enjuagamos su vehiculo a fondo para remover suciedad suelta, arena y escombros antes de cualquier lavado de contacto." },
           { title: "Lavado a Mano con Dos Cubetas", description: "Lavado exterior completo con jabon Chemical Guys de pH balanceado usando guantes de microfibra limpios." },
           { title: "Llantas y Rines", description: "Rines y llantas se limpian con cepillos dedicados y limpiadores seguros para rines." },
-          { title: "Ventanas e Interior", description: "Todos los vidrios limpiados por dentro y por fuera. Superficies interiores limpiadas y aspiradas." },
-          { title: "Secado e Inspeccion", description: "Secado a mano con toallas de microfibra limpias. Inspeccion final para asegurar que cada superficie este impecable." }
+          { title: "Limpieza de Ventanas", description: "Todos los vidrios exteriores limpiados sin rayas para un acabado cristalino." },
+          { title: "Secado e Inspeccion", description: "Secado a mano con toallas de microfibra limpias. Inspeccion final para asegurar que cada superficie exterior este impecable." }
         ]} />
       </section>
     </div>
@@ -148,21 +147,21 @@ const schemas = [serviceSchema, faqSchema];
           <ul class="space-y-3">
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">Sedan / Hatchback: <strong>$50</strong></span>
+              <span class="text-gray-600">Sedan / Hatchback: <strong>$40</strong></span>
             </li>
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">Crossover / SUV: <strong>$65</strong></span>
+              <span class="text-gray-600">Crossover / SUV: <strong>$50</strong></span>
             </li>
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">Camioneta / Grande: <strong>$80</strong></span>
+              <span class="text-gray-600">Camioneta / Grande: <strong>$60</strong></span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span class="text-gray-600">30-45 minutos</span>
+              <span class="text-gray-600">20-30 minutos</span>
             </li>
           </ul>
         </div>

@@ -5,7 +5,7 @@ import { localizedUrl } from '../../i18n/utils';
 
 const url = (slug: string) => localizedUrl('es', slug);
 const title = "Limpieza Completa Fort Lauderdale | Route95";
-const description = "Limpieza Completa móvil en Fort Lauderdale. Por dentro y por fuera, cajuela incluida. Desde $130. Llame al 754-215-2272.";
+const description = "Limpieza Completa móvil en Fort Lauderdale. Por dentro y por fuera, cajuela incluida. Desde $140. Llame al 754-215-2272.";
 
 const parentCategory = {
   href: url('car-detailing-services-fort-lauderdale'),
@@ -32,8 +32,8 @@ const serviceSchema = {
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
-    "lowPrice": 130,
-    "highPrice": 160,
+    "lowPrice": 140,
+    "highPrice": 170,
     "offerCount": 3
   }
 };
@@ -47,7 +47,7 @@ const faqSchema = {
       "name": "Cuanto Cuesta la Limpieza Completa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Los precios de la Limpieza Completa son $130 para sedanes, $145 para SUVs y crossovers, y $160 para camionetas y vehiculos grandes."
+        "text": "Los precios de la Limpieza Completa son $140 para sedanes, $155 para SUVs y crossovers, y $170 para camionetas y vehiculos grandes."
       }
     },
     {
@@ -83,12 +83,6 @@ const schemas = [serviceSchema, faqSchema];
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">
-      <!-- Promo Banner -->
-      <div class="bg-green-50 border border-green-200 rounded-xl p-4">
-        <p class="text-green-800 font-bold text-lg">10% OFF — Febrero y Marzo 2026</p>
-        <p class="text-green-700 text-sm">Reserve su Limpieza Completa ahora y ahorre. Oferta de lanzamiento por tiempo limitado.</p>
-      </div>
-
       <section>
         <p class="text-gray-600 mb-4">
           La Limpieza Completa es nuestro paquete mas popular por una buena razon — cubre cada centimetro de su vehiculo por dentro y por fuera. Este es el paquete para conductores que quieren que su auto se vea y se sienta como si acabara de salir del concesionario. Desde los guardafangos hasta la cajuela, nada se pasa por alto.
@@ -104,10 +98,7 @@ const schemas = [serviceSchema, faqSchema];
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta la Limpieza Completa?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Los precios de la Limpieza Completa son $130 para sedanes, $145 para SUVs y crossovers, y $160 para camionetas y vehiculos grandes.</strong>
-        </p>
-        <p class="text-gray-600 mb-4">
-          Durante nuestra promocion de febrero y marzo 2026, obtiene 10% de descuento en estos precios — eso es $117 para sedanes, $131 para SUVs y $144 para camionetas.
+          <strong>Los precios de la Limpieza Completa son $140 para sedanes, $155 para SUVs y crossovers, y $170 para camionetas y vehiculos grandes.</strong>
         </p>
         <p class="text-gray-600">
           Para el nivel de detallado incluido, la Limpieza Completa ofrece un valor excepcional. Pagaria significativamente mas en un local fijo por la misma minuciosidad.
@@ -156,21 +147,20 @@ const schemas = [serviceSchema, faqSchema];
 
     <aside class="lg:col-span-1">
       <div class="sticky top-24 space-y-6">
-        <div class="bg-green-50 border border-green-200 rounded-xl p-6">
-          <h3 class="font-bold text-green-800 mb-4">Precios de Limpieza Completa</h3>
-          <p class="text-green-700 text-sm font-semibold mb-3">10% OFF — Feb y Marzo 2026</p>
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Precios de Limpieza Completa</h3>
           <ul class="space-y-3">
             <li class="flex items-start gap-2">
-              <span class="text-green-600 font-bold">$</span>
-              <span class="text-gray-600">Sedan: <span class="line-through text-gray-400">$130</span> <strong class="text-green-600">$117</strong></span>
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">Sedan: <strong>$140</strong></span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-600 font-bold">$</span>
-              <span class="text-gray-600">SUV: <span class="line-through text-gray-400">$145</span> <strong class="text-green-600">$131</strong></span>
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">SUV / Crossover: <strong>$155</strong></span>
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-green-600 font-bold">$</span>
-              <span class="text-gray-600">Camioneta: <span class="line-through text-gray-400">$160</span> <strong class="text-green-600">$144</strong></span>
+              <span class="text-[#c0c7cf] font-bold">$</span>
+              <span class="text-gray-600">Camioneta: <strong>$170</strong></span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
