@@ -16,10 +16,10 @@ const packages = [
   {
     name: "Lavado Rápido",
     slug: "quick-wash-fort-lauderdale",
-    description: "Un refrescamiento rápido exterior e interior para mantener tu auto impecable. Lavado a mano, llantas y rines, limpieza de ventanas, limpieza interior y aspirado.",
-    sedan: 50,
-    suv: 65,
-    truck: 80
+    description: "Un lavado exterior rápido para mantener tu auto impecable. Lavado a mano, llantas y rines, acondicionador de llantas, y limpieza de ventanas exteriores.",
+    sedan: 40,
+    suv: 50,
+    truck: 60
   },
   {
     name: "Nuevo Comienzo",
@@ -33,13 +33,10 @@ const packages = [
     name: "Limpieza Completa",
     slug: "complete-clean-fort-lauderdale",
     description: "Nuestro paquete más completo — por dentro y por fuera, incluyendo cajuela. Lavado a mano, llantas y rines, acondicionador de llantas, guardabarros, ventanas, tablero, consola, tapetes y aspirado completo.",
-    sedan: 130,
-    suv: 145,
-    truck: 160,
-    popular: true,
-    promo: true,
-    promoLabel: "10% DE DESCUENTO — Feb y Marzo 2026",
-    promoDiscount: 0.10
+    sedan: 140,
+    suv: 155,
+    truck: 170,
+    popular: true
   },
   {
     name: "Renovación Premium",
@@ -47,10 +44,7 @@ const packages = [
     description: "Champú interior profundo con limpieza a vapor y encerado — el detallado definitivo. Incluye champú interior (asientos, alfombras, paneles de puertas, cinturones de seguridad), marcos de puertas, limpieza a vapor, encerado, más todo lo incluido en Limpieza Completa.",
     sedan: 400,
     suv: 420,
-    truck: 460,
-    promo: true,
-    promoLabel: "15% DE DESCUENTO — Feb y Marzo 2026",
-    promoDiscount: 0.15
+    truck: 460
   }
 ];
 
@@ -75,7 +69,7 @@ const allServices = [
 
 // Map which services are included in each package
 const packageIncludes: Record<string, Set<string>> = {
-  "Lavado Rápido": new Set(["Lavado a Mano", "Llantas y Rines", "Limpieza de Ventanas", "Limpieza Interior", "Aspirado"]),
+  "Lavado Rápido": new Set(["Lavado a Mano", "Llantas y Rines", "Limpieza de Ventanas", "Acondicionador de Llantas"]),
   "Nuevo Comienzo": new Set(["Lavado a Mano", "Llantas y Rines", "Limpieza de Ventanas", "Limpieza Interior", "Aspirado", "Acondicionador de Llantas", "Tablero", "Consola Central"]),
   "Limpieza Completa": new Set(["Lavado a Mano", "Llantas y Rines", "Limpieza de Ventanas", "Limpieza Interior", "Aspirado", "Acondicionador de Llantas", "Tablero", "Consola Central", "Guardabarros", "Tapetes", "Aspirado (incl. Cajuela)"]),
   "Renovación Premium": new Set(["Lavado a Mano", "Llantas y Rines", "Limpieza de Ventanas", "Limpieza Interior", "Aspirado", "Acondicionador de Llantas", "Tablero", "Consola Central", "Guardabarros", "Tapetes", "Aspirado (incl. Cajuela)", "Champú Interior", "Marcos de Puertas", "Limpieza a Vapor", "Encerado de Auto"]),
@@ -119,7 +113,7 @@ const categorySchema = {
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Lavado Rápido", "url": `${siteUrl}/es/lavado-rapido-fort-lauderdale/` },
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 50, "maxPrice": 80, "priceCurrency": "USD" }
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 40, "maxPrice": 60, "priceCurrency": "USD" }
       },
       {
         "@type": "Offer",
@@ -129,7 +123,7 @@ const categorySchema = {
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Limpieza Completa", "url": `${siteUrl}/es/limpieza-completa-fort-lauderdale/` },
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 130, "maxPrice": 160, "priceCurrency": "USD" }
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 140, "maxPrice": 170, "priceCurrency": "USD" }
       },
       {
         "@type": "Offer",
@@ -149,7 +143,7 @@ const faqSchema = {
       "name": "¿Cuánto Cuesta el Detallado Móvil de Autos en Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El detallado móvil de autos en Fort Lauderdale cuesta entre $50 y $350+ dependiendo del paquete y el tamaño del vehículo. Un Lavado Rápido básico comienza en $50 para sedanes, mientras que nuestro paquete Limpieza Completa va de $117 a $144. Los paquetes premium con detallado completo interior y exterior cuestan $200-$350."
+        "text": "El detallado móvil de autos en Fort Lauderdale cuesta entre $40 y $460 dependiendo del paquete y el tamaño del vehículo. Un Lavado Rápido básico comienza en $40 para sedanes, mientras que nuestro paquete Limpieza Completa va de $140 a $170. Los paquetes premium con detallado completo interior y exterior cuestan $400-$460."
       }
     },
     {
@@ -209,7 +203,7 @@ const faqSchema = {
       <div class="mb-10">
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta el Detallado Móvil de Autos en Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>El detallado móvil de autos en Fort Lauderdale cuesta entre $50 y $350+ dependiendo del paquete y el tamaño del vehículo. Un Lavado Rápido básico comienza en $50 para sedanes, mientras que nuestro paquete Limpieza Completa va de $117 a $144. Los paquetes premium con detallado completo interior y exterior cuestan $200-$350.</strong>
+          <strong>El detallado móvil de autos en Fort Lauderdale cuesta entre $40 y $460 dependiendo del paquete y el tamaño del vehículo. Un Lavado Rápido básico comienza en $40 para sedanes, mientras que nuestro paquete Limpieza Completa va de $140 a $170. Los paquetes premium con detallado completo interior y exterior cuestan $400-$460.</strong>
         </p>
         <p class="text-gray-600">
           Los precios varían según la clase de vehículo (sedán, SUV o camioneta) y el nivel de servicio que selecciones. Usamos productos de grado profesional de <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Chemical Guys</a> y <a href="https://www.koch-chemie.com/en" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Koch-Chemie</a> en cada paquete, para que obtengas resultados premium en cada nivel de precio.

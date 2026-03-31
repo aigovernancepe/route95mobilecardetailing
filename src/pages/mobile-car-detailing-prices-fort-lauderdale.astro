@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Mobile Car Detailing Prices Fort Lauderdale | Route95";
-const description = "Car detailing prices in Fort Lauderdale from $50. Quick Wash, Fresh Start, Complete Clean & Premium Refresh packages. Call 754-215-2272.";
+const description = "Car detailing prices in Fort Lauderdale from $40. Quick Wash, Fresh Start, Complete Clean & Premium Refresh packages. Call 754-215-2272.";
 
 const siteUrl = "https://route95mobilecardetailing.com";
 
@@ -29,7 +29,7 @@ const serviceSchema = {
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Quick Wash" },
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 50, "maxPrice": 80, "priceCurrency": "USD" }
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 40, "maxPrice": 60, "priceCurrency": "USD" }
       },
       {
         "@type": "Offer",
@@ -39,7 +39,7 @@ const serviceSchema = {
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Complete Clean" },
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 130, "maxPrice": 160, "priceCurrency": "USD" }
+        "priceSpecification": { "@type": "PriceSpecification", "minPrice": 140, "maxPrice": 170, "priceCurrency": "USD" }
       },
       {
         "@type": "Offer",
@@ -59,7 +59,7 @@ const faqSchema = {
       "name": "How Much Does Mobile Car Detailing Cost in Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mobile car detailing in Fort Lauderdale starts at $50 for a sedan Quick Wash and goes up to $160 for a truck Complete Clean. Prices vary by package tier and vehicle size, with sedans starting lower and trucks at the higher end of each range."
+        "text": "Mobile car detailing in Fort Lauderdale starts at $40 for a sedan Quick Wash and goes up to $170 for a truck Complete Clean. Prices vary by package tier and vehicle size, with sedans starting lower and trucks at the higher end of each range."
       }
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       "name": "What Do Mobile Detailing Packages Include?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Route95 offers four tiers: Quick Wash includes hand wash, tires and rims, window cleaning, interior wipe down, and vacuum. Fresh Start adds tire dressing, dashboard, and center console. Complete Clean adds fender wells, floor mats, and trunk vacuum. Premium Refresh adds interior shampoo, door jambs, and steam cleaning."
+        "text": "Route95 offers four tiers: Quick Wash includes exterior hand wash, tires and rims, tire dressing, and exterior window cleaning. Fresh Start adds interior wipe down, dashboard, and center console. Complete Clean adds fender wells, floor mats, and trunk vacuum. Premium Refresh adds interior shampoo, door jambs, and steam cleaning."
       }
     },
     {
@@ -104,7 +104,7 @@ const faqSchema = {
     <div class="max-w-7xl mx-auto px-4">
       <h1 class="text-4xl lg:text-5xl font-bold mb-6">Mobile Car Detailing Prices Fort Lauderdale</h1>
       <p class="text-xl text-gray-200 max-w-3xl mb-6">
-        <strong>Route95 mobile car detailing packages in Fort Lauderdale range from $50 to $160 depending on vehicle size and service tier. Every package includes on-location service, professional-grade products, and our satisfaction guarantee.</strong>
+        <strong>Route95 mobile car detailing packages in Fort Lauderdale range from $40 to $170 depending on vehicle size and service tier. Every package includes on-location service, professional-grade products, and our satisfaction guarantee.</strong>
       </p>
       <p class="text-lg text-gray-200 max-w-3xl mb-8">
         Transparent pricing with no hidden fees. Call for a free quote or book your detail today.
@@ -123,7 +123,7 @@ const faqSchema = {
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Mobile Car Detailing Cost in Fort Lauderdale?</h2>
       <p class="text-gray-600 mb-4">
-        <strong>Mobile car detailing in Fort Lauderdale starts at $50 for a sedan Quick Wash and goes up to $160 for a truck Complete Clean. Prices vary by package tier and vehicle size, with sedans at the base price, SUVs $15 more, and trucks $30 more per package.</strong>
+        <strong>Mobile car detailing in Fort Lauderdale starts at $40 for a sedan Quick Wash and goes up to $170 for a truck Complete Clean. Prices vary by package tier and vehicle size, with sedans at the base price.</strong>
       </p>
       <p class="text-gray-600 mb-8">
         We use professional-grade products from <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Chemical Guys</a> and <a href="https://www.koch-chemie.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Koch-Chemie</a> across every package. Our technicians follow <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">IDA (International Detailing Association)</a> best practices so you get premium results at every price point.
@@ -144,9 +144,9 @@ const faqSchema = {
               <td class="px-5 py-4 font-semibold text-[#0f2a4a]">
                 <a href={`${base}quick-wash-fort-lauderdale/`} class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Quick Wash</a>
               </td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$40</td>
               <td class="px-5 py-4 text-center text-gray-700 font-semibold">$50</td>
-              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$65</td>
-              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$80</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$60</td>
             </tr>
             <tr class="border-b border-gray-200 bg-gray-50">
               <td class="px-5 py-4 font-semibold text-[#0f2a4a]">
@@ -159,38 +159,18 @@ const faqSchema = {
             <tr class="border-b border-gray-200 bg-white">
               <td class="px-5 py-4 font-semibold text-[#0f2a4a]">
                 <a href={`${base}complete-clean-fort-lauderdale/`} class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Complete Clean</a>
-                <span class="block text-xs text-green-600 font-bold mt-1">10% OFF — Feb & March</span>
               </td>
-              <td class="px-5 py-4 text-center">
-                <span class="text-gray-400 line-through text-sm">$130</span>
-                <span class="block text-gray-700 font-semibold text-green-600">$117</span>
-              </td>
-              <td class="px-5 py-4 text-center">
-                <span class="text-gray-400 line-through text-sm">$145</span>
-                <span class="block text-gray-700 font-semibold text-green-600">$131</span>
-              </td>
-              <td class="px-5 py-4 text-center">
-                <span class="text-gray-400 line-through text-sm">$160</span>
-                <span class="block text-gray-700 font-semibold text-green-600">$144</span>
-              </td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$140</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$155</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$170</td>
             </tr>
             <tr class="bg-gray-50">
               <td class="px-5 py-4 font-semibold text-[#0f2a4a]">
                 <a href={`${base}premium-refresh-fort-lauderdale/`} class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Premium Refresh</a>
-                <span class="block text-xs text-green-600 font-bold mt-1">15% OFF — Feb & March</span>
               </td>
-              <td class="px-5 py-4 text-center">
-                <span class="text-gray-400 line-through text-sm">$400</span>
-                <span class="block text-gray-700 font-semibold text-green-600">$340</span>
-              </td>
-              <td class="px-5 py-4 text-center">
-                <span class="text-gray-400 line-through text-sm">$420</span>
-                <span class="block text-gray-700 font-semibold text-green-600">$357</span>
-              </td>
-              <td class="px-5 py-4 text-center">
-                <span class="text-gray-400 line-through text-sm">$460</span>
-                <span class="block text-gray-700 font-semibold text-green-600">$391</span>
-              </td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$400</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$420</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$460</td>
             </tr>
           </tbody>
         </table>
@@ -203,7 +183,7 @@ const faqSchema = {
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Do Mobile Detailing Packages Include?</h2>
       <p class="text-gray-600 mb-4">
-        <strong>Each Route95 package builds on the one before it. Quick Wash covers the essentials, Fresh Start adds tire dressing and full interior wipe down, Complete Clean includes fender wells and trunk, and Premium Refresh adds deep interior shampoo with steam cleaning.</strong>
+        <strong>Each Route95 package builds on the one before it. Quick Wash covers the exterior essentials, Fresh Start adds tire dressing and interior wipe down, Complete Clean includes fender wells and trunk, and Premium Refresh adds deep interior shampoo with steam cleaning.</strong>
       </p>
       <p class="text-gray-600 mb-8">
         All packages use products from <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Chemical Guys</a> and <a href="https://www.koch-chemie.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Koch-Chemie</a>, and our technicians follow <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">IDA</a> best practices for consistent, professional results.
@@ -213,9 +193,9 @@ const faqSchema = {
         <!-- Quick Wash -->
         <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
           <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">
-            <a href={`${base}quick-wash-fort-lauderdale/`} class="hover:text-[#1a5ca0] transition-colors">Quick Wash — from $50</a>
+            <a href={`${base}quick-wash-fort-lauderdale/`} class="hover:text-[#1a5ca0] transition-colors">Quick Wash — from $40</a>
           </h3>
-          <p class="text-gray-600 mb-3">A fast exterior and interior refresh to keep your car looking sharp.</p>
+          <p class="text-gray-600 mb-3">A fast exterior wash to keep your car looking sharp.</p>
           <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <li class="flex items-center gap-2 text-gray-700">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -227,15 +207,11 @@ const faqSchema = {
             </li>
             <li class="flex items-center gap-2 text-gray-700">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              Window Cleaning
+              Tire Dressing
             </li>
             <li class="flex items-center gap-2 text-gray-700">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              Interior Wipe Down
-            </li>
-            <li class="flex items-center gap-2 text-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              Vacuum
+              Exterior Window Cleaning
             </li>
           </ul>
         </div>
@@ -283,14 +259,11 @@ const faqSchema = {
         </div>
 
         <!-- Complete Clean -->
-        <div class="bg-white rounded-xl shadow-sm border-2 border-green-500 p-6 relative">
-          <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 text-xs font-bold rounded-full">10% OFF — Feb & March</div>
-          <div class="flex items-center gap-3 mb-3">
-            <h3 class="text-xl font-bold text-[#0f2a4a]">
-              <a href={`${base}complete-clean-fort-lauderdale/`} class="hover:text-[#1a5ca0] transition-colors">Complete Clean — from $130</a>
-            </h3>
-            <span class="bg-[#0f2a4a] text-white text-xs font-bold px-3 py-1 rounded-full">Most Popular</span>
-          </div>
+        <div class="bg-white rounded-xl shadow-sm border-2 border-[#0f2a4a] p-6 relative">
+          <div class="absolute top-4 right-4 bg-[#0f2a4a] text-white px-3 py-1 text-xs font-bold rounded-full">Most Popular</div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">
+            <a href={`${base}complete-clean-fort-lauderdale/`} class="hover:text-[#1a5ca0] transition-colors">Complete Clean — from $140</a>
+          </h3>
           <p class="text-gray-600 mb-3">Our most thorough package — inside and out, trunk included.</p>
           <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <li class="flex items-center gap-2 text-gray-700">
@@ -337,8 +310,7 @@ const faqSchema = {
         </div>
 
         <!-- Premium Refresh -->
-        <div class="bg-white rounded-xl shadow-sm border-2 border-green-500 p-6 relative">
-          <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 text-xs font-bold rounded-full">15% OFF — Feb & March</div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
           <h3 class="text-xl font-bold text-[#0f2a4a] mb-3">
             <a href={`${base}premium-refresh-fort-lauderdale/`} class="hover:text-[#1a5ca0] transition-colors">Premium Refresh — from $400</a>
           </h3>
@@ -488,23 +460,23 @@ const faqSchema = {
           <tbody>
             <tr class="border-b border-gray-200 bg-white">
               <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Sedan / Hatchback</td>
-              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$50</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$40</td>
               <td class="px-5 py-4 text-center text-gray-700 font-semibold">$80</td>
-              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$130</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$140</td>
               <td class="px-5 py-4 text-center text-gray-700 font-semibold">$400</td>
             </tr>
             <tr class="border-b border-gray-200 bg-gray-50">
               <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Crossover / SUV</td>
-              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$65</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$50</td>
               <td class="px-5 py-4 text-center text-gray-700 font-semibold">$95</td>
-              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$145</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$155</td>
               <td class="px-5 py-4 text-center text-gray-700 font-semibold">$420</td>
             </tr>
             <tr class="bg-white">
               <td class="px-5 py-4 font-semibold text-[#0f2a4a]">Truck / Large</td>
-              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$80</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$60</td>
               <td class="px-5 py-4 text-center text-gray-700 font-semibold">$110</td>
-              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$160</td>
+              <td class="px-5 py-4 text-center text-gray-700 font-semibold">$170</td>
               <td class="px-5 py-4 text-center text-gray-700 font-semibold">$460</td>
             </tr>
           </tbody>
