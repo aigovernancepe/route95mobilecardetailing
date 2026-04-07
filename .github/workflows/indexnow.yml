@@ -1,0 +1,74 @@
+name: IndexNow — Submit URLs to Bing
+
+on:
+  workflow_run:
+    workflows: ["Deploy to GitHub Pages"]
+    types: [completed]
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get changed files
+        id: changed
+        run: |
+          # Get files changed in the commits that triggered the deploy
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'src/pages/**' 'src/content/**' | head -50)
+          if [ -z "$CHANGED" ]; then
+            echo "urls=[]" >> "$GITHUB_OUTPUT"
+            echo "has_urls=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          URLS="[]"
+          while IFS= read -r file; do
+            # Convert src/pages paths to URLs
+            url=""
+            if [[ "$file" == src/pages/* ]]; then
+              # Remove src/pages prefix and file extension
+              path="${file#src/pages/}"
+              path="${path%.astro}"
+              path="${path%/index}"
+              # Add trailing slash
+              if [ -n "$path" ]; then
+                url="https://route95mobilecardetailing.com/${path}/"
+              else
+                url="https://route95mobilecardetailing.com/"
+              fi
+            elif [[ "$file" == src/content/blog/en/* ]]; then
+              slug="${file#src/content/blog/en/}"
+              slug="${slug%.md}"
+              url="https://route95mobilecardetailing.com/blog/${slug}/"
+            elif [[ "$file" == src/content/blog/es/* ]]; then
+              slug="${file#src/content/blog/es/}"
+              slug="${slug%.md}"
+              url="https://route95mobilecardetailing.com/es/blog/${slug}/"
+            fi
+
+            if [ -n "$url" ]; then
+              URLS=$(echo "$URLS" | jq --arg u "$url" '. + [$u]')
+            fi
+          done <<< "$CHANGED"
+
+          echo "urls=$(echo "$URLS" | jq -c .)" >> "$GITHUB_OUTPUT"
+          COUNT=$(echo "$URLS" | jq 'length')
+          echo "has_urls=$([ "$COUNT" -gt 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
+      - name: Submit to IndexNow
+        if: steps.changed.outputs.has_urls == 'true'
+        run: |
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"host\": \"route95mobilecardetailing.com\",
+              \"key\": \"174066252fda6cb6988b6cead8a7b261\",
+              \"keyLocation\": \"https://route95mobilecardetailing.com/174066252fda6cb6988b6cead8a7b261.txt\",
+              \"urlList\": ${{ steps.changed.outputs.urls }}
+            }"
+          echo "Submitted URLs: ${{ steps.changed.outputs.urls }}"
