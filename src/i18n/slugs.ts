@@ -42,6 +42,7 @@ export const slugMap: Record<string, string> = {
   'mobile-car-detailing-dania-beach': 'detallado-movil-dania-beach',
   'mobile-car-detailing-hollywood-fl': 'detallado-movil-hollywood-fl',
   'mobile-car-detailing-pompano-beach': 'detallado-movil-pompano-beach',
+  'gallery': 'galeria',
 };
 
 // Reverse map: Spanish slug -> English slug
