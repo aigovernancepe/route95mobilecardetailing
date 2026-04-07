@@ -22,7 +22,13 @@ const serviceSchema = {
   "name": "Hand Wash Fort Lauderdale",
   "description": description,
   "url": `${siteUrl}/hand-wash-fort-lauderdale/`,
-  "image": handWashImageUrl,
+  "image": [
+    handWashImageUrl,
+    `${siteUrl}/gallery/hand-wash-before-1.webp`,
+    `${siteUrl}/gallery/hand-wash-after-1.webp`,
+    `${siteUrl}/gallery/hand-wash-before-2.webp`,
+    `${siteUrl}/gallery/hand-wash-after-2.webp`,
+  ],
   "serviceType": "Mobile Car Detailing",
   "provider": { "@id": `${siteUrl}/#business` },
   "areaServed": [
