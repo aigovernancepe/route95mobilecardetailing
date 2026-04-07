@@ -1,8 +1,10 @@
 ---
 import ServiceLayout from '../../layouts/ServiceLayout.astro';
 import ProcessSteps from '../../components/ProcessSteps.astro';
+import BeforeAfterGallery from '../../components/BeforeAfterGallery.astro';
 import { localizedUrl } from '../../i18n/utils';
 
+const base = import.meta.env.BASE_URL;
 const url = (slug: string) => localizedUrl('es', slug);
 const title = "Lavado de Asientos Fort Lauderdale | Route95";
 const description = "Lavado de asientos en Fort Lauderdale. Elimina manchas, olores y suciedad incrustada. Servicio móvil. Llame al 754-215-2272.";
@@ -215,4 +217,14 @@ const schemas = [serviceSchema, faqSchema];
       </div>
     </aside>
   </div>
+  <BeforeAfterGallery
+    title="¿Cómo Luce el Lavado Profesional de Asientos?"
+    description="Resultados reales del servicio de lavado de asientos de Route95 en Fort Lauderdale. Limpieza profunda por extracción en vehículos reales."
+    pairs={[
+      { before: "/gallery/seat-shampooing-before-1.webp", after: "/gallery/seat-shampooing-after-1.webp", alt: "Antes y después de lavado de asientos en SUV asiento delantero en Fort Lauderdale — manchas extraídas por Route95 Mobile Car Detailing" },
+      { before: "/gallery/seat-shampooing-before-2.webp", after: "/gallery/seat-shampooing-after-2.webp", alt: "Antes y después de lavado de asientos traseros en SUV en Fort Lauderdale — limpieza profunda por extracción por Route95" },
+    ]}
+    galleryLink={`${base}es/galeria/`}
+    galleryLinkText="Ver galería completa de antes y después"
+  />
 </ServiceLayout>

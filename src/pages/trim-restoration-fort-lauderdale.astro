@@ -1,6 +1,7 @@
 ---
 import ServiceLayout from '../layouts/ServiceLayout.astro';
 import ProcessSteps from '../components/ProcessSteps.astro';
+import BeforeAfterGallery from '../components/BeforeAfterGallery.astro';
 
 const base = import.meta.env.BASE_URL;
 const title = "Trim Restoration Fort Lauderdale | Mobile Service | Route95";
@@ -204,4 +205,13 @@ const schemas = [serviceSchema, faqSchema];
       </div>
     </aside>
   </div>
+  <BeforeAfterGallery
+    title="What Does Trim Restoration Look Like?"
+    description="Real results from Route95 trim restoration service in Fort Lauderdale. Faded and damaged trim restored on actual customer vehicles."
+    pairs={[
+      { before: "/gallery/trim-restoration-before-1.webp", after: "/gallery/trim-restoration-after-1.webp", alt: "Before and after trim restoration on Toyota RAV4 rear bumper in Fort Lauderdale — faded trim restored by Route95 Mobile Car Detailing" },
+    ]}
+    galleryLink={`${base}gallery/`}
+    galleryLinkText="See full before & after gallery"
+  />
 </ServiceLayout>
