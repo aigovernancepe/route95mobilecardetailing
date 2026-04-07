@@ -6,12 +6,37 @@ const title = "Before & After Gallery | Route95";
 const description = "See real results from Route95 Mobile Car Detailing in Fort Lauderdale. Before and after photos of exterior wash, interior detail, and full packages.";
 
 const galleryItems = [
-  { service: "Complete Clean", vehicle: "Sedan", category: "Full Detail" },
-  { service: "Interior Detailing", vehicle: "SUV", category: "Interior" },
-  { service: "Hand Wash & Wax", vehicle: "Truck", category: "Exterior" },
-  { service: "Leather Cleaning", vehicle: "Sedan", category: "Interior" },
-  { service: "Premium Refresh", vehicle: "SUV", category: "Full Detail" },
-  { service: "Odor Removal", vehicle: "Sedan", category: "Interior" },
+  {
+    service: "Hand Wash",
+    vehicle: "Toyota RAV4",
+    pairs: [
+      { before: "/gallery/hand-wash-before-1.jpeg", after: "/gallery/hand-wash-after-1.jpeg" },
+      { before: "/gallery/hand-wash-before-2.jpeg", after: "/gallery/hand-wash-after-2.jpeg" },
+    ]
+  },
+  {
+    service: "Wheel Cleaning",
+    vehicle: "Porsche Cayenne",
+    pairs: [
+      { before: "/gallery/wheel-cleaning-before-1.jpeg", after: "/gallery/wheel-cleaning-after-1.jpeg" },
+      { before: "/gallery/wheel-cleaning-before-2.jpeg", after: "/gallery/wheel-cleaning-after-2.jpeg" },
+    ]
+  },
+  {
+    service: "Seat Shampooing",
+    vehicle: "SUV",
+    pairs: [
+      { before: "/gallery/seat-shampooing-before-1.jpeg", after: "/gallery/seat-shampooing-after-1.jpeg" },
+      { before: "/gallery/seat-shampooing-before-2.jpeg", after: "/gallery/seat-shampooing-after-2.jpeg" },
+    ]
+  },
+  {
+    service: "Trim Restoration",
+    vehicle: "Toyota RAV4",
+    pairs: [
+      { before: "/gallery/trim-restoration-before-1.jpeg", after: "/gallery/trim-restoration-after-1.jpeg" },
+    ]
+  },
 ];
 ---
 
@@ -45,39 +70,35 @@ const galleryItems = [
         Every vehicle we detail in South Florida faces the same enemies: UV radiation, salt air, humidity, and hard water. These before-and-after results show what professional mobile detailing can do — from basic hand washes to full paint correction and interior restoration.
       </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="space-y-12">
         {galleryItems.map((item) => (
-          <div class="bg-gray-50 rounded-xl overflow-hidden">
-            <div class="grid grid-cols-2 gap-1">
-              <div class="bg-[#0f2a4a] h-48 flex items-center justify-center">
-                <div class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto text-gray-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <span class="text-gray-400 text-sm font-semibold">Before</span>
+          <div>
+            <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">{item.service}</h3>
+            <p class="text-gray-600 text-sm mb-4">{item.vehicle}</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {item.pairs.map((pair, i) => (
+                <div class="bg-gray-50 rounded-xl overflow-hidden">
+                  <div class="grid grid-cols-2 gap-1">
+                    <div class="relative">
+                      <img src={pair.before} alt={`Before — ${item.service} on ${item.vehicle}`} class="w-full h-48 object-cover" loading="lazy" />
+                      <span class="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
+                    </div>
+                    <div class="relative">
+                      <img src={pair.after} alt={`After — ${item.service} on ${item.vehicle}`} class="w-full h-48 object-cover" loading="lazy" />
+                      <span class="absolute top-2 left-2 bg-[#0f2a4a]/80 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="bg-[#1a3a5c] h-48 flex items-center justify-center">
-                <div class="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto text-gray-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <span class="text-gray-400 text-sm font-semibold">After</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-4">
-              <h3 class="font-bold text-[#0f2a4a]">{item.service}</h3>
-              <p class="text-gray-600 text-sm">{item.vehicle} — {item.category}</p>
+              ))}
             </div>
           </div>
         ))}
       </div>
 
       <div class="mt-12 bg-gray-50 rounded-xl p-8 text-center">
-        <h3 class="text-xl font-bold text-[#0f2a4a] mb-4">Photos Coming Soon</h3>
+        <h3 class="text-xl font-bold text-[#0f2a4a] mb-4">More Categories Coming Soon</h3>
         <p class="text-gray-600 max-w-2xl mx-auto">
-          We are building our gallery with real before-and-after photos from vehicles detailed across Broward County. Every image will show actual Route95 work — no stock photos, no digital enhancement.
+          We are adding more before-and-after photos as we detail vehicles across Broward County. Check back for new categories including interior deep cleaning, odor removal, and full exterior detail.
         </p>
       </div>
     </div>

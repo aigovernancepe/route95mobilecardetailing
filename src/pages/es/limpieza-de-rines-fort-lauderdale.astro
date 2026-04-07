@@ -1,8 +1,10 @@
 ---
 import ServiceLayout from '../../layouts/ServiceLayout.astro';
 import ProcessSteps from '../../components/ProcessSteps.astro';
+import BeforeAfterGallery from '../../components/BeforeAfterGallery.astro';
 import { localizedUrl } from '../../i18n/utils';
 
+const base = import.meta.env.BASE_URL;
 const url = (slug: string) => localizedUrl('es', slug);
 const title = "Limpieza de Rines Fort Lauderdale | Servicio Movil | Route95";
 const description = "Limpieza de rines en Fort Lauderdale. Eliminación de polvo de frenos y restauración de rines. Servicio móvil. Llame al 754-215-2272.";
@@ -197,4 +199,14 @@ const schemas = [serviceSchema, faqSchema];
       </div>
     </aside>
   </div>
+  <BeforeAfterGallery
+    title="¿Cómo Luce la Limpieza Profesional de Rines?"
+    description="Resultados reales del servicio de limpieza de rines de Route95 en Fort Lauderdale. Eliminación de polvo de frenos y restauración de rines en vehículos reales."
+    pairs={[
+      { before: "/gallery/wheel-cleaning-before-1.jpeg", after: "/gallery/wheel-cleaning-after-1.jpeg", alt: "Porsche Cayenne — limpieza de rines" },
+      { before: "/gallery/wheel-cleaning-before-2.jpeg", after: "/gallery/wheel-cleaning-after-2.jpeg", alt: "Porsche Cayenne — detalle de rines" },
+    ]}
+    galleryLink={`${base}es/galeria/`}
+    galleryLinkText="Ver galería completa de antes y después"
+  />
 </ServiceLayout>

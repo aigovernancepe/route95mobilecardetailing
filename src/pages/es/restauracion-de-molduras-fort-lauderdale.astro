@@ -1,8 +1,10 @@
 ---
 import ServiceLayout from '../../layouts/ServiceLayout.astro';
 import ProcessSteps from '../../components/ProcessSteps.astro';
+import BeforeAfterGallery from '../../components/BeforeAfterGallery.astro';
 import { localizedUrl } from '../../i18n/utils';
 
+const base = import.meta.env.BASE_URL;
 const url = (slug: string) => localizedUrl('es', slug);
 const title = "Restauracion de Molduras Fort Lauderdale | Route95";
 const description = "Restauración de molduras en Fort Lauderdale. Restaure plástico negro desvanecido. Servicio móvil. Llame al 754-215-2272.";
@@ -205,4 +207,13 @@ const schemas = [serviceSchema, faqSchema];
       </div>
     </aside>
   </div>
+  <BeforeAfterGallery
+    title="¿Cómo Luce la Restauración de Molduras?"
+    description="Resultados reales del servicio de restauración de molduras de Route95 en Fort Lauderdale. Molduras desgastadas y dañadas restauradas en vehículos reales."
+    pairs={[
+      { before: "/gallery/trim-restoration-before-1.jpeg", after: "/gallery/trim-restoration-after-1.jpeg", alt: "Toyota RAV4 — restauración de moldura trasera" },
+    ]}
+    galleryLink={`${base}es/galeria/`}
+    galleryLinkText="Ver galería completa de antes y después"
+  />
 </ServiceLayout>
