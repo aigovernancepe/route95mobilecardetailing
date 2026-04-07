@@ -5,6 +5,27 @@ const base = import.meta.env.BASE_URL;
 const title = "Galeria Antes y Despues | Route95";
 const description = "Vea resultados reales del detallado movil de Route95 en Fort Lauderdale. Fotos de antes y despues de lavado exterior, detallado interior y paquetes completos.";
 
+const siteUrl = "https://route95mobilecardetailing.com";
+
+const gallerySchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Galeria de Antes y Despues — Route95 Mobile Car Detailing",
+  "description": description,
+  "url": `${siteUrl}/es/galeria/`,
+  "provider": { "@id": `${siteUrl}/#business` },
+  "image": [
+    { "@type": "ImageObject", "contentUrl": `${siteUrl}/gallery/hand-wash-before-1.webp`, "name": "Antes de lavado a mano — Toyota RAV4 en Fort Lauderdale", "encodingFormat": "image/webp" },
+    { "@type": "ImageObject", "contentUrl": `${siteUrl}/gallery/hand-wash-after-1.webp`, "name": "Despues de lavado a mano — Toyota RAV4 en Fort Lauderdale", "encodingFormat": "image/webp" },
+    { "@type": "ImageObject", "contentUrl": `${siteUrl}/gallery/wheel-cleaning-before-1.webp`, "name": "Antes de limpieza de rines — Porsche Macan en Fort Lauderdale", "encodingFormat": "image/webp" },
+    { "@type": "ImageObject", "contentUrl": `${siteUrl}/gallery/wheel-cleaning-after-1.webp`, "name": "Despues de limpieza de rines — Porsche Macan en Fort Lauderdale", "encodingFormat": "image/webp" },
+    { "@type": "ImageObject", "contentUrl": `${siteUrl}/gallery/seat-shampooing-before-1.webp`, "name": "Antes de lavado de asientos — SUV en Fort Lauderdale", "encodingFormat": "image/webp" },
+    { "@type": "ImageObject", "contentUrl": `${siteUrl}/gallery/seat-shampooing-after-1.webp`, "name": "Despues de lavado de asientos — SUV en Fort Lauderdale", "encodingFormat": "image/webp" },
+    { "@type": "ImageObject", "contentUrl": `${siteUrl}/gallery/trim-restoration-before-1.webp`, "name": "Antes de restauracion de molduras — Toyota RAV4 en Fort Lauderdale", "encodingFormat": "image/webp" },
+    { "@type": "ImageObject", "contentUrl": `${siteUrl}/gallery/trim-restoration-after-1.webp`, "name": "Despues de restauracion de molduras — Toyota RAV4 en Fort Lauderdale", "encodingFormat": "image/webp" },
+  ]
+};
+
 const galleryItems = [
   {
     service: "Lavado a Mano",
@@ -40,7 +61,7 @@ const galleryItems = [
 ];
 ---
 
-<BaseLayout title={title} description={description} currentPage="/es/galeria/">
+<BaseLayout title={title} description={description} currentPage="/es/galeria/" schema={gallerySchema}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4">
