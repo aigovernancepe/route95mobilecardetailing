@@ -10,31 +10,31 @@ const galleryItems = [
     service: "Lavado a Mano",
     vehicle: "Toyota RAV4",
     pairs: [
-      { before: "/gallery/hand-wash-before-1.jpeg", after: "/gallery/hand-wash-after-1.jpeg" },
-      { before: "/gallery/hand-wash-before-2.jpeg", after: "/gallery/hand-wash-after-2.jpeg" },
+      { before: "/gallery/hand-wash-before-1.webp", after: "/gallery/hand-wash-after-1.webp" },
+      { before: "/gallery/hand-wash-before-2.webp", after: "/gallery/hand-wash-after-2.webp" },
     ]
   },
   {
     service: "Limpieza de Rines",
     vehicle: "Porsche Cayenne",
     pairs: [
-      { before: "/gallery/wheel-cleaning-before-1.jpeg", after: "/gallery/wheel-cleaning-after-1.jpeg" },
-      { before: "/gallery/wheel-cleaning-before-2.jpeg", after: "/gallery/wheel-cleaning-after-2.jpeg" },
+      { before: "/gallery/wheel-cleaning-before-1.webp", after: "/gallery/wheel-cleaning-after-1.webp" },
+      { before: "/gallery/wheel-cleaning-before-2.webp", after: "/gallery/wheel-cleaning-after-2.webp" },
     ]
   },
   {
     service: "Lavado de Asientos",
     vehicle: "SUV",
     pairs: [
-      { before: "/gallery/seat-shampooing-before-1.jpeg", after: "/gallery/seat-shampooing-after-1.jpeg" },
-      { before: "/gallery/seat-shampooing-before-2.jpeg", after: "/gallery/seat-shampooing-after-2.jpeg" },
+      { before: "/gallery/seat-shampooing-before-1.webp", after: "/gallery/seat-shampooing-after-1.webp" },
+      { before: "/gallery/seat-shampooing-before-2.webp", after: "/gallery/seat-shampooing-after-2.webp" },
     ]
   },
   {
     service: "Restauracion de Molduras",
     vehicle: "Toyota RAV4",
     pairs: [
-      { before: "/gallery/trim-restoration-before-1.jpeg", after: "/gallery/trim-restoration-after-1.jpeg" },
+      { before: "/gallery/trim-restoration-before-1.webp", after: "/gallery/trim-restoration-after-1.webp" },
     ]
   },
 ];
@@ -80,11 +80,11 @@ const galleryItems = [
                 <div class="bg-gray-50 rounded-xl overflow-hidden">
                   <div class="grid grid-cols-2 gap-1">
                     <div class="relative">
-                      <img src={pair.before} alt={`Before — ${item.service} on ${item.vehicle}`} class="w-full h-48 object-cover" loading="lazy" />
+                      <img src={pair.before} alt={`Antes de ${item.service.toLowerCase()} — ${item.vehicle} en Fort Lauderdale, Route95 Mobile Car Detailing`} class="w-full h-48 object-cover" loading="lazy" />
                       <span class="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Antes</span>
                     </div>
                     <div class="relative">
-                      <img src={pair.after} alt={`After — ${item.service} on ${item.vehicle}`} class="w-full h-48 object-cover" loading="lazy" />
+                      <img src={pair.after} alt={`Después de ${item.service.toLowerCase()} — ${item.vehicle} en Fort Lauderdale, Route95 Mobile Car Detailing`} class="w-full h-48 object-cover" loading="lazy" />
                       <span class="absolute top-2 left-2 bg-[#0f2a4a]/80 text-white text-xs font-semibold px-2 py-1 rounded">Despues</span>
                     </div>
                   </div>

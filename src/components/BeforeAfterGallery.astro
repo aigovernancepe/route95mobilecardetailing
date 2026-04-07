@@ -24,11 +24,11 @@ const { title, description, pairs, galleryLink, galleryLinkText } = Astro.props;
       <div class="bg-gray-50 rounded-xl overflow-hidden">
         <div class="grid grid-cols-2 gap-1">
           <div class="relative">
-            <img src={pair.before} alt={`Before — ${pair.alt}`} class="w-full h-48 object-cover" loading="lazy" />
+            <img src={pair.before} alt={pair.alt} class="w-full h-48 object-cover" loading="lazy" />
             <span class="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
           </div>
           <div class="relative">
-            <img src={pair.after} alt={`After — ${pair.alt}`} class="w-full h-48 object-cover" loading="lazy" />
+            <img src={pair.after} alt={pair.alt} class="w-full h-48 object-cover" loading="lazy" />
             <span class="absolute top-2 left-2 bg-[#0f2a4a]/80 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
           </div>
         </div>
