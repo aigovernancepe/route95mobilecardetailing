@@ -88,6 +88,7 @@ export function getLocalizedNavLinks(locale: Locale) {
       { href: url('engine-bay-cleaning-fort-lauderdale'), label: t.nav.engineBayCleaning },
     ],
     upholsteryServices: [
+      { href: url('auto-upholstery-cleaning-fort-lauderdale'), label: t.nav.autoUpholsteryCleaning },
       { href: url('seat-shampooing-fort-lauderdale'), label: t.nav.seatShampooing },
       { href: url('carpet-shampooing-fort-lauderdale'), label: t.nav.carpetShampooing },
       { href: url('leather-cleaning-fort-lauderdale'), label: t.nav.leatherCleaning },
