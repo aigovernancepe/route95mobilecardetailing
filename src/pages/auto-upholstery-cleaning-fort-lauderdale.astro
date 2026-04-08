@@ -1,0 +1,349 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+
+// WhatsApp configuration
+const whatsappNumber = "17542152272";
+const whatsappMessage = "Hi! I'd like to get a quote for mobile car detailing.";
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+const title = "Auto Upholstery Cleaning Fort Lauderdale | Route95";
+const description = "Mobile auto upholstery cleaning in Fort Lauderdale. Fabric seats, leather, carpets deep cleaned on-site. Same-day available. Call 754-215-2272.";
+
+const siteUrl = "https://route95mobilecardetailing.com";
+const categorySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${siteUrl}/auto-upholstery-cleaning-fort-lauderdale/#service`,
+  "name": "Mobile Auto Upholstery Cleaning Fort Lauderdale",
+  "description": description,
+  "url": `${siteUrl}/auto-upholstery-cleaning-fort-lauderdale/`,
+  "serviceType": "Mobile Auto Upholstery Cleaning",
+  "provider": { "@id": `${siteUrl}/#business` },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "City", "name": "Dania Beach" },
+    { "@type": "City", "name": "Hollywood" },
+    { "@type": "City", "name": "Pompano Beach" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Auto Upholstery Cleaning Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seat Shampooing", "url": `${siteUrl}/seat-shampooing-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carpet Shampooing", "url": `${siteUrl}/carpet-shampooing-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leather Cleaning", "url": `${siteUrl}/leather-cleaning-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leather Conditioning", "url": `${siteUrl}/leather-conditioning-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Steam Cleaning", "url": `${siteUrl}/steam-cleaning-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Odor Removal", "url": `${siteUrl}/odor-removal-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smoke Odor Removal", "url": `${siteUrl}/smoke-odor-removal-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pet Hair Removal", "url": `${siteUrl}/pet-hair-removal-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Vacuuming", "url": `${siteUrl}/interior-vacuuming-fort-lauderdale/` }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fabric Protection", "url": `${siteUrl}/fabric-protection-fort-lauderdale/` }}
+    ]
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What Does Auto Upholstery Cleaning Include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Auto upholstery cleaning includes deep extraction of fabric seats, carpet shampooing, leather cleaning, and stain removal from all soft surfaces inside your vehicle. In Fort Lauderdale, we also treat for mildew and moisture trapped in upholstery fibers by Florida's year-round humidity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Much Does Vehicle Upholstery Cleaning Cost in Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vehicle upholstery cleaning in Fort Lauderdale ranges from $75 to $200 depending on the number of surfaces and their condition. A basic seat and carpet shampoo starts around $75. Full upholstery cleaning with leather care, stain treatment, and fabric protection runs $150-$200. Heavily stained or neglected upholstery may cost more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Often Should You Clean Car Upholstery in Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Florida's humid climate, car upholstery should be professionally cleaned every 3-4 months to prevent mildew, bacteria growth, and permanent staining. Vehicles with pets, children, or daily commuters may need cleaning every 2-3 months. Regular upholstery cleaning also preserves resale value by preventing fabric and leather deterioration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can You Remove Stains from Car Upholstery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, most car upholstery stains can be removed with professional extraction equipment and the right cleaning agents. We use oxygen-infused shampoos for fabric, pH-balanced cleaners for leather, and enzymatic treatments for organic stains like food and sweat. The sooner stains are treated, the higher the success rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Mobile Auto Upholstery Cleaning as Effective as Shop Service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mobile auto upholstery cleaning delivers the same results as shop service because we bring professional-grade hot water extractors, steam cleaners, and Chemical Guys products directly to your location. The equipment and technique are identical — the only difference is we come to you in Fort Lauderdale, saving you the trip and wait time."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": siteUrl
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Interior Car Detailing",
+      "item": `${siteUrl}/interior-car-detailing-fort-lauderdale/`
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Auto Upholstery Cleaning",
+      "item": `${siteUrl}/auto-upholstery-cleaning-fort-lauderdale/`
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description} currentPage="/auto-upholstery-cleaning-fort-lauderdale/" schema={[categorySchema, faqSchema, breadcrumbSchema]}>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Auto Upholstery Cleaning in Fort Lauderdale — Route95 Mobile Car Detailing</h1>
+      <p class="text-xl text-gray-200 max-w-3xl mb-6">
+        <strong>Mobile auto upholstery cleaning that comes to your Fort Lauderdale location. We deep clean fabric seats, leather, carpets, and remove stains and odors on-site using professional extraction equipment.</strong>
+      </p>
+      <p class="text-lg text-gray-200 max-w-3xl mb-4">
+        Florida's humidity, sand, and sun break down vehicle upholstery faster than anywhere else. Sweat soaks into fabric seats, leather dries and cracks, and mildew grows in damp carpet fibers. We bring professional upholstery cleaning directly to your home or office in Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach.
+      </p>
+      <p class="text-lg text-gray-200 max-w-3xl mb-4">
+        We use <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-white underline hover:text-[#c0c7cf]">Chemical Guys</a> interior products designed for each upholstery type — pH-balanced leather cleaners, oxygen-infused fabric shampoos, and enzymatic odor eliminators. Our hot water extraction equipment removes deep-set dirt and moisture that causes mildew in humid climates.
+      </p>
+      <p class="text-lg text-gray-200 max-w-3xl mb-8">
+        Same-day appointments often available. Call 754-215-2272.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/contact/" class="inline-flex items-center justify-center gap-2 bg-[#4da3ff] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#3d8fe0] transition-colors sm:w-64">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          Book Now
+        </a>
+        <a href="tel:+17542152272" class="btn-accent inline-flex items-center justify-center gap-2 sm:w-64">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call 754-215-2272
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Content Capsules -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4 space-y-12">
+
+      <!-- What Does Auto Upholstery Cleaning Include -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Does Auto Upholstery Cleaning Include?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Auto upholstery cleaning includes deep extraction of fabric seats, carpet shampooing, leather cleaning, and stain removal from all soft surfaces inside your vehicle. In Fort Lauderdale, we also treat for mildew and moisture trapped in upholstery fibers by Florida's year-round humidity.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Our vehicle upholstery cleaning process starts with thorough vacuuming to remove loose debris, sand, and pet hair. We then apply surface-specific cleaning agents — oxygen-infused shampoo for fabric, pH-balanced cleaner for leather — and use hot water extraction to pull contaminants from deep within the fibers. The result is upholstery that looks, feels, and smells like new.
+        </p>
+        <p class="text-gray-600 mb-4">
+          For a complete interior restoration, see our <a href={`${base}interior-car-detailing-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">interior car detailing service</a> which includes upholstery cleaning plus dashboard, console, and full cabin treatment.
+        </p>
+      </div>
+
+      <!-- Cost -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Vehicle Upholstery Cleaning Cost in Fort Lauderdale?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Vehicle upholstery cleaning in Fort Lauderdale ranges from $75 to $200 depending on the number of surfaces and their condition. A basic seat and carpet shampoo starts around $75. Full upholstery cleaning with leather care, stain treatment, and fabric protection runs $150-$200. Heavily stained or neglected upholstery may cost more.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Our mobile service includes no hidden fees — the price covers travel, equipment, water, and all <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> products. We provide exact quotes before starting so you know the cost upfront. Call 754-215-2272 for a quick estimate based on your vehicle.
+        </p>
+      </div>
+
+      <!-- How Often -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Often Should You Clean Car Upholstery in Florida?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>In Florida's humid climate, car upholstery should be professionally cleaned every 3-4 months to prevent mildew, bacteria growth, and permanent staining. Vehicles with pets, children, or daily commuters may need cleaning every 2-3 months. Regular upholstery cleaning also preserves resale value by preventing fabric and leather deterioration.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          South Florida's combination of heat, humidity, and salt air accelerates upholstery wear faster than northern climates. Moisture trapped in seat fabric breeds mold and bacteria within days. Sand tracked in from the beach acts as an abrasive, grinding down fibers every time you sit down. A regular cleaning schedule stops this cycle before permanent damage sets in.
+        </p>
+      </div>
+
+      <!-- Stain Removal -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Can You Remove Stains from Car Upholstery?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Yes, most car upholstery stains can be removed with professional extraction equipment and the right cleaning agents. We use oxygen-infused shampoos for fabric, pH-balanced cleaners for leather, and enzymatic treatments for organic stains like food and sweat. The sooner stains are treated, the higher the success rate.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Common stains we remove include coffee, food spills, ink, sunscreen, sweat marks, and pet accidents. For fabric seats, hot water extraction pulls staining agents from deep within fibers. For leather, gentle agitation with a horse hair brush lifts stains without damaging the surface finish. We follow <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">IDA</a> best practices for every material type.
+        </p>
+      </div>
+
+      <!-- Mobile vs Shop -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Is Mobile Auto Upholstery Cleaning as Effective as Shop Service?</h2>
+        <p class="text-gray-700 mb-4">
+          <strong>Mobile auto upholstery cleaning delivers the same results as shop service because we bring professional-grade hot water extractors, steam cleaners, and Chemical Guys products directly to your location. The equipment and technique are identical — the only difference is we come to you in Fort Lauderdale, saving you the trip and wait time.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Our mobile setup includes commercial extraction units, steam cleaning equipment, and a full range of surface-specific products. We carry everything needed for fabric, leather, vinyl, and carpet cleaning. You get shop-quality upholstery cleaning at your home, office, or anywhere in Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-8">Our Auto Upholstery Cleaning Services</h2>
+      <div class="space-y-12">
+
+        <!-- Seat Shampooing -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Seat Shampooing</h3>
+          <p class="text-gray-600 mb-2">
+            Deep extraction cleaning that removes stains, spills, sweat, and embedded dirt from fabric and cloth seats. We use hot water extractors and professional upholstery shampoo to restore your seats to like-new condition.
+          </p>
+          <a href={`${base}seat-shampooing-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Seat Shampooing Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Carpet Shampooing -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Carpet Shampooing</h3>
+          <p class="text-gray-600 mb-2">
+            Professional carpet extraction that pulls out ground-in dirt, sand, salt, and stains from your vehicle's carpeting and floor mats. Essential in Fort Lauderdale where sand and moisture accumulate quickly.
+          </p>
+          <a href={`${base}carpet-shampooing-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Carpet Shampooing Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Leather Cleaning -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Leather Cleaning</h3>
+          <p class="text-gray-600 mb-2">
+            pH-balanced leather cleaning that safely removes body oils, dirt, and grime from leather seats and surfaces without stripping the leather's natural moisture or causing discoloration.
+          </p>
+          <a href={`${base}leather-cleaning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Leather Cleaning Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Leather Conditioning -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Leather Conditioning</h3>
+          <p class="text-gray-600 mb-2">
+            Professional leather conditioning replenishes essential oils and creates a protective barrier against Florida's UV rays and heat cycling. Prevents cracking, fading, and premature aging of leather upholstery.
+          </p>
+          <a href={`${base}leather-conditioning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Leather Conditioning Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Steam Cleaning -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Steam Cleaning</h3>
+          <p class="text-gray-600 mb-2">
+            High-temperature steam cleaning sanitizes and deodorizes upholstery without harsh chemicals. Kills bacteria, mold spores, and dust mites while safely cleaning leather, fabric, and vinyl surfaces.
+          </p>
+          <a href={`${base}steam-cleaning-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Steam Cleaning Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Odor Removal -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Odor Removal</h3>
+          <p class="text-gray-600 mb-2">
+            Professional odor elimination that destroys odor-causing bacteria trapped in upholstery fibers rather than covering smells with fragrance. We treat food, mildew, pet, and musty odors using enzyme-based treatments.
+          </p>
+          <a href={`${base}odor-removal-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Odor Removal Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Pet Hair Removal -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Pet Hair Removal</h3>
+          <p class="text-gray-600 mb-2">
+            Thorough pet hair extraction from upholstered seats, carpets, and hard-to-reach crevices. We use specialized tools to remove embedded pet hair that regular vacuuming leaves behind. About 40% of our Fort Lauderdale clients need this service.
+          </p>
+          <a href={`${base}pet-hair-removal-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Pet Hair Removal Fort Lauderdale →
+          </a>
+        </div>
+
+        <!-- Fabric Protection -->
+        <div>
+          <h3 class="text-xl font-bold text-[#0f2a4a] mb-2">Fabric Protection</h3>
+          <p class="text-gray-600 mb-2">
+            Professional fabric protection coating that repels liquids, prevents staining, and makes future spill cleanup effortless. Applied after upholstery cleaning to keep your cloth seats and carpets protected between details.
+          </p>
+          <a href={`${base}fabric-protection-fort-lauderdale/`} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+            Learn more about Fabric Protection Fort Lauderdale →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Evidence Cluster Links -->
+  <section class="py-8">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-sm text-gray-500">
+        Products and standards we trust:
+        <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">Chemical Guys</a> ·
+        <a href="https://www.koch-chemie.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">Koch-Chemie</a> ·
+        <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">International Detailing Association (IDA)</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Book Your Upholstery Cleaning -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="border-t pt-12">
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Book Your Auto Upholstery Cleaning</h2>
+        <p class="text-gray-600 mb-4">
+          Ready for fresh, clean upholstery? We serve Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach daily from 9 AM to 6 PM. Same-day appointments often available.
+        </p>
+        <p class="text-gray-600 mb-2">
+          <strong>Call or text:</strong> <a href="tel:+17542152272" class="text-[#0f2a4a] hover:text-[#c0c7cf]">754-215-2272</a>
+        </p>
+        <p class="text-gray-600">
+          <strong>Email:</strong> <a href="mailto:contact@route95mobilecardetailing.com" class="text-[#0f2a4a] hover:text-[#c0c7cf]">contact@route95mobilecardetailing.com</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>
