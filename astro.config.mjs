@@ -14,6 +14,7 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
+      filter: (page) => !page.includes('/404/') && !page.endsWith('/404'),
       serialize(item) {
         // Homepage — highest priority
         if (item.url.match(/\.com\/$/) || item.url.match(/\.com\/es\/$/)) {
