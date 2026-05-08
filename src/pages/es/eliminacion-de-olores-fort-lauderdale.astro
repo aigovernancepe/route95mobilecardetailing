@@ -4,30 +4,65 @@ import ProcessSteps from '../../components/ProcessSteps.astro';
 import { localizedUrl } from '../../i18n/utils';
 
 const url = (slug: string) => localizedUrl('es', slug);
-const title = "Eliminación de Olores Fort Lauderdale | Route95";
-const description = "Eliminación de olores de auto en Fort Lauderdale. Elimina olores en la fuente, no solo los cubre. Servicio móvil. Llame al 754-215-2272.";
+const title = "Eliminación de Olor de Auto Fort Lauderdale | Servicio Móvil | Route95";
+const description = "Eliminación de olor de auto en Fort Lauderdale. Elimina olores de humo, mascota, hongos y comida en la fuente — no solo los cubre. Servicio móvil. Llame al 754-215-2272.";
 
 const parentCategory = {
   href: url('interior-car-detailing-fort-lauderdale'),
   title: "Detallado Interior"
 };
 
+const datePublished = "2026-02-06";
+const dateModified = "2026-05-08";
+
 const siteUrl = "https://route95mobilecardetailing.com";
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${siteUrl}/es/eliminacion-de-olores-fort-lauderdale/#webpage`,
+  "url": `${siteUrl}/es/eliminacion-de-olores-fort-lauderdale/`,
+  "name": title,
+  "description": description,
+  "inLanguage": "es-US",
+  "isPartOf": { "@id": `${siteUrl}/#website` },
+  "mainEntity": { "@id": `${siteUrl}/es/eliminacion-de-olores-fort-lauderdale/#service` },
+  "datePublished": datePublished,
+  "dateModified": dateModified
+};
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${siteUrl}/es/eliminacion-de-olores-fort-lauderdale/#service`,
-  "name": "Eliminación de Olores Fort Lauderdale",
+  "name": "Eliminación de Olor de Auto Fort Lauderdale",
+  "alternateName": ["Eliminación de Olor de Vehículo", "Eliminación de Olor a Humo de Auto"],
   "description": description,
   "url": `${siteUrl}/es/eliminacion-de-olores-fort-lauderdale/`,
   "serviceType": "Mobile Car Detailing",
+  "category": "Interior Car Detailing",
   "provider": { "@id": `${siteUrl}/#business` },
   "areaServed": [
     { "@type": "City", "name": "Fort Lauderdale" },
     { "@type": "City", "name": "Dania Beach" },
     { "@type": "City", "name": "Hollywood" },
     { "@type": "City", "name": "Pompano Beach" }
-  ]
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 75, "highPrice": 400 },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Eliminación de Olor de Auto",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Olor a Humo de Cigarrillo" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Olor a Humo de Cigarro" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Olor de Mascota" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Olor a Moho y Humedad" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Olor de Comida y Derrames" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tratamiento con Ozono para Olor de Auto" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Descontaminación de Rejillas de AC" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tratamiento Enzimático para Olores Orgánicos" } }
+    ]
+  }
 };
 
 const faqSchema = {
@@ -36,18 +71,18 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿Cuánto Cuesta la Eliminación de Olores de Auto en Fort Lauderdale?",
+      "name": "¿Cuánto Cuesta la Eliminación de Olor de Auto en Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La eliminación de olores de auto en Fort Lauderdale cuesta de $75 a $200 dependiendo de la fuente del olor y el tratamiento necesario."
+        "text": "La eliminación de olor de auto en Fort Lauderdale cuesta de $75 a $200 para olores generales (comida, hongos, accidentes de mascota) y de $200 a $400 para olor a humo intenso que requiere múltiples sesiones de ozono. El precio depende de la fuente del olor, la severidad y cuánto tiempo lleva en el vehículo."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Cuánto Tiempo Toma la Eliminación de Olores?",
+      "name": "¿Cuánto Tiempo Toma la Eliminación de Olor de Auto?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La eliminación de olores toma de 1 a 2 horas dependiendo del método de tratamiento y la severidad del olor."
+        "text": "La eliminación de olor de auto toma de 1 a 2 horas para olores generales y de 3 a 4 horas para olor a humo intenso. La eliminación de humo requiere limpieza profunda de cada superficie más una sesión de ozono, por eso toma más tiempo que tratar derrames, accidentes de mascota o humedad."
       }
     },
     {
@@ -55,122 +90,214 @@ const faqSchema = {
       "name": "¿Por Qué los Autos Desarrollan Malos Olores en Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El calor y la humedad de Florida aceleran el desarrollo de olores. La comida se descompone más rápido, la humedad produce moho y las bacterias prosperan en condiciones cálidas y húmedas."
+        "text": "El calor y la humedad de Florida aceleran cada tipo de olor de auto. La comida se descompone más rápido, la humedad produce moho y hongos, las bacterias prosperan en condiciones cálidas y húmedas, los residuos de humo se adhieren a la tela y los sistemas de AC desarrollan moho dentro del evaporador. Las siete fuentes más comunes de olor que tratamos son humo, hongos, comida, derrames, accidentes de mascotas, moho del AC y olor corporal absorbido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué Es el Tratamiento con Ozono para Olor de Auto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El tratamiento con ozono usa un generador que produce moléculas de O3. El O3 se une a las partículas de olor de humo, mascota y moho y las neutraliza a nivel molecular — destruyendo la fuente del olor en lugar de enmascararlo. El auto permanece sellado por 1 a 2 horas durante el tratamiento, luego se ventila antes de conducir. El ozono se descompone naturalmente de vuelta a oxígeno regular en 30 minutos después de que el generador se detiene."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo Eliminar el Olor a Humo de un Auto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eliminar el olor a humo de cigarrillo o cigarro de un auto requiere limpieza profunda de cada superficie (las partículas de humo cubren asientos, alfombras, techo interior, rejillas e incluso plástico duro) seguido de tratamiento con ozono. Los ambientadores solo enmascaran el humo; las partículas siguen ahí, liberando olor continuamente. Vehículos muy fumados frecuentemente necesitan dos sesiones de ozono para eliminación completa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Eliminar el Olor del Auto Aumentará el Valor de Reventa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí — eliminar olor a humo o de mascota puede aumentar el valor de reventa de un auto en $500 a $2,000 o más. El olor a humo es una de las principales razones por las que los compradores se alejan de autos usados. Florida tiene uno de los mercados de autos usados más grandes del país, y los vehículos sin olor se venden más rápido y por significativamente más que autos equivalentes con olores persistentes."
       }
     }
   ]
 };
 
-const schemas = [serviceSchema, faqSchema];
+const schemas = [webPageSchema, serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
   title={title}
   description={description}
-  h1="Eliminación de Olores Fort Lauderdale"
-  intro="La eliminación profesional de olores elimina los malos olores de su auto tratando la fuente, no solo cubriéndolos con ambientadores."
+  h1="Eliminación de Olor de Auto Fort Lauderdale"
+  intro="La eliminación profesional de olor de auto elimina los olores de humo, mascota, hongos, comida y derrames de su vehículo tratando la fuente — no solo cubriéndolos con ambientadores."
   currentPage="/es/eliminacion-de-olores-fort-lauderdale/"
   parentCategory={parentCategory}
   schema={schemas}
 >
+  <p class="text-sm text-gray-500 mb-6">
+    <time datetime={dateModified}>Última actualización: 8 de mayo de 2026</time>
+  </p>
+
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">
       <section>
         <p class="text-gray-600 mb-4">
-          Los ambientadores y aerosoles solo enmascaran los olores temporalmente. El olor siempre regresa porque la fuente todavía está ahí. La verdadera eliminación de olores significa encontrar qué está causando el olor, tratarlo directamente y eliminarlo permanentemente.
+          La eliminación de olor de auto elimina los malos olores de su vehículo tratando la fuente. Los ambientadores y aerosoles solo enmascaran los olores temporalmente — el olor siempre regresa porque las partículas siguen atrapadas en alfombras, telas, espuma y conductos de ventilación. La verdadera eliminación de olores significa encontrar qué causa el olor, tratarlo directamente y eliminarlo permanentemente.
         </p>
         <p class="text-gray-600 mb-4">
-          Llevamos nuestro servicio de eliminación de olores directamente a su hogar u oficina en cualquier lugar de Fort Lauderdale. Desde casas cerca del Boulevard Las Olas hasta apartamentos en Victoria Park, vamos a usted con equipo y productos profesionales que realmente funcionan.
+          Route95 lleva la eliminación profesional de olor de auto directamente a su hogar u oficina en cualquier lugar de Fort Lauderdale. Desde casas cerca del Boulevard Las Olas hasta apartamentos en Victoria Park, nuestro servicio móvil de detallado de autos va a usted con equipo de extracción, generador de ozono y productos profesionales que realmente funcionan.
         </p>
         <p class="text-gray-600">
-          La humedad de Florida empeora los olores del auto más que en cualquier otro lugar. La humedad alimenta las bacterias y el moho que crean los malos olores. Lo que podría ser un olor menor en el norte se convierte en un problema serio en nuestro clima.
+          La humedad de Florida empeora los olores del auto más que en cualquier otro lugar. La humedad alimenta las bacterias y el moho que crean los malos olores. Lo que podría ser un olor menor en el norte se convierte en un problema serio en nuestro clima — por eso los residentes de Fort Lauderdale terminan necesitando eliminación profesional de olor más seguido que conductores en estados más secos.
         </p>
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta la Eliminación de Olores de Auto en Fort Lauderdale?</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta la Eliminación de Olor de Auto en Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>La eliminación de olores de auto en Fort Lauderdale cuesta de $75 a $200 dependiendo de la fuente del olor y el tratamiento necesario.</strong>
+          <strong>La eliminación de olor de auto en Fort Lauderdale cuesta de $75 a $200 para olores generales (comida, hongos, accidentes de mascota) y de $200 a $400 para olor a humo intenso que requiere múltiples sesiones de ozono.</strong>
         </p>
-        <p class="text-gray-600 mb-4">
-          Los olores ligeros de comida o humedad están en el extremo inferior. Los olores severos de accidentes de mascotas, comida en descomposición o moho requieren un tratamiento más intensivo. El tratamiento con ozono para olores persistentes cuesta más pero da resultados cuando otros métodos fallan.
-        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Olor general — $75–$200</h3>
+            <p class="text-gray-600 text-sm">Comida, hongos, accidentes de mascota, olor corporal, derrames. Tratado con limpieza profunda + productos enzimáticos + (opcional) sesión de ozono.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Humo intenso — $200–$400</h3>
+            <p class="text-gray-600 text-sm">Humo de cigarrillo o cigarro. Las partículas de humo cubren cada superficie, así que el tratamiento requiere limpieza profunda + 1–2 sesiones de ozono + descontaminación de rejillas de AC.</p>
+          </div>
+        </div>
         <p class="text-gray-600">
-          Diagnosticaremos su situación y le daremos opciones antes de comenzar cualquier trabajo.
+          Diagnosticamos su situación y cotizamos antes de comenzar. Vehículos muy fumados o con contaminación severa de mascota pueden necesitar tratamiento adicional. Nuestro precio cubre todo el equipo, agua y productos — sin cargos ocultos.
         </p>
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Tiempo Toma la Eliminación de Olores?</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Tiempo Toma la Eliminación de Olor de Auto?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>La eliminación de olores toma de 1 a 2 horas dependiendo del método de tratamiento y la severidad del olor.</strong>
+          <strong>La eliminación de olor de auto toma de 1 a 2 horas para olores generales y de 3 a 4 horas para olor a humo intenso. La eliminación de humo requiere limpieza profunda de cada superficie más una sesión de ozono, por eso toma más tiempo que tratar derrames, accidentes de mascota o humedad.</strong>
         </p>
         <p class="text-gray-600 mb-4">
-          El tratamiento básico de olores implica limpiar la fuente y aplicar eliminadores de olores. Los olores más persistentes pueden necesitar tratamiento con ozono, que requiere que el auto permanezca cerrado por una hora mientras funciona la máquina de ozono. Los casos severos pueden necesitar que se repita el proceso.
+          El tratamiento básico de olor implica limpiar la fuente y aplicar eliminadores de olor. Olores orgánicos persistentes pueden necesitar una sesión de ozono, que añade 1 a 2 horas de tiempo de tratamiento con vehículo sellado. La eliminación de humo es el servicio más largo porque las partículas penetran espuma, fibras del techo interior y conductos de AC — todo lo cual necesita atención.
         </p>
         <p class="text-gray-600">
-          Su auto está listo para conducir después del tratamiento, aunque los vehículos tratados con ozono necesitan ventilarse por 15-20 minutos primero.
+          Su auto está listo para conducir después del tratamiento, aunque los vehículos tratados con ozono necesitan ventilarse por 20 a 30 minutos primero.
         </p>
       </section>
 
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Por Qué los Autos Desarrollan Malos Olores en Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>El calor y la humedad de Florida aceleran el desarrollo de olores. La comida se descompone más rápido, la humedad produce moho y las bacterias prosperan en condiciones cálidas y húmedas.</strong>
+          <strong>El calor y la humedad de Florida aceleran cada tipo de olor de auto. La comida se descompone más rápido, la humedad produce moho, las bacterias prosperan en condiciones cálidas y húmedas, los residuos de humo se adhieren a la tela y los sistemas de AC desarrollan moho dentro del evaporador.</strong>
         </p>
-        <p class="text-gray-600 mb-4">Fuentes comunes de olores en vehículos de Fort Lauderdale:</p>
+        <p class="text-gray-600 mb-4">Las siete fuentes más comunes de olor en vehículos de Fort Lauderdale:</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-2">Humo</h3>
+            <p class="text-gray-600 text-sm">Las partículas de humo de cigarrillo y cigarro cubren tela, techo interior, rejillas y superficies duras con una película de alquitrán y nicotina. El olor de auto más difícil de eliminar y el único que requiere tratamiento de $200–$400.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
             <h3 class="font-semibold text-[#0f2a4a] mb-2">Hongos</h3>
-            <p class="text-gray-600 text-sm">La humedad de la lluvia, trajes de baño mojados o la humedad queda atrapada y produce moho. Ese olor a humedad son esporas de moho.</p>
+            <p class="text-gray-600 text-sm">La humedad de la lluvia, trajes de baño mojados o la humedad queda atrapada y produce moho. Ese olor a humedad son esporas de moho liberándose del acolchado de la alfombra.</p>
           </div>
           <div class="bg-gray-50 p-4 rounded-lg">
             <h3 class="font-semibold text-[#0f2a4a] mb-2">Comida</h3>
-            <p class="text-gray-600 text-sm">Los artículos olvidados se descomponen rápido en el calor de Florida. Incluso las migas pueden atraer humedad y comenzar a oler.</p>
+            <p class="text-gray-600 text-sm">Los artículos olvidados se descomponen rápido en el calor de Florida. Incluso las migas pueden atraer humedad y comenzar a oler en días.</p>
           </div>
           <div class="bg-gray-50 p-4 rounded-lg">
             <h3 class="font-semibold text-[#0f2a4a] mb-2">Derrames</h3>
-            <p class="text-gray-600 text-sm">Las bebidas que se absorben en la alfombra o los asientos alimentan las bacterias mientras se descomponen.</p>
+            <p class="text-gray-600 text-sm">Las bebidas que se absorben en alfombra o asientos alimentan las bacterias mientras se descomponen. Café, leche y refrescos azucarados son los peores.</p>
           </div>
           <div class="bg-gray-50 p-4 rounded-lg">
             <h3 class="font-semibold text-[#0f2a4a] mb-2">Accidentes de Mascotas</h3>
-            <p class="text-gray-600 text-sm">La orina se absorbe profundamente en el acolchado de la alfombra y requiere tratamiento enzimático para eliminarse completamente.</p>
+            <p class="text-gray-600 text-sm">La orina se absorbe profundamente en el acolchado de la alfombra y requiere tratamiento enzimático para eliminarse completamente. La limpieza superficial deja el olor.</p>
           </div>
           <div class="bg-gray-50 p-4 rounded-lg">
             <h3 class="font-semibold text-[#0f2a4a] mb-2">Sistema de AC</h3>
-            <p class="text-gray-600 text-sm">El moho crece en el evaporador de su aire acondicionado, soplando aire con olor a humedad cada vez que enciende el AC.</p>
+            <p class="text-gray-600 text-sm">El moho crece en el evaporador del aire acondicionado, soplando aire con olor a humedad cada vez que enciende el AC. Se necesita tratamiento de rejillas.</p>
           </div>
           <div class="bg-gray-50 p-4 rounded-lg">
             <h3 class="font-semibold text-[#0f2a4a] mb-2">Olor Corporal</h3>
-            <p class="text-gray-600 text-sm">El sudor absorbido por los asientos con el tiempo crea un olor agrio.</p>
+            <p class="text-gray-600 text-sm">El sudor absorbido por los asientos con el tiempo crea un olor agrio — especialmente común en autos de uso diario en nuestra humedad.</p>
           </div>
         </div>
-        <p class="text-gray-600 mb-4">Señales de que necesita eliminación profesional de olores:</p>
+        <p class="text-gray-600 mb-4">Señales de que necesita eliminación profesional de olor de auto:</p>
         <ul class="list-disc list-inside text-gray-600 space-y-2">
           <li>El mal olor regresa después de limpiar o usar ambientadores</li>
           <li>No puede identificar de dónde viene el olor</li>
           <li>El olor empeora en días calurosos</li>
-          <li>Su AC sopla aire con olor a humedad</li>
+          <li>Su AC sopla aire con olor a humedad o a humo</li>
           <li>Los pasajeros comentan sobre el olor</li>
+          <li>Está preparando el vehículo para vender</li>
         </ul>
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Eliminación de Olores</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Qué Es el Tratamiento con Ozono para Olor de Auto?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El tratamiento con ozono usa un generador que produce moléculas de O3. El O3 se une a las partículas de olor de humo, mascota y moho y las neutraliza a nivel molecular — destruyendo la fuente del olor en lugar de enmascararlo.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Sellamos su vehículo y hacemos funcionar el generador de ozono por 1 a 2 horas, permitiendo que el ozono alcance cada superficie incluyendo dentro de las rejillas, debajo de los asientos y profundo en el acolchado de la tapicería y fibras del techo interior. Después del tratamiento, el ozono se descompone naturalmente de vuelta a oxígeno regular (O2) en 30 minutos — así que el auto es seguro para conducir después de un período breve de ventilación.
+        </p>
+        <p class="text-gray-600">
+          El ozono es el método más efectivo para eliminar humo de cigarrillo, olores persistentes de mascota y olores de moho que sobreviven la limpieza superficial. Es el mismo enfoque que usan las concesionarias de autos para desodorizar autos usados antes de revenderlos.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cómo Eliminar el Olor a Humo de un Auto?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Eliminar el olor a humo de cigarrillo o cigarro de un auto requiere limpieza profunda de cada superficie — las partículas de humo cubren asientos, alfombras, techo interior, rejillas e incluso plástico duro — seguido de tratamiento con ozono. Los ambientadores solo enmascaran el humo; las partículas siguen ahí, liberando olor continuamente.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">Cuando alguien fuma en un auto, cuatro cosas ocurren al mismo tiempo que explican por qué el humo es el olor más difícil de eliminar:</p>
+        <div class="space-y-3 mb-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Absorción en tela</h3>
+            <p class="text-gray-600 text-sm">Asientos, alfombras y techo interior absorben el humo profundamente en sus fibras. El olor se libera lentamente con el tiempo.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Recubrimiento de superficies</h3>
+            <p class="text-gray-600 text-sm">Una película delgada de alquitrán y nicotina cubre superficies duras — tablero, vidrios, molduras. Esto causa la película amarillo-marrón en los vidrios.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Contaminación de rejillas</h3>
+            <p class="text-gray-600 text-sm">El humo circula por su sistema de AC y cubre el evaporador y conductos. Cada vez que enciende el AC, sopla ese olor de regreso.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Penetración en espuma</h3>
+            <p class="text-gray-600 text-sm">Los cojines de los asientos y el acolchado absorben el humo que la limpieza regular no puede alcanzar. Solo el ozono o vapor extendido puede sacarlo.</p>
+          </div>
+        </div>
+        <p class="text-gray-600">
+          Vehículos muy fumados pueden necesitar dos sesiones de ozono para eliminación completa. Exposición ligera a moderada de humo se resuelve usualmente en una sola sesión combinada con detallado interior profundo.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Eliminar el Olor del Auto Aumentará el Valor de Reventa?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Sí — eliminar olor a humo o de mascota puede aumentar el valor de reventa de un auto en $500 a $2,000 o más. El olor a humo es una de las principales razones por las que los compradores se alejan de autos usados.</strong>
+        </p>
+        <p class="text-gray-600">
+          Florida tiene uno de los mercados de autos usados más grandes del país, y los vehículos sin olor se venden más rápido y por significativamente más que autos equivalentes con olores persistentes. Si está preparando para vender o entregar a cuenta un vehículo donde se ha fumado, vivido con mascotas o contaminado por derrames, la eliminación profesional de olor usualmente se paga varias veces en el precio final de venta.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Nuestro Proceso de Eliminación de Olor de Auto</h2>
         <ProcessSteps steps={[
-          { title: "Identificación de la Fuente", description: "Encontramos de dónde viene el olor. Esto determina el enfoque de tratamiento correcto." },
-          { title: "Limpieza Profunda", description: "Limpiamos el área afectada a fondo. No se pueden eliminar olores sin remover lo que los causa." },
-          { title: "Tratamiento Enzimático", description: "Para olores orgánicos como comida, accidentes de mascotas o fluidos corporales, aplicamos productos a base de enzimas que descomponen las moléculas que causan el olor." },
-          { title: "Tratamiento con Ozono", description: "Para olores persistentes, hacemos funcionar un generador de ozono dentro de su auto sellado. Las moléculas de ozono se adhieren a las partículas de olor y las neutralizan permanentemente." },
-          { title: "Tratamiento del AC", description: "Si el olor viene de su sistema de aire, tratamos el evaporador y las rejillas para matar moho y bacterias." },
-          { title: "Verificación Final", description: "Verificamos que el olor se haya eliminado antes de terminar." }
+          { title: "Identificación de la Fuente", description: "Encontramos de dónde viene el olor. Humo, mascota, hongos, comida y olores de AC requieren enfoques de tratamiento diferentes." },
+          { title: "Limpieza Interior Profunda", description: "Extraemos alfombra, lavamos asientos y limpiamos cada superficie de tela y dura. No se pueden eliminar olores sin remover lo que los causa." },
+          { title: "Tratamiento Enzimático", description: "Para olores orgánicos como comida, accidentes de mascotas o fluidos corporales, aplicamos productos a base de enzimas que descomponen las moléculas que causan el olor en la fuente." },
+          { title: "Tratamiento con Ozono", description: "Para humo, olor persistente de mascota o moho, hacemos funcionar un generador de ozono dentro de su auto sellado. Las moléculas de ozono se adhieren a las partículas de olor y las neutralizan permanentemente." },
+          { title: "Descontaminación de Rejillas de AC", description: "Si el olor viene del sistema de aire, tratamos el evaporador y las rejillas para matar moho y bacterias viviendo en los conductos del AC." },
+          { title: "Verificación Final y Ventilación", description: "Verificamos que el olor se haya eliminado antes de terminar, luego ventilamos el vehículo. Casos de humo intenso reciben una segunda sesión de ozono si es necesario." }
         ]} />
       </section>
 
       <section class="bg-gray-50 rounded-xl p-6">
         <h3 class="font-bold text-[#0f2a4a] mb-2">Nota Sobre Accidentes de Mascotas</h3>
         <p class="text-gray-600">
-          Para accidentes de mascotas, el tratamiento enzimático es esencial. La limpieza regular solo enmascara el olor temporalmente. Las proteínas de la orina se descomponen y huelen peor con el tiempo a menos que se traten con enzimas que las destruyan completamente.
+          Para accidentes de mascotas, el tratamiento enzimático es esencial. La limpieza regular solo enmascara el olor temporalmente — las proteínas de la orina se descomponen y huelen peor con el tiempo a menos que se traten con enzimas profesionales que las destruyan completamente.
         </p>
       </section>
     </div>
@@ -178,17 +305,17 @@ const schemas = [serviceSchema, faqSchema];
     <aside class="lg:col-span-1">
       <div class="sticky top-24 space-y-6">
         <div class="bg-gray-50 rounded-xl p-6">
-          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rápidos de Eliminación de Olores</h3>
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Datos Rápidos de Eliminación de Olor</h3>
           <ul class="space-y-3">
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">$75-$200 según la severidad</span>
+              <span class="text-gray-600">$75–$200 general · $200–$400 humo</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span class="text-gray-600">1-2 horas</span>
+              <span class="text-gray-600">1–2 hrs general · 3–4 hrs humo</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -206,13 +333,13 @@ const schemas = [serviceSchema, faqSchema];
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="text-gray-600">Resultados permanentes</span>
+              <span class="text-gray-600">Servicio móvil — vamos a usted</span>
             </li>
           </ul>
         </div>
 
         <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
-          <h3 class="font-bold mb-4">Reserve Eliminación de Olores</h3>
+          <h3 class="font-bold mb-4">Reservar Eliminación de Olor de Auto</h3>
           <p class="text-gray-200 text-sm mb-4">
             Citas el mismo día disponibles en todo Fort Lauderdale.
           </p>
@@ -227,10 +354,11 @@ const schemas = [serviceSchema, faqSchema];
         <div class="bg-gray-50 rounded-xl p-6">
           <h3 class="font-bold text-[#0f2a4a] mb-4">Servicios Relacionados</h3>
           <ul class="space-y-2">
-            <li><a href={url('smoke-odor-removal-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Eliminación de Olor a Humo</a></li>
+            <li><a href={url('interior-car-detailing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Detallado Interior de Auto</a></li>
             <li><a href={url('pet-hair-removal-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Eliminación de Pelo de Mascota</a></li>
             <li><a href={url('steam-cleaning-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza a Vapor</a></li>
             <li><a href={url('seat-shampooing-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Lavado de Asientos</a></li>
+            <li><a href={url('auto-upholstery-cleaning-fort-lauderdale')} class="text-gray-600 hover:text-[#c0c7cf]">Limpieza de Tapicería de Auto</a></li>
           </ul>
         </div>
       </div>
