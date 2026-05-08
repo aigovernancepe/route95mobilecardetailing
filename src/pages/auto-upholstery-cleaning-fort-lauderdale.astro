@@ -11,7 +11,25 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(w
 const title = "Auto Upholstery Cleaning Fort Lauderdale | Route95";
 const description = "Mobile auto upholstery cleaning in Fort Lauderdale. Fabric seats, leather, carpets deep cleaned on-site. Same-day available. Call 754-215-2272.";
 
+const datePublished = "2026-04-08";
+const dateModified = "2026-05-08";
+
 const siteUrl = "https://route95mobilecardetailing.com";
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${siteUrl}/auto-upholstery-cleaning-fort-lauderdale/#webpage`,
+  "url": `${siteUrl}/auto-upholstery-cleaning-fort-lauderdale/`,
+  "name": title,
+  "description": description,
+  "inLanguage": "en-US",
+  "isPartOf": { "@id": `${siteUrl}/#website` },
+  "mainEntity": { "@id": `${siteUrl}/auto-upholstery-cleaning-fort-lauderdale/#service` },
+  "datePublished": datePublished,
+  "dateModified": dateModified
+};
+
 const categorySchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -118,7 +136,7 @@ const breadcrumbSchema = {
 };
 ---
 
-<BaseLayout title={title} description={description} currentPage="/auto-upholstery-cleaning-fort-lauderdale/" schema={[categorySchema, faqSchema, breadcrumbSchema]}>
+<BaseLayout title={title} description={description} currentPage="/auto-upholstery-cleaning-fort-lauderdale/" schema={[webPageSchema, categorySchema, faqSchema, breadcrumbSchema]}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -155,6 +173,10 @@ const breadcrumbSchema = {
   <!-- FAQ Content Capsules -->
   <section class="py-12 lg:py-16">
     <div class="max-w-4xl mx-auto px-4 space-y-12">
+
+      <p class="text-sm text-gray-500 -mt-4">
+        <time datetime={dateModified}>Last updated May 8, 2026</time>
+      </p>
 
       <!-- What Does Auto Upholstery Cleaning Include -->
       <div>
