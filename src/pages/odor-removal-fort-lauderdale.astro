@@ -3,23 +3,43 @@ import ServiceLayout from '../layouts/ServiceLayout.astro';
 import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
-const title = "Odor Removal Fort Lauderdale | Mobile Service | Route95";
-const description = "Car odor removal in Fort Lauderdale. Eliminates smells at the source, not just covers them. Mobile service. Call 754-215-2272.";
+const title = "Car Odor Removal Fort Lauderdale | Mobile Service | Route95";
+const description = "Car odor removal in Fort Lauderdale. Eliminates smoke, pet, mildew, and food odors at the source — not just covers them. Mobile service. Call 754-215-2272.";
 
 const parentCategory = {
   href: `${base}interior-car-detailing-fort-lauderdale/`,
   title: "Interior Car Detailing Services"
 };
 
+const datePublished = "2026-02-02";
+const dateModified = "2026-05-08";
+
 const siteUrl = "https://route95mobilecardetailing.com";
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${siteUrl}/odor-removal-fort-lauderdale/#webpage`,
+  "url": `${siteUrl}/odor-removal-fort-lauderdale/`,
+  "name": title,
+  "description": description,
+  "inLanguage": "en-US",
+  "isPartOf": { "@id": `${siteUrl}/#website` },
+  "mainEntity": { "@id": `${siteUrl}/odor-removal-fort-lauderdale/#service` },
+  "datePublished": datePublished,
+  "dateModified": dateModified
+};
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${siteUrl}/odor-removal-fort-lauderdale/#service`,
-  "name": "Odor Removal Fort Lauderdale",
+  "name": "Car Odor Removal Fort Lauderdale",
+  "alternateName": ["Vehicle Odor Removal", "Auto Odor Removal", "Car Smoke Odor Removal"],
   "description": description,
   "url": `${siteUrl}/odor-removal-fort-lauderdale/`,
   "serviceType": "Mobile Car Detailing",
+  "category": "Interior Car Detailing",
   "provider": { "@id": `${siteUrl}/#business` },
   "areaServed": [
     { "@type": "City", "name": "Fort Lauderdale" },
@@ -27,7 +47,21 @@ const serviceSchema = {
     { "@type": "City", "name": "Hollywood" },
     { "@type": "City", "name": "Pompano Beach" }
   ],
-  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 75, "highPrice": 200 }
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 75, "highPrice": 400 },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Car Odor Removal Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cigarette Smoke Odor Removal" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cigar Smoke Smell Elimination" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pet Odor Removal" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mildew and Mold Odor Removal" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Food and Spill Odor Removal" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ozone Treatment for Car Odor" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Vent Odor Decontamination" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enzymatic Treatment for Organic Odors" } }
+    ]
+  }
 };
 
 const faqSchema = {
@@ -39,15 +73,15 @@ const faqSchema = {
       "name": "How Much Does Car Odor Removal Cost in Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Car odor removal in Fort Lauderdale costs $75 to $200 depending on the odor source and treatment needed."
+        "text": "Car odor removal in Fort Lauderdale costs $75 to $200 for general odors (food, mildew, pet accidents) and $200 to $400 for heavy smoke odor that requires multiple ozone sessions. The price depends on the odor source, severity, and how long it has been in the vehicle."
       }
     },
     {
       "@type": "Question",
-      "name": "How Long Does Odor Removal Take?",
+      "name": "How Long Does Car Odor Removal Take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Odor removal takes 1 to 2 hours depending on the treatment method and severity of the smell."
+        "text": "Car odor removal takes 1 to 2 hours for general odors and 3 to 4 hours for heavy smoke odor. Smoke removal needs deep cleaning of every surface plus an ozone session, which is why it takes longer than treating spills, pet accidents, or mildew."
       }
     },
     {
@@ -55,122 +89,222 @@ const faqSchema = {
       "name": "Why Do Cars Develop Bad Odors in Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Florida's heat and humidity accelerate odor development. Food spoils faster, moisture breeds mold, and bacteria thrive in warm, damp conditions."
+        "text": "Florida's heat and humidity accelerate every kind of car odor. Food spoils faster, moisture breeds mold and mildew, bacteria thrive in warm damp conditions, smoke residue clings to fabric, and AC systems grow mold inside the evaporator. The seven most common odor sources we treat are smoke, mildew, food, spills, pet accidents, AC system mold, and absorbed body odor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Is Ozone Treatment for Car Odor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ozone treatment uses a generator that produces O3 molecules. The O3 bonds with smoke, pet, and mildew odor particles and neutralizes them at a molecular level — destroying the odor source rather than masking it. The car is sealed for 1 to 2 hours during treatment, then aired out before driving. Ozone naturally breaks back down to regular oxygen within 30 minutes after the generator stops."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Do You Remove Smoke Odor From a Car?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Removing cigarette or cigar smoke from a car requires deep cleaning every surface (smoke particles coat seats, carpets, headliner, vents, and even hard plastic) followed by ozone treatment. Air fresheners only mask smoke; the particles are still there, releasing odor continuously. Heavily smoked vehicles often need two ozone sessions for complete elimination."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will Removing Car Odor Increase Resale Value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — removing smoke or pet odor can increase a car's resale value by $500 to $2,000 or more. Smoke smell is one of the top reasons buyers walk away from used cars. Florida has one of the largest used car markets in the country, and odor-free vehicles sell faster and for significantly more than equivalent cars with persistent smells."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do Car Detailers Do Odor Removal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — professional car detailers like Route95 offer odor removal as a dedicated service, separate from a regular detail. We use enzymatic treatments for organic odors (pet accidents, food, body fluids), hot water extraction for absorbed smells, and ozone treatment for stubborn cases like cigarette smoke. Mobile detailers bring all the equipment to your home or office in Fort Lauderdale."
       }
     }
   ]
 };
 
-const schemas = [serviceSchema, faqSchema];
+const schemas = [webPageSchema, serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
   title={title}
   description={description}
-  h1="Odor Removal Fort Lauderdale"
-  intro="Professional odor removal eliminates bad smells from your car by treating the source, not just covering it up with air fresheners."
+  h1="Car Odor Removal Fort Lauderdale"
+  intro="Professional car odor removal eliminates smoke, pet, mildew, food, and spill smells from your vehicle by treating the source — not just covering it up with air fresheners."
   currentPage="/odor-removal-fort-lauderdale/"
   parentCategory={parentCategory}
   schema={schemas}
 >
+  <p class="text-sm text-gray-500 mb-6">
+    <time datetime={dateModified}>Last updated May 8, 2026</time>
+  </p>
+
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">
       <section>
         <p class="text-gray-600 mb-4">
-          Air fresheners and sprays only mask odors temporarily. The smell always comes back because the source is still there. True odor removal means finding what's causing the smell, treating it directly, and eliminating it permanently.
+          Car odor removal eliminates bad smells from your vehicle by treating the source. Air fresheners and sprays only mask odors temporarily — the smell always comes back because the particles are still trapped in carpet, fabric, foam padding, and ventilation ducts. True odor removal means finding what's causing the smell, treating it directly, and eliminating it permanently.
         </p>
         <p class="text-gray-600 mb-4">
-          We bring our odor removal service directly to your home or office anywhere in Fort Lauderdale. From homes near Las Olas Boulevard to apartments in Victoria Park, we come to you with professional equipment and <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> odor elimination products that actually work.
+          Route95 brings professional auto odor removal directly to your home or office anywhere in Fort Lauderdale. From homes near Las Olas Boulevard to apartments in Victoria Park, our mobile car detailing service comes to you with extraction equipment, an ozone generator, and <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> odor elimination products that actually work.
         </p>
         <p class="text-gray-600">
-          Florida's humidity makes car odors worse than anywhere else. Moisture feeds the bacteria and mold that create bad smells. What might be a minor odor up north becomes a serious problem in our climate.
+          Florida's humidity makes car odors worse than anywhere else. Moisture feeds the bacteria and mold that create bad smells. What might be a minor odor up north becomes a serious problem in our climate — which is why Fort Lauderdale residents end up needing professional odor removal more often than drivers in drier states.
         </p>
       </section>
 
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Car Odor Removal Cost in Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Car odor removal in Fort Lauderdale costs $75 to $200 depending on the odor source and treatment needed.</strong>
+          <strong>Car odor removal in Fort Lauderdale costs $75 to $200 for general odors (food, mildew, pet accidents) and $200 to $400 for heavy smoke odor that requires multiple ozone sessions.</strong>
         </p>
-        <p class="text-gray-600 mb-4">
-          Light odors from food or mildew fall on the lower end. Severe odors from pet accidents, spoiled food, or mold require more intensive treatment. Ozone treatment for stubborn smells costs more but delivers results when other methods fail.
-        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">General odor — $75–$200</h3>
+            <p class="text-gray-600 text-sm">Food, mildew, pet accidents, body odor, spills. Treated with deep cleaning + enzymatic products + (optional) single ozone session.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Heavy smoke — $200–$400</h3>
+            <p class="text-gray-600 text-sm">Cigarette or cigar smoke. Smoke particles coat every surface, so treatment requires deep cleaning + 1–2 ozone sessions + AC vent decontamination.</p>
+          </div>
+        </div>
         <p class="text-gray-600">
-          We'll diagnose your situation and give you options before starting any work.
+          We diagnose your situation and quote before starting. Heavily smoked vehicles or severe pet contamination may need additional treatment. Our pricing covers all equipment, water, and Chemical Guys products — no hidden fees.
         </p>
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Long Does Odor Removal Take?</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Long Does Car Odor Removal Take?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Odor removal takes 1 to 2 hours depending on the treatment method and severity of the smell.</strong>
+          <strong>Car odor removal takes 1 to 2 hours for general odors and 3 to 4 hours for heavy smoke odor. Smoke removal needs deep cleaning of every surface plus an ozone session, which is why it takes longer than treating spills, pet accidents, or mildew.</strong>
         </p>
         <p class="text-gray-600 mb-4">
-          Basic odor treatment involves cleaning the source and applying odor eliminators. More stubborn smells may need ozone treatment, which requires the car to sit closed for an hour while the ozone machine runs. Severe cases might need the process repeated.
+          Basic odor treatment involves cleaning the source and applying odor eliminators. Stubborn organic odors may need an ozone session, which adds 1 to 2 hours of sealed-vehicle treatment time. Smoke removal is the longest service because the particles have penetrated foam padding, headliner fibers, and AC ducts — all of which need attention.
         </p>
         <p class="text-gray-600">
-          Your car is ready to drive after treatment, though ozone-treated vehicles need to air out for 15-20 minutes first.
+          Your car is ready to drive after treatment, though ozone-treated vehicles need to air out for 20 to 30 minutes first.
         </p>
       </section>
 
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Why Do Cars Develop Bad Odors in Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Florida's heat and humidity accelerate odor development. Food spoils faster, moisture breeds mold, and bacteria thrive in warm, damp conditions.</strong>
+          <strong>Florida's heat and humidity accelerate every kind of car odor. Food spoils faster, moisture breeds mold, bacteria thrive in warm damp conditions, smoke residue clings to fabric, and AC systems grow mold inside the evaporator.</strong>
         </p>
-        <p class="text-gray-600 mb-4">Common odor sources in Fort Lauderdale vehicles:</p>
+        <p class="text-gray-600 mb-4">The seven most common odor sources in Fort Lauderdale vehicles:</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-2">Smoke</h3>
+            <p class="text-gray-600 text-sm">Cigarette and cigar smoke particles coat fabric, headliner, vents, and hard surfaces with a tar/nicotine film. The hardest car odor to remove and the only one needing $200–$400 treatment.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
             <h3 class="font-semibold text-[#0f2a4a] mb-2">Mildew</h3>
-            <p class="text-gray-600 text-sm">Moisture from rain, wet swimsuits, or humidity gets trapped and grows mold. That musty smell is mildew spores.</p>
+            <p class="text-gray-600 text-sm">Moisture from rain, wet swimsuits, or humidity gets trapped and grows mold. That musty smell is mildew spores releasing from carpet padding.</p>
           </div>
           <div class="bg-gray-50 p-4 rounded-lg">
             <h3 class="font-semibold text-[#0f2a4a] mb-2">Food</h3>
-            <p class="text-gray-600 text-sm">Forgotten items spoil quickly in Florida heat. Even crumbs can attract moisture and start smelling.</p>
+            <p class="text-gray-600 text-sm">Forgotten items spoil quickly in Florida heat. Even crumbs can attract moisture and start smelling within days.</p>
           </div>
           <div class="bg-gray-50 p-4 rounded-lg">
             <h3 class="font-semibold text-[#0f2a4a] mb-2">Spills</h3>
-            <p class="text-gray-600 text-sm">Drinks that soak into carpet or seats feed bacteria as they break down.</p>
+            <p class="text-gray-600 text-sm">Drinks that soak into carpet or seats feed bacteria as they break down. Coffee, milk, and sugary sodas are the worst.</p>
           </div>
           <div class="bg-gray-50 p-4 rounded-lg">
             <h3 class="font-semibold text-[#0f2a4a] mb-2">Pet Accidents</h3>
-            <p class="text-gray-600 text-sm">Urine soaks deep into carpet padding and requires enzymatic treatment to fully eliminate.</p>
+            <p class="text-gray-600 text-sm">Urine soaks deep into carpet padding and requires enzymatic treatment to fully eliminate. Surface cleaning alone leaves the smell.</p>
           </div>
           <div class="bg-gray-50 p-4 rounded-lg">
             <h3 class="font-semibold text-[#0f2a4a] mb-2">AC System</h3>
-            <p class="text-gray-600 text-sm">Mold grows in your air conditioning evaporator, blowing musty air every time you run the AC.</p>
+            <p class="text-gray-600 text-sm">Mold grows in your air conditioning evaporator, blowing musty air every time you run the AC. Vent treatment is needed.</p>
           </div>
           <div class="bg-gray-50 p-4 rounded-lg">
             <h3 class="font-semibold text-[#0f2a4a] mb-2">Body Odor</h3>
-            <p class="text-gray-600 text-sm">Sweat absorbed by seats over time creates a sour smell.</p>
+            <p class="text-gray-600 text-sm">Sweat absorbed by seats over time creates a sour smell — especially common in daily-driver cars in our humidity.</p>
           </div>
         </div>
-        <p class="text-gray-600 mb-4">Signs you need professional odor removal:</p>
+        <p class="text-gray-600 mb-4">Signs you need professional car odor removal:</p>
         <ul class="list-disc list-inside text-gray-600 space-y-2">
           <li>Bad smell returns after cleaning or air fresheners</li>
           <li>You can't identify where the smell is coming from</li>
           <li>The odor gets worse on hot days</li>
-          <li>Your AC blows musty-smelling air</li>
+          <li>Your AC blows musty- or smoky-smelling air</li>
           <li>Passengers comment on the smell</li>
+          <li>You're preparing to sell the vehicle</li>
         </ul>
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Our Odor Removal Process</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Is Ozone Treatment for Car Odor?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Ozone treatment uses a generator that produces O3 molecules. The O3 bonds with smoke, pet, and mildew odor particles and neutralizes them at a molecular level — destroying the odor source rather than masking it.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          We seal your vehicle and run the ozone generator for 1 to 2 hours, allowing ozone to reach every surface including inside vents, under seats, and deep within upholstery padding and headliner fibers. After treatment, the ozone naturally breaks down back to regular oxygen (O2) within 30 minutes — so the car is safe to drive after a short airing-out period.
+        </p>
+        <p class="text-gray-600">
+          Ozone is the most effective method for eliminating cigarette smoke, lingering pet odors, and mold smells that survive surface cleaning. It's the same approach car dealerships use to deodorize trade-ins before reselling them.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Do You Remove Smoke Odor From a Car?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Removing cigarette or cigar smoke from a car requires deep cleaning every surface — smoke particles coat seats, carpets, headliner, vents, and even hard plastic — followed by ozone treatment. Air fresheners only mask smoke; the particles are still there, continuously releasing odor.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">When someone smokes in a car, four things happen at once that explain why smoke is the hardest odor to remove:</p>
+        <div class="space-y-3 mb-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Fabric absorption</h3>
+            <p class="text-gray-600 text-sm">Seats, carpets, and headliner absorb smoke deep into their fibers. The smell releases slowly over time.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Surface coating</h3>
+            <p class="text-gray-600 text-sm">A thin film of tar and nicotine coats hard surfaces — dashboard, windows, trim. This is what causes the yellow-brown film on glass.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Vent contamination</h3>
+            <p class="text-gray-600 text-sm">Smoke circulates through your AC system and coats the evaporator and ducts. Every time you run the AC, it blows that smell back out.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-[#0f2a4a] mb-1">Foam penetration</h3>
+            <p class="text-gray-600 text-sm">Seat cushions and padding absorb smoke that regular cleaning can't reach. Only ozone or extended steam can pull it out.</p>
+          </div>
+        </div>
+        <p class="text-gray-600">
+          Heavily smoked vehicles may need two ozone sessions for complete elimination. Light to moderate smoke exposure is usually resolved in a single session combined with a thorough interior detail.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Will Removing Car Odor Increase Resale Value?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Yes — removing smoke or pet odor can increase a car's resale value by $500 to $2,000 or more. Smoke smell is one of the top reasons buyers walk away from used cars.</strong>
+        </p>
+        <p class="text-gray-600">
+          Florida has one of the largest used car markets in the country, and odor-free vehicles sell faster and for significantly more than equivalent cars with persistent smells. If you're preparing to sell or trade in a vehicle that's been smoked in, lived in by pets, or contaminated by spills, professional odor removal usually pays for itself several times over in the final sale price.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-6">Our Car Odor Removal Process</h2>
         <ProcessSteps steps={[
-          { title: "Source Identification", description: "We find where the smell is coming from. This determines the right treatment approach." },
-          { title: "Deep Cleaning", description: "We clean the affected area thoroughly. You can't eliminate odors without removing what's causing them." },
-          { title: "Enzymatic Treatment", description: "For organic odors like food, pet accidents, or body fluids, we apply enzyme-based products that break down odor-causing molecules." },
-          { title: "Ozone Treatment", description: "For stubborn odors, we run an ozone generator inside your sealed car. Ozone molecules attach to odor particles and neutralize them permanently." },
-          { title: "AC Treatment", description: "If the smell comes from your air system, we treat the evaporator and vents to kill mold and bacteria." },
-          { title: "Final Check", description: "We verify the odor is gone before finishing." }
+          { title: "Source Identification", description: "We find where the smell is coming from. Smoke, pet, mildew, food, and AC odors all need different treatment approaches." },
+          { title: "Deep Interior Cleaning", description: "We extract carpet, shampoo seats, and clean every fabric and hard surface. You can't eliminate odors without removing what's causing them." },
+          { title: "Enzymatic Treatment", description: "For organic odors like food, pet accidents, or body fluids, we apply enzyme-based products that break down odor-causing molecules at the source." },
+          { title: "Ozone Treatment", description: "For smoke, stubborn pet odor, or mildew, we run an ozone generator inside your sealed car. Ozone molecules attach to odor particles and neutralize them permanently." },
+          { title: "AC Vent Decontamination", description: "If the smell comes from your air system, we treat the evaporator and vents to kill mold and bacteria living in the AC ductwork." },
+          { title: "Final Check and Air-Out", description: "We verify the odor is gone before finishing, then air out the vehicle. Heavy smoke cases get a second ozone session if needed." }
         ]} />
       </section>
 
       <section class="bg-gray-50 rounded-xl p-6">
         <h3 class="font-bold text-[#0f2a4a] mb-2">Pet Accident Note</h3>
         <p class="text-gray-600">
-          For pet accidents, enzymatic treatment is essential. Regular cleaning only masks the smell temporarily. The urine proteins break down and smell worse over time unless treated with professional-grade enzymes from brands like <a href="https://www.3dproducts.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">3D Products</a> that destroy them completely.
+          For pet accidents, enzymatic treatment is essential. Regular cleaning only masks the smell temporarily — urine proteins break down and smell worse over time unless treated with professional-grade enzymes from brands like <a href="https://www.3dproducts.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">3D Products</a> that destroy them completely.
         </p>
       </section>
     </div>
@@ -178,17 +312,17 @@ const schemas = [serviceSchema, faqSchema];
     <aside class="lg:col-span-1">
       <div class="sticky top-24 space-y-6">
         <div class="bg-gray-50 rounded-xl p-6">
-          <h3 class="font-bold text-[#0f2a4a] mb-4">Odor Removal Quick Facts</h3>
+          <h3 class="font-bold text-[#0f2a4a] mb-4">Car Odor Removal Quick Facts</h3>
           <ul class="space-y-3">
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">$75-$200 depending on severity</span>
+              <span class="text-gray-600">$75–$200 general · $200–$400 smoke</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span class="text-gray-600">1-2 hours</span>
+              <span class="text-gray-600">1–2 hrs general · 3–4 hrs smoke</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -206,13 +340,13 @@ const schemas = [serviceSchema, faqSchema];
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="text-gray-600">Permanent results</span>
+              <span class="text-gray-600">Mobile service — we come to you</span>
             </li>
           </ul>
         </div>
 
         <div class="bg-[#0f2a4a] rounded-xl p-6 text-white">
-          <h3 class="font-bold mb-4">Book Odor Removal</h3>
+          <h3 class="font-bold mb-4">Book Car Odor Removal</h3>
           <p class="text-gray-200 text-sm mb-4">
             Same-day appointments available throughout Fort Lauderdale.
           </p>
@@ -227,10 +361,11 @@ const schemas = [serviceSchema, faqSchema];
         <div class="bg-gray-50 rounded-xl p-6">
           <h3 class="font-bold text-[#0f2a4a] mb-4">Related Services</h3>
           <ul class="space-y-2">
-            <li><a href={`${base}smoke-odor-removal-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Smoke Odor Removal</a></li>
+            <li><a href={`${base}interior-car-detailing-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Interior Car Detailing</a></li>
             <li><a href={`${base}pet-hair-removal-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Pet Hair Removal</a></li>
             <li><a href={`${base}steam-cleaning-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Steam Cleaning</a></li>
             <li><a href={`${base}seat-shampooing-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Seat Shampooing</a></li>
+            <li><a href={`${base}auto-upholstery-cleaning-fort-lauderdale/`} class="text-gray-600 hover:text-[#c0c7cf]">Auto Upholstery Cleaning</a></li>
           </ul>
         </div>
       </div>

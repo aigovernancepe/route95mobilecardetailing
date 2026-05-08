@@ -22,7 +22,6 @@ export const slugMap: Record<string, string> = {
   'leather-conditioning-fort-lauderdale': 'acondicionamiento-de-cuero-fort-lauderdale',
   'steam-cleaning-fort-lauderdale': 'limpieza-a-vapor-fort-lauderdale',
   'odor-removal-fort-lauderdale': 'eliminacion-de-olores-fort-lauderdale',
-  'smoke-odor-removal-fort-lauderdale': 'eliminacion-de-olor-a-humo-fort-lauderdale',
   'pet-hair-removal-fort-lauderdale': 'eliminacion-de-pelo-de-mascota-fort-lauderdale',
   'interior-vacuuming-fort-lauderdale': 'aspirado-interior-fort-lauderdale',
   'dashboard-cleaning-fort-lauderdale': 'limpieza-de-tablero-fort-lauderdale',
