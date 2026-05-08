@@ -100,13 +100,6 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
-  redirects: {
-    '/chrome-polishing-fort-lauderdale/': '/car-wash-fort-lauderdale/',
-    '/es/pulido-de-cromo-fort-lauderdale/': '/es/lavado-de-autos-fort-lauderdale/',
-    '/mobile-car-detailing-fort-lauderdale/': '/car-detailing-services-fort-lauderdale/',
-    '/upholstery-cleaning-fort-lauderdale/': '/auto-upholstery-cleaning-fort-lauderdale/',
-    '/es/limpieza-de-tapiceria-fort-lauderdale/': '/es/limpieza-de-tapiceria-de-autos-fort-lauderdale/',
-  },
   vite: {
     plugins: [tailwindcss()]
   }

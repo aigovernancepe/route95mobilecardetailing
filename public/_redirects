@@ -1,0 +1,12 @@
+# Cloudflare Pages 301 redirects.
+# Single source of truth — kept here (not in astro.config.mjs) because Astro's
+# static-output `redirects:` produces meta-refresh HTML, not real 301s, and
+# Google consolidates index signals slower under meta-refresh.
+#
+# Format: from-path  to-path  status
+
+/chrome-polishing-fort-lauderdale/             /car-wash-fort-lauderdale/                              301
+/es/pulido-de-cromo-fort-lauderdale/           /es/lavado-de-autos-fort-lauderdale/                    301
+/mobile-car-detailing-fort-lauderdale/         /car-detailing-services-fort-lauderdale/                301
+/upholstery-cleaning-fort-lauderdale/          /auto-upholstery-cleaning-fort-lauderdale/              301
+/es/limpieza-de-tapiceria-fort-lauderdale/     /es/limpieza-de-tapiceria-de-autos-fort-lauderdale/     301
