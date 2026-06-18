@@ -1,0 +1,277 @@
+---
+// Booking request form — replaces the Cal.com calendar embed.
+// Submits via Web3Forms (no backend needed; static-site friendly).
+//
+// SETUP (one-time, ~2 min):
+//   1. Go to https://web3forms.com and enter Gustavo's email
+//      (contact@route95mobilecardetailing.com) to get a free Access Key.
+//   2. Paste the key below. That's it — every request emails Gustavo.
+const WEB3FORMS_ACCESS_KEY = "94ef4058-301f-40de-8ecb-19e55ac48394";
+
+interface Props {
+  lang?: "en" | "es";
+}
+const { lang = "en" } = Astro.props;
+
+const t = {
+  en: {
+    heading: "Request an Appointment",
+    intro:
+      "Tell us where and when — we'll confirm by phone or text. No upfront payment, and every add-on is optional.",
+    subject: "New appointment request — Route95",
+    name: "Full name",
+    phone: "Phone",
+    address: "Service address (street & city)",
+    addressPh: "123 Main St, Fort Lauderdale",
+    date: "Preferred date",
+    time: "Preferred time",
+    timeOpts: [
+      "Morning (9AM–12PM)",
+      "Afternoon (12–3PM)",
+      "Late afternoon (3–6PM)",
+      "Flexible",
+    ],
+    service: "Service",
+    serviceOpts: [
+      "Quick Wash — exterior refresh ($40–$60)",
+      "Fresh Start — interior + exterior ($80–$110)",
+      "Complete Clean — full detail ($140–$170)",
+      "Premium Refresh — deep detail ($400–$460)",
+      "Not sure — recommend for me",
+    ],
+    vehicle: "Vehicle type",
+    vehicleOpts: ["Sedan", "SUV / Crossover", "Truck / Van", "Other"],
+    addons: "Add-ons (optional)",
+    addonList: [
+      "Door Jambs ($20)",
+      "Vacuum Trunk ($20)",
+      "Pet Hair Removal ($25)",
+      "Floor Mat Cleaning ($25)",
+      "Bug & Tar Removal ($30)",
+      "Trim Restoration ($30)",
+      "Odor Removal ($40)",
+      "Steam Cleaning ($50)",
+      "Car Waxing (from $60)",
+      "Carpet Shampooing (from $60)",
+      "Leather Cleaning & Conditioning (from $75)",
+      "Clay Bar Treatment (from $75)",
+      "Seat Shampooing (from $75)",
+      "Engine Bay Cleaning ($75–$150)",
+    ],
+    notes: "Anything else? (gate code, special requests…)",
+    submit: "Request appointment",
+    sending: "Sending…",
+    required: "* Required",
+    success:
+      "Thanks! Your request was sent. We'll reach out shortly to confirm your appointment.",
+    error: "Something went wrong. Please call us at 754-215-2272.",
+    selectPh: "Select…",
+  },
+  es: {
+    heading: "Solicita tu cita",
+    intro:
+      "Dinos dónde y cuándo — confirmamos por teléfono o mensaje. Sin pago por adelantado, y cada adicional es opcional.",
+    subject: "Nueva solicitud de cita — Route95",
+    name: "Nombre completo",
+    phone: "Teléfono",
+    address: "Dirección del servicio (calle y ciudad)",
+    addressPh: "123 Main St, Fort Lauderdale",
+    date: "Fecha preferida",
+    time: "Hora preferida",
+    timeOpts: [
+      "Mañana (9AM–12PM)",
+      "Tarde (12–3PM)",
+      "Última hora (3–6PM)",
+      "Flexible",
+    ],
+    service: "Servicio",
+    serviceOpts: [
+      "Quick Wash — lavado exterior ($40–$60)",
+      "Fresh Start — interior + exterior ($80–$110)",
+      "Complete Clean — detallado completo ($140–$170)",
+      "Premium Refresh — detallado profundo ($400–$460)",
+      "No estoy seguro — recomiéndame",
+    ],
+    vehicle: "Tipo de vehículo",
+    vehicleOpts: ["Sedán", "SUV / Crossover", "Camioneta / Van", "Otro"],
+    addons: "Adicionales (opcional)",
+    addonList: [
+      "Marcos de Puertas ($20)",
+      "Aspirado de Cajuela ($20)",
+      "Eliminación de Pelo de Mascota ($25)",
+      "Limpieza de Tapetes ($25)",
+      "Eliminación de Insectos y Brea ($30)",
+      "Restauración de Molduras ($30)",
+      "Eliminación de Olores ($40)",
+      "Limpieza y Acondicionamiento de Cuero (desde $75)",
+      "Tratamiento con Barra de Arcilla (desde $75)",
+      "Limpieza a Vapor ($50)",
+      "Lavado de Alfombras (desde $60)",
+      "Encerado de Auto (desde $60)",
+      "Lavado de Asientos (desde $75)",
+      "Limpieza de Motor ($75–$150)",
+    ],
+    notes: "¿Algo más? (código de acceso, peticiones…)",
+    submit: "Solicitar cita",
+    sending: "Enviando…",
+    required: "* Obligatorio",
+    success:
+      "¡Gracias! Tu solicitud fue enviada. Te contactaremos pronto para confirmar tu cita.",
+    error: "Algo salió mal. Llámanos al 754-215-2272.",
+    selectPh: "Selecciona…",
+  },
+}[lang];
+
+const inputCls =
+  "w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0f2a4a] focus:ring-2 focus:ring-[#0f2a4a]/20 outline-none transition";
+const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
+---
+
+<div>
+  <h2 class="text-2xl font-bold text-[#0f2a4a] mb-2">{t.heading}</h2>
+  <p class="text-gray-600 mb-6 text-sm">{t.intro}</p>
+
+  <form
+    id="booking-form"
+    data-success={t.success}
+    data-error={t.error}
+    class="space-y-5"
+  >
+    <!-- Web3Forms config -->
+    <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+    <input type="hidden" name="subject" value={t.subject} />
+    <input type="hidden" name="from_name" value="Route95 Website" />
+    <!-- Honeypot (spam trap) — must stay empty -->
+    <input
+      type="checkbox"
+      name="botcheck"
+      tabindex="-1"
+      autocomplete="off"
+      style="display:none"
+    />
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div>
+        <label class={labelCls} for="bf-name">{t.name} *</label>
+        <input id="bf-name" class={inputCls} type="text" name={t.name} required autocomplete="name" />
+      </div>
+      <div>
+        <label class={labelCls} for="bf-phone">{t.phone} *</label>
+        <input id="bf-phone" class={inputCls} type="tel" name={t.phone} required autocomplete="tel" />
+      </div>
+    </div>
+
+    <div>
+      <label class={labelCls} for="bf-address">{t.address} *</label>
+      <input
+        id="bf-address"
+        class={inputCls}
+        type="text"
+        name={t.address}
+        placeholder={t.addressPh}
+        required
+        autocomplete="street-address"
+      />
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div>
+        <label class={labelCls} for="bf-date">{t.date} *</label>
+        <input id="bf-date" class={inputCls} type="date" name={t.date} required />
+      </div>
+      <div>
+        <label class={labelCls} for="bf-time">{t.time} *</label>
+        <select id="bf-time" class={inputCls} name={t.time} required>
+          <option value="" disabled selected>{t.selectPh}</option>
+          {t.timeOpts.map((o) => <option value={o}>{o}</option>)}
+        </select>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div>
+        <label class={labelCls} for="bf-service">{t.service} *</label>
+        <select id="bf-service" class={inputCls} name={t.service} required>
+          <option value="" disabled selected>{t.selectPh}</option>
+          {t.serviceOpts.map((o) => <option value={o}>{o}</option>)}
+        </select>
+      </div>
+      <div>
+        <label class={labelCls} for="bf-vehicle">{t.vehicle}</label>
+        <select id="bf-vehicle" class={inputCls} name={t.vehicle}>
+          <option value="" disabled selected>{t.selectPh}</option>
+          {t.vehicleOpts.map((o) => <option value={o}>{o}</option>)}
+        </select>
+      </div>
+    </div>
+
+    <fieldset>
+      <legend class={labelCls}>{t.addons}</legend>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {t.addonList.map((addon) => (
+          <label class="flex items-center gap-3 rounded-lg border border-gray-200 px-4 py-2.5 cursor-pointer hover:bg-gray-50">
+            <input
+              type="checkbox"
+              name={addon}
+              value="Yes"
+              class="h-5 w-5 flex-shrink-0 rounded border-gray-300 text-[#0f2a4a] focus:ring-[#0f2a4a]"
+            />
+            <span class="text-sm text-gray-700">{addon}</span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
+
+    <div>
+      <label class={labelCls} for="bf-notes">{t.notes}</label>
+      <textarea id="bf-notes" class={inputCls} name={t.notes} rows="3"></textarea>
+    </div>
+
+    <p class="text-xs text-gray-400">{t.required}</p>
+
+    <button
+      type="submit"
+      class="w-full bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white font-bold rounded-lg px-6 py-4 text-lg hover:opacity-95 transition disabled:opacity-60"
+    >
+      {t.submit}
+    </button>
+
+    <p id="booking-status" class="hidden" role="status" aria-live="polite"></p>
+  </form>
+</div>
+
+<script is:inline>
+  (function () {
+    var form = document.getElementById("booking-form");
+    if (!form) return;
+    var status = document.getElementById("booking-status");
+    var btn = form.querySelector('button[type="submit"]');
+    var sending = btn.textContent.trim();
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      var original = btn.textContent;
+      btn.disabled = true;
+      status.className = "hidden";
+      try {
+        var res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: new FormData(form),
+        });
+        var json = await res.json();
+        if (!json.success) throw new Error(json.message || "fail");
+        form.reset();
+        status.textContent = form.dataset.success;
+        status.className =
+          "mt-4 rounded-lg p-4 text-sm bg-green-50 text-green-800 border border-green-200";
+      } catch (err) {
+        status.textContent = form.dataset.error;
+        status.className =
+          "mt-4 rounded-lg p-4 text-sm bg-red-50 text-red-800 border border-red-200";
+      } finally {
+        btn.disabled = false;
+        btn.textContent = original;
+      }
+    });
+  })();
+</script>
