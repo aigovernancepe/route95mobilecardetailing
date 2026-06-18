@@ -42,7 +42,22 @@ const t = {
     vehicle: "Vehicle type",
     vehicleOpts: ["Sedan", "SUV / Crossover", "Truck / Van", "Other"],
     addons: "Add-ons (optional)",
-    addonEngine: "Engine Bay Cleaning (+$75–$150)",
+    addonList: [
+      "Door Jambs ($20)",
+      "Vacuum Trunk ($20)",
+      "Pet Hair Removal ($25)",
+      "Floor Mat Cleaning ($25)",
+      "Bug & Tar Removal ($30)",
+      "Trim Restoration ($30)",
+      "Odor Removal ($40)",
+      "Steam Cleaning ($50)",
+      "Car Waxing (from $60)",
+      "Carpet Shampooing (from $60)",
+      "Leather Cleaning & Conditioning (from $75)",
+      "Clay Bar Treatment (from $75)",
+      "Seat Shampooing (from $75)",
+      "Engine Bay Cleaning ($75–$150)",
+    ],
     notes: "Anything else? (gate code, special requests…)",
     submit: "Request appointment",
     sending: "Sending…",
@@ -80,7 +95,21 @@ const t = {
     vehicle: "Tipo de vehículo",
     vehicleOpts: ["Sedán", "SUV / Crossover", "Camioneta / Van", "Otro"],
     addons: "Adicionales (opcional)",
-    addonEngine: "Limpieza de motor (+$75–$150)",
+    addonList: [
+      "Marcos de Puertas ($20)",
+      "Aspirado de Cajuela ($20)",
+      "Eliminación de Pelo de Mascota ($25)",
+      "Limpieza de Tapetes ($25)",
+      "Eliminación de Insectos y Brea ($30)",
+      "Restauración de Molduras ($30)",
+      "Eliminación de Olores ($40)",
+      "Acondicionamiento de Cuero ($40)",
+      "Limpieza a Vapor ($50)",
+      "Lavado de Alfombras (desde $60)",
+      "Encerado de Auto (desde $60)",
+      "Lavado de Asientos (desde $75)",
+      "Limpieza de Motor ($75–$150)",
+    ],
     notes: "¿Algo más? (código de acceso, peticiones…)",
     submit: "Solicitar cita",
     sending: "Enviando…",
@@ -177,15 +206,19 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
 
     <fieldset>
       <legend class={labelCls}>{t.addons}</legend>
-      <label class="flex items-center gap-3 rounded-lg border border-gray-200 px-4 py-3 cursor-pointer hover:bg-gray-50">
-        <input
-          type="checkbox"
-          name={t.addonEngine}
-          value="Yes"
-          class="h-5 w-5 rounded border-gray-300 text-[#0f2a4a] focus:ring-[#0f2a4a]"
-        />
-        <span class="text-gray-700">{t.addonEngine}</span>
-      </label>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {t.addonList.map((addon) => (
+          <label class="flex items-center gap-3 rounded-lg border border-gray-200 px-4 py-2.5 cursor-pointer hover:bg-gray-50">
+            <input
+              type="checkbox"
+              name={addon}
+              value="Yes"
+              class="h-5 w-5 flex-shrink-0 rounded border-gray-300 text-[#0f2a4a] focus:ring-[#0f2a4a]"
+            />
+            <span class="text-sm text-gray-700">{addon}</span>
+          </label>
+        ))}
+      </div>
     </fieldset>
 
     <div>
