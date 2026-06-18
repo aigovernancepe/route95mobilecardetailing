@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BookingForm from '../../components/BookingForm.astro';
 import { localizedUrl } from '../../i18n/utils';
 
 const title = "Contacto | Route95 Mobile Car Detailing";
@@ -35,52 +36,8 @@ const contactPageSchema = {
   <section class="py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Cal.com Booking Embed -->
-        <div>
-          <h2 class="text-2xl font-bold text-[#0f2a4a] mb-2">Reserva una Cita</h2>
-          <p class="text-gray-600 mb-6 text-sm">
-            Selecciona un servicio y elige un horario. Todas las reservas requieren confirmación — nos comunicaremos para finalizar los detalles.
-          </p>
-          <div id="cal-booking-embed" style="width:100%; min-height:700px; overflow:auto;"></div>
-
-          <script is:inline>
-            (function (C, A, L) {
-              let p = function (a, ar) { a.q.push(ar); };
-              let d = C.document;
-              C.Cal = C.Cal || function () {
-                let cal = C.Cal; let ar = arguments;
-                if (!cal.loaded) {
-                  cal.ns = {}; cal.q = cal.q || [];
-                  d.head.appendChild(d.createElement("script")).src = A;
-                  cal.loaded = true;
-                }
-                if (ar[0] === L) {
-                  const api = function () { p(api, arguments); };
-                  const namespace = ar[1]; api.q = api.q || [];
-                  if (typeof namespace === "string") {
-                    cal.ns[namespace] = cal.ns[namespace] || api;
-                    p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]);
-                  } else p(cal, ar);
-                  return;
-                }
-                p(cal, ar);
-              };
-            })(window, "https://app.cal.com/embed/embed.js", "init");
-
-            Cal("init", { origin: "https://app.cal.com" });
-
-            Cal("inline", {
-              elementOrSelector: "#cal-booking-embed",
-              calLink: "route95mobilecardetailingcom",
-              layout: "month_view"
-            });
-
-            Cal("ui", {
-              styles: { branding: { brandColor: "#0f2a4a" } },
-              hideEventTypeDetails: false
-            });
-          </script>
-        </div>
+        <!-- Booking Request Form -->
+        <BookingForm lang="es" />
 
         <!-- Contact Info -->
         <div>
