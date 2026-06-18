@@ -9,7 +9,7 @@ const whatsappNumber = "17542152272";
 const whatsappMessage = "¡Hola! Me gustaría obtener una cotización para detallado de auto a domicilio.";
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-const title = "Lavado de Autos Fort Lauderdale | Servicio Móvil | Route95";
+const title = "Lavado de Autos a Domicilio Fort Lauderdale | Route95";
 const description = "Lavado de autos a domicilio en Fort Lauderdale. Vamos a tu casa u oficina. Lavado a mano, encerado, barra de arcilla, limpieza de rines.";
 
 const siteUrl = "https://route95mobilecardetailing.com";
@@ -49,6 +49,38 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Cuesta un Lavado de Autos a Domicilio en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un lavado de autos a domicilio en Fort Lauderdale cuesta desde $30, y un lavado a mano exterior completo va de $30 a $50 según el tamaño de tu vehículo. El precio incluye que llevemos toda el agua y el equipo a tu casa u oficina — sin cargos sorpresa ni filas en el autolavado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto Tiempo Tarda un Lavado de Autos a Domicilio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un lavado de autos a domicilio tarda entre 45 minutos y 2 horas según el tamaño del vehículo y los servicios elegidos. Un lavado a mano exterior con secado es lo más rápido; agregar encerado, barra de arcilla o limpieza de rines extiende el servicio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito Estar Presente o Proveer Agua para el Lavado a Domicilio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No necesitas proveer nada ni estar presente todo el tiempo. Nuestro servicio móvil de lavado de autos (mobile car wash) llega con toda el agua y el equipo a tu casa u oficina. Solo necesitamos acceso a tu vehículo y un espacio para trabajar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué Productos se Utilizan en el Lavado de Autos a Domicilio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usamos productos premium profesionales: jabón de pH balanceado Chemical Guys en un sistema de dos cubetas, cera de carnauba Meguiar's y limpiadores de rines seguros para cromo y aluminio."
+      }
+    },
     {
       "@type": "Question",
       "name": "¿Qué Incluye un Lavado a Mano a Domicilio en Fort Lauderdale?",
@@ -97,7 +129,7 @@ const faqSchema = {
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Lavado de Autos Fort Lauderdale</h1>
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Lavado de Autos a Domicilio Fort Lauderdale</h1>
       <p class="text-xl text-gray-200 max-w-3xl mb-6">
         <strong>Lavado de autos a domicilio que va a tu casa u oficina en Fort Lauderdale. Llevamos toda el agua y el equipo — tú no mueves un dedo.</strong>
       </p>
@@ -130,6 +162,53 @@ const faqSchema = {
   <!-- Services Content -->
   <section class="py-12 lg:py-16">
     <div class="max-w-4xl mx-auto px-4 space-y-12">
+
+      <!-- Pricing -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta un Lavado de Autos a Domicilio en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Un lavado de autos a domicilio en Fort Lauderdale cuesta desde $30, y un lavado a mano exterior completo va de $30 a $50 según el tamaño de tu vehículo. El precio incluye que llevemos toda el agua y el equipo a tu casa u oficina — sin cargos sorpresa ni filas en el autolavado.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Los SUV, camionetas y vehículos más grandes se ubican en el extremo superior del rango. Agregar encerado, barra de arcilla o limpieza de rines tiene un costo adicional que confirmamos antes de empezar.
+        </p>
+        <a href={localizedUrl('es', 'precios-detallado-movil-fort-lauderdale')} class="text-[#0f2a4a] font-medium hover:text-[#c0c7cf] transition-colors">
+          Ver Precios de Detallado Móvil Fort Lauderdale →
+        </a>
+      </div>
+
+      <!-- Duration -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Tiempo Tarda un Lavado de Autos a Domicilio?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Un lavado de autos a domicilio tarda entre 45 minutos y 2 horas según el tamaño del vehículo y los servicios elegidos. Un lavado a mano exterior con secado es lo más rápido; agregar encerado, barra de arcilla o limpieza de rines extiende el servicio.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Trabajamos en tu ubicación en Fort Lauderdale, Dania Beach, Hollywood o Pompano Beach, así que no pierdes tiempo manejando a un autolavado ni haciendo fila. Puedes seguir con tu día mientras lavamos.
+        </p>
+      </div>
+
+      <!-- What you need / presence -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Necesito Estar Presente o Proveer Agua para el Lavado a Domicilio?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>No necesitas proveer nada ni estar presente todo el tiempo. Nuestro servicio móvil de lavado de autos (mobile car wash) llega con toda el agua y el equipo a tu casa u oficina. Solo necesitamos acceso a tu vehículo y un espacio para trabajar.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Muchos clientes nos dejan las llaves y siguen con su día — trabajamos en la entrada de tu casa, el estacionamiento de tu oficina o donde te sea conveniente. Coordinamos por teléfono o texto al 754-215-2272.
+        </p>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Qué Productos se Utilizan en el Lavado de Autos a Domicilio?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Usamos productos premium profesionales: jabón de pH balanceado <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys</a> en un sistema de dos cubetas, cera de carnauba <a href="https://www.meguiars.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Meguiar's</a> y limpiadores de rines seguros para cromo y aluminio.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          Estos productos levantan la suciedad de la superficie sin rayar la pintura, algo clave para acabados oscuros y vehículos de lujo como Mercedes, BMW y Porsche donde las marcas de remolino se notan fácilmente.
+        </p>
+      </div>
 
       <!-- Hand Wash -->
       <div>
