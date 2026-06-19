@@ -1,55 +1,78 @@
 // Cloudflare Pages Function — POST /api/appointment
 //
-// Handles a booking request from BookingForm.astro. Two jobs per request:
+// Handles a booking from BookingForm.astro. Two jobs per request:
 //   1. EMAIL (must-succeed): forwards to Web3Forms so Gustavo always gets the
-//      notification at contact@route95mobilecardetailing.com — same as before.
+//      notification at contact@route95mobilecardetailing.com.
 //   2. CALENDAR (best-effort): creates a TENTATIVE event in Gustavo's Google
-//      Calendar (route95.cw@gmail.com) via the Google Calendar API, so every
-//      request also shows up on his phone. If the calendar step fails or the
-//      Google credentials aren't set yet, the email still goes out — no request
-//      is ever lost.
+//      Calendar via the Calendar API. If it fails or the Google creds aren't
+//      set, the email still goes out — no request is ever lost.
 //
-// Phase 1 (this file): customer picks a coarse time window (morning / afternoon
-// / late afternoon / flexible) → we drop a tentative block on that window.
-// Phase 2 (later): real slot picker driven by service duration + FreeBusy. The
-// helpers below (getAccessToken / createEvent) are reused as-is for that.
+// Time handling:
+//   • Phase 2 — customer picked an exact slot (data.startTime "HH:MM"): event
+//     spans [startTime, startTime + estimated duration].
+//   • Fallback — no slot (closed day / fully booked / availability API down):
+//     all-day tentative event flagged as "no time chosen".
 //
-// ── Required Cloudflare env vars (Settings → Environment variables) ──
-//   GOOGLE_SA_EMAIL        service-account email (…@….iam.gserviceaccount.com)
-//   GOOGLE_SA_PRIVATE_KEY  service-account private key (PEM; \n or real newlines)
-//   GOOGLE_CALENDAR_ID     route95.cw@gmail.com  (calendar shared w/ the SA,
-//                          permission "Make changes to events")
-//   WEB3FORMS_ACCESS_KEY   Web3Forms access key (optional; falls back to the
-//                          existing public key so email keeps working pre-setup)
+// Labels (service / add-ons / vehicle) are resolved server-side from stable
+// keys via src/config/booking.mjs, so they stay correct in EN and ES.
+//
+// ── Required Cloudflare env vars ──
+//   GOOGLE_SA_EMAIL, GOOGLE_SA_PRIVATE_KEY, GOOGLE_CALENDAR_ID,
+//   WEB3FORMS_ACCESS_KEY (optional; falls back to the existing public key).
 
-const TZ = "America/New_York";
+import {
+  SERVICES,
+  ADDONS,
+  VEHICLES,
+  serviceMinutes,
+  labelOf,
+  validAddons,
+  AVAILABILITY,
+} from "../../src/config/booking.mjs";
+import { getAccessToken } from "./_google.js";
+import { addMinutes } from "./_time.js";
 
-// Coarse time windows → [start, end] local clock times.
-const WINDOWS = {
-  morning: ["09:00:00", "12:00:00"],
-  afternoon: ["12:00:00", "15:00:00"],
-  late: ["15:00:00", "18:00:00"],
-  // "flexible" (and anything unknown) → all-day event, handled below.
-};
+const TZ = AVAILABILITY.timeZone;
 
 export async function onRequestPost(context) {
   const { request, env } = context;
 
-  let data;
+  let body;
   try {
-    data = await request.json();
+    body = await request.json();
   } catch {
     return json({ success: false, message: "Bad request" }, 400);
   }
 
   // Honeypot: a real user never checks this. Pretend success, do nothing.
-  if (data.botcheck) return json({ success: true });
+  if (body.botcheck) return json({ success: true });
 
-  if (!data.name || !data.phone || !data.address || !data.date) {
+  if (!body.name || !body.phone || !body.address || !body.date) {
     return json({ success: false, message: "Missing required fields" }, 422);
   }
 
-  // 1) Email — the reliable path. Awaited; its result decides overall success.
+  const lang = body.lang === "es" ? "es" : "en";
+  // Trust the server config, not the client: drop add-ons not offered with this service.
+  const addonKeys = validAddons(
+    body.serviceKey || "",
+    Array.isArray(body.addonKeys) ? body.addonKeys : []
+  );
+  const data = {
+    lang,
+    name: body.name,
+    phone: body.phone,
+    address: body.address,
+    date: body.date,
+    startTime: /^\d{2}:\d{2}$/.test(body.startTime || "") ? body.startTime : "",
+    notes: body.notes || "",
+    serviceKey: body.serviceKey || "",
+    serviceLabel: labelOf(SERVICES, body.serviceKey, lang) || "—",
+    vehicleLabel: labelOf(VEHICLES, body.vehicleKey, lang),
+    addonLabels: addonKeys.map((k) => labelOf(ADDONS, k, lang)).filter(Boolean),
+    minutes: serviceMinutes(body.serviceKey, addonKeys),
+  };
+
+  // 1) Email — reliable path. Awaited; its result decides overall success.
   let emailed = false;
   try {
     emailed = await sendEmail(env, data);
@@ -81,6 +104,10 @@ async function sendEmail(env, data) {
       ? "Nueva solicitud de cita — Route95"
       : "New appointment request — Route95";
 
+  const when = data.startTime
+    ? `${data.date} ${data.startTime}–${addMinutes(data.startTime, data.minutes)} (~${data.minutes} min)`
+    : `${data.date} (no specific time chosen)`;
+
   const payload = {
     access_key: key,
     subject,
@@ -88,14 +115,10 @@ async function sendEmail(env, data) {
     Name: data.name,
     Phone: data.phone,
     Address: data.address,
-    Service: data.serviceLabel || "—",
+    Service: data.serviceLabel,
     Vehicle: data.vehicleLabel || "—",
-    "Preferred date": data.date,
-    "Preferred time": data.timeLabel || "—",
-    "Add-ons":
-      Array.isArray(data.addons) && data.addons.length
-        ? data.addons.join(", ")
-        : "—",
+    When: when,
+    "Add-ons": data.addonLabels.length ? data.addonLabels.join(", ") : "—",
     Notes: data.notes || "—",
   };
 
@@ -119,28 +142,27 @@ async function createEvent(env, token, data) {
     `Name: ${data.name}`,
     `Phone: ${data.phone}`,
     `Address: ${data.address}`,
-    `Service: ${data.serviceLabel || "—"}`,
+    `Service: ${data.serviceLabel}`,
     data.vehicleLabel ? `Vehicle: ${data.vehicleLabel}` : null,
-    Array.isArray(data.addons) && data.addons.length
-      ? `Add-ons: ${data.addons.join(", ")}`
-      : null,
-    `Preferred time: ${data.timeLabel || "—"}`,
+    data.addonLabels.length ? `Add-ons: ${data.addonLabels.join(", ")}` : null,
+    `Estimated duration: ~${data.minutes} min`,
     data.notes ? `Notes: ${data.notes}` : null,
   ].filter(Boolean);
 
   const event = {
-    summary: `📋 REQUEST: ${data.serviceLabel || "Detail"} — ${data.name}`,
+    summary: `📋 REQUEST: ${data.serviceLabel} — ${data.name}`,
     location: data.address,
     description: descLines.join("\n"),
     status: "tentative",
   };
 
-  const win = WINDOWS[data.timeKey];
-  if (win) {
-    event.start = { dateTime: `${data.date}T${win[0]}`, timeZone: TZ };
-    event.end = { dateTime: `${data.date}T${win[1]}`, timeZone: TZ };
+  if (data.startTime) {
+    const end = addMinutes(data.startTime, data.minutes);
+    // dateTime without offset + explicit timeZone → Google resolves DST itself.
+    event.start = { dateTime: `${data.date}T${data.startTime}:00`, timeZone: TZ };
+    event.end = { dateTime: `${data.date}T${end}:00`, timeZone: TZ };
   } else {
-    // Flexible / unknown → all-day. All-day end date is exclusive.
+    // No slot chosen → all-day request. All-day end date is exclusive.
     event.start = { date: data.date };
     event.end = { date: nextDay(data.date) };
   }
@@ -161,53 +183,6 @@ async function createEvent(env, token, data) {
   return res.ok;
 }
 
-// ── Service-account OAuth2 (JWT bearer) → access token ──
-async function getAccessToken(env) {
-  const email = env.GOOGLE_SA_EMAIL;
-  const rawKey = env.GOOGLE_SA_PRIVATE_KEY;
-  if (!email || !rawKey) return null;
-  const pem = rawKey.replace(/\\n/g, "\n");
-
-  const now = Math.floor(Date.now() / 1000);
-  const header = { alg: "RS256", typ: "JWT" };
-  const claim = {
-    iss: email,
-    scope: "https://www.googleapis.com/auth/calendar.events",
-    aud: "https://oauth2.googleapis.com/token",
-    iat: now,
-    exp: now + 3600,
-  };
-
-  const unsigned =
-    b64urlStr(JSON.stringify(header)) + "." + b64urlStr(JSON.stringify(claim));
-
-  const cryptoKey = await crypto.subtle.importKey(
-    "pkcs8",
-    pemToBuffer(pem),
-    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
-    false,
-    ["sign"]
-  );
-  const sig = await crypto.subtle.sign(
-    "RSASSA-PKCS1-v1_5",
-    cryptoKey,
-    new TextEncoder().encode(unsigned)
-  );
-  const jwt = unsigned + "." + b64urlBytes(sig);
-
-  const res = await fetch("https://oauth2.googleapis.com/token", {
-    method: "POST",
-    headers: { "content-type": "application/x-www-form-urlencoded" },
-    body:
-      "grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=" +
-      encodeURIComponent(jwt),
-  });
-  if (!res.ok) return null;
-  const j = await res.json().catch(() => ({}));
-  return j.access_token || null;
-}
-
-// ── helpers ──
 function json(obj, status) {
   return new Response(JSON.stringify(obj), {
     status: status || 200,
@@ -219,29 +194,4 @@ function nextDay(d) {
   const dt = new Date(`${d}T00:00:00Z`);
   dt.setUTCDate(dt.getUTCDate() + 1);
   return dt.toISOString().slice(0, 10);
-}
-
-function b64urlStr(s) {
-  return btoa(unescape(encodeURIComponent(s)))
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/, "");
-}
-
-function b64urlBytes(buf) {
-  const arr = new Uint8Array(buf);
-  let bin = "";
-  for (let i = 0; i < arr.length; i++) bin += String.fromCharCode(arr[i]);
-  return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-}
-
-function pemToBuffer(pem) {
-  const b64 = pem
-    .replace(/-----BEGIN [^-]+-----/, "")
-    .replace(/-----END [^-]+-----/, "")
-    .replace(/\s+/g, "");
-  const bin = atob(b64);
-  const buf = new Uint8Array(bin.length);
-  for (let i = 0; i < bin.length; i++) buf[i] = bin.charCodeAt(i);
-  return buf.buffer;
 }
