@@ -12,7 +12,7 @@ const parentCategory = {
 };
 
 const datePublished = "2026-02-02";
-const dateModified = "2026-05-08";
+const dateModified = "2026-06-19";
 
 const siteUrl = "https://route95mobilecardetailing.com";
 
@@ -48,8 +48,8 @@ const serviceSchema = {
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
-    "lowPrice": 75,
-    "highPrice": 150
+    "lowPrice": 50,
+    "highPrice": 80
   }
 };
 
@@ -62,7 +62,7 @@ const faqSchema = {
       "name": "How Much Does Engine Bay Cleaning Cost in Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Engine bay cleaning in Fort Lauderdale costs $75 to $150 depending on engine size and level of buildup."
+        "text": "Engine bay cleaning in Fort Lauderdale is $50 for a hand wash or $80 for a steam clean, depending on engine size and level of buildup."
       }
     },
     {
@@ -105,7 +105,7 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
   schema={schemas}
 >
   <p class="text-sm text-gray-500 mb-6">
-    <time datetime={dateModified}>Last updated May 8, 2026</time>
+    <time datetime={dateModified}>Last updated June 19, 2026</time>
   </p>
 
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -125,10 +125,10 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Engine Bay Cleaning Cost in Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Engine bay cleaning in Fort Lauderdale costs $75 to $150 depending on engine size and level of buildup.</strong>
+          <strong>Engine bay cleaning in Fort Lauderdale is $50 for a hand wash or $80 for a steam clean, depending on engine size and level of buildup.</strong>
         </p>
         <p class="text-gray-600">
-          A regularly maintained engine bay with light dust falls at the lower end. Engines with heavy grease buildup, leaked fluids, or years of neglect require more product and labor. We quote based on your vehicle's condition.
+          The $50 hand wash covers degreaser, agitation, and a low-pressure rinse — ideal for a regularly maintained engine bay. The $80 steam clean uses pressurized steam to sanitize and reach the tight areas where heavy grease hides, making it the better choice for engines with years of buildup or leaked fluids.
         </p>
       </section>
 
@@ -190,7 +190,7 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
           <ul class="space-y-3">
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">$75-$150 depending on condition</span>
+              <span class="text-gray-600">$50 hand wash / $80 steam</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

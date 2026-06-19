@@ -13,7 +13,7 @@ const parentCategory = {
 };
 
 const datePublished = "2026-02-17";
-const dateModified = "2026-05-08";
+const dateModified = "2026-06-19";
 
 const siteUrl = "https://route95mobilecardetailing.com";
 
@@ -49,8 +49,8 @@ const serviceSchema = {
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
-    "lowPrice": 75,
-    "highPrice": 150
+    "lowPrice": 50,
+    "highPrice": 80
   }
 };
 
@@ -63,7 +63,7 @@ const faqSchema = {
       "name": "Cuánto Cuesta la Limpieza de Motor en Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La limpieza de motor en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamaño del motor y el nivel de acumulación."
+        "text": "La limpieza de motor en Fort Lauderdale es $50 por lavado a mano y $80 por lavado a vapor, dependiendo del tamaño del motor y el nivel de acumulación."
       }
     },
     {
@@ -98,7 +98,7 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
   schema={schemas}
 >
   <p class="text-sm text-gray-500 mb-6">
-    <time datetime={dateModified}>Última actualización: 8 de mayo de 2026</time>
+    <time datetime={dateModified}>Última actualización: 19 de junio de 2026</time>
   </p>
 
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -118,10 +118,10 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuánto Cuesta la Limpieza de Motor en Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>La limpieza de motor en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamaño del motor y el nivel de acumulación.</strong>
+          <strong>La limpieza de motor en Fort Lauderdale es $50 por lavado a mano y $80 por lavado a vapor, dependiendo del tamaño del motor y el nivel de acumulación.</strong>
         </p>
         <p class="text-gray-600">
-          Un motor mantenido regularmente con polvo ligero está en el rango inferior. Motores con acumulación pesada de grasa, fluidos derramados o años de abandono requieren más producto y trabajo. Cotizamos según la condición de su vehículo.
+          El lavado a mano de $50 incluye desengrasante, agitación y enjuague a baja presión — ideal para un motor mantenido regularmente. El lavado a vapor de $80 usa vapor a presión para desinfectar y alcanzar las áreas estrechas donde se esconde la grasa pesada, siendo la mejor opción para motores con años de acumulación o fluidos derramados.
         </p>
       </section>
 
@@ -173,7 +173,7 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
           <ul class="space-y-3">
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">$75-$150 según condición</span>
+              <span class="text-gray-600">$50 a mano / $80 a vapor</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
