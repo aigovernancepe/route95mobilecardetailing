@@ -4,8 +4,8 @@ import ProcessSteps from '../../components/ProcessSteps.astro';
 import { localizedUrl } from '../../i18n/utils';
 
 const url = (slug: string) => localizedUrl('es', slug);
-const title = "Encerado de Autos Fort Lauderdale | Servicio Movil | Route95";
-const description = "Encerado de autos móvil en Fort Lauderdale. Protección con cera de carnauba contra el sol de Florida. ¡Vamos a usted! Llame al 754-215-2272.";
+const title = "Encerado de Autos a Domicilio Fort Lauderdale | Route95";
+const description = "Encerado de autos a domicilio en Fort Lauderdale con cera de carnauba contra el sol de Florida. Vamos a tu casa u oficina. Llama al 754-215-2272.";
 
 const parentCategory = {
   href: url('car-wash-fort-lauderdale'),
@@ -17,7 +17,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${siteUrl}/es/encerado-de-autos-fort-lauderdale/#service`,
-  "name": "Encerado de Autos Fort Lauderdale",
+  "name": "Encerado de Autos a Domicilio Fort Lauderdale",
   "description": description,
   "url": `${siteUrl}/es/encerado-de-autos-fort-lauderdale/`,
   "serviceType": "Mobile Car Detailing",
@@ -42,10 +42,10 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Cuanto Cuesta el Encerado de Autos en Fort Lauderdale?",
+      "name": "Cuanto Cuesta el Encerado de Autos a Domicilio en Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El encerado profesional de autos en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamano del vehiculo y la condicion de la pintura."
+        "text": "El encerado de autos a domicilio en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamano del vehiculo y la condicion de la pintura, con la cera y el equipo llevados a tu casa u oficina."
       }
     },
     {
@@ -63,6 +63,14 @@ const faqSchema = {
         "@type": "Answer",
         "text": "La cera crea una barrera protectora entre su pintura y el medio ambiente. Sin ella, los rayos UV, el aire salado y los contaminantes atacan directamente su capa transparente."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Hacen Encerado de Autos a Domicilio Cerca de Mi en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si. Route95 lleva el encerado de autos a domicilio a todo Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach. Vamos a tu casa u oficina con cera de carnauba Meguiar's y todo el equipo. Aplicamos el encerado a mano y, si la pintura esta contaminada, hacemos primero un tratamiento de barra de arcilla a domicilio. Coordinamos por telefono o texto al 754-215-2272."
+      }
     }
   ]
 };
@@ -73,8 +81,8 @@ const schemas = [serviceSchema, faqSchema];
 <ServiceLayout
   title={title}
   description={description}
-  h1="Encerado de Autos Fort Lauderdale"
-  intro="El encerado profesional aplica una capa protectora de cera de carnauba que protege su pintura de los intensos rayos UV de Florida y agrega un brillo profundo y duradero."
+  h1="Encerado de Autos a Domicilio Fort Lauderdale"
+  intro="El encerado de autos a domicilio llega a tu casa u oficina en Fort Lauderdale y aplica una capa protectora de cera de carnauba que protege tu pintura de los intensos rayos UV de Florida con un brillo profundo y duradero."
   currentPage="/es/encerado-de-autos-fort-lauderdale/"
   parentCategory={parentCategory}
   schema={schemas}
@@ -86,7 +94,7 @@ const schemas = [serviceSchema, faqSchema];
           La pintura de su auto enfrenta un ataque constante en el sur de Florida. La radiacion UV desvanece el color. El aire salado acelera la oxidacion. La mugre del camino y los excrementos de aves corroen las superficies sin proteccion. Una cera de calidad crea una barrera sacrificial que recibe este castigo en lugar de su pintura.
         </p>
         <p class="text-gray-600 mb-4">
-          Llevamos nuestro servicio de encerado directamente a su ubicacion en Fort Lauderdale. Ya sea que este en su hogar en Wilton Manors o en el trabajo en el centro, vamos a usted con cera de carnauba profesional de <a href="https://www.meguiars.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Meguiar's</a>.
+          Llevamos el encerado de autos a domicilio directamente a su ubicacion en Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach. Ya sea que este en su hogar en Wilton Manors o en el trabajo en el centro, vamos a usted con cera de carnauba profesional de <a href="https://www.meguiars.com/" target="_blank" rel="noopener noreferrer" class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Meguiar's</a>.
         </p>
         <p class="text-gray-600">
           En nuestra experiencia, los autos en Fort Lauderdale necesitan encerado mas frecuentemente que los vehiculos del norte. Recomendamos cada 2-3 meses para mantener la proteccion contra nuestra exposicion solar extrema.
@@ -94,9 +102,9 @@ const schemas = [serviceSchema, faqSchema];
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta el Encerado de Autos en Fort Lauderdale?</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta el Encerado de Autos a Domicilio en Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>El encerado profesional de autos en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamano del vehiculo y la condicion de la pintura.</strong>
+          <strong>El encerado de autos a domicilio en Fort Lauderdale cuesta de $75 a $150 dependiendo del tamano del vehiculo y la condicion de la pintura, con la cera y el equipo llevados a tu casa u oficina.</strong>
         </p>
         <p class="text-gray-600 mb-4">
           Los sedanes y coupes estan en el rango mas bajo. Las SUVs, camionetas y vehiculos mas grandes cuestan mas debido a la superficie adicional. La pintura severamente oxidada puede necesitar tratamiento de barra de arcilla primero, lo cual agrega al precio.
@@ -130,6 +138,16 @@ const schemas = [serviceSchema, faqSchema];
           <li>Brillo mejorado y profundidad de color</li>
           <li>Mayor valor de reventa por pintura bien mantenida</li>
         </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Hacen Encerado de Autos a Domicilio Cerca de Mi en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Si. Route95 lleva el encerado de autos a domicilio a todo Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach — vamos a tu casa u oficina con cera de carnauba Meguiar's y todo el equipo, sin que tengas que manejar a ningun lado.</strong>
+        </p>
+        <p class="text-gray-600">
+          Muchos clientes buscan "pulido y encerado de autos a domicilio". Aplicamos el encerado a mano para un brillo uniforme y, si la pintura se siente aspera o contaminada, hacemos primero un <a href={url('clay-bar-treatment-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">tratamiento de barra de arcilla</a> a domicilio — ambos pasos llegan a tu ubicacion. Coordinamos por telefono o texto al 754-215-2272.
+        </p>
       </section>
 
       <section>
