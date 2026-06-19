@@ -4,8 +4,8 @@ import ProcessSteps from '../../components/ProcessSteps.astro';
 import { localizedUrl } from '../../i18n/utils';
 
 const url = (slug: string) => localizedUrl('es', slug);
-const title = "Lavado Rápido Fort Lauderdale | Route95";
-const description = "Lavado Rápido móvil en Fort Lauderdale. Lavado exterior a mano, llantas, acondicionador y ventanas. Desde $40. Llame al 754-215-2272.";
+const title = "Lavado Rápido a Domicilio Fort Lauderdale | Route95";
+const description = "Lavado rápido de autos a domicilio en Fort Lauderdale. Exterior a mano, llantas y ventanas. Desde $40. Vamos a tu casa u oficina — 754-215-2272.";
 
 const parentCategory = {
   href: url('car-detailing-services-fort-lauderdale'),
@@ -18,7 +18,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${siteUrl}/es/lavado-rapido-fort-lauderdale/#service`,
-  "name": "Lavado Rápido Fort Lauderdale",
+  "name": "Lavado Rápido a Domicilio Fort Lauderdale",
   "description": description,
   "url": `${siteUrl}/es/lavado-rapido-fort-lauderdale/`,
   "serviceType": "Mobile Car Detailing",
@@ -44,10 +44,10 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Cuanto Cuesta un Lavado Rapido?",
+      "name": "Cuanto Cuesta un Lavado Rapido a Domicilio?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Los precios del Lavado Rapido comienzan en $40 para sedanes, $50 para SUVs y crossovers, y $60 para camionetas y vehiculos grandes."
+        "text": "Los precios del lavado rapido a domicilio comienzan en $40 para sedanes, $50 para SUVs y crossovers, y $60 para camionetas y vehiculos grandes, con toda el agua y el equipo incluidos en tu ubicacion."
       }
     },
     {
@@ -65,6 +65,14 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Un Lavado Rapido tipicamente toma de 20 a 30 minutos dependiendo del tamano y condicion del vehiculo."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Hacen Lavado Rapido a Domicilio Cerca de Mi en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si. Route95 lleva el lavado rapido de autos a domicilio a todo Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach. Si buscaste car wash a domicilio cerca de mi o lavado de autos a domicilio, vamos a tu casa u oficina con toda el agua y el equipo, con citas para el mismo dia frecuentemente disponibles."
+      }
     }
   ]
 };
@@ -75,8 +83,8 @@ const schemas = [serviceSchema, faqSchema];
 <ServiceLayout
   title={title}
   description={description}
-  h1="Lavado Rapido Fort Lauderdale"
-  intro="Un lavado exterior rapido para mantener su auto impecable entre detallados completos. Vamos a su ubicacion con todo lo necesario."
+  h1="Lavado Rapido a Domicilio Fort Lauderdale"
+  intro="Un lavado de autos rapido a domicilio que llega a tu casa u oficina en Fort Lauderdale para mantener tu auto impecable entre detallados completos. Vamos a tu ubicacion con toda el agua y el equipo."
   currentPage="/es/lavado-rapido-fort-lauderdale/"
   parentCategory={parentCategory}
   schema={schemas}
@@ -85,7 +93,7 @@ const schemas = [serviceSchema, faqSchema];
     <div class="lg:col-span-2 space-y-8">
       <section>
         <p class="text-gray-600 mb-4">
-          El Lavado Rapido es nuestro paquete exterior de nivel basico disenado para conductores de Fort Lauderdale que desean mantener un vehiculo limpio sin el compromiso de tiempo de un detallado completo. Cubre lo esencial del exterior: un lavado a mano completo, limpieza de llantas y rines, acondicionador de llantas, y limpieza de ventanas exteriores.
+          El Lavado Rapido es nuestro paquete de lavado de autos a domicilio de nivel basico, disenado para conductores de Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach que desean mantener un vehiculo limpio sin el compromiso de tiempo de un detallado completo. Cubre lo esencial del exterior: un lavado a mano completo, limpieza de llantas y rines, acondicionador de llantas, y limpieza de ventanas exteriores.
         </p>
         <p class="text-gray-600 mb-4">
           Perfecto para mantenimiento semanal o quincenal, el Lavado Rapido mantiene el exterior de su auto presentable y protegido del sol del sur de Florida, el aire salado y la suciedad diaria. Usamos productos premium Chemical Guys y el metodo de dos cubetas para garantizar un acabado sin rayaduras cada vez.
@@ -96,9 +104,9 @@ const schemas = [serviceSchema, faqSchema];
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta un Lavado Rapido?</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta un Lavado Rapido a Domicilio?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Los precios del Lavado Rapido comienzan en $40 para sedanes, $50 para SUVs y crossovers, y $60 para camionetas y vehiculos grandes.</strong>
+          <strong>Los precios del lavado rapido a domicilio comienzan en $40 para sedanes, $50 para SUVs y crossovers, y $60 para camionetas y vehiculos grandes, con toda el agua y el equipo incluidos en tu ubicacion.</strong>
         </p>
         <p class="text-gray-600">
           El precio varia segun el tamano del vehiculo debido al area de superficie adicional y el tiempo requerido. Proporcionamos precios exactos basados en su vehiculo especifico cuando nos llame o envie un mensaje.
@@ -125,6 +133,16 @@ const schemas = [serviceSchema, faqSchema];
         </p>
         <p class="text-gray-600">
           Como es un servicio solo exterior, es nuestro servicio mas rapido. Muchos de nuestros clientes en Fort Lauderdale nos reservan en su oficina y regresan a un auto recien lavado.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Hacen Lavado Rapido a Domicilio Cerca de Mi en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Si. Route95 lleva el lavado rapido de autos a domicilio a todo Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach — si buscaste "car wash a domicilio cerca de mi" o "lavado de autos a domicilio", vamos a tu casa u oficina con toda el agua y el equipo.</strong>
+        </p>
+        <p class="text-gray-600">
+          Es el servicio ideal entre detallados completos: en 20-30 minutos dejamos el exterior impecable sin que tengas que manejar a un autolavado ni hacer fila. Coordinamos por telefono o texto al 754-215-2272 con citas para el mismo dia frecuentemente disponibles.
         </p>
       </section>
 
