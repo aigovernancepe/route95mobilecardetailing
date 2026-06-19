@@ -2,8 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { localizedUrl } from '../../i18n/utils';
 
-const title = "Precios de Detallado Móvil Fort Lauderdale | Route95";
-const description = "Precios de detallado móvil en Fort Lauderdale desde $40. Lavado Rápido, Nuevo Comienzo, Limpieza Completa y más. Llame al 754-215-2272.";
+const title = "Precios de Detallado Móvil a Domicilio Fort Lauderdale";
+const description = "Precios de detallado y lavado de autos a domicilio en Fort Lauderdale desde $40. Paquetes Lavado Rápido a Renovación Premium. Llama al 754-215-2272.";
 
 const siteUrl = "https://route95mobilecardetailing.com";
 
@@ -11,7 +11,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${siteUrl}/es/precios-detallado-movil-fort-lauderdale/#service`,
-  "name": "Precios de Detallado Móvil Fort Lauderdale",
+  "name": "Precios de Detallado Móvil a Domicilio Fort Lauderdale",
   "description": description,
   "url": `${siteUrl}/es/precios-detallado-movil-fort-lauderdale/`,
   "serviceType": "Mobile Car Detailing",
@@ -56,10 +56,18 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿Cuánto Cuesta el Detallado Móvil de Autos en Fort Lauderdale?",
+      "name": "¿Cuánto Cuesta el Detallado Móvil de Autos a Domicilio en Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El detallado móvil de autos en Fort Lauderdale comienza en $40 para un sedán con Lavado Rápido y sube hasta $170 para una camioneta con Limpieza Completa. Los precios varían según el nivel del paquete y el tamaño del vehículo, con sedanes al precio base y camionetas en el extremo superior de cada rango."
+        "text": "El detallado y lavado de autos a domicilio en Fort Lauderdale comienza en $40 para un sedán con Lavado Rápido y sube hasta $170 para una camioneta con Limpieza Completa. Los precios varían según el nivel del paquete y el tamaño del vehículo, con sedanes al precio base y camionetas en el extremo superior de cada rango."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuáles Son los Precios de un Lavado de Autos a Domicilio en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un lavado de autos a domicilio en Fort Lauderdale cuesta desde $40 con el paquete Lavado Rápido — incluye lavado exterior a mano, llantas, acondicionador y limpieza de ventanas, con toda el agua y el equipo llevados a tu casa u oficina. El Lavado Rápido a domicilio es la opción más económica; para una limpieza por dentro y por fuera está el lavado de autos a domicilio completo, y confirmamos el precio exacto antes de empezar."
       }
     },
     {
@@ -102,9 +110,9 @@ const faqSchema = {
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Precios de Detallado Móvil Fort Lauderdale</h1>
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Precios de Detallado Móvil a Domicilio Fort Lauderdale</h1>
       <p class="text-xl text-gray-200 max-w-3xl mb-6">
-        <strong>Los paquetes de detallado móvil de Route95 en Fort Lauderdale van desde $40 hasta $170 dependiendo del tamaño del vehículo y el nivel de servicio. Cada paquete incluye servicio en tu ubicación, productos de grado profesional y nuestra garantía de satisfacción.</strong>
+        <strong>Los paquetes de detallado y lavado de autos a domicilio de Route95 en Fort Lauderdale van desde $40 hasta $170 dependiendo del tamaño del vehículo y el nivel de servicio. Cada paquete llega a tu casa u oficina con productos de grado profesional y nuestra garantía de satisfacción.</strong>
       </p>
       <p class="text-lg text-gray-200 max-w-3xl mb-8">
         Precios transparentes sin cargos ocultos. Llama para una cotización gratis o agenda tu detallado hoy.
@@ -121,9 +129,9 @@ const faqSchema = {
   <!-- ¿Cuánto Cuesta el Detallado Móvil de Autos en Fort Lauderdale? -->
   <section class="py-12 lg:py-16 bg-gray-50">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta el Detallado Móvil de Autos en Fort Lauderdale?</h2>
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuánto Cuesta el Detallado Móvil de Autos a Domicilio en Fort Lauderdale?</h2>
       <p class="text-gray-600 mb-4">
-        <strong>El detallado móvil de autos en Fort Lauderdale comienza en $40 para un sedán con Lavado Rápido y sube hasta $170 para una camioneta con Limpieza Completa. Los precios varían según el nivel del paquete y el tamaño del vehículo, con sedanes al precio base.</strong>
+        <strong>El detallado y lavado de autos a domicilio en Fort Lauderdale comienza en $40 para un sedán con Lavado Rápido y sube hasta $170 para una camioneta con Limpieza Completa. Los precios varían según el nivel del paquete y el tamaño del vehículo, con sedanes al precio base.</strong>
       </p>
       <p class="text-gray-600 mb-8">
         Usamos productos de grado profesional de <a href="https://www.chemicalguys.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Chemical Guys</a> y <a href="https://www.koch-chemie.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Koch-Chemie</a> en cada paquete. Nuestros técnicos siguen las mejores prácticas de la <a href="https://www.the-ida.com/" target="_blank" rel="noopener noreferrer" class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">IDA (International Detailing Association)</a> para que obtengas resultados premium en cada nivel de precio.
@@ -175,6 +183,14 @@ const faqSchema = {
           </tbody>
         </table>
       </div>
+
+      <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4 mt-12">¿Cuáles Son los Precios de un Lavado de Autos a Domicilio en Fort Lauderdale?</h2>
+      <p class="text-gray-600 mb-4">
+        <strong>Un lavado de autos a domicilio en Fort Lauderdale cuesta desde $40 con el paquete Lavado Rápido — incluye lavado exterior a mano, llantas, acondicionador y limpieza de ventanas, con toda el agua y el equipo llevados a tu casa u oficina. La tabla de arriba muestra el precio de cada paquete por tamaño de vehículo.</strong>
+      </p>
+      <p class="text-gray-600">
+        Si solo quieres un lavado exterior, el <a href={localizedUrl('es', 'quick-wash-fort-lauderdale')} class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">Lavado Rápido a domicilio</a> desde $40 es la opción más económica; para una limpieza por dentro y por fuera, mira el <a href={localizedUrl('es', 'car-wash-fort-lauderdale')} class="text-[#1a5ca0] underline hover:text-[#0f2a4a]">lavado de autos a domicilio</a> completo. Sin cargos ocultos: confirmamos el precio exacto antes de empezar.
+      </p>
     </div>
   </section>
 
