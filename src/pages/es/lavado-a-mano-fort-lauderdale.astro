@@ -6,8 +6,8 @@ import { localizedUrl } from '../../i18n/utils';
 
 const base = import.meta.env.BASE_URL;
 const url = (slug: string) => localizedUrl('es', slug);
-const title = "Lavado a Mano Fort Lauderdale | Servicio Movil | Route95";
-const description = "Lavado a mano móvil en Fort Lauderdale. Método de dos cubetas, jabón pH balanceado, sin rayaduras. Llame al 754-215-2272.";
+const title = "Lavado a Mano a Domicilio Fort Lauderdale | Route95";
+const description = "Lavado de autos a mano a domicilio en Fort Lauderdale. Vamos a tu casa u oficina — método de dos cubetas, sin rayaduras. Llama al 754-215-2272.";
 
 const parentCategory = {
   href: url('car-wash-fort-lauderdale'),
@@ -19,7 +19,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${siteUrl}/es/lavado-a-mano-fort-lauderdale/#service`,
-  "name": "Lavado a Mano Fort Lauderdale",
+  "name": "Lavado a Mano a Domicilio Fort Lauderdale",
   "description": description,
   "url": `${siteUrl}/es/lavado-a-mano-fort-lauderdale/`,
   "image": [
@@ -50,10 +50,10 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Cuanto Cuesta un Lavado a Mano en Fort Lauderdale?",
+      "name": "Cuanto Cuesta un Lavado a Mano a Domicilio en Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Un lavado a mano movil profesional en Fort Lauderdale generalmente cuesta entre $30 y $50 dependiendo del tamano de su vehiculo."
+        "text": "Un lavado de autos a mano a domicilio en Fort Lauderdale generalmente cuesta entre $30 y $50 dependiendo del tamano de su vehiculo, con toda el agua y el equipo incluidos en tu casa u oficina."
       }
     },
     {
@@ -71,6 +71,14 @@ const faqSchema = {
         "@type": "Answer",
         "text": "El lavado a mano es el unico metodo seguro para limpiar su vehiculo sin causar danos a la pintura por cepillos y agua reciclada."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Hacen Lavado de Autos a Mano a Domicilio Cerca de Mi en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si. Route95 ofrece lavado de autos a mano a domicilio en todo Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach. Si buscaste car wash a domicilio cerca de mi o lavar carro a domicilio, vamos a tu ubicacion con toda el agua y el equipo. Coordinamos por telefono o texto al 754-215-2272 con citas para el mismo dia frecuentemente disponibles."
+      }
     }
   ]
 };
@@ -81,8 +89,8 @@ const schemas = [serviceSchema, faqSchema];
 <ServiceLayout
   title={title}
   description={description}
-  h1="Lavado a Mano Fort Lauderdale"
-  intro="El lavado profesional a mano elimina la suciedad de manera segura sin rayar su pintura, a diferencia de los lavados automaticos que danan la capa transparente con el tiempo."
+  h1="Lavado a Mano a Domicilio Fort Lauderdale"
+  intro="El lavado de autos a mano a domicilio llega a tu casa u oficina en Fort Lauderdale y elimina la suciedad sin rayar tu pintura, a diferencia de los lavados automaticos que danan la capa transparente con el tiempo."
   currentPage="/es/lavado-a-mano-fort-lauderdale/"
   parentCategory={parentCategory}
   schema={schemas}
@@ -91,7 +99,7 @@ const schemas = [serviceSchema, faqSchema];
     <div class="lg:col-span-2 space-y-8">
       <section>
         <p class="text-gray-600 mb-4">
-          Route95 lleva el servicio de lavado a mano movil directamente a su hogar u oficina en Fort Lauderdale. Utilizamos el metodo de dos cubetas en el que confian los detalladores profesionales de todo el mundo, combinado con jabon pH balanceado de Chemical Guys que elimina la mugre sin remover la proteccion de cera existente.
+          Route95 lleva el lavado de autos a mano a domicilio directamente a su hogar u oficina en Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach. Utilizamos el metodo de dos cubetas en el que confian los detalladores profesionales de todo el mundo, combinado con jabon pH balanceado de Chemical Guys que elimina la mugre sin remover la proteccion de cera existente.
         </p>
         <p class="text-gray-600 mb-4">
           Los lavados automaticos pueden ser convenientes, pero esos cepillos giratorios acumulan suciedad y la arrastran por su pintura cientos de veces. El resultado son marcas circulares y micro-rayaduras que opacan su acabado. Nuestro proceso de lavado a mano trata su vehiculo como merece ser tratado.
@@ -102,9 +110,9 @@ const schemas = [serviceSchema, faqSchema];
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta un Lavado a Mano en Fort Lauderdale?</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta un Lavado a Mano a Domicilio en Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Un lavado a mano movil profesional en Fort Lauderdale generalmente cuesta entre $30 y $50 dependiendo del tamano de su vehiculo.</strong>
+          <strong>Un lavado de autos a mano a domicilio en Fort Lauderdale generalmente cuesta entre $30 y $50 dependiendo del tamano de su vehiculo, con toda el agua y el equipo incluidos en tu casa u oficina.</strong>
         </p>
         <p class="text-gray-600 mb-4">
           Los sedanes y coupes estan en el rango mas bajo. Las SUVs, camionetas y vehiculos mas grandes cuestan un poco mas debido a la superficie adicional. Proporcionamos precios exactos cuando llame segun su vehiculo especifico.
@@ -138,6 +146,16 @@ const schemas = [serviceSchema, faqSchema];
         </ul>
         <p class="text-gray-600">
           Nuestro proceso de lavado a mano elimina todos estos problemas. Guantes de microfibra frescos se deslizan suavemente sobre su pintura. Agua limpia enjuaga los contaminantes. Jabon pH balanceado limpia sin eliminar la proteccion.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Hacen Lavado de Autos a Mano a Domicilio Cerca de Mi en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Si. Route95 ofrece lavado de autos a mano a domicilio en todo Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach — si buscaste "car wash a domicilio cerca de mi" o "lavar carro a domicilio", vamos a tu ubicacion con toda el agua y el equipo.</strong>
+        </p>
+        <p class="text-gray-600">
+          No necesitas manejar a un autolavado ni hacer fila. Coordinamos por telefono o texto al 754-215-2272 y frecuentemente hay citas para el mismo dia. Trabajamos en la entrada de tu casa, el estacionamiento de tu oficina o donde te sea conveniente.
         </p>
       </section>
 
