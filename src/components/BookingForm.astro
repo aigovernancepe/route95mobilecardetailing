@@ -1,9 +1,14 @@
 ---
-// Booking request form.
-// Submits as JSON to the Cloudflare Pages Function at /api/appointment, which
-//   1) emails the request to contact@route95mobilecardetailing.com (Web3Forms), and
-//   2) drops a tentative event on Gustavo's Google Calendar.
-// See functions/api/appointment.js for the backend + required env vars.
+// Booking form with live availability (Phase 2).
+// Service tiers, add-ons and vehicle types are rendered from the single source
+// of truth in src/config/booking.mjs (stable keys → correct in EN and ES).
+//
+// Flow: the customer fills their details + picks a service/add-ons + a date.
+// We then ask /api/availability for real open start times (computed from job
+// duration + Gustavo's calendar) and show them as buttons. Picking one books
+// that exact slot. If no slot is available or the lookup fails, the form still
+// submits as an open "request" (handled by /api/appointment).
+import { SERVICES, ADDONS, VEHICLES, AVAILABILITY } from "../config/booking.mjs";
 
 interface Props {
   lang?: "en" | "es";
@@ -15,47 +20,22 @@ const t = {
     heading: "Request an Appointment",
     intro:
       "Tell us where and when — we'll confirm by phone or text. No upfront payment, and every add-on is optional.",
-    subject: "New appointment request — Route95",
     name: "Full name",
     phone: "Phone",
     address: "Service address (street & city)",
     addressPh: "123 Main St, Fort Lauderdale",
     date: "Preferred date",
-    time: "Preferred time",
-    timeOpts: [
-      "Morning (9AM–12PM)",
-      "Afternoon (12–3PM)",
-      "Late afternoon (3–6PM)",
-      "Flexible",
-    ],
     service: "Service",
-    serviceOpts: [
-      "Quick Wash — exterior refresh ($40–$60)",
-      "Fresh Start — interior + exterior ($80–$110)",
-      "Complete Clean — full detail ($140–$170)",
-      "Premium Refresh — deep detail ($400–$460)",
-      "Not sure — recommend for me",
-    ],
     vehicle: "Vehicle type",
-    vehicleOpts: ["Sedan", "SUV / Crossover", "Truck / Van", "Other"],
     addons: "Add-ons (optional)",
-    addonList: [
-      "Door Jambs ($20)",
-      "Vacuum Trunk ($20)",
-      "Pet Hair Removal ($25)",
-      "Floor Mat Cleaning ($25)",
-      "Bug & Tar Removal ($30)",
-      "Trim Restoration ($30)",
-      "Odor Removal ($40)",
-      "Steam Cleaning ($50)",
-      "Car Waxing (from $60)",
-      "Carpet Shampooing (from $60)",
-      "Leather Cleaning & Conditioning (from $75)",
-      "Clay Bar Treatment (from $75)",
-      "Seat Shampooing (from $75)",
-      "Engine Bay Cleaning ($75–$150)",
-    ],
     notes: "Anything else? (gate code, special requests…)",
+    chooseTime: "Choose a start time",
+    loading: "Loading available times…",
+    noSlots:
+      "No open times that day — pick another date, or submit without a time and we'll arrange it.",
+    loadError:
+      "Couldn't load times. You can still submit and we'll confirm by phone.",
+    durationTpl: "Estimated time: about {min} min",
     submit: "Request appointment",
     sending: "Sending…",
     required: "* Required",
@@ -68,47 +48,22 @@ const t = {
     heading: "Solicita tu cita",
     intro:
       "Dinos dónde y cuándo — confirmamos por teléfono o mensaje. Sin pago por adelantado, y cada adicional es opcional.",
-    subject: "Nueva solicitud de cita — Route95",
     name: "Nombre completo",
     phone: "Teléfono",
     address: "Dirección del servicio (calle y ciudad)",
     addressPh: "123 Main St, Fort Lauderdale",
     date: "Fecha preferida",
-    time: "Hora preferida",
-    timeOpts: [
-      "Mañana (9AM–12PM)",
-      "Tarde (12–3PM)",
-      "Última hora (3–6PM)",
-      "Flexible",
-    ],
     service: "Servicio",
-    serviceOpts: [
-      "Quick Wash — lavado exterior ($40–$60)",
-      "Fresh Start — interior + exterior ($80–$110)",
-      "Complete Clean — detallado completo ($140–$170)",
-      "Premium Refresh — detallado profundo ($400–$460)",
-      "No estoy seguro — recomiéndame",
-    ],
     vehicle: "Tipo de vehículo",
-    vehicleOpts: ["Sedán", "SUV / Crossover", "Camioneta / Van", "Otro"],
     addons: "Adicionales (opcional)",
-    addonList: [
-      "Marcos de Puertas ($20)",
-      "Aspirado de Cajuela ($20)",
-      "Eliminación de Pelo de Mascota ($25)",
-      "Limpieza de Tapetes ($25)",
-      "Eliminación de Insectos y Brea ($30)",
-      "Restauración de Molduras ($30)",
-      "Eliminación de Olores ($40)",
-      "Limpieza y Acondicionamiento de Cuero (desde $75)",
-      "Tratamiento con Barra de Arcilla (desde $75)",
-      "Limpieza a Vapor ($50)",
-      "Lavado de Alfombras (desde $60)",
-      "Encerado de Auto (desde $60)",
-      "Lavado de Asientos (desde $75)",
-      "Limpieza de Motor ($75–$150)",
-    ],
     notes: "¿Algo más? (código de acceso, peticiones…)",
+    chooseTime: "Elige una hora de inicio",
+    loading: "Cargando horarios disponibles…",
+    noSlots:
+      "No hay horarios ese día — elige otra fecha, o envía sin hora y lo coordinamos.",
+    loadError:
+      "No se pudieron cargar los horarios. Puedes enviar igual y confirmamos por teléfono.",
+    durationTpl: "Tiempo estimado: aprox. {min} min",
     submit: "Solicitar cita",
     sending: "Enviando…",
     required: "* Obligatorio",
@@ -133,6 +88,11 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
     data-success={t.success}
     data-error={t.error}
     data-sending={t.sending}
+    data-loading={t.loading}
+    data-noslots={t.noSlots}
+    data-loaderror={t.loadError}
+    data-duration={t.durationTpl}
+    data-maxadvance={AVAILABILITY.maxAdvanceDays}
     data-lang={lang}
     class="space-y-5"
   >
@@ -148,11 +108,11 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
       <div>
         <label class={labelCls} for="bf-name">{t.name} *</label>
-        <input id="bf-name" class={inputCls} type="text" name={t.name} required autocomplete="name" />
+        <input id="bf-name" class={inputCls} type="text" name="name" required autocomplete="name" />
       </div>
       <div>
         <label class={labelCls} for="bf-phone">{t.phone} *</label>
-        <input id="bf-phone" class={inputCls} type="tel" name={t.phone} required autocomplete="tel" />
+        <input id="bf-phone" class={inputCls} type="tel" name="phone" required autocomplete="tel" />
       </div>
     </div>
 
@@ -162,7 +122,7 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
         id="bf-address"
         class={inputCls}
         type="text"
-        name={t.address}
+        name="address"
         placeholder={t.addressPh}
         required
         autocomplete="street-address"
@@ -171,31 +131,17 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
       <div>
-        <label class={labelCls} for="bf-date">{t.date} *</label>
-        <input id="bf-date" class={inputCls} type="date" name={t.date} required />
-      </div>
-      <div>
-        <label class={labelCls} for="bf-time">{t.time} *</label>
-        <select id="bf-time" class={inputCls} name={t.time} required>
-          <option value="" disabled selected>{t.selectPh}</option>
-          {t.timeOpts.map((o) => <option value={o}>{o}</option>)}
-        </select>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-      <div>
         <label class={labelCls} for="bf-service">{t.service} *</label>
-        <select id="bf-service" class={inputCls} name={t.service} required>
+        <select id="bf-service" class={inputCls} name="service" required>
           <option value="" disabled selected>{t.selectPh}</option>
-          {t.serviceOpts.map((o) => <option value={o}>{o}</option>)}
+          {SERVICES.map((s) => <option value={s.key}>{s[lang]}</option>)}
         </select>
       </div>
       <div>
         <label class={labelCls} for="bf-vehicle">{t.vehicle}</label>
-        <select id="bf-vehicle" class={inputCls} name={t.vehicle}>
+        <select id="bf-vehicle" class={inputCls} name="vehicle">
           <option value="" disabled selected>{t.selectPh}</option>
-          {t.vehicleOpts.map((o) => <option value={o}>{o}</option>)}
+          {VEHICLES.map((v) => <option value={v.key}>{v[lang]}</option>)}
         </select>
       </div>
     </div>
@@ -203,23 +149,37 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
     <fieldset>
       <legend class={labelCls}>{t.addons}</legend>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-        {t.addonList.map((addon) => (
+        {ADDONS.map((addon) => (
           <label class="flex items-center gap-3 rounded-lg border border-gray-200 px-4 py-2.5 cursor-pointer hover:bg-gray-50">
             <input
               type="checkbox"
-              name={addon}
-              value="Yes"
+              name="addon"
+              value={addon.key}
               class="h-5 w-5 flex-shrink-0 rounded border-gray-300 text-[#0f2a4a] focus:ring-[#0f2a4a]"
             />
-            <span class="text-sm text-gray-700">{addon}</span>
+            <span class="text-sm text-gray-700">{addon[lang]}</span>
           </label>
         ))}
       </div>
     </fieldset>
 
     <div>
+      <label class={labelCls} for="bf-date">{t.date} *</label>
+      <input id="bf-date" class={inputCls} type="date" name="date" required />
+    </div>
+
+    <!-- Live availability — populated once a service + date are chosen -->
+    <div id="bf-slots-wrap" class="hidden">
+      <label class={labelCls}>{t.chooseTime}</label>
+      <p id="bf-duration" class="text-xs text-gray-500 mb-2"></p>
+      <div id="bf-slots" class="grid grid-cols-3 sm:grid-cols-4 gap-2"></div>
+      <p id="bf-slots-msg" class="text-sm text-gray-600 mt-1"></p>
+      <input type="hidden" id="bf-start" name="startTime" value="" />
+    </div>
+
+    <div>
       <label class={labelCls} for="bf-notes">{t.notes}</label>
-      <textarea id="bf-notes" class={inputCls} name={t.notes} rows="3"></textarea>
+      <textarea id="bf-notes" class={inputCls} name="notes" rows="3"></textarea>
     </div>
 
     <p class="text-xs text-gray-400">{t.required}</p>
@@ -245,13 +205,122 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
     var byId = function (id) {
       return document.getElementById(id);
     };
-    var optText = function (el) {
-      return el && el.selectedIndex > 0 ? el.options[el.selectedIndex].text : "";
-    };
-    // Selects share the same option order across EN/ES, so index → stable key.
-    var keyFrom = function (el, keys) {
-      return el && el.selectedIndex > 0 ? keys[el.selectedIndex - 1] || "" : "";
-    };
+
+    var dateEl = byId("bf-date");
+    var serviceEl = byId("bf-service");
+    var slotsWrap = byId("bf-slots-wrap");
+    var slotsBox = byId("bf-slots");
+    var slotsMsg = byId("bf-slots-msg");
+    var durationEl = byId("bf-duration");
+    var startEl = byId("bf-start");
+
+    function ymd(d) {
+      return (
+        d.getFullYear() +
+        "-" +
+        String(d.getMonth() + 1).padStart(2, "0") +
+        "-" +
+        String(d.getDate()).padStart(2, "0")
+      );
+    }
+    // Restrict the date picker to today … today + maxAdvanceDays (visitor's clock).
+    var today = new Date();
+    var maxAdvance = parseInt(form.dataset.maxadvance || "30", 10);
+    var maxDate = new Date(today.getTime() + maxAdvance * 86400000);
+    dateEl.min = ymd(today);
+    dateEl.max = ymd(maxDate);
+
+    function checkedAddonKeys() {
+      var keys = [];
+      form
+        .querySelectorAll('fieldset input[type="checkbox"]:checked')
+        .forEach(function (c) {
+          keys.push(c.value);
+        });
+      return keys;
+    }
+
+    function clearSlots() {
+      slotsBox.innerHTML = "";
+      slotsMsg.textContent = "";
+      durationEl.textContent = "";
+      startEl.value = "";
+    }
+
+    var reqSeq = 0;
+    async function refreshSlots() {
+      var service = serviceEl.value;
+      var date = dateEl.value;
+      if (!service || !date) {
+        slotsWrap.classList.add("hidden");
+        clearSlots();
+        return;
+      }
+      slotsWrap.classList.remove("hidden");
+      clearSlots();
+      slotsMsg.textContent = form.dataset.loading;
+
+      var addons = checkedAddonKeys().join(",");
+      var url =
+        "/api/availability?date=" +
+        encodeURIComponent(date) +
+        "&service=" +
+        encodeURIComponent(service) +
+        "&addons=" +
+        encodeURIComponent(addons);
+
+      var seq = ++reqSeq;
+      try {
+        var res = await fetch(url, { headers: { Accept: "application/json" } });
+        var json = await res.json();
+        if (seq !== reqSeq) return; // a newer request superseded this one
+        if (!res.ok || !json.ok) {
+          slotsMsg.textContent = form.dataset.loaderror;
+          return;
+        }
+        if (typeof json.minutes === "number") {
+          durationEl.textContent = form.dataset.duration.replace(
+            "{min}",
+            json.minutes
+          );
+        }
+        if (!json.slots || !json.slots.length) {
+          slotsMsg.textContent = form.dataset.noslots;
+          return;
+        }
+        slotsMsg.textContent = "";
+        json.slots.forEach(function (slot) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.textContent = slot;
+          b.dataset.slot = slot;
+          b.className =
+            "rounded-lg border border-gray-300 px-2 py-2 text-sm text-gray-800 hover:border-[#0f2a4a] hover:bg-gray-50 transition";
+          b.addEventListener("click", function () {
+            startEl.value = slot;
+            slotsBox.querySelectorAll("button").forEach(function (x) {
+              x.className =
+                "rounded-lg border border-gray-300 px-2 py-2 text-sm text-gray-800 hover:border-[#0f2a4a] hover:bg-gray-50 transition";
+            });
+            b.className =
+              "rounded-lg border-2 border-[#0f2a4a] bg-[#0f2a4a] text-white px-2 py-2 text-sm font-semibold transition";
+          });
+          slotsBox.appendChild(b);
+        });
+      } catch (err) {
+        if (seq !== reqSeq) return;
+        slotsMsg.textContent = form.dataset.loaderror;
+      }
+    }
+
+    serviceEl.addEventListener("change", refreshSlots);
+    dateEl.addEventListener("change", refreshSlots);
+    form
+      .querySelectorAll('fieldset input[type="checkbox"]')
+      .forEach(function (c) {
+        c.addEventListener("change", refreshSlots);
+      });
+
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
       var original = btn.textContent;
@@ -259,42 +328,17 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
       btn.textContent = sending;
       status.className = "hidden";
       try {
-        var addons = [];
-        form
-          .querySelectorAll('fieldset input[type="checkbox"]:checked')
-          .forEach(function (c) {
-            addons.push(c.name);
-          });
         var honeypot = form.querySelector('input[name="botcheck"]');
         var payload = {
           lang: form.dataset.lang || "en",
           name: byId("bf-name").value.trim(),
           phone: byId("bf-phone").value.trim(),
           address: byId("bf-address").value.trim(),
-          date: byId("bf-date").value,
-          timeKey: keyFrom(byId("bf-time"), [
-            "morning",
-            "afternoon",
-            "late",
-            "flexible",
-          ]),
-          timeLabel: optText(byId("bf-time")),
-          serviceKey: keyFrom(byId("bf-service"), [
-            "quick",
-            "fresh",
-            "complete",
-            "premium",
-            "unsure",
-          ]),
-          serviceLabel: optText(byId("bf-service")),
-          vehicleKey: keyFrom(byId("bf-vehicle"), [
-            "sedan",
-            "suv",
-            "truck",
-            "other",
-          ]),
-          vehicleLabel: optText(byId("bf-vehicle")),
-          addons: addons,
+          date: dateEl.value,
+          serviceKey: serviceEl.value,
+          vehicleKey: byId("bf-vehicle").value,
+          addonKeys: checkedAddonKeys(),
+          startTime: startEl.value,
           notes: byId("bf-notes").value.trim(),
           botcheck: !!(honeypot && honeypot.checked),
         };
@@ -306,6 +350,8 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
         var json = await res.json();
         if (!json.success) throw new Error(json.message || "fail");
         form.reset();
+        slotsWrap.classList.add("hidden");
+        clearSlots();
         status.textContent = form.dataset.success;
         status.className =
           "mt-4 rounded-lg p-4 text-sm bg-green-50 text-green-800 border border-green-200";
