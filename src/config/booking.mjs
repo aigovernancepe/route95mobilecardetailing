@@ -35,7 +35,7 @@ export const SERVICES = [
 ];
 
 export const ADDONS = [
-  { key: "door-jambs",     minutes: 15,  en: "Door Jambs ($20)",                            es: "Marcos de Puertas ($20)" },
+  { key: "door-jambs",     minutes: 15,  en: "Door Jambs ($20)",                            es: "Marcos de Puertas ($20)" }, // Gustavo: 15 estimate OK
   { key: "vacuum-trunk",   minutes: 10,  en: "Vacuum Trunk ($20)",                          es: "Aspirado de Cajuela ($20)" },
   { key: "pet-hair",       minutes: 40,  en: "Pet Hair Removal ($25)",                      es: "Eliminación de Pelo de Mascota ($25)" }, // Gustavo: 20–40
   { key: "floor-mats",     minutes: 20,  en: "Floor Mat Cleaning ($25)",                    es: "Limpieza de Tapetes ($25)" }, // Gustavo: 20
@@ -50,7 +50,7 @@ export const ADDONS = [
   { key: "wax-machine",    minutes: 60,  en: "Car Waxing — machine polish (from $90)",      es: "Encerado a Máquina (desde $90)" }, // Gustavo: machine $90, 1h min
   { key: "carpet-shampoo", minutes: 45,  en: "Carpet Shampooing (from $60)",                es: "Lavado de Alfombras (desde $60)" }, // Gustavo: 45
   { key: "leather",        minutes: 60,  en: "Leather Cleaning & Conditioning (from $75)",  es: "Limpieza y Acondicionamiento de Cuero (desde $75)" }, // Gustavo: 1h
-  { key: "clay-bar",       minutes: 30,  en: "Clay Bar Treatment (from $75)",               es: "Tratamiento con Barra de Arcilla (desde $75)" }, // Gustavo: "desde 30min" (service page says 1–2h — confirm typical vs. min)
+  { key: "clay-bar",       minutes: 45,  en: "Clay Bar Treatment (from $75)",               es: "Tratamiento con Barra de Arcilla (desde $75)" }, // Gustavo: minimum 45 min (service page → 1h)
   { key: "seat-shampoo",   minutes: 60,  en: "Seat Shampooing (from $75)",                  es: "Lavado de Asientos (desde $75)" }, // Gustavo: 1h+, from $75
   { key: "wheel-cleaning", minutes: 60,  en: "Wheel & Rim Cleaning ($80 / 4 wheels)",       es: "Limpieza de Aros ($80 / 4 ruedas)" }, // Gustavo: 1h, $20/wheel
   { key: "engine-bay",     minutes: 45,  en: "Engine Bay Cleaning ($50–$80)",               es: "Limpieza de Motor ($50–$80)" }, // Gustavo: 45; hand $50 / steam $80
