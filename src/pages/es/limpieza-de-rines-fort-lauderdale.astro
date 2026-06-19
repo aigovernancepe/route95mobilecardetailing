@@ -39,7 +39,7 @@ const serviceSchema = {
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
-    "lowPrice": 40,
+    "lowPrice": 20,
     "highPrice": 80
   }
 };
@@ -53,7 +53,7 @@ const faqSchema = {
       "name": "Cuanto Cuesta la Limpieza de Rines en Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La limpieza profesional de rines en Fort Lauderdale cuesta de $40 a $80 por las cuatro ruedas dependiendo del tamano y condicion."
+        "text": "La limpieza profesional de rines en Fort Lauderdale es $20 por rueda, o $80 por las cuatro, dependiendo del tamano y condicion."
       }
     },
     {
@@ -61,7 +61,7 @@ const faqSchema = {
       "name": "Cuanto Tiempo Toma la Limpieza de Rines?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La limpieza de rines toma de 30 a 45 minutos por las cuatro ruedas, incluyendo el acondicionamiento de llantas."
+        "text": "La limpieza de rines toma aproximadamente 1 hora por las cuatro ruedas, incluyendo el acondicionamiento de llantas."
       }
     }
   ]
@@ -96,7 +96,7 @@ const schemas = [serviceSchema, faqSchema];
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Cuesta la Limpieza de Rines en Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>La limpieza profesional de rines en Fort Lauderdale cuesta de $40 a $80 por las cuatro ruedas dependiendo del tamano y condicion.</strong>
+          <strong>La limpieza profesional de rines en Fort Lauderdale es $20 por rueda, o $80 por las cuatro, dependiendo del tamano y condicion.</strong>
         </p>
         <p class="text-gray-600">
           Los rines estandar con contaminacion leve estan en el rango mas bajo. Los rines grandes con acumulacion pesada de polvo de frenos o disenos de rayos intrincados toman mas tiempo y producto.
@@ -106,7 +106,7 @@ const schemas = [serviceSchema, faqSchema];
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuanto Tiempo Toma la Limpieza de Rines?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>La limpieza de rines toma de 30 a 45 minutos por las cuatro ruedas, incluyendo el acondicionamiento de llantas.</strong>
+          <strong>La limpieza de rines toma aproximadamente 1 hora por las cuatro ruedas, incluyendo el acondicionamiento de llantas.</strong>
         </p>
         <p class="text-gray-600">
           Cada rueda recibe atencion individual. Limpiamos la cara, los rayos, el barril interior (donde es visible), las tuercas y las paredes laterales de las llantas. El resultado son rines que lucen como nuevos.
@@ -151,13 +151,13 @@ const schemas = [serviceSchema, faqSchema];
           <ul class="space-y-3">
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">$40-$80 por las cuatro</span>
+              <span class="text-gray-600">$20/rueda · $80 por las cuatro</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span class="text-gray-600">30-45 minutos</span>
+              <span class="text-gray-600">Aproximadamente 1 hora</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

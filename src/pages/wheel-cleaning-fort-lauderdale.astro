@@ -42,7 +42,7 @@ const serviceSchema = {
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
-    "lowPrice": 40,
+    "lowPrice": 20,
     "highPrice": 80,
     "availability": "https://schema.org/InStock"
   },
@@ -66,7 +66,7 @@ const faqSchema = {
       "name": "How Much Does Wheel and Rim Cleaning Cost in Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Professional wheel and rim cleaning in Fort Lauderdale costs $40 to $80 for all four wheels depending on size and condition. Standard rims with light brake dust fall at the lower end, while large rims with heavy buildup or intricate spoke designs cost more."
+        "text": "Professional wheel and rim cleaning in Fort Lauderdale is $20 per wheel, or $80 for all four, depending on size and condition. Standard rims with light brake dust are straightforward, while large rims with heavy buildup or intricate spoke designs take more work."
       }
     },
     {
@@ -74,7 +74,7 @@ const faqSchema = {
       "name": "How Long Does Wheel Cleaning Take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Wheel and rim cleaning takes 30 to 45 minutes for all four wheels, including tire dressing. Each rim gets individual attention on the face, spokes, inner barrel, lug nuts, and tire sidewalls."
+        "text": "Wheel and rim cleaning takes about 1 hour for all four wheels, including tire dressing. Each rim gets individual attention on the face, spokes, inner barrel, lug nuts, and tire sidewalls."
       }
     },
     {
@@ -141,7 +141,7 @@ const schemas = [serviceSchema, faqSchema];
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Wheel and Rim Cleaning Cost in Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Professional wheel and rim cleaning in Fort Lauderdale costs $40 to $80 for all four wheels depending on size and condition.</strong>
+          <strong>Professional wheel and rim cleaning in Fort Lauderdale is $20 per wheel, or $80 for all four, depending on size and condition.</strong>
         </p>
         <p class="text-gray-600">
           Standard rims with light contamination fall at the lower end. Large rims with heavy brake dust buildup or intricate spoke designs take more time and product. We clean all rim types including chrome, alloy, and painted finishes.
@@ -151,7 +151,7 @@ const schemas = [serviceSchema, faqSchema];
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Long Does Rim Cleaning Take?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Rim cleaning takes 30 to 45 minutes for all four wheels, including tire dressing.</strong>
+          <strong>Rim cleaning takes about 1 hour for all four wheels, including tire dressing.</strong>
         </p>
         <p class="text-gray-600">
           Each rim gets individual attention. We clean the face, spokes, inner barrel (where visible), lug nuts, and tire sidewalls. The result is rims that look brand new.
@@ -279,13 +279,13 @@ const schemas = [serviceSchema, faqSchema];
           <ul class="space-y-3">
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">$40-$80 for all four rims</span>
+              <span class="text-gray-600">$20/wheel · $80 for four</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span class="text-gray-600">30-45 minutes</span>
+              <span class="text-gray-600">About 1 hour</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -46,8 +46,8 @@ const serviceSchema = {
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
-    "lowPrice": 85,
-    "highPrice": 150
+    "lowPrice": 60,
+    "highPrice": 90
   }
 };
 
@@ -60,7 +60,7 @@ const faqSchema = {
       "name": "How Much Does Car Waxing Cost in Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Professional car waxing in Fort Lauderdale starts at $85 and ranges up to $150 depending on vehicle size and paint condition."
+        "text": "Car waxing in Fort Lauderdale is $60 applied by hand or $90 with a machine polish, depending on vehicle size and paint condition."
       }
     },
     {
@@ -68,7 +68,7 @@ const faqSchema = {
       "name": "How Long Does Car Waxing Take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Car waxing takes about 1 hour for most vehicles, and longer for larger vehicles or when paint prep is needed first."
+        "text": "Car waxing takes about 1 hour by hand, or a bit longer with a machine polish, depending on vehicle size and whether paint prep is needed first."
       }
     },
     {
@@ -115,23 +115,23 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Car Waxing Cost in Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Professional car waxing in Fort Lauderdale starts at $85 and ranges up to $150 depending on vehicle size and paint condition.</strong>
+          <strong>Car waxing in Fort Lauderdale is $60 applied by hand or $90 with a machine polish, depending on vehicle size and paint condition.</strong>
         </p>
         <p class="text-gray-600 mb-4">
-          Sedans and coupes start at $85. SUVs, trucks, and larger vehicles cost more due to additional surface area. Severely oxidized paint may need clay bar treatment first, which adds to the price.
+          A $60 hand wax is a great refresh for well-kept paint. The $90 machine polish works the wax in more thoroughly for deeper gloss and longer-lasting protection—ideal for larger vehicles or paint that needs extra correction. Severely oxidized paint may need clay bar treatment first, which adds to the price.
         </p>
         <p class="text-gray-600">
-          We apply wax with a machine polisher for even, consistent coverage across every panel—faster and more uniform than working by hand.
+          Either way, we work one section at a time for complete, even coverage across every panel.
         </p>
       </section>
 
       <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Long Does Car Waxing Take?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>Car waxing takes about 1 hour for most vehicles, and longer for larger vehicles or when paint prep is needed first.</strong>
+          <strong>Car waxing takes about 1 hour by hand, or a bit longer with a machine polish, depending on vehicle size and whether paint prep is needed first.</strong>
         </p>
         <p class="text-gray-600">
-          We wash the car first if needed—wax won't bond properly to dirty paint. Then we apply wax with a machine polisher in sections, let it haze, and buff to a brilliant shine. Each panel gets attention to ensure complete, even coverage.
+          We wash the car first if needed—wax won't bond properly to dirty paint. Then we apply the wax—by hand or with a machine polisher, depending on the option you choose—let it haze, and buff to a brilliant shine. Each panel gets attention to ensure complete, even coverage.
         </p>
       </section>
 
@@ -156,7 +156,7 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
         <ProcessSteps steps={[
           { title: "Surface Preparation", description: "We wash and dry your vehicle completely. Wax needs a clean surface to bond properly." },
           { title: "Clay Bar (if needed)", description: "If your paint feels rough, we remove embedded contaminants with clay bar treatment first." },
-          { title: "Wax Application", description: "We apply Meguiar's carnauba wax with a machine polisher, working one section at a time for even, consistent coverage." },
+          { title: "Wax Application", description: "We apply Meguiar's carnauba wax—by hand, or with a machine polisher for the deeper-gloss option—working one section at a time for even coverage." },
           { title: "Haze and Buff", description: "We let the wax haze slightly, then buff to a deep shine using clean microfiber towels." },
           { title: "Final Inspection", description: "We check every panel for even coverage and touch up any areas that need extra attention." }
         ]} />
@@ -170,7 +170,7 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
           <ul class="space-y-3">
             <li class="flex items-start gap-2">
               <span class="text-[#c0c7cf] font-bold">$</span>
-              <span class="text-gray-600">From $85, depending on size</span>
+              <span class="text-gray-600">$60 by hand / $90 machine polish</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#c0c7cf] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
