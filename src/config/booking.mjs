@@ -25,22 +25,26 @@
 //
 // >>> Gustavo can adjust ANY number below; nothing else needs to change. <<<
 
+// minutes confirmed by Gustavo on 2026-06-19.
 export const SERVICES = [
-  { key: "quick",    minutes: 30,  en: "Quick Wash — exterior refresh ($40–$60)",        es: "Quick Wash — lavado exterior ($40–$60)" },
-  { key: "fresh",    minutes: 60,  en: "Fresh Start — interior + exterior ($80–$110)",   es: "Fresh Start — interior + exterior ($80–$110)" },
+  { key: "quick",    minutes: 60,  en: "Quick Wash — exterior refresh ($40–$60)",        es: "Quick Wash — lavado exterior ($40–$60)" },
+  { key: "fresh",    minutes: 90,  en: "Fresh Start — interior + exterior ($80–$110)",   es: "Fresh Start — interior + exterior ($80–$110)" },
   { key: "complete", minutes: 120, en: "Complete Clean — full detail ($140–$170)",       es: "Complete Clean — detallado completo ($140–$170)" },
-  { key: "premium",  minutes: 210, en: "Premium Refresh — deep detail ($400–$460)",      es: "Premium Refresh — detallado profundo ($400–$460)" },
-  { key: "unsure",   minutes: 90,  en: "Not sure — recommend for me",                    es: "No estoy seguro — recomiéndame" },
+  { key: "premium",  minutes: 240, en: "Premium Refresh — deep detail ($400–$460)",      es: "Premium Refresh — detallado profundo ($400–$460)" },
+  { key: "unsure",   minutes: 90,  en: "Not sure — recommend for me",                    es: "No estoy seguro — recomiéndame" }, // estimate
 ];
 
 export const ADDONS = [
   { key: "door-jambs",     minutes: 15,  en: "Door Jambs ($20)",                            es: "Marcos de Puertas ($20)" },
   { key: "vacuum-trunk",   minutes: 10,  en: "Vacuum Trunk ($20)",                          es: "Aspirado de Cajuela ($20)" },
-  { key: "pet-hair",       minutes: 45,  en: "Pet Hair Removal ($25)",                      es: "Eliminación de Pelo de Mascota ($25)" },
-  { key: "floor-mats",     minutes: 15,  en: "Floor Mat Cleaning ($25)",                    es: "Limpieza de Tapetes ($25)" },
-  { key: "bug-tar",        minutes: 45,  en: "Bug & Tar Removal ($30)",                     es: "Eliminación de Insectos y Brea ($30)" },
-  { key: "trim",           minutes: 60,  en: "Trim Restoration ($30)",                      es: "Restauración de Molduras ($30)" },
-  { key: "odor",           minutes: 120, en: "Odor Removal ($40)",                          es: "Eliminación de Olores ($40)" },
+  { key: "pet-hair",       minutes: 40,  en: "Pet Hair Removal ($25)",                      es: "Eliminación de Pelo de Mascota ($25)" }, // Gustavo: 20–40
+  { key: "floor-mats",     minutes: 15,  en: "Floor Mat Cleaning ($25)",                    es: "Limpieza de Tapetes ($25)" }, // pending
+  { key: "bug-tar",        minutes: 10,  en: "Bug & Tar Removal ($30)",                     es: "Eliminación de Insectos y Brea ($30)" }, // Gustavo: 10 (application only)
+  { key: "trim",           minutes: 20,  en: "Trim Restoration ($30)",                      es: "Restauración de Molduras ($30)" }, // Gustavo: 20
+  // Odor removal is NOT standalone per Gustavo: it must accompany a full interior
+  // detail (full interior + odor = ~2h total). Modeled as an add-on for now;
+  // dependency rule still TBD. minutes = the extra it adds on top of the service.
+  { key: "odor",           minutes: 120, en: "Odor Removal ($40)",                          es: "Eliminación de Olores ($40)" }, // PENDING decision
   { key: "steam",          minutes: 45,  en: "Steam Cleaning ($50)",                        es: "Limpieza a Vapor ($50)" },
   { key: "waxing",         minutes: 90,  en: "Car Waxing (from $60)",                       es: "Encerado de Auto (desde $60)" },
   { key: "carpet-shampoo", minutes: 45,  en: "Carpet Shampooing (from $60)",                es: "Lavado de Alfombras (desde $60)" },
