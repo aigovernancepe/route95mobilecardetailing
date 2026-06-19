@@ -62,13 +62,13 @@ export const AVAILABILITY = {
   timeZone: "America/New_York",
   // Weekday 0=Sun … 6=Sat. Local working window per day, or null = closed.
   hours: {
-    0: null, // Sunday closed
-    1: { open: "08:00", close: "18:00" },
-    2: { open: "08:00", close: "18:00" },
-    3: { open: "08:00", close: "18:00" },
-    4: { open: "08:00", close: "18:00" },
-    5: { open: "08:00", close: "18:00" },
-    6: { open: "09:00", close: "16:00" }, // Saturday shorter
+    0: null, // Sunday closed — placeholder, confirm with Gustavo
+    1: { open: "09:00", close: "18:00" }, // Mon–Fri 9–6 (confirmed)
+    2: { open: "09:00", close: "18:00" },
+    3: { open: "09:00", close: "18:00" },
+    4: { open: "09:00", close: "18:00" },
+    5: { open: "09:00", close: "18:00" },
+    6: { open: "09:00", close: "16:00" }, // Saturday — placeholder, confirm
   },
   travelBufferMin: 30, // gap kept free before & after each job (mobile: travel + setup)
   slotStepMin: 30,     // offer start times every 30 minutes
