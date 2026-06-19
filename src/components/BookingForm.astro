@@ -77,6 +77,17 @@ const t = {
 const inputCls =
   "w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0f2a4a] focus:ring-2 focus:ring-[#0f2a4a]/20 outline-none transition";
 const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
+
+// Short note for add-ons gated to specific services (e.g. odor → Premium only).
+const requiresNote = (addon) => {
+  if (!addon.requires || !addon.requires.length) return "";
+  const names = addon.requires.map(
+    (k) => (SERVICES.find((s) => s.key === k)?.[lang] || k).split(" — ")[0]
+  );
+  return lang === "es"
+    ? `Solo con ${names.join(" / ")}`
+    : `${names.join(" / ")} only`;
+};
 ---
 
 <div>
@@ -150,14 +161,22 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
       <legend class={labelCls}>{t.addons}</legend>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {ADDONS.map((addon) => (
-          <label class="flex items-center gap-3 rounded-lg border border-gray-200 px-4 py-2.5 cursor-pointer hover:bg-gray-50">
+          <label
+            class="addon-item flex items-center gap-3 rounded-lg border border-gray-200 px-4 py-2.5 cursor-pointer hover:bg-gray-50"
+          >
             <input
               type="checkbox"
               name="addon"
               value={addon.key}
+              data-requires={addon.requires ? addon.requires.join(",") : ""}
               class="h-5 w-5 flex-shrink-0 rounded border-gray-300 text-[#0f2a4a] focus:ring-[#0f2a4a]"
             />
-            <span class="text-sm text-gray-700">{addon[lang]}</span>
+            <span class="text-sm text-gray-700">
+              {addon[lang]}
+              {requiresNote(addon) && (
+                <span class="block text-xs text-gray-400">{requiresNote(addon)}</span>
+              )}
+            </span>
           </label>
         ))}
       </div>
@@ -313,13 +332,35 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
       }
     }
 
-    serviceEl.addEventListener("change", refreshSlots);
+    // Gate add-ons restricted to certain services (data-requires), e.g. odor → Premium.
+    function applyAddonGating() {
+      var service = serviceEl.value;
+      form
+        .querySelectorAll('fieldset input[type="checkbox"]')
+        .forEach(function (c) {
+          var req = (c.dataset.requires || "")
+            .split(",")
+            .filter(Boolean);
+          var allowed = req.length === 0 || req.indexOf(service) !== -1;
+          c.disabled = !allowed;
+          if (!allowed) c.checked = false;
+          var item = c.closest(".addon-item");
+          if (item) item.classList.toggle("opacity-40", !allowed);
+          if (item) item.classList.toggle("pointer-events-none", !allowed);
+        });
+    }
+
+    serviceEl.addEventListener("change", function () {
+      applyAddonGating();
+      refreshSlots();
+    });
     dateEl.addEventListener("change", refreshSlots);
     form
       .querySelectorAll('fieldset input[type="checkbox"]')
       .forEach(function (c) {
         c.addEventListener("change", refreshSlots);
       });
+    applyAddonGating();
 
     form.addEventListener("submit", async function (e) {
       e.preventDefault();

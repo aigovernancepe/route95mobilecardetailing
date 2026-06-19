@@ -26,6 +26,7 @@ import {
   VEHICLES,
   serviceMinutes,
   labelOf,
+  validAddons,
   AVAILABILITY,
 } from "../../src/config/booking.mjs";
 import { getAccessToken } from "./_google.js";
@@ -51,7 +52,11 @@ export async function onRequestPost(context) {
   }
 
   const lang = body.lang === "es" ? "es" : "en";
-  const addonKeys = Array.isArray(body.addonKeys) ? body.addonKeys : [];
+  // Trust the server config, not the client: drop add-ons not offered with this service.
+  const addonKeys = validAddons(
+    body.serviceKey || "",
+    Array.isArray(body.addonKeys) ? body.addonKeys : []
+  );
   const data = {
     lang,
     name: body.name,

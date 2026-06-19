@@ -10,7 +10,11 @@
 // On any backend failure it returns { ok:false } and the frontend falls back to
 // the Phase 1 "request a time window" flow — so the form always works.
 
-import { AVAILABILITY, serviceMinutes } from "../../src/config/booking.mjs";
+import {
+  AVAILABILITY,
+  serviceMinutes,
+  validAddons,
+} from "../../src/config/booking.mjs";
 import { getAccessToken } from "./_google.js";
 import { tzOffsetMinutes, localToUtcMs, msToLocalHHMM } from "./_time.js";
 
@@ -21,7 +25,7 @@ export async function onRequestGet(context) {
   const url = new URL(request.url);
   const date = url.searchParams.get("date"); // YYYY-MM-DD (local)
   const service = url.searchParams.get("service") || "";
-  const addons = (url.searchParams.get("addons") || "")
+  const rawAddons = (url.searchParams.get("addons") || "")
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
@@ -30,7 +34,8 @@ export async function onRequestGet(context) {
     return json({ ok: false, message: "Bad date" }, 400);
   }
 
-  // Job length includes a travel buffer kept free after the job.
+  // Drop add-ons not offered with this service, then size the job.
+  const addons = validAddons(service, rawAddons);
   const minutes = serviceMinutes(service, addons);
   const buffer = AVAILABILITY.travelBufferMin;
   const block = minutes + buffer;

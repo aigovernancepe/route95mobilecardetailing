@@ -41,17 +41,19 @@ export const ADDONS = [
   { key: "floor-mats",     minutes: 20,  en: "Floor Mat Cleaning ($25)",                    es: "Limpieza de Tapetes ($25)" }, // Gustavo: 20
   { key: "bug-tar",        minutes: 10,  en: "Bug & Tar Removal ($30)",                     es: "Eliminación de Insectos y Brea ($30)" }, // Gustavo: 10 (application only)
   { key: "trim",           minutes: 20,  en: "Trim Restoration ($30)",                      es: "Restauración de Molduras ($30)" }, // Gustavo: 20
-  // Odor removal is NOT standalone per Gustavo: it must accompany a full interior
-  // detail (full interior + odor = ~2h total). Modeled as an add-on for now;
-  // dependency rule still TBD. minutes = the extra it adds on top of the service.
-  { key: "odor",           minutes: 120, en: "Odor Removal ($40)",                          es: "Eliminación de Olores ($40)" }, // PENDING decision
+  // Odor removal is NOT standalone: Gustavo only does it with a full detail.
+  // `requires` gates the add-on in the form to those service keys (Premium only).
+  { key: "odor",           minutes: 120, requires: ["premium"], en: "Odor Removal ($40)",   es: "Eliminación de Olores ($40)" }, // Gustavo: Premium only (full detailing)
   { key: "steam",          minutes: 45,  en: "Steam Cleaning ($50)",                        es: "Limpieza a Vapor ($50)" }, // Gustavo: 45 (full interior steam)
-  { key: "waxing",         minutes: 60,  en: "Car Waxing (from $85)",                       es: "Encerado de Auto (desde $85)" }, // Gustavo: machine, 1h+, from $85 — service page text TBD
+  // Waxing offered two ways — different price AND duration. Customer picks one.
+  { key: "wax-hand",       minutes: 60,  en: "Car Waxing — by hand (from $60)",             es: "Encerado a Mano (desde $60)" }, // Gustavo: hand $60; duration estimate — confirm
+  { key: "wax-machine",    minutes: 90,  en: "Car Waxing — machine polish (from $90)",      es: "Encerado a Máquina (desde $90)" }, // Gustavo: machine $90; duration estimate — confirm
   { key: "carpet-shampoo", minutes: 45,  en: "Carpet Shampooing (from $60)",                es: "Lavado de Alfombras (desde $60)" }, // Gustavo: 45
   { key: "leather",        minutes: 60,  en: "Leather Cleaning & Conditioning (from $75)",  es: "Limpieza y Acondicionamiento de Cuero (desde $75)" }, // Gustavo: 1h
   { key: "clay-bar",       minutes: 30,  en: "Clay Bar Treatment (from $75)",               es: "Tratamiento con Barra de Arcilla (desde $75)" }, // Gustavo: "desde 30min" (service page says 1–2h — confirm typical vs. min)
   { key: "seat-shampoo",   minutes: 60,  en: "Seat Shampooing (from $75)",                  es: "Lavado de Asientos (desde $75)" }, // Gustavo: 1h+, from $75
-  { key: "engine-bay",     minutes: 45,  en: "Engine Bay Cleaning ($50–$80)",               es: "Limpieza de Motor ($50–$80)" }, // Gustavo: 45; hand $50 / steam $80 — service page price TBD
+  { key: "wheel-cleaning", minutes: 60,  en: "Wheel & Rim Cleaning ($80 / 4 wheels)",       es: "Limpieza de Aros ($80 / 4 ruedas)" }, // Gustavo: 1h, $20/wheel
+  { key: "engine-bay",     minutes: 45,  en: "Engine Bay Cleaning ($50–$80)",               es: "Limpieza de Motor ($50–$80)" }, // Gustavo: 45; hand $50 / steam $80
 ];
 
 export const VEHICLES = [
@@ -80,6 +82,16 @@ export const AVAILABILITY = {
   minLeadMin: 120,     // confirmed: no booking within 2h (Gustavo recommends a day ahead)
   maxAdvanceDays: 30,  // confirmed: up to 30 days ahead
 };
+
+// Drop add-ons that aren't offered with the chosen service (e.g. odor needs
+// Premium). Also drops unknown keys. Use this server-side before trusting input.
+export function validAddons(serviceKey, addonKeys = []) {
+  return addonKeys.filter((k) => {
+    const a = ADDONS.find((x) => x.key === k);
+    if (!a) return false;
+    return !a.requires || a.requires.includes(serviceKey);
+  });
+}
 
 // Total estimated job length: base service + selected add-ons (minutes).
 export function serviceMinutes(serviceKey, addonKeys = []) {
