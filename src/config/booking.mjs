@@ -38,7 +38,7 @@ export const ADDONS = [
   { key: "door-jambs",     minutes: 15,  en: "Door Jambs ($20)",                            es: "Marcos de Puertas ($20)" },
   { key: "vacuum-trunk",   minutes: 10,  en: "Vacuum Trunk ($20)",                          es: "Aspirado de Cajuela ($20)" },
   { key: "pet-hair",       minutes: 40,  en: "Pet Hair Removal ($25)",                      es: "Eliminación de Pelo de Mascota ($25)" }, // Gustavo: 20–40
-  { key: "floor-mats",     minutes: 15,  en: "Floor Mat Cleaning ($25)",                    es: "Limpieza de Tapetes ($25)" }, // pending
+  { key: "floor-mats",     minutes: 20,  en: "Floor Mat Cleaning ($25)",                    es: "Limpieza de Tapetes ($25)" }, // Gustavo: 20
   { key: "bug-tar",        minutes: 10,  en: "Bug & Tar Removal ($30)",                     es: "Eliminación de Insectos y Brea ($30)" }, // Gustavo: 10 (application only)
   { key: "trim",           minutes: 20,  en: "Trim Restoration ($30)",                      es: "Restauración de Molduras ($30)" }, // Gustavo: 20
   // Odor removal is NOT standalone per Gustavo: it must accompany a full interior
@@ -49,7 +49,7 @@ export const ADDONS = [
   { key: "waxing",         minutes: 60,  en: "Car Waxing (from $85)",                       es: "Encerado de Auto (desde $85)" }, // Gustavo: machine, 1h+, from $85 — service page text TBD
   { key: "carpet-shampoo", minutes: 45,  en: "Carpet Shampooing (from $60)",                es: "Lavado de Alfombras (desde $60)" }, // Gustavo: 45
   { key: "leather",        minutes: 60,  en: "Leather Cleaning & Conditioning (from $75)",  es: "Limpieza y Acondicionamiento de Cuero (desde $75)" }, // Gustavo: 1h
-  { key: "clay-bar",       minutes: 120, en: "Clay Bar Treatment (from $75)",               es: "Tratamiento con Barra de Arcilla (desde $75)" }, // pending
+  { key: "clay-bar",       minutes: 30,  en: "Clay Bar Treatment (from $75)",               es: "Tratamiento con Barra de Arcilla (desde $75)" }, // Gustavo: "desde 30min" (service page says 1–2h — confirm typical vs. min)
   { key: "seat-shampoo",   minutes: 60,  en: "Seat Shampooing (from $75)",                  es: "Lavado de Asientos (desde $75)" }, // Gustavo: 1h+, from $75
   { key: "engine-bay",     minutes: 45,  en: "Engine Bay Cleaning ($50–$80)",               es: "Limpieza de Motor ($50–$80)" }, // Gustavo: 45; hand $50 / steam $80 — service page price TBD
 ];
@@ -75,10 +75,10 @@ export const AVAILABILITY = {
     5: { open: "09:00", close: "18:00" },
     6: { open: "09:00", close: "18:00" }, // Saturday 9am–6pm
   },
-  travelBufferMin: 30, // gap kept free before & after each job (mobile: travel + setup)
+  travelBufferMin: 30, // confirmed: 30 min between vehicles (travel + setup)
   slotStepMin: 30,     // offer start times every 30 minutes
-  minLeadMin: 120,     // earliest bookable slot = now + 2 hours
-  maxAdvanceDays: 30,  // furthest a customer can book ahead
+  minLeadMin: 120,     // confirmed: no booking within 2h (Gustavo recommends a day ahead)
+  maxAdvanceDays: 30,  // confirmed: up to 30 days ahead
 };
 
 // Total estimated job length: base service + selected add-ons (minutes).
