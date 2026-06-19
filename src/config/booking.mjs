@@ -45,13 +45,13 @@ export const ADDONS = [
   // detail (full interior + odor = ~2h total). Modeled as an add-on for now;
   // dependency rule still TBD. minutes = the extra it adds on top of the service.
   { key: "odor",           minutes: 120, en: "Odor Removal ($40)",                          es: "Eliminación de Olores ($40)" }, // PENDING decision
-  { key: "steam",          minutes: 45,  en: "Steam Cleaning ($50)",                        es: "Limpieza a Vapor ($50)" },
-  { key: "waxing",         minutes: 90,  en: "Car Waxing (from $60)",                       es: "Encerado de Auto (desde $60)" },
-  { key: "carpet-shampoo", minutes: 45,  en: "Carpet Shampooing (from $60)",                es: "Lavado de Alfombras (desde $60)" },
-  { key: "leather",        minutes: 30,  en: "Leather Cleaning & Conditioning (from $75)",  es: "Limpieza y Acondicionamiento de Cuero (desde $75)" },
-  { key: "clay-bar",       minutes: 120, en: "Clay Bar Treatment (from $75)",               es: "Tratamiento con Barra de Arcilla (desde $75)" },
-  { key: "seat-shampoo",   minutes: 45,  en: "Seat Shampooing (from $75)",                  es: "Lavado de Asientos (desde $75)" },
-  { key: "engine-bay",     minutes: 45,  en: "Engine Bay Cleaning ($75–$150)",              es: "Limpieza de Motor ($75–$150)" },
+  { key: "steam",          minutes: 45,  en: "Steam Cleaning ($50)",                        es: "Limpieza a Vapor ($50)" }, // Gustavo: 45 (full interior steam)
+  { key: "waxing",         minutes: 60,  en: "Car Waxing (from $85)",                       es: "Encerado de Auto (desde $85)" }, // Gustavo: machine, 1h+, from $85 — service page text TBD
+  { key: "carpet-shampoo", minutes: 45,  en: "Carpet Shampooing (from $60)",                es: "Lavado de Alfombras (desde $60)" }, // Gustavo: 45
+  { key: "leather",        minutes: 60,  en: "Leather Cleaning & Conditioning (from $75)",  es: "Limpieza y Acondicionamiento de Cuero (desde $75)" }, // Gustavo: 1h
+  { key: "clay-bar",       minutes: 120, en: "Clay Bar Treatment (from $75)",               es: "Tratamiento con Barra de Arcilla (desde $75)" }, // pending
+  { key: "seat-shampoo",   minutes: 60,  en: "Seat Shampooing (from $75)",                  es: "Lavado de Asientos (desde $75)" }, // Gustavo: 1h+, from $75
+  { key: "engine-bay",     minutes: 45,  en: "Engine Bay Cleaning ($50–$80)",               es: "Limpieza de Motor ($50–$80)" }, // Gustavo: 45; hand $50 / steam $80 — service page price TBD
 ];
 
 export const VEHICLES = [
@@ -65,14 +65,15 @@ export const VEHICLES = [
 export const AVAILABILITY = {
   timeZone: "America/New_York",
   // Weekday 0=Sun … 6=Sat. Local working window per day, or null = closed.
+  // All hours confirmed by Gustavo on 2026-06-19.
   hours: {
-    0: null, // Sunday closed — placeholder, confirm with Gustavo
-    1: { open: "09:00", close: "18:00" }, // Mon–Fri 9–6 (confirmed)
+    0: { open: "09:00", close: "12:00" }, // Sunday 9am–12pm
+    1: { open: "09:00", close: "18:00" }, // Mon–Fri 9am–6pm
     2: { open: "09:00", close: "18:00" },
     3: { open: "09:00", close: "18:00" },
     4: { open: "09:00", close: "18:00" },
     5: { open: "09:00", close: "18:00" },
-    6: { open: "09:00", close: "16:00" }, // Saturday — placeholder, confirm
+    6: { open: "09:00", close: "18:00" }, // Saturday 9am–6pm
   },
   travelBufferMin: 30, // gap kept free before & after each job (mobile: travel + setup)
   slotStepMin: 30,     // offer start times every 30 minutes
