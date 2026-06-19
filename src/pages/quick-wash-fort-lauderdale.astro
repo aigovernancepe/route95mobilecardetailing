@@ -11,7 +11,24 @@ const parentCategory = {
   title: "Car Detailing Services"
 };
 
+const datePublished = "2026-02-05";
+const dateModified = "2026-03-31";
+
 const siteUrl = "https://route95mobilecardetailing.com";
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${siteUrl}/quick-wash-fort-lauderdale/#webpage`,
+  "url": `${siteUrl}/quick-wash-fort-lauderdale/`,
+  "name": title,
+  "description": description,
+  "inLanguage": "en-US",
+  "isPartOf": { "@id": `${siteUrl}/#website` },
+  "mainEntity": { "@id": `${siteUrl}/quick-wash-fort-lauderdale/#service` },
+  "datePublished": datePublished,
+  "dateModified": dateModified
+};
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -60,7 +77,7 @@ const faqSchema = {
   ]
 };
 
-const schemas = [serviceSchema, faqSchema];
+const schemas = [webPageSchema, serviceSchema, faqSchema];
 ---
 
 <ServiceLayout
@@ -72,6 +89,10 @@ const schemas = [serviceSchema, faqSchema];
   parentCategory={parentCategory}
   schema={schemas}
 >
+  <p class="text-sm text-gray-500 mb-6">
+    <time datetime={dateModified}>Last updated March 31, 2026</time>
+  </p>
+
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">
       <section>
