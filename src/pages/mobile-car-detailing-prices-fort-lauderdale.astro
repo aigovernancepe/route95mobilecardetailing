@@ -5,7 +5,24 @@ const base = import.meta.env.BASE_URL;
 const title = "Mobile Car Detailing Prices Fort Lauderdale | Route95";
 const description = "Car detailing prices in Fort Lauderdale from $40. Quick Wash, Fresh Start, Complete Clean & Premium Refresh packages. Call 754-215-2272.";
 
+const datePublished = "2026-02-17";
+const dateModified = "2026-06-18";
+
 const siteUrl = "https://route95mobilecardetailing.com";
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${siteUrl}/mobile-car-detailing-prices-fort-lauderdale/#webpage`,
+  "url": `${siteUrl}/mobile-car-detailing-prices-fort-lauderdale/`,
+  "name": title,
+  "description": description,
+  "inLanguage": "en-US",
+  "isPartOf": { "@id": `${siteUrl}/#website` },
+  "mainEntity": { "@id": `${siteUrl}/mobile-car-detailing-prices-fort-lauderdale/#service` },
+  "datePublished": datePublished,
+  "dateModified": dateModified
+};
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -98,7 +115,7 @@ const faqSchema = {
 };
 ---
 
-<BaseLayout title={title} description={description} currentPage="/mobile-car-detailing-prices-fort-lauderdale/" schema={[serviceSchema, faqSchema]}>
+<BaseLayout title={title} description={description} currentPage="/mobile-car-detailing-prices-fort-lauderdale/" schema={[webPageSchema, serviceSchema, faqSchema]}>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -121,6 +138,9 @@ const faqSchema = {
   <!-- How Much Does Mobile Car Detailing Cost -->
   <section class="py-12 lg:py-16 bg-gray-50">
     <div class="max-w-4xl mx-auto px-4">
+      <p class="text-sm text-gray-500 mb-6">
+        <time datetime={dateModified}>Last updated June 18, 2026</time>
+      </p>
       <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Mobile Car Detailing Cost in Fort Lauderdale?</h2>
       <p class="text-gray-600 mb-4">
         <strong>Mobile car detailing in Fort Lauderdale starts at $40 for a sedan Quick Wash and goes up to $170 for a truck Complete Clean. Prices vary by package tier and vehicle size, with sedans at the base price.</strong>
