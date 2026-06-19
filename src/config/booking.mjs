@@ -46,8 +46,8 @@ export const ADDONS = [
   { key: "odor",           minutes: 120, requires: ["premium"], en: "Odor Removal ($40)",   es: "Eliminación de Olores ($40)" }, // Gustavo: Premium only (full detailing)
   { key: "steam",          minutes: 45,  en: "Steam Cleaning ($50)",                        es: "Limpieza a Vapor ($50)" }, // Gustavo: 45 (full interior steam)
   // Waxing offered two ways — different price AND duration. Customer picks one.
-  { key: "wax-hand",       minutes: 60,  en: "Car Waxing — by hand (from $60)",             es: "Encerado a Mano (desde $60)" }, // Gustavo: hand $60; duration estimate — confirm
-  { key: "wax-machine",    minutes: 90,  en: "Car Waxing — machine polish (from $90)",      es: "Encerado a Máquina (desde $90)" }, // Gustavo: machine $90; duration estimate — confirm
+  { key: "wax-hand",       minutes: 45,  en: "Car Waxing — by hand (from $60)",             es: "Encerado a Mano (desde $60)" }, // Gustavo: hand $60, 45 min
+  { key: "wax-machine",    minutes: 60,  en: "Car Waxing — machine polish (from $90)",      es: "Encerado a Máquina (desde $90)" }, // Gustavo: machine $90, 1h min
   { key: "carpet-shampoo", minutes: 45,  en: "Carpet Shampooing (from $60)",                es: "Lavado de Alfombras (desde $60)" }, // Gustavo: 45
   { key: "leather",        minutes: 60,  en: "Leather Cleaning & Conditioning (from $75)",  es: "Limpieza y Acondicionamiento de Cuero (desde $75)" }, // Gustavo: 1h
   { key: "clay-bar",       minutes: 30,  en: "Clay Bar Treatment (from $75)",               es: "Tratamiento con Barra de Arcilla (desde $75)" }, // Gustavo: "desde 30min" (service page says 1–2h — confirm typical vs. min)
