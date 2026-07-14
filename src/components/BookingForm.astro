@@ -1,12 +1,9 @@
 ---
-// Booking request form — replaces the Cal.com calendar embed.
-// Submits via Web3Forms (no backend needed; static-site friendly).
-//
-// SETUP (one-time, ~2 min):
-//   1. Go to https://web3forms.com and enter Gustavo's email
-//      (contact@route95mobilecardetailing.com) to get a free Access Key.
-//   2. Paste the key below. That's it — every request emails Gustavo.
-const WEB3FORMS_ACCESS_KEY = "94ef4058-301f-40de-8ecb-19e55ac48394";
+// Booking request form.
+// Submits as JSON to the Cloudflare Pages Function at /api/appointment, which
+//   1) emails the request to contact@route95mobilecardetailing.com (Web3Forms), and
+//   2) drops a tentative event on Gustavo's Google Calendar.
+// See functions/api/appointment.js for the backend + required env vars.
 
 interface Props {
   lang?: "en" | "es";
@@ -135,12 +132,10 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
     id="booking-form"
     data-success={t.success}
     data-error={t.error}
+    data-sending={t.sending}
+    data-lang={lang}
     class="space-y-5"
   >
-    <!-- Web3Forms config -->
-    <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
-    <input type="hidden" name="subject" value={t.subject} />
-    <input type="hidden" name="from_name" value="Route95 Website" />
     <!-- Honeypot (spam trap) — must stay empty -->
     <input
       type="checkbox"
@@ -246,17 +241,67 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
     if (!form) return;
     var status = document.getElementById("booking-status");
     var btn = form.querySelector('button[type="submit"]');
-    var sending = btn.textContent.trim();
+    var sending = form.dataset.sending || btn.textContent.trim();
+    var byId = function (id) {
+      return document.getElementById(id);
+    };
+    var optText = function (el) {
+      return el && el.selectedIndex > 0 ? el.options[el.selectedIndex].text : "";
+    };
+    // Selects share the same option order across EN/ES, so index → stable key.
+    var keyFrom = function (el, keys) {
+      return el && el.selectedIndex > 0 ? keys[el.selectedIndex - 1] || "" : "";
+    };
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
       var original = btn.textContent;
       btn.disabled = true;
+      btn.textContent = sending;
       status.className = "hidden";
       try {
-        var res = await fetch("https://api.web3forms.com/submit", {
+        var addons = [];
+        form
+          .querySelectorAll('fieldset input[type="checkbox"]:checked')
+          .forEach(function (c) {
+            addons.push(c.name);
+          });
+        var honeypot = form.querySelector('input[name="botcheck"]');
+        var payload = {
+          lang: form.dataset.lang || "en",
+          name: byId("bf-name").value.trim(),
+          phone: byId("bf-phone").value.trim(),
+          address: byId("bf-address").value.trim(),
+          date: byId("bf-date").value,
+          timeKey: keyFrom(byId("bf-time"), [
+            "morning",
+            "afternoon",
+            "late",
+            "flexible",
+          ]),
+          timeLabel: optText(byId("bf-time")),
+          serviceKey: keyFrom(byId("bf-service"), [
+            "quick",
+            "fresh",
+            "complete",
+            "premium",
+            "unsure",
+          ]),
+          serviceLabel: optText(byId("bf-service")),
+          vehicleKey: keyFrom(byId("bf-vehicle"), [
+            "sedan",
+            "suv",
+            "truck",
+            "other",
+          ]),
+          vehicleLabel: optText(byId("bf-vehicle")),
+          addons: addons,
+          notes: byId("bf-notes").value.trim(),
+          botcheck: !!(honeypot && honeypot.checked),
+        };
+        var res = await fetch("/api/appointment", {
           method: "POST",
-          headers: { Accept: "application/json" },
-          body: new FormData(form),
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(payload),
         });
         var json = await res.json();
         if (!json.success) throw new Error(json.message || "fail");
