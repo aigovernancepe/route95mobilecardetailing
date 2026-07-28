@@ -3,8 +3,8 @@ import ServiceLayout from '../layouts/ServiceLayout.astro';
 import ProcessSteps from '../components/ProcessSteps.astro';
 
 const base = import.meta.env.BASE_URL;
-const title = "Engine Bay Cleaning Fort Lauderdale | Route95";
-const description = "Professional engine bay cleaning in Fort Lauderdale. Degreasing, electronics protection, leak detection. Mobile service - we come to you! Call 754-215-2272";
+const title = "Engine Bay Cleaning Service Fort Lauderdale | Route95";
+const description = "Mobile engine bay cleaning service in Fort Lauderdale — $50 hand wash or $80 steam clean. Degreasing, electronics protected. Call 754-215-2272.";
 
 const parentCategory = {
   href: `${base}car-wash-fort-lauderdale/`,
@@ -12,7 +12,7 @@ const parentCategory = {
 };
 
 const datePublished = "2026-02-02";
-const dateModified = "2026-06-19";
+const dateModified = "2026-07-28";
 
 const siteUrl = "https://route95mobilecardetailing.com";
 
@@ -59,10 +59,34 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "What Does a Professional Engine Bay Cleaning Service Include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A professional engine bay cleaning service covers six steps: masking the electronics, applying automotive degreaser with proper dwell time, hand-agitating valve covers and brackets, a low-pressure rinse, forced-air drying, and a UV protectant on hoses and plastic covers. Route95 does all six at your address in about 45 minutes, for $50 hand wash or $80 steam clean."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do You Steam Clean or Pressure Wash an Engine Bay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We steam clean — we never pressure wash an engine bay. Steam lifts baked-on grease out of tight areas using heat rather than force, so it cleans deeper without driving water into connectors, the fuse box, or the alternator. A pressure washer does the opposite: it pushes water exactly where it must not go."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "How Much Does Engine Bay Cleaning Cost in Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Engine bay cleaning in Fort Lauderdale is $50 for a hand wash or $80 for a steam clean, depending on engine size and level of buildup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Often Should You Clean Your Engine Bay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once a year is enough for most cars in South Florida, and every six months if you park within a few miles of the ocean. Salt air is the reason our interval is shorter than the general advice you will read elsewhere — it settles on exposed metal and accelerates corrosion long before the bay looks dirty."
       }
     },
     {
@@ -105,7 +129,7 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
   schema={schemas}
 >
   <p class="text-sm text-gray-500 mb-6">
-    <time datetime={dateModified}>Last updated June 19, 2026</time>
+    <time datetime={dateModified}>Last updated July 28, 2026</time>
   </p>
 
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -123,12 +147,48 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
       </section>
 
       <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Does a Professional Engine Bay Cleaning Service Include?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>A professional engine bay cleaning service covers six steps: masking the electronics, applying automotive degreaser with proper dwell time, hand-agitating valve covers and brackets, a low-pressure rinse, forced-air drying, and a UV protectant on hoses and plastic covers. Route95 does all six at your address in about 45 minutes, for $50 hand wash or $80 steam clean.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          The difference between a real engine bay cleaning service and a quick spray-down is what happens before and after the water. Masking the alternator, fuse box, and intake takes a few minutes and prevents the one failure mode that matters. Forced-air drying afterwards clears water out of connector housings and recesses instead of leaving it to sit — which is where corrosion starts in a coastal climate like ours.
+        </p>
+        <p class="text-gray-600">
+          We do this as a mobile engine bay cleaning service across Fort Lauderdale, Dania Beach, Hollywood, and Pompano Beach. It also pairs naturally with a <a href={`${base}car-wash-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">full exterior wash</a> in the same visit — call 754-215-2272 to combine them.
+        </p>
+      </section>
+
+      <section>
         <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Much Does Engine Bay Cleaning Cost in Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
           <strong>Engine bay cleaning in Fort Lauderdale is $50 for a hand wash or $80 for a steam clean, depending on engine size and level of buildup.</strong>
         </p>
-        <p class="text-gray-600">
+        <p class="text-gray-600 mb-4">
           The $50 hand wash covers degreaser, agitation, and a low-pressure rinse — ideal for a regularly maintained engine bay. The $80 steam clean uses pressurized steam to sanitize and reach the tight areas where heavy grease hides, making it the better choice for engines with years of buildup or leaked fluids.
+        </p>
+        <p class="text-gray-600 mb-4">Four things decide which price you land on:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+          <li><strong>Time since the last clean.</strong> An engine bay cleaned within the last year usually needs the $50 hand wash. Ten years of untouched buildup needs steam.</li>
+          <li><strong>Leaked fluids.</strong> Oil or power steering fluid that has baked onto hot surfaces will not come off with degreaser and agitation alone.</li>
+          <li><strong>Engine size and packaging.</strong> A tightly packed V8 or a bay full of plastic covers takes longer to mask and longer to dry than a small four-cylinder.</li>
+          <li><strong>Where the car lives.</strong> Cars parked near the ocean collect salt film that needs neutralising, not just degreasing.</li>
+        </ul>
+        <p class="text-gray-600">
+          We quote before starting. If your bay only needs the $50 option, that is what we will tell you — engine detailing cost should reflect the work the car actually needs, not the highest-priced item on the menu.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">How Often Should You Clean Your Engine Bay?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Once a year is enough for most cars in South Florida, and every six months if you park within a few miles of the ocean. Salt air is the reason our interval is shorter than the general advice you will read elsewhere — it settles on exposed metal and accelerates corrosion long before the bay looks dirty.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          There are also three moments worth booking regardless of the calendar. Before selling or trading in, because a clean bay is one of the first things a buyer or appraiser looks at. Before a major service, because a mechanic diagnosing a leak works faster on a clean engine. And after any repair that left oil or coolant residue behind, since that residue bakes on and gets harder to remove with every heat cycle.
+        </p>
+        <p class="text-gray-600">
+          Engine bay detailing is easiest to keep up once it has been done properly the first time. After the initial clean, annual maintenance is usually the $50 hand wash rather than the full steam treatment.
         </p>
       </section>
 
@@ -139,6 +199,19 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
         </p>
         <p class="text-gray-600">
           Heavily soiled engines may take up to an hour. The degreaser needs dwell time to break down baked-on grease and grime before rinsing. We allow proper time for each step to get the best results safely.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Do You Steam Clean or Pressure Wash an Engine Bay?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>We steam clean — we never pressure wash an engine bay. Steam lifts baked-on grease out of tight areas using heat rather than force, so it cleans deeper without driving water into connectors, the fuse box, or the alternator. A pressure washer does the opposite: it pushes water exactly where it must not go.</strong>
+        </p>
+        <p class="text-gray-600 mb-4">
+          This is the most common way engine bays get damaged during cleaning. Pressure washing can force water past connector seals and into the fuse box, and it can strip labels and lift heat-shield adhesive. The symptoms often show up days later as a misfire or an electrical fault, which is why the cause gets missed.
+        </p>
+        <p class="text-gray-600">
+          The $80 steam clean is the right choice for years of buildup or leaked fluids. The $50 hand wash uses degreaser and a controlled low-pressure rinse — plenty for an engine bay that gets cleaned regularly. Either way, engine degreasing is done with automotive-specific products, not household solvents that attack rubber and plastic.
         </p>
       </section>
 
@@ -180,6 +253,13 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
           { title: "Dry and Inspect", description: "We dry surfaces with compressed air and microfiber towels, then inspect for any remaining spots or areas that need attention." },
           { title: "Dress and Protect", description: "We apply protectant to rubber hoses and plastic covers to restore their appearance and provide UV protection against Florida sun." }
         ]} />
+      </section>
+
+      <section class="bg-gray-50 rounded-xl p-6">
+        <h3 class="font-bold text-[#0f2a4a] mb-2">Engine bay cleaning is exterior work</h3>
+        <p class="text-gray-600">
+          This service cleans what you see when you open the hood. It is not carbon cleaning, walnut blasting, intake valve service, crankcase flushing, or diesel soot removal — those treat the inside of the engine and are mechanic's work, done through chemical induction or with the intake partly disassembled. If that is what you need, a repair shop is the right call, not a detailer. We will tell you so rather than sell you a wash.
+        </p>
       </section>
     </div>
 
