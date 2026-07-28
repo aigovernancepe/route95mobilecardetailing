@@ -2,8 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL;
-const title = "Mobile Car Detailing Hollywood FL | Route95";
-const description = "Mobile car detailing in Hollywood, FL. Hand wash, interior cleaning & full detailing packages. We come to you! Call 754-215-2272.";
+const title = "Mobile Car Detailing & Car Wash Hollywood FL | Route95";
+const description = "Mobile car wash and auto detailing in Hollywood, FL — we come to you. Hand wash, interior detailing, packages from $40. Same-day. Call 754-215-2272.";
 
 const whatsappNumber = "17542152272";
 const whatsappMessage = "Hi! I'd like to get a quote for mobile car detailing in Hollywood, FL.";
@@ -15,10 +15,10 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${siteUrl}/mobile-car-detailing-hollywood-fl/#service`,
-  "name": "Mobile Car Detailing Hollywood FL",
+  "name": "Mobile Car Detailing & Car Wash Hollywood FL",
   "description": description,
   "url": `${siteUrl}/mobile-car-detailing-hollywood-fl/`,
-  "serviceType": "Mobile Car Detailing",
+  "serviceType": "Mobile Car Detailing and Car Wash",
   "provider": { "@id": `${siteUrl}/#business` },
   "areaServed": {
     "@type": "City",
@@ -68,6 +68,14 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Yes! Same-day appointments are frequently available in Hollywood. Call us in the morning and we can often be at your location that afternoon. We operate daily from 9 AM to 6 PM."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you do interior car detailing in Hollywood, FL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We shampoo seats and carpets, clean and condition leather, steam-clean vents and consoles, and treat odors — all at your location. Coastal humidity along the Broadwalk and the Intracoastal makes mildew in carpets and floor mats a recurring problem in Hollywood, so interior work runs year-round here."
+      }
     }
   ]
 };
@@ -101,9 +109,9 @@ const packages = [
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-[#0c2448] to-[#1a5ca0] text-white py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Mobile Car Detailing Hollywood, FL</h1>
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Mobile Car Detailing &amp; Car Wash in Hollywood, FL</h1>
       <p class="text-xl text-gray-200 max-w-3xl mb-8">
-        Professional mobile car detailing that comes to your home or office in Hollywood, Florida. Route95 brings premium products, equipment, and expert care directly to your location — from Hollywood Beach to Hollywood Hills.
+        Professional mobile car wash and auto detailing that comes to your home or office in Hollywood, Florida. Route95 brings water, power, premium products, and expert care directly to your location — from Hollywood Beach to Hollywood Hills. Packages start at $40.
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
         <a href="tel:+17542152272" class="btn-accent text-lg flex items-center justify-center gap-2">
@@ -124,13 +132,29 @@ const packages = [
           <section>
             <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">What Car Detailing Services Are Available in Hollywood, Florida?</h2>
             <p class="text-gray-600 mb-4">
+              Route95 is a mobile operation, not a shop — our car detailers come to you anywhere in Hollywood, seven days a week, 9 AM to 6 PM. Services run from a $40 Quick Wash through full interior and exterior detailing packages.
+            </p>
+            <p class="text-gray-600 mb-4">
               Hollywood, FL sits right on the Atlantic coast, and your car feels it every day. Salt spray from the ocean accelerates corrosion on chrome, trim, and undercarriage components. The relentless Florida sun fades paint, cracks leather, and warps dashboard materials. Regular professional detailing isn't just about looks — it's about protecting your investment.
             </p>
             <p class="text-gray-600 mb-4">
-              Route95 Mobile Car Detailing serves all of Hollywood — from the beachside condos along the Broadwalk to the tree-lined streets of Emerald Hills and Hollywood Hills. We detail cars in Downtown Hollywood, along Hollywood Boulevard, and throughout the neighborhoods along US-1 and the Intracoastal Waterway.
+              Route95 Mobile Car Detailing serves all of Hollywood — from the beachside condos along the Broadwalk to the tree-lined streets of Emerald Hills and Hollywood Hills. We detail cars in Downtown Hollywood, along Hollywood Boulevard, and throughout the neighborhoods along US-1 and the Intracoastal Waterway. Car wash, auto detailing, and full interior work are all handled by the same crew on the same visit.
             </p>
             <p class="text-gray-600">
               We bring everything we need directly to you: water, power, and professional-grade products from <a href={`${base}car-waxing-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">Chemical Guys, Koch-Chemie, and 3D</a>. No need to leave your home, office, or wherever you happen to be.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Do You Offer a Mobile Car Wash in Hollywood, FL?</h2>
+            <p class="text-gray-600 mb-4">
+              Yes. Route95 runs a full mobile car wash at any address in Hollywood — hand wash, wheels and tires, windows, and an interior vacuum — starting at $40 for a Quick Wash. We carry our own water and power, so we can work in a condo garage near the Broadwalk just as easily as a driveway in Emerald Hills.
+            </p>
+            <p class="text-gray-600 mb-4">
+              Every wash is done by hand using the two-bucket method and pH-balanced soap. That matters in Hollywood: automatic tunnel washes drag recycled grit across your paint, and beachside cars carry salt and sand that turn those brushes into sandpaper. Our <a href={`${base}hand-wash-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">hand wash service</a> and <a href={`${base}car-wash-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">full car wash options</a> are detailed on their own pages.
+            </p>
+            <p class="text-gray-600">
+              If you want more than a wash, the same visit can cover <a href={`${base}car-waxing-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">waxing</a>, <a href={`${base}wheel-cleaning-fort-lauderdale/`} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">wheel cleaning</a>, or a full interior detail — no second appointment needed.
             </p>
           </section>
 
@@ -167,6 +191,10 @@ const packages = [
               <div class="bg-gray-50 rounded-lg p-4">
                 <h3 class="font-bold text-[#0f2a4a] mb-2">Can I get same-day car detailing in Hollywood, FL?</h3>
                 <p class="text-gray-600">Yes! Same-day appointments are frequently available in Hollywood. Call us in the morning and we can often be at your location that afternoon. We operate daily from 9 AM to 6 PM.</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h3 class="font-bold text-[#0f2a4a] mb-2">Do you do interior car detailing in Hollywood, FL?</h3>
+                <p class="text-gray-600">Yes. We shampoo seats and carpets, clean and condition leather, steam-clean vents and consoles, and treat odors — all at your location. Coastal humidity along the Broadwalk and the Intracoastal makes mildew in carpets and floor mats a recurring problem in Hollywood, so interior work runs year-round here.</p>
               </div>
             </div>
           </section>
