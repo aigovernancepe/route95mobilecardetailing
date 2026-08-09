@@ -4,8 +4,8 @@ import ProcessSteps from '../../components/ProcessSteps.astro';
 import { localizedUrl } from '../../i18n/utils';
 
 const url = (slug: string) => localizedUrl('es', slug);
-const title = "Lavado Rápido a Domicilio Fort Lauderdale | Route95";
-const description = "Lavado rápido de autos a domicilio en Fort Lauderdale. Exterior a mano, llantas y ventanas. Desde $40. Vamos a tu casa u oficina — 754-215-2272.";
+const title = "Lavado Rápido Cerca de Ti Fort Lauderdale | Route95";
+const description = "Lavado rápido de autos cerca de ti en Fort Lauderdale. Exterior a mano, llantas y ventanas, desde $40. Vamos hoy mismo — 754-215-2272.";
 
 const parentCategory = {
   href: url('car-detailing-services-fort-lauderdale'),
@@ -13,7 +13,7 @@ const parentCategory = {
 };
 
 const datePublished = "2026-02-06";
-const dateModified = "2026-06-19";
+const dateModified = "2026-08-09";
 
 const siteUrl = "https://route95mobilecardetailing.com";
 
@@ -35,7 +35,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${siteUrl}/es/lavado-rapido-fort-lauderdale/#service`,
-  "name": "Lavado Rápido a Domicilio Fort Lauderdale",
+  "name": "Lavado Rápido de Autos Cerca de Ti Fort Lauderdale",
   "description": description,
   "url": `${siteUrl}/es/lavado-rapido-fort-lauderdale/`,
   "serviceType": "Mobile Car Detailing",
@@ -100,14 +100,14 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
 <ServiceLayout
   title={title}
   description={description}
-  h1="Lavado Rapido a Domicilio Fort Lauderdale"
-  intro="Un lavado de autos rapido a domicilio que llega a tu casa u oficina en Fort Lauderdale para mantener tu auto impecable entre detallados completos. Vamos a tu ubicacion con toda el agua y el equipo."
+  h1="Lavado Rápido de Autos Cerca de Ti en Fort Lauderdale"
+  intro="Un lavado de autos rapido que llega hasta donde estas en Fort Lauderdale, normalmente el mismo dia, para mantener tu auto impecable entre detallados completos. Vamos a tu ubicacion con toda el agua y el equipo."
   currentPage="/es/lavado-rapido-fort-lauderdale/"
   parentCategory={parentCategory}
   schema={schemas}
 >
   <p class="text-sm text-gray-500 mb-6">
-    <time datetime={dateModified}>Última actualización: 19 de junio de 2026</time>
+    <time datetime={dateModified}>Última actualización: 9 de agosto de 2026</time>
   </p>
 
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
