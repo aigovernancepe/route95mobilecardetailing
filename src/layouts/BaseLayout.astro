@@ -57,14 +57,14 @@ const areaServed = [
   }
 ];
 
-// AutomotiveBusiness Schema (included on all pages)
+// AutoWash Schema (included on all pages)
 const businessDescription = locale === 'es'
   ? "Detallado móvil profesional de autos en Fort Lauderdale. Vamos a tu ubicación con productos premium de Chemical Guys, Koch-Chemie y 3D. Sirviendo Fort Lauderdale, Dania Beach, Hollywood y Pompano Beach."
   : "Professional mobile car detailing in Fort Lauderdale. We come to you with premium products from Chemical Guys, Koch-Chemie & 3D. Serving Fort Lauderdale, Dania Beach, Hollywood & Pompano Beach.";
 
 const businessSchema = {
   "@context": "https://schema.org",
-  "@type": ["AutomotiveBusiness", "LocalBusiness"],
+  "@type": "AutoWash",
   "@id": "https://route95mobilecardetailing.com/#business",
   "name": "Route95 Mobile Car Detailing LLC",
   "description": businessDescription,
@@ -259,7 +259,7 @@ const organizationSchema = {
 
   <title>{title}</title>
 
-  <!-- AutomotiveBusiness Schema -->
+  <!-- AutoWash Schema -->
   <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
 
   <!-- Organization Schema -->
