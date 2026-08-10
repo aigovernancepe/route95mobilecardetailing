@@ -35,7 +35,8 @@ const serviceSchema = {
     { "@type": "City", "name": "Dania Beach" },
     { "@type": "City", "name": "Hollywood" },
     { "@type": "City", "name": "Pompano Beach" }
-  ]
+  ],
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 75 }
 };
 
 const faqSchema = {
@@ -64,6 +65,46 @@ const faqSchema = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Los asientos de tela absorben sudor, aceites corporales y derrames que la aspiración sola no puede eliminar. El lavado extrae lo que está atrapado en lo profundo de las fibras."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El Lavado de Asientos Elimina Manchas y Olores Viejos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La extracción con agua caliente elimina la mayoría de las manchas incrustadas junto con los olores atrapados debajo de ellas. Los derrames recientes suelen salir por completo, mientras que las manchas de café, protector solar o mascotas de hace años se aclaran notablemente y a menudo desaparecen tras un pre-tratamiento enzimático."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál Es la Diferencia Entre Lavado de Asientos y Extracción de Tapicería?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El lavado aplica solución limpiadora en la tela para descomponer la suciedad; la extracción de tapicería es el paso que saca esa solución, junto con la mugre suelta y la humedad, con una máquina. Son dos mitades de un mismo proceso y hacemos ambas en cada visita."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se Pueden Lavar Asientos y Alfombras a la Vez?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La mayoría de los clientes agrega el lavado de alfombras al servicio de asientos porque el mismo extractor y los mismos limpiadores sirven para ambos. Limpiar asientos y alfombras en una sola visita deja todo el interior fresco y cuesta menos que reservarlos por separado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se Pueden Lavar los Asientos de Cuero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Los asientos de cuero se limpian y acondicionan, no se lavan con champú. El lavado es para tapicería de tela; el cuero necesita productos con pH balanceado que levanten la suciedad y los aceites corporales sin resecar ni agrietar la piel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cada Cuánto Se Deben Lavar los Asientos del Auto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lave los asientos de su auto cada 6 a 12 meses en el sur de Florida, con más frecuencia si tiene niños, mascotas o va seguido a la playa. El calor, la humedad y la arena de aquí meten suciedad y humedad en la tela más rápido que en climas secos."
       }
     }
   ]
@@ -139,6 +180,56 @@ const schemas = [serviceSchema, faqSchema];
         </ul>
         <p class="text-gray-600">
           El café y el protector solar son las dos manchas más comunes que tratamos en Fort Lauderdale. Ambas requieren pre-tratamiento para una eliminación completa.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿El Lavado de Asientos Elimina Manchas y Olores Viejos?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Sí. La extracción con agua caliente elimina la mayoría de las manchas incrustadas junto con los olores atrapados debajo de ellas. Los derrames recientes suelen salir por completo, mientras que las manchas de café, protector solar o mascotas de hace años se aclaran notablemente y a menudo desaparecen tras un pre-tratamiento enzimático.</strong>
+        </p>
+        <p class="text-gray-600">
+          Las manchas incrustadas necesitan pre-tratamiento para romper su unión con la tela antes del lavado. Para olores persistentes de humo, moho o derrames, combinamos el lavado con nuestro <a href={url('odor-removal-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">servicio de eliminación de olores</a> para tratar tanto la tela como el aire, eliminando la fuente en lugar de enmascararla. Mientras más profunda sea la acumulación, más pasadas de extracción hacemos.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cuál Es la Diferencia Entre Lavado de Asientos y Extracción de Tapicería?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>El lavado aplica solución limpiadora en la tela para descomponer la suciedad; la extracción de tapicería es el paso que saca esa solución, junto con la mugre suelta y la humedad, con una máquina. Son dos mitades de un mismo proceso y hacemos ambas en cada visita.</strong>
+        </p>
+        <p class="text-gray-600">
+          La pasada de extracción es la que más importa en Florida. Un lavado que deja humedad atrás puede oler a moho en un solo día con esta humedad. Nuestro extractor de agua caliente inyecta y aspira de inmediato, así que los asientos quedan húmedos y no empapados, y se secan en 2 a 4 horas. La extracción profunda también es lo que retira la suciedad disuelta que de otro modo quedaría dentro del cojín.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Se Pueden Lavar Asientos y Alfombras a la Vez?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Sí. La mayoría de los clientes agrega el lavado de alfombras al servicio de asientos porque el mismo extractor y los mismos limpiadores sirven para ambos. Limpiar asientos y alfombras en una sola visita deja todo el interior fresco y cuesta menos que reservarlos por separado.</strong>
+        </p>
+        <p class="text-gray-600">
+          Las alfombras del piso retienen la arena, las bebidas derramadas y las migas que la aspiración deja atrás, y suelen cargar las mismas manchas que los asientos: arena de playa, café, pelo de mascota. Tratarlos juntos da un resultado más parejo. El <a href={url('carpet-shampooing-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">lavado de alfombras</a> combinado con el de asientos toma un poco más de tiempo pero se seca en la misma ventana. Pida un presupuesto combinado al reservar.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Se Pueden Lavar los Asientos de Cuero?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>No. Los asientos de cuero se limpian y acondicionan, no se lavan con champú. El lavado es para tapicería de tela; el cuero necesita productos con pH balanceado que levanten la suciedad y los aceites corporales sin resecar ni agrietar la piel.</strong>
+        </p>
+        <p class="text-gray-600">
+          Muchos vehículos en Fort Lauderdale tienen interiores mixtos: inserciones de tela con bordes de cuero. Atendemos ambos en una sola visita. Lavamos y extraemos la tela, luego limpiamos y acondicionamos el cuero con nuestro servicio de <a href={url('leather-cleaning-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">limpieza de cuero</a> y <a href={url('leather-conditioning-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">acondicionamiento</a>. Díganos el tipo de asiento al reservar y llevamos los productos correctos.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Cada Cuánto Se Deben Lavar los Asientos del Auto?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Lave los asientos de su auto cada 6 a 12 meses en el sur de Florida, con más frecuencia si tiene niños, mascotas o va seguido a la playa. El calor, la humedad y la arena de aquí meten suciedad y humedad en la tela más rápido que en climas secos.</strong>
+        </p>
+        <p class="text-gray-600">
+          Una SUV familiar de uso diario normalmente lo necesita dos veces al año; un auto de uso ligero puede aguantar un año completo. Cuando vuelve el olor a humedad o reaparecen las manchas, es momento. Combinar el lavado con <a href={url('fabric-protection-fort-lauderdale')} class="text-[#0f2a4a] font-semibold hover:text-[#c0c7cf]">protección de tela</a> alarga el tiempo que los asientos se mantienen limpios entre servicios.
         </p>
       </section>
 
