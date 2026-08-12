@@ -11,8 +11,10 @@
 
 ## Structured Data Rules
 - JSON-LD only (no Microdata/RDFa)
-- **Schema @type: AutomotiveBusiness** (NOT AutoRepair — AutoRepair is for repair shops, this is a mobile detailing business)
-- LocalBusiness with @type "AutomotiveBusiness" on homepage (EN + ES)
+- **Business @type: AutoWash** (NOT AutoRepair — that's for repair shops. AutoWash is the most specific LocalBusiness subtype for washing/detailing; it replaced the broader AutomotiveBusiness in #94)
+- The business entity (`AutoWash`) and `Organization` schema live in `src/layouts/BaseLayout.astro` and render on every page — do not duplicate them per page
+- Legal name `Route95 Mobile Car Detailing LLC` belongs in the entity schemas only; body copy, titles and `WebSite` schema use `Route95 Mobile Car Detailing` without the LLC
+- NAP in the schema must match the BBB and Google listings exactly; the BBB profile URL in `sameAs` must be the current slug
 - Service schema on every service page
 - FAQPage schema on any page with Q&A capsules (max 10 pairs, must match visible content)
 - BreadcrumbList on every page except homepage
