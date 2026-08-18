@@ -13,7 +13,7 @@ const parentCategory = {
 };
 
 const datePublished = "2026-02-17";
-const dateModified = "2026-06-19";
+const dateModified = "2026-08-18";
 
 const siteUrl = "https://route95mobilecardetailing.com";
 
@@ -35,7 +35,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${siteUrl}/es/limpieza-de-motor-fort-lauderdale/#service`,
-  "name": "Limpieza de Motor Fort Lauderdale",
+  "name": "Limpieza de Motor a Domicilio Fort Lauderdale",
   "description": description,
   "url": `${siteUrl}/es/limpieza-de-motor-fort-lauderdale/`,
   "serviceType": "Mobile Car Detailing",
@@ -60,10 +60,18 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Cuánto Cuesta la Limpieza de Motor en Fort Lauderdale?",
+      "name": "Cuánto Cuesta la Limpieza de Motor a Domicilio en Fort Lauderdale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La limpieza de motor en Fort Lauderdale es $50 por lavado a mano y $80 por lavado a vapor, dependiendo del tamaño del motor y el nivel de acumulación."
+        "text": "La limpieza de motor a domicilio en Fort Lauderdale cuesta $50 (lavado a mano) o $80 (lavado a vapor), según tamaño y acumulación. Vamos directo a tu casa u oficina, no necesitas llevar el auto a ningún taller."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hacen Limpieza de Motor Cerca de Mí en Fort Lauderdale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí — cubrimos Fort Lauderdale y zonas cercanas como Hollywood y Dania Beach. No necesitas buscar un taller cerca de ti: llegamos directo a tu domicilio con todo el equipo para limpiar el motor sin que muevas el auto."
       }
     },
     {
@@ -91,14 +99,14 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
 <ServiceLayout
   title={title}
   description={description}
-  h1="Limpieza de Motor Fort Lauderdale"
+  h1="Limpieza de Motor a Domicilio Fort Lauderdale"
   intro="La limpieza profesional de motor elimina grasa, mugre y desechos del camino debajo del capó mientras protege los componentes electrónicos y el cableado sensible."
   currentPage="/es/limpieza-de-motor-fort-lauderdale/"
   parentCategory={parentCategory}
   schema={schemas}
 >
   <p class="text-sm text-gray-500 mb-6">
-    <time datetime={dateModified}>Última actualización: 19 de junio de 2026</time>
+    <time datetime={dateModified}>Última actualización: 18 de agosto de 2026</time>
   </p>
 
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -116,12 +124,19 @@ const schemas = [webPageSchema, serviceSchema, faqSchema];
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuánto Cuesta la Limpieza de Motor en Fort Lauderdale?</h2>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">Cuánto Cuesta la Limpieza de Motor a Domicilio en Fort Lauderdale?</h2>
         <p class="text-gray-600 mb-4">
-          <strong>La limpieza de motor en Fort Lauderdale es $50 por lavado a mano y $80 por lavado a vapor, dependiendo del tamaño del motor y el nivel de acumulación.</strong>
+          <strong>La limpieza de motor a domicilio en Fort Lauderdale cuesta $50 (lavado a mano) o $80 (lavado a vapor), según tamaño y acumulación. Vamos directo a tu casa u oficina, no necesitas llevar el auto a ningún taller.</strong>
         </p>
         <p class="text-gray-600">
           El lavado a mano de $50 incluye desengrasante, agitación y enjuague a baja presión — ideal para un motor mantenido regularmente. El lavado a vapor de $80 usa vapor a presión para desinfectar y alcanzar las áreas estrechas donde se esconde la grasa pesada, siendo la mejor opción para motores con años de acumulación o fluidos derramados.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-[#0f2a4a] mb-4">¿Hacen Limpieza de Motor Cerca de Mí en Fort Lauderdale?</h2>
+        <p class="text-gray-600 mb-4">
+          <strong>Sí — cubrimos Fort Lauderdale y zonas cercanas como Hollywood y Dania Beach. No necesitas buscar un taller cerca de ti: llegamos directo a tu domicilio con todo el equipo para limpiar el motor sin que muevas el auto.</strong>
         </p>
       </section>
 
