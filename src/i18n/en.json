@@ -96,10 +96,13 @@
     "carWashServices": "Car Wash Services",
     "upholsteryCleaning": "Interior Car Detailing",
     "detailingServices": "Detailing Services",
-    "engineBayCleaning": "Engine Bay Cleaning",
     "interiorCarDetailing": "Interior Car Detailing",
     "fleetDetailing": "Fleet Detailing",
     "pricing": "Pricing",
     "faq": "FAQ"
+  },
+  "serviceNotice": {
+    "text": "Route95 is no longer taking new appointments in Fort Lauderdale and Broward County.",
+    "existing": "Already booked? Call or text 754-215-2272."
   }
 }
