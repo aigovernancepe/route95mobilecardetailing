@@ -8,6 +8,10 @@
 //   2. Paste the key below. That's it — every request emails Gustavo.
 const WEB3FORMS_ACCESS_KEY = "94ef4058-301f-40de-8ecb-19e55ac48394";
 
+// No new appointments in Broward County (owner relocated, Oct 2026).
+// While true, the form is replaced by a notice; flip back to re-enable it.
+const BOOKING_PAUSED = true;
+
 interface Props {
   lang?: "en" | "es";
 }
@@ -66,6 +70,9 @@ const t = {
       "Thanks! Your request was sent. We'll reach out shortly to confirm your appointment.",
     error: "Something went wrong. Please call us at 754-215-2272.",
     selectPh: "Select…",
+    pausedHeading: "Online booking is closed",
+    pausedText:
+      "We are no longer taking new appointments in Fort Lauderdale and Broward County. If you already have an appointment, call or text us at 754-215-2272.",
   },
   es: {
     heading: "Solicita tu cita",
@@ -119,6 +126,9 @@ const t = {
       "¡Gracias! Tu solicitud fue enviada. Te contactaremos pronto para confirmar tu cita.",
     error: "Algo salió mal. Llámanos al 754-215-2272.",
     selectPh: "Selecciona…",
+    pausedHeading: "Las reservas en línea están cerradas",
+    pausedText:
+      "Ya no aceptamos nuevas citas en Fort Lauderdale y el condado de Broward. Si ya tienes una cita, llámanos o escríbenos al 754-215-2272.",
   },
 }[lang];
 
@@ -127,6 +137,12 @@ const inputCls =
 const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
 ---
 
+{BOOKING_PAUSED ? (
+<div>
+  <h2 class="text-2xl font-bold text-[#0f2a4a] mb-2">{t.pausedHeading}</h2>
+  <p class="rounded-lg p-4 bg-amber-50 text-amber-900 border border-amber-200">{t.pausedText}</p>
+</div>
+) : (
 <div>
   <h2 class="text-2xl font-bold text-[#0f2a4a] mb-2">{t.heading}</h2>
   <p class="text-gray-600 mb-6 text-sm">{t.intro}</p>
@@ -239,6 +255,7 @@ const labelCls = "block text-sm font-semibold text-[#0f2a4a] mb-1";
     <p id="booking-status" class="hidden" role="status" aria-live="polite"></p>
   </form>
 </div>
+)}
 
 <script is:inline>
   (function () {

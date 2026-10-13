@@ -96,10 +96,13 @@
     "carWashServices": "Servicios de Lavado",
     "upholsteryCleaning": "Detallado Interior",
     "detailingServices": "Servicios de Detallado",
-    "engineBayCleaning": "Limpieza de Motor",
     "interiorCarDetailing": "Detallado Interior",
     "fleetDetailing": "Detallado de Flotas",
     "pricing": "Precios",
     "faq": "Preguntas Frecuentes"
+  },
+  "serviceNotice": {
+    "text": "Route95 ya no acepta nuevas citas en Fort Lauderdale y el condado de Broward.",
+    "existing": "¿Ya tienes una cita? Llama o escribe al 754-215-2272."
   }
 }

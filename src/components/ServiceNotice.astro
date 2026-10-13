@@ -1,0 +1,20 @@
+---
+// Site-wide notice: Route95 no longer takes new appointments in Broward County
+// (owner relocated, Oct 2026). Rendered above the header on every page.
+import { getTranslations, type Locale } from '../i18n/utils';
+
+interface Props {
+  locale?: string;
+}
+
+const locale = (Astro.props.locale ?? Astro.currentLocale ?? 'en') as Locale;
+const t = getTranslations(locale);
+---
+
+<div class="bg-amber-100 text-amber-900 border-b border-amber-300" role="status">
+  <p class="max-w-7xl mx-auto px-4 py-3 text-sm sm:text-base text-center">
+    <strong>{t.serviceNotice.text}</strong>
+    {' '}
+    <a href="tel:+17542152272" class="underline hover:no-underline">{t.serviceNotice.existing}</a>
+  </p>
+</div>

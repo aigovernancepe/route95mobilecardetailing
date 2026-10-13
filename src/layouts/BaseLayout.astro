@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Header from '../components/Header.astro';
+import ServiceNotice from '../components/ServiceNotice.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 import CookieConsent from '../components/CookieConsent.astro';
@@ -280,6 +281,7 @@ const organizationSchema = {
   )}
 </head>
 <body class="min-h-screen flex flex-col">
+  <ServiceNotice locale={locale} />
   <Header currentPage={currentPage} locale={locale} />
 
   <main class="flex-grow">
